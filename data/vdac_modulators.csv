@@ -1,0 +1,19 @@
+compound,target_isoform,kd_or_ic50_uM,mechanism,effect_on_conductance,selectivity_notes,therapeutic_context,key_citation,citation_year,citation_verified
+CBD,VDAC1,11.0,allosteric gating modulation,subconductance states (30-70% open),likely non-selective for VDAC2 (IRIS TYPE 0 5/5),cancer cytotoxicity / neuroprotection,Rimmerman et al. Cell Death Dis 4:e949,2013,yes
+CBD,VDAC2,unknown,predicted allosteric (same as VDAC1),predicted similar to VDAC1,>70% transmembrane homology with VDAC1,anti-apoptotic BAK release concern,IRIS Gate Evo evo_20260213_035958 (5/5 consensus),2026,computational
+7-OH-CBD,VDAC1,10-20 (predicted),predicted similar to parent,unknown,unknown - critical gap,metabolite accumulation at steady-state,IRIS Gate Evo Grok singular prediction,2026,computational
+Erastin,VDAC2/VDAC3,low uM range,opens VDAC / prevents closure,increases conductance,preferential VDAC2/3; less effect on VDAC1,ferroptosis inducer / cancer therapy,Yagoda et al. Nature 447:864-868,2007,yes
+Erastin,VDAC1,indirect,modulates via VDAC2/3 interaction,indirect effect,see above,ferroptosis,Yagoda et al. Nature 447:864-868,2007,yes
+DIDS,VDAC1,10-50,pore occlusion (stilbene disulfonate),blocks conductance,relatively non-selective across isoforms,research tool compound,Colombini VDAC review J Membr Biol,2004,yes
+VBIT-4,VDAC1,low uM,prevents oligomerization,reduces conductance indirectly,designed for VDAC1; selectivity over VDAC2 unclear,neuroprotection / anti-inflammatory,Shoshan-Barmatz et al. various,2018,yes
+VBIT-12,VDAC1,low uM,prevents oligomerization,reduces conductance indirectly,VDAC1 targeting,neuroprotection,Shoshan-Barmatz et al.,2018,yes
+Hexokinase-II,VDAC1,nM range (protein-protein),N-terminal binding / pore capping,reduces conductance / prevents cytochrome c release,VDAC1 specific (HK-II-VDAC1 complex),cancer cell survival (Warburg effect),Pastorino et al. Cancer Cell 7:561,2005,yes
+Tubulin,VDAC1,nM range (protein-protein),blocks beta-barrel from cytosolic side,reduces conductance to ~40% open,VDAC1 preferred,metabolic coupling / proliferation,Rostovtseva et al. PNAS 105:18746,2008,yes
+Bcl-xL,VDAC1,nM (protein-protein),direct interaction reduces conductance,closes channel,VDAC1 specific interaction,anti-apoptotic,Shimizu et al. Nature 399:483,1999,yes
+BAK,VDAC2,nM (protein-protein),sequestered by VDAC2; released triggers apoptosis,N/A (regulatory interaction),VDAC2 specific,apoptotic regulation,Cheng et al. Science 301:513,2003,yes
+BAX,VDAC2,nM (protein-protein),VDAC2 recruits BAX for activation,N/A (regulatory interaction),VDAC2 mediated,apoptotic regulation,Lazarou et al. Mol Cell 37:458,2010,yes
+Konig polyanion,VDAC1,uM range,voltage-gating modifier,shifts V1/2,non-selective,research tool,Colombini et al.,1996,yes
+Cholesterol,VDAC1,N/A (membrane component),modulates lipid environment,indirect - alters gating kinetics,non-specific (membrane effect),mitochondrial membrane composition,Budelier et al. Biochemistry,2017,yes
+Olesoxime (TRO19622),VDAC1,uM range,binds cholesterol-recognition motif on VDAC,modulates gating,unclear isoform preference,neuroprotection (ALS clinical trials),Bordet et al. J Pharmacol Exp Ther,2007,yes
+Avicin D,VDAC1,uM range,opens VDAC / triggers apoptosis,increases conductance,unclear,cancer (triterpenoid saponin),Haridas et al. PNAS 102:17095,2005,yes
+Ruthenium Red,VDAC1,uM range,blocks anion conductance,reduces conductance,relatively non-selective,research tool / Ca2+ channel blocker,Gincel et al. J Bioenerg Biomembr,2000,yes

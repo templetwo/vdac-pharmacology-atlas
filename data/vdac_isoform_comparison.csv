@@ -1,0 +1,16 @@
+feature,VDAC1,VDAC2,VDAC3
+expression_level,highest (most abundant),moderate,lowest
+primary_role,metabolite transport / apoptosis gate,BAK sequestration (anti-apoptotic),least characterized / possible redox sensor
+transmembrane_homology_to_VDAC1,100%,>70%,>65%
+n_terminal_extension,none,additional ~11 residues,additional residues (variable)
+bak_binding,no direct sequestration,sequesters BAK - prevents oligomerization,possible BAK interaction
+bax_regulation,indirect,recruits BAX for activation,unknown
+hk_ii_binding,yes (primary HK-II receptor),minimal,unknown
+conductance_nS,3.5-4.5,similar range,similar range
+voltage_gating,well characterized V1/2 ~20-30 mV,similar but shifted,poorly characterized
+cancer_overexpression,2-5x in many tumors,variable,limited data
+knockout_phenotype,embryonic lethal (mouse),male infertility + apoptosis defects,mild phenotype
+cbd_binding_kd_uM,11.0 (Rimmerman 2013),unknown (predicted similar by IRIS 5/5),unknown
+key_protein_interactions,HK-II / tubulin / Bcl-xL / tRNA,BAK / BAX,limited data
+druggability_assessment,most studied / VBIT compounds exist,critical target - no selective modulators,unexplored
+structural_data,crystal structure available (human),homology models only,homology models only
