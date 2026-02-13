@@ -34,7 +34,12 @@ strategies.
 
 ---
 
-## Run 2 (PRIORITY: HIGH) — The Cofactor Decision Landscape
+## Run 2 (COMPLETED) — The Cofactor Decision Landscape
+
+**Session**: evo_20260213_182457_pharmacology
+**Outcome**: S3 FAILED (cosine 0.9215 — all-time high) — rich gold extracted
+**Gold**: [vdac_cofactor_decision_landscape.md](https://github.com/templetwo/iris-evo-findings/blob/main/gold/vdac_cofactor_decision_landscape.md)
+**Key findings**: 5/5 Warburg biphasic response (TYPE 0); 4/5 2-DG+ABT-737 synergy (TYPE 0); 3/5 HK-II displacement is permissive not sufficient (TYPE 1); cofactor equation derived
 
 **Domain**: pharmacology + bioelectric
 
@@ -129,7 +134,7 @@ unrecognized mechanism for commonly prescribed drugs, that's a public health fin
 | Run | Estimated API Cost | Expected Value |
 |-----|-------------------|----------------|
 | Run 1 | DONE (~$0.80) | YES — selective design IS possible (N-terminal selectivity filter) |
-| Run 2 | ~$0.50-1.00 | Completes the cofactor equation |
+| Run 2 | DONE (~$0.80) | Cofactor equation derived: Threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL) |
 | Run 3 | ~$0.50-1.00 | Membrane engineering for selectivity |
 | Run 4 | ~$0.50-1.00 | Clinical translation / companion diagnostic |
 | Run 5 | ~$0.50-1.00 | Drug safety across pharmacopeia |
