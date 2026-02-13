@@ -91,7 +91,12 @@ back in?" question.
 
 ---
 
-## Run 4 (PRIORITY: MEDIUM) — VDAC as a Biomarker Platform
+## Run 4 (COMPLETED) — VDAC as a Biomarker Platform
+
+**Session**: evo_20260213_183936_pharmacology
+**Outcome**: S3 PASSED (cycle 2) -> FULL PIPELINE (6th pass)
+**Gold**: [vdac_biomarker_platform.md](https://github.com/templetwo/iris-evo-findings/blob/main/gold/vdac_biomarker_platform.md)
+**Key findings**: 4/5 GSH/GSSG predicts risk (TYPE 0); 4/5 mito panel is pharmacodynamic not predictive (TYPE 0); CTC VDAC1 unreliable; Gemini dissent on blood-liver GSH compartmentalization
 
 **Domain**: pharmacology + clinical
 
@@ -141,7 +146,7 @@ unrecognized mechanism for commonly prescribed drugs, that's a public health fin
 | Run 1 | DONE (~$0.80) | YES — selective design IS possible (N-terminal selectivity filter) |
 | Run 2 | DONE (~$0.80) | Cofactor equation derived: Threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL) |
 | Run 3 | DONE (~$0.90) | YES — cholesterol lowers Kd 2-3x; olesoxime needs cholesterol; 3 NOVEL |
-| Run 4 | ~$0.50-1.00 | Clinical translation / companion diagnostic |
+| Run 4 | DONE (~$0.90) | GSH predicts risk; mito panel monitors not predicts; CTC unreliable |
 | Run 5 | ~$0.50-1.00 | Drug safety across pharmacopeia |
 
 Total: ~$2.50-5.00 for the full atlas.
