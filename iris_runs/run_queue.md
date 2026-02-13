@@ -5,7 +5,12 @@ Priority order reflects maximum scientific yield per run.
 
 ---
 
-## Run 1 (PRIORITY: HIGH) — Isoform Selectivity & Binding Site Architecture
+## Run 1 (COMPLETED) — Isoform Selectivity & Binding Site Architecture
+
+**Session**: evo_20260213_174104_pharmacology
+**Outcome**: S3 FAILED (cosine 0.9124 peak) — rich gold extracted
+**Gold**: [vdac_isoform_binding_architecture.md](https://github.com/templetwo/iris-evo-findings/blob/main/gold/vdac_isoform_binding_architecture.md)
+**Key findings**: Three non-overlapping VDAC1 binding sites (TYPE 0, 4/5); VDAC2 N-terminal >=10-fold selectivity (TYPE 1, 3/5); two pharmacological classes — gating modulators vs pore blockers (TYPE 1, 3/5)
 
 **Domain**: pharmacology + structural_biology
 
@@ -123,7 +128,7 @@ unrecognized mechanism for commonly prescribed drugs, that's a public health fin
 
 | Run | Estimated API Cost | Expected Value |
 |-----|-------------------|----------------|
-| Run 1 | ~$0.50-1.00 | Determines if selective design is possible |
+| Run 1 | DONE (~$0.80) | YES — selective design IS possible (N-terminal selectivity filter) |
 | Run 2 | ~$0.50-1.00 | Completes the cofactor equation |
 | Run 3 | ~$0.50-1.00 | Membrane engineering for selectivity |
 | Run 4 | ~$0.50-1.00 | Clinical translation / companion diagnostic |

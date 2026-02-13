@@ -10,7 +10,9 @@ conductance_nS,3.5-4.5,similar range,similar range
 voltage_gating,well characterized V1/2 ~20-30 mV,similar but shifted,poorly characterized
 cancer_overexpression,2-5x in many tumors,variable,limited data
 knockout_phenotype,embryonic lethal (mouse),male infertility + apoptosis defects,mild phenotype
-cbd_binding_kd_uM,11.0 (Rimmerman 2013),unknown (predicted similar by IRIS 5/5),unknown
+cbd_binding_kd_uM,11.0 (Rimmerman 2013),>100 predicted (IRIS TYPE 1 3/5 — N-terminal steric occlusion),unknown
+n_terminal_steric_filter,compact helix — no occlusion,+11aa extension occludes helix groove — >=10-fold selectivity filter (IRIS TYPE 1 3/5),variable extension — effect unknown
+pharmacological_class_access,gating modulators (helix) + pore blockers (barrel) — both accessible,helix groove partially occluded; barrel access may be preserved,unknown
 key_protein_interactions,HK-II / tubulin / Bcl-xL / tRNA,BAK / BAX,limited data
-druggability_assessment,most studied / VBIT compounds exist,critical target - no selective modulators,unexplored
+druggability_assessment,most studied / three distinct binding sites mapped (IRIS TYPE 0 4/5),critical target - N-terminal extension as selectivity handle,unexplored
 structural_data,crystal structure available (human),homology models only,homology models only
