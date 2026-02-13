@@ -62,7 +62,12 @@ something but lacked the VDAC2 term. This run fills in the full equation.
 
 ---
 
-## Run 3 (PRIORITY: MEDIUM) — Membrane Lipid Modulation of VDAC Pharmacology
+## Run 3 (COMPLETED) — Membrane Lipid Modulation of VDAC Pharmacology
+
+**Session**: evo_20260213_183423_pharmacology
+**Outcome**: S3 PASSED FIRST CYCLE (cosine 0.9512 — record) -> FULL PIPELINE
+**Gold**: [vdac_membrane_lipid_modulation.md](https://github.com/templetwo/iris-evo-findings/blob/main/gold/vdac_membrane_lipid_modulation.md)
+**Key findings**: 5/5 olesoxime requires cholesterol (TYPE 0); 5/5 cancer cholesterol lowers CBD Kd to 3-6uM (TYPE 0); 4/5 CL alters VDAC gating (TYPE 0); 3/5 cancer-mimetic liposome delivery (TYPE 1); 4 hypotheses operationalized; 3 NOVEL
 
 **Domain**: pharmacology + biophysics
 
@@ -135,7 +140,7 @@ unrecognized mechanism for commonly prescribed drugs, that's a public health fin
 |-----|-------------------|----------------|
 | Run 1 | DONE (~$0.80) | YES — selective design IS possible (N-terminal selectivity filter) |
 | Run 2 | DONE (~$0.80) | Cofactor equation derived: Threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL) |
-| Run 3 | ~$0.50-1.00 | Membrane engineering for selectivity |
+| Run 3 | DONE (~$0.90) | YES — cholesterol lowers Kd 2-3x; olesoxime needs cholesterol; 3 NOVEL |
 | Run 4 | ~$0.50-1.00 | Clinical translation / companion diagnostic |
 | Run 5 | ~$0.50-1.00 | Drug safety across pharmacopeia |
 
