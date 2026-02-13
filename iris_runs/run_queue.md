@@ -118,7 +118,12 @@ predict who's safe and who's not, that's a clinical tool, not just a paper.
 
 ---
 
-## Run 5 (PRIORITY: LOWER) — The VDAC-Metabolite Interaction Network
+## Run 5 (COMPLETED) — The VDAC-Metabolite Interaction Network
+
+**Session**: evo_20260213_184357_pharmacology
+**Outcome**: S3 PASSED FIRST CYCLE (cosine 0.9547 — new record) -> FULL PIPELINE (7th pass)
+**Gold**: [vdac_hidden_drug_interactions.md](https://github.com/templetwo/iris-evo-findings/blob/main/gold/vdac_hidden_drug_interactions.md)
+**Key findings**: 5/5 VPA modulates VDAC1 (TYPE 0); 5/5 NAPQI covalently modifies VDAC cysteines (TYPE 0); 5/5 lipophilic statins are VDAC modulators (TYPE 0); metformin disputed; 3 NOVEL
 
 **Domain**: pharmacology
 
@@ -147,7 +152,16 @@ unrecognized mechanism for commonly prescribed drugs, that's a public health fin
 | Run 2 | DONE (~$0.80) | Cofactor equation derived: Threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL) |
 | Run 3 | DONE (~$0.90) | YES — cholesterol lowers Kd 2-3x; olesoxime needs cholesterol; 3 NOVEL |
 | Run 4 | DONE (~$0.90) | GSH predicts risk; mito panel monitors not predicts; CTC unreliable |
-| Run 5 | ~$0.50-1.00 | Drug safety across pharmacopeia |
+| Run 5 | DONE (~$0.90) | VPA, NAPQI, statins all hit VDAC; metformin disputed; 3 NOVEL |
 
-Total: ~$2.50-5.00 for the full atlas.
-Cross-run analysis after all 5: free (local embedding, no API calls).
+Total spent: ~$4.30 for the full atlas (5/5 runs complete).
+Cross-run analysis: free (local embedding, no API calls).
+
+## ATLAS COMPLETE
+
+All 5 runs fired and analyzed. Results:
+- **3 full pipeline passes** (Runs 3, 4, 5) — 16 operationalized hypotheses
+- **2 S3-failed with rich gold** (Runs 1, 2) — binding site map + cofactor equation
+- **14 gold-extracted findings** across 5 runs
+- **9 NOVEL findings** (no prior literature) identified by Perplexity VERIFY
+- **Cosine trajectory**: 0.9124 -> 0.9215 -> 0.9512 -> 0.8807 -> 0.9547
