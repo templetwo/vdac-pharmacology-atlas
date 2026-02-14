@@ -44,7 +44,8 @@ vdac-pharmacology-atlas/
 ├── iris_runs/
 │   └── run_queue.md                     # Pre-written IRIS Gate Evo questions
 ├── figures/                             # Generated from IRIS run data
-└── paper/                               # Atlas manuscript (in progress)
+└── paper/
+    └── manuscript.md                    # Six-layer atlas manuscript
 ```
 
 ### The Modulator Database
@@ -71,17 +72,31 @@ ATP/ADP). Validated by two independent IRIS Gate Evo pipeline passes on the
 CBD model. Applicable across the VDAC drug class including erastin, VBIT-4,
 valproate, and acetaminophen.
 
-### The IRIS Run Queue
+### The Manuscript
 
-Five pre-written research questions ready for multi-model convergence analysis:
+`paper/manuscript.md` is a six-layer portrait of VDAC1 synthesized from 20 IRIS runs:
 
-1. **Isoform selectivity & binding site architecture** — Can we design VDAC2-sparing compounds?
-2. **The cofactor decision landscape** — HK-II, Bcl-xL, tubulin: who controls the gate?
-3. **Membrane lipid modulation** — Can lipid engineering restore selectivity?
-4. **Biomarker platform** — Can a blood panel predict VDAC drug vulnerability?
-5. **Hidden VDAC interactions** — Which common drugs hit VDAC without anyone knowing?
+1. **The Protein** — 19-strand barrel, five molecular machines, parallel seam life/death switch
+2. **The Gate** — Three nested threshold signals, cofactor equation, VDAC1 as external audit
+3. **The Atlas** — 6 dedicated runs, 22 novel findings, 24 operationalized hypotheses
+4. **The Disease** — Cancer as lost coherence, Warburg effect as gate-jamming cost
+5. **The Method** — IRIS multi-LLM convergence protocol, what it can and cannot establish
+6. **The Frame** — Threshold logic from protein to organism, sovereignty through coherence
 
-Estimated total budget: ~$2.50-5.00 via IRIS Gate Evo.
+### IRIS Runs Completed
+
+All five queued runs plus a sixth (membrane architecture) have been completed:
+
+| Run | Question | S3 | Key Finding |
+|-----|----------|----|-------------|
+| 1 | Isoform selectivity & binding architecture | PASSED | Three non-overlapping binding sites, VDAC2 11-residue extension = selectivity |
+| 2 | Cofactor decision landscape | PASSED | Cofactor equation: `Threshold = K / [(1-f_HKII)(1-f_BclxL)] * (Chol/CL)` |
+| 3 | Membrane lipid modulation | PASSED | Cancer cholesterol lowers CBD Kd from 11 to 3-6 uM (cosine 0.9512) |
+| 4 | Biomarker platform | PASSED | GSH/GSSG ratio predicts hepatotoxicity; mitochondrial panel is pharmacodynamic only |
+| 5 | Hidden drug interactions | PASSED | VPA opens VDAC, NAPQI closes it — opposite gating, both hepatotoxic (cosine 0.9547) |
+| 6 | Membrane architecture | PASSED | Honeycomb lattice as structural gate; CBD may be membrane chaotrope (cosine 0.9047) |
+
+**Corpus**: 139 claims, 22 novel findings, 24 hypotheses, mean testability 7.2/10. Total cost: ~$15.
 
 ## How to Contribute
 
@@ -107,7 +122,7 @@ CC BY 4.0. Use it, build on it, cite it.
 
 ```bibtex
 @misc{vasquez2026vdac,
-  title={VDAC Pharmacology Atlas: Mapping the Mitochondrial Decision Gate},
+  title={The VDAC1 Pharmacology Atlas: A Multi-LLM Convergence Portrait of Life's Decision Gate},
   author={Vasquez, Anthony J., Sr.},
   year={2026},
   url={https://github.com/templetwo/vdac-pharmacology-atlas}
