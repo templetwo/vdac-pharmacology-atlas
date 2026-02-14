@@ -22,6 +22,10 @@
 
 **[paper/vdac1_atlas_final.pdf](paper/vdac1_atlas_final.pdf)** — The full manuscript (February 2026)
 
+**[paper/vdac1_works_cited.pdf](paper/vdac1_works_cited.pdf)** — 78 references organized by atlas layer
+
+**[paper/one_real_question_manifesto.pdf](paper/one_real_question_manifesto.pdf)** — *One Real Question and the New Kind of Lab: A Manifesto on Human-AI Co-Creation*
+
 A six-layer portrait of VDAC1 synthesized from 20 IRIS runs, 139 claims across
 five independent AI models, 22 verified novel findings, and 24 operationalized hypotheses:
 
@@ -84,10 +88,18 @@ vdac-pharmacology-atlas/
 │   └── resilience_biomarker_framework.md # Generalized vulnerability prediction
 ├── iris_runs/
 │   └── run_queue.md                     # Pre-written IRIS Gate Evo questions
-├── figures/                             # Generated from IRIS run data
+├── figures/
+│   ├── fig1_five_machines.svg          # VDAC1 structural architecture
+│   ├── fig2_three_signals.svg          # Three nested threshold signals
+│   ├── fig3_cofactor_equation.svg      # Cofactor equation visualization
+│   ├── fig4_cancer_gate_jamming.svg    # Cancer corrupts all terms
+│   ├── fig5_pharmacology_atlas.svg     # Drug binding site map
+│   └── fig6_threshold_scales.svg       # Threshold logic across scales
 └── paper/
     ├── vdac1_atlas_final.pdf            # The manuscript (final)
-    └── manuscript.md                    # Markdown source
+    ├── manuscript.md                    # Markdown source
+    ├── vdac1_works_cited.pdf            # 78 references by atlas layer
+    └── one_real_question_manifesto.pdf  # Manifesto on human-AI co-creation
 ```
 
 ### IRIS Runs — The Atlas Corpus

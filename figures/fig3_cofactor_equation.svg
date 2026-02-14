@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa"/>
+      <stop offset="100%" style="stop-color:#e9ecef"/>
+    </linearGradient>
+    <filter id="sh3"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/></filter>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bg3)" rx="8"/>
+  
+  <text x="550" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1a1a2e">Figure 3. The Cofactor Equation</text>
+  <text x="550" y="60" text-anchor="middle" font-size="13" fill="#555">How three measurable molecular occupancies combine to set the apoptotic threshold</text>
+
+  <!-- Main Equation Box -->
+  <rect x="100" y="80" width="900" height="90" fill="white" stroke="#1a1a2e" stroke-width="2" rx="10" filter="url(#sh3)"/>
+  <text x="190" y="130" font-size="20" fill="#1a1a2e">Apoptotic Threshold =</text>
+  <!-- Fraction -->
+  <text x="530" y="118" text-anchor="middle" font-size="22" font-weight="700" fill="#2d6a4f">K</text>
+  <line x1="400" y1="125" x2="660" y2="125" stroke="#1a1a2e" stroke-width="2"/>
+  <text x="530" y="152" text-anchor="middle" font-size="16" fill="#1a1a2e">(1 - f</text>
+  <text x="565" y="156" font-size="11" fill="#0077b6" font-weight="700">HKII</text>
+  <text x="590" y="152" font-size="16" fill="#1a1a2e">)(1 - f</text>
+  <text x="637" y="156" font-size="11" fill="#6c5b7b" font-weight="700">BclxL</text>
+  <text x="660" y="152" font-size="16" fill="#1a1a2e">)</text>
+  <!-- Times sign -->
+  <text x="695" y="135" font-size="22" fill="#1a1a2e">×</text>
+  <!-- Chol/CL ratio -->
+  <text x="770" y="118" text-anchor="middle" font-size="18" fill="#e09f3e" font-weight="700">[Chol]</text>
+  <line x1="730" y1="125" x2="810" y2="125" stroke="#1a1a2e" stroke-width="2"/>
+  <text x="770" y="150" text-anchor="middle" font-size="18" fill="#a4133c" font-weight="700">[CL]</text>
+
+  <!-- Four variable cards -->
+  
+  <!-- K: Lattice stability -->
+  <g transform="translate(50, 200)">
+    <rect x="0" y="0" width="230" height="220" fill="white" stroke="#2d6a4f" stroke-width="2" rx="10" filter="url(#sh3)"/>
+    <rect x="0" y="0" width="230" height="38" fill="#2d6a4f" rx="10"/>
+    <rect x="0" y="20" width="230" height="18" fill="#2d6a4f"/>
+    <text x="115" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="white">K</text>
+
+    <text x="15" y="60" font-size="11" font-weight="700" fill="#2d6a4f">Lattice Stability Constant</text>
+    <text x="15" y="80" font-size="10.5" fill="#555">Energy barrier for the</text>
+    <text x="15" y="95" font-size="10.5" fill="#555">honeycomb-to-dispersed</text>
+    <text x="15" y="110" font-size="10.5" fill="#555">lattice transition</text>
+
+    <text x="15" y="135" font-size="10" font-weight="600" fill="#333">Physical address:</text>
+    <text x="15" y="150" font-size="10" fill="#555">Global lattice architecture</text>
+
+    <text x="15" y="175" font-size="10" font-weight="600" fill="#333">Key insight:</text>
+    <text x="15" y="190" font-size="10" fill="#555">Rate-limiting step for</text>
+    <text x="15" y="205" font-size="10" fill="#555">apoptosis (TYPE 1, 3/5)</text>
+  </g>
+
+  <!-- f_HKII -->
+  <g transform="translate(310, 200)">
+    <rect x="0" y="0" width="230" height="220" fill="white" stroke="#0077b6" stroke-width="2" rx="10" filter="url(#sh3)"/>
+    <rect x="0" y="0" width="230" height="38" fill="#0077b6" rx="10"/>
+    <rect x="0" y="20" width="230" height="18" fill="#0077b6"/>
+    <text x="115" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="white">f_HKII</text>
+
+    <text x="15" y="60" font-size="11" font-weight="700" fill="#0077b6">Metabolic Loyalty Signal</text>
+    <text x="15" y="80" font-size="10.5" fill="#555">Fraction of VDAC1 occupied</text>
+    <text x="15" y="95" font-size="10.5" fill="#555">by Hexokinase-II. Uses G6P</text>
+    <text x="15" y="110" font-size="10.5" fill="#555">as engagement signal.</text>
+
+    <text x="15" y="135" font-size="10" font-weight="600" fill="#333">Physical address:</text>
+    <text x="15" y="150" font-size="10" fill="#555">Cytoplasmic barrel face</text>
+
+    <text x="15" y="175" font-size="10" font-weight="600" fill="#333">The cell says:</text>
+    <text x="15" y="190" font-size="10" fill="#555" font-style="italic">"I am still metabolically</text>
+    <text x="15" y="205" font-size="10" fill="#555" font-style="italic">active. Do not kill me."</text>
+  </g>
+
+  <!-- f_BclxL -->
+  <g transform="translate(570, 200)">
+    <rect x="0" y="0" width="230" height="220" fill="white" stroke="#6c5b7b" stroke-width="2" rx="10" filter="url(#sh3)"/>
+    <rect x="0" y="0" width="230" height="38" fill="#6c5b7b" rx="10"/>
+    <rect x="0" y="20" width="230" height="18" fill="#6c5b7b"/>
+    <text x="115" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="white">f_BclxL</text>
+
+    <text x="15" y="60" font-size="11" font-weight="700" fill="#6c5b7b">Anti-Apoptotic Badge</text>
+    <text x="15" y="80" font-size="10.5" fill="#555">Fraction bound by Bcl-xL.</text>
+    <text x="15" y="95" font-size="10.5" fill="#555">Captures extruded N-terminal</text>
+    <text x="15" y="110" font-size="10.5" fill="#555">helices to block propagation.</text>
+
+    <text x="15" y="135" font-size="10" font-weight="600" fill="#333">Physical address:</text>
+    <text x="15" y="150" font-size="10" fill="#555">Extruded helix surface</text>
+
+    <text x="15" y="175" font-size="10" font-weight="600" fill="#333">The cell says:</text>
+    <text x="15" y="190" font-size="10" fill="#555" font-style="italic">"I have been authorized</text>
+    <text x="15" y="205" font-size="10" fill="#555" font-style="italic">to live."</text>
+  </g>
+
+  <!-- Chol/CL -->
+  <g transform="translate(830, 200)">
+    <rect x="0" y="0" width="230" height="220" fill="white" stroke="#e09f3e" stroke-width="2" rx="10" filter="url(#sh3)"/>
+    <rect x="0" y="0" width="230" height="38" fill="#e09f3e" rx="10"/>
+    <rect x="0" y="20" width="230" height="18" fill="#e09f3e"/>
+    <text x="115" y="27" text-anchor="middle" font-size="16" font-weight="700" fill="white">Chol / CL</text>
+
+    <text x="15" y="60" font-size="11" font-weight="700" fill="#c77c00">Membrane Stability Readout</text>
+    <text x="15" y="80" font-size="10.5" fill="#555">Cholesterol packs VDAC1 into</text>
+    <text x="15" y="95" font-size="10.5" fill="#555">honeycomb arrays. Cardiolipin</text>
+    <text x="15" y="110" font-size="10.5" fill="#555">disrupts and frees monomers.</text>
+
+    <text x="15" y="135" font-size="10" font-weight="600" fill="#333">Physical address:</text>
+    <text x="15" y="150" font-size="10" fill="#555">Lipid annulus (~50 A)</text>
+
+    <text x="15" y="175" font-size="10" font-weight="600" fill="#333">Key insight:</text>
+    <text x="15" y="190" font-size="10" fill="#555">The body's external audit.</text>
+    <text x="15" y="205" font-size="10" fill="#555">Cell cannot control this.</text>
+  </g>
+
+  <!-- External Audit Box -->
+  <rect x="50" y="445" width="1000" height="100" fill="#1a1a2e" rx="10" filter="url(#sh3)"/>
+  <text x="550" y="475" text-anchor="middle" font-size="15" font-weight="700" fill="white">VDAC1: The Body's External Audit</text>
+  <text x="550" y="498" text-anchor="middle" font-size="12" fill="#ccc">Unlike p53 and Rb (self-audits that require the cell's honest cooperation),</text>
+  <text x="550" y="516" text-anchor="middle" font-size="12" fill="#ccc">VDAC1's oligomeric state is set by membrane physics -- conditions the body imposes, not the cell.</text>
+  <text x="550" y="534" text-anchor="middle" font-size="12" fill="#ffd166">The last checkpoint that does not require the cell's cooperation. The audit does not ask permission.</text>
+
+  <!-- Multiplicative insight -->
+  <rect x="50" y="565" width="1000" height="45" fill="white" stroke="#a4133c" stroke-width="1.5" rx="8" filter="url(#sh3)"/>
+  <text x="550" y="590" text-anchor="middle" font-size="12" fill="#555">
+    The equation's multiplicative structure means simultaneous reduction of f_HKII + f_BclxL produces threshold drop greater than the sum of individual reductions.
+  </text>
+  <text x="550" y="604" text-anchor="middle" font-size="11" fill="#a4133c" font-weight="600">Prediction: 2-DG + ABT-737 combination index CI &lt; 0.8 (supra-additive, TYPE 0, 4/5 models)</text>
+
+  <text x="550" y="640" text-anchor="middle" font-size="10" fill="#999">Vasquez &amp; Claude Opus 4.6 (2026). The VDAC1 Pharmacology Atlas. Converged across Runs 2, 3, and 6 (TYPE 0, 5/5 models).</text>
+</svg>

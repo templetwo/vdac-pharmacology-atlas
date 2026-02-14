@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa"/>
+      <stop offset="100%" style="stop-color:#e9ecef"/>
+    </linearGradient>
+    <filter id="sh2">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7" fill="#555"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="750" fill="url(#bg2)" rx="8"/>
+
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1a1a2e">Figure 2. Three Nested Threshold Signals</text>
+  <text x="500" y="62" text-anchor="middle" font-size="13" fill="#555">Escalating sacrifice: repair, then alarm, then death -- three floors of the same building</text>
+
+  <!-- Staircase metaphor: three rising platforms -->
+  
+  <!-- SIGNAL 1: MITOPHAGY -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="280" height="200" fill="white" stroke="#2d6a4f" stroke-width="2" rx="10" filter="url(#sh2)"/>
+    <!-- Green header -->
+    <rect x="0" y="0" width="280" height="40" fill="#2d6a4f" rx="10"/>
+    <rect x="0" y="20" width="280" height="20" fill="#2d6a4f"/>
+    <text x="140" y="27" text-anchor="middle" font-size="15" font-weight="700" fill="white">Signal 1: MITOPHAGY</text>
+    <!-- Threshold indicator -->
+    <rect x="15" y="50" width="250" height="24" fill="#d8f3dc" rx="4"/>
+    <text x="140" y="66" text-anchor="middle" font-size="12" font-weight="600" fill="#2d6a4f">Threshold: LOWEST</text>
+    
+    <text x="20" y="95" font-size="11" fill="#333" font-weight="600">Trigger:</text>
+    <text x="20" y="112" font-size="10.5" fill="#555">CL externalizes to OMM outer leaflet</text>
+    <text x="20" y="127" font-size="10.5" fill="#555">Non-oxidized CL binds LC3</text>
+    
+    <text x="20" y="150" font-size="11" fill="#333" font-weight="600">Outcome:</text>
+    <text x="20" y="167" font-size="10.5" fill="#555">Selective autophagy of damaged</text>
+    <text x="20" y="182" font-size="10.5" fill="#555">mitochondrion. Cell survives.</text>
+    
+    <!-- Scope badge -->
+    <rect x="180" y="148" width="85" height="22" fill="#b7e4c7" rx="11" stroke="#2d6a4f" stroke-width="1"/>
+    <text x="222" y="163" text-anchor="middle" font-size="10" font-weight="600" fill="#2d6a4f">Organelle QC</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <g transform="translate(340, 175)">
+    <line x1="0" y1="0" x2="50" y2="-30" stroke="#888" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="25" y="-35" text-anchor="middle" font-size="9" fill="#888">damage</text>
+    <text x="25" y="-25" text-anchor="middle" font-size="9" fill="#888">escalates</text>
+  </g>
+
+  <!-- SIGNAL 2: INFLAMMATION -->
+  <g transform="translate(380, 80)">
+    <rect x="0" y="0" width="280" height="200" fill="white" stroke="#e09f3e" stroke-width="2" rx="10" filter="url(#sh2)"/>
+    <rect x="0" y="0" width="280" height="40" fill="#e09f3e" rx="10"/>
+    <rect x="0" y="20" width="280" height="20" fill="#e09f3e"/>
+    <text x="140" y="27" text-anchor="middle" font-size="15" font-weight="700" fill="white">Signal 2: INFLAMMATION</text>
+    
+    <rect x="15" y="50" width="250" height="24" fill="#fff3cd" rx="4"/>
+    <text x="140" y="66" text-anchor="middle" font-size="12" font-weight="600" fill="#c77c00">Threshold: MEDIUM</text>
+    
+    <text x="20" y="95" font-size="11" fill="#333" font-weight="600">Trigger:</text>
+    <text x="20" y="112" font-size="10.5" fill="#555">VDAC1 partial oligomerization</text>
+    <text x="20" y="127" font-size="10.5" fill="#555">mtDNA escapes through pore</text>
+    
+    <text x="20" y="150" font-size="11" fill="#333" font-weight="600">Outcome:</text>
+    <text x="20" y="167" font-size="10.5" fill="#555">cGAS-STING pathway activates.</text>
+    <text x="20" y="182" font-size="10.5" fill="#555">Type I interferon. Tissue alerted.</text>
+    
+    <rect x="180" y="148" width="85" height="22" fill="#ffeaa7" rx="11" stroke="#e09f3e" stroke-width="1"/>
+    <text x="222" y="163" text-anchor="middle" font-size="10" font-weight="600" fill="#c77c00">Tissue QC</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <g transform="translate(670, 155)">
+    <line x1="0" y1="0" x2="50" y2="-30" stroke="#888" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="25" y="-35" text-anchor="middle" font-size="9" fill="#888">damage</text>
+    <text x="25" y="-25" text-anchor="middle" font-size="9" fill="#888">escalates</text>
+  </g>
+
+  <!-- SIGNAL 3: APOPTOSIS -->
+  <g transform="translate(700, 60)">
+    <rect x="0" y="0" width="280" height="200" fill="white" stroke="#a4133c" stroke-width="2" rx="10" filter="url(#sh2)"/>
+    <rect x="0" y="0" width="280" height="40" fill="#a4133c" rx="10"/>
+    <rect x="0" y="20" width="280" height="20" fill="#a4133c"/>
+    <text x="140" y="27" text-anchor="middle" font-size="15" font-weight="700" fill="white">Signal 3: APOPTOSIS</text>
+    
+    <rect x="15" y="50" width="250" height="24" fill="#ffccd5" rx="4"/>
+    <text x="140" y="66" text-anchor="middle" font-size="12" font-weight="600" fill="#a4133c">Threshold: HIGHEST</text>
+    
+    <text x="20" y="95" font-size="11" fill="#333" font-weight="600">Trigger:</text>
+    <text x="20" y="112" font-size="10.5" fill="#555">Full VDAC1 oligomerization (≥6-mer)</text>
+    <text x="20" y="127" font-size="10.5" fill="#555">~4 nm pore: cytochrome c release</text>
+    
+    <text x="20" y="150" font-size="11" fill="#333" font-weight="600">Outcome:</text>
+    <text x="20" y="167" font-size="10.5" fill="#555">Caspase cascade. PS flip. Engulfment.</text>
+    <text x="20" y="182" font-size="10.5" fill="#555">Cell sacrificed. Irreversible.</text>
+    
+    <rect x="180" y="148" width="85" height="22" fill="#ff8fa3" rx="11" stroke="#a4133c" stroke-width="1"/>
+    <text x="222" y="163" text-anchor="middle" font-size="10" font-weight="600" fill="#a4133c">Organism QC</text>
+  </g>
+
+  <!-- Staircase visual underneath -->
+  <g transform="translate(50, 330)">
+    <!-- Step 1 -->
+    <rect x="0" y="120" width="300" height="60" fill="#d8f3dc" stroke="#2d6a4f" stroke-width="1.5" rx="4"/>
+    <text x="150" y="155" text-anchor="middle" font-size="13" font-weight="600" fill="#2d6a4f">Recycle this mitochondrion</text>
+    <!-- Step 2 -->
+    <rect x="200" y="70" width="330" height="60" fill="#fff3cd" stroke="#e09f3e" stroke-width="1.5" rx="4"/>
+    <text x="365" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#c77c00">Alert the neighborhood</text>
+    <!-- Step 3 -->
+    <rect x="430" y="20" width="330" height="60" fill="#ffccd5" stroke="#a4133c" stroke-width="1.5" rx="4"/>
+    <text x="595" y="55" text-anchor="middle" font-size="13" font-weight="600" fill="#a4133c">This cell must die</text>
+    
+    <!-- Staircase lines -->
+    <line x1="300" y1="180" x2="300" y2="130" stroke="#888" stroke-width="1.5"/>
+    <line x1="300" y1="130" x2="530" y2="130" stroke="#888" stroke-width="1.5"/>
+    <line x1="530" y1="130" x2="530" y2="80" stroke="#888" stroke-width="1.5"/>
+    <line x1="530" y1="80" x2="760" y2="80" stroke="#888" stroke-width="1.5"/>
+    
+    <!-- Axis label -->
+    <text x="400" y="210" text-anchor="middle" font-size="12" fill="#888">Increasing mitochondrial distress →</text>
+  </g>
+
+  <!-- Threshold Variable Box -->
+  <g transform="translate(80, 560)">
+    <rect x="0" y="0" width="840" height="80" fill="white" stroke="#555" stroke-width="1.5" rx="8" filter="url(#sh2)"/>
+    <text x="420" y="25" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e">Threshold Variable: Cardiolipin Oxidation State</text>
+    <text x="420" y="48" text-anchor="middle" font-size="12" fill="#555">Non-oxidized CL → mitophagy (Signal 1) | Oxidized CL → apoptosis (Signal 3)</text>
+    <text x="420" y="68" text-anchor="middle" font-size="11" fill="#888">The same lipid, in two redox states, encodes the difference between "fix this organelle" and "kill this cell"</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="500" y="680" text-anchor="middle" font-size="10" fill="#999">Three floors of the same building, reached by the same staircase, separated by landings that require increasing damage to cross.</text>
+  <text x="500" y="698" text-anchor="middle" font-size="10" fill="#999">Vasquez &amp; Claude Opus 4.6 (2026). The VDAC1 Pharmacology Atlas.</text>
+</svg>
