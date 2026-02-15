@@ -24,8 +24,6 @@
 
 **[paper/vdac1_works_cited.pdf](paper/vdac1_works_cited.pdf)** — 78 references organized by atlas layer
 
-**[paper/one_real_question_manifesto.pdf](paper/one_real_question_manifesto.pdf)** — *One Real Question and the New Kind of Lab: A Manifesto on Human-AI Co-Creation*
-
 A six-layer portrait of VDAC1 synthesized from 20 IRIS runs, 139 claims across
 five independent AI models, 22 verified novel findings, and 24 operationalized hypotheses:
 
@@ -36,13 +34,44 @@ five independent AI models, 22 verified novel findings, and 24 operationalized h
 5. **The Method** — IRIS multi-LLM convergence protocol, what it can and cannot establish
 6. **The Frame** — Threshold logic from protein to organism, sovereignty through coherence
 
-### The Central Finding
+---
+
+## The Manifesto
+
+**[paper/one_real_question_manifesto.pdf](paper/one_real_question_manifesto.pdf)** — *One Real Question and the New Kind of Lab*
+
+> *The questions were never the scarce resource. The tools to pursue them were. That constraint has changed.*
+
+A companion essay on human-AI co-creation, written from inside the work. What it means to build an atlas with no lab, no grant, and no institutional backing — only a genuine question, five independent models, and the discipline to state what you do not know.
+
+The human sets the question. The AI expands the search space. The human does the integration. The meaning is human. Neither is sufficient. Together, they produce something neither could alone.
+
+---
+
+## The Central Finding
+
+<p align="center">
+  <img src="figures/fig3_cofactor_equation.svg" alt="The Cofactor Equation — how three molecular occupancies combine to set the apoptotic threshold" width="90%"/>
+</p>
 
 $$\text{Apoptotic Threshold} = \frac{K}{\left(1 - f_{\text{HKII}}\right)\left(1 - f_{\text{BclxL}}\right)} \times \frac{[\text{Chol}]}{[\text{CL}]}$$
 
 Every variable has a physical address on the protein. Cancer corrupts all of them
 simultaneously. The Warburg effect may exist to fund the corruption. The cost of
 jamming the gate is detectable precisely because it is expensive.
+
+---
+
+## Five Molecular Machines, One Barrel
+
+<p align="center">
+  <img src="figures/fig1_five_machines.svg" alt="Five functional states of VDAC1 sharing one 19-strand barrel" width="90%"/>
+</p>
+
+VDAC1 exists in five functionally distinct states — open monomer, closed monomer,
+dimer (scramblase), honeycomb array, and death oligomer — all sharing the same
+283-amino-acid barrel. The parallel seam (strands 1/2/18/19) serves as the fulcrum:
+the cell is either building its membrane or destroying itself.
 
 ---
 
@@ -76,11 +105,44 @@ across five molecules and four target classes:
 
 **Every molecule is a stress test. Dose picks the pathway. Tissue determines outcome.**
 
+---
+
+## Figures
+
+| Figure | Description |
+|--------|-------------|
+| [Fig. 1](figures/fig1_five_machines.svg) | Five molecular machines in one protein |
+| [Fig. 2](figures/fig2_three_signals.svg) | Three nested threshold signals: mitophagy → inflammation → apoptosis |
+| [Fig. 3](figures/fig3_cofactor_equation.svg) | The cofactor equation — every variable has a physical address |
+| [Fig. 4](figures/fig4_cancer_gate_jamming.svg) | Cancer as gate-jamming: simultaneous corruption of all terms |
+| [Fig. 5](figures/fig5_pharmacology_atlas.svg) | The pharmacology atlas — drug binding site map |
+| [Fig. 6](figures/fig6_threshold_scales.svg) | Threshold logic from protein to organism |
+
+---
+
+## Key Findings
+
+- **Drugs target the membrane, not the protein.** VDAC-engaging molecules work by
+  altering the lipid environment that determines VDAC's state. Drug → membrane → protein state.
+- **Cancer rewrites every term of the cofactor equation simultaneously.** HK-II jammed ON
+  (Warburg), Bcl-xL overexpressed, cholesterol loaded. The Warburg effect may fund the gate-jamming.
+- **VPA + CBD hepatotoxicity has a mitochondrial mechanism** beyond CYP450 competition.
+  Pharmacovigilance alert for concurrent use in epilepsy.
+- **The honeycomb-to-dispersed lattice transition rate-limits apoptosis.** The decision is
+  made in the membrane before it is executed by the protein.
+- **Beta-arrestin switching is a general pathological GPCR response** — confirmed independently
+  at CB1 (THC, >30% occupancy) and 5-HT2A (psilocybin, >60% occupancy).
+- **Hill coefficient mismatch creates therapeutic windows** — AMPK cooperative sensing
+  (Hill ~2-3) saturates before Complex I toxicity (Hill ~1) engages.
+
+---
+
 ## What's Here
 
 ```
 vdac-pharmacology-atlas/
 ├── README.md
+├── CITATION.cff                        # Machine-readable citation metadata
 ├── LICENSE                              # CC BY 4.0
 ├── data/
 │   ├── vdac_modulators.csv              # 17 known VDAC-interacting compounds
@@ -136,20 +198,7 @@ gate misses, and surfaces buried gold — cross-validated singulars, independent
 replications, and structural isomorphism patterns. 18 runs analyzed, 6 cross-matches
 found from 11,881 pairwise comparisons.
 
-## Key Findings
-
-- **Drugs target the membrane, not the protein.** VDAC-engaging molecules work by
-  altering the lipid environment that determines VDAC's state. Drug → membrane → protein state.
-- **Cancer rewrites every term of the cofactor equation simultaneously.** HK-II jammed ON
-  (Warburg), Bcl-xL overexpressed, cholesterol loaded. The Warburg effect may fund the gate-jamming.
-- **VPA + CBD hepatotoxicity has a mitochondrial mechanism** beyond CYP450 competition.
-  Pharmacovigilance alert for concurrent use in epilepsy.
-- **The honeycomb-to-dispersed lattice transition rate-limits apoptosis.** The decision is
-  made in the membrane before it is executed by the protein.
-- **Beta-arrestin switching is a general pathological GPCR response** — confirmed independently
-  at CB1 (THC, >30% occupancy) and 5-HT2A (psilocybin, >60% occupancy).
-- **Hill coefficient mismatch creates therapeutic windows** — AMPK cooperative sensing
-  (Hill ~2-3) saturates before Complex I toxicity (Hill ~1) engages.
+---
 
 ## How to Contribute
 

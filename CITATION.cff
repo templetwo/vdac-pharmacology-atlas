@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "The VDAC1 Pharmacology Atlas: A Multi-LLM Convergence Portrait of Life's Decision Gate"
+type: article
+authors:
+  - family-names: Vasquez
+    given-names: Anthony J.
+    suffix: Sr.
+    affiliation: Delaware Valley University
+    email: vasquezaj3921@delval.edu
+  - name: Claude Opus 4.6
+    affiliation: Anthropic
+date-released: 2026-02-14
+url: "https://github.com/templetwo/vdac-pharmacology-atlas"
+repository-code: "https://github.com/templetwo/vdac-pharmacology-atlas"
+license: CC-BY-4.0
+keywords:
+  - VDAC1
+  - pharmacology
+  - mitochondria
+  - apoptosis
+  - multi-LLM convergence
+  - IRIS protocol
+  - cannabidiol
+  - cancer metabolism
+  - Warburg effect
+  - structural isomorphism
+abstract: >-
+  A six-layer portrait of VDAC1 pharmacology synthesized from 20 IRIS runs,
+  139 claims across five independent AI models, 22 verified novel findings,
+  and 24 operationalized hypotheses. The central finding is a cofactor equation
+  whose every variable has a physical address on the protein, and whose every
+  term cancer corrupts simultaneously.
+references:
+  - type: software
+    title: "IRIS Gate Evo"
+    url: "https://github.com/templetwo/iris-gate-evo"
+  - type: article
+    title: "Cannabidiol's Paradox at the Mitochondrial Gate"
+    url: "https://osf.io/nuxhv/"
