@@ -1,0 +1,56 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260213_184357_pharmacology
+Date: 2026-02-13
+Protocol: evo-1.0
+
+QUESTION:
+  Beyond CBD, which commonly prescribed drugs or their metabolites interact with VDAC at therapeutically relevant concentrations? (1) Valproic acid is a known hepatotoxin and mitochondrial modulator — does it engage VDAC1? (2) Acetaminophen toxicity involves mitochondrial dysfunction — is VDAC part of the NAPQI damage cascade? (3) Metformin accumulates in mitochondria and inhibits Complex I — does it also modulate VDAC gating? (4) Statins (particularly lipophilic ones like atorvastatin) partition into membranes — is VDAC occupancy a hidden variable in statin-associated myopathy? (5) What is the predicted VDAC interaction landscape for the top 20 most prescribed drugs with known mitochondrial effects?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 10
+  Promoted to TYPE 1: 0
+  Novel (no literature): 3
+  Contradicted: 2
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 19/20
+
+HYPOTHESES (ranked by testability):
+  H1. IF purified human VDAC1 is reconstituted in planar lipid bilayers and exposed to valproic acid (50–700 µM), THEN single-
+     Testability: 9.0/10
+     Effect size: 0.8117 (Cohen's d)
+     Power: 1.0
+
+  H2. IF primary mouse hepatocytes or HepaRG cells are exposed to hepatotoxic APAP concentrations (5–20 mM), THEN LC-MS/MS of 
+     Testability: 8.0/10
+     Effect size: 0.814 (Cohen's d)
+     Power: 1.0
+
+  H3. IF VDAC1 is reconstituted in bilayers pre-doped with atorvastatin or simvastatin at membrane concentrations equivalent t
+     Testability: 8.0/10
+     Effect size: 0.806 (Cohen's d)
+     Power: 1.0
+
+  H4. IF purified VDAC1 is exposed to metformin (0.01–10 mM) in reconstituted bilayers, THEN no change in conductance or gatin
+     Testability: 5.0/10
+     Effect size: 0.0 (Cohen's d)
+     Power: 0.0
+
+BUDGET:
+  Total LLM calls: 17
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

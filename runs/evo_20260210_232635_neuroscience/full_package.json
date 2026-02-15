@@ -1,0 +1,183 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260210_232635_neuroscience",
+  "question": "What role does mitochondrial dysfunction play in the shared pathophysiology of neurodegeneration (Alzheimer's, Parkinson's) and metabolic disease (type 2 diabetes), and what molecular targets link these conditions through a common mitochondrial vulnerability?",
+  "outcome": "S3_FAILED",
+  "cycles": 3,
+  "total_calls": 15,
+  "convergence_report": {
+    "stage": "S3",
+    "passed": false,
+    "convergence_score": 0.7361,
+    "convergence_threshold": 0.85,
+    "convergence_pass": false,
+    "jaccard": 0.1977,
+    "jaccard_threshold": 0.85,
+    "jaccard_pass": false,
+    "type_01_ratio": 0.3529,
+    "type_01_threshold": 0.75,
+    "type_pass": false,
+    "cosine": 0.7361,
+    "jsd": 0.3357,
+    "kappa": 0.835,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.35294117647058826,
+      "2": 0.35294117647058826,
+      "3": 0.29411764705882354
+    },
+    "divergence_map": {
+      "total_unique_claims": 17,
+      "most_divergent": [
+        {
+          "statement": "1:** The collapse of proton motive force (\u0394p), not ATP deficit alone, is the integrative pathophysiological variable linking neurodegeneration and T2D, because \u0394p simultaneously governs ATP synthesis, ROS directionality at Complex I/III, and mitochondrial Ca\u00b2\u207a uptake via MCU.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.82
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2:** CypD-sensitized mPTP opening is the final common executioner, with a quantitatively lower Ca\u00b2\u207a threshold in disease states (~50-100 \u03bcM vs. ~200-300 \u03bcM in healthy mitochondria).",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.8
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3:** PINK1/Parkin-mediated mitophagy flux is rate-limiting for mitochondrial quality control in both neuronal and \u03b2-cell contexts, and its failure precedes bioenergetic collapse by years.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            0
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4:** Disrupted Miro1/2-mediated mitochondrial trafficking is an early, underappreciated shared vulnerability in polarized cells.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.6
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "5:** MitoQ (680 Da) and SkQ1 (580 Da) exceed the BBB 400 Da passive diffusion cutoff, and their CNS delivery depends on carrier-mediated transport that is downregulated in neurodegeneration.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "1**: *The collapse of mitochondrial proton motive force (\u0394p) is the principal shared pathophysiological output, driving ATP deficit, ROS emission, and Ca\u00b2\u207a dysregulation in AD, PD, and T2D.* **TYPE**: 1 (supported by emerging evidence, but not yet consensus) **CONFIDENCE**: 0.85 **MECHANISM**: \u0394p (\u0394\u03a8m + \u0394pH) powers ATP synthesis, ROS scavenging (via reverse electron transport), and Ca\u00b2\u207a buffering; its collapse unifies bioenergetic failure, oxidative stress, and excitotoxicity/glucolipotoxicity. **FALSIFIABLE BY**: In vivo \u0394p measurements (e.g., via TMRM/TPP+ probes) showing preserved \u0394p in early disease stages despite ATP deficits or ROS elevation.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2**: *Impaired mitochondrial motility via Miro/Milton/TRAK disruption is a shared vulnerability in neurons and \u03b2-cells, preceding gross bioenergetic failure.* **TYPE**: 2 (novel, limited direct evidence) **CONFIDENCE**: 0.75 **MECHANISM**: Miro/TRAK complexes anchor mitochondria to microtubules; their disruption (e.g., via ROS, Ca\u00b2\u207a, or \u03b1-synuclein/amyloid oligomers) causes mislocalization, starving distal axons/\u03b2-cell processes of ATP and Ca\u00b2\u207a buffering. **FALSIFIABLE BY**: Live-cell imaging of mitochondrial trafficking in iPSC-derived neurons/\u03b2-cells from AD/PD/T2D models, showing motility defects prior to \u0394\u03a8m collapse.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3**: *Cyclophilin D (CypD)-mediated mPTP hyperopening is the terminal event linking Ca\u00b2\u207a dysregulation in excitotoxicity (AD/PD) and glucolipotoxicity (T2D).* **TYPE**: 0 (established) **CONFIDENCE**: 0.90 **MECHANISM**: CypD lowers the Ca\u00b2\u207a threshold for mPTP opening, causing \u0394\u03a8m collapse, ATP depletion, and pro-apoptotic factor release (e.g., cytochrome c) in both glutamate-stressed neurons and lipid-overloaded \u03b2-cells. **FALSIFIABLE BY**: CypD knockout models showing resistance to Ca\u00b2\u207a-induced cell death in both neuronal and \u03b2-cell contexts.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4**: *Mitochondrial-targeted antioxidants (e.g., MitoQ) fail in AD/PD due to BBB exclusion (MW > 400 Da), but their peripheral efficacy in T2D suggests a \"two-hit\" model: systemic oxidative stress (T2D) vs. CNS-specific vulnerability (AD/PD).* **TYPE**: 1 (supported, but therapeutic implications debated) **CONFIDENCE**: 0.88 **MECHANISM**: MitoQ (680 Da) exceeds BBB passive diffusion limit; P-glycoprotein efflux further limits CNS penetration, while peripheral tissues (e.g., muscle/liver) benefit from direct antioxidant effects. **FALSIFIABLE BY**: PET imaging of radiolabeled MitoQ showing negligible brain uptake in AD/PD models vs. high peripheral distribution. ---",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "BBB 400 Da cutoff (TYPE 1 prior) blocks MitoQ (680 Da), limiting CNS efficacy vs. peripheral T2D benefits.",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.92
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        }
+      ],
+      "models_present": [
+        "claude",
+        "mistral",
+        "grok",
+        "gemini",
+        "deepseek"
+      ]
+    },
+    "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+  }
+}

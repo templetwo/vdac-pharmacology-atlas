@@ -1,0 +1,153 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "1:** Baseline peripheral blood GSH/GSSG ratio predicts hepatotoxicity risk from VDAC-engaging drugs (CBD, valproate, acetaminophen).",
+      "mechanism": "Low GSH/GSSG reflects impaired mitochondrial antioxidant capacity; VDAC modulation (e.g., by CBD) exacerbates ROS, triggering hepatocyte death and ALT/GGT elevation.",
+      "falsifiable_by": "A prospective study showing no correlation between baseline GSH/GSSG and hepatotoxicity in patients on CBD/valproate, or evidence that GSH/GSSG is not rate-limiting for VDAC-mediated oxidative stress.",
+      "type": 0,
+      "confidence": 0.718,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('alt', 'upregulates', 'ros')})",
+      "chunk_text": "1:** Baseline peripheral blood GSH/GSSG ratio predicts hepatotoxicity risk from VDAC-engaging drugs (CBD, valproate, acetaminophen)."
+    },
+    {
+      "statement": "A \"mitochondrial stress test\" panel is a pharmacodynamic readout, not a predictive companion diagnostic, for VDAC modulators.",
+      "mechanism": "Changes in MMP, ATP/ADP, and GSH after drug exposure measure *on-target effect*, but baseline values may not predict individual vulnerability because they integrate too many confounding variables (nutrition, comorbidities).",
+      "falsifiable_by": "A prospective trial demonstrating that pre-treatment panel values stratify patients into differential clinical outcome groups for a VDAC-targeting drug.",
+      "type": 0,
+      "confidence": 0.688,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac', 'interacts', 'mmp'), ('adp', 'interacts', 'gsh'), ('atp', 'interacts', 'adp'), ('mmp', 'interacts', 'atp')})",
+      "chunk_text": "A \"mitochondrial stress test\" panel is a pharmacodynamic readout, not a predictive companion diagnostic, for VDAC modulators."
+    },
+    {
+      "statement": "4:** Epidiolex trials (GWPCARE) contain sufficient PK/hepatic biomarker data to retrospectively validate VDAC-hepatotoxicity links, but *only if stored samples exist* for GSH/GSSG analysis.",
+      "mechanism": "GWPCARE trials measured ALT/GGT and CBD plasma levels; retrospective analysis could correlate baseline GSH/GSSG (if stored) with hepatotoxicity, but sample degradation or lack of storage may limit utility.",
+      "falsifiable_by": "Confirmation that no stored samples exist for GSH/GSSG measurement, or a retrospective analysis showing no correlation between ALT/GGT and CBD exposure.",
+      "type": 1,
+      "confidence": 0.81,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('pk', 'interacts', 'vdac'), ('vdac', 'interacts', 'gsh'), ('gwpcare', 'interacts', 'pk'), ('alt', 'interacts', 'ggt'), ('gsh', 'interacts', 'gssg'), ('gssg', 'interacts', 'alt'), ('ggt', 'interacts', 'cbd')})",
+      "chunk_text": "4:** Epidiolex trials (GWPCARE) contain sufficient PK/hepatic biomarker data to retrospectively validate VDAC-hepatotoxicity links, but *only if stored samples exist* for GSH/GSSG analysis."
+    },
+    {
+      "statement": "2**: VDAC1 expression in CTCs is NOT currently a reliable predictive biomarker for response to VDAC-targeting cancer therapies.",
+      "mechanism": "CTCs are rare (1-100/mL), phenotypically heterogeneous, and VDAC1 expression in CTCs may not reflect bulk tumor mitochondrial dependence; no validated quantitative CTC-VDAC1 assay exists; erastin acts primarily via system Xc\u207b inhibition with VDAC involvement being secondary/debated.",
+      "falsifiable_by": "Demonstration that single-CTC VDAC1 quantification (e.g., by CellSearch + immunofluorescence) correlates with tumor biopsy VDAC1 levels (r>0.7) and treatment response in a prospective cohort.",
+      "type": 1,
+      "confidence": 0.762,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "deepseek",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'ctcs'), ('vdac', 'interacts', 'ctc'), ('ctcs', 'interacts', 'vdac')})",
+      "chunk_text": "2**: VDAC1 expression in CTCs is NOT currently a reliable predictive biomarker for response to VDAC-targeting cancer therapies."
+    },
+    {
+      "statement": "VDAC1 expression in CTCs is a poor predictive biomarker for CBD's anticancer efficacy because CBD's therapeutic plasma concentrations ([1.0, 10.0] uM) are insufficient to robustly engage VDAC1 (Kd = 11.0 uM), instead prioritizing higher-affinity targets like TRPV1/2 and PPAR\u03b3.",
+      "mechanism": "Target affinity dictates drug action; CBD will modulate targets with Kd/EC50 values within its therapeutic window before engaging lower-affinity targets like VDAC1.",
+      "falsifiable_by": "Evidence showing robust VDAC1-dependent apoptosis in cancer cells at CBD concentrations below 10 uM, or clinical data showing a strong correlation between CTC VDAC1 expression and tumor response in patients treated with CBD monotherapy.",
+      "type": 2,
+      "confidence": 0.8,
+      "overlap_count": 2,
+      "models": [
+        "deepseek",
+        "gemini"
+      ],
+      "tuples": "frozenset({('ec50', 'downregulates', 'vdac1'), ('cbd', 'modulates', 'ec50')})",
+      "chunk_text": "VDAC1 expression in CTCs is a poor predictive biomarker for CBD's anticancer efficacy because CBD's therapeutic plasma concentrations ([1.0, 10.0] uM) are insufficient to robustly engage VDAC1 (Kd = 11.0 uM), instead prioritizing higher-affinity targets like TRPV1/2 and PPAR\u03b3."
+    },
+    {
+      "statement": "VDAC1 expression in CTCs is unreliable predictor for erastin/CBD due to <5 CTCs/mL yield & 50% heterogeneity.",
+      "mechanism": "CTC VDAC1 varies 10-fold by EMT status; erastin ferroptosis (VDAC indirect) not CTC-validated.",
+      "falsifiable_by": "Prospective trial (n>50) with scRNA-seq showing",
+      "type": 3,
+      "confidence": 0.78,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('ctcs', 'interacts', 'cbd'), ('emt', 'interacts', 'vdac'), ('vdac1', 'interacts', 'ctcs'), ('ctc', 'interacts', 'emt'), ('cbd', 'interacts', 'ctc')})",
+      "chunk_text": "VDAC1 expression in CTCs is unreliable predictor for erastin/CBD due to <5 CTCs/mL yield & 50% heterogeneity."
+    },
+    {
+      "statement": "Peripheral blood GSH/GSSG ratio is a low-fidelity predictor of hepatic-specific toxicity from VDAC modulators because it does not reliably reflect the distinct, compartmentalized redox state of the liver.",
+      "mechanism": "The liver maintains its own GSH pool and redox balance, which is not in rapid equilibrium with circulating blood; systemic oxidative stress markers are poor proxies for organ-specific vulnerability.",
+      "falsifiable_by": "A study in a large animal model or human cohort demonstrating a tight, predictive correlation (r > 0.7) between baseline peripheral blood GSH/GSSG and liver biopsy GSH/GSSG, and that this peripheral measure predicts subsequent drug-induced liver injury.",
+      "type": 3,
+      "confidence": 0.75,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('gssg', 'interacts', 'vdac'), ('vdac', 'interacts', 'oxidative_stress'), ('gsh', 'interacts', 'gssg')})",
+      "chunk_text": "Peripheral blood GSH/GSSG ratio is a low-fidelity predictor of hepatic-specific toxicity from VDAC modulators because it does not reliably reflect the distinct, compartmentalized redox state of the liver."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.09254331244644312,
+      "cosine": 0.8198689520359039,
+      "jsd": 0.03238433056413423,
+      "kappa": 0.9928209160605465,
+      "type_distribution": {
+        "0": 0.05263157894736842,
+        "1": 0.6842105263157895,
+        "2": 0.2631578947368421,
+        "3": 0.0
+      },
+      "type_01_ratio": 0.736842105263158,
+      "n_claims_per_model": [
+        4,
+        5,
+        3,
+        3,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.40192562855101555,
+      "cosine": 0.8806638598442078,
+      "jsd": 0.19639584134456928,
+      "kappa": 0.9708843537414965,
+      "type_distribution": {
+        "0": 0.4444444444444444,
+        "1": 0.3333333333333333,
+        "2": 0.1111111111111111,
+        "3": 0.1111111111111111
+      },
+      "type_01_ratio": 0.7777777777777777,
+      "n_claims_per_model": [
+        4,
+        4,
+        3,
+        3,
+        4
+      ]
+    }
+  ]
+}

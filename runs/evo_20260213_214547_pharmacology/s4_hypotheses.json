@@ -1,0 +1,401 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF VDAC1 is reconstituted into supported lipid bilayers with Chol/CL molar ratios ranging from 0.5 to 10, THEN AFM imaging will reveal a monotonic increase in honeycomb array area fraction (f_h) from <0.15 at Chol/CL=0.5 to >0.70 at Chol/CL=10, with a Hill-type transition midpoint at Chol/CL \u2248 2-4.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "VDAC1_density",
+          "unit": "monomers/\u03bcm\u00b2",
+          "low": 500.0,
+          "high": 5000.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "PE_fraction",
+          "unit": "mol",
+          "low": 0.2,
+          "high": 0.45,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "temperature",
+          "unit": "\u00b0C",
+          "low": 22.0,
+          "high": 37.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CL_mol_percent",
+          "unit": "mol%",
+          "low": 2.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "Hill_coefficient",
+          "unit": "dimensionless",
+          "low": 1.0,
+          "high": 4.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 8.0,
+      "experimental_protocol": "Reconstitute purified human VDAC1 into supported lipid bilayers (POPC/POPE/CL/Chol at defined ratios) on mica via vesicle fusion. Image in fluid tapping-mode AFM (Bruker MultiMode 8) at sub-nm resolution. Quantify honeycomb lattice area fraction using autocorrelation analysis across \u226520 fields per condition, 5 Chol/CL ratios \u00d7 3 replicates. Timeline: 8-10 weeks.",
+      "expected_outcome": "Sigmoidal relationship between Chol/CL and f_h; lattice spacing ~6-7 nm consistent with published honeycomb periodicity; CL titration at fixed Chol causes",
+      "null_outcome": "No correlation between Chol/CL and f_h; honeycomb arrays persist at Chol/CL=0.5; or arrays never form regardless of ratio, indicating protein-protein contacts dominate over lipid environment.",
+      "dose_ranges": {
+        "CL": {
+          "doses": [
+            2.0,
+            5.0,
+            10.0,
+            15.0,
+            20.0
+          ],
+          "unit": "mol%;"
+        },
+        "Cholesterol": {
+          "doses": [
+            5.0,
+            10.0,
+            20.0,
+            30.0,
+            40.0
+          ],
+          "unit": "mol%"
+        }
+      },
+      "readouts": [
+        "AFM topography (honeycomb lattice area fraction",
+        "nearest-neighbor distance",
+        "defect density)",
+        "laurdan generalized polarization (membrane order)",
+        "DLS for vesicle QC"
+      ],
+      "controls": [
+        "VDAC1-free bilayers (same lipid compositions)",
+        "POPC-only bilayers + VDAC1",
+        "heat-denatured VDAC1",
+        "scrambled lipid order (rapid freeze-thaw)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H2",
+      "prediction": "IF HK-II is displaced from VDAC1 honeycomb arrays (by glucose-6-phosphate or clotrimazole treatment), THEN within 10-30 minutes: (a) CL-specific fluorescent probe (NAO or TopFluor-CL) signal at VDAC clusters increases \u22652-fold, and (b) honeycomb array area fraction decreases by \u226540%, and (c) both effects are abolished by prior CL depletion (PLS3 knockdown or CL synthase inhibition).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "II_displacement_rate",
+          "unit": "min\u207b\u00b9",
+          "low": 0.01,
+          "high": 0.5,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CL_exposure_fold_change",
+          "unit": "fold",
+          "low": 1.0,
+          "high": 5.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "f_h_decrease",
+          "unit": "%",
+          "low": 0.0,
+          "high": 80.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "clotrimazole_EC50",
+          "unit": "\u03bcM",
+          "low": 1.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "G6P_concentration",
+          "unit": "mM",
+          "low": 0.5,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "time_to_disassembly",
+          "unit": "min",
+          "low": 5.0,
+          "high": 60.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CL_content_threshold",
+          "unit": "mol%",
+          "low": 2.0,
+          "high": 8.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 6.0,
+      "experimental_protocol": "Use isolated rat liver mitochondria or U2OS cells expressing VDAC1-GFP. Displace HK-II with clotrimazole (5-30 \u03bcM) or G6P (2-10 mM). Monitor CL exposure via NAO fluorescence (confocal, FRET-based) and VDAC organization via STORM/PALM super-resolution or AFM on isolated OMM sheets. CL-depletion arm: pre-treat with CLS1 inhibitor or siRNA 48h prior. Timeline: 12-16 weeks.",
+      "expected_outcome": "HK-II displacement causes rapid CL unmasking at VDAC sites (NAO increase), followed by honeycomb disassembly (reduced cluster size in STORM); CL-depleted mitochondria show HK-II displacement but no array disruption, proving CL is the mediating lipid.",
+      "null_outcome": "HK-II displacement occurs but CL exposure does not change; or honeycomb arrays disassemble equally in CL-depleted mitochondria; or no detectable honeycomb structures exist in native OMM under any condition.",
+      "dose_ranges": {
+        "Clotrimazole": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            20.0,
+            30.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "G6P": {
+          "doses": [
+            0.5,
+            2.0,
+            5.0,
+            10.0
+          ],
+          "unit": "mM;"
+        },
+        "CLS1 siRNA": {
+          "doses": [
+            10.0,
+            30.0
+          ],
+          "unit": "nM"
+        }
+      },
+      "readouts": [
+        "NAO fluorescence intensity at mitochondria (confocal)",
+        "VDAC1 cluster size/density (STORM)",
+        "HK-II co-IP or proximity ligation assay",
+        "cytochrome c release (ELISA)",
+        "\u0394\u03a8m (TMRE)"
+      ],
+      "controls": [
+        "Vehicle-treated mitochondria",
+        "HK-II-free VDAC1 (HK-II KO cells)",
+        "non-displaceable HK-II mutant (VDAC1-E73Q)",
+        "CL-replete vs CL-depleted matched pairs",
+        "clotrimazole + exogenous CL rescue",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H3",
+      "prediction": "IF CBD (1-10 \u03bcM) is added to VDAC1-containing reconstituted bilayers, THEN honeycomb array density will change by \u226530% at concentrations below the Kd for direct VDAC binding (11 \u03bcM), AND this effect will be reproduced by a membrane-order-matched control compound (e.g., cholesterol hemisuccinate or vitamin E) that does not bind VDAC, AND will NOT be abolished by VDAC1 point mutations (e.g., E73Q, T19A) that disrupt known drug-binding pockets.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CBD_concentration",
+          "unit": "\u03bcM",
+          "low": 0.1,
+          "high": 30.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CBD_Kd_VDAC",
+          "unit": "\u03bcM",
+          "low": 5.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "f_h_change_at_subKd",
+          "unit": "%",
+          "low": 0.0,
+          "high": 60.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "logP_matched_control",
+          "unit": "(uniform)",
+          "low": 5.0,
+          "high": 7.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "partition_coefficient_OMM",
+          "unit": "(log-uniform)",
+          "low": 100.0,
+          "high": 10000.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Reconstitute VDAC1 (WT and E73Q, T19A mutants) into supported bilayers (OMM-mimetic: POPC/POPE/CL/Chol 48:28:10:14). Treat with CBD (0.5, 1, 3, 5, 10, 30 \u03bcM), simvastatin (1, 5, 10, 30 \u03bcM), vitamin E (logP-matched non-VDAC-binder), and cholesterol hemisuccinate. Image by AFM; measure membrane order by laurdan GP spectroscopy in parallel GUVs. Timeline: 10-14 weeks.",
+      "expected_outcome": "CBD at 1-5 \u03bcM (sub-Kd) alters f_h by \u226530%; vitamin E at equi-partitioning concentration produces similar effect; VDAC binding-site mutants show identical f_h shifts as WT, confirming membrane-mediated mechanism. Laurdan GP correlates with f_h across all compounds.",
+      "null_outcome": "CBD effects on f_h only appear at >Kd concentrations; VDAC binding-site mutants are resistant to CBD-induced reorganization; logP-matched non-binders have no effect; or laurdan GP changes do not correlate with array changes, indicating direct binding is necessary.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            0.5,
+            1.0,
+            3.0,
+            5.0,
+            10.0,
+            30.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "Simvastatin": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            30.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "Vitamin E": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            30.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "CHS": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0
+          ],
+          "unit": "\u03bcM"
+        }
+      },
+      "readouts": [
+        "AFM (f_h",
+        "lattice parameter",
+        "defect density)",
+        "laurdan GP (membrane order)",
+        "ITC (confirm binding/non-binding of controls to VDAC)",
+        "FCS (VDAC diffusion coefficient)",
+        "mass spectrometry (drug partitioning into bilayer)"
+      ],
+      "controls": [
+        "5.0-7.0 (uniform)",
+        "- bilayer_thickness_change: -0.5-1.0 nm (normal",
+        "\u03bc=0.2",
+        "\u03c3=0.3)",
+        "- partition_coefficient_OMM: 100-10000 (log-uniform)",
+        "TESTABILITY: 7",
+        "PROTOCOL: Reconstitute VDAC1 (WT and E73Q",
+        "T19A mutants) into supported bilayers (OMM-mimetic: POPC/POPE/CL/Chol 48:28:10:14). Treat with CBD (0.5",
+        "1",
+        "3",
+        "5",
+        "10",
+        "30 \u03bcM)",
+        "simvastatin (1",
+        "5",
+        "10",
+        "30 \u03bcM)",
+        "vitamin E (logP-matched non-VDAC-binder)",
+        "and cholesterol hemisuccinate. Image by AFM",
+        "measure membrane order by laurdan GP spectroscopy in parallel GUVs. Timeline: 10-14 weeks.",
+        "EXPECTED OUTCOME: CBD at 1-5 \u03bcM (sub-Kd) alters f_h by \u226530%",
+        "vitamin E at equi-partitioning concentration produces similar effect",
+        "VDAC binding-site mutants show identical f_h shifts as WT",
+        "confirming membrane-mediated mechanism. Laurdan GP correlates with f_h across all compounds.",
+        "NULL OUTCOME: CBD effects on f_h only appear at >Kd concentrations",
+        "VDAC binding-site mutants are resistant to CBD-induced reorganization",
+        "logP-matched non-binders have no effect",
+        "or laurdan GP changes do not correlate with array changes",
+        "indicating direct binding is necessary.",
+        "DOSE RANGES: CBD: 0.5",
+        "1",
+        "3",
+        "5",
+        "10",
+        "30 \u03bcM",
+        "Simvastatin: 1",
+        "5",
+        "10",
+        "30 \u03bcM",
+        "Vitamin E: 1",
+        "5",
+        "10",
+        "30 \u03bcM",
+        "CHS: 1",
+        "5",
+        "10 \u03bcM",
+        "READOUTS: AFM (f_h",
+        "lattice parameter",
+        "defect density)",
+        "laurdan GP (membrane order)",
+        "ITC (confirm binding/non-binding of controls to VDAC)",
+        "FCS (VDAC diffusion coefficient)",
+        "mass spectrometry (drug partitioning into bilayer)",
+        "CONTROLS: Vehicle (0.1% DMSO)",
+        "protein-free bilayers + drugs (membrane-only effect)",
+        "VDAC WT vs mutants at each drug dose",
+        "heat-denatured VDAC",
+        "cholesterol-only bilayers (no CL)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H4",
+      "prediction": "IF the honeycomb-to-dispersed transition is the rate-limiting step for apoptosis, THEN: (a) pre-dispersing VDAC arrays (by CL enrichment or cholesterol extraction with M\u03b2CD) will accelerate cytochrome c release by \u22653-fold compared to apoptotic stimulus alone, (b) artificially stabilizing honeycombs (cholesterol loading) will delay cytochrome c release by \u22653-fold even in the presence of BH3-only protein activation, and (c) the time from stimulus to cytochrome c release will correlate with f_h decay kinetics (r\u00b2 > 0.7) rather than with Bax/Bak activation kinetics.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [],
+      "testability_score": 5.0,
+      "experimental_protocol": "",
+      "expected_outcome": "",
+      "null_outcome": "",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": []
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_calls": 1,
+  "latency_s": 57.75
+}

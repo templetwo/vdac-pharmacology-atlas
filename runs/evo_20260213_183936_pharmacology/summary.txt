@@ -1,0 +1,56 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260213_183936_pharmacology
+Date: 2026-02-13
+Protocol: evo-1.0
+
+QUESTION:
+  Can VDAC-related biomarkers predict individual vulnerability to mitochondrial modulators, enabling risk-stratified prescribing? (1) Does baseline GSH/GSSG ratio in peripheral blood or liver function tests (ALT, GGT) reliably predict hepatotoxicity risk from VDAC-engaging drugs (CBD, valproate, acetaminophen)? (2) Is VDAC1 expression level in circulating tumor cells a predictive biomarker for response to VDAC-targeting cancer therapies (erastin, CBD)? (3) Could a simple 'mitochondrial stress test' panel (GSH, ATP/ADP ratio, MMP by TMRM) serve as a companion diagnostic for VDAC-modulating drugs? (4) What existing clinical datasets (Epidiolex trials, erastin Phase I) contain the pharmacokinetic and hepatic biomarker data needed to retrospectively validate this framework?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 5
+  Promoted to TYPE 1: 0
+  Novel (no literature): 3
+  Contradicted: 0
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 3/19
+
+HYPOTHESES (ranked by testability):
+  H2. IF VDAC1 is knocked down (siRNA, >70% reduction) in HepG2 cells, THEN CBD-induced (10 µM, 48h) ROS production will decre
+     Testability: 9.0/10
+     Effect size: 1.0728 (Cohen's d)
+     Power: 1.0
+
+  H1. IF primary human hepatocytes are stratified by baseline GSH/GSSG ratio into tertiles (low <30, mid 30-60, high >60), THE
+     Testability: 8.0/10
+     Effect size: 0.858 (Cohen's d)
+     Power: 1.0
+
+  H3. IF hepatocytes are exposed to escalating doses of CBD or erastin, THEN the three-component panel (GSH, ATP/ADP, MMP) wil
+     Testability: 7.0/10
+     Effect size: 0.806 (Cohen's d)
+     Power: 1.0
+
+  H4. IF a panel of cancer cell lines (n≥15) is ranked by VDAC1 protein expression, THEN VDAC1-high lines (top quartile) will 
+     Testability: 5.0/10
+     Effect size: 0.0 (Cohen's d)
+     Power: 0.0
+
+BUDGET:
+  Total LLM calls: 12
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

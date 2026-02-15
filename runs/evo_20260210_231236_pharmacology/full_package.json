@@ -1,0 +1,899 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260210_231236_pharmacology",
+  "timestamp": "2026-02-10T23:15:42.469971+00:00",
+  "question": "What mechanisms explain why low-dose lithium is neuroprotective while therapeutic-dose lithium causes nephrotoxicity, and what molecular targets determine the dose-dependent switch between cytoprotection and organ toxicity?",
+  "convergence_report": {
+    "s1_initial": {
+      "n_models_responded": 5,
+      "initial_jaccard": 0.05948773448773449,
+      "initial_cosine": 0.7847204446792603
+    },
+    "s2_refinement": {
+      "total_rounds": 0,
+      "early_stopped": false,
+      "final_jaccard": 0.0,
+      "final_cosine": 0.0,
+      "final_jsd": 0.0,
+      "final_type_01_ratio": 0.0
+    },
+    "s3_gate": {
+      "passed": true,
+      "jaccard": 0.3773,
+      "type_01_ratio": 0.9474,
+      "recommendation": ""
+    }
+  },
+  "verification": {
+    "n_type2_input": 4,
+    "n_promoted": 0,
+    "n_held": 2,
+    "n_novel": 2,
+    "n_contradicted": 0,
+    "total_calls": 4
+  },
+  "gate": {
+    "passed": true,
+    "n_passed": 12,
+    "n_failed": 7,
+    "recommendation": "Lab Gate PASSED with filter. 12/19 claims cleared. 7 filtered: '3:** Nephrotoxicity requires dual-target engagemen...' not feasible; '4:** Magnesium competition contributes to the dose...' lacks novelty; '4:** **Magnesium competition modulates the dose-de...' lacks novelty",
+    "claims": [
+      {
+        "statement": "1:** The dose-dependent switch is fundamentally a pharmacokinetic phenomenon: renal collecting duct ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "2:** Neuroprotection at low brain [Li\u207a] (0.2\u20130.6 mM) is driven by ~10\u201325% GSK-3\u03b2 inhibition (Ki ~2 m",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "3:** Nephrotoxicity requires dual-target engagement: IMPase inhibition (>70% at renal [Li\u207a] >2 mM) d",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "4:** Magnesium competition contributes to the dose-dependent switch \u2014 Li\u207a displaces Mg\u00b2\u207a from the ca",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "1:** The dose-dependent switch between neuroprotection and nephrotoxicity is driven by **tissue-spec",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "2:** **IMPase inhibition is the primary driver of nephrotoxicity**, with inositol depletion disrupti",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "3:** **GSK-3\u03b2 inhibition exhibits a biphasic effect**: 10\u201330% inhibition (brain [Li\u207a] ~0.4 mM) activ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "4:** **Magnesium competition modulates the dose-dependent switch**, with therapeutic [Li\u207a] (0.6\u20131.2 ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Nephrotoxicity arises from ENaC-mediated Li\u207a accumulation in renal principal cells to 2-4 mM at ther",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Neuroprotection at low-dose serum Li (0.1-0.6 mM; brain [Li\u207a]~0.05-0.3 mM) via partial GSK-3\u03b2 inhibi",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Dose-switch is a tissue-[Li\u207a] phenomenon: kidney [Li\u207a] hits TD50~2 mM (therapeutic_index~10 vs brain",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Mg\u00b2\u207a competition contributes to dose-dependence: therapeutic [Li\u207a] displaces Mg\u00b2\u207a (Kd~0.5 mM) from I",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "High renal [Li\u207a] inhibits mito Complex I (ND2/4 binding), exacerbating toxicity beyond IMPase/GSK-3\u03b2",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The dose-dependent switch is a direct consequence of pharmacokinetic partitioning creating two disti",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The molecular switch is governed by the relative Ki values of IMPase (Ki \u2248 0.8 mM) and GSK-3\u03b2 (Ki \u2248 ",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The biophysical basis for lithium's action is competitive displacement of the cofactor Mg\u00b2\u207a. Li\u207a inh",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "1: The neuroprotective-toxic switch is primarily determined by the local concentration exceeding the",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "2: Low-dose neuroprotection (0.2-0.5 mM serum) arises from ~10-25% inhibition of GSK-3\u03b2 in neurons, ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "3: Magnesium competition is a plausible amplifier of the dose-dependent switch: at renal tubular [Li",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF renal collecting duct cells express functional ENaC, THEN intracellular [Li\u207a] will be 2.5\u20134.0\u00d7 extracellular [Li\u207a] at steady state (24h), while ENaC-knockout/amiloride-blocked cells will show ratios <1.5\u00d7.",
+      "testability_score": 9.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "intracellular_renal_Li_ratio",
+          "range": "2.0-4.5 dimensionless",
+          "distribution": "uniform"
+        },
+        {
+          "name": "ENaC_block_residual_ratio",
+          "range": "0.8-1.5 dimensionless",
+          "distribution": "uniform"
+        },
+        {
+          "name": "amiloride_IC50",
+          "range": "0.1-1.0 \u03bcM",
+          "distribution": "log-normal"
+        },
+        {
+          "name": "equilibration_time",
+          "range": "12.0-48.0 h",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.172,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.504806398913333,
+            "std": 0.13612023581746138,
+            "median": 0.5069754107596867,
+            "ci_lower": 0.244875040692095,
+            "ci_upper": 0.7669466484591559,
+            "min": 0.1343239520208208,
+            "max": 0.8379737737823747
+          }
+        }
+      }
+    },
+    {
+      "id": "H2",
+      "prediction": "IF renal cells are exposed to [Li\u207a] >2 mM (mimicking renal intracellular levels), THEN AQP2 apical membrane insertion will decrease >50% within 48h, AND co-treatment with myo-inositol (10 mM) will rescue AQP2 trafficking to >75% of baseline.",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "IMPase_Ki",
+          "range": "0.5-1.2 mM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "AQP2_reduction_at_3mM",
+          "range": "40.0-80.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "inositol_rescue_fraction",
+          "range": "0.5-1.0 (uniform)",
+          "distribution": "uniform"
+        },
+        {
+          "name": "PI45P2_depletion_EC50",
+          "range": "1.0-3.0 mM",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.0586,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5008179913288715,
+            "std": 0.15033298505938425,
+            "median": 0.4956530980769948,
+            "ci_lower": 0.222005051072042,
+            "ci_upper": 0.7868062895933343,
+            "min": 0.13596457092550318,
+            "max": 0.9110213034155875
+          }
+        }
+      }
+    },
+    {
+      "id": "H3",
+      "prediction": "IF primary cortical neurons are exposed to 0.3 mM Li\u207a, THEN GSK-3\u03b2 activity decreases 15\u201325%, Nrf2 nuclear translocation increases >2-fold, and survival after glutamate excitotoxicity improves >30%. GSK-3\u03b2-S9A mutant neurons will show NO neuroprotection, and Nrf2\u207b/\u207b neurons will show >50% attenuation of protection.",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "GSK3B_Ki_Li",
+          "range": "1.2-2.5 mM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Nrf2_fold_induction",
+          "range": "1.5-4.0 (log-normal)",
+          "distribution": "uniform"
+        },
+        {
+          "name": "neuroprotection_magnitude",
+          "range": "20.0-50.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Hill_coefficient",
+          "range": "0.8-1.3 (normal,",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.0642,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4807917841094244,
+            "std": 0.14990970785263097,
+            "median": 0.4806031060227769,
+            "ci_lower": 0.21274617524287387,
+            "ci_upper": 0.7999716542951447,
+            "min": 0.09808283239076555,
+            "max": 0.8696479365844241
+          }
+        }
+      }
+    },
+    {
+      "id": "H4",
+      "prediction": "IF collecting duct cells experience >50% GSK-3\u03b2 inhibition (via 3 mM Li\u207a), THEN \u03b2-catenin-dependent transcription (TOPFlash) increases >5-fold, with upregulation of fibrotic markers (\u03b1-SMA, collagen I, CTGF) >3-fold within 72h. At 0.3 mM Li\u207a (~20% inhibition), the same cells show <2-fold TOPFlash and no fibrotic marker induction. \u03b2-catenin knockdown will abolish fibrotic response at high [Li\u207a].",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "GSK3B_inhibition_at_3mM",
+          "range": "50.0-75.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "TOPFlash_fold_at_3mM",
+          "range": "3.0-10.0 (log-normal,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "fibrotic_marker_fold",
+          "range": "2.0-6.0 (log-normal)",
+          "distribution": "uniform"
+        },
+        {
+          "name": "threshold_Li_for_fibrosis",
+          "range": "1.5-3.0 mM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "time_to_fibrotic_phenotype",
+          "range": "48.0-120.0 h",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.8509,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4937493934496894,
+            "std": 0.12943841657848718,
+            "median": 0.49787577609649714,
+            "ci_lower": 0.23288415518242517,
+            "ci_upper": 0.7200388722954524,
+            "min": 0.1632636605171135,
+            "max": 0.8203192999267144
+          }
+        }
+      }
+    }
+  ],
+  "simulations": {
+    "n_hypotheses_simulated": 4,
+    "total_iterations": 1200,
+    "llm_calls": 0,
+    "results": [
+      {
+        "hypothesis_id": "H1",
+        "n_iterations": 300,
+        "effect_size": 1.172,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "intracellular_renal_Li_ratio": {
+            "mean": 3.216633720673229,
+            "std": 0.7245549425263573,
+            "median": 3.1975104539610424,
+            "ci_lower": 2.0692242609938893,
+            "ci_upper": 4.410432861340475,
+            "min": 2.018405674377514,
+            "max": 4.480938910139592
+          },
+          "ENaC_block_residual_ratio": {
+            "mean": 1.1537237305899275,
+            "std": 0.19867228135423745,
+            "median": 1.1594367401790104,
+            "ci_lower": 0.8252760903364177,
+            "ci_upper": 1.4860842956520346,
+            "min": 0.8038008838900904,
+            "max": 1.4993733113319672
+          },
+          "amiloride_IC50": {
+            "mean": 0.5633589204405048,
+            "std": 0.17021478538577509,
+            "median": 0.5478619753055978,
+            "ci_lower": 0.2855855918035768,
+            "ci_upper": 0.9560206771952139,
+            "min": 0.24667407930020774,
+            "max": 1.0
+          },
+          "equilibration_time": {
+            "mean": 30.446732903580408,
+            "std": 10.485655086421778,
+            "median": 30.08900556247966,
+            "ci_lower": 13.346783773263104,
+            "ci_upper": 47.40681697702676,
+            "min": 12.018674789965399,
+            "max": 47.97918873207076
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H2",
+        "n_iterations": 300,
+        "effect_size": 1.0586,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "IMPase_Ki": {
+            "mean": 0.8487941049318805,
+            "std": 0.19954991947281173,
+            "median": 0.8464254589037854,
+            "ci_lower": 0.5184506306858249,
+            "ci_upper": 1.179765625419377,
+            "min": 0.5022051069357371,
+            "max": 1.1985172209918842
+          },
+          "AQP2_reduction_at_3mM": {
+            "mean": 59.83222378162559,
+            "std": 11.425354795026154,
+            "median": 60.123466508321556,
+            "ci_lower": 40.8494102172463,
+            "ci_upper": 78.71193887529911,
+            "min": 40.088819882565005,
+            "max": 79.82330646062525
+          },
+          "inositol_rescue_fraction": {
+            "mean": 0.750448956611047,
+            "std": 0.142802903813356,
+            "median": 0.7400107588786002,
+            "ci_lower": 0.5170260803745422,
+            "ci_upper": 0.9887955116089078,
+            "min": 0.5084151566028174,
+            "max": 0.9989210204148065
+          },
+          "PI45P2_depletion_EC50": {
+            "mean": 2.0165823295858463,
+            "std": 0.5954247882327592,
+            "median": 2.0642274608171114,
+            "ci_lower": 1.044621070285187,
+            "ci_upper": 2.944480623048121,
+            "min": 1.0112665351631007,
+            "max": 2.99599322958822
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H3",
+        "n_iterations": 300,
+        "effect_size": 1.0642,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "GSK3B_Ki_Li": {
+            "mean": 1.833683773058555,
+            "std": 0.37474631839847317,
+            "median": 1.8012302388242485,
+            "ci_lower": 1.248763315242957,
+            "ci_upper": 2.4644497068863345,
+            "min": 1.2071439238241182,
+            "max": 2.494001392073537
+          },
+          "Nrf2_fold_induction": {
+            "mean": 2.7111877624314586,
+            "std": 0.734250556926094,
+            "median": 2.677626492707075,
+            "ci_lower": 1.5623376529014688,
+            "ci_upper": 3.9247936542680963,
+            "min": 1.50321562822687,
+            "max": 3.9819571524974555
+          },
+          "neuroprotection_magnitude": {
+            "mean": 34.45745060686274,
+            "std": 8.861205815764572,
+            "median": 33.82601188902522,
+            "ci_lower": 20.784468488316577,
+            "ci_upper": 49.140919134678406,
+            "min": 20.09971445782062,
+            "max": 49.84397273517845
+          },
+          "Hill_coefficient": {
+            "mean": 1.0346639775187343,
+            "std": 0.14087948216313942,
+            "median": 1.0188143909620386,
+            "ci_lower": 0.8107325320615228,
+            "ci_upper": 1.2758583903578875,
+            "min": 0.8002163252730413,
+            "max": 1.2985299510144035
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H4",
+        "n_iterations": 300,
+        "effect_size": 0.8509,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "GSK3B_inhibition_at_3mM": {
+            "mean": 62.76931811049985,
+            "std": 7.179795946751873,
+            "median": 62.60149615496322,
+            "ci_lower": 50.50391678334058,
+            "ci_upper": 74.58440115211584,
+            "min": 50.00135481199521,
+            "max": 74.94864453027937
+          },
+          "TOPFlash_fold_at_3mM": {
+            "mean": 6.509359055046528,
+            "std": 2.049503988538725,
+            "median": 6.71458708003225,
+            "ci_lower": 3.1333426888141998,
+            "ci_upper": 9.587784330336286,
+            "min": 3.0194164828737184,
+            "max": 9.93378174793926
+          },
+          "fibrotic_marker_fold": {
+            "mean": 3.9435565182455896,
+            "std": 1.166353252216458,
+            "median": 3.965930097728583,
+            "ci_lower": 2.1263191858266763,
+            "ci_upper": 5.827496327040604,
+            "min": 2.024983165829414,
+            "max": 5.991519894775715
+          },
+          "threshold_Li_for_fibrosis": {
+            "mean": 2.228187937058618,
+            "std": 0.43767590050591587,
+            "median": 2.201633113737456,
+            "ci_lower": 1.546390960556955,
+            "ci_upper": 2.953546817619333,
+            "min": 1.5136631798052107,
+            "max": 2.9866697844649637
+          },
+          "time_to_fibrotic_phenotype": {
+            "mean": 82.9408426102215,
+            "std": 20.47648351866259,
+            "median": 85.50327662557609,
+            "ci_lower": 49.25025828761452,
+            "ci_upper": 116.08043215952378,
+            "min": 48.00146958840443,
+            "max": 119.90551176666098
+          }
+        }
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF renal collecting duct cells express functional ENaC, THEN intracellular [Li\u207a] will be 2.5\u20134.0\u00d7 extracellular [Li\u207a] at steady state (24h), while ENaC-knockout/amiloride-blocked cells will show ratios <1.5\u00d7.",
+      "protocol": "Culture mpkCCD (mouse principal cells) and ENaC-",
+      "dose_ranges": {
+        "LiCl": {
+          "doses": [
+            500.0,
+            1000.0,
+            1500.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "Amiloride": {
+          "doses": [
+            0.1,
+            1.0,
+            10.0
+          ],
+          "unit": "\u03bcM"
+        }
+      },
+      "readouts": [
+        "ICP-MS (intracellular Li\u207a)",
+        "cell volume measurement",
+        "ENaC surface expression (biotinylation)",
+        "transepithelial resistance"
+      ],
+      "controls": [
+        "Vehicle (no Li)",
+        "amiloride alone",
+        "Na\u207a-free media (ENaC-independent uptake)",
+        "HEK293 (low ENaC expression)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "mpkCCD cells show [Li\u207a]\u1d62/[Li\u207a]\u2091 = 2.5\u20134.0; amiloride-treated and ENaC-null cells show ratio ~1.0\u20131.3.",
+      "null_outcome": "All conditions show ratios <2.0, or ENaC blockade does not reduce accumulation >30%."
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF renal cells are exposed to [Li\u207a] >2 mM (mimicking renal intracellular levels), THEN AQP2 apical membrane insertion will decrease >50% within 48h, AND co-treatment with myo-inositol (10 mM) will rescue AQP2 trafficking to >75% of baseline.",
+      "protocol": "Use mpkCCD cells stably expressing AQP2-GFP, stimulated with dDAVP (10 nM). Treat with LiCl (0.5, 1.0, 2.0, 4.0 mM) \u00b1 myo-inositol (1, 10 mM) for 48h. Quantify apical AQP2 by surface biotinylation and TIRF microscopy. Measure PI(4,5)P\u2082 by ELISA and IMPase activity in lysates. Include L-690,330 (IMPase inhibitor, 100 \u03bcM) as positive control. Timeline: 6 weeks.",
+      "dose_ranges": {
+        "LiCl": {
+          "doses": [
+            500.0,
+            1000.0,
+            2000.0,
+            4000.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "inositol": {
+          "doses": [
+            1000.0,
+            10000.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "330": {
+          "doses": [
+            100.0
+          ],
+          "unit": "\u03bcM"
+        }
+      },
+      "readouts": [
+        "Surface biotinylation/Western blot (AQP2)",
+        "TIRF microscopy",
+        "PI(4",
+        "5)P\u2082 mass ELISA",
+        "IMPase enzymatic assay (malachite green phosphate release)",
+        "urine osmolality (if in vivo)"
+      ],
+      "controls": [
+        "Vehicle",
+        "dDAVP alone",
+        "L-690",
+        "330 alone (IMPase-specific control)",
+        "NaCl osmotic control (4 mM)",
+        "inositol alone",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "Dose-dependent AQP2 surface loss (IC\u2085\u2080 ~1.5\u20132.5 mM Li\u207a), correlated with PI(4,5)P\u2082 depletion; myo-inositol rescues both >70%.",
+      "null_outcome": "AQP2 trafficking unaffected at 4 mM Li\u207a, or inositol supplementation fails to rescue (<20% improvement), suggesting IMPase-independent mechanism."
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF primary cortical neurons are exposed to 0.3 mM Li\u207a, THEN GSK-3\u03b2 activity decreases 15\u201325%, Nrf2 nuclear translocation increases >2-fold, and survival after glutamate excitotoxicity improves >30%. GSK-3\u03b2-S9A mutant neurons will show NO neuroprotection, and Nrf2\u207b/\u207b neurons will show >50% attenuation of protection.",
+      "protocol": "Prepare primary cortical neurons from WT, GSK-3\u03b2-S9A knock-in, and Nrf2\u207b/\u207b mice (E16). Treat with LiCl (0, 0.1, 0.3, 0.6, 1.0 mM) for 7 DIV, then challenge with glutamate (100 \u03bcM, 1h). Measure: viability (calcein/PI, 24h post-challenge), GSK-3\u03b2 activity (pS9 Western + kinase assay), Nrf2 nuclear fraction (subcellular fractionation/IF), \u03b2-catenin (Western), BDNF (ELISA), HO-1/NQO1 (qPCR). Include CHIR99021 (GSK-3\u03b2 inhibitor, titrated to 15\u201325% inhibition) as pharmacological comparator. Timeline: 8 weeks.",
+      "dose_ranges": {
+        "LiCl": {
+          "doses": [
+            0.0,
+            100.0,
+            300.0,
+            600.0,
+            1000.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "CHIR99021": {
+          "doses": [
+            50.0,
+            150.0,
+            500.0
+          ],
+          "unit": "nM;"
+        },
+        "Glutamate": {
+          "doses": [
+            100.0
+          ],
+          "unit": "\u03bcM"
+        }
+      },
+      "readouts": [
+        "Calcein-AM/PI viability",
+        "LDH release",
+        "pS9-GSK-3\u03b2/total GSK-3\u03b2 Western",
+        "in vitro kinase assay",
+        "Nrf2 IF + nuclear fractionation",
+        "\u03b2-catenin Western",
+        "BDNF ELISA",
+        "HO-1/NQO1 qPCR"
+      ],
+      "controls": [
+        "Vehicle",
+        "NaCl osmotic control",
+        "CHIR99021 (positive GSK-3\u03b2 inhibitor)",
+        "SB216763 (second GSK-3 inhibitor)",
+        "tBHQ (Nrf2 activator",
+        "pathway control)",
+        "heat-killed neurons (assay ceiling)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "WT neurons:",
+      "null_outcome": "S9A neurons still protected by Li\u207a (implicating GSK-3\u03b2-independent mechanism); or Nrf2\u207b/\u207b neurons fully protected (Nrf2 dispensable); or CHIR99021 at equivalent GSK-3\u03b2 inhibition fails to protect (Li\u207a target is not GSK-3\u03b2)."
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF collecting duct cells experience >50% GSK-3\u03b2 inhibition (via 3 mM Li\u207a), THEN \u03b2-catenin-dependent transcription (TOPFlash) increases >5-fold, with upregulation of fibrotic markers (\u03b1-SMA, collagen I, CTGF) >3-fold within 72h. At 0.3 mM Li\u207a (~20% inhibition), the same cells show <2-fold TOPFlash and no fibrotic marker induction. \u03b2-catenin knockdown will abolish fibrotic response at high [Li\u207a].",
+      "protocol": "Use mpkCCD or mIMCD-3 cells transduced with TOPFlash-luciferase reporter. Treat with LiCl (0.3, 1.0, 2.0, 3.0, 4.0 mM) for 24\u201396h. Measure TOPFlash activity, \u03b1-SMA/collagen I/CTGF by qPCR and Western, proliferation (Ki",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": [],
+      "expected_outcome": "",
+      "null_outcome": ""
+    }
+  ],
+  "budget": {
+    "s1_calls": 5,
+    "s2_calls": 0,
+    "verify_calls": 4,
+    "gate_calls": 1,
+    "s4_calls": 1,
+    "s5_calls": 0,
+    "total_calls": 11,
+    "budget_target": "92-142 calls"
+  },
+  "audit_trail": {
+    "session_seed": 1770765156,
+    "s2_rounds": [],
+    "s3_gate": {
+      "stage": "S3",
+      "passed": true,
+      "convergence_score": 0.917,
+      "convergence_threshold": 0.85,
+      "convergence_pass": true,
+      "jaccard": 0.3773,
+      "jaccard_threshold": 0.85,
+      "jaccard_pass": false,
+      "type_01_ratio": 0.9474,
+      "type_01_threshold": 0.75,
+      "type_pass": true,
+      "cosine": 0.917,
+      "jsd": 0.0439,
+      "kappa": 0.9768,
+      "type_distribution": {
+        "0": 0.47368421052631576,
+        "1": 0.47368421052631576,
+        "2": 0.0,
+        "3": 0.05263157894736842
+      }
+    },
+    "final_claims": [
+      {
+        "statement": "1:** The dose-dependent switch is fundamentally a pharmacokinetic phenomenon: renal collecting duct cells concentrate Li\u207a 3\u20134\u00d7 above serum via ENaC, while brain parenchyma achieves only ~0.4\u20130.6\u00d7 serum due to active BBB efflux (likely via sodium-dependent transporters).",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "At therapeutic serum 0.8\u20131.2 mM, renal medullary cells reach 2.4\u20134.8 mM (engaging full IMPase and substantial GSK-3\u03b2 inhibition), while brain reaches 0.3\u20130.7 mM (partial GSK-3\u03b2 inhibition only).",
+        "falsifiable_by": "Direct microdialysis or imaging mass spectrometry showing brain:serum ratios >0.8 or renal:serum ratios <2 at steady state in therapeutic dosing.",
+        "model": "claude"
+      },
+      {
+        "statement": "2:** Neuroprotection at low brain [Li\u207a] (0.2\u20130.6 mM) is driven by ~10\u201325% GSK-3\u03b2 inhibition (Ki ~2 mM, Hill n\u22481), sufficient to de-repress Nrf2/ARE antioxidant genes and stabilize \u03b2-catenin for BDNF/Wnt survival signaling, without meaningful IMPase inhibition (<15% at Ki ~0.8 mM given uncompetitive kinetics with substrate).",
+        "type": 1,
+        "confidence": 0.78,
+        "mechanism": "Partial GSK-3\u03b2 inhibition shifts the phosphorylation balance of Nrf2 and \u03b2-catenin below the degradation threshold, activating pro-survival transcription without disrupting inositol cycling.",
+        "falsifiable_by": "GSK-3\u03b2-S9A knock-in mice (constitutively active, unresponsive to Li\u207a inhibition) showing no neuroprotection from low-dose lithium; or Nrf2-knockout abolishing the protective effect.",
+        "model": "claude"
+      },
+      {
+        "statement": "3:** Nephrotoxicity requires dual-target engagement: IMPase inhibition (>70% at renal [Li\u207a] >2 mM) depletes free inositol, disrupting PI(4,5)P\u2082-dependent AQP2 vesicle trafficking \u2192 nephrogenic diabetes insipidus as the initiating lesion; concurrent GSK-3\u03b2 inhibition (>50%) dysregulates Wnt/\u03b2-catenin \u2192 aberrant proliferation and epithelial-mesenchymal transition \u2192 interstitial fibrosis over chronic exposure.",
+        "type": 2,
+        "confidence": 0.72,
+        "mechanism": "Synergistic disruption of two independent pathways (inositol-dependent trafficking and GSK-3\u03b2-dependent cell fate) creates a toxicity threshold that neither target alone would produce at these concentrations.",
+        "falsifiable_by": "Myo-inositol supplementation preventing NDI but not fibrosis (would dissect the two arms); or renal-specific GSK-3\u03b2 constitutive activation preventing fibrosis without affecting AQP2.",
+        "model": "claude"
+      },
+      {
+        "statement": "4:** Magnesium competition contributes to the dose-dependent switch \u2014 Li\u207a displaces Mg\u00b2\u207a from the catalytic metal sites of IMPase and GSK-3\u03b2 with an effective Kd for displacement of ~0.5\u20131.0 mM, meaning low-dose tissue [Li\u207a] (<0.5 mM) is insufficient for significant Mg\u00b2\u207a displacement while renal concentrations (>2 mM) achieve near-complete displacement.",
+        "type": 3,
+        "confidence": 0.5,
+        "mechanism": "Li\u207a (ionic radius 0.76 \u00c5) substitutes for Mg\u00b2\u207a (0.72 \u00c5) in the binuclear metal center of IMPase, but the substituted enzyme is catalytically incompet",
+        "falsifiable_by": "",
+        "model": "claude"
+      },
+      {
+        "statement": "1:** The dose-dependent switch between neuroprotection and nephrotoxicity is driven by **tissue-specific lithium accumulation**, where renal medullary cells concentrate lithium 3\u20134\u00d7 above serum via ENaC, reaching locally toxic levels (>2 mM) that fully inhibit IMPase and GSK-3\u03b2, while brain lithium remains sub-toxic (~0.4\u20130.6 mM) due to BBB efflux.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "Renal ENaC-mediated lithium reabsorption creates a local \"toxic microenvironment\" saturating IMPase (Ki ~0.8 mM) and GSK-3\u03b2 (Ki ~1.5 mM), while the brain\u2019s lower [Li\u207a] only partially inhibits GSK-3\u03b2 (~20\u201330%), activating neuroprotective Wnt/\u03b2-catenin signaling.",
+        "falsifiable_by": "- In vivo microdialysis showing renal medulla [Li\u207a] <2 mM at therapeutic serum doses. - ENaC knockout mice exhibiting reduced nephrotoxicity without altered brain [Li\u207a]. ---",
+        "model": "mistral"
+      },
+      {
+        "statement": "2:** **IMPase inhibition is the primary driver of nephrotoxicity**, with inositol depletion disrupting AQP2 trafficking and PI signaling, initiating nephrogenic diabetes insipidus (NDI) and chronic tubular stress.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "At renal [Li\u207a] >2 mM, IMPase (Ki ~0.8 mM) is >70% inhibited, depleting inositol pools required for PI(4,5)P\u2082 synthesis, impairing AQP2 vesicle fusion and causing osmotic stress.",
+        "falsifiable_by": "- Inositol supplementation rescuing AQP2 trafficking in lithium-treated renal cells. - IMPase-overexpressing mice showing reduced NDI at therapeutic [Li\u207a]. ---",
+        "model": "mistral"
+      },
+      {
+        "statement": "3:** **GSK-3\u03b2 inhibition exhibits a biphasic effect**: 10\u201330% inhibition (brain [Li\u207a] ~0.4 mM) activates Nrf2/ARE and Wnt/\u03b2-catenin for neuroprotection, while >50% inhibition (renal [Li\u207a] >2 mM) dysregulates glycogen metabolism and \u03b2-catenin-driven proliferation, contributing to renal fibrosis.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "Partial GSK-3\u03b2 inhibition stabilizes \u03b2-catenin and Nrf2, while full inhibition disrupts \u03b2-catenin degradation, leading to maladaptive proliferation and fibrosis.",
+        "falsifiable_by": "- GSK-3\u03b2 activity assays in brain vs. kidney at varying [Li\u207a], correlated with \u03b2-catenin/Nrf2 targets. - \u03b2-catenin or Nrf2 knockout mice losing neuroprotection or gaining nephrotoxicity, respectively. ---",
+        "model": "mistral"
+      },
+      {
+        "statement": "4:** **Magnesium competition modulates the dose-dependent switch**, with therapeutic [Li\u207a] (0.6\u20131.2 mM) displacing Mg\u00b2\u207a from IMPase/GSK-3\u03b2 active sites, while low-dose lithium (<0.5 mM) does not.",
+        "type": 3,
+        "confidence": 0.6,
+        "mechanism": "Lithium\u2019s ionic radius mimics Mg\u00b2\u207a, competitively inhibiting Mg\u00b2\u207a-dependent enzymes (IMPase, GSK-3\u03b2) only when [Li\u207a] approaches the Kd for Mg\u00b2\u207a displacement (~0.5\u20131 mM).",
+        "falsifiable_by": "- In vitro assays showing Mg\u00b2\u207a supplementation rescuing IMPase/GSK-3\u03b2 activity at [Li\u207a] = 1 mM. - In vivo Mg\u00b2\u207a co-administration",
+        "model": "mistral"
+      },
+      {
+        "statement": "Nephrotoxicity arises from ENaC-mediated Li\u207a accumulation in renal principal cells to 2-4 mM at therapeutic serum (0.8-1.2 mM), saturating IMPase (>80% inhibition, Ki~0.8 mM) and GSK-3\u03b2 (>50%, Ki~1.5 mM).",
+        "type": 1,
+        "confidence": 0.92,
+        "mechanism": "IMPase inhibition depletes inositol, blocking PI3K/Akt signaling for AQP2 vesicle trafficking to apical membrane, causing NDI; GSK-3\u03b2 adds mitochondrial stress.",
+        "falsifiable_by": "ENaC knockout mice showing no renal Li accumulation or toxicity at therapeutic serum.",
+        "model": "grok"
+      },
+      {
+        "statement": "Neuroprotection at low-dose serum Li (0.1-0.6 mM; brain [Li\u207a]~0.05-0.3 mM) via partial GSK-3\u03b2 inhibition (10-30%, Ki~1.5 mM), sparing IMPase (<20%).",
+        "type": 1,
+        "confidence": 0.88,
+        "mechanism": "Partial GSK-3\u03b2 inhibition stabilizes \u03b2-catenin (Wnt) and activates Nrf2/ARE for antioxidant/BDNF responses without inositol depletion.",
+        "falsifiable_by": "GSK-3\u03b2 S9A knockin neurons lacking neuroprotection at low [Li\u207a].",
+        "model": "grok"
+      },
+      {
+        "statement": "Dose-switch is a tissue-[Li\u207a] phenomenon: kidney [Li\u207a] hits TD50~2 mM (therapeutic_index~10 vs brain ED50~0.2 mM) due to ENaC/NKA, while brain stays sub-toxic.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "Hill n=1 yields brain 15-25% GSK-3\u03b2 inhibition (protective) vs renal >70% dual-target saturation (toxic).",
+        "falsifiable_by": "ICP-MS quantifying intracellular [Li\u207a] in human iPSC-kidney/brain organoids at matched serum.",
+        "model": "grok"
+      },
+      {
+        "statement": "Mg\u00b2\u207a competition contributes to dose-dependence: therapeutic [Li\u207a] displaces Mg\u00b2\u207a (Kd~0.5 mM) from IMPase/GSK-3\u03b2, amplifying inhibition.",
+        "type": 3,
+        "confidence": 0.65,
+        "mechanism": "Li\u207a (ionic radius 76 pm vs Mg 72 pm) competes only when [Li\u207a] nears Mg site occupancy, shifting low-dose partial to high-dose full block.",
+        "falsifiable_by": "Mg supplementation failing to rescue IMPase activity in renal cells at 2 mM Li\u207a.",
+        "model": "grok"
+      },
+      {
+        "statement": "High renal [Li\u207a] inhibits mito Complex I (ND2/4 binding), exacerbating toxicity beyond IMPase/GSK-3\u03b2.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "Direct subunit binding at >2 mM generates ROS, synergizing with inositol depletion for apoptosis/fibrosis.",
+        "falsifiable_by": "Complex I assays showing no Li\u207a IC50 <5 mM. \u2500\u2500\u2500",
+        "model": "grok"
+      },
+      {
+        "statement": "The dose-dependent switch is a direct consequence of pharmacokinetic partitioning creating two distinct biological regimes. Renal collecting ducts concentrate Li\u207a via ENaC to 2-4 mM, while the brain maintains Li\u207a at 0.4-0.6 mM. This differential dosing is the primary determinant of tissue-specific outcomes.",
+        "type": 1,
+        "confidence": 0.95,
+        "mechanism": "ENaC in renal principal cells actively transports Li\u207a, causing accumulation, whereas BBB efflux pumps maintain low brain concentrations, creating a steep concentration gradient between the two tissues.",
+        "falsifiable_by": "Evidence of a cell-autonomous switch in cultured neurons and renal cells exposed to the *same* lithium concentration.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The molecular switch is governed by the relative Ki values of IMPase (Ki \u2248 0.8 mM) and GSK-3\u03b2 (Ki \u2248 2.0 mM). Neuroprotection occurs at brain [Li\u207a]i (~0.5 mM) causing partial (~20%) GSK-3\u03b2 inhibition with minimal IMPase effects, while nephrotoxicity occurs at kidney [Li\u207a]i (>2.0 mM) causing >75% IMPase saturation *and* >50% GSK-3\u03b2 inhibition, a synergistically toxic state.",
+        "type": 2,
+        "confidence": 0.9,
+        "mechanism": "The neuroprotective window exists where [Li\u207a]i is sufficient to modulate GSK-3\u03b2 but below the Ki of IMPase; the toxic threshold is crossed when [Li\u207a]i significantly surpasses the Ki of IMPase, causing catastrophic inositol depletion.",
+        "falsifiable_by": "In vivo evidence that selective GSK-3\u03b2 inhibition is nephrotoxic, or that IMPase inhibition alone is not.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The biophysical basis for lithium's action is competitive displacement of the cofactor Mg\u00b2\u207a. Li\u207a inhibits Mg\u00b2\u207a-dependent enzymes (IMPase, GSK-3\u03b2) only when its local concentration becomes high enough (~0.5-1.0 mM) to effectively compete with intracellular free Mg\u00b2\u207a at the catalytic site.",
+        "type": 3,
+        "confidence": 0.7,
+        "mechanism": "The similar ionic radius of Li\u207a and Mg\u00b2\u207a allows Li\u207a to act as an antagonist at Mg\u00b2\u207a binding sites, an effect that follows mass action principles and is thus concentration-dependent.",
+        "falsifiable_by": "In vitro enzyme assays demonstrating that increasing [Mg\u00b2\u207a] competitively reverses lithium-induced inhibition of IMPase and GSK-3\u03b2. \u2500\u2500\u2500",
+        "model": "gemini"
+      },
+      {
+        "statement": "1: The neuroprotective-toxic switch is primarily determined by the local concentration exceeding the IMPase Ki (~0.8 mM), which occurs in renal medulla but not brain at therapeutic serum levels.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "ENaC-mediated Li\u207a uptake in renal principal cells raises intracellular [Li\u207a] to >2 mM, fully inhibiting IMPase and causing inositol depletion, disrupting PI signaling and AQP2 trafficking, initiating nephrogenic DI and chronic stress.",
+        "falsifiable_by": "Measuring direct renal tubular [Li\u207a] in vivo and finding it does not exceed 1 mM at serum levels of 1.2 mM, or showing that IMPase knockout does not mimic lithium's renal effects.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "2: Low-dose neuroprotection (0.2-0.5 mM serum) arises from ~10-25% inhibition of GSK-3\u03b2 in neurons, activating \u03b2-catenin and Nrf2/ARE pathways, while sparing IMPase (<5% inhibition).",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "Partial GSK-3\u03b2 inhibition shifts the balance of pro-survival vs. pro-apoptotic signaling, enhancing mitochondrial biogenesis and antioxidant defense without triggering inositol-depletion stress.",
+        "falsifiable_by": "Demonstrating that GSK-3\u03b2 inhibition to the same degree (e.g., with specific inhibitors) at low [Li\u207a] does not produce neuroprotection, or that Li\u207a neuroprotection persists in GSK-3\u03b2 knockout neurons.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "3: Magnesium competition is a plausible amplifier of the dose-dependent switch: at renal tubular [Li\u207a] >1 mM, Li\u207a displaces Mg\u00b2\u207a from IMPase/GSK-3\u03b2 active sites, exacerbating inhibition, while at brain [Li\u207a] <0.5 mM, Mg\u00b2\u207a buffering prevents significant displacement.",
+        "type": 3,
+        "confidence": 0.6,
+        "mechanism": "Li\u207a (ionic radius ~0.76 \u00c5) mimics Mg\u00b2\u207a (~0.72 \u00c5) but binds with lower affinity; high local [Li\u207a] outcompetes physiological [Mg\u00b2\u207a] (~0.5-1 mM) at enzyme active sites, leading to non-physiological, sustained inhibition.",
+        "falsifiable_by": "In vitro kinetics showing Mg\u00b2\u207a supplementation does not alter Li\u207a inhibition constants for IMPase/GSK-3\u03b2, or in vivo Mg\u00b2\u207a supplementation failing to alter the therapeutic window for nephrotoxicity.",
+        "model": "deepseek"
+      }
+    ]
+  }
+}

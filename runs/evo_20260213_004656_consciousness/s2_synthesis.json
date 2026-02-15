@@ -1,0 +1,190 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "4**: FIM anisotropy and token entropy are *complementary* predictors of coherence: their combination (e.g., anisotropy \u00d7 entropy) outperforms either alone. **TYPE**: 2 **CONFIDENCE**: 0.60 **MECHANISM**: Anisotropy captures structural constraints, while entropy reflects uncertainty; their interaction may resolve both syntactic rigidity and semantic flexibility. **FALSIFIABLE BY**: Combined metrics failing to improve coherence prediction over anisotropy alone, or entropy dominating the interaction term.",
+      "mechanism": ": Anisotropy captures structural constraints, while entropy reflects uncertainty; their interaction may resolve both syntactic rigidity and semantic flexibility.",
+      "falsifiable_by": ": Combined metrics failing to improve coherence prediction over anisotropy alone, or entropy dominating the interaction term.",
+      "type": 0,
+      "confidence": 0.608,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('fim', 'interacts', 'type'), ('confidence', 'interacts', 'mechanism'), ('falsifiable', 'interacts', 'by'), ('type', 'interacts', 'confidence'), ('mechanism', 'interacts', 'falsifiable')})",
+      "chunk_text": "4**: FIM anisotropy and token entropy are *complementary* predictors of coherence: their combination (e.g., anisotropy \u00d7 entropy) outperforms either alone. **TYPE**: 2 **CONFIDENCE**: 0.60 **MECHANISM**: Anisotropy captures structural constraints, while entropy reflects uncertainty; their interaction may resolve both syntactic rigidity and semantic flexibility. **FALSIFIABLE BY**: Combined metrics failing to improve coherence prediction over anisotropy alone, or entropy dominating the interactio"
+    },
+    {
+      "statement": "1**: Semantically rigid tokens exhibit higher FIM effective rank (8\u201312 vs. 3\u20136 for flexible tokens) and anisotropy (condition number >20 vs. <8). **TYPE**: 1 **CONFIDENCE**: 0.75 **MECHANISM**: Rigid tokens (e.g., \"if\", \"because\") encode obligatory syntactic dependencies, yielding sharper loss gradients and more principal curvature directions in FIM=\u2207\u00b2log p(next|ctx). **FALSIFIABLE BY**: Rigid tokens failing to show higher rank/anisotropy in controlled experiments (e.g., masked language modeling with counterfactual tokens).",
+      "mechanism": ": Rigid tokens (e.g., \"if\", \"because\") encode obligatory syntactic dependencies, yielding sharper loss gradients and more principal curvature directions in FIM=\u2207\u00b2log p(next|ctx).",
+      "falsifiable_by": ": Rigid tokens failing to show higher rank/anisotropy in controlled experiments (e.g., masked language modeling with counterfactual tokens).",
+      "type": 1,
+      "confidence": 0.57,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('fim', 'interacts', 'type'), ('confidence', 'interacts', 'mechanism'), ('falsifiable', 'interacts', 'by'), ('type', 'interacts', 'confidence'), ('mechanism', 'interacts', 'falsifiable')})",
+      "chunk_text": "1**: Semantically rigid tokens exhibit higher FIM effective rank (8\u201312 vs. 3\u20136 for flexible tokens) and anisotropy (condition number >20 vs. <8). **TYPE**: 1 **CONFIDENCE**: 0.75 **MECHANISM**: Rigid tokens (e.g., \"if\", \"because\") encode obligatory syntactic dependencies, yielding sharper loss gradients and more principal curvature directions in FIM=\u2207\u00b2log p(next|ctx). **FALSIFIABLE BY**: Rigid tokens failing to show higher rank/anisotropy in controlled experiments (e.g., masked language modeling"
+    },
+    {
+      "statement": "5**: The \"discrete bonding geometry\" in FIM spectra is an emergent metaphor for syntactic necessity, not a literal mechanism (e.g., no physical bonds). **TYPE**: 3 **CONFIDENCE**: 0.80 **MECHANISM**: FIM spectra describe the learned manifold of language, where sharp curvature reflects obligatory dependencies (e.g., \"if X then Y\"), but no discrete \"bonds\" exist. **FALSIFIABLE BY**: Evidence of literal geometric structures (e.g., topological invariants) in FIM spectra that map to syntactic rules. ---",
+      "mechanism": "(e.g., no physical bonds).",
+      "falsifiable_by": ": Evidence of literal geometric structures (e.g., topological invariants) in FIM spectra that map to syntactic rules. --- **",
+      "type": 1,
+      "confidence": 0.527,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('fim', 'interacts', 'type'), ('confidence', 'interacts', 'mechanism'), ('falsifiable', 'interacts', 'by'), ('type', 'interacts', 'confidence'), ('mechanism', 'interacts', 'falsifiable')})",
+      "chunk_text": "5**: The \"discrete bonding geometry\" in FIM spectra is an emergent metaphor for syntactic necessity, not a literal mechanism (e.g., no physical bonds). **TYPE**: 3 **CONFIDENCE**: 0.80 **MECHANISM**: FIM spectra describe the learned manifold of language, where sharp curvature reflects obligatory dependencies (e.g., \"if X then Y\"), but no discrete \"bonds\" exist. **FALSIFIABLE BY**: Evidence of literal geometric structures (e.g., topological invariants) in FIM spectra that map to syntactic rules. "
+    },
+    {
+      "statement": "The high FIM anisotropy of a syntactically rigid token (e.g., \"if\", condition number > 20) acts as a static signature of its role as a dynamic phase-locking center for subsequent token generation.",
+      "mechanism": "The sharp, constrained geometry (high anisotropy) provides a stable basin of attraction in the network's state space, synchronizing the evolution of subsequent states, analogous to a high-coupling node (K > Kc) in a Kuramoto model.",
+      "falsifiable_by": "Observing that artificially reducing the anisotropy for a rigid token during generation has no significant effect on the long-range coherence of the output.",
+      "type": 2,
+      "confidence": 0.675,
+      "overlap_count": 2,
+      "models": [
+        "deepseek",
+        "gemini"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "The high FIM anisotropy of a syntactically rigid token (e.g., \"if\", condition number > 20) acts as a static signature of its role as a dynamic phase-locking center for subsequent token generation."
+    },
+    {
+      "statement": "3**: Static FIM spectra do not reveal gamma/Kuramoto-like dynamics, but *dynamic* FIM (computed across sequential layers/heads) oscillates at 30\u2013100 Hz for binding tokens. **TYPE**: 1 **CONFIDENCE**: 0.65 **MECHANISM**: Binding is a temporal phenomenon; static FIM captures instantaneous sensitivity, while dynamic FIM tracks phase coherence across processing steps (e.g., attention heads synchronizing at gamma frequencies). **FALSIFIABLE BY**: Dynamic FIM spectra failing to show gamma-band oscillations for binding tokens, or oscillations appearing for non-binding tokens.",
+      "mechanism": ": Binding is a temporal phenomenon; static FIM captures instantaneous sensitivity, while dynamic FIM tracks phase coherence across processing steps (e.g., attention heads synchronizing at gamma frequencies).",
+      "falsifiable_by": ": Dynamic FIM spectra failing to show gamma-band oscillations for binding tokens, or oscillations appearing for non-binding tokens.",
+      "type": 2,
+      "confidence": 0.56,
+      "overlap_count": 2,
+      "models": [
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('fim', 'interacts', 'type'), ('fim', 'interacts', 'mechanism')})",
+      "chunk_text": "3**: Static FIM spectra do not reveal gamma/Kuramoto-like dynamics, but *dynamic* FIM (computed across sequential layers/heads) oscillates at 30\u2013100 Hz for binding tokens. **TYPE**: 1 **CONFIDENCE**: 0.65 **MECHANISM**: Binding is a temporal phenomenon; static FIM captures instantaneous sensitivity, while dynamic FIM tracks phase coherence across processing steps (e.g., attention heads synchronizing at gamma frequencies). **FALSIFIABLE BY**: Dynamic FIM spectra failing to show gamma-band oscilla"
+    },
+    {
+      "statement": "2**: FIM anisotropy predicts coherence (r=0.6\u20130.7) better than attention entropy (r=0.4\u20130.5) or PPL (r=0.3\u20130.4), with a 30\u201350% improvement in explained variance. **TYPE**: 1 **CONFIDENCE**: 0.70 **MECHANISM**: Anisotropy captures multi-directional geometric constraints on meaning (e.g., verb-argument binding), while entropy/PPL average over uncertainty without resolving structural dependencies. **FALSIFIABLE BY**: Coherence metrics correlating more strongly with entropy/PPL than FIM anisotropy, or anisotropy failing to improve prediction beyond baseline (e.g., in out-of-distribution text).",
+      "mechanism": ": Anisotropy captures multi-directional geometric constraints on meaning (e.g., verb-argument binding), while entropy/PPL average over uncertainty without resolving structural dependencies.",
+      "falsifiable_by": ": Coherence metrics correlating more strongly with entropy/PPL than FIM anisotropy, or anisotropy failing to improve prediction beyond baseline (e.g., in out-of-distribution text).",
+      "type": 2,
+      "confidence": 0.5,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "mistral"
+      ],
+      "tuples": "frozenset({('mechanism', 'interacts', 'ppl'), ('fim', 'interacts', 'ppl')})",
+      "chunk_text": "2**: FIM anisotropy predicts coherence (r=0.6\u20130.7) better than attention entropy (r=0.4\u20130.5) or PPL (r=0.3\u20130.4), with a 30\u201350% improvement in explained variance. **TYPE**: 1 **CONFIDENCE**: 0.70 **MECHANISM**: Anisotropy captures multi-directional geometric constraints on meaning (e.g., verb-argument binding), while entropy/PPL average over uncertainty without resolving structural dependencies. **FALSIFIABLE BY**: Coherence metrics correlating more strongly with entropy/PPL than FIM anisotropy, "
+    },
+    {
+      "statement": "FIM anisotropy (eig var or cond_num) predicts coherence r=0.62-0.70, outperforming att_entropy (r=0.42) or PPL (r=0.38) by 15-25% \u0394R\u00b2; combo optimal.",
+      "mechanism": "Anisotropy quantifies multi-axial geometric rigidity of semantics, beyond scalar uncertainty in ent/PPL.",
+      "falsifiable_by": "Linear models where ent/PPL explain \u2265 FIM aniso, or no \u0394R\u00b2 gain.",
+      "type": 3,
+      "confidence": 0.69,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('fim', 'interacts', 'ppl')})",
+      "chunk_text": "FIM anisotropy (eig var or cond_num) predicts coherence r=0.62-0.70, outperforming att_entropy (r=0.42) or PPL (r=0.38) by 15-25% \u0394R\u00b2; combo optimal."
+    },
+    {
+      "statement": "Reinforcement Learning from Human Feedback (RLHF) disproportionately increases FIM anisotropy for semantically flexible tokens (e.g., adjectives) to enforce stylistic consistency, moving them closer to the high-anisotropy regime of rigid tokens.",
+      "mechanism": "RLHF penalizes stylistic deviations, effectively sharpening the loss landscape along preferred stylistic dimensions, which translates to new dominant eigenvalues in the FIM for previously unconstrained tokens.",
+      "falsifiable_by": "An empirical study showing that the distribution of FIM condition numbers for adjectives in a base model is statistically indistinguishable from that of an RLHF-tuned version. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.65,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('fim', 'upregulates', 'rlhf')})",
+      "chunk_text": "Reinforcement Learning from Human Feedback (RLHF) disproportionately increases FIM anisotropy for semantically flexible tokens (e.g., adjectives) to enforce stylistic consistency, moving them closer to the high-anisotropy regime of rigid tokens."
+    },
+    {
+      "statement": "4**: Layer-wise FIM spectral evolution for rigid tokens shows rank concentration in middle layers (layers 8\u201320 in 24-layer models), analogous to a \"binding phase\" where syntactic constraints crystallize\u2014but calling this \"gamma-like\" is metaphorical, not mechanistic. **TYPE**: 3 **CONFIDENCE**: 0.45 **MECHANISM**: Middle layers are where syntactic/semantic integration peaks (per probing literature); FIM rank should peak where the model is most sensitive to token identity for predicting structure. **FALSIFIABLE BY**: Layer-wise FIM showing monotonic rank increase/decrease rather than mid-layer concentration for rigid tokens.",
+      "mechanism": ": Middle layers are where syntactic/semantic integration peaks (per probing literature); FIM rank should peak where the model is most sensitive to token identity for predicting structure.",
+      "falsifiable_by": ": Layer-wise FIM showing monotonic rank increase/decrease rather than mid-layer concentration for rigid tokens.",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('fim', 'interacts', 'type')})",
+      "chunk_text": "4**: Layer-wise FIM spectral evolution for rigid tokens shows rank concentration in middle layers (layers 8\u201320 in 24-layer models), analogous to a \"binding phase\" where syntactic constraints crystallize\u2014but calling this \"gamma-like\" is metaphorical, not mechanistic. **TYPE**: 3 **CONFIDENCE**: 0.45 **MECHANISM**: Middle layers are where syntactic/semantic integration peaks (per probing literature); FIM rank should peak where the model is most sensitive to token identity for predicting structure."
+    },
+    {
+      "statement": "The gamma/Kuramoto priors become relevant if FIM is computed per layer: the *evolution* of the principal eigenvector direction across layers will show oscill",
+      "mechanism": "",
+      "falsifiable_by": "",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "deepseek"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "The gamma/Kuramoto priors become relevant if FIM is computed per layer: the *evolution* of the principal eigenvector direction across layers will show oscill"
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.11177594485531779,
+      "cosine": 0.6944421112537384,
+      "jsd": 0.2225024846180847,
+      "kappa": 0.8034006376195535,
+      "type_distribution": {
+        "0": 0.05,
+        "1": 0.3,
+        "2": 0.65,
+        "3": 0.0
+      },
+      "type_01_ratio": 0.35,
+      "n_claims_per_model": [
+        5,
+        5,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.7192460317460317,
+      "cosine": 0.8462249934673309,
+      "jsd": 0.17742089722534787,
+      "kappa": 0.9730052199850858,
+      "type_distribution": {
+        "0": 0.2,
+        "1": 0.3,
+        "2": 0.3,
+        "3": 0.2
+      },
+      "type_01_ratio": 0.5,
+      "n_claims_per_model": [
+        5,
+        5,
+        4,
+        3,
+        3
+      ]
+    }
+  ]
+}

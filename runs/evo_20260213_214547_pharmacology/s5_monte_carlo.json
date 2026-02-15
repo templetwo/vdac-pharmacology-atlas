@@ -1,0 +1,247 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF VDAC1 is reconstituted into supported lipid bilayers with Chol/CL molar ratios ranging from 0.5 to 10, THEN AFM imaging will reveal a monotonic increase in honeycomb array area fraction (f_h) from <0.15 at Chol/CL=0.5 to >0.70 at Chol/CL=10, with a Hill-type transition midpoint at Chol/CL \u2248 2-4.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "VDAC1_density": {
+          "mean": 2689.9406972118127,
+          "std": 1304.198896547443,
+          "median": 2655.5188171298764,
+          "ci_lower": 624.6036697890011,
+          "ci_upper": 4838.779150412854,
+          "min": 533.1302138795248,
+          "max": 4965.690038251267
+        },
+        "PE_fraction": {
+          "mean": 0.3263299037821169,
+          "std": 0.07095438619794195,
+          "median": 0.32837026434964656,
+          "ci_lower": 0.20902717512014918,
+          "ci_upper": 0.4450301055900124,
+          "min": 0.20135745853217513,
+          "max": 0.4497761826185597
+        },
+        "temperature": {
+          "mean": 29.45799365199565,
+          "std": 4.467470552435863,
+          "median": 29.531569732842947,
+          "ci_lower": 22.256456004567635,
+          "ci_upper": 36.760399057723724,
+          "min": 22.018495937678622,
+          "max": 36.98115055100147
+        },
+        "CL_mol_percent": {
+          "mean": 11.202044024184227,
+          "std": 5.249743428113614,
+          "median": 10.836788257129141,
+          "ci_lower": 2.766627992691875,
+          "ci_upper": 19.70340848851338,
+          "min": 2.0093373949826994,
+          "max": 19.98959436603538
+        },
+        "Hill_coefficient": {
+          "mean": 2.4934596393390187,
+          "std": 0.879184054162143,
+          "median": 2.458709032439286,
+          "ci_lower": 1.1114630944974861,
+          "ci_upper": 3.927462460834703,
+          "min": 1.0032023950682416,
+          "max": 3.9900316345574605
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4996434455974755,
+          "std": 0.12255297031415406,
+          "median": 0.5032191473846219,
+          "ci_lower": 0.25830920877384034,
+          "ci_upper": 0.7414176430071063,
+          "min": 0.15758184713280732,
+          "max": 0.8156161995315161
+        }
+      },
+      "effect_size": 0.8117,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF HK-II is displaced from VDAC1 honeycomb arrays (by glucose-6-phosphate or clotrimazole treatment), THEN within 10-30 minutes: (a) CL-specific fluorescent probe (NAO or TopFluor-CL) signal at VDAC clusters increases \u22652-fold, and (b) honeycomb array area fraction decreases by \u226540%, and (c) both effects are abolished by prior CL depletion (PLS3 knockdown or CL synthase inhibition).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "II_displacement_rate": {
+          "mean": 0.2541558734523162,
+          "std": 0.13968494363096823,
+          "median": 0.25249782123264974,
+          "ci_lower": 0.022915441480077403,
+          "ci_upper": 0.4858359377935639,
+          "min": 0.011543574855015908,
+          "max": 0.49896205469431903
+        },
+        "CL_exposure_fold_change": {
+          "mean": 2.983222378162559,
+          "std": 1.1425354795026155,
+          "median": 3.0123466508321557,
+          "ci_lower": 1.0849410217246303,
+          "ci_upper": 4.871193887529913,
+          "min": 1.0088819882565003,
+          "max": 4.982330646062524
+        },
+        "f_h_decrease": {
+          "mean": 40.071833057767535,
+          "std": 22.84846461013696,
+          "median": 38.40172142057604,
+          "ci_lower": 2.724172859926748,
+          "ci_upper": 78.20728185742524,
+          "min": 1.3464250564507818,
+          "max": 79.82736326636902
+        },
+        "clotrimazole_EC50": {
+          "mean": 10.657532131065539,
+          "std": 5.656535488211213,
+          "median": 11.110160877762558,
+          "ci_lower": 1.4239001677092777,
+          "ci_upper": 19.47256591895715,
+          "min": 1.107032084049457,
+          "max": 19.96193568108809
+        },
+        "G6P_concentration": {
+          "mean": 5.3466572199557705,
+          "std": 2.8357433753830565,
+          "median": 5.494840876857587,
+          "ci_lower": 0.8778647728150258,
+          "ci_upper": 9.853847994040326,
+          "min": 0.542182046527137,
+          "max": 9.97747314470912
+        },
+        "time_to_disassembly": {
+          "mean": 32.81401993757957,
+          "std": 15.90227710258287,
+          "median": 32.69494817776653,
+          "ci_lower": 6.1697512130187535,
+          "ci_upper": 58.18582182771039,
+          "min": 5.351308893808621,
+          "max": 59.89726925647036
+        },
+        "CL_content_threshold": {
+          "mean": 5.085872929523894,
+          "std": 1.7449872319621158,
+          "median": 5.135116150308675,
+          "ci_lower": 2.165138203630283,
+          "ci_upper": 7.9050934953818235,
+          "min": 2.0273257286635853,
+          "max": 7.997319576845403
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5047811454075062,
+          "std": 0.11697162177573682,
+          "median": 0.5160573620423872,
+          "ci_lower": 0.25178517706886544,
+          "ci_upper": 0.7345913684994891,
+          "min": 0.18763964952478188,
+          "max": 0.8309388969847998
+        }
+      },
+      "effect_size": 0.8146,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF CBD (1-10 \u03bcM) is added to VDAC1-containing reconstituted bilayers, THEN honeycomb array density will change by \u226530% at concentrations below the Kd for direct VDAC binding (11 \u03bcM), AND this effect will be reproduced by a membrane-order-matched control compound (e.g., cholesterol hemisuccinate or vitamin E) that does not bind VDAC, AND will NOT be abolished by VDAC1 point mutations (e.g., E73Q, T19A) that disrupt known drug-binding pockets.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "CBD_concentration": {
+          "mean": 14.674726780346761,
+          "std": 8.61916532316488,
+          "median": 13.928295492957716,
+          "ci_lower": 1.2215562505880107,
+          "ci_upper": 29.182343258385696,
+          "min": 0.2643102479547169,
+          "max": 29.86203201769135
+        },
+        "CBD_Kd_VDAC": {
+          "mean": 12.26712657458875,
+          "std": 4.405503341556564,
+          "median": 12.06575895624245,
+          "ci_lower": 5.3740259174088125,
+          "ci_upper": 19.548761925608577,
+          "min": 5.01929376936122,
+          "max": 19.891742914984732
+        },
+        "f_h_change_at_subKd": {
+          "mean": 28.914901213725486,
+          "std": 17.72241163152914,
+          "median": 27.65202377805043,
+          "ci_lower": 1.5689369766331567,
+          "ci_upper": 58.28183826935681,
+          "min": 0.1994289156412421,
+          "max": 59.687945470356894
+        },
+        "logP_matched_control": {
+          "mean": 5.938655910074936,
+          "std": 0.5635179286525577,
+          "median": 5.875257563848154,
+          "ci_lower": 5.042930128246091,
+          "ci_upper": 6.90343356143155,
+          "min": 5.0008653010921655,
+          "max": 6.994119804057614
+        },
+        "partition_coefficient_OMM": {
+          "mean": 5484.137122696184,
+          "std": 2975.3775965085865,
+          "median": 5940.206751360467,
+          "ci_lower": 465.6299661570676,
+          "ci_upper": 9758.04166132791,
+          "min": 112.59782757831107,
+          "max": 9948.571501947692
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4934038742106948,
+          "std": 0.1322364803274733,
+          "median": 0.4865524462283509,
+          "ci_lower": 0.258863510308399,
+          "ci_upper": 0.7579434521888676,
+          "min": 0.15250645903437524,
+          "max": 0.8466002656183298
+        }
+      },
+      "effect_size": 0.9216,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF the honeycomb-to-dispersed transition is the rate-limiting step for apoptosis, THEN: (a) pre-dispersing VDAC arrays (by CL enrichment or cholesterol extraction with M\u03b2CD) will accelerate cytochrome c release by \u22653-fold compared to apoptotic stimulus alone, (b) artificially stabilizing honeycombs (cholesterol loading) will delay cytochrome c release by \u22653-fold even in the presence of BH3-only protein activation, and (c) the time from stimulus to cytochrome c release will correlate with f_h decay kinetics (r\u00b2 > 0.7) rather than with Bax/Bak activation kinetics.",
+      "n_iterations": 300,
+      "parameters_sampled": {},
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5,
+          "std": 0.0,
+          "median": 0.5,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "min": 0.5,
+          "max": 0.5
+        }
+      },
+      "effect_size": 0.0,
+      "power_estimate": 0.0,
+      "convergence_check": true,
+      "seed": 45
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_iterations": 1200,
+  "total_calls": 0
+}

@@ -1,0 +1,190 @@
+{
+  "passed": true,
+  "claims": [
+    {
+      "statement": "The Chol/CL ratio is a primary determinant of the honeycomb-vs-dispersed VDAC1 equilibrium in reconstituted and native OMM.",
+      "falsifiable": true,
+      "falsifiable_reason": "The claim predicts a dose-dependent relationship between CL titration and honeycomb array density measurable by AFM; persistence of honeycombs at high CL/low Chol ratios would directly falsify it.",
+      "feasible": true,
+      "feasible_reason": "AFM imaging of reconstituted liposomes with defined lipid compositions and quantitative lattice analysis are standard techniques.",
+      "novel": true,
+      "novel_reason": "While individual components (cholesterol stabilizes membranes, cardiolipin has conical geometry) are known, the specific prediction that Chol/CL ratio *quantitatively determines* honeycomb-vs-dispersed equilibrium in VDAC1 is not established in the literature provided and enables testable titration experiments.",
+      "passed": true
+    },
+    {
+      "statement": "The proposed threshold equation Threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL) is a plausible phenomenological model but is not yet experimentally validated as written \u2014 the multiplicative separability of protein and lipid terms is an assumption.",
+      "falsifiable": true,
+      "falsifiable_reason": "Factorial variation of f_HKII, f_BclxL, and Chol/CL with measurement of apoptotic threshold would reveal non-linear interaction terms that violate the multiplicative separability assumption.",
+      "feasible": false,
+      "feasible_reason": "Systematic factorial perturbation of three independent variables (protein occupancy and lipid ratio) in live cells with precise apoptotic threshold quantification requires either genetic tools (inducible HK-II/Bcl-xL knockdown) or chemical titration with real-time apoptosis readouts; this is technically demanding and time-intensive.",
+      "novel": true,
+      "novel_reason": "The equation itself is singular (TYPE 3) and represents a novel quantitative synthesis, but the claim acknowledges its unvalidated status; testing it would establish whether modularity holds or reveals unexpected coupling.",
+      "passed": false
+    },
+    {
+      "statement": "HK-II displacement unmasks VDAC N-terminal and membrane-proximal regions that preferentially recruit or stabilize cardiolipin, thereby locally shifting the lipid environment toward array disruption.",
+      "falsifiable": true,
+      "falsifiable_reason": "Molecular dynamics simulations or surface plasmon resonance assays comparing local CL enrichment \u00b1HK-II would directly test the unmasking hypothesis; AFM showing no change in array density post-HK-II removal would falsify the mechanism.",
+      "feasible": true,
+      "feasible_reason": "MD simulations are routine; CL-binding assays using purified VDAC1 \u00b1 HK-II are standard biochemistry; AFM of HK-II-depleted arrays is feasible.",
+      "novel": true,
+      "novel_reason": "The specific claim that HK-II displacement *unmasks* cardiolipin microdomains (rather than simply removing a stabilizing protein) is mechanistically novel and testable via lipid-protein interaction assays.",
+      "passed": true
+    },
+    {
+      "statement": "Lipophilic drugs (CBD, statins) can alter VDAC supramolecular organization through membrane order perturbation independent of direct VDAC binding, constituting a genuine but uncharacterized pharmacological mechanism.",
+      "falsifiable": true,
+      "falsifiable_reason": "AFM showing no change in VDAC lattice density in CBD-treated membranes, or point mutations blocking CBD binding but retaining organization changes, would falsify the membrane-order mechanism.",
+      "feasible": true,
+      "feasible_reason": "AFM of VDAC arrays \u00b1 CBD at defined concentrations is straightforward; generating VDAC1 mutants and testing them in reconstituted systems is standard.",
+      "novel": true,
+      "novel_reason": "The claim that lipophilic drugs alter VDAC organization *independent of direct binding* is a genuinely novel pharmacological mechanism not previously characterized in the literature provided.",
+      "passed": true
+    },
+    {
+      "statement": "The Chol/CL ratio in the OMM physically determines the fraction of VDAC1 in honeycomb vs. dispersed states, and this ratio is mechanistically embedded in the apoptotic threshold equation.",
+      "falsifiable": true,
+      "falsifiable_reason": "Observing honeycomb persistence in high-CL, low-Chol membranes, or failure of the threshold equation to predict apoptosis in cells with experimentally clamped Chol/CL ratios (e.g., via genetic manipulation of sterol/lipid synthesis), would falsify the claim.",
+      "feasible": true,
+      "feasible_reason": "Reconstituted liposomes with controlled lipid ratios and AFM are feasible; clamping Chol/CL in cells is more challenging but possible via SREBP inhibition or CL remodeling enzyme manipulation.",
+      "novel": true,
+      "novel_reason": "The integration of Chol/CL ratio as a *physical determinant* of the apoptotic threshold (rather than a correlate) is novel and provides quantitative predictive power.",
+      "passed": true
+    },
+    {
+      "statement": "HK-II displacement from VDAC1 promotes honeycomb disassembly by unmasking cardiolipin microdomains, converting protected arrays into oligomerization-competent monomers.",
+      "falsifiable": true,
+      "falsifiable_reason": "HK-II mutants that bind VDAC1 but do not sterically shield cardiolipin failing to prevent honeycomb disassembly, or cardiolipin depletion blocking HK-II displacement effects, would falsify the mechanism.",
+      "feasible": true,
+      "feasible_reason": "Generating HK-II binding-competent but cardiolipin-shielding-deficient mutants requires structural design but is feasible; cardiolipin depletion via genetic or chemical means is standard.",
+      "novel": true,
+      "novel_reason": "The specific mechanism linking HK-II displacement to cardiolipin unmasking and honeycomb disassembly is novel and testable via targeted mutagenesis.",
+      "passed": true
+    },
+    {
+      "statement": "Lipophilic drugs (e.g., CBD, statins) alter VDAC1 supramolecular organization by changing local membrane order, independent of direct protein binding.",
+      "falsifiable": true,
+      "falsifiable_reason": "Drugs with similar logP but no membrane-ordering effects failing to alter VDAC1 organization, or direct binding (via cryo-EM or NMR) being necessary for observed effects, would falsify the claim.",
+      "feasible": true,
+      "feasible_reason": "Screening structurally diverse lipophilic compounds with varying membrane-ordering properties and measuring VDAC organization by AFM is feasible; cryo-EM of VDAC1 \u00b1 drug is challenging but possible.",
+      "novel": true,
+      "novel_reason": "The claim that membrane-order perturbation, independent of binding, drives VDAC reorganization is a novel pharmacological mechanism.",
+      "passed": true
+    },
+    {
+      "statement": "The honeycomb-to-dispersed transition is the physical \"point of no return\" for VDAC-mediated apoptosis, with membrane reorganization as the rate-limiting step.",
+      "falsifiable": true,
+      "falsifiable_reason": "Observing apoptosis initiation from honeycomb arrays (e.g., via forced oligomerization in AFM or live-cell super-resolution imaging), or drugs that bypass membrane reorganization to trigger apoptosis, would falsify the rate-limiting step hypothesis.",
+      "feasible": true,
+      "feasible_reason": "Reconstituted liposomes with titrated Chol/CL and AFM quantification are standard; MD simulations are routine.",
+      "novel": true,
+      "novel_reason": "The quantitative link between Chol/CL ratio and VDAC1 assembly state, embedded in an apoptotic threshold equation, is novel and predictive.",
+      "passed": true
+    },
+    {
+      "statement": "Chol/CL ratio physically determines VDAC1 fraction in honeycomb (protected) vs. dispersed (oligomerization-competent) states, forming biophysical basis of threshold equation.",
+      "falsifiable": true,
+      "falsifiable_reason": "AFM on OMM liposomes varying Chol/CL showing no correlation between ratio and honeycomb fraction, or MD simulations contradicting predicted stability, would falsify the claim.",
+      "feasible": true,
+      "feasible_reason": "Reconstituted liposomes with titrated Chol/CL and AFM quantification are standard; MD simulations are routine.",
+      "novel": true,
+      "novel_reason": "The quantitative link between Chol/CL ratio and VDAC1 assembly state, embedded in an apoptotic threshold equation, is novel and predictive.",
+      "passed": true
+    },
+    {
+      "statement": "HK-II displacement from VDAC1 unmasks CL microdomains, promoting honeycomb disassembly to oligomerization-competent monomers.",
+      "falsifiable": true,
+      "falsifiable_reason": "HK-II knockout mitochondria retaining honeycomb under pro-apoptotic stimuli, or FRET showing no cardiolipin exposure post-HK-II displacement, would falsify the mechanism.",
+      "feasible": true,
+      "feasible_reason": "HK-II knockout cell lines are available; FRET-based cardiolipin accessibility assays are standard; AFM of native mitochondria is feasible.",
+      "novel": true,
+      "novel_reason": "The specific mechanism linking HK-II displacement to cardiolipin unmasking is novel and testable via fluorescence-based lipid accessibility assays.",
+      "passed": true
+    },
+    {
+      "statement": "Lipophilic drugs like CBD (logP 6.3; Kd=11\u03bcM) or statins (logP 4-5) alter VDAC organization by increasing OMM order/fluidity independent of direct binding.",
+      "falsifiable": true,
+      "falsifiable_reason": "VDAC-binding mutants insensitive to drug but retaining organization changes would falsify the binding-independent mechanism; GUV-AFM showing no assembly shift at physiological CBD concentrations would falsify the claim.",
+      "feasible": true,
+      "feasible_reason": "Generating VDAC1 mutants and testing in reconstituted systems is standard; GUV-AFM is feasible.",
+      "novel": true,
+      "novel_reason": "The claim that CBD and statins alter VDAC organization via membrane-order changes independent of direct binding is a novel and testable pharmacological mechanism.",
+      "passed": true
+    },
+    {
+      "statement": "Honeycomb\u2192dispersed transition instantiates apoptotic point of no return, with oligomerization restricted to dispersed monomers (membrane reorganization rate-limiting).",
+      "falsifiable": true,
+      "falsifiable_reason": "Observing oligomerization in intact honeycomb via cross-linking or mutagenesis, or live-cell super-resolution showing pores in undisrupted arrays, would falsify the rate-limiting step hypothesis.",
+      "feasible": false,
+      "feasible_reason": "Not found in response",
+      "novel": false,
+      "novel_reason": "Not found in response",
+      "passed": false
+    },
+    {
+      "statement": "The OMM Chol/CL ratio is a primary determinant of the apoptotic threshold by physically controlling the fraction of VDAC1 sequestered in apoptosis-resistant honeycomb arrays versus dispersed, oligomerization-competent monomers.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "The dissociation of HK-II from VDAC1 is a critical sensitizing step that unmasks local cardiolipin pools, initiating the honeycomb-to-dispersed transition and committing the cell to apoptosis.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "The Chol/CL ratio is a primary physical determinant of the VDAC1 honeycomb-vs-monomer equilibrium, and this lipid-driven partitioning provides the biophysical foundation for the apoptotic threshold equation.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "HK-II binding stabilizes honeycomb arrays by masking/displacing cardiolipin from VDAC's vicinity; its displacement unmasks cardiolipin microdomains, promoting lattice disassembly.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "Lipophilic drugs with logP >4 can alter VDAC supramolecular organization indirectly by modulating local membrane order and lipid partitioning, constituting a distinct, non-canonical pharmacological mechanism.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "The honeycomb-to-dispersed transition is the physical rate-limiting step for VDAC-mediated apoptosis, as oligomerization is only permissible from the dispersed state.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    }
+  ],
+  "n_passed": 10,
+  "n_failed": 8,
+  "total_calls": 1,
+  "latency_s": 21.68,
+  "recommendation": "Lab Gate PASSED with filter. 10/18 claims cleared. 8 filtered: 'The proposed threshold equation Threshold = K/[(1-...' not feasible; 'Honeycomb\u2192dispersed transition instantiates apopto...' not feasible; 'Honeycomb\u2192dispersed transition instantiates apopto...' lacks novelty"
+}

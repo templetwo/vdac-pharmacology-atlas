@@ -1,0 +1,35 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260214_043936_pharmacology
+Date: 2026-02-14
+Protocol: evo-1.0
+
+QUESTION:
+  What are the mechanisms by which metformin produces dose-dependent divergent outcomes — metabolic benefit and insulin sensitization at therapeutic doses versus lactic acidosis and mitochondrial toxicity at supratherapeutic doses — with specific reference to AMPK activation thresholds, Complex I inhibition kinetics, and the role of tissue-specific mitochondrial reserve in determining whether metformin acts as metabolic optimizer or mitochondrial poison?
+
+CONVERGENCE:
+  S2 rounds: ?
+  Early stopped: ?
+  Final Jaccard: ?
+  Final TYPE 0/1: ?
+  S3 gate: FAILED
+
+VERIFICATION:
+  TYPE 2 claims checked: 0
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 0
+
+LAB GATE:
+  Result: FAILED
+  Claims passed: 0/0
+
+BUDGET:
+  Total LLM calls: ?
+  Target range: 92-142
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

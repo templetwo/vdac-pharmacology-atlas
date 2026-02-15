@@ -1,0 +1,189 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "CBD does not meaningfully discriminate between VDAC1 and VDAC2, and dual inhibition poses a genuine apoptotic risk to healthy hepatocytes, undermining the model's therapeutic selectivity premise.",
+      "mechanism": "VDAC isoforms share >70% sequence homology in transmembrane domains; no published data demonstrates isoform selectivity for CBD; VDAC2 inhibition releases BAK, lowering apoptotic threshold universally.",
+      "falsifiable_by": "Binding assays showing >10\u00d7 Kd difference between CBD-VDAC1 and CBD-VDAC2.",
+      "type": 0,
+      "confidence": 0.77,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'vdac2'), ('cbd', 'interacts', 'vdac1'), ('vdac2', 'interacts', 'vdac'), ('vdac', 'interacts', 'bak')})",
+      "chunk_text": "CBD does not meaningfully discriminate between VDAC1 and VDAC2, and dual inhibition poses a genuine apoptotic risk to healthy hepatocytes, undermining the model's therapeutic selectivity premise."
+    },
+    {
+      "statement": "The 2x ROS scavenging ratio is plausible for hepatocytes vs. hepatocellular carcinoma (HCC), but glutathione depletion requires intracellular [CBD] >20 \u00b5M, a concentration unlikely in healthy liver but possible in metabolically compromised cells or with high-dose IV administration.",
+      "mechanism": "HCC cells often have elevated basal ROS and rely on adaptive glutathione synthesis; a moderate CBD-induced ROS burst could overwhelm this capacity while healthy hepatocytes compensate.",
+      "falsifiable_by": "Direct measurement showing <1.5x difference in total glutathione content or identical EC50 for CBD-induced glutathione depletion in primary human hepatocytes vs. HCC cell lines. \u2500\u2500\u2500 **",
+      "type": 0,
+      "confidence": 0.625,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('hcc', 'upregulates', 'ros')})",
+      "chunk_text": "The 2x ROS scavenging ratio is plausible for hepatocytes vs. hepatocellular carcinoma (HCC), but glutathione depletion requires intracellular [CBD] >20 \u00b5M, a concentration unlikely in healthy liver but possible in metabolically compromised cells or with high-dose IV administration."
+    },
+    {
+      "statement": "1:** *CBD is unlikely to reach VDAC1-saturating concentrations (\u226511 \u00b5M) in healthy hepatocytes under standard oral dosing, but 7-OH-CBD may contribute to VDAC1 occupancy.",
+      "mechanism": "High first-pass CYP450 metabolism (CYP2C19/CYP3A4) and low bioavailability (6\u201319%) limit steady-state free liver [CBD] to ~1\u201310 \u00b5M; 7-OH-CBD (Kd unknown) may accumulate due to slower clearance.",
+      "falsifiable_by": "Direct measurement of free hepatic [CBD] and [7-OH-CBD] in vivo at therapeutic doses, or demonstration of 7-OH-CBD binding VDAC1 with Kd \u226411 \u00b5M.",
+      "type": 1,
+      "confidence": 0.85,
+      "overlap_count": 3,
+      "models": [
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'vdac1'), ('vdac1', 'interacts', 'oh'), ('oh', 'interacts', 'cyp450'), ('cyp450', 'interacts', 'cyp2c19'), ('cyp2c19', 'interacts', 'cyp3a4')})",
+      "chunk_text": "1:** *CBD is unlikely to reach VDAC1-saturating concentrations (\u226511 \u00b5M) in healthy hepatocytes under standard oral dosing, but 7-OH-CBD may contribute to VDAC1 occupancy."
+    },
+    {
+      "statement": "CBD likely modulates VDAC gating allosterically from within the membrane rather than physically occluding the pore lumen, meaning ATP starvation and ROS generation are not mutually exclusive but represent a continuum of conductance dysregulation.",
+      "mechanism": "CBD's extreme lipophilicity precludes stable aqueous pore-lumen residence; membrane-embedded binding alters voltage-dependent gating, producing partial closure states that simultaneously reduce ATP flux and increase aberrant ROS-generating electron leak.",
+      "falsifiable_by": "Electrophysiology of reconstituted VDAC1 with CBD showing binary (open/closed) vs. graded subconductance states; cryo-EM of CBD-VDAC complex revealing binding site location.",
+      "type": 1,
+      "confidence": 0.625,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "deepseek",
+        "mistral"
+      ],
+      "tuples": "frozenset({('atp', 'modulates', 'cbd'), ('cbd', 'modulates', 'vdac'), ('atp', 'upregulates', 'ros'), ('atp', 'interacts', 'cbd'), ('atp', 'downregulates', 'cbd')})",
+      "chunk_text": "CBD likely modulates VDAC gating allosterically from within the membrane rather than physically occluding the pore lumen, meaning ATP starvation and ROS generation are not mutually exclusive but represent a continuum of conductance dysregulation."
+    },
+    {
+      "statement": "The VDAC1-centric model fails on pharmacokinetic grounds; sustained free intra-hepatocyte concentrations required for VDAC1 saturation (Kd=11\u00b5M) are unattainable via oral dosing within the therapeutic window, though transient accumulation in lipid droplets or impaired metabolism could create risk.",
+      "mechanism": "Extensive first-pass metabolism and low oral bioavailability ([0.06, 0.19]) cap the free drug concentration available to mitochondria, keeping it well below the VDAC1 Kd and within the range of higher-affinity targets like TRPV1/2.",
+      "falsifiable_by": "Direct measurement of free, unbound CBD concentrations in human liver tissue biopsies from subjects at steady-state dosing exceeding 11 \u00b5M.",
+      "type": 3,
+      "confidence": 0.9,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'trpv1')})",
+      "chunk_text": "The VDAC1-centric model fails on pharmacokinetic grounds; sustained free intra-hepatocyte concentrations required for VDAC1 saturation (Kd=11\u00b5M) are unattainable via oral dosing within the therapeutic window, though transient accumulation in lipid droplets or impaired metabolism could create risk."
+    },
+    {
+      "statement": "The \"occlusion vs. lock-open\" framing is a false dichotomy; a unified mechanism of allosteric gating modulation by membrane-partitioned CBD is more plausible, where the outcome (low-conductance starvation vs. high-conductance uncoupling) depends on the pre-existing metabolic state of the cell.",
+      "mechanism": "of allosteric gating modulation by membrane-partitioned CBD is more plausible, where the outcome (low-conductance starvation vs. high-conductance uncoupling) depends on the pre-existing metabolic state of the cell.",
+      "falsifiable_by": "Electrophysiological data showing CBD causes simple channel block with no effect on gating probability or voltage dependence. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.75,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "The \"occlusion vs. lock-open\" framing is a false dichotomy; a unified mechanism of allosteric gating modulation by membrane-partitioned CBD is more plausible, where the outcome (low-conductance starvation vs. high-conductance uncoupling) depends on the pre-existing metabolic state of the cell."
+    },
+    {
+      "statement": "Membrane partitioning of CBD (logP 6.3) creates local mitochondrial membrane concentrations 100-1000\u00d7 above free aqueous levels, potentially achieving VDAC1 occupancy even when bulk free hepatic concentration is <11 \u00b5M \u2014 but this same enrichment eliminates any cancer-selectivity argument.",
+      "mechanism": "Lipophilic accumulation in mitochondrial inner/outer membrane brings effective local CBD concentration near VDAC's transmembrane domains well above the measured Kd, but this is cell-type-indiscriminate.",
+      "falsifiable_by": "Measuring CBD concentration in isolated mitochondrial membrane fractions vs. cytosol from hepatocytes at clinically relevant doses; if membrane enrichment is <50\u00d7, the occupancy problem stands.",
+      "type": 3,
+      "confidence": 0.7,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'vdac1'), ('vdac1', 'interacts', 'vdac')})",
+      "chunk_text": "Membrane partitioning of CBD (logP 6.3) creates local mitochondrial membrane concentrations 100-1000\u00d7 above free aqueous levels, potentially achieving VDAC1 occupancy even when bulk free hepatic concentration is <11 \u00b5M \u2014 but this same enrichment eliminates any cancer-selectivity argument."
+    },
+    {
+      "statement": "7-OH-CBD (primary metabolite, ~20-40% of dose) likely binds VDAC1 with Kd~10-20 \u00b5M, structurally analogous to CBD.",
+      "mechanism": "Hydroxyl substitution preserves lipophilicity/core scaffold matching Rimmerman binding pocket.",
+      "falsifiable_by": "Direct ITC/SPR Kd measurement >50 \u00b5M.",
+      "type": 3,
+      "confidence": 0.65,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'vdac1')})",
+      "chunk_text": "7-OH-CBD (primary metabolite, ~20-40% of dose) likely binds VDAC1 with Kd~10-20 \u00b5M, structurally analogous to CBD."
+    },
+    {
+      "statement": "Singular threads valid: CBD (logP 6.3) binds VDAC membrane domain allosterically, altering gating",
+      "mechanism": "",
+      "falsifiable_by": "",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'vdac')})",
+      "chunk_text": "Singular threads valid: CBD (logP 6.3) binds VDAC membrane domain allosterically, altering gating"
+    }
+  ],
+  "conflicts": [
+    {
+      "subject": "cbd",
+      "relation": "interacts",
+      "object": "vdac1",
+      "values": {
+        "mistral": "kd=1.10e-05",
+        "grok": "kd=1.00e+01"
+      }
+    }
+  ],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.061511568777015004,
+      "cosine": 0.8064736902713776,
+      "jsd": 0.10508720333828195,
+      "kappa": 0.9244372328637009,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.38095238095238093,
+        "2": 0.5238095238095238,
+        "3": 0.09523809523809523
+      },
+      "type_01_ratio": 0.38095238095238093,
+      "n_claims_per_model": [
+        4,
+        5,
+        5,
+        3,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.5076136363636363,
+      "cosine": 0.865178519487381,
+      "jsd": 0.16352014810468224,
+      "kappa": 0.9543689253700586,
+      "type_distribution": {
+        "0": 0.45,
+        "1": 0.3,
+        "2": 0.0,
+        "3": 0.25
+      },
+      "type_01_ratio": 0.75,
+      "n_claims_per_model": [
+        4,
+        4,
+        5,
+        3,
+        4
+      ]
+    }
+  ]
+}

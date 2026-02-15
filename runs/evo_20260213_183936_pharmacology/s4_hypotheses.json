@@ -1,0 +1,326 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF primary human hepatocytes are stratified by baseline GSH/GSSG ratio into tertiles (low <30, mid 30-60, high >60), THEN low-tertile cells treated with CBD (10 \u00b5M, 48h) will show \u22652.5-fold greater LDH release and \u22653-fold greater ALT leakage compared to high-tertile cells, with AUC for GSH/GSSG predicting >20% cell death of 0.65-0.75.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CBD_concentration",
+          "unit": "\u00b5M",
+          "low": 1.0,
+          "high": 50.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "LDH_release_fold",
+          "unit": "fold-change",
+          "low": 1.0,
+          "high": 8.0,
+          "distribution": "log-normal",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "cell_death_threshold",
+          "unit": "%",
+          "low": 15.0,
+          "high": 30.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "AUC_ROC",
+          "unit": "(normal,",
+          "low": 0.5,
+          "high": 0.9,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 8.0,
+      "experimental_protocol": "Obtain cryopreserved primary human hepatocytes from \u226520 donors (BioIVT/Lonza). Measure baseline GSH/GSSG (enzymatic recycling assay). Treat with CBD (1, 5, 10, 25, 50 \u00b5M) \u00b1 valproate (300 \u00b5M) for 24/48/72h.",
+      "expected_outcome": "Monotonic inverse relationship between baseline GSH/GSSG and hepatocyte death; ROC AUC 0.65-0.75; ketoconazole partially but not fully rescues toxicity in low-GSH donors, confirming dual mechanism.",
+      "null_outcome": "No correlation between GSH/GSSG and cell death (AUC <0.55), or ketoconazole fully rescues toxicity (implicating CYP450 only, not VDAC-mediated oxidative stress).",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            25.0,
+            50.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Valproate": {
+          "doses": [
+            100.0,
+            300.0,
+            600.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Ketoconazole": {
+          "doses": [
+            5.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "LDH release (CytoTox96)",
+        "ALT (kinetic assay)",
+        "GSH/GSSG (Cayman kit)",
+        "ROS (CM-H2DCFDA)",
+        "MMP (TMRM)",
+        "VDAC1 oligomerization (DSP crosslinking + Western blot)",
+        "CYP3A4 activity (P450-Glo)"
+      ],
+      "controls": [
+        "Vehicle (0.1% DMSO)",
+        "N-acetylcysteine (5 mM",
+        "GSH rescue)",
+        "VDAC1 inhibitor DIDS (100 \u00b5M",
+        "VDAC-block control)",
+        "ketoconazole alone",
+        "heat-killed cells (LDH max)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H2",
+      "prediction": "IF VDAC1 is knocked down (siRNA, >70% reduction) in HepG2 cells, THEN CBD-induced (10 \u00b5M, 48h) ROS production will decrease by \u226540% and cell death by \u226550%, whereas CYP3A4 activity inhibition by CBD will remain unchanged (\u00b110%).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "VDAC1_knockdown_efficiency",
+          "unit": "%",
+          "low": 60.0,
+          "high": 90.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "ROS_reduction",
+          "unit": "%",
+          "low": 20.0,
+          "high": 70.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "cell_death_reduction",
+          "unit": "%",
+          "low": 25.0,
+          "high": 75.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CBD_IC50_shift",
+          "unit": "fold",
+          "low": 1.0,
+          "high": 3.0,
+          "distribution": "log-normal",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 9.0,
+      "experimental_protocol": "Transfect HepG2 cells with VDAC1 siRNA (3 sequences) or scrambled control (48h knockdown confirmed by qPCR/Western). Treat with CBD (1, 5, 10, 25 \u00b5M) for 24/48h. Parallel VDAC1-overexpression arm (pcDNA3-VDAC1). Measure all",
+      "expected_outcome": "VDAC1 KD significantly reduces ROS and cell death without altering CYP3A4 inhibition by CBD; VDAC1 overexpression sensitizes cells. VDAC2 KD shows smaller or no effect. This mechanistically separates VDAC-mediated oxidative toxicity from CYP-mediated metabolic toxicity.",
+      "null_outcome": "VDAC1 KD does not reduce CBD toxicity (\u226415% change), or VDAC1 KD also reduces CYP3A4 inhibition proportionally (suggesting confounded pathway, not independent mechanism).",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            25.0
+          ],
+          "unit": "\u00b5M;"
+        }
+      },
+      "readouts": [
+        "MitoSOX (mitochondrial superoxide)",
+        "CM-H2DCFDA (total ROS)",
+        "Annexin V/PI (apoptosis)",
+        "CytoTox-Glo (cell death)",
+        "CYP3A4 (P450-Glo)",
+        "VDAC1 protein (Western)",
+        "cytochrome c release (ELISA)",
+        "caspase 3/7 (Caspase-Glo)"
+      ],
+      "controls": [
+        "Scrambled siRNA + vehicle",
+        "scrambled siRNA + CBD",
+        "VDAC1 siRNA + vehicle",
+        "NAC (5 mM) rescue",
+        "DIDS (100 \u00b5M)",
+        "erastin as VDAC-opening positive control",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H3",
+      "prediction": "IF hepatocytes are exposed to escalating doses of CBD or erastin, THEN the three-component panel (GSH, ATP/ADP, MMP) will show coordinated dose-dependent deterioration with \u22650.85 Spearman correlation between composite panel score and subsequent cell death (measured 24h later), and the panel at 6h will predict 48h toxicity with AUC \u22650.80.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "GSH_EC50_depletion",
+          "unit": "\u00b5M",
+          "low": 3.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "ATP_ADP_ratio_baseline",
+          "unit": "(normal,",
+          "low": 4.0,
+          "high": 12.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "ATP_ADP_ratio_at_toxic_dose",
+          "unit": "(normal,",
+          "low": 0.5,
+          "high": 3.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "MMP_reduction_at_EC50",
+          "unit": "%",
+          "low": 30.0,
+          "high": 60.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "panel_AUC_for_48h_death",
+          "unit": "(normal,",
+          "low": 0.6,
+          "high": 0.95,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "Spearman_rho",
+          "unit": "(normal,",
+          "low": 0.6,
+          "high": 0.95,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Use primary human hepatocytes (\u226510 donors) and HepaRG cells. Treat with CBD (1-50 \u00b5M) or erastin (1-20 \u00b5M) or acetaminophen (1-20 mM). Measure panel at 2, 6, 12, 24h. Measure cell death at 24, 48, 72h. Build composite score (weighted PCA of 3 metrics). Test whether 6h panel predicts 48h death. Include TRPV1 agonist capsaicin (10 \u00b5M) and TRPV1 antagonist AMG9810 (3 \u00b5M) + CBD arm to test confounding by non-mitochondrial CBD targets. Timeline: 10 weeks.",
+      "expected_outcome": "All three panel components deteriorate",
+      "null_outcome": "Panel components change non-concordantly or show poor predictive power (AUC <0.65); or capsaicin alone significantly alters panel metrics, indicating TRPV1-mediated confounding that undermines diagnostic specificity.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            25.0,
+            50.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Erastin": {
+          "doses": [
+            1.0,
+            2.0,
+            5.0,
+            10.0,
+            20.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Acetaminophen": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            15.0,
+            20.0
+          ],
+          "unit": "mM;"
+        },
+        "Capsaicin": {
+          "doses": [
+            10.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "AMG9810": {
+          "doses": [
+            3.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "GSH/GSSG (ThiolTracker + enzymatic)",
+        "ATP/ADP (ADP/ATP Ratio Assay Kit",
+        "Sigma)",
+        "MMP (TMRM 50 nM",
+        "live imaging + plate reader)",
+        "cell death (LDH + Annexin V/PI)",
+        "high-content imaging (Operetta/ImageXpress for single-cell MMP)"
+      ],
+      "controls": [
+        "Vehicle (0.1% DMSO)",
+        "FCCP (10 \u00b5M",
+        "complete MMP collapse positive control)",
+        "oligomycin (1 \u00b5M",
+        "ATP synthase inhibition)",
+        "NAC (5 mM",
+        "GSH rescue)",
+        "rotenone (1 \u00b5M",
+        "Complex I inhibition as non-VDAC mitochondrial toxicant)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H4",
+      "prediction": "IF a panel of cancer cell lines (n\u226515) is ranked by VDAC1 protein expression, THEN VDAC1-high lines (top quartile) will show \u22653-fold lower IC50 for erastin and \u22652-fold lower IC50 for CBD compared to VDAC1-low lines (bottom quartile), with VDAC1 expression explaining \u226530% of variance in drug sensitivity (R\u00b2 \u22650.30).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [],
+      "testability_score": 5.0,
+      "experimental_protocol": "",
+      "expected_outcome": "",
+      "null_outcome": "",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": []
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_calls": 1,
+  "latency_s": 55.01
+}

@@ -1,0 +1,56 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260213_183423_pharmacology
+Date: 2026-02-13
+Protocol: evo-1.0
+
+QUESTION:
+  Does the outer mitochondrial membrane lipid composition modulate VDAC-ligand interactions differently in healthy vs cancer mitochondria? Specifically: (1) Cardiolipin is enriched in inner mitochondrial membrane but present in OMM contact sites — does it alter VDAC gating or CBD binding at these sites? (2) Cancer cell membranes have altered cholesterol/phospholipid ratios — does this change the effective Kd of lipophilic VDAC modulators like CBD (logP 6.3)? (3) Olesoxime (TRO19622) binds VDAC via a cholesterol-recognition motif — does membrane cholesterol content determine whether olesoxime is neuroprotective or neutral? (4) Could membrane-targeted delivery (liposomes with specific lipid compositions) enhance or reduce VDAC modulator potency in a cell-type-specific way?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 10
+  Promoted to TYPE 1: 0
+  Novel (no literature): 3
+  Contradicted: 1
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 17/17
+
+HYPOTHESES (ranked by testability):
+  H1. IF VDAC1 is reconstituted in planar lipid bilayers containing 10-20 mol% cardiolipin (vs pure POPC), THEN voltage-gating
+     Testability: 9.0/10
+     Effect size: 0.8708 (Cohen's d)
+     Power: 1.0
+
+  H2. IF VDAC1 is embedded in nanodiscs with 20 mol% cholesterol (cancer-mimetic) vs 5 mol% (healthy-mimetic), THEN the appare
+     Testability: 9.0/10
+     Effect size: 0.9767 (Cohen's d)
+     Power: 1.0
+
+  H3. IF OMM cholesterol is depleted below ~15 mol% (via MβCD treatment or low-cholesterol nanodiscs), THEN olesoxime-VDAC1 bi
+     Testability: 8.0/10
+     Effect size: 0.806 (Cohen's d)
+     Power: 1.0
+
+  H4. IF CBD is delivered via liposomes matching cancer OMM composition (20 mol% cholesterol, 5 mol% CL, 75% POPC) vs generic 
+     Testability: 7.0/10
+     Effect size: 0.7132 (Cohen's d)
+     Power: 1.0
+
+BUDGET:
+  Total LLM calls: 17
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

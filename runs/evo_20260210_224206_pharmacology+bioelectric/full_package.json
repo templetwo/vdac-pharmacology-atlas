@@ -1,0 +1,915 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260210_224206_pharmacology+bioelectric",
+  "timestamp": "2026-02-10T22:44:24.006887+00:00",
+  "question": "What are the mechanisms by which CBD induces selective cytotoxicity in cancer cells while sparing healthy cells, with specific reference to VDAC1-mediated mitochondrial membrane potential disruption?",
+  "convergence_report": {
+    "s1_initial": {
+      "n_models_responded": 5,
+      "initial_jaccard": 0.10207688338493293,
+      "initial_cosine": 0.8143199741840362
+    },
+    "s2_refinement": {
+      "total_rounds": 0,
+      "early_stopped": false,
+      "final_jaccard": 0.0,
+      "final_cosine": 0.0,
+      "final_jsd": 0.0,
+      "final_type_01_ratio": 0.0
+    },
+    "s3_gate": {
+      "passed": true,
+      "jaccard": 0.4986,
+      "type_01_ratio": 0.7368,
+      "recommendation": ""
+    }
+  },
+  "verification": {
+    "n_type2_input": 5,
+    "n_promoted": 0,
+    "n_held": 3,
+    "n_novel": 2,
+    "n_contradicted": 0,
+    "total_calls": 5
+  },
+  "gate": {
+    "passed": true,
+    "n_passed": 10,
+    "n_failed": 11,
+    "recommendation": "Lab Gate PASSED with filter. 10/21 claims cleared. 11 filtered: 'Cancer mitochondria maintain depolarized \u0394\u03a8m \u2248-120...' lacks novelty; 'Healthy cell hyperpolarization (-180mV) protects v...' lacks novelty; 'TRPV1/2 activation (2-3.7\u03bcM CBD) causes Ca\u00b2\u207a influ...' lacks falsifiability",
+    "claims": [
+      {
+        "statement": "CBD-VDAC1 binding shifts the channel toward a closed/low-conductance state, reducing \u0394\u03a8m by ~20\u201330 m",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "TRPV1/2 activation at lower CBD concentrations (Kd 2\u20133.7 \u00b5M) creates a Ca\u00b2\u207a priming phase that sensi",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The selectivity is fundamentally a threshold phenomenon driven by three converging vulnerabilities i",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "(investigating singular thread):** VDAC1 is voltage-gated, adopting lower conductance at high negati",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "1:** CBD-induced VDAC1 closure depolarizes \u0394\u03a8m by ~20\u201330 mV, pushing cancer cells (-120 mV \u2192 ~-90 mV",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "2:** Baseline ROS (0.45 relative in cancer) amplifies CBD-VDAC1-induced oxidative stress, as VDAC1 d",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "3:** TRPV1/TRPV2-mediated Ca\u00b2\u207a influx at 2\u20134 \u00b5M CBD primes mitochondria for VDAC1-mediated apoptosis",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "4 (SINGULAR THREAD EXPLORATION):** Healthy cells\u2019 hyperpolarized \u0394\u03a8m (-180 mV) induces VDAC1 closure",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Cancer mitochondria maintain depolarized \u0394\u03a8m \u2248-120mV vs healthy \u2248-180mV, positioning cancer closer t",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Elevated baseline ROS (0.45 rel higher in cancer) synergizes with CBD-VDAC1 to exceed peroxide thres",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "CBD (11\u03bcM) binds VDAC1, shifting to low-conductance state, reducing ATP import/ADP export, causing p",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Healthy cell hyperpolarization (-180mV) protects via VDAC1 voltage-gating (closure threshold ~|-140|",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "TRPV1/2 activation (2-3.7\u03bcM CBD) causes Ca\u00b2\u207a influx priming mito Ca overload, reducing VDAC1 thresho",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Quantitative prediction: CBD 10\u03bcM drops cancer \u0394\u03a8m by >20mV (to <-100mV, apoptotic), healthy by <10m",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Selectivity arises because cancer cells exist in a \"pre-apoptotic\" state; CBD's interaction with VDA",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "The hyperpolarized state of healthy mitochondria (-180 mV) actively reduces the efficacy of CBD's ac",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "CBD cytotoxicity follows a kinetically-ordered, two-hit model determined by binding affinities, wher",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "CBD-induced VDAC1 closure/alteration creates a lethal bioenergetic-ROS crisis only in cancer cells b",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "The elevated baseline ROS in cancer cells (0.45 rel.) is not just a permissive factor but an active ",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "TRPV1/2 activation by lower CBD concentrations (2-4 \u00b5M) primes cancer cells for VDAC1-mediated killi",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "(Investigating Singular Thread):** The hyperpolarized state of healthy cell mitochondria (-180 mV) p",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF cancer cells (MDA-MB-231) are treated with 11 \u00b5M CBD, THEN \u0394\u03a8m will depolarize by \u226520 mV (from ~\u2212120 mV to ~\u221295 mV), triggering apoptosis in >60% of cells by 24h; VDAC1-knockout isogenic lines will show <20% apoptosis and <10 mV depolarization under identical conditions. Healthy MCF-10A cells will depolarize \u226425 mV (\u2212180 \u2192 ~\u2212155 mV) with <15% apoptosis.",
+      "testability_score": 9.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CBD_concentration",
+          "range": "5.0-20.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "\u0394\u03a8m_shift",
+          "range": "15.0-35.0 mV",
+          "distribution": "uniform"
+        },
+        {
+          "name": "apoptosis_rate_cancer",
+          "range": "40.0-85.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "apoptosis_rate_VDAC1KO",
+          "range": "0.0-30.0 %",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9309,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5000993370519261,
+            "std": 0.13669012241801015,
+            "median": 0.5135273267663021,
+            "ci_lower": 0.2510342211431588,
+            "ci_upper": 0.7356861615114252,
+            "min": 0.14985873316293374,
+            "max": 0.8597271425353767
+          }
+        }
+      }
+    },
+    {
+      "id": "H2",
+      "prediction": "IF CBD cytotoxicity operates through a two-stage mechanism (TRPV1/2 Ca\u00b2\u207a priming at 2\u20134 \u00b5M, then VDAC1 engagement at ~11 \u00b5M), THEN the dose-response curve in cancer cells will be biphasic (Hill coefficient shift or inflection at ~4 \u00b5M); TRPV1/2 double-antagonism will right-shift IC50 by \u22652-fold and eliminate the biphasic inflection; MCU blockade will partially rescue (\u226530% viability increase).",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "TRPV_Kd",
+          "range": "1.5-4.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "VDAC1_Kd",
+          "range": "8.0-15.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "IC50_WT",
+          "range": "6.0-14.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "IC50_shift_with_antagonist",
+          "range": "1.5-4.0 fold",
+          "distribution": "log-normal"
+        },
+        {
+          "name": "MCU_rescue_fraction",
+          "range": "0.2-0.5 (uniform)",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9473,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.503720250402352,
+            "std": 0.1325673112569986,
+            "median": 0.4944591241965157,
+            "ci_lower": 0.263198621095773,
+            "ci_upper": 0.7723429981177493,
+            "min": 0.19367405819422912,
+            "max": 0.8571663720873601
+          }
+        }
+      }
+    },
+    {
+      "id": "H3",
+      "prediction": "IF selectivity is a threshold phenomenon dependent on baseline \u0394\u03a8m, THEN pre-treating healthy cells (MCF-10A) with low-dose FCCP to clamp \u0394\u03a8m at ~\u2212120 mV will sensitize them to 11 \u00b5M CBD, increasing apoptosis from <15% to >50% (comparable to cancer cells). Conversely, hyperpolarizing cancer cells with oligomycin (to ~\u2212160 mV) should protect them, reducing apoptosis by \u226550%.",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "FCCP_dose_for_target_\u0394\u03a8m",
+          "range": "0.1-1.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "apoptosis_healthy_sensitized",
+          "range": "35.0-75.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "apoptosis_healthy_naive",
+          "range": "5.0-20.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "apoptosis_cancer_hyperpolarized",
+          "range": "10.0-35.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "apoptosis_cancer_naive",
+          "range": "50.0-80.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "ROS_fold_change_threshold",
+          "range": "2.0-4.0 (log-normal)",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.806,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.497092075396723,
+            "std": 0.11812534802979514,
+            "median": 0.49466291062120527,
+            "ci_lower": 0.26904883163234905,
+            "ci_upper": 0.7478703774477341,
+            "min": 0.135362612783667,
+            "max": 0.826859173441161
+          }
+        }
+      }
+    },
+    {
+      "id": "H4",
+      "prediction": "IF VDAC1's voltage-dependent gating renders it already partially closed at \u2212180 mV (healthy cell potential), THEN CBD (11 \u00b5M) will reduce single-channel conductance by \u226415% at \u2212180 mV clamped potential versus \u226550% reduction at \u2212120 mV. The voltage-gating-deficient mutant E73Q-VDAC1 will show equivalent CBD-induced conductance reduction at both potentials, and healthy cells expressing E73Q-VDAC1 (replacing WT) will become sensitized to CBD.",
+      "testability_score": 5.0,
+      "key_variables": [],
+      "parameters": [],
+      "monte_carlo": {
+        "effect_size": 0.0,
+        "power": 0.0,
+        "converged": true,
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5,
+            "std": 0.0,
+            "median": 0.5,
+            "ci_lower": 0.5,
+            "ci_upper": 0.5,
+            "min": 0.5,
+            "max": 0.5
+          }
+        }
+      }
+    }
+  ],
+  "simulations": {
+    "n_hypotheses_simulated": 4,
+    "total_iterations": 1200,
+    "llm_calls": 0,
+    "results": [
+      {
+        "hypothesis_id": "H1",
+        "n_iterations": 300,
+        "effect_size": 0.9309,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "CBD_concentration": {
+            "mean": 12.299802324039375,
+            "std": 4.347329655158144,
+            "median": 12.185062723766254,
+            "ci_lower": 5.415345565963337,
+            "ci_upper": 19.462597168042844,
+            "min": 5.110434046265083,
+            "max": 19.885633460837557
+          },
+          "\u0394\u03a8m_shift": {
+            "mean": 25.106392302569354,
+            "std": 5.676350895835356,
+            "median": 25.269621147971726,
+            "ci_lower": 15.722174009611932,
+            "ci_upper": 34.602408447200986,
+            "min": 15.10859668257401,
+            "max": 34.982094609484776
+          },
+          "apoptosis_rate_cancer": {
+            "mean": 62.373980955986966,
+            "std": 13.40241165730759,
+            "median": 62.59470919852884,
+            "ci_lower": 40.7693680137029,
+            "ci_upper": 84.28119717317117,
+            "min": 40.05548781303587,
+            "max": 84.94345165300442
+          },
+          "apoptosis_rate_VDAC1KO": {
+            "mean": 15.336740040307044,
+            "std": 8.749572380189358,
+            "median": 14.727980428548571,
+            "ci_lower": 1.2777133211531253,
+            "ci_upper": 29.505680814188963,
+            "min": 0.015562324971165609,
+            "max": 29.982657276725636
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H2",
+        "n_iterations": 300,
+        "effect_size": 0.9473,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "TRPV_Kd": {
+            "mean": 2.745693231899572,
+            "std": 0.7126782838314705,
+            "median": 2.737233781799233,
+            "ci_lower": 1.5658951095922315,
+            "ci_upper": 3.927734376497775,
+            "min": 1.5078753819133466,
+            "max": 3.994704360685301
+          },
+          "VDAC1_Kd": {
+            "mean": 11.470639161784478,
+            "std": 1.999437089129577,
+            "median": 11.521606638956273,
+            "ci_lower": 8.148646788018103,
+            "ci_upper": 14.774589303177345,
+            "min": 8.015543479448876,
+            "max": 14.969078630609417
+          },
+          "IC50_WT": {
+            "mean": 10.007183305776753,
+            "std": 2.284846461013696,
+            "median": 9.840172142057604,
+            "ci_lower": 6.272417285992675,
+            "ci_upper": 13.820728185742524,
+            "min": 6.134642505645078,
+            "max": 13.982736326636903
+          },
+          "IC50_shift_with_antagonist": {
+            "mean": 2.7773755734692207,
+            "std": 0.7048013964096839,
+            "median": 2.6922208615964163,
+            "ci_lower": 1.500626472575609,
+            "ci_upper": 4.0,
+            "min": 1.5,
+            "max": 4.0
+          },
+          "MCU_rescue_fraction": {
+            "mean": 0.3538010666304525,
+            "std": 0.0892205168223188,
+            "median": 0.35833788493406504,
+            "ci_lower": 0.2119325717731061,
+            "ci_upper": 0.4953846734960103,
+            "min": 0.20133206462717276,
+            "max": 0.49928862562239323
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H3",
+        "n_iterations": 300,
+        "effect_size": 0.806,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "FCCP_dose_for_target_\u0394\u03a8m": {
+            "mean": 0.5387041505789996,
+            "std": 0.25943975889125065,
+            "median": 0.5162363191860182,
+            "ci_lower": 0.13375921824512407,
+            "ci_upper": 0.9753882586136163,
+            "min": 0.10494579341669717,
+            "max": 0.9958471175893718
+          },
+          "apoptosis_healthy_sensitized": {
+            "mean": 54.37900419890333,
+            "std": 11.748008910817504,
+            "median": 53.8420238833132,
+            "ci_lower": 35.9974024464235,
+            "ci_upper": 73.79669846828953,
+            "min": 35.05145005162992,
+            "max": 74.71131443995928
+          },
+          "apoptosis_healthy_naive": {
+            "mean": 12.228725303431371,
+            "std": 4.430602907882286,
+            "median": 11.913005944512609,
+            "ci_lower": 5.392234244158289,
+            "ci_upper": 19.570459567339203,
+            "min": 5.0498572289103105,
+            "max": 19.921986367589223
+          },
+          "apoptosis_cancer_hyperpolarized": {
+            "mean": 21.733198875936704,
+            "std": 7.043974108156971,
+            "median": 20.94071954810193,
+            "ci_lower": 10.536626603076137,
+            "ci_upper": 33.792919517894376,
+            "min": 10.010816263652064,
+            "max": 34.92649755072017
+          },
+          "apoptosis_cancer_naive": {
+            "mean": 66.31556703847329,
+            "std": 9.016295746995716,
+            "median": 67.69759621624384,
+            "ci_lower": 51.10796959441536,
+            "ci_upper": 79.26679291311487,
+            "min": 50.03817523508579,
+            "max": 79.84415606650816
+          },
+          "ROS_fold_change_threshold": {
+            "mean": 3.031066162653728,
+            "std": 0.5753281565544343,
+            "median": 3.058484085355963,
+            "ci_lower": 2.065780508612919,
+            "ci_upper": 3.962759734469973,
+            "min": 2.000090869796712,
+            "max": 3.9999393383535997
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H4",
+        "n_iterations": 300,
+        "effect_size": 0.0,
+        "power": 0.0,
+        "converged": true,
+        "parameters": {}
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF cancer cells (MDA-MB-231) are treated with 11 \u00b5M CBD, THEN \u0394\u03a8m will depolarize by \u226520 mV (from ~\u2212120 mV to ~\u221295 mV), triggering apoptosis in >60% of cells by 24h; VDAC1-knockout isogenic lines will show <20% apoptosis and <10 mV depolarization under identical conditions. Healthy MCF-10A cells will depolarize \u226425 mV (\u2212180 \u2192 ~\u2212155 mV) with <15% apoptosis.",
+      "protocol": "Generate VDAC1-KO MDA-MB-231 via CRISPR-Cas9 (validated by Western blot). Treat WT, VDAC1-KO cancer, and MCF-10A cells with 11 \u00b5M CBD for 6/12/24h. Measure \u0394\u03a8m by TMRE (quantitative flow cytometry calibrated with FCCP standard curve) and apoptosis by Annexin V/PI. Confirm with JC-1 ratiometric imaging.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            0.0,
+            2.0,
+            5.0,
+            8.0,
+            11.0,
+            15.0,
+            20.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "TMRE fluorescence (flow cytometry)",
+        "JC-1 aggregate/monomer ratio",
+        "Annexin V/PI",
+        "caspase-3/7 activity (Caspase-Glo)",
+        "Western blot for cytochrome c (cytosolic fraction)"
+      ],
+      "controls": [
+        "Vehicle (0.1% DMSO)",
+        "FCCP 10 \u00b5M (positive depolarization)",
+        "VDAC1-KO validation (Western/qPCR)",
+        "staurosporine 1 \u00b5M (positive apoptosis)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "WT cancer: \u0394\u03a8m drops ~25 mV, >60% apoptosis at 24h. VDAC1-KO: \u0394\u03a8m drops <10 mV, <20% apoptosis. MCF-10A: \u0394\u03a8m drops ~25 mV but remains at ~\u2212155 mV, <15% apoptosis.",
+      "null_outcome": "VDAC1-KO cancer cells show equivalent apoptosis and \u0394\u03a8m collapse to WT, indicating VDAC1 is dispensable and an alternative target mediates CBD cytotoxicity."
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF CBD cytotoxicity operates through a two-stage mechanism (TRPV1/2 Ca\u00b2\u207a priming at 2\u20134 \u00b5M, then VDAC1 engagement at ~11 \u00b5M), THEN the dose-response curve in cancer cells will be biphasic (Hill coefficient shift or inflection at ~4 \u00b5M); TRPV1/2 double-antagonism will right-shift IC50 by \u22652-fold and eliminate the biphasic inflection; MCU blockade will partially rescue (\u226530% viability increase).",
+      "protocol": "Treat MDA-MB-231 with CBD (0\u201330 \u00b5M, 16 points) \u00b1 capsazepine (10 \u00b5M, TRPV1 antagonist) + tranilast (75 \u00b5M, TRPV2 antagonist), or \u00b1 Ru360 (10 \u00b5M, MCU inhibitor). Measure viability (CellTiter-Glo, 48h), cytosolic Ca\u00b2\u207a (Fura-2 AM, real-time over 2h), mitochondrial Ca\u00b2\u207a (Rhod-2 AM). Fit",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            0.0,
+            0.5,
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            8.0,
+            10.0,
+            11.0,
+            13.0,
+            15.0,
+            20.0,
+            25.0,
+            30.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Capsazepine": {
+          "doses": [
+            10.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Tranilast": {
+          "doses": [
+            75.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Ru360": {
+          "doses": [
+            10.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "CellTiter-Glo luminescence",
+        "Fura-2 340/380 ratio (plate reader",
+        "kinetic)",
+        "Rhod-2 fluorescence",
+        "TMRE",
+        "dose-response curve fitting (GraphPad Prism biphasic model)"
+      ],
+      "controls": [
+        "Vehicle",
+        "capsazepine alone",
+        "tranilast alone",
+        "Ru360 alone",
+        "ionomycin (Ca\u00b2\u207a positive control)",
+        "thapsigargin (ER Ca\u00b2\u207a release control)",
+        "BAPTA-AM 10 \u00b5M (Ca\u00b2\u207a chelation)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "WT: biphasic curve with inflection ~4 \u00b5M (F-test p<0.05 favoring two-site model). TRPV1/2-antagonized: monophasic curve, IC50 right-shifted \u22652-fold. Ru360: partial rescue (30\u201350% viability increase at IC50). Ca\u00b2\u207a transient at 3 \u00b5M CBD precedes mitochondrial depolarization at 11 \u00b5M.",
+      "null_outcome": "Monophasic dose-response in all conditions; TRPV antagonists fail to shift IC50 by >1.3-fold; no detectable Ca\u00b2\u207a transient at sub-VDAC1 CBD concentrations."
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF selectivity is a threshold phenomenon dependent on baseline \u0394\u03a8m, THEN pre-treating healthy cells (MCF-10A) with low-dose FCCP to clamp \u0394\u03a8m at ~\u2212120 mV will sensitize them to 11 \u00b5M CBD, increasing apoptosis from <15% to >50% (comparable to cancer cells). Conversely, hyperpolarizing cancer cells with oligomycin (to ~\u2212160 mV) should protect them, reducing apoptosis by \u226550%.",
+      "protocol": "Pre-treat MCF-10A with titrated FCCP (0.1\u20131.0 \u00b5M, 1h) to achieve \u0394\u03a8m ~\u2212120 mV (confirmed by TMRE calibration). Pre-treat MDA-MB-231 with oligomycin (0.5 \u00b5g/mL, 1h) to hyperpolarize. Then add 11 \u00b5M CBD for 24h. Measure apoptosis (Annexin V/PI), \u0394\u03a8m (TMRE), ROS (MitoSOX), and cytochrome c release (ELISA/Western).",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            0.0,
+            5.0,
+            11.0,
+            20.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "FCCP": {
+          "doses": [
+            0.0,
+            0.1,
+            0.25,
+            0.5,
+            1.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Oligomycin": {
+          "doses": [
+            0.0,
+            0.25,
+            0.5,
+            1.0
+          ],
+          "unit": "\u00b5g/mL"
+        }
+      },
+      "readouts": [
+        "TMRE (calibrated \u0394\u03a8m)",
+        "Annexin V/PI flow cytometry",
+        "MitoSOX Red",
+        "cytochrome c ELISA (cytosolic fraction)",
+        "caspase-3/7 activity"
+      ],
+      "controls": [
+        "Vehicle",
+        "FCCP alone (viability check)",
+        "oligomycin alone",
+        "CBD alone on both lines",
+        "staurosporine (apoptosis positive)",
+        "z-VAD-FMK (pan-caspase inhibitor",
+        "to confirm apoptotic mechanism)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "FCCP-primed MCF-10A + CBD: apoptosis >50%, comparable to cancer. Oligomycin-primed MDA-MB-231 + CBD: apoptosis reduced \u226550% relative to CBD alone. Selectivity index (cancer/healthy apoptosis ratio) collapses from >4 to <1.5 with FCCP pretreatment.",
+      "null_outcome": "FCCP-primed healthy cells remain resistant to CBD (<20% apoptosis), indicating \u0394\u03a8m baseline is not the primary selectivity determinant; other factors (e.g., VDAC1 expression, lipid composition) dominate."
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF VDAC1's voltage-dependent gating renders it already partially closed at \u2212180 mV (healthy cell potential), THEN CBD (11 \u00b5M) will reduce single-channel conductance by \u226415% at \u2212180 mV clamped potential versus \u226550% reduction at \u2212120 mV. The voltage-gating-deficient mutant E73Q-VDAC1 will show equivalent CBD-induced conductance reduction at both potentials, and healthy cells expressing E73Q-VDAC1 (replacing WT) will become sensitized to CBD.",
+      "protocol": "",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": [],
+      "expected_outcome": "",
+      "null_outcome": ""
+    }
+  ],
+  "budget": {
+    "s1_calls": 5,
+    "s2_calls": 0,
+    "verify_calls": 5,
+    "gate_calls": 1,
+    "s4_calls": 1,
+    "s5_calls": 0,
+    "total_calls": 12,
+    "budget_target": "92-142 calls"
+  },
+  "audit_trail": {
+    "session_seed": 1770763326,
+    "s2_rounds": [],
+    "s3_gate": {
+      "stage": "S3",
+      "passed": true,
+      "convergence_score": 0.9101,
+      "convergence_threshold": 0.85,
+      "convergence_pass": true,
+      "jaccard": 0.4986,
+      "jaccard_threshold": 0.85,
+      "jaccard_pass": false,
+      "type_01_ratio": 0.7368,
+      "type_01_threshold": 0.65,
+      "type_pass": true,
+      "cosine": 0.9101,
+      "jsd": 0.2834,
+      "kappa": 0.9311,
+      "type_distribution": {
+        "0": 0.42105263157894735,
+        "1": 0.3157894736842105,
+        "2": 0.10526315789473684,
+        "3": 0.15789473684210525
+      }
+    },
+    "final_claims": [
+      {
+        "statement": "CBD-VDAC1 binding shifts the channel toward a closed/low-conductance state, reducing \u0394\u03a8m by ~20\u201330 mV. Cancer cells (\u2212120 mV \u2192 ~\u221295 mV) cross the apoptotic threshold; healthy cells (\u2212180 mV \u2192 ~\u2212155 mV) remain viable.",
+        "type": 1,
+        "confidence": 0.65,
+        "mechanism": "VDAC1 closure restricts ATP/ADP and respiratory substrate exchange, collapsing the proton gradient partially; the nonlinear relationship between \u0394\u03a8m and cytochrome c release means crossing ~\u2212100 mV triggers mPTP opening.",
+        "falsifiable_by": "Measuring \u0394\u03a8m with JC-1 in VDAC1-knockout cancer cells treated with CBD \u2014 if cytotoxicity persists equally, VDAC1 is not the primary mediator.",
+        "model": "claude"
+      },
+      {
+        "statement": "TRPV1/2 activation at lower CBD concentrations (Kd 2\u20133.7 \u00b5M) creates a Ca\u00b2\u207a priming phase that sensitizes mitochondria before VDAC1 saturation at ~11 \u00b5M, producing a two-stage dose-response curve.",
+        "type": 1,
+        "confidence": 0.6,
+        "mechanism": "Cytosolic Ca\u00b2\u207a elevation drives mitochondrial Ca\u00b2\u207a uptake via MCU, lowering the mPTP opening threshold and amplifying the \u0394\u03a8m collapse when VDAC1 is subsequently engaged.",
+        "falsifiable_by": "CBD dose-response in TRPV1/2 double-knockout cells should show a rightward shift in IC50 and loss of the biphasic killing curve; ruthenium red (MCU blocker) should partially rescue.",
+        "model": "claude"
+      },
+      {
+        "statement": "The selectivity is fundamentally a threshold phenomenon driven by three converging vulnerabilities in cancer cells: depolarized \u0394\u03a8m, elevated baseline ROS (0.45 vs ~0.15 relative), and altered VDAC1 expression/oligomerization state.",
+        "type": 1,
+        "confidence": 0.7,
+        "mechanism": "Each factor alone is insufficient; the combination places cancer mitochondria near a catastrophic tipping point where CBD-induced VDAC1 modulation triggers irreversible mPTP opening, cytochrome c release, and ROS-mediated amplification loops.",
+        "falsifiable_by": "Artificially depolarizing healthy cell mitochondria (e.g., low-dose FCCP to \u2212120 mV) should sensitize them to CBD-induced apoptosis, eliminating selectivity.",
+        "model": "claude"
+      },
+      {
+        "statement": "(investigating singular thread):** VDAC1 is voltage-gated, adopting lower conductance at high negative potentials (\u2212180 mV). In healthy cells, VDAC1 may already be partially closed at baseline, meaning CBD binding produces less additional functional change than in cancer cells where VDAC1 is more open at \u2212120 mV.",
+        "type": 2,
+        "confidence": 0.45,
+        "mechanism": "VDAC1's bell-shaped conductance-voltage relationship means it is maximally open near 0 mV transmembrane potential; at \u2212180 mV it is already in a low-conductance state, so CBD-induced closure is functionally redundant.",
+        "falsifiable_by": "Single-channel electrophysiology of reconstituted VDAC1 \u00b1 CBD at clamped potentials of \u2212120 mV vs \u2212180 mV should show differential conductance change magnitude. \u2500\u2500\u2500",
+        "model": "claude"
+      },
+      {
+        "statement": "1:** CBD-induced VDAC1 closure depolarizes \u0394\u03a8m by ~20\u201330 mV, pushing cancer cells (-120 mV \u2192 ~-90 mV) past the apoptotic threshold (-100 mV) while healthy cells (-180 mV \u2192 ~-150 mV) retain sufficient \u0394\u03a8m for survival.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "VDAC1 closure reduces metabolite exchange, collapsing \u0394\u03a8m and triggering cytochrome c release in depolarized mitochondria.",
+        "falsifiable_by": "If CBD fails to depolarize cancer \u0394\u03a8m by \u226520 mV, or if healthy cells (-180 mV) show apoptosis at 11 \u00b5M CBD.",
+        "model": "mistral"
+      },
+      {
+        "statement": "2:** Baseline ROS (0.45 relative in cancer) amplifies CBD-VDAC1-induced oxidative stress, as VDAC1 disruption further increases ROS production, exceeding the apoptotic threshold in cancer but not healthy cells.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "VDAC1 closure impairs electron transport chain efficiency, increasing ROS; cancer cells\u2019 elevated baseline ROS lowers their tolerance to additional oxidative stress.",
+        "falsifiable_by": "If ROS scavengers (e.g., NAC) fail to rescue CBD-treated cancer cells, or if healthy cells with artificially elevated ROS (e.g., via rotenone) become sensitized to CBD.",
+        "model": "mistral"
+      },
+      {
+        "statement": "3:** TRPV1/TRPV2-mediated Ca\u00b2\u207a influx at 2\u20134 \u00b5M CBD primes mitochondria for VDAC1-mediated apoptosis by inducing Ca\u00b2\u207a overload, lowering the effective CBD concentration needed for VDAC1 saturation (11 \u00b5M).",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "Ca\u00b2\u207a overload sensitizes the mitochondrial permeability transition pore (mPTP), making VDAC1 disruption more lethal at sub-saturating CBD concentrations.",
+        "falsifiable_by": "If TRPV1/TRPV2 antagonists (e.g., capsazepine) fail to reduce CBD cytotoxicity in cancer cells, or if Ca\u00b2\u207a chelators (e.g., BAPTA) rescue cells.",
+        "model": "mistral"
+      },
+      {
+        "statement": "4 (SINGULAR THREAD EXPLORATION):** Healthy cells\u2019 hyperpolarized \u0394\u03a8m (-180 mV) induces VDAC1 closure via voltage-gating, protecting them from CBD-induced disruption, while cancer cells\u2019 depolarized \u0394\u03a8m (-120 mV) keeps VDAC1 open and vulnerable.",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "VDAC1\u2019s voltage sensor closes the channel at high negative potentials (-180 mV), reducing CBD binding sites or conductance changes.",
+        "falsifiable_by": "If VDAC1 voltage-gating mutants (e.g., E73Q) fail to protect healthy cells from CBD, or if artificially depolarizing healthy cells (-120 mV) sensitizes them to CBD. --- \u2500\u2500\u2500",
+        "model": "mistral"
+      },
+      {
+        "statement": "Cancer mitochondria maintain depolarized \u0394\u03a8m \u2248-120mV vs healthy \u2248-180mV, positioning cancer closer to apoptotic thresholds.",
+        "type": 0,
+        "confidence": 1.0,
+        "mechanism": "Warburg effect and defective ETC elevate proton leak in cancer, reducing \u0394\u03a8m magnitude.",
+        "falsifiable_by": "TMRE staining showing cancer \u0394\u03a8m <-150mV across 10+ cell lines.",
+        "model": "grok"
+      },
+      {
+        "statement": "Elevated baseline ROS (0.45 rel higher in cancer) synergizes with CBD-VDAC1 to exceed peroxide threshold for mPTP opening.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "VDAC1 partial closure traps electrons in ETC, boosting O\u2082\u2022\u207b \u2192 H\u2082O\u2082; cancer's high basal H\u2082O\u2082 tips to lipid peroxidation/cyt c release.",
+        "falsifiable_by": "NAC pretreatment abolishing CBD selectivity (viability assays).",
+        "model": "grok"
+      },
+      {
+        "statement": "CBD (11\u03bcM) binds VDAC1, shifting to low-conductance state, reducing ATP import/ADP export, causing partial \u0394\u03a8m depolarization (~10-20mV drop).",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "VDAC1 blockade starves OXPHOS of ADP, hyperpolarizing briefly then collapsing via reverse ATP synthase/ROS.",
+        "falsifiable_by": "VDAC1 KO cells resistant to CBD-induced \u0394\u03a8m loss (TMRE flow cytometry).",
+        "model": "grok"
+      },
+      {
+        "statement": "Healthy cell hyperpolarization (-180mV) protects via VDAC1 voltage-gating (closure threshold ~|-140|mV), limiting CBD access/effect vs open state in cancer (-120mV).",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "High |\u0394\u03a8m| induces VDAC1 conformational close, sterically hindering CBD binding or stabilizing against modulation.",
+        "falsifiable_by": "VDAC1 mutants locked-open showing healthy cell sensitivity at 11\u03bcM CBD.",
+        "model": "grok"
+      },
+      {
+        "statement": "TRPV1/2 activation (2-3.7\u03bcM CBD) causes Ca\u00b2\u207a influx priming mito Ca overload, reducing VDAC1 threshold by 2-3x via mPTP sensitization.",
+        "type": 1,
+        "confidence": 0.7,
+        "mechanism": "Cytosolic Ca\u00b2\u207a uptake via MCU overloads mito Ca\u00b2\u207a, synergizing VDAC1-ROS for selective pore opening in depolarized cancer mito.",
+        "falsifiable_by": "TRPV antagonists (e.g., capsazepine) shifting EC50 >11\u03bcM in cancer cells.",
+        "model": "grok"
+      },
+      {
+        "statement": "Quantitative prediction: CBD 10\u03bcM drops cancer \u0394\u03a8m by >20mV (to <-100mV, apoptotic), healthy by <10mV (stays >-160mV).",
+        "type": 3,
+        "confidence": 0.55,
+        "mechanism": "Fractional VDAC1 occupancy (f= [CBD]/(Kd+[CBD]) \u22480.5) yields conductance drop scaled by baseline |\u0394\u03a8m| dependency.",
+        "falsifiable_by": "Dose-response TMRE showing equivalent \u0394 drops or healthy crossing -100mV first. \u2500\u2500\u2500",
+        "model": "grok"
+      },
+      {
+        "statement": "Selectivity arises because cancer cells exist in a \"pre-apoptotic\" state; CBD's interaction with VDAC1 is the final push over a cliff they are already near, while healthy cells have a large energetic buffer.",
+        "type": 1,
+        "confidence": 0.9,
+        "mechanism": "The combination of depolarized \u0394\u03a8m (-120 mV) and high ROS in cancer cells means that the additional VDAC1-mediated metabolic restriction and ROS production induced by CBD is sufficient to trigger the mitochondrial permeability transition pore (mPTP) and apoptosis.",
+        "falsifiable_by": "Experimentally depolarizing healthy cells to -120 mV (e.g., with a protonophore) and finding they are still resistant to CBD-induced cytotoxicity at concentrations that kill cancer cells.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The hyperpolarized state of healthy mitochondria (-180 mV) actively reduces the efficacy of CBD's action on VDAC1, providing a protective mechanism beyond a simple energetic buffer.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "beyond a simple energetic buffer.",
+        "falsifiable_by": "In vitro patch-clamp studies on isolated mitochondria showing that the CBD-VDAC1 Kd is independent of the transmembrane potential.",
+        "model": "gemini"
+      },
+      {
+        "statement": "CBD cytotoxicity follows a kinetically-ordered, two-hit model determined by binding affinities, where low-dose (2-4 \u00b5M) TRPV activation primes the cell for a high-dose (11 \u00b5M) VDAC1-mediated kill.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "Initial TRPV1/2 activation causes Ca\u00b2\u207a influx and mitochondrial Ca\u00b2\u207a uptake, which partially depolarizes \u0394\u03a8m and sensitizes the mPTP, effectively lowering the threshold for the subsequent, VDAC1-mediated apoptotic signal.",
+        "falsifiable_by": "Showing that co-treatment with a TRPV antagonist eliminates the sensitizing effect and shifts the CBD dose-response curve for apoptosis significantly to the right, making the EC50 for killing >> 11 \u00b5M. \u2500\u2500\u2500",
+        "model": "gemini"
+      },
+      {
+        "statement": "CBD-induced VDAC1 closure/alteration creates a lethal bioenergetic-ROS crisis only in cancer cells because their already-depolarized \u0394\u03a8m (-120 mV) is closer to the apoptotic permeability transition threshold (~ -100 mV), while healthy mitochondria (-180 mV) have a large functional buffer.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "Partial VDAC1 closure reduces ATP/ADP exchange, further depolarizing \u0394\u03a8m and increasing ROS; in cancer cells, this pushes \u0394\u03a8m past the threshold for mPTP opening and cytochrome c release.",
+        "falsifiable_by": "Demonstrating that cancer cells with artificially hyperpolarized mitochondria (-180 mV) become resistant to CBD-VDAC1 cytotoxicity at equivalent ROS levels.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "The elevated baseline ROS in cancer cells (0.45 rel.) is not just a permissive factor but an active amplifier; CBD-VDAC1 interaction induces a *superlinear* increase in mitochondrial ROS, causing a rapid breach of the oxidative damage threshold specifically in cancer cells.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "VDAC1 modulation disrupts electron transport chain (ETC) complex proximity or function, causing a spike in ROS that, when added to a high baseline, triggers lipid peroxidation and mitochondrial membrane damage beyond repair capacity.",
+        "falsifiable_by": "Measuring real-time mitochondrial ROS in both cell types during CBD exposure and showing the increase is linear (not superlinear) or that healthy cells experience a greater relative increase.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "TRPV1/2 activation by lower CBD concentrations (2-4 \u00b5M) primes cancer cells for VDAC1-mediated killing (Kd ~11 \u00b5M) via a calcium-dependent sensitization of the mitochondrial matrix, lowering the effective concentration needed for \u0394\u03a8m collapse.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "Early Ca\u00b2\u207a influx via TRPVs is taken up by mitochondria, lowering the threshold for mPTP induction, meaning subsequent VDAC1 modulation triggers apoptosis at a lower level of \u0394\u03a8m disturbance.",
+        "falsifiable_by": "Showing that TRPV1/2 knockout or blockade does not alter the dose-response curve for CBD-induced cytochrome c release or cell death in cancer models.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "(Investigating Singular Thread):** The hyperpolarized state of healthy cell mitochondria (-180 mV) promotes voltage-dependent closure of VDAC1, intrinsically limiting the channel's availability for CBD binding and subsequent pathological modulation.",
+        "type": 3,
+        "confidence": 0.5,
+        "mechanism": "VDAC1 gating is known to be voltage-sensitive; extreme negative potentials favor a closed state, potentially reducing the conformational landscape CBD can bind to, adding a physical selectivity filter.",
+        "falsifiable_by": "In vitro electrophysiology showing identical CBD-induced conductance changes in VDAC1 reconstituted in bilayers held at -120 mV vs. -180 mV. \u2500\u2500\u2500 **",
+        "model": "deepseek"
+      }
+    ]
+  }
+}

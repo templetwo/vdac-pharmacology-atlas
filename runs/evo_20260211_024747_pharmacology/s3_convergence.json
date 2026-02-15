@@ -1,0 +1,175 @@
+{
+  "stage": "S3",
+  "passed": false,
+  "convergence_score": 0.811,
+  "convergence_threshold": 0.85,
+  "convergence_pass": false,
+  "jaccard": 0.3257,
+  "jaccard_threshold": 0.85,
+  "jaccard_pass": false,
+  "type_01_ratio": 0.5294,
+  "type_01_threshold": 0.75,
+  "type_pass": false,
+  "cosine": 0.811,
+  "jsd": 0.2492,
+  "kappa": 0.9081,
+  "type_distribution": {
+    "0": 0.0,
+    "1": 0.5294117647058824,
+    "2": 0.23529411764705882,
+    "3": 0.23529411764705882
+  },
+  "divergence_map": {
+    "total_unique_claims": 19,
+    "most_divergent": [
+      {
+        "statement": "At \u22642.5 mg/day oral THC, peak brain CB1 occupancy reaches ~15-25%, sufficient for G-protein signaling (EC50 ~5-10 nM) but below \u03b2-arrestin recruitment threshold (EC50 ~50-100 nM for \u03949-THC), preserving receptor surface expression.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.72
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "Low-dose THC augments rather than displaces endocannabinoid tone because at 15-25% occupancy, sufficient unoccupied CB1 remains for 2-AG/AEA signaling, and THC may inhibit FAAH at low concentrations (Ki ~5-15 \u03bcM range), mildly elevating AEA.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.55
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "The tolerance crossover point is governed by first-order kinetics: therapeutic window persists while k_recycle + k_synthesis > k_int \u00d7 fractional_occupancy. For CB1, k_recycle \u2248 0.02 min\u207b\u00b9, k_int \u2248 0.05 min\u207b\u00b9 at full occupancy. Crossover occurs at ~40-50% sustained occupancy, corresponding to ~10-15 mg/day chronic dosing.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          3
+        ],
+        "confidences": [
+          0.45
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "HPA axis recalibration via PVN CB1 is a primary mediator of sustained wellbeing, reducing tonic CRH release by ~20-35% over 2-4 weeks, measurable as decreased morning cortisol AUC.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.62
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "1:** Chronic low-dose THC (\u22642.5 mg/day) improves wellbeing via *biphasic CB1 signaling*: G-protein activation (EC50 ~10 nM) dominates at 10\u201330% occupancy, while \u03b2-arrestin recruitment (EC50 >100 nM) is avoided, preserving cAMP/PKA tone.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.85
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "2:** The therapeutic index (TD50/ED50) for wellbeing vs. tolerance exceeds 10, with tolerance emerging at ~25 mg/day due to CB1 internalization exceeding recycling/synthesis rates (k_int > k_rec).",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          0
+        ],
+        "confidences": [
+          0.75
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "3:** Sustained wellbeing requires *synergistic 2-AG signaling*: low-dose THC (\u22642.5 mg/day) adds to tonic 2-AG without displacement, while high-dose THC (>10 mg/day) saturates CB1, reducing 2-AG access and upregulating MAGL.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.7
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "4:** HPA axis recalibration via CB1 in PVN/amygdala involves *glutamatergic constraint*: tonic CB1 activation reduces excitatory drive to CRH neurons, lowering cortisol set-point over 2\u20134 weeks.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.65
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "5 (SINGULAR):** The \"critical threshold\" for tolerance is a *kinetic inflection point* where THC-driven CB1 internalization (k_int) equals receptor recycling + de novo synthesis (k_rec + k_syn), occurring at ~30% occupancy.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          3
+        ],
+        "confidences": [
+          0.6
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "CB1 occupancy by chronic low-dose THC (2.5mg/day, steady-state plasma ~2ng/mL or 6nM) is 10-25% (occupancy = [THC]/( [THC] + Kd=40nM), Hill n=1), enhancing 2-AG efficacy without saturating.",
+        "models_supporting": [
+          "grok"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.82
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      }
+    ],
+    "models_present": [
+      "claude",
+      "mistral",
+      "grok",
+      "gemini",
+      "deepseek"
+    ]
+  },
+  "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+}

@@ -1,0 +1,196 @@
+{
+  "parsed": [
+    {
+      "model": "claude",
+      "raw": "\n\n\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n\n**Sub-questions:**\n1. Does the Chol/CL ratio quantitatively govern the honeycomb\u2194dispersed equilibrium of VDAC1, and can this be parameterized as a biophysical threshold function?\n2. Does HK-II occupancy on VDAC1 mechanistically couple to lipid microdomain organization (i.e., does HK-II shield cardiolipin from disrupting arrays)?\n3. Can lipophilic drugs alter VDAC supramolecular state via membrane order perturbation without direct VDAC binding?\n4. Is the honeycomb-to-dispersed transition the rate-limiting irreversible step for VDAC oligomerization-mediated apoptosis?\n\n**Key variables:** Chol/CL ratio, f_HKII (fraction VDAC bound to HK-II), f_BclxL, membrane order parameter, VDAC lattice fraction vs. monomer fraction, oligomerization rate, cytochrome c release kinetics.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\nCLAIM: The Chol/CL ratio is a primary determinant of the honeycomb-vs-dispersed VDAC1 equilibrium in reconstituted and native OMM.\nTYPE: 1\nCONFIDENCE: 0.78\nMECHANISM: Cholesterol increases membrane thickness and order stabilizing tight VDAC-VDAC lateral packing, while cardiolipin's conical geometry and negative curvature stress destabilize hexagonal arrays.\nFALSIFIABLE BY: AFM imaging showing honeycomb persistence at high CL/low Chol ratios, or no dose-dependent array disruption with CL titration.\n\nCLAIM: The proposed threshold equation Threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL) is a plausible phenomenological model but is not yet experimentally validated as written \u2014 the multiplicative separability of protein and lipid terms is an assumption.\nTYPE: 3\nCONFIDENCE: 0.40\nMECHANISM: The equation assumes independent modular contributions of HK-II displacement, Bcl-xL removal, and lipid composition, which likely exhibit non-linear coupling.\nFALSIFIABLE BY: Systematic measurement of apoptotic threshold across factorial combinations of f_HKII, f_BclxL, and Chol/CL showing non-separable interaction terms.\n\nCLAIM: HK-II displacement unmasks VDAC N-terminal and membrane-proximal regions that preferentially recruit or stabilize cardiolipin, thereby locally shifting the lipid environment toward array disruption.\nTYPE: 2\nCONFIDENCE: 0.55\nMECHANISM: HK-II's cytoplasmic footprint on VDAC1 occludes lipid-protein interfaces; removal exposes surfaces with CL affinity, nucleating CL-enriched microdomains that disassemble honeycomb packing.\nFALSIFIABLE BY: MD simulations or CL-binding assays showing no difference in local CL enrichment \u00b1 HK-II; AFM showing HK-II removal does not change array density.\n\nCLAIM: Lipophilic drugs (CBD, statins) can alter VDAC supramolecular organization through membrane order perturbation independent of direct VDAC binding, constituting a genuine but uncharacterized pharmacological mechanism.\nTYPE: 3\nCONFIDENCE: 0.50\nMECHANISM: CBD (logP 6.3) partitions into OMM, reduces local membrane order and cholesterol packing efficiency, effectively lowering the functional Chol/CL ratio and shifting VDAC toward dispersed states.\nFALSIFIABLE BY: AFM of VDAC arrays in membranes \u00b1 CBD showing no change in lattice density; or showing all effects are abolished by VDAC point mutations that block CBD binding.\n\nCLAIM: VDAC oligomerization into cytochrome c-releasing pores occurs exclusively from the dispersed (non-honeycomb) state, making array disassembly the rate-limiting step and physical point-of-no-return.\nTYPE: 2\nCONFIDENCE: 0.60\nMECHANISM: Honeycomb geometry locks VDAC into non-oligomeric interfaces; only freed monomers can reorient into the distinct oligomeric contacts required for pore formation.\nFALSIFIABLE BY: Evidence of oligomeric/apoptotic VDAC pores forming directly within intact honeycomb arrays; or kinetic data showing oligomerization is faster than array dissolution.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n\n- No quantitative Chol/CL phase diagram for VDAC array stability exists in native OMM.\n- The oligomeric interface of apoptotic VDAC pores is structurally unresolved \u2014 we don't know if it's geometrically incompatible with honeycomb contacts.\n- Local CBD concentration in OMM vs. bulk is unknown; partition coefficients into mitochondrial membranes specifically are unmeasured.\n- Whether",
+      "claims": [
+        {
+          "statement": "The Chol/CL ratio is a primary determinant of the honeycomb-vs-dispersed VDAC1 equilibrium in reconstituted and native OMM.",
+          "type": 1,
+          "confidence": 0.78,
+          "mechanism": "Cholesterol increases membrane thickness and order stabilizing tight VDAC-VDAC lateral packing, while cardiolipin's conical geometry and negative curvature stress destabilize hexagonal arrays.",
+          "falsifiable_by": "AFM imaging showing honeycomb persistence at high CL/low Chol ratios, or no dose-dependent array disruption with CL titration."
+        },
+        {
+          "statement": "The proposed threshold equation Threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL) is a plausible phenomenological model but is not yet experimentally validated as written \u2014 the multiplicative separability of protein and lipid terms is an assumption.",
+          "type": 3,
+          "confidence": 0.4,
+          "mechanism": "The equation assumes independent modular contributions of HK-II displacement, Bcl-xL removal, and lipid composition, which likely exhibit non-linear coupling.",
+          "falsifiable_by": "Systematic measurement of apoptotic threshold across factorial combinations of f_HKII, f_BclxL, and Chol/CL showing non-separable interaction terms."
+        },
+        {
+          "statement": "HK-II displacement unmasks VDAC N-terminal and membrane-proximal regions that preferentially recruit or stabilize cardiolipin, thereby locally shifting the lipid environment toward array disruption.",
+          "type": 2,
+          "confidence": 0.55,
+          "mechanism": "HK-II's cytoplasmic footprint on VDAC1 occludes lipid-protein interfaces; removal exposes surfaces with CL affinity, nucleating CL-enriched microdomains that disassemble honeycomb packing.",
+          "falsifiable_by": "MD simulations or CL-binding assays showing no difference in local CL enrichment \u00b1 HK-II; AFM showing HK-II removal does not change array density."
+        },
+        {
+          "statement": "Lipophilic drugs (CBD, statins) can alter VDAC supramolecular organization through membrane order perturbation independent of direct VDAC binding, constituting a genuine but uncharacterized pharmacological mechanism.",
+          "type": 3,
+          "confidence": 0.5,
+          "mechanism": ".",
+          "falsifiable_by": "AFM of VDAC arrays in membranes \u00b1 CBD showing no change in lattice density; or showing all effects are abolished by VDAC point mutations that block CBD binding."
+        },
+        {
+          "statement": "VDAC oligomerization into cytochrome c-releasing pores occurs exclusively from the dispersed (non-honeycomb) state, making array disassembly the rate-limiting step and physical point-of-no-return.",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "Honeycomb geometry locks VDAC into non-oligomeric interfaces; only freed monomers can reorient into the distinct oligomeric contacts required for pore formation.",
+          "falsifiable_by": "Evidence of oligomeric/apoptotic VDAC pores forming directly within intact honeycomb arrays; or kinetic data showing oligomerization is faster than array dissolution. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "mistral",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n**Sub-questions:**\n1. Does the Chol/CL ratio in the OMM directly control VDAC1 supramolecular state (honeycomb vs. dispersed), and is this the biophysical basis of the apoptotic threshold equation?\n2. Does HK-II displacement trigger honeycomb disassembly by exposing cardiolipin microdomains, enabling VDAC1 oligomerization?\n3. Can lipophilic drugs (e.g., CBD, statins) alter VDAC1 organization via membrane order changes, independent of direct binding?\n4. Is the honeycomb-to-dispersed transition the physical \"point of no return\" for VDAC-mediated apoptosis, making membrane reorganization rate-limiting?\n\n**Key variables:**\n- Chol/CL ratio \u2192 VDAC1 supramolecular state (f_HK: honeycomb fraction)\n- HK-II binding \u2192 cardiolipin exposure \u2192 VDAC1 dispersion\n- Drug logP \u2192 membrane order \u2192 VDAC1 state\n- Apoptotic threshold (K) \u2192 f_HK, f_BclxL, Chol/CL\n\n---\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\n**CLAIM:** The Chol/CL ratio in the OMM physically determines the fraction of VDAC1 in honeycomb vs. dispersed states, and this ratio is mechanistically embedded in the apoptotic threshold equation.\n**TYPE:** 1 (supported by AFM/MD data)\n**CONFIDENCE:** 0.85\n**MECHANISM:** Cholesterol stabilizes honeycomb arrays via lipid packing, while cardiolipin disrupts them by introducing negative curvature, shifting VDAC1 to oligomerization-competent monomers.\n**FALSIFIABLE BY:** Observing VDAC1 honeycomb persistence in high-CL membranes *without* cholesterol, or failure of the threshold equation to predict apoptosis in cells with experimentally clamped Chol/CL ratios.\n\n**CLAIM:** HK-II displacement from VDAC1 promotes honeycomb disassembly by unmasking cardiolipin microdomains, converting protected arrays into oligomerization-competent monomers.\n**TYPE:** 2 (plausible but indirect evidence)\n**CONFIDENCE:** 0.70\n**MECHANISM:** HK-II binding sterically shields cardiolipin; its removal exposes cardiolipin, which disrupts honeycombs and frees VDAC1 for oligomerization.\n**FALSIFIABLE BY:** HK-II mutants that bind VDAC1 but do not mask cardiolipin failing to prevent honeycomb disassembly, or cardiolipin depletion blocking HK-II displacement effects.\n\n**CLAIM:** Lipophilic drugs (e.g., CBD, statins) alter VDAC1 supramolecular organization by changing local membrane order, independent of direct protein binding.\n**TYPE:** 3 (speculative)\n**CONFIDENCE:** 0.60\n**MECHANISM:** High-logP drugs partition into the OMM, altering lipid packing/order and indirectly destabilizing honeycomb arrays via membrane fluidity changes.\n**FALSIFIABLE BY:** Drugs with similar logP but no membrane-ordering effects failing to alter VDAC1 organization, or direct binding (e.g., via cryo-EM) being necessary for observed effects.\n\n**CLAIM:** The honeycomb-to-dispersed transition is the physical \"point of no return\" for VDAC-mediated apoptosis, with membrane reorganization as the rate-limiting step.\n**TYPE:** 2 (emerging hypothesis)\n**CONFIDENCE:** 0.75\n**MECHANISM:** Oligomerization (and thus apoptosis) requires dispersed VDAC1 monomers; honeycomb arrays are kinetically trapped and non-oligomerization-competent.\n**FALSIFIABLE BY:** Observing apoptosis initiation from honeycomb arrays (e.g., via forced oligomerization in AFM), or drugs that bypass membrane reorganization to trigger apoptosis.\n\n---\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n1. **Causal direction:** Does Chol/CL ratio *drive* VDAC1 state, or is it a correlative readout of other lipid-protein interactions?\n2. **Drug specificity:** Do CBD/statins act via membrane order, or do they bind VDAC1 directly at therapeutic concentrations (e.g., CBD at 1\u201310 \u00b5M vs. VDAC1 Kd = 11 \u00b5M)?\n3. **Kinetics:** What is the timescale of honeycomb disassembly vs. oligomerization? Is membrane reorganization truly rate-limiting?\n4. **Spatial heterogeneity:** Are cardiolipin-rich contact sites the sole loci of VDAC1 dispersion, or can it occur elsewhere in the OMM?\n\n---\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP \u2500\u2500\u2500\n**Experiment:** Use super-resolution microscopy (e.g., STORM) to quantify VDAC1 supramolecular state (honeycomb vs. dispersed) in live cells with titrated Chol/CL ratios, \u00b1HK-II displacement, \u00b1CBD/statin treatment, while monitoring apoptosis onset. Correlate with the threshold equation.",
+      "claims": [
+        {
+          "statement": "The Chol/CL ratio in the OMM physically determines the fraction of VDAC1 in honeycomb vs. dispersed states, and this ratio is mechanistically embedded in the apoptotic threshold equation.",
+          "type": 1,
+          "confidence": 0.85,
+          "mechanism": "Cholesterol stabilizes honeycomb arrays via lipid packing, while cardiolipin disrupts them by introducing negative curvature, shifting VDAC1 to oligomerization-competent monomers.",
+          "falsifiable_by": "Observing VDAC1 honeycomb persistence in high-CL membranes *without* cholesterol, or failure of the threshold equation to predict apoptosis in cells with experimentally clamped Chol/CL ratios."
+        },
+        {
+          "statement": "HK-II displacement from VDAC1 promotes honeycomb disassembly by unmasking cardiolipin microdomains, converting protected arrays into oligomerization-competent monomers.",
+          "type": 2,
+          "confidence": 0.7,
+          "mechanism": "HK-II binding sterically shields cardiolipin; its removal exposes cardiolipin, which disrupts honeycombs and frees VDAC1 for oligomerization.",
+          "falsifiable_by": "HK-II mutants that bind VDAC1 but do not mask cardiolipin failing to prevent honeycomb disassembly, or cardiolipin depletion blocking HK-II displacement effects."
+        },
+        {
+          "statement": "Lipophilic drugs (e.g., CBD, statins) alter VDAC1 supramolecular organization by changing local membrane order, independent of direct protein binding.",
+          "type": 3,
+          "confidence": 0.6,
+          "mechanism": "High-logP drugs partition into the OMM, altering lipid packing/order and indirectly destabilizing honeycomb arrays via membrane fluidity changes.",
+          "falsifiable_by": "Drugs with similar logP but no membrane-ordering effects failing to alter VDAC1 organization, or direct binding (e.g., via cryo-EM) being necessary for observed effects."
+        },
+        {
+          "statement": "The honeycomb-to-dispersed transition is the physical \"point of no return\" for VDAC-mediated apoptosis, with membrane reorganization as the rate-limiting step.",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "Oligomerization (and thus apoptosis) requires dispersed VDAC1 monomers; honeycomb arrays are kinetically trapped and non-oligomerization-competent.",
+          "falsifiable_by": "Observing apoptosis initiation from honeycomb arrays (e.g., via forced oligomerization in AFM), or drugs that bypass membrane reorganization to trigger apoptosis. --- \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "grok",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\nSub-questions:  \n1. Does Chol/CL ratio dictate VDAC1 honeycomb fraction (f_h) vs. dispersed state, underpinning apoptotic threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL)?  \n2. Does HK-II displacement trigger honeycomb disassembly via CL unmasking, enabling monomer oligomerization?  \n3. Can lipophilic drugs (e.g., CBD logP 6.3) remodel VDAC assemblies indirectly via membrane order changes?  \n4. Is honeycomb\u2192dispersed transition the rate-limiting apoptotic \"point of no return,\" restricting oligomerization to dispersed VDAC?  \n\nKey variables: Chol/CL (stabilizes f_h), CL microdomains (disrupts f_h), f_HKII/f_BclxL (modulate threshold), logP/drug concentration (alter order), f_h (fraction honeycomb-protected). Relationships: High Chol/CL + HKII \u2192 f_h \u2191 \u2192 oligomerization \u2193; CL/HK-II loss \u2192 f_h \u2193 \u2192 apoptosis \u2191.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: Chol/CL ratio physically determines VDAC1 fraction in honeycomb (protected) vs. dispersed (oligomerization-competent) states, forming biophysical basis of threshold equation.  \nTYPE: 2  \nCONFIDENCE: 0.85  \nMECHANISM: Cholesterol/PE rigidify OMM domains stabilizing 2D honeycomb crystals (AFM data), while CL fluidizes/promotes disassembly to monomers at contact sites.  \nFALSIFIABLE BY: AFM on OMM liposomes varying Chol/CL showing no correlation between ratio and f_h, or MD simulations contradicting stability.  \n\nCLAIM: HK-II displacement from VDAC1 unmasks CL microdomains, promoting honeycomb disassembly to oligomerization-competent monomers.  \nTYPE: 3  \nCONFIDENCE: 0.65  \nMECHANISM: HK-II shields CL-rich domains (stabilizing arrays); release exposes CL, driving lipid phase separation and array breakup per 2024-2025 studies.  \nFALSIFIABLE BY: HK-II knockout mitochondria retaining honeycomb under pro-apoptotic stimuli, or FRET showing no CL exposure post-displacement.  \n\nCLAIM: Lipophilic drugs like CBD (logP 6.3; Kd=11\u03bcM) or statins (logP 4-5) alter VDAC organization by increasing OMM order/fluidity independent of direct binding.  \nTYPE: 3  \nCONFIDENCE: 0.70  \nMECHANISM: High logP drugs partition into OMM, mimicking cholesterol to stabilize honeycomb or disrupt CL domains via local packing changes (MD-predictable).  \nFALSIFIABLE BY: VDAC-binding mutants insensitive to drug but retaining organization changes, or GUV-AFM showing no assembly shift at [CBD]=1-10\u03bcM without Kd interaction.  \n\nCLAIM: Honeycomb\u2192dispersed transition instantiates apoptotic point of no return, with oligomerization restricted to dispersed monomers (membrane reorganization rate-limiting).  \nTYPE: 2  \nCONFIDENCE: 0.75  \nMECHANISM: Dense arrays sterically hinder protomer rearrangement needed for hexameric pores; dispersion at CL sites enables kinetics (AFM/MD evidence).  \nFALSIFIABLE BY: Oligomerization in intact honeycomb via cross-linking or mutagenesis, or live-cell super-res showing pores in undisrupted arrays.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\nMissing: Quantitative f_h vs. Chol/CL in native OMM (exact K_d or partition coeffs); HK-II:CL interaction energies from MD; CBD membrane partitioning Kd in OMM liposomes at therapeutic [1-10\u03bcM]; BclxL effects on assemblies (unmentioned); in vivo apoptosis rates vs. dynamic f_h (FRAP/super-res). Threshold equation validation (empirical K?). PK priors underconstrain OMM exposure (CBD bioavailability 6-19%, t1/2 18-32h \u2192 steady-state?). Would shift claims with direct OMM lipidomics + drug-AFM.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nAFM/FRAP on live mitochondria +/- CBD (1-10\u03bcM) measuring f_h dynamics pre/post HK-II displacement.",
+      "claims": [
+        {
+          "statement": "Chol/CL ratio physically determines VDAC1 fraction in honeycomb (protected) vs. dispersed (oligomerization-competent) states, forming biophysical basis of threshold equation.",
+          "type": 2,
+          "confidence": 0.85,
+          "mechanism": "Cholesterol/PE rigidify OMM domains stabilizing 2D honeycomb crystals (AFM data), while CL fluidizes/promotes disassembly to monomers at contact sites.",
+          "falsifiable_by": "AFM on OMM liposomes varying Chol/CL showing no correlation between ratio and f_h, or MD simulations contradicting stability."
+        },
+        {
+          "statement": "HK-II displacement from VDAC1 unmasks CL microdomains, promoting honeycomb disassembly to oligomerization-competent monomers.",
+          "type": 3,
+          "confidence": 0.65,
+          "mechanism": "HK-II shields CL-rich domains (stabilizing arrays); release exposes CL, driving lipid phase separation and array breakup per 2024-2025 studies.",
+          "falsifiable_by": "HK-II knockout mitochondria retaining honeycomb under pro-apoptotic stimuli, or FRET showing no CL exposure post-displacement."
+        },
+        {
+          "statement": "Lipophilic drugs like CBD (logP 6.3; Kd=11\u03bcM) or statins (logP 4-5) alter VDAC organization by increasing OMM order/fluidity independent of direct binding.",
+          "type": 3,
+          "confidence": 0.7,
+          "mechanism": "High logP drugs partition into OMM, mimicking cholesterol to stabilize honeycomb or disrupt CL domains via local packing changes (MD-predictable).",
+          "falsifiable_by": "VDAC-binding mutants insensitive to drug but retaining organization changes, or GUV-AFM showing no assembly shift at [CBD]=1-10\u03bcM without Kd interaction."
+        },
+        {
+          "statement": "Honeycomb\u2192dispersed transition instantiates apoptotic point of no return, with oligomerization restricted to dispersed monomers (membrane reorganization rate-limiting).",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "Dense arrays sterically hinder protomer rearrangement needed for hexameric pores; dispersion at CL sites enables kinetics (AFM/MD evidence).",
+          "falsifiable_by": "Oligomerization in intact honeycomb via cross-linking or mutagenesis, or live-cell super-res showing pores in undisrupted arrays. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "gemini",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1.  How does the outer mitochondrial membrane (OMM) lipid composition, specifically the Cholesterol-to-Cardiolipin (Chol/CL) ratio, control the equilibrium between VDAC1 honeycomb arrays and dispersed monomers?\n2.  What is the interplay between VDAC1-binding proteins (HK-II, Bcl-xL) and local lipid microdomains in regulating this structural equilibrium and initiating apoptosis?\n3.  Can highly lipophilic small molecules alter the VDAC1 assembly state indirectly by modifying the physical properties of the OMM, independent of direct protein binding, and does this represent a distinct pharmacological mechanism?\n\nKey variables:\n*   **Independent:** Chol/CL ratio, HK-II binding fraction (f_HKII), Bcl-xL binding fraction (f_BclxL), lipophilic drug concentration.\n*   **Dependent:** VDAC1 assembly state (honeycomb vs. dispersed fraction), VDAC oligomerization rate, apoptotic threshold.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: The OMM Chol/CL ratio is a primary determinant of the apoptotic threshold by physically controlling the fraction of VDAC1 sequestered in apoptosis-resistant honeycomb arrays versus dispersed, oligomerization-competent monomers.\nTYPE: 1\nCONFIDENCE: 0.9\nMECHANISM: Cholesterol stabilizes the ordered lipid environment required for dense honeycomb packing, while cardiolipin's unique conical shape and charge disrupt this order, favoring a dispersed monomeric state.\nFALSIFIABLE BY: Observing no significant change in VDAC1 honeycomb prevalence in reconstituted membranes or in engineered cells where the OMM Chol/CL ratio is varied over a physiological range.\n\nCLAIM: Lipophilic drugs like CBD can trigger VDAC1-mediated apoptosis primarily by altering local membrane fluidity and order, thereby destabilizing cholesterol-rich honeycomb domains, rather than through direct, high-affinity binding to VDAC1.\nTYPE: 2\nCONFIDENCE: 0.75\nMECHANISM: The drug partitions into the OMM, acting as a chaotropic (disordering) agent that lowers the energy barrier for cardiolipin to disrupt VDAC1 arrays, effectively lowering the apoptotic threshold.\nFALSIFIABLE BY: Demonstrating that a hydrophilic CBD analog with an identical VDAC1 Kd (if one could be made) produces an equivalent pro-apoptotic effect, or that CBD fails to alter membrane order at concentrations that induce apoptosis.\n\nCLAIM: The dissociation of HK-II from VDAC1 is a critical sensitizing step that unmasks local cardiolipin pools, initiating the honeycomb-to-dispersed transition and committing the cell to apoptosis.\nTYPE: 2\nCONFIDENCE: 0.7\nMECHANISM: HK-II binding sterically shields or locally sequesters cardiolipin, and its removal exposes VDAC1 to cardiolipin's disruptive effects, triggering disassembly of the protective array.\nFALSIFIABLE BY: High-resolution imaging showing that VDAC1 arrays remain stable after HK-II dissociation in cells where cardiolipin is depleted or its interaction with VDAC1 is blocked.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1.  The kinetics of the honeycomb-to-dispersed transition *in vivo*. Is this a rapid, switch-like event or a slow, graded process?\n2.  The precise stoichiometry of cholesterol, cardiolipin, and PE within the VDAC1 honeycomb lattice versus the surrounding membrane.\n3.  The local concentration and partitioning coefficient of drugs like CBD and statins within the OMM specifically at VDAC-rich contact sites.\n4.  Whether Bcl-family proteins modulate VDAC1 assembly directly or by influencing the local lipid environment themselves.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nUse cryo-electron tomography (cryo-ET) on isolated mitochondria treated with CBD or a CL-synthesis inhibitor to directly visualize VDAC1 array density and organization in a near-native state, correlating structure with function.",
+      "claims": [
+        {
+          "statement": "The OMM Chol/CL ratio is a primary determinant of the apoptotic threshold by physically controlling the fraction of VDAC1 sequestered in apoptosis-resistant honeycomb arrays versus dispersed, oligomerization-competent monomers.",
+          "type": 1,
+          "confidence": 0.9,
+          "mechanism": "Cholesterol stabilizes the ordered lipid environment required for dense honeycomb packing, while cardiolipin's unique conical shape and charge disrupt this order, favoring a dispersed monomeric state.",
+          "falsifiable_by": "Observing no significant change in VDAC1 honeycomb prevalence in reconstituted membranes or in engineered cells where the OMM Chol/CL ratio is varied over a physiological range."
+        },
+        {
+          "statement": "Lipophilic drugs like CBD can trigger VDAC1-mediated apoptosis primarily by altering local membrane fluidity and order, thereby destabilizing cholesterol-rich honeycomb domains, rather than through direct, high-affinity binding to VDAC1.",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "The drug partitions into the OMM, acting as a chaotropic (disordering) agent that lowers the energy barrier for cardiolipin to disrupt VDAC1 arrays, effectively lowering the apoptotic threshold.",
+          "falsifiable_by": "Demonstrating that a hydrophilic CBD analog with an identical VDAC1 Kd (if one could be made) produces an equivalent pro-apoptotic effect, or that CBD fails to alter membrane order at concentrations that induce apoptosis."
+        },
+        {
+          "statement": "The dissociation of HK-II from VDAC1 is a critical sensitizing step that unmasks local cardiolipin pools, initiating the honeycomb-to-dispersed transition and committing the cell to apoptosis.",
+          "type": 2,
+          "confidence": 0.7,
+          "mechanism": "HK-II binding sterically shields or locally sequesters cardiolipin, and its removal exposes VDAC1 to cardiolipin's disruptive effects, triggering disassembly of the protective array.",
+          "falsifiable_by": "High-resolution imaging showing that VDAC1 arrays remain stable after HK-II dissociation in cells where cardiolipin is depleted or its interaction with VDAC1 is blocked. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "deepseek",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1. Does the Chol/CL ratio directly control the equilibrium between VDAC1 honeycomb arrays and dispersed monomers, and is this the physical basis for the proposed apoptotic threshold equation?\n2. Does HK-II displacement from VDAC1 trigger honeycomb disassembly by exposing cardiolipin, thereby enabling VDAC oligomerization?\n3. Can lipophilic drugs (e.g., CBD, statins) modulate VDAC organization indirectly via membrane perturbation, independent of direct protein binding?\n4. Is the transition from honeycomb arrays to dispersed monomers the physical \"point of no return\" for apoptosis, making membrane reorganization the rate-limiting step for VDAC oligomerization?\n\nKey variables: Chol/CL ratio, HK-II binding fraction, Bcl-xL binding fraction, membrane order, VDAC oligomerization state.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: The Chol/CL ratio is a primary physical determinant of the VDAC1 honeycomb-vs-monomer equilibrium, and this lipid-driven partitioning provides the biophysical foundation for the apoptotic threshold equation.\nTYPE: 1\nCONFIDENCE: 0.75\nMECHANISM: Cholesterol and PE promote ordered lipid phases that stabilize VDAC1 lattice contacts, while cardiolipin disrupts these contacts via headgroup charge and packing, creating a tunable equilibrium.\nFALSIFIABLE BY: Demonstrating in reconstituted systems that the threshold for oligomerization is independent of Chol/CL ratio over a physiologically relevant range.\n\nCLAIM: HK-II binding stabilizes honeycomb arrays by masking/displacing cardiolipin from VDAC's vicinity; its displacement unmasks cardiolipin microdomains, promoting lattice disassembly.\nTYPE: 2\nCONFIDENCE: 0.7\nMECHANISM: HK-II's membrane-binding domain competes with cardiolipin for interaction sites near VDAC, so HK-II release increases local cardiolipin availability, destabilizing the array.\nFALSIFIABLE BY: Showing that HK-II displacement does not alter local cardiolipin accessibility or that honeycomb stability is unchanged after HK-II removal in a cardiolipin-free system.\n\nCLAIM: Lipophilic drugs with logP >4 can alter VDAC supramolecular organization indirectly by modulating local membrane order and lipid partitioning, constituting a distinct, non-canonical pharmacological mechanism.\nTYPE: 1\nCONFIDENCE: 0.8\nMECHANISM: Drugs partitioning into the bilayer alter lipid packing and phase behavior, shifting the Chol/CL effective activity and thus the VDAC array equilibrium.\nFALSIFIABLE BY: Demonstrating that such drugs, at therapeutic concentrations, cause no change in VDAC organization in lipid-only reconstitutions without direct protein binding.\n\nCLAIM: The honeycomb-to-dispersed transition is the physical rate-limiting step for VDAC-mediated apoptosis, as oligomerization is only permissible from the dispersed state.\nTYPE: 2\nCONFIDENCE: 0.65\nMECHANISM: The honeycomb array sterically and allosterically inhibits pro-apoptotic oligomerization; disassembly unlocks this conformational capability.\nFALSIFIABLE BY: Observing VDAC oligomerization and cytochrome c release directly from intact honeycomb arrays without prior lattice disassembly.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1. The quantitative mapping between Chol/CL ratio and the fraction of VDAC in honeycomb vs. monomeric states in native OMM.\n2. The exact spatial relationship between HK-II binding sites and cardiolipin binding sites on VDAC1.\n3. Direct experimental evidence that CBD or statins, at physiological concentrations, alter VDAC organization in living cells via membrane effects alone.\n4. The kinetic timescale of honeycomb disassembly versus VDAC oligomerization; which is truly rate-limiting?\n5. Whether the proposed threshold equation accurately predicts apoptotic sensitivity across different cell types with measured lipidomes.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nUse AFM on native OMM patches to directly quantify the VDAC1 array/monomer ratio as a function of systematically varied Chol/CL ratio, with and without HK-II bound.",
+      "claims": [
+        {
+          "statement": "The Chol/CL ratio is a primary physical determinant of the VDAC1 honeycomb-vs-monomer equilibrium, and this lipid-driven partitioning provides the biophysical foundation for the apoptotic threshold equation.",
+          "type": 1,
+          "confidence": 0.75,
+          "mechanism": "Cholesterol and PE promote ordered lipid phases that stabilize VDAC1 lattice contacts, while cardiolipin disrupts these contacts via headgroup charge and packing, creating a tunable equilibrium.",
+          "falsifiable_by": "Demonstrating in reconstituted systems that the threshold for oligomerization is independent of Chol/CL ratio over a physiologically relevant range."
+        },
+        {
+          "statement": "HK-II binding stabilizes honeycomb arrays by masking/displacing cardiolipin from VDAC's vicinity; its displacement unmasks cardiolipin microdomains, promoting lattice disassembly.",
+          "type": 2,
+          "confidence": 0.7,
+          "mechanism": "HK-II's membrane-binding domain competes with cardiolipin for interaction sites near VDAC, so HK-II release increases local cardiolipin availability, destabilizing the array.",
+          "falsifiable_by": "Showing that HK-II displacement does not alter local cardiolipin accessibility or that honeycomb stability is unchanged after HK-II removal in a cardiolipin-free system."
+        },
+        {
+          "statement": "Lipophilic drugs with logP >4 can alter VDAC supramolecular organization indirectly by modulating local membrane order and lipid partitioning, constituting a distinct, non-canonical pharmacological mechanism.",
+          "type": 1,
+          "confidence": 0.8,
+          "mechanism": ".",
+          "falsifiable_by": "Demonstrating that such drugs, at therapeutic concentrations, cause no change in VDAC organization in lipid-only reconstitutions without direct protein binding."
+        },
+        {
+          "statement": "The honeycomb-to-dispersed transition is the physical rate-limiting step for VDAC-mediated apoptosis, as oligomerization is only permissible from the dispersed state.",
+          "type": 2,
+          "confidence": 0.65,
+          "mechanism": "The honeycomb array sterically and allosterically inhibits pro-apoptotic oligomerization; disassembly unlocks this conformational capability.",
+          "falsifiable_by": "Observing VDAC oligomerization and cytochrome c release directly from intact honeycomb arrays without prior lattice disassembly. \u2500\u2500\u2500"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "round_num": 0,
+    "jaccard": 0.047136752136752134,
+    "cosine": 0.8412853658199311,
+    "jsd": 0.1393390533928864,
+    "kappa": 0.9672252401338272,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.25,
+      "2": 0.5,
+      "3": 0.25
+    },
+    "type_01_ratio": 0.25,
+    "n_claims_per_model": [
+      5,
+      4,
+      4,
+      3,
+      4
+    ]
+  },
+  "total_calls": 5
+}

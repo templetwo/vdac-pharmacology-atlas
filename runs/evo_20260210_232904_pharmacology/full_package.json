@@ -1,0 +1,184 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260210_232904_pharmacology",
+  "timestamp": "2026-02-10T23:55:48.881298+00:00",
+  "question": "What mechanisms explain why low-dose lithium is neuroprotective while therapeutic-dose lithium causes nephrotoxicity, and what molecular targets determine the dose-dependent switch between cytoprotection and organ toxicity?",
+  "outcome": "S3_FAILED",
+  "cycles": 3,
+  "total_calls": 15,
+  "convergence_report": {
+    "stage": "S3",
+    "passed": false,
+    "convergence_score": 0.8298,
+    "convergence_threshold": 0.85,
+    "convergence_pass": false,
+    "jaccard": 0.0858,
+    "jaccard_threshold": 0.85,
+    "jaccard_pass": false,
+    "type_01_ratio": 0.1765,
+    "type_01_threshold": 0.75,
+    "type_pass": false,
+    "cosine": 0.8298,
+    "jsd": 0.2607,
+    "kappa": 0.8888,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.17647058823529413,
+      "2": 0.23529411764705882,
+      "3": 0.5882352941176471
+    },
+    "divergence_map": {
+      "total_unique_claims": 19,
+      "most_divergent": [
+        {
+          "statement": "The cytoprotection-toxicity switch is primarily governed by sequential target engagement \u2014 GSK-3\u03b2 is partially inhibited at low doses (neuroprotective), while IMPase inhibition reaches functionally significant levels only at therapeutic doses, depleting inositol in cells with low de novo synthesis capacity (renal medulla).",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.75
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Renal collecting duct cells lack the compensatory Nrf2-antioxidant and BDNF/TrkB pathways that buffer neurons against inositol depletion stress, making them selectively vulnerable.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.55
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "The dose-response curve for nephrotoxicity follows a Hill coefficient >1 (n \u2248 2\u20133), reflecting cooperative depletion of inositol pools, creating a steep threshold rather than gradual toxicity onset.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            3
+          ],
+          "confidences": [
+            0.4
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Lithium's therapeutic index for neuroprotection vs. nephrotoxicity is dangerously narrow (~2\u20133), well below the FDA-preferred TI \u2265 10, which is the fundamental pharmacological problem.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            0
+          ],
+          "confidences": [
+            0.9
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "1**: Low-dose lithium (0.1\u20131.0 mM serum) selectively inhibits GSK-3\u03b2 in neurons via competitive binding to Mg\u00b2\u207a sites, enhancing neurotrophic signaling (e.g., BDNF/TrkB, Wnt/\u03b2-catenin) without disrupting renal cell homeostasis. - **TYPE**: 1 (mechanistic plausibility with partial validation) - **CONFIDENCE**: 0.85 - **MECHANISM**: GSK-3\u03b2 inhibition at low doses stabilizes \u03b2-catenin and CREB, promoting neuronal survival; renal cells lack equivalent compensatory pathways for GSK-3\u03b2 modulation. - **FALSIFIABLE BY**: (a) Knockout of neuronal GSK-3\u03b2 abolishes low-dose lithium\u2019s neuroprotection; (b) renal cells show equivalent \u03b2-catenin stabilization at low doses.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2**: Therapeutic-dose lithium (>1.0 mM serum) induces nephrotoxicity via inositol monophosphatase (IMPase) inhibition, causing inositol depletion and ER stress in renal cells, which lack the Nrf2-mediated antioxidant response present in neurons. - **TYPE**: 1 - **CONFIDENCE**: 0.75 - **MECHANISM**: IMPase inhibition depletes phosphatidylinositol bisphosphate (PIP\u2082), triggering ER stress (e.g., CHOP, XBP1 splicing) in renal cells; neurons mitigate this via Nrf2-driven glutathione synthesis. - **FALSIFIABLE BY**: (a) IMPase overexpression in renal cells rescues toxicity; (b) Nrf2 knockout in neurons abolishes low-dose neuroprotection.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3**: The dose-dependent switch between cytoprotection and toxicity is governed by a \"dual-threshold\" model: (1) a low-dose threshold (0.1\u20130.5 mM) where GSK-3\u03b2 inhibition dominates, and (2) a high-dose threshold (>1.0 mM) where IMPase inhibition and mitochondrial dysfunction (e.g., Complex I inhibition) override compensatory pathways. - **TYPE**: 2 (quantitative hypothesis) - **CONFIDENCE**: 0.70 - **MECHANISM**: Hill coefficients for GSK-3\u03b2 (n \u2248 1) and IMPase (n \u2248 2) create non-overlapping dose-response curves; renal cells lack the second threshold\u2019s buffering capacity. - **FALSIFIABLE BY**: (a) Hill coefficients for GSK-3\u03b2 and IMPase in neurons/renal cells deviate from predicted values; (b) mitochondrial Complex I inhibition occurs at doses below IMPase saturation.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4 (SINGULAR THREAD INVESTIGATION)**: Neurons\u2019 BDNF/TrkB signaling acts as a \"molecular rheostat,\" amplifying low-dose lithium\u2019s effects via mTORC1 activation, while renal cells lack TrkB and rely on less robust EGF/VEGF pathways. - **TYPE**: 3 (speculative) - **CONFIDENCE**: 0.60 - **MECHANISM**: TrkB activation by BDNF enhances neuronal resistance to lithium-induced inositol depletion via mTORC1-mediated autophagy; renal cells lack this feedback loop. - **FALSIFIABLE BY**: (a) TrkB knockout in neurons abolishes low-dose neuroprotection; (b) renal cells engineered to express TrkB show reduced toxicity at therapeutic doses. ---",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Lithium neuroprotection at low dose (<0.5 mM) primarily via partial GSK3\u03b2 inhibition (IC50 1-2 mM), stabilizing \u03b2-catenin, upregulating BDNF and autophagy.",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.9
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Nephrotoxicity at therapeutic dose (0.8-1.5 mM) driven by IMPase inhibition (IC50 0.3-0.6 mM), causing myo-inositol depletion critical for renal AQP2 trafficking and osmoregulation.",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        }
+      ],
+      "models_present": [
+        "claude",
+        "mistral",
+        "grok",
+        "gemini",
+        "deepseek"
+      ]
+    },
+    "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF purified human VDAC1 is reconstituted in planar lipid bilayers and exposed to valproic acid (50\u2013700 \u00b5M), THEN single-channel open probability (Po) will shift by \u226515% relative to vehicle, with an EC50 between 100\u2013500 \u00b5M.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "VPA_concentration",
+          "unit": "\u00b5M",
+          "low": 10.0,
+          "high": 1000.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "VDAC1_conductance_baseline",
+          "unit": "nS",
+          "low": 3.5,
+          "high": 4.5,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "Po_baseline",
+          "unit": "(normal,",
+          "low": 0.85,
+          "high": 0.95,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "delta_Po_threshold",
+          "unit": "(uniform)",
+          "low": 0.05,
+          "high": 0.3,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "membrane_composition_POPC_fraction",
+          "unit": "(uniform)",
+          "low": 0.7,
+          "high": 1.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 9.0,
+      "experimental_protocol": "Reconstitute purified recombinant hVDAC1 (E. coli expression, refolded in LDAO) into DPhPC planar bilayers using the painting method. Record single-channel currents at \u00b130 mV under voltage-clamp before and after sequential VPA additions (10, 50, 100, 300, 700, 1000 \u00b5M) to the cis chamber. Analyze Po, conductance substates, and gating kinetics across \u22655 independent bilayers per condition. Timeline: 6\u20138 weeks.",
+      "expected_outcome": "VPA at 100\u2013700 \u00b5M shifts Po by >15%, likely toward open state (fatty acid analog behavior), with",
+      "null_outcome": "No statistically significant change in Po, conductance, or gating kinetics at any VPA concentration up to 1 mM across \u22655 bilayers (p > 0.05, paired t-test).",
+      "dose_ranges": {
+        "VPA": {
+          "doses": [
+            10.0,
+            50.0,
+            100.0,
+            300.0,
+            700.0,
+            1000.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "Single-channel conductance (nS)",
+        "open probability (Po)",
+        "mean open/closed dwell times",
+        "current-voltage relationships",
+        "all-points amplitude histograms"
+      ],
+      "controls": [
+        "Vehicle (equivalent Na\u207a addition as sodium valproate)",
+        "DIDS (200 \u00b5M",
+        "known VDAC blocker",
+        "positive control)",
+        "octanoic acid (300 \u00b5M",
+        "chain-length-matched fatty acid control)",
+        "heat-denatured VDAC (negative reconstitution control)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H2",
+      "prediction": "IF primary mouse hepatocytes or HepaRG cells are exposed to hepatotoxic APAP concentrations (5\u201320 mM), THEN LC-MS/MS of immunoprecipitated VDAC1 will reveal NAPQI adducts (mass shift +149.05 Da) on Cys127 and/or Cys232 in \u226560% of biological replicates, with adduct abundance correlating with APAP dose (Spearman \u03c1 > 0.7).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "APAP_concentration",
+          "unit": "mM",
+          "low": 1.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "NAPQI_adduct_mass_shift",
+          "unit": "Da",
+          "low": 149.04,
+          "high": 149.06,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "GSH_depletion_threshold",
+          "unit": "%",
+          "low": 70.0,
+          "high": 90.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "time_post_exposure",
+          "unit": "hours",
+          "low": 2.0,
+          "high": 24.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "Cys127_solvent_accessibility",
+          "unit": "fractional",
+          "low": 0.3,
+          "high": 0.8,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "adduct_detection_limit",
+          "unit": "%",
+          "low": 0.1,
+          "high": 1.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 8.0,
+      "experimental_protocol": "Treat HepaRG cells (CYP2E1-competent) with APAP (1, 5, 10, 20 mM) for 2, 6, and 12 h. Isolate mitochondria by differential centrifugation, immunoprecipitate VDAC1 (anti-VDAC1 ab15895), digest with trypsin/chymotrypsin, and analyze by nanoLC-MS/MS (Orbitrap) with targeted PRM for Cys127/Cys232-containing peptides \u00b1 149.05 Da modification. Parallel: BSO pre-treatment (GSH depletion) and NAC co-treatment arms. Timeline: 10\u201312 weeks.",
+      "expected_outcome": "NAPQI adducts detected on Cys232 (most accessible) at \u22655 mM APAP by 6 h, increasing with",
+      "null_outcome": "No NAPQI adducts detected on any VDAC1 cysteine at any dose/timepoint despite confirmed adducts on known targets (GAPDH, GST), indicating VDAC1 cysteines are not preferentially modified by NAPQI in situ.",
+      "dose_ranges": {
+        "APAP": {
+          "doses": [
+            1000.0,
+            5000.0,
+            10000.0,
+            20000.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "treatment": {
+          "doses": [
+            200.0
+          ],
+          "unit": "\u00b5M"
+        },
+        "NAC": {
+          "doses": [
+            5000.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "NAPQI-Cys adduct identification (PRM-MS)",
+        "adduct site occupancy (%)",
+        "VDAC1 oligomerization (BN-PAGE/crosslinking)",
+        "cytochrome c release (ELISA)",
+        "mitochondrial membrane potential (TMRM)",
+        "cell viability (LDH)",
+        "GSH levels (monochlorobimane)"
+      ],
+      "controls": [
+        "Vehicle (DMSO)",
+        "APAP + NAC (adduct prevention)",
+        "BSO alone (GSH depletion without NAPQI)",
+        "NAPQI direct addition to isolated mitochondria (cell-free positive control)",
+        "VDAC1-IP from untreated cells (baseline)",
+        "isotype IgG IP (specificity)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H3",
+      "prediction": "IF VDAC1 is reconstituted in bilayers pre-doped with atorvastatin or simvastatin at membrane concentrations equivalent to myopathic tissue exposure (1\u201310 \u00b5M bulk, yielding ~100\u20131000 \u00b5M membrane concentration given logP ~4), THEN VDAC1 conductance will decrease by \u226520% and voltage-dependent closure will shift by \u22655 mV (V\u2080 shift), compared to cholesterol-only membranes.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "statin_bulk_concentration",
+          "unit": "\u00b5M",
+          "low": 0.1,
+          "high": 50.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "membrane_partition_coefficient",
+          "unit": "(log-normal,",
+          "low": 100.0,
+          "high": 10000.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "VDAC1_V0_baseline",
+          "unit": "mV",
+          "low": 20.0,
+          "high": 30.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "delta_V0_threshold",
+          "unit": "mV",
+          "low": 2.0,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "cholesterol_mol_percent",
+          "unit": "%",
+          "low": 0.0,
+          "high": 30.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "conductance_reduction_threshold",
+          "unit": "%",
+          "low": 10.0,
+          "high": 40.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 8.0,
+      "experimental_protocol": "Reconstitute hVDAC1 in DPhPC/cholesterol (80:20) planar bilayers. Pre-incubate lipid mixtures with atorvastatin, simvastatin, or pravastatin (hydrophilic control) at 0.1, 1, 5, 10, 50 \u00b5M before bilayer formation. Record multichannel and single-channel I-V curves from -60 to +60 mV in 5 mV steps. Calculate G-V curves, V\u2080, and gating charge. Compare statin-doped vs. vehicle-doped membranes. Confirm membrane incorporation by fluorescence anisotropy (DPH). Timeline: 8\u201310 weeks.",
+      "expected_outcome": "Atorvastatin and simvastatin (logP ~4\u20135) shift V\u2080 leftward by 5\u201315 mV and reduce maximal conductance by 20\u201340% at \u22655 \u00b5M bulk concentration, consistent with altered bilayer mechanics. Pravastatin (logP ~\u22120.8) shows no effect. Effect magnitude correlates with membrane statin content.",
+      "null_outcome": "No significant difference in conductance, V\u2080, or gating parameters between statin-doped and",
+      "dose_ranges": {
+        "Atorvastatin": {
+          "doses": [
+            0.1,
+            1.0,
+            5.0,
+            10.0,
+            50.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Simvastatin": {
+          "doses": [
+            0.1,
+            1.0,
+            5.0,
+            10.0,
+            50.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Pravastatin": {
+          "doses": [
+            0.1,
+            1.0,
+            5.0,
+            10.0,
+            50.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "Single-channel conductance (nS)",
+        "G-V relationship",
+        "V\u2080 and gating charge (Boltzmann fit)",
+        "open probability at \u00b130 mV",
+        "DPH fluorescence anisotropy (membrane order)",
+        "statin membrane concentration (LC-MS of bilayer lipid extract)"
+      ],
+      "controls": [
+        "Vehicle-doped bilayers (ethanol",
+        "matched volume)",
+        "cholesterol-enriched bilayers (40 mol%",
+        "known VDAC modulator",
+        "positive control)",
+        "pravastatin (hydrophilic statin",
+        "negative pharmacological control)",
+        "protein-free bilayers with statins (membrane-only effects)",
+        "DIDS (VDAC block positive control)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H4",
+      "prediction": "IF purified VDAC1 is exposed to metformin (0.01\u201310 mM) in reconstituted bilayers, THEN no change in conductance or gating will be observed (\u0394Po < 5%, \u0394conductance < 10%); HOWEVER, in intact mitochondria, metformin (1\u201310 mM) will reduce VDAC-dependent metabolite flux (ATP/ADP exchange measured by luciferase) by \u226530%, an effect abolished by \u0394\u03c8m clamping with FCCP.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [],
+      "testability_score": 5.0,
+      "experimental_protocol": "",
+      "expected_outcome": "",
+      "null_outcome": "",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": []
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_calls": 1,
+  "latency_s": 57.17
+}

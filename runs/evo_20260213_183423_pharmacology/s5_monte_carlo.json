@@ -1,0 +1,311 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF VDAC1 is reconstituted in planar lipid bilayers containing 10-20 mol% cardiolipin (vs pure POPC), THEN voltage-gating midpoint shifts by 10-20 mV toward more negative potentials AND CBD Kd decreases by \u22652-fold (from ~11 \u00b5M to \u22645.5 \u00b5M).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "cardiolipin_mol_percent": {
+          "mean": 12.16633720673229,
+          "std": 7.245549425263572,
+          "median": 11.975104539610424,
+          "ci_lower": 0.6922426099388946,
+          "ci_upper": 24.104328613404743,
+          "min": 0.1840567437751378,
+          "max": 24.809389101395926
+        },
+        "gating_shift_mV": {
+          "mean": 15.106392302569354,
+          "std": 5.676350895835356,
+          "median": 15.269621147971726,
+          "ci_lower": 5.722174009611933,
+          "ci_upper": 24.602408447200986,
+          "min": 5.108596682574009,
+          "max": 24.982094609484772
+        },
+        "CBD_Kd_POPC": {
+          "mean": 10.983197460798262,
+          "std": 1.7869882209743453,
+          "median": 11.012627893137179,
+          "ci_lower": 8.102582401827055,
+          "ci_upper": 13.90415962308949,
+          "min": 8.00739837507145,
+          "max": 13.99246022040059
+        },
+        "CBD_Kd_CL": {
+          "mean": 5.067348008061408,
+          "std": 1.7499144760378715,
+          "median": 4.945596085709714,
+          "ci_lower": 2.255542664230625,
+          "ci_upper": 7.901136162837792,
+          "min": 2.003112464994233,
+          "max": 7.996531455345127
+        },
+        "bilayer_capacitance": {
+          "mean": 0.6007520965958376,
+          "std": 0.07104067079581759,
+          "median": 0.5993522211298746,
+          "ci_lower": 0.4594720056366978,
+          "ci_upper": 0.7414690410321679,
+          "min": 0.4029587450436621,
+          "max": 0.7807163684812218
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5004555179394596,
+          "std": 0.11840105441881052,
+          "median": 0.49537871083259366,
+          "ci_lower": 0.2837473024092745,
+          "ci_upper": 0.7047447406312112,
+          "min": 0.19696109049543192,
+          "max": 0.8197759499743065
+        }
+      },
+      "effect_size": 0.8708,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF VDAC1 is embedded in nanodiscs with 20 mol% cholesterol (cancer-mimetic) vs 5 mol% (healthy-mimetic), THEN the apparent CBD-VDAC1 Kd decreases from ~11 \u00b5M to 3-6 \u00b5M due to enhanced local partitioning, placing it within the 1-10 \u00b5M therapeutic window.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "cholesterol_mol_percent_healthy": {
+          "mean": 5.491386463799144,
+          "std": 1.425356567662941,
+          "median": 5.474467563598466,
+          "ci_lower": 3.131790219184463,
+          "ci_upper": 7.85546875299555,
+          "min": 3.015750763826693,
+          "max": 7.989408721370602
+        },
+        "cholesterol_mol_percent_cancer": {
+          "mean": 19.958055945406397,
+          "std": 2.8563386987565385,
+          "median": 20.03086662708039,
+          "ci_lower": 15.212352554311575,
+          "ci_upper": 24.677984718824778,
+          "min": 15.022204970641251,
+          "max": 24.95582661515631
+        },
+        "CBD_Kd_low_chol": {
+          "mean": 11.506285392554657,
+          "std": 1.999240653386984,
+          "median": 11.360150624300402,
+          "ci_lower": 8.238365125243591,
+          "ci_upper": 14.843137162524709,
+          "min": 8.117812192439443,
+          "max": 14.98489428580729
+        },
+        "CBD_Kd_high_chol": {
+          "mean": 5.049746988757539,
+          "std": 1.7862743646982777,
+          "median": 5.192682382451334,
+          "ci_lower": 2.1338632108555613,
+          "ci_upper": 7.833441869144363,
+          "min": 2.0337996054893024,
+          "max": 7.98797968876466
+        },
+        "CBD_logP": {
+          "mean": 6.310174444205871,
+          "std": 0.29849930267190067,
+          "median": 6.325772723879746,
+          "ci_lower": 5.839775239243687,
+          "ci_upper": 6.784615578320034,
+          "min": 5.804440215423909,
+          "max": 6.797628752074644
+        },
+        "partition_coefficient_ratio": {
+          "mean": 2.7838276611940955,
+          "std": 0.7068560186827318,
+          "median": 2.7407447702451035,
+          "ci_lower": 1.5,
+          "ci_upper": 4.0,
+          "min": 1.5,
+          "max": 4.0
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5044962456664992,
+          "std": 0.12492100956433479,
+          "median": 0.5022834708147786,
+          "ci_lower": 0.23723710451396648,
+          "ci_upper": 0.7376189588187567,
+          "min": 0.1341474858209302,
+          "max": 0.8367192703131557
+        }
+      },
+      "effect_size": 0.9767,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF OMM cholesterol is depleted below ~15 mol% (via M\u03b2CD treatment or low-cholesterol nanodiscs), THEN olesoxime-VDAC1 binding affinity drops by \u22655-fold AND neuroprotective activity (prevention of cytochrome c release) is abolished.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "cholesterol_threshold": {
+          "mean": 16.874490561988885,
+          "std": 2.8826639876805626,
+          "median": 16.624847990955757,
+          "ci_lower": 12.375102424945823,
+          "ci_upper": 21.726536206817958,
+          "min": 12.054953260185524,
+          "max": 21.953856862104132
+        },
+        "olesoxime_Kd_high_chol": {
+          "mean": 2.6801379723766248,
+          "std": 1.3216510024669692,
+          "median": 2.619727686872735,
+          "ci_lower": 0.6122077752226437,
+          "ci_upper": 4.8646285776825735,
+          "min": 0.505788130808366,
+          "max": 4.96752287449542
+        },
+        "olesoxime_Kd_low_chol": {
+          "mean": 53.37235182058823,
+          "std": 26.583617447293715,
+          "median": 51.478035667075645,
+          "ci_lower": 12.353405464949736,
+          "ci_upper": 97.42275740403521,
+          "min": 10.299143373461863,
+          "max": 99.53191820553533
+        },
+        "M\u03b2CD_concentration": {
+          "mean": 5.754623640299745,
+          "std": 2.2540717146102307,
+          "median": 5.501030255392617,
+          "ci_lower": 2.1717205129843635,
+          "ci_upper": 9.6137342457262,
+          "min": 2.0034612043686604,
+          "max": 9.976479216230455
+        },
+        "cholesterol_depletion_efficiency": {
+          "mean": 61.75408938463106,
+          "std": 12.021727662660957,
+          "median": 63.596794954991786,
+          "ci_lower": 41.477292792553804,
+          "ci_upper": 79.02239055081984,
+          "min": 40.05090031344772,
+          "max": 79.79220808867754
+        },
+        "cytochrome_c_release_inhibition": {
+          "mean": 46.39797731941774,
+          "std": 25.889767044949537,
+          "median": 47.63178384101833,
+          "ci_lower": 2.9601228875813557,
+          "ci_upper": 88.32418805114878,
+          "min": 0.004089140852056028,
+          "max": 89.99727022591199
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.497092075396723,
+          "std": 0.11812534802979513,
+          "median": 0.4946629106212052,
+          "ci_lower": 0.26904883163234905,
+          "ci_upper": 0.747870377447734,
+          "min": 0.135362612783667,
+          "max": 0.8268591734411609
+        }
+      },
+      "effect_size": 0.806,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF CBD is delivered via liposomes matching cancer OMM composition (20 mol% cholesterol, 5 mol% CL, 75% POPC) vs generic liposomes (100% POPC), THEN IC\u2085\u2080 for cancer cell killing decreases by \u22653-fold in cancer lines (HCT116, MDA-MB-231) while remaining unchanged or increasing in normal cells (MCF10A, primary hepatocytes), with the differential being VDAC1-dependent.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "IC50_cancer_generic_lipo": {
+          "mean": 14.129272693039926,
+          "std": 3.446302054440899,
+          "median": 14.048718154382346,
+          "ci_lower": 8.241880056003478,
+          "ci_upper": 19.80051255301561,
+          "min": 8.000650309757702,
+          "max": 19.975349374534094
+        },
+        "IC50_cancer_mimetic_lipo": {
+          "mean": 5.008022047182737,
+          "std": 1.7567177044617643,
+          "median": 5.183931782884786,
+          "ci_lower": 2.1142937332693137,
+          "ci_upper": 7.646672283145389,
+          "min": 2.0166426996060443,
+          "max": 7.943241498233652
+        },
+        "IC50_normal_generic_lipo": {
+          "mean": 27.147228239034938,
+          "std": 7.289707826352861,
+          "median": 27.287063110803643,
+          "ci_lower": 15.789494911416728,
+          "ci_upper": 38.92185204400378,
+          "min": 15.156144786433837,
+          "max": 39.946999342348214
+        },
+        "IC50_normal_mimetic_lipo": {
+          "mean": 34.56375874117236,
+          "std": 8.753518010118317,
+          "median": 34.03266227474913,
+          "ci_lower": 20.9278192111391,
+          "ci_upper": 49.07093635238666,
+          "min": 20.273263596104215,
+          "max": 49.73339568929928
+        },
+        "liposome_diameter": {
+          "mean": 113.97026364882645,
+          "std": 19.90769230981085,
+          "median": 116.46151894153232,
+          "ci_lower": 81.21552889073634,
+          "ci_upper": 146.18930904398144,
+          "min": 80.0014287665043,
+          "max": 149.90813643980928
+        },
+        "encapsulation_efficiency": {
+          "mean": 77.17716065854778,
+          "std": 10.187949764893592,
+          "median": 77.22386041469218,
+          "ci_lower": 60.957489842068725,
+          "ci_upper": 94.01645082598203,
+          "min": 60.06152765490157,
+          "max": 94.92386778081935
+        },
+        "selectivity_index_target": {
+          "mean": 9.409843813620428,
+          "std": 2.612360595732426,
+          "median": 9.296273937444282,
+          "ci_lower": 5.01727629209985,
+          "ci_upper": 15.0,
+          "min": 3.093058105614932,
+          "max": 15.0
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.49909666245701906,
+          "std": 0.10400671611305971,
+          "median": 0.4973266418192717,
+          "ci_lower": 0.29735486282849843,
+          "ci_upper": 0.6971659270465291,
+          "min": 0.2201938955397335,
+          "max": 0.7515278706916007
+        }
+      },
+      "effect_size": 0.7132,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 45
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_iterations": 1200,
+  "total_calls": 0
+}

@@ -1,0 +1,161 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "3:** The therapeutic index is ~10-15 (ED50 plasticity ~3-5 mg oral psilocybin; TD50 destabilization ~40-60 mg), consistent with FDA TI \u2265 10 prior, and this ratio is governed by the ~3-5\u00d7 concentration gap between Gq EC50 and \u03b2-arrestin 2 EC50 at 5-HT2A.",
+      "mechanism": "Functional selectivity window: Gq pathway EC50 ~5-10 nM psilocin vs. \u03b2-arrestin 2 recruitment EC50 ~30-60 nM; the dose ratio maps onto the TI via standard Hill occupancy (n\u22481).",
+      "falsifiable_by": "Quantitative bias plots (Kenakin method) showing <2-fold separation between Gq and \u03b2-arrestin 2 transduction coefficients for psilocin at 5-HT2A.",
+      "type": 1,
+      "confidence": 0.838,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('fda', 'interacts', 'ti'), ('ec50', 'interacts', 'ht2a'), ('ed50', 'interacts', 'td50'), ('ti', 'interacts', 'ec50'), ('td50', 'interacts', 'fda')})",
+      "chunk_text": "3:** The therapeutic index is ~10-15 (ED50 plasticity ~3-5 mg oral psilocybin; TD50 destabilization ~40-60 mg), consistent with FDA TI \u2265 10 prior, and this ratio is governed by the ~3-5\u00d7 concentration gap between Gq EC50 and \u03b2-arrestin 2 EC50 at 5-HT2A."
+    },
+    {
+      "statement": "2:** Above ~60% occupancy, \u03b2-arrestin 2 recruitment increases supralinearly due to cooperative binding at 5-HT2A/mGluR2 heterodimers, uncoupling mGluR2 inhibitory signaling and producing excessive layer V cortical glutamate release.",
+      "mechanism": "High-occupancy conformational states expose \u03b2-arrestin 2 binding epitopes on the 5-HT2A intracellular domain; \u03b2-arrestin 2 scaffolding disrupts Gi-coupled mGluR2 within the heterodimer, removing the homeostatic brake on thalamocortical glutamate.",
+      "falsifiable_by": "Showing that \u03b2-arrestin 2 knockout mice still exhibit high-dose perceptual destabilization (head-twitch dose-response plateau absent), or that mGluR2 positive allosteric modulators fail to rescue high-dose adverse effects.",
+      "type": 1,
+      "confidence": 0.733,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "deepseek",
+        "mistral"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "2:** Above ~60% occupancy, \u03b2-arrestin 2 recruitment increases supralinearly due to cooperative binding at 5-HT2A/mGluR2 heterodimers, uncoupling mGluR2 inhibitory signaling and producing excessive layer V cortical glutamate release."
+    },
+    {
+      "statement": "4:** Psilocin\u2019s Ki at 5-HT2A is 6\u201325 nM (pKi 7.6\u20138.2), with low doses (1\u201310 mg) yielding plasma concentrations of 2\u201320 nM (~10\u201360% occupancy) and high doses (>25 mg) reaching 100\u2013500 nM (>80\u201395% occupancy).",
+      "mechanism": "Competitive binding at 5-HT2A follows standard occupancy theory (Hill coefficient ~1), with plasma [psilocin] directly predicting receptor saturation.",
+      "falsifiable_by": "PET scans showing occupancy >60% at <10 mg doses, or Ki measurements outside 6\u201325 nM range.",
+      "type": 2,
+      "confidence": 0.915,
+      "overlap_count": 2,
+      "models": [
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('ht2a', 'interacts', 'hill_n')})",
+      "chunk_text": "4:** Psilocin\u2019s Ki at 5-HT2A is 6\u201325 nM (pKi 7.6\u20138.2), with low doses (1\u201310 mg) yielding plasma concentrations of 2\u201320 nM (~10\u201360% occupancy) and high doses (>25 mg) reaching 100\u2013500 nM (>80\u201395% occupancy)."
+    },
+    {
+      "statement": "1:** Therapeutic neuroplasticity occurs at ~15-50% 5-HT2A occupancy, where Gq/11-PLC-IP3/DAG signaling dominates, activating mTOR-dependent BDNF expression and dendritic spine growth in prefrontal cortex.",
+      "mechanism": "At moderate occupancy, psilocin stabilizes a Gq-preferring receptor conformation; calcium transients via IP3 activate CaMKII\u2192mTOR\u2192BDNF translation without saturating network inhibition.",
+      "falsifiable_by": "Demonstrating that Gq-biased 5-HT2A agonists (e.g., 25CN-NBOH with Gq bias) fail to produce neuroplasticity at equivalent occupancy, or that mTOR inhibition (rapamycin) does not block psilocybin's plasticity effects. (Note: Ly et al. 2018 showed rapamycin blocks psychedelic-induced spinogenesis, supporting this.)",
+      "type": 2,
+      "confidence": 0.825,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "mistral"
+      ],
+      "tuples": "frozenset({('bdnf', 'upregulates', 'dag'), ('bdnf', 'upregulates', 'ip3')})",
+      "chunk_text": "1:** Therapeutic neuroplasticity occurs at ~15-50% 5-HT2A occupancy, where Gq/11-PLC-IP3/DAG signaling dominates, activating mTOR-dependent BDNF expression and dendritic spine growth in prefrontal cortex."
+    },
+    {
+      "statement": "4:** Psilocin Ki at 5-HT2A is 6-25 nM (pKi ~7.6-8.2), and with Hill coefficient ~1 (non-cooperative single-site), occupancy follows standard hyperbolic kinetics\u2014the apparent nonlinearity at ~60% is an emergent property of downstream pathway coupling, not receptor binding itself.",
+      "mechanism": "Binding is Langmuir-hyperbolic (n=1 per prior); the threshold effect arises from cooperative \u03b2-arrestin 2 signaling amplification, not cooperative binding.",
+      "falsifiable_by": "Radioligand binding showing Hill slope significantly >1 for psilocin at 5-HT2A. \u2500\u2500\u2500",
+      "type": 2,
+      "confidence": 0.775,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "gemini"
+      ],
+      "tuples": "frozenset({('ht2a', 'interacts', 'hill_n')})",
+      "chunk_text": "4:** Psilocin Ki at 5-HT2A is 6-25 nM (pKi ~7.6-8.2), and with Hill coefficient ~1 (non-cooperative single-site), occupancy follows standard hyperbolic kinetics\u2014the apparent nonlinearity at ~60% is an emergent property of downstream pathway coupling, not receptor binding itself."
+    },
+    {
+      "statement": "Therapeutic index TD50/ED50 \u224812 (ED50_plasticity ~5 mg psilocybin; TD50_destab ~60 mg), exceeding FDA prior >10.",
+      "mechanism": "Dose-response fits occupancy sigmoid (Hill=1",
+      "falsifiable_by": "",
+      "type": 3,
+      "confidence": 0.82,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('ed50', 'interacts', 'fda'), ('td50', 'interacts', 'ed50'), ('fda', 'interacts', 'dose_response')})",
+      "chunk_text": "Therapeutic index TD50/ED50 \u224812 (ED50_plasticity ~5 mg psilocybin; TD50_destab ~60 mg), exceeding FDA prior >10."
+    },
+    {
+      "statement": "5 (SPECULATIVE):** CYP3A4 inhibition by CBD (threshold = 1.0 \u00b5M) may indirectly widen psilocybin\u2019s therapeutic window by reducing psilocin metabolism, but this effect is negligible at typical CBD doses (PRIOR: CBD_therapeutic_window = 1\u201310 \u00b5M).",
+      "mechanism": "CBD-mediated CYP3A4 inhibition could prolong psilocin\u2019s half-life, but plasma CBD rarely exceeds 1 \u00b5M in clinical settings, limiting practical impact.",
+      "falsifiable_by": "PK studies showing no change in psilocin clearance with co-administered CBD at 1\u201310 \u00b5M. --- ###",
+      "type": 3,
+      "confidence": 0.6,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('cyp3a4', 'interacts', 'cbd'), ('cbd', 'interacts', 'prior'), ('speculative', 'interacts', 'cyp3a4')})",
+      "chunk_text": "5 (SPECULATIVE):** CYP3A4 inhibition by CBD (threshold = 1.0 \u00b5M) may indirectly widen psilocybin\u2019s therapeutic window by reducing psilocin metabolism, but this effect is negligible at typical CBD doses (PRIOR: CBD_therapeutic_window = 1\u201310 \u00b5M)."
+    },
+    {
+      "statement": "2: The singular thread for psilocin Ki (6-25 nM) is valid",
+      "mechanism": "",
+      "falsifiable_by": "",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "deepseek"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "2: The singular thread for psilocin Ki (6-25 nM) is valid"
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.09948011502183939,
+      "cosine": 0.6610735416412353,
+      "jsd": 0.07474659959973073,
+      "kappa": 0.9801546157344249,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.5,
+        "2": 0.375,
+        "3": 0.125
+      },
+      "type_01_ratio": 0.5,
+      "n_claims_per_model": [
+        4,
+        5,
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.24253920607598944,
+      "cosine": 0.7239621996879577,
+      "jsd": 0.22318717048171913,
+      "kappa": 0.9377723378212977,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.4,
+        "2": 0.4,
+        "3": 0.2
+      },
+      "type_01_ratio": 0.4,
+      "n_claims_per_model": [
+        4,
+        5,
+        2,
+        2,
+        2
+      ]
+    }
+  ]
+}

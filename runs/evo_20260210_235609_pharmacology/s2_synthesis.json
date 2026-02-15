@@ -1,0 +1,59 @@
+{
+  "synthesized_claims": [
+    "SynthesizedClaim(statement='2:** Neuroprotection at low dose is mediated primarily by indirect GSK-3\u03b2 inhibition via Akt-Ser9 phosphorylation amplification, with effective EC50 ~0.2\u20130.5 mM intracellular \u2014 achievable at plasma [Li\u207a] of 0.2\u20130.4 mM.', mechanism='Li\u207a inhibits PP1/PP2A-mediated dephosphorylation of Akt-phosphorylated GSK-3\u03b2-Ser9, creating a signal amplification loop where small [Li\u207a] produces disproportionate GSK-3\u03b2 suppression.', falsifiable_by='Demonstrating that Ser9A knock-in mice (phospho-dead GSK-3\u03b2) still show lithium neuroprotection at low doses, or that direct Ki (~2 mM) is required.', type=0, confidence=0.887, overlap_count=4, models=['claude', 'gemini', 'grok', 'mistral'], tuples=frozenset({('ec50', 'downregulates', 'pp1')}), chunk_text='2:** Neuroprotection at low dose is mediated primarily by indirect GSK-3\u03b2 inhibition via Akt-Ser9 phosphorylation amplification, with effective EC50 ~0.2\u20130.5 mM intracellular \u2014 achievable at plasma [Li\u207a] of 0.2\u20130.4 mM.')",
+    "SynthesizedClaim(statement='Nephrotoxicity exhibits a sharp, non-linear dose-response (Hill coefficient > 1.5) because intracellular Li\u207a accumulation past a critical threshold (~2-3 mM) triggers cooperative, catastrophic events like NLRP3 inflammasome activation.', mechanism='Beyond simple enzyme inhibition, supraphysiological intracellular cation levels trigger stress responses that function as all-or-none switches, amplifying cellular damage in a highly cooperative manner.', falsifiable_by='In vitro dose-response studies in human renal principal cells showing lithium-induced cytotoxicity follows a simple monophasic curve with a Hill coefficient of ~1.0. \u2500\u2500\u2500', type=1, confidence=0.767, overlap_count=3, models=['gemini', 'grok', 'mistral'], tuples=frozenset({('er_stress', 'upregulates', 'nlrp3'), ('hill_n', 'upregulates', 'nlrp3')}), chunk_text='Nephrotoxicity exhibits a sharp, non-linear dose-response (Hill coefficient > 1.5) because intracellular Li\u207a accumulation past a critical threshold (~2-3 mM) triggers cooperative, catastrophic events like NLRP3 inflammasome activation.')",
+    "SynthesizedClaim(statement='The functional therapeutic window is created by differential bioaccumulation: brain intracellular [Li\u207a] equilibrates near serum levels (~1x), while renal collecting duct cells concentrate Li\u207a to >5x serum levels via apical ENaC influx and poor basolateral efflux.', mechanism='Neurons maintain ionic homeostasis via efficient transporters, whereas renal principal cells are specialized for Na\u207a reabsorption, a system Li\u207a hijacks for entry but not for efficient exit, leading to concentration trapping.', falsifiable_by='In vivo imaging (e.g., \u2077Li-MRI) demonstrating that intracellular [Li\u207a] in the renal medulla does not exceed 2x the concentration in the prefrontal cortex at therapeutic serum levels.', type=2, confidence=0.915, overlap_count=2, models=['claude', 'gemini'], tuples=frozenset(), chunk_text='The functional therapeutic window is created by differential bioaccumulation: brain intracellular [Li\u207a] equilibrates near serum levels (~1x), while renal collecting duct cells concentrate Li\u207a to >5x serum levels via apical ENaC influx and poor basolateral efflux.')",
+    "SynthesizedClaim(statement='2:** *Nephrotoxicity arises from intracellular [Li\u207a] trapping in renal principal cells (2\u201320\u00d7 plasma levels) due to ENaC-mediated uptake and poor Na\u207a/K\u207a-ATPase efflux, exceeding IMPase Ki (~0.8 mM) and disrupting AQP2 trafficking.', mechanism='ENaC admits Li\u207a with P_Li/P_Na \u22651, but basolateral Na\u207a/K\u207a-ATPase extrudes Li\u207a ~10\u00d7 slower than Na\u207a, causing accumulation to 2\u201316 mM at 0.8 mM plasma, triggering IMPase inhibition and lysosomal stress.', falsifiable_by='If ENaC-knockout mice show no renal [Li\u207a] accumulation or nephrotoxicity at therapeutic doses, or if intracellular [Li\u207a] in principal cells remains <1 mM at 0.8 mM plasma. ---', type=2, confidence=0.867, overlap_count=2, models=['grok', 'mistral'], tuples=frozenset(), chunk_text='2:** *Nephrotoxicity arises from intracellular [Li\u207a] trapping in renal principal cells (2\u201320\u00d7 plasma levels) due to ENaC-mediated uptake and poor Na\u207a/K\u207a-ATPase efflux, exceeding IMPase Ki (~0.8 mM) and disrupting AQP2 trafficking.')",
+    "SynthesizedClaim(statement='4:** The clinical therapeutic index (~2\u20133) dramatically underestimates the *brain-specific* TI because brain [Li\u207a] at toxic plasma levels (~1.5 mM) remains ~1\u20131.8 mM \u2014 still below direct GSK-3\u03b2 Ki \u2014 while kidney [Li\u207a] reaches 5\u201315 mM.', mechanism='The organ-specific TI for brain neuroprotection vs. renal toxicity is ~10\u201320\u00d7 when indexed to intracellular concentrations rather than plasma.', falsifiable_by='Paired brain MRS lithium imaging and renal biopsy [Li\u207a] measurements showing <3-fold tissue concentration difference. \u2500\u2500\u2500', type=2, confidence=0.8, overlap_count=2, models=['claude', 'mistral'], tuples=frozenset({('ti', 'interacts', 'gsk')}), chunk_text='4:** The clinical therapeutic index (~2\u20133) dramatically underestimates the *brain-specific* TI because brain [Li\u207a] at toxic plasma levels (~1.5 mM) remains ~1\u20131.8 mM \u2014 still below direct GSK-3\u03b2 Ki \u2014 while kidney [Li\u207a] reaches 5\u201315 mM.')",
+    "SynthesizedClaim(statement='Brain [Li\u207a]_intra equilibrates to 1-1.5\u00d7 plasma (slow BBB uptake), keeping peak ~1 mM at therapeutic doses below general cytotoxicity IC50 (>5 mM).', mechanism='BBB restricts but equilibrates via transporters; no trapping unlike ENaC.', falsifiable_by='ICP-MS showing brain [Li\u207a] >2\u00d7 plasma in vivo at steady-state.', type=3, confidence=0.85, overlap_count=1, models=['grok'], tuples=frozenset({('bbb', 'interacts', 'ic50')}), chunk_text='Brain [Li\u207a]_intra equilibrates to 1-1.5\u00d7 plasma (slow BBB uptake), keeping peak ~1 mM at therapeutic doses below general cytotoxicity IC50 (>5 mM).')",
+    "SynthesizedClaim(statement='Dose-discrepancy from PK-driven TI expansion: effective brain TI_GSK3 ~20-50 (ED50_plasma 0.2 mM / TD50_plasma 10 mM), renal TI_ENaC ~2-3 due to 5\u00d7 accumulation factor.', mechanism='Accumulation factor (AF_kidney/AF_brain ~5) \u00d7 target Ki ratio shrinks apparent plasma TI below prior minimum=10.', falsifiable_by='Hill n=1 uniform toxicity curve across tissues, ignoring PK.', type=3, confidence=0.82, overlap_count=1, models=['grok'], tuples=frozenset({('pk', 'interacts', 'ti')}), chunk_text='Dose-discrepancy from PK-driven TI expansion: effective brain TI_GSK3 ~20-50 (ED50_plasma 0.2 mM / TD50_plasma 10 mM), renal TI_ENaC ~2-3 due to 5\u00d7 accumulation factor.')",
+    "SynthesizedClaim(statement='3:** Nephrotoxicity involves a threshold/cooperative mechanism (effective Hill n \u2248 1.5\u20132.5) because damage requires simultaneous IMPase inhibition (Ki ~0.8 mM), disrupted AQP2 trafficking, and ER stress \u2014 each independently insufficient.', mechanism='(effective Hill n \u2248 1.5\u20132.5) because damage requires simultaneous IMPase inhibition (Ki ~0.8 mM), disrupted AQP2 trafficking, and ER stress \u2014 each independently insufficient.', falsifiable_by='Showing linear dose-response for renal biomarkers (NGAL, KIM-1) across the full plasma range 0.2\u20131.5 mM, contradicting threshold behavior.', type=3, confidence=0.7, overlap_count=1, models=['claude'], tuples=frozenset({('aqp2', 'interacts', 'er_stress')}), chunk_text='3:** Nephrotoxicity involves a threshold/cooperative mechanism (effective Hill n \u2248 1.5\u20132.5) because damage requires simultaneous IMPase inhibition (Ki ~0.8 mM), disrupted AQP2 trafficking, and ER stress \u2014 each independently insufficient.')",
+    "SynthesizedClaim(statement='The primary mechanism for the dose-discrepancy is differential intracellular accumulation: kidney principal cells achieve 3-5x plasma [Li\u207a] (therapeutic plasma 0.8 mM \u2192 ~3 mM intracellular), exceeding the Ki for IMPase inhibition (~0.8 mM), while brain neurons achieve only 0.8-1.2x plasma [Li\u207a', mechanism='for the dose-discrepancy is differential intracellular accumulation: kidney principal cells achieve 3-5x plasma [Li\u207a] (therapeutic plasma 0.8 mM \u2192 ~3 mM intracellular), exceeding the Ki for IMPase inhibition (~0.8 mM), while brain neurons achieve only 0.8-1.2x plasma [Li\u207a', falsifiable_by='', type=3, confidence=0.5, overlap_count=1, models=['deepseek'], tuples=frozenset(), chunk_text='The primary mechanism for the dose-discrepancy is differential intracellular accumulation: kidney principal cells achieve 3-5x plasma [Li\u207a] (therapeutic plasma 0.8 mM \u2192 ~3 mM intracellular), exceeding the Ki for IMPase inhibition (~0.8 mM), while brain neurons achieve only 0.8-1.2x plasma [Li\u207a')"
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.14712661123369197,
+      "cosine": 0.7617817640304565,
+      "jsd": 0.1522721453854873,
+      "kappa": 0.8794575822722012,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.5555555555555556,
+        "2": 0.3888888888888889,
+        "3": 0.05555555555555555
+      },
+      "type_01_ratio": 0.5555555555555556,
+      "n_claims_per_model": [
+        4,
+        5,
+        5,
+        3,
+        1
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.3190561763472643,
+      "cosine": 0.8028715670108795,
+      "jsd": 0.28934046854804585,
+      "kappa": 0.9160372704850642,
+      "type_distribution": {
+        "0": 0.23529411764705882,
+        "1": 0.17647058823529413,
+        "2": 0.35294117647058826,
+        "3": 0.23529411764705882
+      },
+      "type_01_ratio": 0.4117647058823529,
+      "n_claims_per_model": [
+        4,
+        4,
+        5,
+        3,
+        1
+      ]
+    }
+  ]
+}

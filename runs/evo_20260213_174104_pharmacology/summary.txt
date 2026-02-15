@@ -1,0 +1,35 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260213_174104_pharmacology
+Date: 2026-02-13
+Protocol: evo-1.0
+
+QUESTION:
+  What structural features of VDAC isoforms determine ligand selectivity? Specifically: (1) Do CBD, erastin, and DIDS share a common binding site on VDAC1 or engage distinct allosteric mechanisms? (2) What structural differences between VDAC1 and VDAC2 — particularly the additional N-terminal residues of VDAC2 and the BAK-binding interface — could enable isoform-selective ligand design? (3) Does the VDAC1 N-terminal helix (gating domain) vs barrel wall (conductance domain) distinction predict different pharmacological outcomes for allosteric modulators vs pore blockers? (4) Is VDAC2-sparing compound design feasible given >70% transmembrane homology, or must selectivity be achieved through the cofactor landscape (HK-II occupancy, BAK competition)?
+
+CONVERGENCE:
+  S2 rounds: ?
+  Early stopped: ?
+  Final Jaccard: ?
+  Final TYPE 0/1: ?
+  S3 gate: FAILED
+
+VERIFICATION:
+  TYPE 2 claims checked: 0
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 0
+
+LAB GATE:
+  Result: FAILED
+  Claims passed: 0/0
+
+BUDGET:
+  Total LLM calls: ?
+  Target range: 92-142
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

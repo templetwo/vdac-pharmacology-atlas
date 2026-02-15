@@ -1,0 +1,51 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260210_222428_pharmacology+bioelectric
+Date: 2026-02-10
+Protocol: evo-1.0
+
+QUESTION:
+  What are the mechanisms by which CBD induces selective cytotoxicity in cancer cells while sparing healthy cells, with specific reference to VDAC1-mediated mitochondrial membrane potential disruption?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 10
+  Promoted to TYPE 1: 0
+  Novel (no literature): 1
+  Contradicted: 0
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 18/18
+
+HYPOTHESES (ranked by testability):
+  H1. ** IF isolated mitochondria are voltage-clamped at -120 mV (cancer) vs -180 mV (healthy) and exposed to 11 µM CBD, THEN 
+     Testability: 5.0/10
+     Effect size: 0.0 (Cohen's d)
+     Power: 0.0
+
+  H2. ** IF cancer cells (baseline ROS ~0.45 rel.) are treated with 15 µM CBD, THEN MitoSOX fluorescence will exceed 0.8 rel. 
+     Testability: 5.0/10
+     Effect size: 0.0 (Cohen's d)
+     Power: 0.0
+
+  H3. ** IF healthy cells are pre-depolarized from -180 mV to
+     Testability: 5.0/10
+     Effect size: 0.0 (Cohen's d)
+     Power: 0.0
+
+BUDGET:
+  Total LLM calls: 17
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

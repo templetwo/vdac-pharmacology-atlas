@@ -1,0 +1,59 @@
+{
+  "synthesized_claims": [
+    "SynthesizedClaim(statement='2:** The therapeutic index (TD50/ED50) for wellbeing vs. tolerance exceeds 10, with tolerance emerging at ~25 mg/day due to CB1 internalization exceeding recycling/synthesis rates (k_int > k_rec).', mechanism='Tolerance onset is governed by a first-order kinetic crossover point where THC-driven internalization outpaces receptor recovery, reducing surface CB1 density.', falsifiable_by='If tolerance ED50 <25 mg/day (e.g., in PET studies showing >50% CB1 loss at lower doses), or if recycling/synthesis rates (k_rec) are faster than predicted.', type=1, confidence=0.743, overlap_count=3, models=['gemini', 'grok', 'mistral'], tuples=frozenset({('cb1', 'downregulates', 'thc')}), chunk_text='2:** The therapeutic index (TD50/ED50) for wellbeing vs. tolerance exceeds 10, with tolerance emerging at ~25 mg/day due to CB1 internalization exceeding recycling/synthesis rates (k_int > k_rec).')",
+    "SynthesizedClaim(statement='5 (SINGULAR):** The \"critical threshold\" for tolerance is a *kinetic inflection point* where THC-driven CB1 internalization (k_int) equals receptor recycling + de novo synthesis (k_rec + k_syn), occurring at ~30% occupancy.', mechanism='Tolerance emerges when the rate of CB1 loss exceeds recovery, governed by first-order kinetics (d[CB1]/dt = -k_int[THC][CB1] + (k_rec + k_syn)[CB1_int]).', falsifiable_by='If k_int, k_rec, or k_syn values (measured via pulse-chase assays) predict a crossover point \u226030% occupancy. --- ###', type=1, confidence=0.733, overlap_count=3, models=['deepseek', 'gemini', 'mistral'], tuples=frozenset({('singular', 'interacts', 'thc'), ('thc', 'interacts', 'cb1')}), chunk_text='5 (SINGULAR):** The \"critical threshold\" for tolerance is a *kinetic inflection point* where THC-driven CB1 internalization (k_int) equals receptor recycling + de novo synthesis (k_rec + k_syn), occurring at ~30% occupancy.')",
+    "SynthesizedClaim(statement='3:** Sustained wellbeing requires *synergistic 2-AG signaling*: low-dose THC (\u22642.5 mg/day) adds to tonic 2-AG without displacement, while high-dose THC (>10 mg/day) saturates CB1, reducing 2-AG access and upregulating MAGL.', mechanism='Low-dose THC occupies CB1 without competing with 2-AG, preserving tonic signaling; high-dose THC displaces 2-AG, triggering MAGL-mediated degradation.', falsifiable_by='If 2-AG levels increase (not decrease) at high THC doses, or if MAGL inhibition fails to rescue wellbeing at high doses.', type=1, confidence=0.702, overlap_count=3, models=['deepseek', 'grok', 'mistral'], tuples=frozenset({('ag', 'upregulates', 'magl'), ('ag', 'downregulates', 'cb1')}), chunk_text='3:** Sustained wellbeing requires *synergistic 2-AG signaling*: low-dose THC (\u22642.5 mg/day) adds to tonic 2-AG without displacement, while high-dose THC (>10 mg/day) saturates CB1, reducing 2-AG access and upregulating MAGL.')",
+    "SynthesizedClaim(statement='1:** Chronic low-dose THC (\u22642.5 mg/day) improves wellbeing via *biphasic CB1 signaling*: G-protein activation (EC50 ~10 nM) dominates at 10\u201330% occupancy, while \u03b2-arrestin recruitment (EC50 >100 nM) is avoided, preserving cAMP/PKA tone.', mechanism='Partial agonism at CB1 maintains receptor sensitivity by favoring G-protein coupling over \u03b2-arrestin, preventing desensitization while enhancing tonic endocannabinoid signaling.', falsifiable_by='If \u03b2-arrestin recruitment occurs at \u22642.5 mg/day (e.g., via BRET assays in vivo), or if cAMP/PKA signaling is suppressed at this dose.', type=2, confidence=0.707, overlap_count=2, models=['claude', 'mistral'], tuples=frozenset({('cb1', 'interacts', 'ec50'), ('ec50', 'interacts', 'pka'), ('thc', 'interacts', 'cb1')}), chunk_text='1:** Chronic low-dose THC (\u22642.5 mg/day) improves wellbeing via *biphasic CB1 signaling*: G-protein activation (EC50 ~10 nM) dominates at 10\u201330% occupancy, while \u03b2-arrestin recruitment (EC50 >100 nM) is avoided, preserving cAMP/PKA tone.')",
+    "SynthesizedClaim(statement='HPA axis recalibration via PVN CB1 is a primary mediator of sustained wellbeing, reducing tonic CRH release by ~20-35% over 2-4 weeks, measurable as decreased morning cortisol AUC.', mechanism='CB1 on glutamatergic afferents to PVN CRH neurons provides retrograde inhibition; chronic low-dose enhancement strengthens this brake, lowering stress-axis set-point without ablating acute reactivity.', falsifiable_by='Chronic low-dose THC failing to reduce salivary cortisol AUC in controlled trials, or CB1 conditional knockout in PVN afferents abolishing wellbeing effects without affecting other endpoints. \u2500\u2500\u2500', type=2, confidence=0.635, overlap_count=2, models=['claude', 'mistral'], tuples=frozenset({('cb1', 'downregulates', 'crh')}), chunk_text='HPA axis recalibration via PVN CB1 is a primary mediator of sustained wellbeing, reducing tonic CRH release by ~20-35% over 2-4 weeks, measurable as decreased morning cortisol AUC.')",
+    "SynthesizedClaim(statement='Sustained wellbeing is mediated by a lasting potentiation of endocannabinoid-dependent long-term depression (eCB-LTD) at excitatory synapses onto CRH-releasing neurons in the PVN and output neurons of the basolateral amygdala.', mechanism=\"Chronic sub-saturating CB1 occupancy lowers the threshold for synaptically-released 2-AG to trigger presynaptic inhibition, effectively 'stamping in' a less anxious, lower-stress-reactive state.\", falsifiable_by='Rodent slice electrophysiology showing that chronic low-dose THC *ex vivo* enhances the magnitude and duration of electrically-induced LTD in amygdalar slices, an effect blocked by CB1 antagonists.', type=3, confidence=0.75, overlap_count=1, models=['gemini'], tuples=frozenset({('ag', 'downregulates', 'cb1')}), chunk_text='Sustained wellbeing is mediated by a lasting potentiation of endocannabinoid-dependent long-term depression (eCB-LTD) at excitatory synapses onto CRH-releasing neurons in the PVN and output neurons of the basolateral amygdala.')",
+    "SynthesizedClaim(statement='THC \u03b2-arrestin recruitment EC50 > G-protein EC50 (bias factor ~3-5), so low occupancy (<30%) yields therapeutic cAMP inhibition without GRK2/\u03b2arr downregulation.', mechanism='Biased agonism preserves receptor recycling (t1/2~hours) by limiting phosphorylation at low efficacy occupancy.', falsifiable_by='BRET assays showing \u03b2-arrestin EC50 < G-protein EC50 for THC.', type=3, confidence=0.71, overlap_count=1, models=['grok'], tuples=frozenset({('ec50', 'interacts', 'grk2'), ('thc', 'interacts', 'ec50')}), chunk_text='THC \u03b2-arrestin recruitment EC50 > G-protein EC50 (bias factor ~3-5), so low occupancy (<30%) yields therapeutic cAMP inhibition without GRK2/\u03b2arr downregulation.')",
+    "SynthesizedClaim(statement='1: The therapeutic window for sustained wellbeing is defined by CB1 occupancy <30%, where the fractional G-protein activation (fG) exceeds fractional \u03b2-arrestin recruitment (f\u03b2) by a factor >2 (fG/f\u03b2 >2), preventing significant downregulation.', mechanism='Low occupancy favors coupling to Gi/o over \u03b2-arrestin-2 due to ligand bias and spare receptors for G-protein signaling.', falsifiable_by='In vivo imaging showing \u03b2-arrestin recruitment at <30% occupancy with low-dose THC, or wellbeing benefits persisting despite pharmacological blockade of G\u03b1i.', type=3, confidence=0.7, overlap_count=1, models=['deepseek'], tuples=frozenset(), chunk_text='1: The therapeutic window for sustained wellbeing is defined by CB1 occupancy <30%, where the fractional G-protein activation (fG) exceeds fractional \u03b2-arrestin recruitment (f\u03b2) by a factor >2 (fG/f\u03b2 >2), preventing significant downregulation.')",
+    "SynthesizedClaim(statement='The tolerance crossover point is governed by first-order kinetics: therapeutic window persists while k_recycle + k_synthesis > k_int \u00d7 fractional_occupancy. For CB1, k_recycle \u2248 0.02 min\u207b\u00b9, k_int \u2248 0.05 min\u207b\u00b9 at full occupancy. Crossover occurs at ~40-50% sustained occupancy, corresponding to ~10-15 mg/day chronic dosing.', mechanism='CB1 internalization follows agonist-driven \u03b2-arrestin-dependent endocytosis; at low occupancy, the internalization flux (k_int \u00d7 occupied_receptors) remains below the constitutive recycling/synthesis flux, maintaining steady-state surface density.', falsifiable_by='Quantitative PET (e.g., [\u00b9\u00b9C]OMAR) time-series in humans at graded chronic doses showing tolerance onset at occupancies inconsistent with this model, or CB1 surface density measurements via ex vivo binding showing no occupancy-dependent threshold.', type=3, confidence=0.45, overlap_count=1, models=['claude'], tuples=frozenset(), chunk_text='The tolerance crossover point is governed by first-order kinetics: therapeutic window persists while k_recycle + k_synthesis > k_int \u00d7 fractional_occupancy. For CB1, k_recycle \u2248 0.02 min\u207b\u00b9, k_int \u2248 0.05 min\u207b\u00b9 at full occupancy. Crossover occurs at ~40-50% sustained occupancy, corresponding to ~10-15 mg/day chronic dosing.')"
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.041363636363636366,
+      "cosine": 0.7534498274326324,
+      "jsd": 0.1385011769495049,
+      "kappa": 0.9845904378536435,
+      "type_distribution": {
+        "0": 0.10526315789473684,
+        "1": 0.5789473684210527,
+        "2": 0.21052631578947367,
+        "3": 0.10526315789473684
+      },
+      "type_01_ratio": 0.6842105263157895,
+      "n_claims_per_model": [
+        4,
+        5,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.32571428571428573,
+      "cosine": 0.8109906673431396,
+      "jsd": 0.24917025085224873,
+      "kappa": 0.9081206496519719,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.5294117647058824,
+        "2": 0.23529411764705882,
+        "3": 0.23529411764705882
+      },
+      "type_01_ratio": 0.5294117647058824,
+      "n_claims_per_model": [
+        3,
+        5,
+        3,
+        3,
+        3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "The cytotoxic threshold for VDAC1 ligands scales as Kd \u00d7 (1 + [HK-II]/Ki_HK) \u00d7 (Bcl-xL/Bax) \u00d7 (1 + [tubulin]/Ki_tub), yielding >10\u00d7 higher thresholds in neurons (TI > 10) vs. cancer cells (TI < 5).",
+      "mechanism": "HK-II, Bcl-xL, and tubulin act as competitive inhibitors of ligand-induced oligomerization by sequestering VDAC1 monomers; their combined buffering capacity sets the free VDAC1 fraction.",
+      "falsifiable_by": "Quantitative proteomics showing no difference in HK-II/VDAC1 stoichiometry between neurons and glioma, or FRET assays showing no cofactor-dependent shift in ligand Kd.",
+      "type": 1,
+      "confidence": 0.683,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('ti', 'interacts', 'cancer_cell'), ('hk', 'interacts', 'ti'), ('vdac1', 'interacts', 'hk')})",
+      "chunk_text": "The cytotoxic threshold for VDAC1 ligands scales as Kd \u00d7 (1 + [HK-II]/Ki_HK) \u00d7 (Bcl-xL/Bax) \u00d7 (1 + [tubulin]/Ki_tub), yielding >10\u00d7 higher thresholds in neurons (TI > 10) vs. cancer cells (TI < 5)."
+    },
+    {
+      "statement": "Tubulin binding to VDAC1\u2019s C-terminus (Kd ~1 \u00b5M) raises the cytotoxic threshold 2\u00d7 by sterically blocking inter-VDAC1 contacts, but this effect is saturable and cell-type-dependent (high in neurons, low in astrocytes).",
+      "mechanism": "Tubulin\u2019s unstructured C-terminus occludes VDAC1\u2019s oligomerization interface, reducing the probability of tetramer formation.",
+      "falsifiable_by": "Crosslinking mass spectrometry showing no tubulin-VDAC1 proximity in neurons, or mutagenesis of VDAC1\u2019s C-terminus failing to alter tubulin\u2019s protective effect.",
+      "type": 2,
+      "confidence": 0.633,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac1', 'has', 'value')})",
+      "chunk_text": "Tubulin binding to VDAC1\u2019s C-terminus (Kd ~1 \u00b5M) raises the cytotoxic threshold 2\u00d7 by sterically blocking inter-VDAC1 contacts, but this effect is saturable and cell-type-dependent (high in neurons, low in astrocytes)."
+    },
+    {
+      "statement": "3:** The biphasic response is mechanistically distinct at low vs. high occupancy: sub-Kd CBD (<5 \u00b5M) allosterically enhances HK-II\u2013VDAC1 affinity (positive cooperativity at N-terminal helix), while supra-3\u00d7Kd CBD (>33 \u00b5M) induces N-terminal helix displacement, competitively ejecting HK-II.",
+      "mechanism": "CBD binds a lipid-facing pocket near the VDAC1 N-terminal helix; low occupancy stabilizes helix-in conformation (HK-II-compatible), high occupancy forces helix-out (HK-II-incompatible, oligomerization-permissive).",
+      "falsifiable_by": "HDX-MS of VDAC1\u00b1CBD titration showing no differential deuterium uptake at the N-terminal helix between 5 \u00b5M and 50 \u00b5M CBD.",
+      "type": 2,
+      "confidence": 0.625,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cbd', 'upregulates', 'hk'), ('cbd', 'interacts', 'vdac1')})",
+      "chunk_text": "3:** The biphasic response is mechanistically distinct at low vs. high occupancy: sub-Kd CBD (<5 \u00b5M) allosterically enhances HK-II\u2013VDAC1 affinity (positive cooperativity at N-terminal helix), while supra-3\u00d7Kd CBD (>33 \u00b5M) induces N-terminal helix displacement, competitively ejecting HK-II."
+    },
+    {
+      "statement": "The therapeutic window for a neuroprotective VDAC1 ligand like CBD is practically non-existent due to off-target effects. The neuroprotective concentration range (~0.5x Kd \u2248 5.5 \u00b5M) is an order of magnitude *higher* than the CYP3A4 inhibition threshold (1.0 \u00b5M), making clinical application for neuroprotection untenable due to severe drug-drug interactions.",
+      "mechanism": "The separation between the on-target VDAC1 affinity and off-target CYP3A4 inhibition affinity is insufficient to meet the minimum therapeutic index of 10.",
+      "falsifiable_by": "Identification of a VDAC1 ligand with a Kd < 100 nM and >100-fold selectivity against CYP3A4 that demonstrates a clear neuroprotective effect without cytotoxicity. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.95,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'cbd'), ('cbd', 'interacts', 'cyp3a4')})",
+      "chunk_text": "The therapeutic window for a neuroprotective VDAC1 ligand like CBD is practically non-existent due to off-target effects. The neuroprotective concentration range (~0.5x Kd \u2248 5.5 \u00b5M) is an order of magnitude *higher* than the CYP3A4 inhibition threshold (1.0 \u00b5M), making clinical application for neuroprotection untenable due to severe drug-drug interactions."
+    },
+    {
+      "statement": "Oligomerization requires \u22654 adjacent free VDAC1 monomers, so the cytotoxic probability scales as (fraction_free_VDAC1)^4, explaining the steep dose-response curve.",
+      "mechanism": "VDAC1 tetramers form the apoptotic pore; the probability of 4 free monomers colocalizing is a fourth-order function of free fraction.",
+      "falsifiable_by": "Single",
+      "type": 3,
+      "confidence": 0.85,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'dose_response')})",
+      "chunk_text": "Oligomerization requires \u22654 adjacent free VDAC1 monomers, so the cytotoxic probability scales as (fraction_free_VDAC1)^4, explaining the steep dose-response curve."
+    },
+    {
+      "statement": "The biphasic dose-response is an emergent property of mass-action ligand binding, not a switch in mechanism. Low concentrations (< Kd) have minimal impact on the high-affinity VDAC1-cofactor equilibrium, allowing for subtle neuroprotective effects (e.g., channel stabilization), while high concentrations (>5x Kd) are required to competitively displace protective cofactors and expose VDAC1 for oligomerization.",
+      "mechanism": ". Low concentrations (< Kd) have minimal impact on the high-affinity VDAC1-cofactor equilibrium, allowing for subtle neuroprotective effects (e.g., channel stabilization), while high concentrations (>5x Kd) are required to competitively displace protective cofactors and expose VDAC1 for oligomerization.",
+      "falsifiable_by": "A FRET assay demonstrating that a VDAC1 ligand at 0.5x Kd significantly *increases* the VDAC1-HK-II binding affinity, which would prove an allosteric, not competitive, mechanism at low doses.",
+      "type": 3,
+      "confidence": 0.85,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('dose_response', 'interacts', 'vdac1')})",
+      "chunk_text": "The biphasic dose-response is an emergent property of mass-action ligand binding, not a switch in mechanism. Low concentrations (< Kd) have minimal impact on the high-affinity VDAC1-cofactor equilibrium, allowing for subtle neuroprotective effects (e.g., channel stabilization), while high concentrations (>5x Kd) are required to competitively displace protective cofactors and expose VDAC1 for oligomerization."
+    },
+    {
+      "statement": "1:** The neuroprotection-to-cytotoxicity transition follows a cooperative oligomerization threshold: apoptosis requires \u22654 adjacent cofactor-free VDAC1 monomers, so cytotoxicity probability scales as (f_free)^4, where f_free = fraction of VDAC1 not bound by HK-II, Bcl-xL, or tubulin.",
+      "mechanism": "Cofactors sterically shield VDAC1 lateral interfaces; ligand-mediated displacement at high occupancy increases f_free past the percolation threshold for oligomer nucleation, releasing cytochrome c.",
+      "falsifiable_by": "Single-molecule imaging of VDAC1 oligomerization in HK-II-knockdown neurons showing oligomerization at sub-Kd CBD concentrations (eliminating the threshold shift).",
+      "type": 3,
+      "confidence": 0.7,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('cytochrome_c', 'upregulates', 'vdac1')})",
+      "chunk_text": "1:** The neuroprotection-to-cytotoxicity transition follows a cooperative oligomerization threshold: apoptosis requires \u22654 adjacent cofactor-free VDAC1 monomers, so cytotoxicity probability scales as (f_free)^4, where f_free = fraction of VDAC1 not bound by HK-II, Bcl-xL, or tubulin."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.14033011073334728,
+      "cosine": 0.30721274949610233,
+      "jsd": 0.19319877370890173,
+      "kappa": 0.9607918346118841,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.25,
+        "2": 0.5833333333333334,
+        "3": 0.16666666666666666
+      },
+      "type_01_ratio": 0.25,
+      "n_claims_per_model": [
+        4,
+        5,
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.21696048756345646,
+      "cosine": 0.34013776332139967,
+      "jsd": 0.13331392418770593,
+      "kappa": 0.969969040247678,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.2727272727272727,
+        "2": 0.36363636363636365,
+        "3": 0.36363636363636365
+      },
+      "type_01_ratio": 0.2727272727272727,
+      "n_claims_per_model": [
+        4,
+        4,
+        0,
+        3,
+        0
+      ]
+    }
+  ]
+}

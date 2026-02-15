@@ -1,0 +1,184 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260214_043936_pharmacology",
+  "timestamp": "2026-02-14T04:41:20.091275+00:00",
+  "question": "What are the mechanisms by which metformin produces dose-dependent divergent outcomes \u2014 metabolic benefit and insulin sensitization at therapeutic doses versus lactic acidosis and mitochondrial toxicity at supratherapeutic doses \u2014 with specific reference to AMPK activation thresholds, Complex I inhibition kinetics, and the role of tissue-specific mitochondrial reserve in determining whether metformin acts as metabolic optimizer or mitochondrial poison?",
+  "outcome": "S3_FAILED",
+  "cycles": 3,
+  "total_calls": 15,
+  "convergence_report": {
+    "stage": "S3",
+    "passed": false,
+    "convergence_score": 0.8287,
+    "convergence_threshold": 0.85,
+    "convergence_pass": false,
+    "jaccard": 0.1785,
+    "jaccard_threshold": 0.85,
+    "jaccard_pass": false,
+    "type_01_ratio": 0.1667,
+    "type_01_threshold": 0.75,
+    "type_pass": false,
+    "cosine": 0.8287,
+    "jsd": 0.1769,
+    "kappa": 0.92,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.16666666666666666,
+      "2": 0.4444444444444444,
+      "3": 0.3888888888888889
+    },
+    "divergence_map": {
+      "total_unique_claims": 18,
+      "most_divergent": [
+        {
+          "statement": "1:** The therapeutic-toxic divergence arises from a signal amplification mismatch: AMPK's cooperative AMP sensing (effective Hill coefficient ~2\u20133 at \u03b3-subunit) produces near-maximal activation at 20\u201330% Complex I inhibition, while ATP depletion sufficient for cellular failure requires >50\u201360% sustained inhibition.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.88
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2:** Tissue vulnerability follows the product of OCT-mediated uptake rate and inverse SRC: kidney cortex (OCT2-high, SRC ~20\u201330%) > liver (OCT1-high, SRC ~40\u201350%) > skeletal muscle (OCT3-low, SRC ~60\u201370%). Lactic acidosis emerges specifically when hepatic lactate clearance fails due to liver mitochondrial compromise, not primarily from peripheral lactate overproduction.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3:** The ~50% Complex I inhibition threshold identified as singular is mechanistically real and corresponds to the SRC exhaustion point in hepatocytes: below this, oxidative phosphorylation compensates via increased electron flux through remaining Complex I and Complex II; above this, PMF drops below the threshold for ATP synthase operation (~120 mV).",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.78
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4:** Metformin's Complex I inhibition is functionally reversible at therapeutic concentrations (Kd ~20 mM for the IQ site) but becomes kinetically trapped at supratherapeutic intramitochondrial concentrations (>5 mM) due to membrane-potential-driven accumulation and slow off-rate in depolarized mitochondria.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.72
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "1**: The therapeutic window (1\u201310 \u00b5M plasma) is defined by AMPK\u2019s hypersensitive activation (20\u201340% \u0394AMP:ATP) at sub-toxic Complex I inhibition (~20\u201340% block), while lactic acidosis requires >50% irreversible Complex I inhibition (>5 mM mitochondrial [Met]). **TYPE**: 1 (converged + mechanistic) **CONFIDENCE**: 0.88 **MECHANISM**: AMPK\u2019s \u03b3-subunit binds AMP cooperatively (Hill coefficient >1), amplifying sensitivity to mild energetic stress, whereas Complex I inhibition follows non-cooperative kinetics (Hill coefficient ~1), requiring higher [Met] for toxicity. **FALSIFIABLE BY**: Evidence that AMPK activation requires >50% Complex I block, or that Hill coefficients for AMPK and Complex I are identical.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2**: Tissue-specific toxicity is determined by the product of OCT transporter density and mitochondrial reserve, with kidney (OCT2-high, low reserve) > liver (OCT1-high, moderate reserve) > muscle (low OCT, high reserve) vulnerability. **TYPE**: 1 (converged) **CONFIDENCE**: 0.90 **MECHANISM**: OCT2-mediated renal accumulation of Met exceeds mitochondrial buffering capacity (low GSH, spare respiratory capacity), while liver/muscle tolerate transient Complex I inhibition via adenylate kinase and creatine kinase. **FALSIFIABLE BY**: Toxicity in muscle at [Met] < renal cortex, or OCT2-knockout mice showing no renal toxicity.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3**: Supratherapeutic [Met] (>100 \u00b5M plasma) achieves >5 mM mitochondrial [Met], causing irreversible Complex I inhibition via kinetic trapping, PMF collapse, and ROS-mediated GSH depletion. **TYPE**: 2 (novel but plausible) **CONFIDENCE**: 0.82 **MECHANISM**: At [Met] > IC\u2085\u2080 (~2\u201310 mM), Met binds Complex I irreversibly (kinetic trapping), NADH accumulation reverses malate-aspartate shuttle, and PMF collapse triggers lactate efflux via MCT1/4. **FALSIFIABLE BY**: Lactic acidosis at [Met] < IC\u2085\u2080 for Complex I, or lack of correlation between mitochondrial [Met] and toxicity.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4**: Metformin\u2019s dose-dependent effects are modulated by redox-sensitive feedback loops: low doses enhance mitophagy via AMPK-PINK1, while high doses deplete GSH, accelerating mitochondrial dysfunction. **TYPE**: 3 (speculative) **CONFIDENCE**: 0.65 **MECHANISM**: AMPK-PINK1 axis promotes mitophagy at low [Met], but high [Met] depletes GSH, increasing ROS and inhibiting PINK1-mediated clearance. **FALSIFIABLE BY**: Metformin-treated cells with GSH supplementation showing no toxicity at high doses, or PINK1-knockout mice exhibiting no therapeutic effect. ---",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Metformin's therapeutic benefit arises at plasma [Met] 10-50 \u00b5M (mito [Met] 5-25 mM), yielding 20-40% Complex I inhibition\u2014sufficient for AMPK activation (\u0394AMP/ATP 10-20%) but below toxicity threshold\u2014while supratherapeutic >100 \u00b5M (mito >50 mM) exceeds IC50 (2-10 mM), causing >70% inhibition, PMF collapse, and lactic acidosis.",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.92
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Complex I inhibition by metformin is reversible at therapeutic doses (off-rate > cellular transit time, t1/2 <10 min) due to competitive kinetics (Hill n=1, Km ~5 mM), but becomes kinetically trapped/irreversible at supratherapeutic doses (>IC90), amplified by \u0394\u03c8-driven accumulation.",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        }
+      ],
+      "models_present": [
+        "claude",
+        "mistral",
+        "grok",
+        "gemini",
+        "deepseek"
+      ]
+    },
+    "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+  }
+}

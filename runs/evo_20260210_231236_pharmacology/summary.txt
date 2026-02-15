@@ -1,0 +1,56 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260210_231236_pharmacology
+Date: 2026-02-10
+Protocol: evo-1.0
+
+QUESTION:
+  What mechanisms explain why low-dose lithium is neuroprotective while therapeutic-dose lithium causes nephrotoxicity, and what molecular targets determine the dose-dependent switch between cytoprotection and organ toxicity?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 4
+  Promoted to TYPE 1: 0
+  Novel (no literature): 2
+  Contradicted: 0
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 12/19
+
+HYPOTHESES (ranked by testability):
+  H1. IF renal collecting duct cells express functional ENaC, THEN intracellular [Li⁺] will be 2.5–4.0× extracellular [Li⁺] at
+     Testability: 9.0/10
+     Effect size: 1.172 (Cohen's d)
+     Power: 1.0
+
+  H2. IF renal cells are exposed to [Li⁺] >2 mM (mimicking renal intracellular levels), THEN AQP2 apical membrane insertion wi
+     Testability: 8.0/10
+     Effect size: 1.0586 (Cohen's d)
+     Power: 1.0
+
+  H3. IF primary cortical neurons are exposed to 0.3 mM Li⁺, THEN GSK-3β activity decreases 15–25%, Nrf2 nuclear translocation
+     Testability: 8.0/10
+     Effect size: 1.0642 (Cohen's d)
+     Power: 1.0
+
+  H4. IF collecting duct cells experience >50% GSK-3β inhibition (via 3 mM Li⁺), THEN β-catenin-dependent transcription (TOPFl
+     Testability: 7.0/10
+     Effect size: 0.8509 (Cohen's d)
+     Power: 1.0
+
+BUDGET:
+  Total LLM calls: 11
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

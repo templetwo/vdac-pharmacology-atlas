@@ -1,0 +1,220 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF primary human hepatocytes are stratified by baseline GSH/GSSG ratio into tertiles (low <30, mid 30-60, high >60), THEN low-tertile cells treated with CBD (10 \u00b5M, 48h) will show \u22652.5-fold greater LDH release and \u22653-fold greater ALT leakage compared to high-tertile cells, with AUC for GSH/GSSG predicting >20% cell death of 0.65-0.75.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "CBD_concentration": {
+          "mean": 24.84602092519529,
+          "std": 14.201276873516603,
+          "median": 24.471204897636433,
+          "ci_lower": 2.3567955154802336,
+          "ci_upper": 48.244484082273296,
+          "min": 1.3607512177992702,
+          "max": 49.62640263873602
+        },
+        "LDH_release_fold": {
+          "mean": 4.668137966050569,
+          "std": 1.359345143137975,
+          "median": 4.5717764962321095,
+          "ci_lower": 2.419527121981827,
+          "ci_upper": 7.890753984870813,
+          "min": 1.8491364483261497,
+          "max": 8.0
+        },
+        "cell_death_threshold": {
+          "mean": 22.331488389297416,
+          "std": 4.456689248112383,
+          "median": 22.210160556580092,
+          "ci_lower": 15.256456004567635,
+          "ci_upper": 29.760399057723724,
+          "min": 15.018495937678622,
+          "max": 29.981150551001473
+        },
+        "AUC_ROC": {
+          "mean": 0.7051196841338258,
+          "std": 0.11641098584944351,
+          "median": 0.7009889506942184,
+          "ci_lower": 0.5149642641473678,
+          "ci_upper": 0.8934090775225195,
+          "min": 0.5002074976662823,
+          "max": 0.8997687636896752
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5030595751648699,
+          "std": 0.13551130418001597,
+          "median": 0.496324754947065,
+          "ci_lower": 0.25859910191740554,
+          "ci_upper": 0.7791400948867329,
+          "min": 0.20578874921282797,
+          "max": 0.8202350755497805
+        }
+      },
+      "effect_size": 0.858,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF VDAC1 is knocked down (siRNA, >70% reduction) in HepG2 cells, THEN CBD-induced (10 \u00b5M, 48h) ROS production will decrease by \u226540% and cell death by \u226550%, whereas CYP3A4 activity inhibition by CBD will remain unchanged (\u00b110%).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "VDAC1_knockdown_efficiency": {
+          "mean": 74.94831878279487,
+          "std": 8.552139405977647,
+          "median": 74.8468053815908,
+          "ci_lower": 60.79074131510678,
+          "ci_upper": 89.13281251797329,
+          "min": 60.094504582960155,
+          "max": 89.93645232822361
+        },
+        "ROS_reduction": {
+          "mean": 44.790279727031994,
+          "std": 14.281693493782692,
+          "median": 45.15433313540195,
+          "ci_lower": 21.06176277155788,
+          "ci_upper": 68.3899235941239,
+          "min": 20.111024853206253,
+          "max": 69.77913307578154
+        },
+        "cell_death_reduction": {
+          "mean": 50.044895661104704,
+          "std": 14.280290381335602,
+          "median": 49.001075887860026,
+          "ci_lower": 26.702608037454215,
+          "ci_upper": 73.87955116089077,
+          "min": 25.84151566028174,
+          "max": 74.89210204148064
+        },
+        "CBD_IC50_shift": {
+          "mean": 2.0256498817226727,
+          "std": 0.5281344155853779,
+          "median": 1.9579788084337575,
+          "ci_lower": 1.0893526221963592,
+          "ci_upper": 3.0,
+          "min": 1.0,
+          "max": 3.0
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5019514353459749,
+          "std": 0.14848400491034244,
+          "median": 0.49167320363189115,
+          "ci_lower": 0.2350215716024955,
+          "ci_upper": 0.8094736552617353,
+          "min": 0.16822571642893638,
+          "max": 0.866921616738147
+        }
+      },
+      "effect_size": 1.0728,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF hepatocytes are exposed to escalating doses of CBD or erastin, THEN the three-component panel (GSH, ATP/ADP, MMP) will show coordinated dose-dependent deterioration with \u22650.85 Spearman correlation between composite panel score and subsequent cell death (measured 24h later), and the panel at 6h will predict 48h toxicity with AUC \u22650.80.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "GSH_EC50_depletion": {
+          "mean": 11.286633955381102,
+          "std": 4.900528779056956,
+          "median": 10.862241584624789,
+          "ci_lower": 3.637674122407899,
+          "ci_upper": 19.535111551590532,
+          "min": 3.093420542315391,
+          "max": 19.92155666557702
+        },
+        "ATP_ADP_ratio_baseline": {
+          "mean": 7.875800839780666,
+          "std": 2.349601782163501,
+          "median": 7.76840477666264,
+          "ci_lower": 4.1994804892847,
+          "ci_upper": 11.759339693657907,
+          "min": 4.010290010325984,
+          "max": 11.942262887991857
+        },
+        "ATP_ADP_ratio_at_toxic_dose": {
+          "mean": 1.704787550571895,
+          "std": 0.7384338179803809,
+          "median": 1.6521676574187678,
+          "ci_lower": 0.5653723740263815,
+          "ci_upper": 2.9284099278898674,
+          "min": 0.5083095381517184,
+          "max": 2.9869977279315374
+        },
+        "MMP_reduction_at_EC50": {
+          "mean": 44.07983865112405,
+          "std": 8.452768929788366,
+          "median": 43.12886345772232,
+          "ci_lower": 30.643951923691365,
+          "ci_upper": 58.55150342147325,
+          "min": 30.012979516382476,
+          "max": 59.91179706086421
+        },
+        "panel_AUC_for_48h_death": {
+          "mean": 0.7903482821155217,
+          "std": 0.10519011704828336,
+          "median": 0.8064719558561781,
+          "ci_lower": 0.6129263119348458,
+          "ci_upper": 0.9414459173196735,
+          "min": 0.6004453777426675,
+          "max": 0.9481818207759285
+        },
+        "Spearman_rho": {
+          "mean": 0.7804365784644023,
+          "std": 0.10068242739702599,
+          "median": 0.7852347149372935,
+          "ci_lower": 0.6115115890072609,
+          "ci_upper": 0.9434829535322452,
+          "min": 0.6000159022144247,
+          "max": 0.94998938421188
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.497092075396723,
+          "std": 0.11812534802979513,
+          "median": 0.49466291062120515,
+          "ci_lower": 0.2690488316323491,
+          "ci_upper": 0.7478703774477341,
+          "min": 0.135362612783667,
+          "max": 0.8268591734411609
+        }
+      },
+      "effect_size": 0.806,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF a panel of cancer cell lines (n\u226515) is ranked by VDAC1 protein expression, THEN VDAC1-high lines (top quartile) will show \u22653-fold lower IC50 for erastin and \u22652-fold lower IC50 for CBD compared to VDAC1-low lines (bottom quartile), with VDAC1 expression explaining \u226530% of variance in drug sensitivity (R\u00b2 \u22650.30).",
+      "n_iterations": 300,
+      "parameters_sampled": {},
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5,
+          "std": 0.0,
+          "median": 0.5,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "min": 0.5,
+          "max": 0.5
+        }
+      },
+      "effect_size": 0.0,
+      "power_estimate": 0.0,
+      "convergence_check": true,
+      "seed": 45
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_iterations": 1200,
+  "total_calls": 0
+}

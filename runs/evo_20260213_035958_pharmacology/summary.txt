@@ -1,0 +1,56 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260213_035958_pharmacology
+Date: 2026-02-13
+Protocol: evo-1.0
+
+QUESTION:
+  Does the dual-pathway VDAC1 mechanism for CBD hepatotoxicity withstand critical scrutiny against four specific challenges: (1) Does rapid CYP450 metabolic clearance in healthy liver prevent CBD from reaching VDAC1 saturation occupancy time, and does the primary metabolite 7-OH-CBD also bind VDAC1? (2) Does CBD bind selectively to VDAC1 over VDAC2, given that VDAC2 is anti-apoptotic — and if CBD inhibits both isoforms, could it promote apoptosis even in healthy hepatocytes? (3) Is a 2x ROS scavenging ratio between healthy and cancer cells realistic for human hepatocytes, and at what intracellular CBD concentration does the glutathione pool deplete? (4) Does CBD physically occlude the VDAC pore (causing ATP depletion and energy starvation) or lock it open (causing uncoupling and ROS), and does a ROS-focused model miss the starvation death pathway?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 10
+  Promoted to TYPE 1: 2
+  Novel (no literature): 1
+  Contradicted: 1
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 16/20
+
+HYPOTHESES (ranked by testability):
+  H4. IF CBD is applied to matched primary human hepatocytes and HCC cell lines, THEN the EC50 for GSH depletion (to <50% base
+     Testability: 9.0/10
+     Effect size: 0.7275 (Cohen's d)
+     Power: 1.0
+
+  H1. IF CBD (logP 6.3) is administered to isolated hepatocytes at clinically relevant bulk concentrations (1-10 µM), THEN mit
+     Testability: 7.0/10
+     Effect size: 0.9309 (Cohen's d)
+     Power: 1.0
+
+  H3. IF CBD binds VDAC1 with Kd ~11 µM, THEN it will bind VDAC2 with Kd within 5-fold (2-55 µM), AND CBD treatment (10-50 µM)
+     Testability: 7.0/10
+     Effect size: 0.9216 (Cohen's d)
+     Power: 1.0
+
+  H2. IF CBD is applied to reconstituted VDAC1 in planar lipid bilayers, THEN it will NOT produce zero-conductance block event
+     Testability: 6.0/10
+     Effect size: 1.0055 (Cohen's d)
+     Power: 1.0
+
+BUDGET:
+  Total LLM calls: 17
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

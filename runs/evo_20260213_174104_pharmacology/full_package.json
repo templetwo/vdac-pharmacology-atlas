@@ -1,0 +1,184 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260213_174104_pharmacology",
+  "timestamp": "2026-02-13T17:43:02.727946+00:00",
+  "question": "What structural features of VDAC isoforms determine ligand selectivity? Specifically: (1) Do CBD, erastin, and DIDS share a common binding site on VDAC1 or engage distinct allosteric mechanisms? (2) What structural differences between VDAC1 and VDAC2 \u2014 particularly the additional N-terminal residues of VDAC2 and the BAK-binding interface \u2014 could enable isoform-selective ligand design? (3) Does the VDAC1 N-terminal helix (gating domain) vs barrel wall (conductance domain) distinction predict different pharmacological outcomes for allosteric modulators vs pore blockers? (4) Is VDAC2-sparing compound design feasible given >70% transmembrane homology, or must selectivity be achieved through the cofactor landscape (HK-II occupancy, BAK competition)?",
+  "outcome": "S3_FAILED",
+  "cycles": 3,
+  "total_calls": 15,
+  "convergence_report": {
+    "stage": "S3",
+    "passed": false,
+    "convergence_score": 0.8344,
+    "convergence_threshold": 0.85,
+    "convergence_pass": false,
+    "jaccard": 0.3744,
+    "jaccard_threshold": 0.85,
+    "jaccard_pass": false,
+    "type_01_ratio": 0.8667,
+    "type_01_threshold": 0.75,
+    "type_pass": true,
+    "cosine": 0.8344,
+    "jsd": 0.2501,
+    "kappa": 0.8603,
+    "type_distribution": {
+      "0": 0.26666666666666666,
+      "1": 0.6,
+      "2": 0.0,
+      "3": 0.13333333333333333
+    },
+    "divergence_map": {
+      "total_unique_claims": 15,
+      "most_divergent": [
+        {
+          "statement": "CBD, erastin, and DIDS engage three structurally and mechanistically distinct VDAC1 sites \u2014 lipid-protein interface (CBD), interior barrel wall \u03b214-19 (erastin), and pore vestibule lysines (DIDS) \u2014 with no significant competitive overlap.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.78
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "VDAC2's 11-residue N-terminal extension sterically remodels the helix-groove pocket, reducing CBD-type ligand affinity by \u226510-fold and enabling VDAC1-selective design without relying solely on cofactor competition.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.55
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "At clinical concentrations (1\u201310 \u03bcM), CBD achieves only ~30\u201350% VDAC1 occupancy (Kd = 11 \u03bcM), producing graded gating modulation rather than channel ablation \u2014 this partial occupancy is pharmacologically essential for tolerability.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.8
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Barrel-wall ligands (erastin class) produce near-binary conductance block (Hill coefficient \u22651.5, steep dose-response), while helix-site ligands (CBD class) produce graded allosteric modulation (Hill coefficient ~1, shallow dose-response), representing pharmacologically distinct classes.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.6
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "1**: CBD, erastin, and DIDS bind three distinct VDAC1 sites: CBD at the lipid-protein interface near the N-term helix, erastin in the barrel wall (\u03b214\u201319), and DIDS covalently at pore-facing lysines (K12/K20). *TYPE*: 1 *CONFIDENCE*: 0.85 *MECHANISM*: CBD\u2019s lipophilicity (logP 6.3) drives partitioning into membrane-adjacent grooves; erastin\u2019s sulfonamide engages polar barrel residues (E73/R15); DIDS\u2019s isothiocyanates react with solvent-accessible lysines. *FALSIFIABLE BY*: Cryo-EM showing CBD in the barrel lumen or erastin at the N-term; mutagenesis (K12A/K20A) abolishing DIDS binding without affecting erastin.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2**: VDAC2\u2019s +11aa N-terminal extension sterically occludes VDAC1-like CBD/erastin sites, enabling >10-fold VDAC1 selectivity at 1\u201311 \u03bcM. *TYPE*: 1 *CONFIDENCE*: 0.75 *MECHANISM*: The extended N-term in VDAC2 (unstructured/helical) shields the gating domain, reducing ligand access vs. VDAC1\u2019s compact helix. *FALSIFIABLE BY*: Chimeric VDAC1/2 constructs (VDAC1 + VDAC2 N-term) showing reduced CBD affinity; cryo-EM of VDAC2 with CBD bound.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3**: N-term helix ligands (e.g., CBD) act as allosteric gating modulators (EC50 ~11 \u03bcM), while barrel ligands (erastin/DIDS) act as pore blockers (Ki <1 \u03bcM). *TYPE*: 1 *CONFIDENCE*: 0.70 *MECHANISM*: Hel",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "CBD, erastin, DIDS bind distinct VDAC1 sites: CBD at lipid-facing N-helix groove (residues 1-25/\u03b21-2), erastin in barrel lumen (\u03b214-19, E73",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "VDAC1 ligand binding sites define two distinct pharmacological classes: (1) N-terminal helix binders (e.g., CBD) are allosteric modulators of voltage-gating, and (2) Barrel-occluding ligands (e.g., erastin, DIDS) are direct conductance blockers.",
+          "models_supporting": [
+            "gemini"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.9
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "The VDAC2 N-terminal extension sterically hinders the VDAC1-like CBD binding pocket, reducing CBD affinity by at least an order of magnitude (predicted VDAC2 Kd > 100 \u03bcM).",
+          "models_supporting": [
+            "gemini"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        }
+      ],
+      "models_present": [
+        "claude",
+        "mistral",
+        "grok",
+        "gemini",
+        "deepseek"
+      ]
+    },
+    "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "Healthy human hepatocytes synthesize GSH at 0.5\u20131.2 \u03bcmol/g liver/hr, but this drops >2x in NAFLD/alcohol-related liver disease due to limited cysteine availability and ATP depletion.",
+      "mechanism": "GSH synthesis is rate-limited by \u03b3-glutamylcysteine ligase (GCL) activity, which depends on ATP and cysteine; metabolic stress reduces both.",
+      "falsifiable_by": "Direct measurement of GCL activity and GSH flux in healthy vs. diseased human liver biopsies under controlled conditions.",
+      "type": 0,
+      "confidence": 0.79,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('atp', 'interacts', 'gcl'), ('nafld', 'interacts', 'atp'), ('gsh', 'interacts', 'nafld')})",
+      "chunk_text": "Healthy human hepatocytes synthesize GSH at 0.5\u20131.2 \u03bcmol/g liver/hr, but this drops >2x in NAFLD/alcohol-related liver disease due to limited cysteine availability and ATP depletion."
+    },
+    {
+      "statement": "CBD-VDAC1 binding reversible (t_off <<12hr); allosteric gating resets post-dissociation.",
+      "mechanism": "Non-covalent H-bond/hydrophobic; VDAC dynamics (ns-\u03bcs gating) >> drug residence (<hr, per k_off~Kd/k_on).",
+      "falsifiable_by": "Washout electrophysiol. showing persistent gating change >1hr.",
+      "type": 0,
+      "confidence": 0.625,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac', 'interacts', 'vdac1')})",
+      "chunk_text": "CBD-VDAC1 binding reversible (t_off <<12hr); allosteric gating resets post-dissociation."
+    },
+    {
+      "statement": "7-OH-CBD accumulates to 2\u20135x parent CBD levels at steady-state (50mg/day), contributing meaningful VDAC occupancy due to slower clearance and comparable affinity.",
+      "mechanism": "7-OH-CBD has ~3x longer half-life than CBD (18\u201332 hr vs. 6\u201312 hr) and similar VDAC1 affinity (estimated Kd ~10\u201320 \u03bcM).",
+      "falsifiable_by": "Steady-state plasma/hepatic 7-OH-CBD levels in chronic dosing studies, with VDAC1 occupancy assays in liver homogenates.",
+      "type": 0,
+      "confidence": 0.475,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'vdac'), ('vdac', 'interacts', 'vdac1'), ('oh', 'interacts', 'cbd')})",
+      "chunk_text": "7-OH-CBD accumulates to 2\u20135x parent CBD levels at steady-state (50mg/day), contributing meaningful VDAC occupancy due to slower clearance and comparable affinity."
+    },
+    {
+      "statement": "The null hypothesis (progressive GSH depletion at 50mg/day in healthy liver) is likely defeated. The safety margin is ~5-10x for GSH flux but narrows to ~2-3x in compromised liver.",
+      "mechanism": "Daily GSH synthesis vastly exceeds estimated oxidative load from low fractional VDAC occupancy; however, compromised liver loses both synthesis capacity and baseline GSH reserves simultaneously.",
+      "falsifiable_by": "Longitudinal clinical data showing declining GSH/GSSG ratios or rising ALT over 3-6 months of 50mg/day CBD in healthy volunteers. \u2500\u2500\u2500",
+      "type": 1,
+      "confidence": 0.725,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini"
+      ],
+      "tuples": "frozenset({('gsh', 'interacts', 'vdac')})",
+      "chunk_text": "The null hypothesis (progressive GSH depletion at 50mg/day in healthy liver) is likely defeated. The safety margin is ~5-10x for GSH flux but narrows to ~2-3x in compromised liver."
+    },
+    {
+      "statement": "At 50mg/day oral CBD, steady-state hepatic [CBD] ~0.1-0.5\u03bcM (plasma 0.05-0.2\u03bcM \u00d7 liver enrichment), VDAC occ <5%, ROS load <<1 \u03bcmol/g liver/day (<2% GSH capacity).",
+      "mechanism": "F=0.06-0.19 \u2192 ss_CBD = (dose\u00b7F / CL) / (1-e^{-k\u03c4}); first-pass transient; ROS~k\u00b7[CBD]\u00b7mito# but sub-Kd occupancy yields negligible integrated load vs 50-100\u03bcmol/g/day capacity.",
+      "falsifiable_by": "Human PK-PD with hepatic ROS measured >5% GSH use.",
+      "type": 1,
+      "confidence": 0.667,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok"
+      ],
+      "tuples": "frozenset({('gsh', 'interacts', 'cl'), ('cbd', 'interacts', 'vdac'), ('ros', 'interacts', 'gsh'), ('vdac', 'interacts', 'ros')})",
+      "chunk_text": "At 50mg/day oral CBD, steady-state hepatic [CBD] ~0.1-0.5\u03bcM (plasma 0.05-0.2\u03bcM \u00d7 liver enrichment), VDAC occ <5%, ROS load <<1 \u03bcmol/g liver/day (<2% GSH capacity)."
+    },
+    {
+      "statement": "Null defeated: no progressive GSH/VDAC/ATP cumulation at 50mg/day healthy liver.",
+      "mechanism": "Reversible low-occupancy + GSH >> load; ATP deficit scales linearly/reverses, no compounding.",
+      "falsifiable_by": "Serial biopsies showing GSH decline or VDAC dysfunction over 4wks. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.75,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('gsh', 'interacts', 'vdac'), ('vdac', 'interacts', 'atp')})",
+      "chunk_text": "Null defeated: no progressive GSH/VDAC/ATP cumulation at 50mg/day healthy liver."
+    },
+    {
+      "statement": "Safety margin >50x (TI>>10) in healthy liver; narrows to ~5-10x in compromised.",
+      "mechanism": "Therapeutic 1-10\u03bcM >> chronic ss 0.1\u03bcM; threshold >20\u03bcM GSH drop requires >10x overload.",
+      "falsifiable_by": "Chronic trials showing GSH <80% baseline at 50mg/day.",
+      "type": 3,
+      "confidence": 0.7,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('ti', 'interacts', 'gsh')})",
+      "chunk_text": "Safety margin >50x (TI>>10) in healthy liver; narrows to ~5-10x in compromised."
+    },
+    {
+      "statement": "At 50mg oral CBD/day (6\u201319% bioavailability), the daily ROS load exceeds 24hr GSH regeneration capacity in metabolically compromised livers, but not in healthy livers, assuming a safety margin of 2\u20135x.",
+      "mechanism": "CYP450-mediated CBD metabolism generates ROS; GSH regeneration capacity (~12\u201324 \u03bcmol/g/day) may be saturated if ROS flux >0.5\u20131 \u03bcmol/g/hr (e.g., in NAFLD).",
+      "falsifiable_by": "Longitudinal GSH/GSSG ratios in liver biopsies from healthy vs. NAFLD subjects dosed with 50mg CBD/day for 4+ weeks.",
+      "type": 3,
+      "confidence": 0.6,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('ros', 'interacts', 'gsh'), ('cbd', 'interacts', 'ros'), ('gsh', 'interacts', 'cyp450'), ('cyp450', 'interacts', 'nafld')})",
+      "chunk_text": "At 50mg oral CBD/day (6\u201319% bioavailability), the daily ROS load exceeds 24hr GSH regeneration capacity in metabolically compromised livers, but not in healthy livers, assuming a safety margin of 2\u20135x."
+    },
+    {
+      "statement": "Chronic sub-threshold CBD dosing causes cumulative ATP deficit independent of ROS/GSH status, due to persistent VDAC-mediated proton leak.",
+      "mechanism": "Allosteric VDAC1 perturbation may uncouple ATP synthesis from ROS generation, allowing ATP depletion to compound even if GSH remains adequate.",
+      "falsifiable_by": "Longitudinal ATP/ADP ratios in liver mitochondria from chronic CBD-dosed animals, with ROS/GSH clamped via NAC or BSO. --- \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.4,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('atp', 'upregulates', 'cbd')})",
+      "chunk_text": "Chronic sub-threshold CBD dosing causes cumulative ATP deficit independent of ROS/GSH status, due to persistent VDAC-mediated proton leak."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.12109333476980536,
+      "cosine": 0.8548868000507355,
+      "jsd": 0.09166663690087055,
+      "kappa": 0.9781626608008488,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.16666666666666666,
+        "2": 0.5416666666666666,
+        "3": 0.2916666666666667
+      },
+      "type_01_ratio": 0.16666666666666666,
+      "n_claims_per_model": [
+        5,
+        5,
+        7,
+        3,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.4789880952380952,
+      "cosine": 0.9024483263492584,
+      "jsd": 0.1560457876737103,
+      "kappa": 0.9525854345966078,
+      "type_distribution": {
+        "0": 0.5454545454545454,
+        "1": 0.2727272727272727,
+        "2": 0.0,
+        "3": 0.18181818181818182
+      },
+      "type_01_ratio": 0.8181818181818181,
+      "n_claims_per_model": [
+        5,
+        5,
+        6,
+        3,
+        3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF VDAC1 is reconstituted in planar lipid bilayers containing 10-20 mol% cardiolipin (vs pure POPC), THEN voltage-gating midpoint shifts by 10-20 mV toward more negative potentials AND CBD Kd decreases by \u22652-fold (from ~11 \u00b5M to \u22645.5 \u00b5M).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "cardiolipin_mol_percent",
+          "unit": "mol%",
+          "low": 0.0,
+          "high": 25.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "gating_shift_mV",
+          "unit": "mV",
+          "low": 5.0,
+          "high": 25.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CBD_Kd_POPC",
+          "unit": "\u00b5M",
+          "low": 8.0,
+          "high": 14.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CBD_Kd_CL",
+          "unit": "\u00b5M",
+          "low": 2.0,
+          "high": 8.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "bilayer_capacitance",
+          "unit": "\u00b5F/cm\u00b2",
+          "low": 0.4,
+          "high": 0.8,
+          "distribution": "normal",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 9.0,
+      "experimental_protocol": "Reconstitute purified human VDAC1 into planar lipid bilayers (POPC alone vs POPC:CL 85:15). Measure single-channel conductance and voltage-gating curves (\u00b160 mV triangular ramps, n\u226530 insertions per condition). Determine CBD Kd via",
+      "expected_outcome": "CL-containing bilayers show V\u2080 shift of \u221212 to \u221218 mV; CBD IC\u2085\u2080 for conductance inhibition drops from ~11 \u00b5M to ~4-6 \u00b5M; MST confirms Kd shift.",
+      "null_outcome": "No significant V\u2080 shift (<5 mV) and CBD Kd remains 9-13 \u00b5M regardless of CL content.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            0.1,
+            0.5,
+            1.0,
+            3.0,
+            5.0,
+            10.0,
+            20.0,
+            50.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "Single-channel electrophysiology (conductance",
+        "open probability",
+        "V\u2080)",
+        "MST binding curves",
+        "DLS for nanodisc QC"
+      ],
+      "controls": [
+        "POPC-only bilayers",
+        "heat-denatured VDAC1",
+        "CL-containing bilayers without VDAC (membrane-only CBD partitioning)",
+        "VDAC2 as isoform control",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H2",
+      "prediction": "IF VDAC1 is embedded in nanodiscs with 20 mol% cholesterol (cancer-mimetic) vs 5 mol% (healthy-mimetic), THEN the apparent CBD-VDAC1 Kd decreases from ~11 \u00b5M to 3-6 \u00b5M due to enhanced local partitioning, placing it within the 1-10 \u00b5M therapeutic window.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "cholesterol_mol_percent_healthy",
+          "unit": "mol%",
+          "low": 3.0,
+          "high": 8.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "cholesterol_mol_percent_cancer",
+          "unit": "mol%",
+          "low": 15.0,
+          "high": 25.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CBD_Kd_low_chol",
+          "unit": "\u00b5M",
+          "low": 8.0,
+          "high": 15.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CBD_Kd_high_chol",
+          "unit": "\u00b5M",
+          "low": 2.0,
+          "high": 8.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CBD_logP",
+          "unit": "(normal,",
+          "low": 5.8,
+          "high": 6.8,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "partition_coefficient_ratio",
+          "unit": "fold",
+          "low": 1.5,
+          "high": 4.0,
+          "distribution": "log-normal",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 9.0,
+      "experimental_protocol": "Assemble MSP1D1-based nanodiscs with POPC + 5 mol% or 20 mol% cholesterol, each containing single VDAC1. Measure CBD binding by MST (label VDAC1 with RED-NHS) and independently by ITC. Quantify free vs membrane-partitioned CBD using equilibrium dialysis with \u00b3H-CBD or LC-MS/MS. Parallel SPR with VDAC1-nanodiscs immobilized on L1 chip. Timeline: 6-8 weeks.",
+      "expected_outcome": "Apparent Kd drops 2-3 fold in 20% cholesterol nanodiscs; equilibrium dialysis confirms 2-3\u00d7 higher CBD retention in cholesterol-rich nanodiscs; SPR kon increases while koff is unchanged.",
+      "null_outcome": "Kd values within 20% of each other across cholesterol conditions; or Kd increases* in high-cholesterol nanodiscs (supporting claims [5]/[9] that cholesterol sequesters CBD away from VDAC).",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            0.3,
+            1.0,
+            3.0,
+            5.0,
+            10.0,
+            15.0,
+            25.0,
+            50.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "MST (Kd)",
+        "ITC (Kd",
+        "\u0394H",
+        "stoichiometry)",
+        "SPR (kon",
+        "koff",
+        "KD)",
+        "LC-MS/MS (free CBD quantification)",
+        "laurdan GP (membrane order)"
+      ],
+      "controls": [
+        "Empty nanodiscs (no VDAC1) for partitioning-only measurement",
+        "cholesterol-free nanodiscs",
+        "VDAC1 in detergent micelles (lipid-free Kd reference)",
+        "ergosterol substitution (sterol specificity)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H3",
+      "prediction": "IF OMM cholesterol is depleted below ~15 mol% (via M\u03b2CD treatment or low-cholesterol nanodiscs), THEN olesoxime-VDAC1 binding affinity drops by \u22655-fold AND neuroprotective activity (prevention of cytochrome c release) is abolished.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "cholesterol_threshold",
+          "unit": "mol%",
+          "low": 12.0,
+          "high": 22.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "olesoxime_Kd_high_chol",
+          "unit": "\u00b5M",
+          "low": 0.5,
+          "high": 5.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "olesoxime_Kd_low_chol",
+          "unit": "\u00b5M",
+          "low": 10.0,
+          "high": 100.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "M\u03b2CD_concentration",
+          "unit": "mM",
+          "low": 2.0,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "cholesterol_depletion_efficiency",
+          "unit": "%",
+          "low": 40.0,
+          "high": 80.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "cytochrome_c_release_inhibition",
+          "unit": "%",
+          "low": 0.0,
+          "high": 90.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 8.0,
+      "experimental_protocol": "(A) Biophysical: Measure olesoxime binding to VDAC1 in nanodiscs with 5, 10, 15, 20, 25, 30 mol% cholesterol by MST and ITC, generating a full cholesterol-dependence curve. (B) Cellular: Treat SH-SY5Y neurons with 5 mM M\u03b2CD (titrated to achieve 40-70% cholesterol depletion, verified by Amplex Red), then challenge with staurosporine (1 \u00b5M) \u00b1 olesoxime (1-30 \u00b5M). Measure cytochrome c release (ELISA from cytosolic fraction), \u0394\u03a8m (TMRE), and viability (CellTiter-Glo). Include cholesterol repletion rescue arm. Timeline: 10-12 weeks.",
+      "expected_outcome": "Sigmoidal cholesterol-dependence curve for olesoxime binding with inflection at ~15-20 mol%; M\u03b2CD-treated neurons show complete loss of olesoxime neuroprotection; cholesterol repletion restores protection.",
+      "null_outcome": "Olesoxime binds VDAC1 with similar affinity (within 2-fold) regardless of cholesterol content; M\u03b2CD-treated neurons still protected by olesoxime.",
+      "dose_ranges": {
+        "Olesoxime": {
+          "doses": [
+            0.3,
+            1.0,
+            3.0,
+            10.0,
+            30.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "M\u03b2CD": {
+          "doses": [
+            2.0,
+            5.0,
+            10.0
+          ],
+          "unit": "mM;"
+        },
+        "Staurosporine": {
+          "doses": [
+            1.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "M\u03b2CD repletion": {
+          "doses": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "unit": "mM"
+        }
+      },
+      "readouts": [
+        "MST/ITC (Kd)",
+        "Amplex Red (cholesterol quantification)",
+        "TMRE (\u0394\u03a8m)",
+        "cytochrome c ELISA",
+        "CellTiter-Glo (viability)",
+        "filipin staining (cholesterol imaging)"
+      ],
+      "controls": [
+        "Vehicle (DMSO)",
+        "M\u03b2CD alone (toxicity control)",
+        "olesoxime without stressor",
+        "CRAC-mutant olesoxime analog (if available)",
+        "cholesterol repletion rescue",
+        "VDAC1-knockdown cells (target validation)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H4",
+      "prediction": "IF CBD is delivered via liposomes matching cancer OMM composition (20 mol% cholesterol, 5 mol% CL, 75% POPC) vs generic liposomes (100% POPC), THEN IC\u2085\u2080 for cancer cell killing decreases by \u22653-fold in cancer lines (HCT116, MDA-MB-231) while remaining unchanged or increasing in normal cells (MCF10A, primary hepatocytes), with the differential being VDAC1-dependent.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "IC50_cancer_generic_lipo",
+          "unit": "\u00b5M",
+          "low": 8.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "IC50_cancer_mimetic_lipo",
+          "unit": "\u00b5M",
+          "low": 2.0,
+          "high": 8.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "IC50_normal_generic_lipo",
+          "unit": "\u00b5M",
+          "low": 15.0,
+          "high": 40.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "IC50_normal_mimetic_lipo",
+          "unit": "\u00b5M",
+          "low": 20.0,
+          "high": 50.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "liposome_diameter",
+          "unit": "nm",
+          "low": 80.0,
+          "high": 150.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "encapsulation_efficiency",
+          "unit": "%",
+          "low": 60.0,
+          "high": 95.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "selectivity_index_target",
+          "unit": "fold",
+          "low": 3.0,
+          "high": 15.0,
+          "distribution": "log-normal",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Prepare liposomes by thin-film hydration + extrusion (100 nm): (i) cancer-mimetic (POPC:Chol:CL 75:20:5), (ii) healthy-mimetic (POPC:Chol:CL 90:5:5), (iii) generic (POPC only), all loaded with CBD. Characterize by DLS, zeta potential, HPLC (encapsulation). Treat HCT116, M",
+      "expected_outcome": "",
+      "null_outcome": "",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": []
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_calls": 1,
+  "latency_s": 55.36
+}

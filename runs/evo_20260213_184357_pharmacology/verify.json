@@ -1,0 +1,8 @@
+{
+  "n_type2_input": 10,
+  "n_promoted": 0,
+  "n_held": 5,
+  "n_novel": 3,
+  "n_contradicted": 2,
+  "total_calls": 10
+}

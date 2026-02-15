@@ -1,0 +1,230 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF primary human hepatocytes from NAFLD/alcohol-use donors are compared to healthy donor hepatocytes under identical culture conditions, THEN de novo GSH synthesis flux (measured by \u00b2H-glycine or \u00b9\u00b3C-cysteine incorporation) will be \u226450% of healthy controls (healthy: 0.5\u20132.3 \u03bcmol/g/hr; NAFLD: <0.5\u20131.0 \u03bcmol/g/hr), with GCL enzymatic activity reduced by \u22652-fold.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "GSH_synthesis_healthy": {
+          "mean": 1.375976278884725,
+          "std": 0.5216795586189772,
+          "median": 1.3622075268519507,
+          "ci_lower": 0.5498414679156004,
+          "ci_upper": 2.235511660165141,
+          "min": 0.5132520855518099,
+          "max": 2.2862760153005066
+        },
+        "GSH_synthesis_NAFLD": {
+          "mean": 0.5547876536156211,
+          "std": 0.25543579031259106,
+          "median": 0.5621329516587277,
+          "ci_lower": 0.132497830432537,
+          "ci_upper": 0.9821083801240444,
+          "min": 0.10488685071583043,
+          "max": 0.9991942574268148
+        },
+        "intracellular_cysteine_NAFLD": {
+          "mean": 49.887983071988415,
+          "std": 11.913254806495635,
+          "median": 50.08418595424786,
+          "ci_lower": 30.683882678847027,
+          "ci_upper": 69.36106415392993,
+          "min": 30.049322500476325,
+          "max": 69.94973480267059
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.49639089339915654,
+          "std": 0.16010728478958,
+          "median": 0.49146351500883206,
+          "ci_lower": 0.2030219924192064,
+          "ci_upper": 0.7974069041524601,
+          "min": 0.041905635562250895,
+          "max": 0.8682869883070754
+        }
+      },
+      "effect_size": 1.2324,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF reconstituted human VDAC1 in planar lipid bilayers is exposed to CBD at Kd-relevant concentrations (5\u201320 \u03bcM) for 2 hr, THEN upon complete washout, channel conductance, open probability, and voltage-dependent gating will return to within 90% of pre-exposure baseline within 4 hr (t_recovery < 4 hr), with no persistent gating abnormality at 12 hr.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "CBD_Kd_VDAC1": {
+          "mean": 12.474159391397437,
+          "std": 4.276069702988823,
+          "median": 12.423402690795399,
+          "ci_lower": 5.39537065755339,
+          "ci_upper": 19.566406258986646,
+          "min": 5.047252291480079,
+          "max": 19.968226164111808
+        },
+        "t_off_CBD": {
+          "mean": 2.1092709795273996,
+          "std": 1.071127012033702,
+          "median": 2.136574985155146,
+          "ci_lower": 0.3296322078668409,
+          "ci_upper": 3.8792442695592926,
+          "min": 0.25832686399046906,
+          "max": 3.9834349806836165
+        },
+        "gating_recovery_fraction_at_4hr": {
+          "mean": 0.8502693739666283,
+          "std": 0.08568174228801362,
+          "median": 0.84400645532716,
+          "ci_lower": 0.7102156482247253,
+          "ci_upper": 0.9932773069653447,
+          "min": 0.7050490939616904,
+          "max": 0.9993526122488838
+        },
+        "baseline_open_probability": {
+          "mean": 0.7033164659171692,
+          "std": 0.11908495764655186,
+          "median": 0.7128454921634223,
+          "ci_lower": 0.5089242140570374,
+          "ci_upper": 0.8888961246096242,
+          "min": 0.5022533070326202,
+          "max": 0.899198645917644
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5008179913288715,
+          "std": 0.15033298505938425,
+          "median": 0.49565309807699487,
+          "ci_lower": 0.22200505107204196,
+          "ci_upper": 0.7868062895933343,
+          "min": 0.13596457092550324,
+          "max": 0.9110213034155875
+        }
+      },
+      "effect_size": 1.0586,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF healthy primary human hepatocytes are exposed to physiologically relevant CBD concentrations (0.5\u20132 \u03bcM, reflecting 50 mg oral dose post-first-pass) for 14 consecutive days with daily media renewal, THEN total intracellular GSH will remain \u226580% of vehicle control throughout, with no progressive decline trend (slope of GSH vs. time not significantly <0).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "CBD_hepatic_Cmax_50mg_oral": {
+          "mean": 1.12866339553811,
+          "std": 0.4900528779056956,
+          "median": 1.0862241584624788,
+          "ci_lower": 0.3637674122407899,
+          "ci_upper": 1.9535111551590532,
+          "min": 0.3093420542315391,
+          "max": 1.9921556665577023
+        },
+        "GSH_baseline_healthy": {
+          "mean": 7.4223755248629155,
+          "std": 1.468501113852188,
+          "median": 7.35525298541415,
+          "ci_lower": 5.1246753058029375,
+          "ci_upper": 9.849587308536192,
+          "min": 5.00643125645374,
+          "max": 9.96391430499491
+        },
+        "daily_ROS_increment": {
+          "mean": 7.228725303431371,
+          "std": 4.430602907882285,
+          "median": 6.913005944512608,
+          "ci_lower": 0.39223424415828917,
+          "ci_upper": 14.570459567339203,
+          "min": 0.049857228910310525,
+          "max": 14.921986367589223
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4846130604667432,
+          "std": 0.17447785768735383,
+          "median": 0.4807657029809055,
+          "ci_lower": 0.17907321860047104,
+          "ci_upper": 0.8467307341231144,
+          "min": 0.09168612310539136,
+          "max": 0.9203909248497035
+        }
+      },
+      "effect_size": 1.3491,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF 7-OH-CBD has 2\u20134x longer terminal half-life than parent CBD, THEN at steady-state daily dosing (simulated by repeated exposure), 7-OH-CBD will accumulate to concentrations representing \u226520% of total VDAC-binding ligand pool, and will produce measurable mitochondrial effects (membrane potential depolarization, reduced oxygen consumption) at concentrations achievable through accumulation (0.5\u20135 \u03bcM).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "CBD_t_half": {
+          "mean": 3.2877045354699783,
+          "std": 1.0051714325452623,
+          "median": 3.2642094616948505,
+          "ci_lower": 1.5705483496676809,
+          "ci_upper": 4.941816161296219,
+          "min": 1.5001896736793299,
+          "max": 4.99281023423911
+        },
+        "7OH_CBD_t_half": {
+          "mean": 11.018718110093056,
+          "std": 4.09900797707745,
+          "median": 11.4291741600645,
+          "ci_lower": 4.2666853776283995,
+          "ci_upper": 17.17556866067257,
+          "min": 4.038832965747437,
+          "max": 17.86756349587852
+        },
+        "7OH_CBD_accumulation_ratio": {
+          "mean": 2.714722823903494,
+          "std": 0.728970782635286,
+          "median": 2.7287063110803644,
+          "ci_lower": 1.5789494911416728,
+          "ci_upper": 3.8921852044003775,
+          "min": 1.5156144786433838,
+          "max": 3.9946999342348217
+        },
+        "7OH_CBD_Kd_VDAC1": {
+          "mean": 26.84563811175854,
+          "std": 13.130277015177477,
+          "median": 26.048993412123686,
+          "ci_lower": 6.39172881670865,
+          "ci_upper": 48.60640452857999,
+          "min": 5.409895394156321,
+          "max": 49.600093533948915
+        },
+        "VDAC_fractional_occupancy_7OH": {
+          "mean": 0.2198513182441323,
+          "std": 0.09953846154905427,
+          "median": 0.23230759470766155,
+          "ci_lower": 0.056077644453681685,
+          "ci_upper": 0.38094654521990734,
+          "min": 0.05000714383252155,
+          "max": 0.3995406821990465
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4937493934496894,
+          "std": 0.12943841657848718,
+          "median": 0.49787577609649714,
+          "ci_lower": 0.2328841551824252,
+          "ci_upper": 0.7200388722954524,
+          "min": 0.1632636605171135,
+          "max": 0.8203192999267144
+        }
+      },
+      "effect_size": 0.8509,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 45
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_iterations": 1200,
+  "total_calls": 0
+}

@@ -1,0 +1,275 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF CBD (logP 6.3) is administered to isolated hepatocytes at clinically relevant bulk concentrations (1-10 \u00b5M), THEN mitochondrial membrane CBD concentration will exceed bulk aqueous concentration by \u226550-fold, achieving local concentrations \u2265100 \u00b5M sufficient for VDAC1 occupancy (Kd ~11 \u00b5M), AND this enrichment will be equivalent (\u00b120%) in healthy hepatocytes vs. HCC cells.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "bulk_CBD_concentration": {
+          "mean": 5.3798813944236255,
+          "std": 2.6083977930948863,
+          "median": 5.311037634259753,
+          "ci_lower": 1.2492073395780021,
+          "ci_upper": 9.677558300825707,
+          "min": 1.0662604277590497,
+          "max": 9.931380076502533
+        },
+        "membrane_enrichment_factor": {
+          "mean": 510.26641897718304,
+          "std": 280.9793693438501,
+          "median": 518.3462468246005,
+          "ci_lower": 45.74761347579068,
+          "ci_upper": 980.3192181364489,
+          "min": 15.375535787413456,
+          "max": 999.1136831694963
+        },
+        "VDAC1_Kd": {
+          "mean": 12.457993651995654,
+          "std": 4.467470552435863,
+          "median": 12.531569732842947,
+          "ci_lower": 5.256456004567635,
+          "ci_upper": 19.760399057723724,
+          "min": 5.0184959376786225,
+          "max": 19.981150551001473
+        },
+        "mitochondrial_membrane_volume_fraction": {
+          "mean": 0.0056010220120921135,
+          "std": 0.0026248717140568076,
+          "median": 0.005418394128564572,
+          "ci_lower": 0.0013833139963459378,
+          "ci_upper": 0.009851704244256689,
+          "min": 0.0010046686974913496,
+          "max": 0.009994797183017691
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.500099337051926,
+          "std": 0.13669012241801018,
+          "median": 0.5135273267663021,
+          "ci_lower": 0.25103422114315876,
+          "ci_upper": 0.7356861615114251,
+          "min": 0.14985873316293377,
+          "max": 0.8597271425353767
+        }
+      },
+      "effect_size": 0.9309,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF CBD is applied to reconstituted VDAC1 in planar lipid bilayers, THEN it will NOT produce zero-conductance block events but WILL shift gating to intermediate subconductance states (30-70% of full open conductance), alter voltage-dependent gating (V\u2081/\u2082 shift \u226510 mV), and increase dwell time in subconductance states by \u22653-fold.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "VDAC1_full_open_conductance": {
+          "mean": 3.998277292759829,
+          "std": 0.28507131353258824,
+          "median": 3.994893512719693,
+          "ci_lower": 3.5263580438368924,
+          "ci_upper": 4.47109375059911,
+          "min": 3.503150152765339,
+          "max": 4.49788174427412
+        },
+        "CBD_induced_subconductance": {
+          "mean": 1.9916111890812795,
+          "std": 0.5712677397513077,
+          "median": 2.006173325416078,
+          "ci_lower": 1.0424705108623151,
+          "ci_upper": 2.9355969437649563,
+          "min": 1.0044409941282502,
+          "max": 2.991165323031262
+        },
+        "V_half_shift": {
+          "mean": 17.522447830552352,
+          "std": 7.140145190667801,
+          "median": 17.000537943930013,
+          "ci_lower": 5.851304018727109,
+          "ci_upper": 29.43977558044539,
+          "min": 5.420757830140869,
+          "max": 29.94605102074032
+        },
+        "subconductance_dwell_time_ratio": {
+          "mean": 10.657532131065539,
+          "std": 5.656535488211213,
+          "median": 11.110160877762558,
+          "ci_lower": 1.4239001677092777,
+          "ci_upper": 19.47256591895715,
+          "min": 1.107032084049457,
+          "max": 19.96193568108809
+        },
+        "CBD_bilayer_concentration": {
+          "mean": 51.50726997638119,
+          "std": 29.55143096451817,
+          "median": 53.051499664094855,
+          "ci_lower": 4.937748685125006,
+          "ci_upper": 98.47694225368339,
+          "min": 1.4395813269670064,
+          "max": 99.76524645538976
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5026892819042714,
+          "std": 0.13681199472620229,
+          "median": 0.5057129402312373,
+          "ci_lower": 0.23053923205668755,
+          "ci_upper": 0.7741475334470787,
+          "min": 0.15681117875445574,
+          "max": 0.893499849349197
+        }
+      },
+      "effect_size": 1.0055,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF CBD binds VDAC1 with Kd ~11 \u00b5M, THEN it will bind VDAC2 with Kd within 5-fold (2-55 \u00b5M), AND CBD treatment (10-50 \u00b5M) will increase BAK oligomerization and cytochrome c release in healthy hepatocytes, an effect that is rescued by VDAC2 overexpression and phenocopied by VDAC2 knockdown.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "Kd_VDAC1": {
+          "mean": 12.311735842983326,
+          "std": 4.323995981520843,
+          "median": 11.937271986433638,
+          "ci_lower": 5.562653637418735,
+          "ci_upper": 19.58980431022694,
+          "min": 5.082429890278286,
+          "max": 19.930785293156198
+        },
+        "Kd_VDAC2": {
+          "mean": 30.099556088409834,
+          "std": 17.03461292068538,
+          "median": 29.32093463080414,
+          "ci_lower": 3.4462335473140744,
+          "ci_upper": 58.25521277901983,
+          "min": 2.074602574863384,
+          "max": 59.581405937940964
+        },
+        "selectivity_ratio": {
+          "mean": 4.9227671982418295,
+          "std": 2.894660566483093,
+          "median": 4.716497217081571,
+          "ci_lower": 0.4562597061834156,
+          "ci_upper": 9.71936691732828,
+          "min": 0.23257338955473622,
+          "max": 9.949031093491627
+        },
+        "BAK_oligomerization_EC50": {
+          "mean": 49.586155728559476,
+          "std": 26.76710161099649,
+          "median": 46.57473428278733,
+          "ci_lower": 7.0391810916893185,
+          "ci_upper": 95.41309416799862,
+          "min": 5.041101801877842,
+          "max": 99.72069069273665
+        },
+        "cytochrome_c_release_threshold": {
+          "mean": 48.06965642310434,
+          "std": 21.038023409656674,
+          "median": 51.29439117123563,
+          "ci_lower": 12.585262386969166,
+          "ci_upper": 78.28918346393472,
+          "min": 10.089075548533513,
+          "max": 79.6363641551857
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4934038742106948,
+          "std": 0.13223648032747326,
+          "median": 0.4865524462283509,
+          "ci_lower": 0.25886351030839905,
+          "ci_upper": 0.7579434521888677,
+          "min": 0.15250645903437524,
+          "max": 0.8466002656183298
+        }
+      },
+      "effect_size": 0.9216,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF CBD is applied to matched primary human hepatocytes and HCC cell lines, THEN the EC50 for GSH depletion (to <50% baseline) will differ by <3-fold between cell types, GSH depletion will require [CBD] \u226520 \u00b5M (above therapeutic free hepatic levels), AND the ROS scavenging capacity ratio (healthy:HCC) will be <2\u00d7 as measured by DCFDA kinetics.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "baseline_GSH_healthy": {
+          "mean": 7.553863622099969,
+          "std": 1.4359591893503745,
+          "median": 7.520299230992643,
+          "ci_lower": 5.100783356668115,
+          "ci_upper": 9.91688023042317,
+          "min": 5.000270962399043,
+          "max": 9.989728906055873
+        },
+        "baseline_GSH_HCC": {
+          "mean": 5.008022047182737,
+          "std": 1.7567177044617643,
+          "median": 5.183931782884786,
+          "ci_lower": 2.1142937332693137,
+          "ci_upper": 7.646672283145389,
+          "min": 2.0166426996060443,
+          "max": 7.943241498233652
+        },
+        "GSH_depletion_EC50_healthy": {
+          "mean": 46.582793421490834,
+          "std": 18.95324034851744,
+          "median": 46.946364088089474,
+          "ci_lower": 17.052686769683493,
+          "ci_upper": 77.19681531440982,
+          "min": 15.405976444727976,
+          "max": 79.86219829010537
+        },
+        "GSH_depletion_EC50_HCC": {
+          "mean": 34.27293123528727,
+          "std": 14.58919668353053,
+          "median": 33.38777045791521,
+          "ci_lower": 11.5463653518985,
+          "ci_upper": 58.4515605873111,
+          "min": 10.455439326840356,
+          "max": 59.55565948216546
+        },
+        "ROS_scavenging_ratio": {
+          "mean": 1.9705789613950415,
+          "std": 0.5687912088517386,
+          "median": 2.0417576840437803,
+          "ci_lower": 1.034729396878181,
+          "ci_upper": 2.8911231155423276,
+          "min": 1.0000408219001231,
+          "max": 2.997375326851694
+        },
+        "therapeutic_free_hepatic_CBD": {
+          "mean": 5.162372178748683,
+          "std": 2.765300650471118,
+          "median": 5.17504782684502,
+          "ci_lower": 0.759890099990083,
+          "ci_upper": 9.733036652766554,
+          "min": 0.5167003634732825,
+          "max": 9.979335540508108
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.493253831010683,
+          "std": 0.11497273275251826,
+          "median": 0.49442037537229344,
+          "ci_lower": 0.26678236336245115,
+          "ci_upper": 0.699176764270462,
+          "min": 0.1990410697236479,
+          "max": 0.8021257144063672
+        }
+      },
+      "effect_size": 0.7275,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 45
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_iterations": 1200,
+  "total_calls": 0
+}

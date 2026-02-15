@@ -1,0 +1,330 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF CBD (logP 6.3) is administered to isolated hepatocytes at clinically relevant bulk concentrations (1-10 \u00b5M), THEN mitochondrial membrane CBD concentration will exceed bulk aqueous concentration by \u226550-fold, achieving local concentrations \u2265100 \u00b5M sufficient for VDAC1 occupancy (Kd ~11 \u00b5M), AND this enrichment will be equivalent (\u00b120%) in healthy hepatocytes vs. HCC cells.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "bulk_CBD_concentration",
+          "unit": "\u00b5M",
+          "low": 1.0,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "membrane_enrichment_factor",
+          "unit": "fold",
+          "low": 10.0,
+          "high": 1000.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "VDAC1_Kd",
+          "unit": "\u00b5M",
+          "low": 5.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "mitochondrial_membrane_volume_fraction",
+          "unit": "(uniform)",
+          "low": 0.001,
+          "high": 0.01,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Treat primary human hepatocytes and HepG2/Huh7 HCC lines with [\u00b3H]-CBD or deuterated CBD (1, 3, 10 \u00b5M, 30 min, 37\u00b0C). Isolate mitochondria by differential centrifugation, separate membrane fractions by alkaline carbonate extraction, quantify CBD by LC-MS/MS. Normalize to lipid mass by phospholipid assay. Timeline: 4-6 weeks.",
+      "expected_outcome": "Membrane enrichment \u226550\u00d7; no significant difference between healthy and cancer cells (ratio within 0.8-1.2).",
+      "null_outcome": "Enrichment <50\u00d7 (occupancy problem stands) OR >3\u00d7 difference between cell types (selectivity argument partially rescued).",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            3.0,
+            10.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "LC-MS/MS quantification of CBD in membrane vs. cytosolic fractions (pmol/mg lipid vs. pmol/mL cytosol)"
+      ],
+      "controls": [
+        "Vehicle (DMSO)",
+        "heat-killed cells (passive partitioning control)",
+        "valinomycin-treated (\u0394\u03a8m-collapsed",
+        "tests if accumulation is potential-dependent)",
+        "---",
+        "###"
+      ]
+    },
+    {
+      "id": "H2",
+      "prediction": "IF CBD is applied to reconstituted VDAC1 in planar lipid bilayers, THEN it will NOT produce zero-conductance block events but WILL shift gating to intermediate subconductance states (30-70% of full open conductance), alter voltage-dependent gating (V\u2081/\u2082 shift \u226510 mV), and increase dwell time in subconductance states by \u22653-fold.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "VDAC1_full_open_conductance",
+          "unit": "nS",
+          "low": 3.5,
+          "high": 4.5,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CBD_induced_subconductance",
+          "unit": "nS",
+          "low": 1.0,
+          "high": 3.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "V_half_shift",
+          "unit": "mV",
+          "low": 5.0,
+          "high": 30.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "subconductance_dwell_time_ratio",
+          "unit": "fold",
+          "low": 1.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CBD_bilayer_concentration",
+          "unit": "\u00b5M",
+          "low": 1.0,
+          "high": 100.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 6.0,
+      "experimental_protocol": "Reconstitute purified human VDAC1 (E. coli-expressed, refolded) into DPhPC planar lipid bilayers. Record single-channel currents at \u00b110 to \u00b160 mV in symmetric 1M KCl before and after cis-side addition of CBD (1, 10, 50, 100 \u00b5M in DMSO, \u22640.1% v/v). Analyze conductance histograms, dwell-time distributions, and voltage-gating curves. Repeat with VDAC2. Timeline: 8-12 weeks.",
+      "expected_outcome": "Novel subconductance peaks at 40-70% of full open; V\u2081/\u2082 shift \u226510 mV; no complete block events; similar effects on VDAC2.",
+      "null_outcome": "Complete block (zero conductance) events dominating\u2014indicating pore occlusion; OR no effect on gating at any concentration tested.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            10.0,
+            50.0,
+            100.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "Single-channel conductance histograms",
+        "open probability (Po)",
+        "voltage-gating curves (G-V)",
+        "dwell-time distributions",
+        "all-points amplitude histograms"
+      ],
+      "controls": [
+        "DMSO vehicle",
+        "DIDS (known VDAC blocker",
+        "positive control for occlusion)",
+        "cholesterol (lipid-partitioning control with no known gating effect)",
+        "K\u00f6nig's polyanion (known gating modifier)",
+        "---",
+        "###"
+      ]
+    },
+    {
+      "id": "H3",
+      "prediction": "IF CBD binds VDAC1 with Kd ~11 \u00b5M, THEN it will bind VDAC2 with Kd within 5-fold (2-55 \u00b5M), AND CBD treatment (10-50 \u00b5M) will increase BAK oligomerization and cytochrome c release in healthy hepatocytes, an effect that is rescued by VDAC2 overexpression and phenocopied by VDAC2 knockdown.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "Kd_VDAC1",
+          "unit": "\u00b5M",
+          "low": 5.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "Kd_VDAC2",
+          "unit": "\u00b5M",
+          "low": 2.0,
+          "high": 60.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "selectivity_ratio",
+          "unit": "fold",
+          "low": 0.2,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "BAK_oligomerization_EC50",
+          "unit": "\u00b5M",
+          "low": 5.0,
+          "high": 100.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "cytochrome_c_release_threshold",
+          "unit": "%",
+          "low": 10.0,
+          "high": 80.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "(A) Binding: Express/purify human VDAC1 and VDAC2 in lipid nanodiscs; measure CBD binding by microscale thermophoresis (MST) or ITC. (B) Functional: Treat primary human hepatocytes (\u00b1 VDAC2 siRNA or VDAC2-FLAG overexpression lentivirus) with CBD (5, 10, 25, 50 \u00b5M, 6-24h). Measure BAK oligomerization (BMH crosslinking + western), cytochrome c release (mitochondrial vs. cytosolic fractionation + ELISA), and caspase-3/7 activity. Timeline: 10-14 weeks.",
+      "expected_outcome": "Kd ratio <5\u00d7; CBD increases BAK oligomerization and cytochrome c release",
+      "null_outcome": "Kd ratio >10\u00d7 (selectivity exists); OR CBD has no effect on BAK/cytochrome c in healthy hepatocytes even at 50 \u00b5M; OR VDAC2 manipulation does not modulate CBD's apoptotic effect.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            5.0,
+            10.0,
+            25.0,
+            50.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "MST/ITC binding curves (Kd)",
+        "BAK crosslinking (Western blot)",
+        "cytochrome c ELISA",
+        "caspase-3/7 luminescence (Caspase-Glo)",
+        "Annexin V/PI flow cytometry"
+      ],
+      "controls": [
+        "Vehicle",
+        "ABT-737 (BH3 mimetic",
+        "positive control for BAK activation)",
+        "VDAC2 siRNA alone (no CBD)",
+        "scrambled siRNA + CBD",
+        "z-VAD-FMK (pan-caspase inhibitor to confirm apoptotic pathway)",
+        "---",
+        "###"
+      ]
+    },
+    {
+      "id": "H4",
+      "prediction": "IF CBD is applied to matched primary human hepatocytes and HCC cell lines, THEN the EC50 for GSH depletion (to <50% baseline) will differ by <3-fold between cell types, GSH depletion will require [CBD] \u226520 \u00b5M (above therapeutic free hepatic levels), AND the ROS scavenging capacity ratio (healthy:HCC) will be <2\u00d7 as measured by DCFDA kinetics.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "baseline_GSH_healthy",
+          "unit": "mM",
+          "low": 5.0,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "baseline_GSH_HCC",
+          "unit": "mM",
+          "low": 2.0,
+          "high": 8.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "GSH_depletion_EC50_healthy",
+          "unit": "\u00b5M",
+          "low": 15.0,
+          "high": 80.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "GSH_depletion_EC50_HCC",
+          "unit": "\u00b5M",
+          "low": 10.0,
+          "high": 60.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "ROS_scavenging_ratio",
+          "unit": "(normal,",
+          "low": 1.0,
+          "high": 3.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "therapeutic_free_hepatic_CBD",
+          "unit": "\u00b5M",
+          "low": 0.5,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 9.0,
+      "experimental_protocol": "Treat primary human hepatocytes (\u22653 donors) and HCC lines (HepG2, Huh7, SNU-449) with CBD (1, 5, 10, 25, 50, 100 \u00b5M) for 2, 6, 12, 24h. Measure total GSH/GSSG by enzymatic recycling assay (Tietze), ROS by CM-H2DCFDA kinetics (plate reader, 0-60 min post-CBD), mitochondrial superoxide by MitoSOX, and viability by ATP-based assay (CellTiter-Glo). Pre-treat subset with NAC (5 mM) or BSO (100 \u00b5M, GSH synthesis inhibitor). Timeline: 4-6 weeks.",
+      "expected_outcome": "GSH depletion EC50 ratio (healthy:HCC) <3\u00d7; both >20 \u00b5M; ROS scavenging ratio <2\u00d7; NAC rescues viability in both cell types similarly.",
+      "null_outcome": "EC50 ratio >5\u00d7 (meaningful selectivity exists); OR ROS scavenging ratio >3\u00d7; OR GSH depletion occurs at <10 \u00b5M in HCC but >50 \u00b5M in healthy cells.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            25.0,
+            50.0,
+            100.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "GSH/GSSG (enzymatic recycling",
+        "\u00b5mol/mg protein)",
+        "ROS (DCFDA"
+      ],
+      "controls": []
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_calls": 1,
+  "latency_s": 53.76
+}

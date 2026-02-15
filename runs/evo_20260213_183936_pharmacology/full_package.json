@@ -1,0 +1,877 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260213_183936_pharmacology",
+  "timestamp": "2026-02-13T18:42:11.154229+00:00",
+  "question": "Can VDAC-related biomarkers predict individual vulnerability to mitochondrial modulators, enabling risk-stratified prescribing? (1) Does baseline GSH/GSSG ratio in peripheral blood or liver function tests (ALT, GGT) reliably predict hepatotoxicity risk from VDAC-engaging drugs (CBD, valproate, acetaminophen)? (2) Is VDAC1 expression level in circulating tumor cells a predictive biomarker for response to VDAC-targeting cancer therapies (erastin, CBD)? (3) Could a simple 'mitochondrial stress test' panel (GSH, ATP/ADP ratio, MMP by TMRM) serve as a companion diagnostic for VDAC-modulating drugs? (4) What existing clinical datasets (Epidiolex trials, erastin Phase I) contain the pharmacokinetic and hepatic biomarker data needed to retrospectively validate this framework?",
+  "convergence_report": {
+    "s1_initial": {
+      "n_models_responded": 5,
+      "initial_jaccard": 0.09254331244644312,
+      "initial_cosine": 0.8198689520359039
+    },
+    "s2_refinement": {
+      "total_rounds": 0,
+      "early_stopped": false,
+      "final_jaccard": 0.0,
+      "final_cosine": 0.0,
+      "final_jsd": 0.0,
+      "final_type_01_ratio": 0.0
+    },
+    "s3_gate": {
+      "passed": true,
+      "jaccard": 0.4019,
+      "type_01_ratio": 0.7778,
+      "recommendation": ""
+    }
+  },
+  "verification": {
+    "n_type2_input": 5,
+    "n_promoted": 0,
+    "n_held": 2,
+    "n_novel": 3,
+    "n_contradicted": 0,
+    "total_calls": 5
+  },
+  "gate": {
+    "passed": true,
+    "n_passed": 3,
+    "n_failed": 16,
+    "recommendation": "Lab Gate PASSED with filter. 3/19 claims cleared. 16 filtered: '2**: VDAC1 expression in CTCs is NOT currently a r...' not feasible; '3**: Epidiolex trial datasets (GWPCARE1-4, expande...' lacks novelty; '4**: A mitochondrial stress panel (GSH, ATP/ADP, M...' not feasible",
+    "claims": [
+      {
+        "statement": "1**: Baseline GSH/GSSG ratio predicts hepatotoxicity risk from VDAC-engaging drugs, but with moderat",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "2**: VDAC1 expression in CTCs is NOT currently a reliable predictive biomarker for response to VDAC-",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "3**: Epidiolex trial datasets (GWPCARE1-4, expanded access) contain ALT, GGT, bilirubin, and CBD pla",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "4**: A mitochondrial stress panel (GSH, ATP/ADP, MMP) is scientifically rational but faces critical ",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "1:** Baseline peripheral blood GSH/GSSG ratio predicts hepatotoxicity risk from VDAC-engaging drugs ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "2:** VDAC1 expression in CTCs is a *weak* predictive biomarker for response to VDAC-targeting cancer",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "3:** A mitochondrial stress panel (GSH, ATP/ADP, MMP) can serve as a companion diagnostic for VDAC-m",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "4:** Epidiolex trials (GWPCARE) contain sufficient PK/hepatic biomarker data to retrospectively vali",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "5 (SINGULAR THREAD INVESTIGATION):** Erastin Phase I trials *lack* CTC VDAC1 expression data, making",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Baseline PB GSH/GSSG <25 predicts >3x hepatotoxicity risk (OR>4) for CBD (1-10\u03bcM plasma) via VDAC re",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Epidiolex trials (GWPCARE) enable retrospective VDAC-hepatotox validation using banked PK/ALT/GGT da",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "VDAC1 expression in CTCs is unreliable predictor for erastin/CBD due to <5 CTCs/mL yield & 50% heter",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "VDAC1 expression in CTCs is a poor predictive biomarker for CBD's anticancer efficacy because CBD's ",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Peripheral blood GSH/GSSG ratio is a low-fidelity predictor of hepatic-specific toxicity from VDAC m",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "The proposed 'mitochondrial stress test' is more viable as a pharmacodynamic (PD) biomarker to monit",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Baseline peripheral blood GSH/GSSG ratio predicts *general* hepatotoxicity risk for mitochondrial st",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "A \"mitochondrial stress test\" panel is a pharmacodynamic readout, not a predictive companion diagnos",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Erastin Phase I trial datasets are insufficient for retrospective validation of VDAC1-CTC biomarkers",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "The singular thread \"VDAC1 expression in CTCs will be a poor predictive biomarker for anticancer res",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H2",
+      "prediction": "IF VDAC1 is knocked down (siRNA, >70% reduction) in HepG2 cells, THEN CBD-induced (10 \u00b5M, 48h) ROS production will decrease by \u226540% and cell death by \u226550%, whereas CYP3A4 activity inhibition by CBD will remain unchanged (\u00b110%).",
+      "testability_score": 9.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "VDAC1_knockdown_efficiency",
+          "range": "60.0-90.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "ROS_reduction",
+          "range": "20.0-70.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "cell_death_reduction",
+          "range": "25.0-75.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "CBD_IC50_shift",
+          "range": "1.0-3.0 fold",
+          "distribution": "log-normal"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.0728,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5019514353459749,
+            "std": 0.14848400491034244,
+            "median": 0.49167320363189115,
+            "ci_lower": 0.2350215716024955,
+            "ci_upper": 0.8094736552617353,
+            "min": 0.16822571642893638,
+            "max": 0.866921616738147
+          }
+        }
+      }
+    },
+    {
+      "id": "H1",
+      "prediction": "IF primary human hepatocytes are stratified by baseline GSH/GSSG ratio into tertiles (low <30, mid 30-60, high >60), THEN low-tertile cells treated with CBD (10 \u00b5M, 48h) will show \u22652.5-fold greater LDH release and \u22653-fold greater ALT leakage compared to high-tertile cells, with AUC for GSH/GSSG predicting >20% cell death of 0.65-0.75.",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CBD_concentration",
+          "range": "1.0-50.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "LDH_release_fold",
+          "range": "1.0-8.0 fold-change",
+          "distribution": "log-normal"
+        },
+        {
+          "name": "cell_death_threshold",
+          "range": "15.0-30.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "AUC_ROC",
+          "range": "0.5-0.9 (normal,",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.858,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5030595751648699,
+            "std": 0.13551130418001597,
+            "median": 0.496324754947065,
+            "ci_lower": 0.25859910191740554,
+            "ci_upper": 0.7791400948867329,
+            "min": 0.20578874921282797,
+            "max": 0.8202350755497805
+          }
+        }
+      }
+    },
+    {
+      "id": "H3",
+      "prediction": "IF hepatocytes are exposed to escalating doses of CBD or erastin, THEN the three-component panel (GSH, ATP/ADP, MMP) will show coordinated dose-dependent deterioration with \u22650.85 Spearman correlation between composite panel score and subsequent cell death (measured 24h later), and the panel at 6h will predict 48h toxicity with AUC \u22650.80.",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "GSH_EC50_depletion",
+          "range": "3.0-20.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "ATP_ADP_ratio_baseline",
+          "range": "4.0-12.0 (normal,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "ATP_ADP_ratio_at_toxic_dose",
+          "range": "0.5-3.0 (normal,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "MMP_reduction_at_EC50",
+          "range": "30.0-60.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "panel_AUC_for_48h_death",
+          "range": "0.6-0.95 (normal,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Spearman_rho",
+          "range": "0.6-0.95 (normal,",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.806,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.497092075396723,
+            "std": 0.11812534802979513,
+            "median": 0.49466291062120515,
+            "ci_lower": 0.2690488316323491,
+            "ci_upper": 0.7478703774477341,
+            "min": 0.135362612783667,
+            "max": 0.8268591734411609
+          }
+        }
+      }
+    },
+    {
+      "id": "H4",
+      "prediction": "IF a panel of cancer cell lines (n\u226515) is ranked by VDAC1 protein expression, THEN VDAC1-high lines (top quartile) will show \u22653-fold lower IC50 for erastin and \u22652-fold lower IC50 for CBD compared to VDAC1-low lines (bottom quartile), with VDAC1 expression explaining \u226530% of variance in drug sensitivity (R\u00b2 \u22650.30).",
+      "testability_score": 5.0,
+      "key_variables": [],
+      "parameters": [],
+      "monte_carlo": {
+        "effect_size": 0.0,
+        "power": 0.0,
+        "converged": true,
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5,
+            "std": 0.0,
+            "median": 0.5,
+            "ci_lower": 0.5,
+            "ci_upper": 0.5,
+            "min": 0.5,
+            "max": 0.5
+          }
+        }
+      }
+    }
+  ],
+  "simulations": {
+    "n_hypotheses_simulated": 4,
+    "total_iterations": 1200,
+    "llm_calls": 0,
+    "results": [
+      {
+        "hypothesis_id": "H1",
+        "n_iterations": 300,
+        "effect_size": 0.858,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "CBD_concentration": {
+            "mean": 24.84602092519529,
+            "std": 14.201276873516603,
+            "median": 24.471204897636433,
+            "ci_lower": 2.3567955154802336,
+            "ci_upper": 48.244484082273296,
+            "min": 1.3607512177992702,
+            "max": 49.62640263873602
+          },
+          "LDH_release_fold": {
+            "mean": 4.668137966050569,
+            "std": 1.359345143137975,
+            "median": 4.5717764962321095,
+            "ci_lower": 2.419527121981827,
+            "ci_upper": 7.890753984870813,
+            "min": 1.8491364483261497,
+            "max": 8.0
+          },
+          "cell_death_threshold": {
+            "mean": 22.331488389297416,
+            "std": 4.456689248112383,
+            "median": 22.210160556580092,
+            "ci_lower": 15.256456004567635,
+            "ci_upper": 29.760399057723724,
+            "min": 15.018495937678622,
+            "max": 29.981150551001473
+          },
+          "AUC_ROC": {
+            "mean": 0.7051196841338258,
+            "std": 0.11641098584944351,
+            "median": 0.7009889506942184,
+            "ci_lower": 0.5149642641473678,
+            "ci_upper": 0.8934090775225195,
+            "min": 0.5002074976662823,
+            "max": 0.8997687636896752
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H2",
+        "n_iterations": 300,
+        "effect_size": 1.0728,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "VDAC1_knockdown_efficiency": {
+            "mean": 74.94831878279487,
+            "std": 8.552139405977647,
+            "median": 74.8468053815908,
+            "ci_lower": 60.79074131510678,
+            "ci_upper": 89.13281251797329,
+            "min": 60.094504582960155,
+            "max": 89.93645232822361
+          },
+          "ROS_reduction": {
+            "mean": 44.790279727031994,
+            "std": 14.281693493782692,
+            "median": 45.15433313540195,
+            "ci_lower": 21.06176277155788,
+            "ci_upper": 68.3899235941239,
+            "min": 20.111024853206253,
+            "max": 69.77913307578154
+          },
+          "cell_death_reduction": {
+            "mean": 50.044895661104704,
+            "std": 14.280290381335602,
+            "median": 49.001075887860026,
+            "ci_lower": 26.702608037454215,
+            "ci_upper": 73.87955116089077,
+            "min": 25.84151566028174,
+            "max": 74.89210204148064
+          },
+          "CBD_IC50_shift": {
+            "mean": 2.0256498817226727,
+            "std": 0.5281344155853779,
+            "median": 1.9579788084337575,
+            "ci_lower": 1.0893526221963592,
+            "ci_upper": 3.0,
+            "min": 1.0,
+            "max": 3.0
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H3",
+        "n_iterations": 300,
+        "effect_size": 0.806,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "GSH_EC50_depletion": {
+            "mean": 11.286633955381102,
+            "std": 4.900528779056956,
+            "median": 10.862241584624789,
+            "ci_lower": 3.637674122407899,
+            "ci_upper": 19.535111551590532,
+            "min": 3.093420542315391,
+            "max": 19.92155666557702
+          },
+          "ATP_ADP_ratio_baseline": {
+            "mean": 7.875800839780666,
+            "std": 2.349601782163501,
+            "median": 7.76840477666264,
+            "ci_lower": 4.1994804892847,
+            "ci_upper": 11.759339693657907,
+            "min": 4.010290010325984,
+            "max": 11.942262887991857
+          },
+          "ATP_ADP_ratio_at_toxic_dose": {
+            "mean": 1.704787550571895,
+            "std": 0.7384338179803809,
+            "median": 1.6521676574187678,
+            "ci_lower": 0.5653723740263815,
+            "ci_upper": 2.9284099278898674,
+            "min": 0.5083095381517184,
+            "max": 2.9869977279315374
+          },
+          "MMP_reduction_at_EC50": {
+            "mean": 44.07983865112405,
+            "std": 8.452768929788366,
+            "median": 43.12886345772232,
+            "ci_lower": 30.643951923691365,
+            "ci_upper": 58.55150342147325,
+            "min": 30.012979516382476,
+            "max": 59.91179706086421
+          },
+          "panel_AUC_for_48h_death": {
+            "mean": 0.7903482821155217,
+            "std": 0.10519011704828336,
+            "median": 0.8064719558561781,
+            "ci_lower": 0.6129263119348458,
+            "ci_upper": 0.9414459173196735,
+            "min": 0.6004453777426675,
+            "max": 0.9481818207759285
+          },
+          "Spearman_rho": {
+            "mean": 0.7804365784644023,
+            "std": 0.10068242739702599,
+            "median": 0.7852347149372935,
+            "ci_lower": 0.6115115890072609,
+            "ci_upper": 0.9434829535322452,
+            "min": 0.6000159022144247,
+            "max": 0.94998938421188
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H4",
+        "n_iterations": 300,
+        "effect_size": 0.0,
+        "power": 0.0,
+        "converged": true,
+        "parameters": {}
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF primary human hepatocytes are stratified by baseline GSH/GSSG ratio into tertiles (low <30, mid 30-60, high >60), THEN low-tertile cells treated with CBD (10 \u00b5M, 48h) will show \u22652.5-fold greater LDH release and \u22653-fold greater ALT leakage compared to high-tertile cells, with AUC for GSH/GSSG predicting >20% cell death of 0.65-0.75.",
+      "protocol": "Obtain cryopreserved primary human hepatocytes from \u226520 donors (BioIVT/Lonza). Measure baseline GSH/GSSG (enzymatic recycling assay). Treat with CBD (1, 5, 10, 25, 50 \u00b5M) \u00b1 valproate (300 \u00b5M) for 24/48/72h.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            25.0,
+            50.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Valproate": {
+          "doses": [
+            100.0,
+            300.0,
+            600.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Ketoconazole": {
+          "doses": [
+            5.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "LDH release (CytoTox96)",
+        "ALT (kinetic assay)",
+        "GSH/GSSG (Cayman kit)",
+        "ROS (CM-H2DCFDA)",
+        "MMP (TMRM)",
+        "VDAC1 oligomerization (DSP crosslinking + Western blot)",
+        "CYP3A4 activity (P450-Glo)"
+      ],
+      "controls": [
+        "Vehicle (0.1% DMSO)",
+        "N-acetylcysteine (5 mM",
+        "GSH rescue)",
+        "VDAC1 inhibitor DIDS (100 \u00b5M",
+        "VDAC-block control)",
+        "ketoconazole alone",
+        "heat-killed cells (LDH max)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "Monotonic inverse relationship between baseline GSH/GSSG and hepatocyte death; ROC AUC 0.65-0.75; ketoconazole partially but not fully rescues toxicity in low-GSH donors, confirming dual mechanism.",
+      "null_outcome": "No correlation between GSH/GSSG and cell death (AUC <0.55), or ketoconazole fully rescues toxicity (implicating CYP450 only, not VDAC-mediated oxidative stress)."
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF VDAC1 is knocked down (siRNA, >70% reduction) in HepG2 cells, THEN CBD-induced (10 \u00b5M, 48h) ROS production will decrease by \u226540% and cell death by \u226550%, whereas CYP3A4 activity inhibition by CBD will remain unchanged (\u00b110%).",
+      "protocol": "Transfect HepG2 cells with VDAC1 siRNA (3 sequences) or scrambled control (48h knockdown confirmed by qPCR/Western). Treat with CBD (1, 5, 10, 25 \u00b5M) for 24/48h. Parallel VDAC1-overexpression arm (pcDNA3-VDAC1). Measure all",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            25.0
+          ],
+          "unit": "\u00b5M;"
+        }
+      },
+      "readouts": [
+        "MitoSOX (mitochondrial superoxide)",
+        "CM-H2DCFDA (total ROS)",
+        "Annexin V/PI (apoptosis)",
+        "CytoTox-Glo (cell death)",
+        "CYP3A4 (P450-Glo)",
+        "VDAC1 protein (Western)",
+        "cytochrome c release (ELISA)",
+        "caspase 3/7 (Caspase-Glo)"
+      ],
+      "controls": [
+        "Scrambled siRNA + vehicle",
+        "scrambled siRNA + CBD",
+        "VDAC1 siRNA + vehicle",
+        "NAC (5 mM) rescue",
+        "DIDS (100 \u00b5M)",
+        "erastin as VDAC-opening positive control",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "VDAC1 KD significantly reduces ROS and cell death without altering CYP3A4 inhibition by CBD; VDAC1 overexpression sensitizes cells. VDAC2 KD shows smaller or no effect. This mechanistically separates VDAC-mediated oxidative toxicity from CYP-mediated metabolic toxicity.",
+      "null_outcome": "VDAC1 KD does not reduce CBD toxicity (\u226415% change), or VDAC1 KD also reduces CYP3A4 inhibition proportionally (suggesting confounded pathway, not independent mechanism)."
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF hepatocytes are exposed to escalating doses of CBD or erastin, THEN the three-component panel (GSH, ATP/ADP, MMP) will show coordinated dose-dependent deterioration with \u22650.85 Spearman correlation between composite panel score and subsequent cell death (measured 24h later), and the panel at 6h will predict 48h toxicity with AUC \u22650.80.",
+      "protocol": "Use primary human hepatocytes (\u226510 donors) and HepaRG cells. Treat with CBD (1-50 \u00b5M) or erastin (1-20 \u00b5M) or acetaminophen (1-20 mM). Measure panel at 2, 6, 12, 24h. Measure cell death at 24, 48, 72h. Build composite score (weighted PCA of 3 metrics). Test whether 6h panel predicts 48h death. Include TRPV1 agonist capsaicin (10 \u00b5M) and TRPV1 antagonist AMG9810 (3 \u00b5M) + CBD arm to test confounding by non-mitochondrial CBD targets. Timeline: 10 weeks.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            25.0,
+            50.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Erastin": {
+          "doses": [
+            1.0,
+            2.0,
+            5.0,
+            10.0,
+            20.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Acetaminophen": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            15.0,
+            20.0
+          ],
+          "unit": "mM;"
+        },
+        "Capsaicin": {
+          "doses": [
+            10.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "AMG9810": {
+          "doses": [
+            3.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "GSH/GSSG (ThiolTracker + enzymatic)",
+        "ATP/ADP (ADP/ATP Ratio Assay Kit",
+        "Sigma)",
+        "MMP (TMRM 50 nM",
+        "live imaging + plate reader)",
+        "cell death (LDH + Annexin V/PI)",
+        "high-content imaging (Operetta/ImageXpress for single-cell MMP)"
+      ],
+      "controls": [
+        "Vehicle (0.1% DMSO)",
+        "FCCP (10 \u00b5M",
+        "complete MMP collapse positive control)",
+        "oligomycin (1 \u00b5M",
+        "ATP synthase inhibition)",
+        "NAC (5 mM",
+        "GSH rescue)",
+        "rotenone (1 \u00b5M",
+        "Complex I inhibition as non-VDAC mitochondrial toxicant)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "All three panel components deteriorate",
+      "null_outcome": "Panel components change non-concordantly or show poor predictive power (AUC <0.65); or capsaicin alone significantly alters panel metrics, indicating TRPV1-mediated confounding that undermines diagnostic specificity."
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF a panel of cancer cell lines (n\u226515) is ranked by VDAC1 protein expression, THEN VDAC1-high lines (top quartile) will show \u22653-fold lower IC50 for erastin and \u22652-fold lower IC50 for CBD compared to VDAC1-low lines (bottom quartile), with VDAC1 expression explaining \u226530% of variance in drug sensitivity (R\u00b2 \u22650.30).",
+      "protocol": "",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": [],
+      "expected_outcome": "",
+      "null_outcome": ""
+    }
+  ],
+  "budget": {
+    "s1_calls": 5,
+    "s2_calls": 0,
+    "verify_calls": 5,
+    "gate_calls": 1,
+    "s4_calls": 1,
+    "s5_calls": 0,
+    "total_calls": 12,
+    "budget_target": "92-142 calls"
+  },
+  "audit_trail": {
+    "session_seed": 1771007979,
+    "s2_rounds": [],
+    "s3_gate": {
+      "stage": "S3",
+      "passed": true,
+      "convergence_score": 0.8807,
+      "convergence_threshold": 0.85,
+      "convergence_pass": true,
+      "jaccard": 0.4019,
+      "jaccard_threshold": 0.85,
+      "jaccard_pass": false,
+      "type_01_ratio": 0.7778,
+      "type_01_threshold": 0.75,
+      "type_pass": true,
+      "cosine": 0.8807,
+      "jsd": 0.1964,
+      "kappa": 0.9709,
+      "type_distribution": {
+        "0": 0.4444444444444444,
+        "1": 0.3333333333333333,
+        "2": 0.1111111111111111,
+        "3": 0.1111111111111111
+      }
+    },
+    "final_claims": [
+      {
+        "statement": "1**: Baseline GSH/GSSG ratio predicts hepatotoxicity risk from VDAC-engaging drugs, but with moderate discriminatory power (AUC 0.65-0.75) because hepatotoxicity from CBD/valproate involves multiple mechanisms beyond VDAC (CYP450 inhibition, carnitine depletion).",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "s beyond VDAC (CYP450 inhibition, carnitine depletion).",
+        "falsifiable_by": "Retrospective Epidiolex analysis showing no correlation between baseline GSH/GSSG (if measurable from stored samples) and ALT elevation events, or AUC <0.55.",
+        "model": "claude"
+      },
+      {
+        "statement": "2**: VDAC1 expression in CTCs is NOT currently a reliable predictive biomarker for response to VDAC-targeting cancer therapies.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "CTCs are rare (1-100/mL), phenotypically heterogeneous, and VDAC1 expression in CTCs may not reflect bulk tumor mitochondrial dependence; no validated quantitative CTC-VDAC1 assay exists; erastin acts primarily via system Xc\u207b inhibition with VDAC involvement being secondary/debated.",
+        "falsifiable_by": "Demonstration that single-CTC VDAC1 quantification (e.g., by CellSearch + immunofluorescence) correlates with tumor biopsy VDAC1 levels (r>0.7) and treatment response in a prospective cohort.",
+        "model": "claude"
+      },
+      {
+        "statement": "3**: Epidiolex trial datasets (GWPCARE1-4, expanded access) contain ALT, GGT, bilirubin, and CBD plasma PK data sufficient for retrospective hepatotoxicity-PK correlation, but almost certainly lack GSH/GSSG measurements or stored samples enabling redox biomarker analysis.",
+        "type": 1,
+        "confidence": 0.82,
+        "mechanism": "FDA-mandated hepatic monitoring in Epidiolex trials captured standard LFTs and PK; GSH/GSSG is not a standard clinical assay and was not specified in published protocols.",
+        "falsifiable_by": "Confirmation from GW Pharma/Jazz Pharmaceuticals that banked serum/plasma samples exist and GSH/GSSG was measured or could be retrospectively assayed.",
+        "model": "claude"
+      },
+      {
+        "statement": "4**: A mitochondrial stress panel (GSH, ATP/ADP, MMP) is scientifically rational but faces critical pre-analytical barriers\u2014ATP/ADP and MMP require fresh cells processed within minutes, making routine clinical deployment impractical without point-of-care technology.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "ATP degrades rapidly ex vivo; TMRM-based MMP requires live intact cells; only GSH/GSSG is robustly measurable from stored blood samples, reducing the panel to effectively one reliable analyte.",
+        "falsifiable_by": "Development of a stabilized whole-blood collection system preserving ATP/ADP ratios and mitochondrial membrane potential for >2 hours at room temperature. \u2500\u2500\u2500",
+        "model": "claude"
+      },
+      {
+        "statement": "1:** Baseline peripheral blood GSH/GSSG ratio predicts hepatotoxicity risk from VDAC-engaging drugs (CBD, valproate, acetaminophen).",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "Low GSH/GSSG reflects impaired mitochondrial antioxidant capacity; VDAC modulation (e.g., by CBD) exacerbates ROS, triggering hepatocyte death and ALT/GGT elevation.",
+        "falsifiable_by": "A prospective study showing no correlation between baseline GSH/GSSG and hepatotoxicity in patients on CBD/valproate, or evidence that GSH/GSSG is not rate-limiting for VDAC-mediated oxidative stress.",
+        "model": "mistral"
+      },
+      {
+        "statement": "2:** VDAC1 expression in CTCs is a *weak* predictive biomarker for response to VDAC-targeting cancer therapies (erastin, CBD).",
+        "type": 2,
+        "confidence": 0.5,
+        "mechanism": "High VDAC1 may indicate mitochondrial dependence, sensitizing cells to VDAC-mediated ferroptosis (erastin) or apoptosis (CBD), but CTC heterogeneity and assay variability dilute predictive power.",
+        "falsifiable_by": "A clinical trial showing no difference in response rates between high/low VDAC1 CTC groups, or evidence that VDAC1 expression is not correlated with mitochondrial metabolism in CTCs.",
+        "model": "mistral"
+      },
+      {
+        "statement": "3:** A mitochondrial stress panel (GSH, ATP/ADP, MMP) can serve as a companion diagnostic for VDAC-modulating drugs, but only in *controlled settings* (e.g., clinical trials).",
+        "type": 1,
+        "confidence": 0.6,
+        "mechanism": "VDAC modulation directly alters MMP and ATP production; GSH depletion reflects oxidative stress, enabling real-time monitoring of mitochondrial dysfunction.",
+        "falsifiable_by": "A study showing no dose-dependent changes in the panel metrics with VDAC drug exposure, or evidence that these metrics are confounded by non-mitochondrial effects (e.g., TRPV1 activation by CBD).",
+        "model": "mistral"
+      },
+      {
+        "statement": "4:** Epidiolex trials (GWPCARE) contain sufficient PK/hepatic biomarker data to retrospectively validate VDAC-hepatotoxicity links, but *only if stored samples exist* for GSH/GSSG analysis.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "GWPCARE trials measured ALT/GGT and CBD plasma levels; retrospective analysis could correlate baseline GSH/GSSG (if stored) with hepatotoxicity, but sample degradation or lack of storage may limit utility.",
+        "falsifiable_by": "Confirmation that no stored samples exist for GSH/GSSG measurement, or a retrospective analysis showing no correlation between ALT/GGT and CBD exposure.",
+        "model": "mistral"
+      },
+      {
+        "statement": "5 (SINGULAR THREAD INVESTIGATION):** Erastin Phase I trials *lack* CTC VDAC1 expression data, making retrospective validation impossible.",
+        "type": 0,
+        "confidence": 0.85,
+        "mechanism": "Early-phase cancer trials rarely include CTC biomarker analysis due to technical and regulatory constraints.",
+        "falsifiable_by": "Publication of erastin Phase I data showing CTC VDAC1 measurements, or confirmation from trial investigators that such data were collected. --- ### **",
+        "model": "mistral"
+      },
+      {
+        "statement": "Baseline PB GSH/GSSG <25 predicts >3x hepatotoxicity risk (OR>4) for CBD (1-10\u03bcM plasma) via VDAC redox disruption.",
+        "type": 2,
+        "confidence": 0.72,
+        "mechanism": "Low GSH/GSSG impairs VDAC-permeable GSSG efflux, amplifying CBD (Kd=11\u03bcM)-induced ROS when [CBD] overlaps therapeutic window.",
+        "falsifiable_by": "Retrospective Epidiolex analysis showing no GSH/LFT correlation (r<0.2).",
+        "model": "grok"
+      },
+      {
+        "statement": "Epidiolex trials (GWPCARE) enable retrospective VDAC-hepatotox validation using banked PK/ALT/GGT data.",
+        "type": 1,
+        "confidence": 0.81,
+        "mechanism": "Trials tracked CBD Cmax (5-8\u03bcM), ALT>3xULN (5-10% incidence), allowing correlation with baseline LFTs/GSH if samples stored.",
+        "falsifiable_by": "Public datasets/CT.gov confirm no plasma archiving.",
+        "model": "grok"
+      },
+      {
+        "statement": "VDAC1 expression in CTCs is unreliable predictor for erastin/CBD due to <5 CTCs/mL yield & 50% heterogeneity.",
+        "type": 1,
+        "confidence": 0.78,
+        "mechanism": "CTC VDAC1 varies 10-fold by EMT status; erastin ferroptosis (VDAC indirect) not CTC-validated.",
+        "falsifiable_by": "Prospective trial (n>50) with scRNA-seq showing",
+        "model": "grok"
+      },
+      {
+        "statement": "VDAC1 expression in CTCs is a poor predictive biomarker for CBD's anticancer efficacy because CBD's therapeutic plasma concentrations ([1.0, 10.0] uM) are insufficient to robustly engage VDAC1 (Kd = 11.0 uM), instead prioritizing higher-affinity targets like TRPV1/2 and PPAR\u03b3.",
+        "type": 1,
+        "confidence": 0.9,
+        "mechanism": "Target affinity dictates drug action; CBD will modulate targets with Kd/EC50 values within its therapeutic window before engaging lower-affinity targets like VDAC1.",
+        "falsifiable_by": "Evidence showing robust VDAC1-dependent apoptosis in cancer cells at CBD concentrations below 10 uM, or clinical data showing a strong correlation between CTC VDAC1 expression and tumor response in patients treated with CBD monotherapy.",
+        "model": "gemini"
+      },
+      {
+        "statement": "Peripheral blood GSH/GSSG ratio is a low-fidelity predictor of hepatic-specific toxicity from VDAC modulators because it does not reliably reflect the distinct, compartmentalized redox state of the liver.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "The liver maintains its own GSH pool and redox balance, which is not in rapid equilibrium with circulating blood; systemic oxidative stress markers are poor proxies for organ-specific vulnerability.",
+        "falsifiable_by": "A study in a large animal model or human cohort demonstrating a tight, predictive correlation (r > 0.7) between baseline peripheral blood GSH/GSSG and liver biopsy GSH/GSSG, and that this peripheral measure predicts subsequent drug-induced liver injury.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The proposed 'mitochondrial stress test' is more viable as a pharmacodynamic (PD) biomarker to monitor on-treatment toxicity than as a predictive baseline test.",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "Changes in ATP/ADP or MMP directly reflect on-target mitochondrial engagement by a drug, providing a real-time measure of bioactivity and impending stress before overt cellular damage (e.g., ALT release) occurs.",
+        "falsifiable_by": "A clinical trial showing that baseline measurements from this panel strongly predict which patients will develop toxicity, while on-treatment changes provide no additional or earlier information than standard LFTs. \u2500\u2500\u2500",
+        "model": "gemini"
+      },
+      {
+        "statement": "Baseline peripheral blood GSH/GSSG ratio predicts *general* hepatotoxicity risk for mitochondrial stressors, not specifically VDAC-engaging drugs.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "A low GSH/GSSG ratio indicates systemic redox imbalance and depleted antioxidant capacity, a common final pathway for susceptibility to diverse hepatotoxicants that cause oxidative stress.",
+        "falsifiable_by": "A clinical study showing no correlation between baseline GSH/GSSG and hepatotoxicity for drugs like acetaminophen or valproate, while it correlates for non-mitochondrial toxins.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "A \"mitochondrial stress test\" panel is a pharmacodynamic readout, not a predictive companion diagnostic, for VDAC modulators.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "Changes in MMP, ATP/ADP, and GSH after drug exposure measure *on-target effect*, but baseline values may not predict individual vulnerability because they integrate too many confounding variables (nutrition, comorbidities).",
+        "falsifiable_by": "A prospective trial demonstrating that pre-treatment panel values stratify patients into differential clinical outcome groups for a VDAC-targeting drug.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "Erastin Phase I trial datasets are insufficient for retrospective validation of VDAC1-CTC biomarkers due to lack of standardized CTC collection/analysis.",
+        "type": 1,
+        "confidence": 0.9,
+        "mechanism": "Early-phase oncology trials prioritize safety and PK; CTC analysis, especially for a mitochondrial protein like VDAC1, is a specialized correlative not routinely performed or banked.",
+        "falsifiable_by": "Publication of a retrospective analysis from an erastin trial cohort with quantified VDAC1 expression in CTCs correlated with PK and clinical response.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "The singular thread \"VDAC1 expression in CTCs will be a poor predictive biomarker for anticancer response to CBD\" is likely correct.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "CBD's anticancer effects are pleiotropic (TRPV, PPAR\u03b3, 5HT1A); at its therapeutic window (1-10 \u00b5M), its VDAC1 affinity (Kd 11 \u00b5M) suggests VDAC engagement is secondary, making VDAC1 expression a weak predictor.",
+        "falsifiable_by": "A strong, specific correlation between CTC VDAC1 expression and tumor response to purified CBD in a clinical trial, with no correlation to its other known targets. **",
+        "model": "deepseek"
+      }
+    ]
+  }
+}

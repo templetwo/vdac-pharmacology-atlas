@@ -1,0 +1,935 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260213_035958_pharmacology",
+  "timestamp": "2026-02-13T04:02:22.482740+00:00",
+  "question": "Does the dual-pathway VDAC1 mechanism for CBD hepatotoxicity withstand critical scrutiny against four specific challenges: (1) Does rapid CYP450 metabolic clearance in healthy liver prevent CBD from reaching VDAC1 saturation occupancy time, and does the primary metabolite 7-OH-CBD also bind VDAC1? (2) Does CBD bind selectively to VDAC1 over VDAC2, given that VDAC2 is anti-apoptotic \u2014 and if CBD inhibits both isoforms, could it promote apoptosis even in healthy hepatocytes? (3) Is a 2x ROS scavenging ratio between healthy and cancer cells realistic for human hepatocytes, and at what intracellular CBD concentration does the glutathione pool deplete? (4) Does CBD physically occlude the VDAC pore (causing ATP depletion and energy starvation) or lock it open (causing uncoupling and ROS), and does a ROS-focused model miss the starvation death pathway?",
+  "convergence_report": {
+    "s1_initial": {
+      "n_models_responded": 5,
+      "initial_jaccard": 0.061511568777015004,
+      "initial_cosine": 0.8064736902713776
+    },
+    "s2_refinement": {
+      "total_rounds": 0,
+      "early_stopped": false,
+      "final_jaccard": 0.0,
+      "final_cosine": 0.0,
+      "final_jsd": 0.0,
+      "final_type_01_ratio": 0.0
+    },
+    "s3_gate": {
+      "passed": true,
+      "jaccard": 0.5076,
+      "type_01_ratio": 0.75,
+      "recommendation": ""
+    }
+  },
+  "verification": {
+    "n_type2_input": 10,
+    "n_promoted": 2,
+    "n_held": 6,
+    "n_novel": 1,
+    "n_contradicted": 1,
+    "total_calls": 10
+  },
+  "gate": {
+    "passed": true,
+    "n_passed": 16,
+    "n_failed": 4,
+    "recommendation": "Lab Gate PASSED with filter. 16/20 claims cleared. 4 filtered: 'Steady-state free hepatic [CBD] remains <11 \u00b5M (VD...' not feasible; 'Singular threads valid: CBD (logP 6.3) binds VDAC ...' lacks novelty; 'The VDAC1-centric model fails on pharmacokinetic g...' not feasible",
+    "claims": [
+      {
+        "statement": "Membrane partitioning of CBD (logP 6.3) creates local mitochondrial membrane concentrations 100-1000",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "CBD likely modulates VDAC gating allosterically from within the membrane rather than physically occl",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "CBD does not meaningfully discriminate between VDAC1 and VDAC2, and dual inhibition poses a genuine ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "A 2\u00d7 ROS scavenging differential between healthy and cancer hepatocytes is insufficient to explain s",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "1:** *CBD is unlikely to reach VDAC1-saturating concentrations (\u226511 \u00b5M) in healthy hepatocytes under",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "2:** *CBD binds VDAC1 and VDAC2 non-selectively, risking apoptosis in healthy hepatocytes via VDAC2 ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "3:** *The 2x ROS scavenging ratio is unrealistic for human hepatocytes; glutathione depletion occurs",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "4:** *CBD does not physically occlude the VDAC pore but alters gating kinetics, favoring a \"locked o",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "5 (SINGULAR):** *The dual-pathway model\u2019s mutual exclusivity is a false dichotomy; CBD may simultane",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Steady-state free hepatic [CBD] remains <11 \u00b5M (VDAC1 Kd) under 20-1500 mg/day oral dosing due to fi",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "7-OH-CBD (primary metabolite, ~20-40% of dose) likely binds VDAC1 with Kd~10-20 \u00b5M, structurally ana",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "CBD lacks selectivity for VDAC1 over VDAC2 (predicted Kd_VDAC2~5-15 \u00b5M); inhibits VDAC2 anti-apoptot",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Singular threads valid: CBD (logP 6.3) binds VDAC membrane domain allosterically, altering gating",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "The VDAC1-centric model fails on pharmacokinetic grounds; sustained free intra-hepatocyte concentrat",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The model's proposed cancer-selectivity is undermined by CBD's likely lack of isoform selectivity be",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The \"occlusion vs. lock-open\" framing is a false dichotomy; a unified mechanism of allosteric gating",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Oral CBD is unlikely to cause direct VDAC1-mediated hepatotoxicity in healthy livers at standard the",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "CBD likely inhibits both VDAC1 and VDAC2 with similar affinity, creating a pro-apoptotic background ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The dual-pathway model is mechanistically confused; CBD's lipophilicity favors membrane-embedded bin",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The 2x ROS scavenging ratio is plausible for hepatocytes vs. hepatocellular carcinoma (HCC), but glu",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H4",
+      "prediction": "IF CBD is applied to matched primary human hepatocytes and HCC cell lines, THEN the EC50 for GSH depletion (to <50% baseline) will differ by <3-fold between cell types, GSH depletion will require [CBD] \u226520 \u00b5M (above therapeutic free hepatic levels), AND the ROS scavenging capacity ratio (healthy:HCC) will be <2\u00d7 as measured by DCFDA kinetics.",
+      "testability_score": 9.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "baseline_GSH_healthy",
+          "range": "5.0-10.0 mM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "baseline_GSH_HCC",
+          "range": "2.0-8.0 mM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "GSH_depletion_EC50_healthy",
+          "range": "15.0-80.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "GSH_depletion_EC50_HCC",
+          "range": "10.0-60.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "ROS_scavenging_ratio",
+          "range": "1.0-3.0 (normal,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "therapeutic_free_hepatic_CBD",
+          "range": "0.5-10.0 \u00b5M",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.7275,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.493253831010683,
+            "std": 0.11497273275251826,
+            "median": 0.49442037537229344,
+            "ci_lower": 0.26678236336245115,
+            "ci_upper": 0.699176764270462,
+            "min": 0.1990410697236479,
+            "max": 0.8021257144063672
+          }
+        }
+      }
+    },
+    {
+      "id": "H1",
+      "prediction": "IF CBD (logP 6.3) is administered to isolated hepatocytes at clinically relevant bulk concentrations (1-10 \u00b5M), THEN mitochondrial membrane CBD concentration will exceed bulk aqueous concentration by \u226550-fold, achieving local concentrations \u2265100 \u00b5M sufficient for VDAC1 occupancy (Kd ~11 \u00b5M), AND this enrichment will be equivalent (\u00b120%) in healthy hepatocytes vs. HCC cells.",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "bulk_CBD_concentration",
+          "range": "1.0-10.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "membrane_enrichment_factor",
+          "range": "10.0-1000.0 fold",
+          "distribution": "uniform"
+        },
+        {
+          "name": "VDAC1_Kd",
+          "range": "5.0-20.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "mitochondrial_membrane_volume_fraction",
+          "range": "0.001-0.01 (uniform)",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9309,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.500099337051926,
+            "std": 0.13669012241801018,
+            "median": 0.5135273267663021,
+            "ci_lower": 0.25103422114315876,
+            "ci_upper": 0.7356861615114251,
+            "min": 0.14985873316293377,
+            "max": 0.8597271425353767
+          }
+        }
+      }
+    },
+    {
+      "id": "H3",
+      "prediction": "IF CBD binds VDAC1 with Kd ~11 \u00b5M, THEN it will bind VDAC2 with Kd within 5-fold (2-55 \u00b5M), AND CBD treatment (10-50 \u00b5M) will increase BAK oligomerization and cytochrome c release in healthy hepatocytes, an effect that is rescued by VDAC2 overexpression and phenocopied by VDAC2 knockdown.",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "Kd_VDAC1",
+          "range": "5.0-20.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Kd_VDAC2",
+          "range": "2.0-60.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "selectivity_ratio",
+          "range": "0.2-10.0 fold",
+          "distribution": "uniform"
+        },
+        {
+          "name": "BAK_oligomerization_EC50",
+          "range": "5.0-100.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "cytochrome_c_release_threshold",
+          "range": "10.0-80.0 %",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9216,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4934038742106948,
+            "std": 0.13223648032747326,
+            "median": 0.4865524462283509,
+            "ci_lower": 0.25886351030839905,
+            "ci_upper": 0.7579434521888677,
+            "min": 0.15250645903437524,
+            "max": 0.8466002656183298
+          }
+        }
+      }
+    },
+    {
+      "id": "H2",
+      "prediction": "IF CBD is applied to reconstituted VDAC1 in planar lipid bilayers, THEN it will NOT produce zero-conductance block events but WILL shift gating to intermediate subconductance states (30-70% of full open conductance), alter voltage-dependent gating (V\u2081/\u2082 shift \u226510 mV), and increase dwell time in subconductance states by \u22653-fold.",
+      "testability_score": 6.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "VDAC1_full_open_conductance",
+          "range": "3.5-4.5 nS",
+          "distribution": "uniform"
+        },
+        {
+          "name": "CBD_induced_subconductance",
+          "range": "1.0-3.0 nS",
+          "distribution": "uniform"
+        },
+        {
+          "name": "V_half_shift",
+          "range": "5.0-30.0 mV",
+          "distribution": "uniform"
+        },
+        {
+          "name": "subconductance_dwell_time_ratio",
+          "range": "1.0-20.0 fold",
+          "distribution": "uniform"
+        },
+        {
+          "name": "CBD_bilayer_concentration",
+          "range": "1.0-100.0 \u00b5M",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.0055,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5026892819042714,
+            "std": 0.13681199472620229,
+            "median": 0.5057129402312373,
+            "ci_lower": 0.23053923205668755,
+            "ci_upper": 0.7741475334470787,
+            "min": 0.15681117875445574,
+            "max": 0.893499849349197
+          }
+        }
+      }
+    }
+  ],
+  "simulations": {
+    "n_hypotheses_simulated": 4,
+    "total_iterations": 1200,
+    "llm_calls": 0,
+    "results": [
+      {
+        "hypothesis_id": "H1",
+        "n_iterations": 300,
+        "effect_size": 0.9309,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "bulk_CBD_concentration": {
+            "mean": 5.3798813944236255,
+            "std": 2.6083977930948863,
+            "median": 5.311037634259753,
+            "ci_lower": 1.2492073395780021,
+            "ci_upper": 9.677558300825707,
+            "min": 1.0662604277590497,
+            "max": 9.931380076502533
+          },
+          "membrane_enrichment_factor": {
+            "mean": 510.26641897718304,
+            "std": 280.9793693438501,
+            "median": 518.3462468246005,
+            "ci_lower": 45.74761347579068,
+            "ci_upper": 980.3192181364489,
+            "min": 15.375535787413456,
+            "max": 999.1136831694963
+          },
+          "VDAC1_Kd": {
+            "mean": 12.457993651995654,
+            "std": 4.467470552435863,
+            "median": 12.531569732842947,
+            "ci_lower": 5.256456004567635,
+            "ci_upper": 19.760399057723724,
+            "min": 5.0184959376786225,
+            "max": 19.981150551001473
+          },
+          "mitochondrial_membrane_volume_fraction": {
+            "mean": 0.0056010220120921135,
+            "std": 0.0026248717140568076,
+            "median": 0.005418394128564572,
+            "ci_lower": 0.0013833139963459378,
+            "ci_upper": 0.009851704244256689,
+            "min": 0.0010046686974913496,
+            "max": 0.009994797183017691
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H2",
+        "n_iterations": 300,
+        "effect_size": 1.0055,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "VDAC1_full_open_conductance": {
+            "mean": 3.998277292759829,
+            "std": 0.28507131353258824,
+            "median": 3.994893512719693,
+            "ci_lower": 3.5263580438368924,
+            "ci_upper": 4.47109375059911,
+            "min": 3.503150152765339,
+            "max": 4.49788174427412
+          },
+          "CBD_induced_subconductance": {
+            "mean": 1.9916111890812795,
+            "std": 0.5712677397513077,
+            "median": 2.006173325416078,
+            "ci_lower": 1.0424705108623151,
+            "ci_upper": 2.9355969437649563,
+            "min": 1.0044409941282502,
+            "max": 2.991165323031262
+          },
+          "V_half_shift": {
+            "mean": 17.522447830552352,
+            "std": 7.140145190667801,
+            "median": 17.000537943930013,
+            "ci_lower": 5.851304018727109,
+            "ci_upper": 29.43977558044539,
+            "min": 5.420757830140869,
+            "max": 29.94605102074032
+          },
+          "subconductance_dwell_time_ratio": {
+            "mean": 10.657532131065539,
+            "std": 5.656535488211213,
+            "median": 11.110160877762558,
+            "ci_lower": 1.4239001677092777,
+            "ci_upper": 19.47256591895715,
+            "min": 1.107032084049457,
+            "max": 19.96193568108809
+          },
+          "CBD_bilayer_concentration": {
+            "mean": 51.50726997638119,
+            "std": 29.55143096451817,
+            "median": 53.051499664094855,
+            "ci_lower": 4.937748685125006,
+            "ci_upper": 98.47694225368339,
+            "min": 1.4395813269670064,
+            "max": 99.76524645538976
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H3",
+        "n_iterations": 300,
+        "effect_size": 0.9216,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "Kd_VDAC1": {
+            "mean": 12.311735842983326,
+            "std": 4.323995981520843,
+            "median": 11.937271986433638,
+            "ci_lower": 5.562653637418735,
+            "ci_upper": 19.58980431022694,
+            "min": 5.082429890278286,
+            "max": 19.930785293156198
+          },
+          "Kd_VDAC2": {
+            "mean": 30.099556088409834,
+            "std": 17.03461292068538,
+            "median": 29.32093463080414,
+            "ci_lower": 3.4462335473140744,
+            "ci_upper": 58.25521277901983,
+            "min": 2.074602574863384,
+            "max": 59.581405937940964
+          },
+          "selectivity_ratio": {
+            "mean": 4.9227671982418295,
+            "std": 2.894660566483093,
+            "median": 4.716497217081571,
+            "ci_lower": 0.4562597061834156,
+            "ci_upper": 9.71936691732828,
+            "min": 0.23257338955473622,
+            "max": 9.949031093491627
+          },
+          "BAK_oligomerization_EC50": {
+            "mean": 49.586155728559476,
+            "std": 26.76710161099649,
+            "median": 46.57473428278733,
+            "ci_lower": 7.0391810916893185,
+            "ci_upper": 95.41309416799862,
+            "min": 5.041101801877842,
+            "max": 99.72069069273665
+          },
+          "cytochrome_c_release_threshold": {
+            "mean": 48.06965642310434,
+            "std": 21.038023409656674,
+            "median": 51.29439117123563,
+            "ci_lower": 12.585262386969166,
+            "ci_upper": 78.28918346393472,
+            "min": 10.089075548533513,
+            "max": 79.6363641551857
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H4",
+        "n_iterations": 300,
+        "effect_size": 0.7275,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "baseline_GSH_healthy": {
+            "mean": 7.553863622099969,
+            "std": 1.4359591893503745,
+            "median": 7.520299230992643,
+            "ci_lower": 5.100783356668115,
+            "ci_upper": 9.91688023042317,
+            "min": 5.000270962399043,
+            "max": 9.989728906055873
+          },
+          "baseline_GSH_HCC": {
+            "mean": 5.008022047182737,
+            "std": 1.7567177044617643,
+            "median": 5.183931782884786,
+            "ci_lower": 2.1142937332693137,
+            "ci_upper": 7.646672283145389,
+            "min": 2.0166426996060443,
+            "max": 7.943241498233652
+          },
+          "GSH_depletion_EC50_healthy": {
+            "mean": 46.582793421490834,
+            "std": 18.95324034851744,
+            "median": 46.946364088089474,
+            "ci_lower": 17.052686769683493,
+            "ci_upper": 77.19681531440982,
+            "min": 15.405976444727976,
+            "max": 79.86219829010537
+          },
+          "GSH_depletion_EC50_HCC": {
+            "mean": 34.27293123528727,
+            "std": 14.58919668353053,
+            "median": 33.38777045791521,
+            "ci_lower": 11.5463653518985,
+            "ci_upper": 58.4515605873111,
+            "min": 10.455439326840356,
+            "max": 59.55565948216546
+          },
+          "ROS_scavenging_ratio": {
+            "mean": 1.9705789613950415,
+            "std": 0.5687912088517386,
+            "median": 2.0417576840437803,
+            "ci_lower": 1.034729396878181,
+            "ci_upper": 2.8911231155423276,
+            "min": 1.0000408219001231,
+            "max": 2.997375326851694
+          },
+          "therapeutic_free_hepatic_CBD": {
+            "mean": 5.162372178748683,
+            "std": 2.765300650471118,
+            "median": 5.17504782684502,
+            "ci_lower": 0.759890099990083,
+            "ci_upper": 9.733036652766554,
+            "min": 0.5167003634732825,
+            "max": 9.979335540508108
+          }
+        }
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF CBD (logP 6.3) is administered to isolated hepatocytes at clinically relevant bulk concentrations (1-10 \u00b5M), THEN mitochondrial membrane CBD concentration will exceed bulk aqueous concentration by \u226550-fold, achieving local concentrations \u2265100 \u00b5M sufficient for VDAC1 occupancy (Kd ~11 \u00b5M), AND this enrichment will be equivalent (\u00b120%) in healthy hepatocytes vs. HCC cells.",
+      "protocol": "Treat primary human hepatocytes and HepG2/Huh7 HCC lines with [\u00b3H]-CBD or deuterated CBD (1, 3, 10 \u00b5M, 30 min, 37\u00b0C). Isolate mitochondria by differential centrifugation, separate membrane fractions by alkaline carbonate extraction, quantify CBD by LC-MS/MS. Normalize to lipid mass by phospholipid assay. Timeline: 4-6 weeks.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            3.0,
+            10.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "LC-MS/MS quantification of CBD in membrane vs. cytosolic fractions (pmol/mg lipid vs. pmol/mL cytosol)"
+      ],
+      "controls": [
+        "Vehicle (DMSO)",
+        "heat-killed cells (passive partitioning control)",
+        "valinomycin-treated (\u0394\u03a8m-collapsed",
+        "tests if accumulation is potential-dependent)",
+        "---",
+        "###"
+      ],
+      "expected_outcome": "Membrane enrichment \u226550\u00d7; no significant difference between healthy and cancer cells (ratio within 0.8-1.2).",
+      "null_outcome": "Enrichment <50\u00d7 (occupancy problem stands) OR >3\u00d7 difference between cell types (selectivity argument partially rescued)."
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF CBD is applied to reconstituted VDAC1 in planar lipid bilayers, THEN it will NOT produce zero-conductance block events but WILL shift gating to intermediate subconductance states (30-70% of full open conductance), alter voltage-dependent gating (V\u2081/\u2082 shift \u226510 mV), and increase dwell time in subconductance states by \u22653-fold.",
+      "protocol": "Reconstitute purified human VDAC1 (E. coli-expressed, refolded) into DPhPC planar lipid bilayers. Record single-channel currents at \u00b110 to \u00b160 mV in symmetric 1M KCl before and after cis-side addition of CBD (1, 10, 50, 100 \u00b5M in DMSO, \u22640.1% v/v). Analyze conductance histograms, dwell-time distributions, and voltage-gating curves. Repeat with VDAC2. Timeline: 8-12 weeks.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            10.0,
+            50.0,
+            100.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "Single-channel conductance histograms",
+        "open probability (Po)",
+        "voltage-gating curves (G-V)",
+        "dwell-time distributions",
+        "all-points amplitude histograms"
+      ],
+      "controls": [
+        "DMSO vehicle",
+        "DIDS (known VDAC blocker",
+        "positive control for occlusion)",
+        "cholesterol (lipid-partitioning control with no known gating effect)",
+        "K\u00f6nig's polyanion (known gating modifier)",
+        "---",
+        "###"
+      ],
+      "expected_outcome": "Novel subconductance peaks at 40-70% of full open; V\u2081/\u2082 shift \u226510 mV; no complete block events; similar effects on VDAC2.",
+      "null_outcome": "Complete block (zero conductance) events dominating\u2014indicating pore occlusion; OR no effect on gating at any concentration tested."
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF CBD binds VDAC1 with Kd ~11 \u00b5M, THEN it will bind VDAC2 with Kd within 5-fold (2-55 \u00b5M), AND CBD treatment (10-50 \u00b5M) will increase BAK oligomerization and cytochrome c release in healthy hepatocytes, an effect that is rescued by VDAC2 overexpression and phenocopied by VDAC2 knockdown.",
+      "protocol": "(A) Binding: Express/purify human VDAC1 and VDAC2 in lipid nanodiscs; measure CBD binding by microscale thermophoresis (MST) or ITC. (B) Functional: Treat primary human hepatocytes (\u00b1 VDAC2 siRNA or VDAC2-FLAG overexpression lentivirus) with CBD (5, 10, 25, 50 \u00b5M, 6-24h). Measure BAK oligomerization (BMH crosslinking + western), cytochrome c release (mitochondrial vs. cytosolic fractionation + ELISA), and caspase-3/7 activity. Timeline: 10-14 weeks.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            5.0,
+            10.0,
+            25.0,
+            50.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "MST/ITC binding curves (Kd)",
+        "BAK crosslinking (Western blot)",
+        "cytochrome c ELISA",
+        "caspase-3/7 luminescence (Caspase-Glo)",
+        "Annexin V/PI flow cytometry"
+      ],
+      "controls": [
+        "Vehicle",
+        "ABT-737 (BH3 mimetic",
+        "positive control for BAK activation)",
+        "VDAC2 siRNA alone (no CBD)",
+        "scrambled siRNA + CBD",
+        "z-VAD-FMK (pan-caspase inhibitor to confirm apoptotic pathway)",
+        "---",
+        "###"
+      ],
+      "expected_outcome": "Kd ratio <5\u00d7; CBD increases BAK oligomerization and cytochrome c release",
+      "null_outcome": "Kd ratio >10\u00d7 (selectivity exists); OR CBD has no effect on BAK/cytochrome c in healthy hepatocytes even at 50 \u00b5M; OR VDAC2 manipulation does not modulate CBD's apoptotic effect."
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF CBD is applied to matched primary human hepatocytes and HCC cell lines, THEN the EC50 for GSH depletion (to <50% baseline) will differ by <3-fold between cell types, GSH depletion will require [CBD] \u226520 \u00b5M (above therapeutic free hepatic levels), AND the ROS scavenging capacity ratio (healthy:HCC) will be <2\u00d7 as measured by DCFDA kinetics.",
+      "protocol": "Treat primary human hepatocytes (\u22653 donors) and HCC lines (HepG2, Huh7, SNU-449) with CBD (1, 5, 10, 25, 50, 100 \u00b5M) for 2, 6, 12, 24h. Measure total GSH/GSSG by enzymatic recycling assay (Tietze), ROS by CM-H2DCFDA kinetics (plate reader, 0-60 min post-CBD), mitochondrial superoxide by MitoSOX, and viability by ATP-based assay (CellTiter-Glo). Pre-treat subset with NAC (5 mM) or BSO (100 \u00b5M, GSH synthesis inhibitor). Timeline: 4-6 weeks.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            25.0,
+            50.0,
+            100.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "GSH/GSSG (enzymatic recycling",
+        "\u00b5mol/mg protein)",
+        "ROS (DCFDA"
+      ],
+      "controls": [],
+      "expected_outcome": "GSH depletion EC50 ratio (healthy:HCC) <3\u00d7; both >20 \u00b5M; ROS scavenging ratio <2\u00d7; NAC rescues viability in both cell types similarly.",
+      "null_outcome": "EC50 ratio >5\u00d7 (meaningful selectivity exists); OR ROS scavenging ratio >3\u00d7; OR GSH depletion occurs at <10 \u00b5M in HCC but >50 \u00b5M in healthy cells."
+    }
+  ],
+  "budget": {
+    "s1_calls": 5,
+    "s2_calls": 0,
+    "verify_calls": 10,
+    "gate_calls": 1,
+    "s4_calls": 1,
+    "s5_calls": 0,
+    "total_calls": 17,
+    "budget_target": "92-142 calls"
+  },
+  "audit_trail": {
+    "session_seed": 1770955200,
+    "s2_rounds": [],
+    "s3_gate": {
+      "stage": "S3",
+      "passed": true,
+      "convergence_score": 0.8652,
+      "convergence_threshold": 0.85,
+      "convergence_pass": true,
+      "jaccard": 0.5076,
+      "jaccard_threshold": 0.85,
+      "jaccard_pass": false,
+      "type_01_ratio": 0.75,
+      "type_01_threshold": 0.75,
+      "type_pass": true,
+      "cosine": 0.8652,
+      "jsd": 0.1635,
+      "kappa": 0.9544,
+      "type_distribution": {
+        "0": 0.45,
+        "1": 0.3,
+        "2": 0.0,
+        "3": 0.25
+      }
+    },
+    "final_claims": [
+      {
+        "statement": "Membrane partitioning of CBD (logP 6.3) creates local mitochondrial membrane concentrations 100-1000\u00d7 above free aqueous levels, potentially achieving VDAC1 occupancy even when bulk free hepatic concentration is <11 \u00b5M \u2014 but this same enrichment eliminates any cancer-selectivity argument.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "Lipophilic accumulation in mitochondrial inner/outer membrane brings effective local CBD concentration near VDAC's transmembrane domains well above the measured Kd, but this is cell-type-indiscriminate.",
+        "falsifiable_by": "Measuring CBD concentration in isolated mitochondrial membrane fractions vs. cytosol from hepatocytes at clinically relevant doses; if membrane enrichment is <50\u00d7, the occupancy problem stands.",
+        "model": "claude"
+      },
+      {
+        "statement": "CBD likely modulates VDAC gating allosterically from within the membrane rather than physically occluding the pore lumen, meaning ATP starvation and ROS generation are not mutually exclusive but represent a continuum of conductance dysregulation.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "CBD's extreme lipophilicity precludes stable aqueous pore-lumen residence; membrane-embedded binding alters voltage-dependent gating, producing partial closure states that simultaneously reduce ATP flux and increase aberrant ROS-generating electron leak.",
+        "falsifiable_by": "Electrophysiology of reconstituted VDAC1 with CBD showing binary (open/closed) vs. graded subconductance states; cryo-EM of CBD-VDAC complex revealing binding site location.",
+        "model": "claude"
+      },
+      {
+        "statement": "CBD does not meaningfully discriminate between VDAC1 and VDAC2, and dual inhibition poses a genuine apoptotic risk to healthy hepatocytes, undermining the model's therapeutic selectivity premise.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "VDAC isoforms share >70% sequence homology in transmembrane domains; no published data demonstrates isoform selectivity for CBD; VDAC2 inhibition releases BAK, lowering apoptotic threshold universally.",
+        "falsifiable_by": "Binding assays showing >10\u00d7 Kd difference between CBD-VDAC1 and CBD-VDAC2.",
+        "model": "claude"
+      },
+      {
+        "statement": "A 2\u00d7 ROS scavenging differential between healthy and cancer hepatocytes is insufficient to explain selective toxicity; realistic glutathione depletion occurs at intracellular CBD concentrations of ~20-50 \u00b5M, which would affect both cell types.",
+        "type": 2,
+        "confidence": 0.55,
+        "mechanism": "Hepatocyte GSH pools (~5-10 mM) buffer substantial ROS; a 2\u00d7 differential provides only ~0.3 log units of selectivity margin, far too narrow for therapeutic exploitation given dose variability.",
+        "falsifiable_by": "Dose-response curves for GSH depletion in matched healthy vs. HCC hepatocytes with CBD, showing >5\u00d7 differential in IC50. \u2500\u2500\u2500",
+        "model": "claude"
+      },
+      {
+        "statement": "1:** *CBD is unlikely to reach VDAC1-saturating concentrations (\u226511 \u00b5M) in healthy hepatocytes under standard oral dosing, but 7-OH-CBD may contribute to VDAC1 occupancy.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "High first-pass CYP450 metabolism (CYP2C19/CYP3A4) and low bioavailability (6\u201319%) limit steady-state free liver [CBD] to ~1\u201310 \u00b5M; 7-OH-CBD (Kd unknown) may accumulate due to slower clearance.",
+        "falsifiable_by": "Direct measurement of free hepatic [CBD] and [7-OH-CBD] in vivo at therapeutic doses, or demonstration of 7-OH-CBD binding VDAC1 with Kd \u226411 \u00b5M.",
+        "model": "mistral"
+      },
+      {
+        "statement": "2:** *CBD binds VDAC1 and VDAC2 non-selectively, risking apoptosis in healthy hepatocytes via VDAC2 inhibition.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "VDAC2\u2019s anti-apoptotic role (Bcl-2 interaction) is disrupted by CBD if affinity is comparable to VDAC1 (Kd ~11 \u00b5M); no published evidence of isoform selectivity.",
+        "falsifiable_by": "Competitive binding assays for CBD vs. VDAC1/2, or hepatocyte apoptosis assays with VDAC2 knockdown/overexpression.",
+        "model": "mistral"
+      },
+      {
+        "statement": "3:** *The 2x ROS scavenging ratio is unrealistic for human hepatocytes; glutathione depletion occurs at [CBD] \u226550 \u00b5M, far above therapeutic levels.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "ROS scavenging ratios in primary human hepatocytes are typically <1.5x (Atkuri et al. 2007); glutathione depletion thresholds for CBD are untested but likely require supra-therapeutic concentrations.",
+        "falsifiable_by": "Direct measurement of ROS scavenging in human hepatocytes \u00b1 CBD (1\u201310 \u00b5M), or glutathione quantification at escalating [CBD].",
+        "model": "mistral"
+      },
+      {
+        "statement": "4:** *CBD does not physically occlude the VDAC pore but alters gating kinetics, favoring a \"locked open\" state that uncouples mitochondria and generates ROS\u2014ATP starvation is a secondary effect.",
+        "type": 1,
+        "confidence": 0.7,
+        "mechanism": "CBD\u2019s lipophilicity (logP 6.3) suggests membrane-embedded binding, modulating VDAC conductance (e.g., flickering between open/closed states) rather than lumen occlusion; locked-open pores increase ROS via uncoupling, while ATP depletion follows from disrupted ADP/ATP exchange.",
+        "falsifiable_by": "Single-channel electrophysiology of VDAC \u00b1 CBD to distinguish occlusion vs. gating changes, or metabolomics of hepatocytes \u00b1 CBD to separate ROS vs. ATP depletion timelines.",
+        "model": "mistral"
+      },
+      {
+        "statement": "5 (SINGULAR):** *The dual-pathway model\u2019s mutual exclusivity is a false dichotomy; CBD may simultaneously induce ROS (via VDAC gating) and ATP starvation (via reduced ADP/ATP exchange), with starvation dominating at higher [CBD].",
+        "type": 3,
+        "confidence": 0.5,
+        "mechanism": "VDAC\u2019s role in metabolite flux means gating changes could impair ATP/ADP exchange *independently* of ROS production; dose-dependent effects may shift from ROS-driven apoptosis to energy collapse.",
+        "falsifiable_by": "Time-resolved metabolomics in hepatocytes \u00b1 CBD to correlate ROS, ATP, and cell death kinetics. --- \u2500\u2500\u2500",
+        "model": "mistral"
+      },
+      {
+        "statement": "Steady-state free hepatic [CBD] remains <11 \u00b5M (VDAC1 Kd) under 20-1500 mg/day oral dosing due to first-pass CYP3A4/2C19 metabolism (CL~40-100 L/h) and low bioavailability.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "PBPK models (e.g., Millar/Taylor priors) predict liver Cmax~1-5 \u00b5M free post-oral, below saturation despite t1/2 overlap.",
+        "falsifiable_by": "Human liver biopsy [CBD]_free >11 \u00b5M at steady-state.",
+        "model": "grok"
+      },
+      {
+        "statement": "7-OH-CBD (primary metabolite, ~20-40% of dose) likely binds VDAC1 with Kd~10-20 \u00b5M, structurally analogous to CBD.",
+        "type": 3,
+        "confidence": 0.65,
+        "mechanism": "Hydroxyl substitution preserves lipophilicity/core scaffold matching Rimmerman binding pocket.",
+        "falsifiable_by": "Direct ITC/SPR Kd measurement >50 \u00b5M.",
+        "model": "grok"
+      },
+      {
+        "statement": "CBD lacks selectivity for VDAC1 over VDAC2 (predicted Kd_VDAC2~5-15 \u00b5M); inhibits VDAC2 anti-apoptotic BH3-binding, sensitizing healthy hepatocytes.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "VDAC1/2 ~70% sequence identity; CBD's promiscuity (TRPV/PPAR priors) suggests pan-VDAC hit, lowering apopt threshold per Cheng 2003.",
+        "falsifiable_by": "Isoform-specific Kd differing >5x.",
+        "model": "grok"
+      },
+      {
+        "statement": "2x higher ROS scavenging (GSH~8-12 mM healthy hepatocytes vs. 3-6 mM HCC) is realistic; glutathione depletion at [CBD]_intra~15-25 \u00b5M via conjugation/Nrf2 overload.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "Hepatocyte GSH pools validated high; CBD pro-oxidant depletes via Michael addition at therapeutic [1-10\u00b5M] slower in healthy, tipping at saturation.",
+        "falsifiable_by": "HCC GSH >7 mM or depletion [CBD]<10 \u00b5M in healthy.",
+        "model": "grok"
+      },
+      {
+        "statement": "Singular threads valid: CBD (logP 6.3) binds VDAC membrane domain allosterically, altering gating",
+        "type": 2,
+        "confidence": 0.5,
+        "mechanism": "",
+        "falsifiable_by": "",
+        "model": "grok"
+      },
+      {
+        "statement": "The VDAC1-centric model fails on pharmacokinetic grounds; sustained free intra-hepatocyte concentrations required for VDAC1 saturation (Kd=11\u00b5M) are unattainable via oral dosing within the therapeutic window, though transient accumulation in lipid droplets or impaired metabolism could create risk.",
+        "type": 1,
+        "confidence": 0.9,
+        "mechanism": "Extensive first-pass metabolism and low oral bioavailability ([0.06, 0.19]) cap the free drug concentration available to mitochondria, keeping it well below the VDAC1 Kd and within the range of higher-affinity targets like TRPV1/2.",
+        "falsifiable_by": "Direct measurement of free, unbound CBD concentrations in human liver tissue biopsies from subjects at steady-state dosing exceeding 11 \u00b5M.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The model's proposed cancer-selectivity is undermined by CBD's likely lack of isoform selectivity between VDAC1 and the anti-apoptotic VDAC2, making general hepatotoxicity an expected on-target effect at sufficient concentrations.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "Inhibition of VDAC2, which sequesters pro-apoptotic Bak, would lower the apoptotic threshold in any cell, including healthy hepatocytes, independent of any ROS-based mechanism.",
+        "falsifiable_by": "A competition binding assay demonstrating a >10-fold higher affinity of CBD for VDAC1 over VDAC2.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The \"occlusion vs. lock-open\" framing is a false dichotomy; a unified mechanism of allosteric gating modulation by membrane-partitioned CBD is more plausible, where the outcome (low-conductance starvation vs. high-conductance uncoupling) depends on the pre-existing metabolic state of the cell.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "of allosteric gating modulation by membrane-partitioned CBD is more plausible, where the outcome (low-conductance starvation vs. high-conductance uncoupling) depends on the pre-existing metabolic state of the cell.",
+        "falsifiable_by": "Electrophysiological data showing CBD causes simple channel block with no effect on gating probability or voltage dependence. \u2500\u2500\u2500",
+        "model": "gemini"
+      },
+      {
+        "statement": "Oral CBD is unlikely to cause direct VDAC1-mediated hepatotoxicity in healthy livers at standard therapeutic doses (<10 \u00b5M plasma), as first-pass metabolism prevents sustained free hepatic concentrations \u226511 \u00b5M.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "High CYP2C19/3A4 clearance and glucuronidation limit hepatic exposure; the primary metabolite 7-OH-CBD likely has lower VDAC affinity (structural similarity but higher polarity).",
+        "falsifiable_by": "Direct measurement of free hepatic CBD concentration >15 \u00b5M in vivo after standard oral dosing, or demonstration of 7-OH-CBD binding VDAC1 with Kd < 5 \u00b5M.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "CBD likely inhibits both VDAC1 and VDAC2 with similar affinity, creating a pro-apoptotic background state in hepatocytes that lowers the threshold for secondary insults.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "VDAC isoforms share high structural homology in the putative CBD-binding region; VDAC2 inhibition disrupts its anti-apoptotic tethering of BAK, sensitizing mitochondria to intrinsic apoptosis signals.",
+        "falsifiable_by": "A clean >10x binding selectivity of CBD for VDAC1 over VDAC2 in a lipid bilayer assay, or demonstration that CBD does not enhance BAK-mediated pore formation in VDAC2-reconstituted systems.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "The dual-pathway model is mechanistically confused; CBD's lipophilicity favors membrane-embedded binding that alters VDAC gating dynamics, potentially increasing conductance (promoting uncoupling/ROS) *and* reducing metabolite flux (promoting energy stress) as parallel, not mutually exclusive, outcomes.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "CBD (logP ~6.3) partitions into the lipid annulus, allosterically stabilizing an intermediate or high-conductance state that is less selective, simultaneously dissipating \u0394\u03a8m *and* impairing ADP/ATP exchange.",
+        "falsifiable_by": "Single-channel electrophysiology showing CBD exclusively occludes VDAC (zero conductance) or exclusively locks it fully open, but not a modified gating pattern.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "The 2x ROS scavenging ratio is plausible for hepatocytes vs. hepatocellular carcinoma (HCC), but glutathione depletion requires intracellular [CBD] >20 \u00b5M, a concentration unlikely in healthy liver but possible in metabolically compromised cells or with high-dose IV administration.",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "HCC cells often have elevated basal ROS and rely on adaptive glutathione synthesis; a moderate CBD-induced ROS burst could overwhelm this capacity while healthy hepatocytes compensate.",
+        "falsifiable_by": "Direct measurement showing <1.5x difference in total glutathione content or identical EC50 for CBD-induced glutathione depletion in primary human hepatocytes vs. HCC cell lines. \u2500\u2500\u2500 **",
+        "model": "deepseek"
+      }
+    ]
+  }
+}

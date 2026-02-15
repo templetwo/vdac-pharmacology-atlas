@@ -1,0 +1,287 @@
+{
+  "timestamp": "2026-02-14T06:07:24.323186+00:00",
+  "runs_analyzed": [
+    {
+      "session_id": "evo_20260210_232904_pharmacology",
+      "domain": "pharmacology",
+      "question": "What mechanisms explain why low-dose lithium is neuroprotective while therapeutic-dose lithium causes nephrotoxicity, and what molecular targets determine the dose-dependent switch between cytoprotect",
+      "s3_passed": false,
+      "n_claims": 13
+    },
+    {
+      "session_id": "evo_20260210_235609_pharmacology",
+      "domain": "pharmacology",
+      "question": "What mechanisms explain why low-dose lithium is neuroprotective while therapeutic-dose lithium causes nephrotoxicity?",
+      "s3_passed": false,
+      "n_claims": 9
+    },
+    {
+      "session_id": "evo_20260211_024747_pharmacology",
+      "domain": "pharmacology",
+      "question": "What are the mechanisms by which chronic low-dose THC produces sustained improvements in subjective wellbeing, and how does CB1 receptor modulation interact with endocannabinoid tone to produce therap",
+      "s3_passed": false,
+      "n_claims": 9
+    },
+    {
+      "session_id": "evo_20260211_024750_neuroscience",
+      "domain": "neuroscience",
+      "question": "What mechanisms explain the finding that low-dose THC reverses age-related cognitive decline in animal models, and does chronic CB1 activation restore neuroplasticity through BDNF, neurogenesis, or sy",
+      "s3_passed": false,
+      "n_claims": 7
+    },
+    {
+      "session_id": "evo_20260211_201329_pharmacology+bioelectric",
+      "domain": "pharmacology+bioelectric",
+      "question": "Does circadian cycling of mitochondrial membrane potential alter the dose-response threshold at which CBD shifts from cytoprotective to cytotoxic effects via VDAC1, and what time-dependent mechanisms ",
+      "s3_passed": false,
+      "n_claims": 10
+    },
+    {
+      "session_id": "evo_20260212_032819_pharmacology",
+      "domain": "pharmacology",
+      "question": "What determines whether VDAC1 engagement by a small molecule results in neuroprotection versus cytotoxicity? Specifically, how do cell-type-specific cofactor landscapes \u2014 including HK-II occupancy, Bc",
+      "s3_passed": false,
+      "n_claims": 7
+    },
+    {
+      "session_id": "evo_20260213_004656_consciousness",
+      "domain": "consciousness",
+      "question": "Does the spectral decomposition of per-token Fisher Information matrices in pretrained transformers reveal discrete bonding geometries \u2014 specifically, do semantically rigid tokens (logical connectives",
+      "s3_passed": false,
+      "n_claims": 10
+    },
+    {
+      "session_id": "evo_20260213_022353_consciousness+chemistry",
+      "domain": "consciousness+chemistry",
+      "question": "Can local rotation dynamics between neighboring semantic units produce coherent long-range structure in language, or does the over-smoothing problem from graph neural networks impose a fundamental lim",
+      "s3_passed": false,
+      "n_claims": 15
+    },
+    {
+      "session_id": "evo_20260213_035958_pharmacology",
+      "domain": "pharmacology",
+      "question": "Does the dual-pathway VDAC1 mechanism for CBD hepatotoxicity withstand critical scrutiny against four specific challenges: (1) Does rapid CYP450 metabolic clearance in healthy liver prevent CBD from r",
+      "s3_passed": true,
+      "n_claims": 9
+    },
+    {
+      "session_id": "evo_20260213_042930_pharmacology",
+      "domain": "pharmacology",
+      "question": "Chronic Dosing Dynamics: GSH Regeneration vs Cumulative Mitochondrial Load. Context: The acute model establishes CBD as a universal mitochondrial stressor (VDAC1+VDAC2 engagement), with survival deter",
+      "s3_passed": true,
+      "n_claims": 9
+    },
+    {
+      "session_id": "evo_20260213_174104_pharmacology",
+      "domain": "pharmacology",
+      "question": "What structural features of VDAC isoforms determine ligand selectivity? Specifically: (1) Do CBD, erastin, and DIDS share a common binding site on VDAC1 or engage distinct allosteric mechanisms? (2) W",
+      "s3_passed": false,
+      "n_claims": 6
+    },
+    {
+      "session_id": "evo_20260213_182457_pharmacology",
+      "domain": "pharmacology",
+      "question": "How does the VDAC1 cofactor landscape \u2014 specifically hexokinase-II (HK-II) occupancy, Bcl-xL binding, tubulin blockade, and membrane lipid composition (cardiolipin, cholesterol) \u2014 determine whether a ",
+      "s3_passed": false,
+      "n_claims": 9
+    },
+    {
+      "session_id": "evo_20260213_183423_pharmacology",
+      "domain": "pharmacology",
+      "question": "Does the outer mitochondrial membrane lipid composition modulate VDAC-ligand interactions differently in healthy vs cancer mitochondria? Specifically: (1) Cardiolipin is enriched in inner mitochondria",
+      "s3_passed": true,
+      "n_claims": 4
+    },
+    {
+      "session_id": "evo_20260213_183936_pharmacology",
+      "domain": "pharmacology",
+      "question": "Can VDAC-related biomarkers predict individual vulnerability to mitochondrial modulators, enabling risk-stratified prescribing? (1) Does baseline GSH/GSSG ratio in peripheral blood or liver function t",
+      "s3_passed": true,
+      "n_claims": 7
+    },
+    {
+      "session_id": "evo_20260213_184357_pharmacology",
+      "domain": "pharmacology",
+      "question": "Beyond CBD, which commonly prescribed drugs or their metabolites interact with VDAC at therapeutically relevant concentrations? (1) Valproic acid is a known hepatotoxin and mitochondrial modulator \u2014 d",
+      "s3_passed": true,
+      "n_claims": 7
+    },
+    {
+      "session_id": "evo_20260213_214547_pharmacology",
+      "domain": "pharmacology",
+      "question": "Does the supramolecular organization of VDAC1 in the outer mitochondrial membrane \u2014 specifically its lipid-dependent transition between dense honeycomb arrays and dispersed monomers \u2014 determine the ph",
+      "s3_passed": true,
+      "n_claims": 8
+    },
+    {
+      "session_id": "evo_20260214_041041_pharmacology",
+      "domain": "pharmacology",
+      "question": "What are the mechanisms by which psilocybin produces dose-dependent divergent outcomes \u2014 neuroplasticity and therapeutic benefit at low doses versus perceptual destabilization and adverse psychologica",
+      "s3_passed": false,
+      "n_claims": 8
+    },
+    {
+      "session_id": "evo_20260214_043936_pharmacology",
+      "domain": "pharmacology",
+      "question": "What are the mechanisms by which metformin produces dose-dependent divergent outcomes \u2014 metabolic benefit and insulin sensitization at therapeutic doses versus lactic acidosis and mitochondrial toxici",
+      "s3_passed": false,
+      "n_claims": 12
+    }
+  ],
+  "cross_matches": [
+    {
+      "run_a": "evo_20260211_024747_pharmacology",
+      "run_b": "evo_20260211_024750_neuroscience",
+      "cosine": 0.7914,
+      "classification": "CROSS-PROMOTED",
+      "type_a": 2,
+      "type_b": 0,
+      "statement_a": "1:** Chronic low-dose THC (\u22642.5 mg/day) improves wellbeing via *biphasic CB1 signaling*: G-protein activation (EC50 ~10 nM) dominates at 10\u201330% occupancy, while \u03b2-arrestin recruitment (EC50 >100 nM) i",
+      "statement_b": "1:** The biphasic (inverted-U) dose-response of THC occurs because low CB1 occupancy (<20%) preferentially engages Gi/o-ERK-CREB-BDNF signaling, while high occupancy recruits \u03b2-arrestin-2, causing rec",
+      "mechanism_a": "Partial agonism at CB1 maintains receptor sensitivity by favoring G-protein coupling over \u03b2-arrestin, preventing desensitization while enhancing tonic endocannabinoid signaling.",
+      "mechanism_b": "Low-dose THC produces biased signaling at CB1, sustaining Gi/o coupling to ERK/CREB without triggering \u03b2-arrestin-mediated internalization, thereby upregulating BDNF."
+    },
+    {
+      "run_a": "evo_20260213_035958_pharmacology",
+      "run_b": "evo_20260213_042930_pharmacology",
+      "cosine": 0.789,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 1,
+      "type_b": 1,
+      "statement_a": "1:** *CBD is unlikely to reach VDAC1-saturating concentrations (\u226511 \u00b5M) in healthy hepatocytes under standard oral dosing, but 7-OH-CBD may contribute to VDAC1 occupancy.",
+      "statement_b": "At 50mg/day oral CBD, steady-state hepatic [CBD] ~0.1-0.5\u03bcM (plasma 0.05-0.2\u03bcM \u00d7 liver enrichment), VDAC occ <5%, ROS load <<1 \u03bcmol/g liver/day (<2% GSH capacity).",
+      "mechanism_a": "High first-pass CYP450 metabolism (CYP2C19/CYP3A4) and low bioavailability (6\u201319%) limit steady-state free liver [CBD] to ~1\u201310 \u00b5M; 7-OH-CBD (Kd unknown) may accumulate due to slower clearance.",
+      "mechanism_b": "F=0.06-0.19 \u2192 ss_CBD = (dose\u00b7F / CL) / (1-e^{-k\u03c4}); first-pass transient; ROS~k\u00b7[CBD]\u00b7mito# but sub-Kd occupancy yields negligible integrated load vs 50-100\u03bcmol/g/day capacity."
+    },
+    {
+      "run_a": "evo_20260210_232904_pharmacology",
+      "run_b": "evo_20260210_235609_pharmacology",
+      "cosine": 0.7765,
+      "classification": "CROSS-VALIDATED SINGULAR",
+      "type_a": 3,
+      "type_b": 0,
+      "statement_a": "Lithium neuroprotection at low dose (<0.5 mM) primarily via partial GSK3\u03b2 inhibition (IC50 1-2 mM), stabilizing \u03b2-catenin, upregulating BDNF and autophagy.",
+      "statement_b": "2:** Neuroprotection at low dose is mediated primarily by indirect GSK-3\u03b2 inhibition via Akt-Ser9 phosphorylation amplification, with effective EC50 ~0.2\u20130.5 mM intracellular \u2014 achievable at plasma [L",
+      "mechanism_a": "Li+ mimics Mg2+ uncompetitively at GSK3\u03b2 active site, reducing phosphorylation of pro-apoptotic substrates proportionally to dose.",
+      "mechanism_b": "Li\u207a inhibits PP1/PP2A-mediated dephosphorylation of Akt-phosphorylated GSK-3\u03b2-Ser9, creating a signal amplification loop where small [Li\u207a] produces disproportionate GSK-3\u03b2 suppression."
+    },
+    {
+      "run_a": "evo_20260213_035958_pharmacology",
+      "run_b": "evo_20260213_183423_pharmacology",
+      "cosine": 0.7685,
+      "classification": "CROSS-VALIDATED SINGULAR",
+      "type_a": 3,
+      "type_b": 0,
+      "statement_a": "Membrane partitioning of CBD (logP 6.3) creates local mitochondrial membrane concentrations 100-1000\u00d7 above free aqueous levels, potentially achieving VDAC1 occupancy even when bulk free hepatic conce",
+      "statement_b": "Increased OMM cholesterol in some cancers significantly raises the effective local concentration of CBD at VDAC, lowering its apparent functional Kd below the measured 11 \u00b5M.",
+      "mechanism_a": "Lipophilic accumulation in mitochondrial inner/outer membrane brings effective local CBD concentration near VDAC's transmembrane domains well above the measured Kd, but this is cell-type-indiscriminat",
+      "mechanism_b": "Higher cholesterol increases membrane order and partition coefficient for lipophilic CBD (logP 6.3), enriching it in the OMM and increasing probability of VDAC interaction."
+    },
+    {
+      "run_a": "evo_20260213_182457_pharmacology",
+      "run_b": "evo_20260213_214547_pharmacology",
+      "cosine": 0.7648,
+      "classification": "CROSS-PROMOTED",
+      "type_a": 2,
+      "type_b": 0,
+      "statement_a": "4:** Cardiolipin enrichment at the OMM lowers the apoptotic threshold by ~2-fold by stabilizing VDAC1 oligomers and facilitating Bax insertion, while cholesterol opposes this by rigidifying the membra",
+      "statement_b": "The Chol/CL ratio in the OMM physically determines the fraction of VDAC1 in honeycomb vs. dispersed states, and this ratio is mechanistically embedded in the apoptotic threshold equation.",
+      "mechanism_a": "Cardiolipin's cone-shaped geometry promotes negative curvature at oligomer interfaces; cholesterol increases bilayer order, raising the energy barrier for conformational transitions required for oligo",
+      "mechanism_b": "Cholesterol stabilizes honeycomb arrays via lipid packing, while cardiolipin disrupts them by introducing negative curvature, shifting VDAC1 to oligomerization-competent monomers."
+    },
+    {
+      "run_a": "evo_20260213_182457_pharmacology",
+      "run_b": "evo_20260213_183423_pharmacology",
+      "cosine": 0.7575,
+      "classification": "CROSS-PROMOTED",
+      "type_a": 2,
+      "type_b": 0,
+      "statement_a": "4:** Cardiolipin enrichment at the OMM lowers the apoptotic threshold by ~2-fold by stabilizing VDAC1 oligomers and facilitating Bax insertion, while cholesterol opposes this by rigidifying the membra",
+      "statement_b": "Cardiolipin at OMM contact sites alters VDAC gating dynamics, likely promoting a conformation with higher affinity for certain ligands (e.g., olesoxime) but not necessarily CBD.",
+      "mechanism_a": "Cardiolipin's cone-shaped geometry promotes negative curvature at oligomer interfaces; cholesterol increases bilayer order, raising the energy barrier for conformational transitions required for oligo",
+      "mechanism_b": "Cardiolipin's negative charge and conical shape distort local membrane curvature and electrostatics, stabilizing specific VDAC oligomeric states or tilts."
+    }
+  ],
+  "cross_validated_singulars": [
+    {
+      "run_a": "evo_20260210_232904_pharmacology",
+      "run_b": "evo_20260210_235609_pharmacology",
+      "cosine": 0.7765,
+      "classification": "CROSS-VALIDATED SINGULAR",
+      "type_a": 3,
+      "type_b": 0,
+      "statement_a": "Lithium neuroprotection at low dose (<0.5 mM) primarily via partial GSK3\u03b2 inhibition (IC50 1-2 mM), stabilizing \u03b2-catenin, upregulating BDNF and autophagy.",
+      "statement_b": "2:** Neuroprotection at low dose is mediated primarily by indirect GSK-3\u03b2 inhibition via Akt-Ser9 phosphorylation amplification, with effective EC50 ~0.2\u20130.5 mM intracellular \u2014 achievable at plasma [L",
+      "mechanism_a": "Li+ mimics Mg2+ uncompetitively at GSK3\u03b2 active site, reducing phosphorylation of pro-apoptotic substrates proportionally to dose.",
+      "mechanism_b": "Li\u207a inhibits PP1/PP2A-mediated dephosphorylation of Akt-phosphorylated GSK-3\u03b2-Ser9, creating a signal amplification loop where small [Li\u207a] produces disproportionate GSK-3\u03b2 suppression."
+    },
+    {
+      "run_a": "evo_20260213_035958_pharmacology",
+      "run_b": "evo_20260213_183423_pharmacology",
+      "cosine": 0.7685,
+      "classification": "CROSS-VALIDATED SINGULAR",
+      "type_a": 3,
+      "type_b": 0,
+      "statement_a": "Membrane partitioning of CBD (logP 6.3) creates local mitochondrial membrane concentrations 100-1000\u00d7 above free aqueous levels, potentially achieving VDAC1 occupancy even when bulk free hepatic conce",
+      "statement_b": "Increased OMM cholesterol in some cancers significantly raises the effective local concentration of CBD at VDAC, lowering its apparent functional Kd below the measured 11 \u00b5M.",
+      "mechanism_a": "Lipophilic accumulation in mitochondrial inner/outer membrane brings effective local CBD concentration near VDAC's transmembrane domains well above the measured Kd, but this is cell-type-indiscriminat",
+      "mechanism_b": "Higher cholesterol increases membrane order and partition coefficient for lipophilic CBD (logP 6.3), enriching it in the OMM and increasing probability of VDAC interaction."
+    }
+  ],
+  "independent_replications": [
+    {
+      "run_a": "evo_20260213_035958_pharmacology",
+      "run_b": "evo_20260213_042930_pharmacology",
+      "cosine": 0.789,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 1,
+      "type_b": 1,
+      "statement_a": "1:** *CBD is unlikely to reach VDAC1-saturating concentrations (\u226511 \u00b5M) in healthy hepatocytes under standard oral dosing, but 7-OH-CBD may contribute to VDAC1 occupancy.",
+      "statement_b": "At 50mg/day oral CBD, steady-state hepatic [CBD] ~0.1-0.5\u03bcM (plasma 0.05-0.2\u03bcM \u00d7 liver enrichment), VDAC occ <5%, ROS load <<1 \u03bcmol/g liver/day (<2% GSH capacity).",
+      "mechanism_a": "High first-pass CYP450 metabolism (CYP2C19/CYP3A4) and low bioavailability (6\u201319%) limit steady-state free liver [CBD] to ~1\u201310 \u00b5M; 7-OH-CBD (Kd unknown) may accumulate due to slower clearance.",
+      "mechanism_b": "F=0.06-0.19 \u2192 ss_CBD = (dose\u00b7F / CL) / (1-e^{-k\u03c4}); first-pass transient; ROS~k\u00b7[CBD]\u00b7mito# but sub-Kd occupancy yields negligible integrated load vs 50-100\u03bcmol/g/day capacity."
+    }
+  ],
+  "structural_patterns": {
+    "two_pathway": [
+      "evo_20260210_232904_pharmacology",
+      "evo_20260212_032819_pharmacology"
+    ],
+    "threshold_crossover": [
+      "evo_20260210_232904_pharmacology",
+      "evo_20260210_235609_pharmacology",
+      "evo_20260211_024747_pharmacology",
+      "evo_20260211_024750_neuroscience",
+      "evo_20260212_032819_pharmacology",
+      "evo_20260213_022353_consciousness+chemistry",
+      "evo_20260213_042930_pharmacology",
+      "evo_20260213_182457_pharmacology",
+      "evo_20260213_214547_pharmacology",
+      "evo_20260214_041041_pharmacology",
+      "evo_20260214_043936_pharmacology"
+    ],
+    "dose_dependent": [
+      "evo_20260210_232904_pharmacology",
+      "evo_20260211_024747_pharmacology",
+      "evo_20260212_032819_pharmacology",
+      "evo_20260213_035958_pharmacology",
+      "evo_20260213_042930_pharmacology",
+      "evo_20260213_174104_pharmacology",
+      "evo_20260213_182457_pharmacology",
+      "evo_20260214_041041_pharmacology"
+    ],
+    "kinetic": [
+      "evo_20260211_024747_pharmacology",
+      "evo_20260214_043936_pharmacology"
+    ]
+  },
+  "stats": {
+    "total_claims": 159,
+    "cross_matches_found": 6,
+    "cross_validated_singulars": 2,
+    "convergent_singulars": 0,
+    "independent_replications": 1,
+    "cross_promoted": 3,
+    "structural_patterns_found": 4
+  }
+}

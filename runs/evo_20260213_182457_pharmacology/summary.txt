@@ -1,0 +1,35 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260213_182457_pharmacology
+Date: 2026-02-13
+Protocol: evo-1.0
+
+QUESTION:
+  How does the VDAC1 cofactor landscape — specifically hexokinase-II (HK-II) occupancy, Bcl-xL binding, tubulin blockade, and membrane lipid composition (cardiolipin, cholesterol) — determine whether a VDAC-binding small molecule produces cytoprotection vs cytotoxicity? (1) Does HK-II displacement from VDAC1 by CBD or erastin trigger cytochrome c release, and is this the primary death signal rather than direct conductance change? (2) Does the Warburg phenotype (high glycolysis, high HK-II-VDAC1 coupling) paradoxically protect cancer cells from VDAC-mediated apoptosis at low CBD doses while sensitizing them at high doses? (3) Can pharmacological manipulation of the cofactor landscape (e.g., 2-deoxyglucose to displace HK-II, ABT-737 to displace Bcl-xL) predictably shift the VDAC decision gate from survival to apoptosis?
+
+CONVERGENCE:
+  S2 rounds: ?
+  Early stopped: ?
+  Final Jaccard: ?
+  Final TYPE 0/1: ?
+  S3 gate: FAILED
+
+VERIFICATION:
+  TYPE 2 claims checked: 0
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 0
+
+LAB GATE:
+  Result: FAILED
+  Claims passed: 0/0
+
+BUDGET:
+  Total LLM calls: ?
+  Target range: 92-142
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

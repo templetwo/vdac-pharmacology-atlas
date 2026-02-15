@@ -1,0 +1,212 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "1**: The therapeutic window (1\u201310 \u00b5M plasma) is defined by AMPK\u2019s hypersensitive activation (20\u201340% \u0394AMP:ATP) at sub-toxic Complex I inhibition (~20\u201340% block), while lactic acidosis requires >50% irreversible Complex I inhibition (>5 mM mitochondrial [Met]). **TYPE**: 1 (converged + mechanistic) **CONFIDENCE**: 0.88 **MECHANISM**: AMPK\u2019s \u03b3-subunit binds AMP cooperatively (Hill coefficient >1), amplifying sensitivity to mild energetic stress, whereas Complex I inhibition follows non-cooperative kinetics (Hill coefficient ~1), requiring higher [Met] for toxicity. **FALSIFIABLE BY**: Evidence that AMPK activation requires >50% Complex I block, or that Hill coefficients for AMPK and Complex I are identical.",
+      "mechanism": ": AMPK\u2019s \u03b3-subunit binds AMP cooperatively (Hill coefficient >1), amplifying sensitivity to mild energetic stress, whereas Complex I inhibition follows non-cooperative kinetics (Hill coefficient ~1), requiring higher [Met] for toxicity.",
+      "falsifiable_by": ": Evidence that AMPK activation requires >50% Complex I block, or that Hill coefficients for AMPK and Complex I are identical.",
+      "type": 1,
+      "confidence": 0.74,
+      "overlap_count": 3,
+      "models": [
+        "deepseek",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('ampk', 'downregulates', 'hill_n'), ('amp', 'interacts', 'ampk'), ('atp', 'downregulates', 'type')})",
+      "chunk_text": "1**: The therapeutic window (1\u201310 \u00b5M plasma) is defined by AMPK\u2019s hypersensitive activation (20\u201340% \u0394AMP:ATP) at sub-toxic Complex I inhibition (~20\u201340% block), while lactic acidosis requires >50% irreversible Complex I inhibition (>5 mM mitochondrial [Met]). **TYPE**: 1 (converged + mechanistic) **CONFIDENCE**: 0.88 **MECHANISM**: AMPK\u2019s \u03b3-subunit binds AMP cooperatively (Hill coefficient >1), amplifying sensitivity to mild energetic stress, whereas Complex I inhibition follows non-cooperative "
+    },
+    {
+      "statement": "1:** The therapeutic-toxic divergence arises from a signal amplification mismatch: AMPK's cooperative AMP sensing (effective Hill coefficient ~2\u20133 at \u03b3-subunit) produces near-maximal activation at 20\u201330% Complex I inhibition, while ATP depletion sufficient for cellular failure requires >50\u201360% sustained inhibition.",
+      "mechanism": "AMPK \u03b3-subunit binds AMP with positive cooperativity (Kd ~1\u20135 \u00b5M AMP), amplifying small energetic perturbations into full kinase activation, whereas ATP synthesis decline scales linearly with Complex I block until SRC is exhausted.",
+      "falsifiable_by": "Demonstration that AMPK activation in hepatocytes requires >50% Complex I inhibition, or that AMPK \u03b3-subunit AMP binding is non-cooperative (Hill ~1).",
+      "type": 2,
+      "confidence": 0.85,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "grok"
+      ],
+      "tuples": "frozenset({('amp', 'interacts', 'ampk'), ('atp', 'downregulates', 'src')})",
+      "chunk_text": "1:** The therapeutic-toxic divergence arises from a signal amplification mismatch: AMPK's cooperative AMP sensing (effective Hill coefficient ~2\u20133 at \u03b3-subunit) produces near-maximal activation at 20\u201330% Complex I inhibition, while ATP depletion sufficient for cellular failure requires >50\u201360% sustained inhibition."
+    },
+    {
+      "statement": "2: Renal toxicity precedes and drives systemic lactic acidosis in overdose by creating a \"lactate sink\": proximal tubule necrosis (due to low mitochondrial reserve) releases lactate and KIM-1, impairing remaining renal function and reducing systemic lactate clearance, which then overwhelms hepatic capacity.",
+      "mechanism": "High OCT2-mediated uptake and low SRC cause rapid ATP depletion and necrosis in renal cortex; released lactate and tubular damage reduce renal lactate/metformin excretion, causing [lactate] to rise until hepatic Cori cycle capacity is saturated.",
+      "falsifiable_by": "Animal model showing lactic acidosis onset prior to significant rise in serum creatinine or KIM-1, or unchanged lactate kinetics in nephrectomized overdose models.",
+      "type": 2,
+      "confidence": 0.8,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "deepseek"
+      ],
+      "tuples": "frozenset({('atp', 'upregulates', 'src'), ('kim', 'downregulates', 'oct2')})",
+      "chunk_text": "2: Renal toxicity precedes and drives systemic lactic acidosis in overdose by creating a \"lactate sink\": proximal tubule necrosis (due to low mitochondrial reserve) releases lactate and KIM-1, impairing remaining renal function and reducing systemic lactate clearance, which then overwhelms hepatic capacity."
+    },
+    {
+      "statement": "4:** Metformin's Complex I inhibition is functionally reversible at therapeutic concentrations (Kd ~20 mM for the IQ site) but becomes kinetically trapped at supratherapeutic intramitochondrial concentrations (>5 mM) due to membrane-potential-driven accumulation and slow off-rate in depolarized mitochondria.",
+      "mechanism": "Metformin, a cation, accumulates in the matrix driven by \u0394\u03a8m; when \u0394\u03a8m drops from inhibition, the thermodynamic driving force for efflux disappears, trapping metformin and creating a positive feedback loop.",
+      "falsifiable_by": "Evidence that metformin efflux is \u0394\u03a8m-independent, or that Complex I inhibition reverses equally fast at high and low [Met]. \u2500\u2500\u2500",
+      "type": 2,
+      "confidence": 0.785,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "grok"
+      ],
+      "tuples": "frozenset({('iq', 'has', 'value')})",
+      "chunk_text": "4:** Metformin's Complex I inhibition is functionally reversible at therapeutic concentrations (Kd ~20 mM for the IQ site) but becomes kinetically trapped at supratherapeutic intramitochondrial concentrations (>5 mM) due to membrane-potential-driven accumulation and slow off-rate in depolarized mitochondria."
+    },
+    {
+      "statement": "2**: Tissue-specific toxicity is determined by the product of OCT transporter density and mitochondrial reserve, with kidney (OCT2-high, low reserve) > liver (OCT1-high, moderate reserve) > muscle (low OCT, high reserve) vulnerability. **TYPE**: 1 (converged) **CONFIDENCE**: 0.90 **MECHANISM**: OCT2-mediated renal accumulation of Met exceeds mitochondrial buffering capacity (low GSH, spare respiratory capacity), while liver/muscle tolerate transient Complex I inhibition via adenylate kinase and creatine kinase. **FALSIFIABLE BY**: Toxicity in muscle at [Met] < renal cortex, or OCT2-knockout mice showing no renal toxicity.",
+      "mechanism": ": OCT2-mediated renal accumulation of Met exceeds mitochondrial buffering capacity (low GSH, spare respiratory capacity), while liver/muscle tolerate transient Complex I inhibition via adenylate kinase and creatine kinase.",
+      "falsifiable_by": ": Toxicity in muscle at [Met] < renal cortex, or OCT2-knockout mice showing no renal toxicity.",
+      "type": 2,
+      "confidence": 0.695,
+      "overlap_count": 2,
+      "models": [
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('oct1', 'interacts', 'type'), ('oct2', 'interacts', 'oct1'), ('oct', 'interacts', 'oct2'), ('mechanism', 'interacts', 'gsh'), ('gsh', 'interacts', 'falsifiable'), ('confidence', 'interacts', 'mechanism'), ('falsifiable', 'interacts', 'by'), ('type', 'interacts', 'confidence')})",
+      "chunk_text": "2**: Tissue-specific toxicity is determined by the product of OCT transporter density and mitochondrial reserve, with kidney (OCT2-high, low reserve) > liver (OCT1-high, moderate reserve) > muscle (low OCT, high reserve) vulnerability. **TYPE**: 1 (converged) **CONFIDENCE**: 0.90 **MECHANISM**: OCT2-mediated renal accumulation of Met exceeds mitochondrial buffering capacity (low GSH, spare respiratory capacity), while liver/muscle tolerate transient Complex I inhibition via adenylate kinase and "
+    },
+    {
+      "statement": "Metformin's therapeutic benefit arises at plasma [Met] 10-50 \u00b5M (mito [Met] 5-25 mM), yielding 20-40% Complex I inhibition\u2014sufficient for AMPK activation (\u0394AMP/ATP 10-20%) but below toxicity threshold\u2014while supratherapeutic >100 \u00b5M (mito >50 mM) exceeds IC50 (2-10 mM), causing >70% inhibition, PMF collapse, and lactic acidosis.",
+      "mechanism": "Mild inhibition increases AMP via adenylate kinase equilibrium shift, allosterically activating AMPK (cooperative Hill n=2-4); severe inhibition saturates buffering, elevates NADH/NAD+ >2:1, reversing shuttles and forcing lactate production.",
+      "falsifiable_by": "AMPK activation or lactate rise at plasma [Met] yielding mito [Met] << IC50 (<1 mM), or no correlation between %CI inhibition and \u0394AMP/ATP in hepatocytes.",
+      "type": 3,
+      "confidence": 0.92,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('ampk', 'upregulates', 'nadh'), ('ic50', 'upregulates', 'pmf'), ('amp', 'upregulates', 'ampk'), ('amp', 'upregulates', 'pmf')})",
+      "chunk_text": "Metformin's therapeutic benefit arises at plasma [Met] 10-50 \u00b5M (mito [Met] 5-25 mM), yielding 20-40% Complex I inhibition\u2014sufficient for AMPK activation (\u0394AMP/ATP 10-20%) but below toxicity threshold\u2014while supratherapeutic >100 \u00b5M (mito >50 mM) exceeds IC50 (2-10 mM), causing >70% inhibition, PMF collapse, and lactic acidosis."
+    },
+    {
+      "statement": "The switch to toxicity is a sharp threshold event, not a continuum, occurring when Complex I inhibition surpasses a tissue's specific bioenergetic \"tipping point\" (estimated at 60-70% inhibition), a point determined by its mitochondrial reserve.",
+      "mechanism": "Below this threshold, cells compensate via spare respiratory capacity and glycolysis; above it, the proton-motive force collapses, ATP synthesis fails catastrophically, and lactate production overwhelms cellular buffering and clearance.",
+      "falsifiable_by": "Evidence of a linear, graded increase in lactate production with metformin dose, rather than a sharp, non-linear inflection point correlated with a specific degree of Complex I inhibition.",
+      "type": 3,
+      "confidence": 0.85,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "The switch to toxicity is a sharp threshold event, not a continuum, occurring when Complex I inhibition surpasses a tissue's specific bioenergetic \"tipping point\" (estimated at 60-70% inhibition), a point determined by its mitochondrial reserve."
+    },
+    {
+      "statement": "3:** The ~50% Complex I inhibition threshold identified as singular is mechanistically real and corresponds to the SRC exhaustion point in hepatocytes: below this, oxidative phosphorylation compensates via increased electron flux through remaining Complex I and Complex II; above this, PMF drops below the threshold for ATP synthase operation (~120 mV).",
+      "mechanism": "Hepatocyte SRC of ~40\u201350% means that up to ~40\u201350% Complex I loss is buffered; beyond this, mitochondrial membrane potential collapses non-linearly, forcing complete glycolytic dependence.",
+      "falsifiable_by": "Measurement of hepatocyte \u0394\u03a8m showing linear (not threshold) decline with Complex I inhibition, or SRC measurements substantially different from 40\u201350%.",
+      "type": 3,
+      "confidence": 0.78,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('atp', 'interacts', 'membrane_potential'), ('src', 'interacts', 'pmf'), ('pmf', 'interacts', 'atp')})",
+      "chunk_text": "3:** The ~50% Complex I inhibition threshold identified as singular is mechanistically real and corresponds to the SRC exhaustion point in hepatocytes: below this, oxidative phosphorylation compensates via increased electron flux through remaining Complex I and Complex II; above this, PMF drops below the threshold for ATP synthase operation (~120 mV)."
+    },
+    {
+      "statement": "At supratherapeutic doses, extreme NADH/NAD+ accumulation (>10-fold increase) secondarily inhibits pyruvate dehydrogenase (PDH) and alpha-ketoglutarate dehydrogenase (\u03b1KGDH), creating a \"redox lock\" that shunts all available glucose to lactate, independent of direct Complex I action.",
+      "mechanism": "This downstream redox stress, a consequence of severe Complex I blockade, is the proximate cause of fulminant lactic acidosis and makes the toxic state difficult to reverse.",
+      "falsifiable_by": "Demonstrating that restoring Complex I activity in metformin-toxic cells fails to normalize the NADH/NAD+ ratio or reduce lactate production. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.75,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('nad', 'downregulates', 'pdh'), ('nad', 'upregulates', 'pdh')})",
+      "chunk_text": "At supratherapeutic doses, extreme NADH/NAD+ accumulation (>10-fold increase) secondarily inhibits pyruvate dehydrogenase (PDH) and alpha-ketoglutarate dehydrogenase (\u03b1KGDH), creating a \"redox lock\" that shunts all available glucose to lactate, independent of direct Complex I action."
+    },
+    {
+      "statement": "3: The \"irreversibility\" of supratherapeutic Complex I inhibition is not purely competitive but involves time-dependent, redox-mediated damage to Complex I subunits (e.g., glutathionylation of the 75 kDa subunit), making recovery dependent on GSH pool and protein turnover rates.",
+      "mechanism": "Sustained high [Met] increases mitochondrial ROS, oxidizing the Complex I flavoprotein site; depleted GSH pools permit irreversible sulfenic acid formation, locking the enzyme in an inactive state until repaired or replaced.",
+      "falsifiable_by": "Mass spectrometry showing no metformin-induced covalent modifications of Complex I, or toxicity being fully rescued by immediate washout even after 60 min exposure at >10 mM [Met].",
+      "type": 3,
+      "confidence": 0.7,
+      "overlap_count": 1,
+      "models": [
+        "deepseek"
+      ],
+      "tuples": "frozenset({('gsh', 'upregulates', 'ros')})",
+      "chunk_text": "3: The \"irreversibility\" of supratherapeutic Complex I inhibition is not purely competitive but involves time-dependent, redox-mediated damage to Complex I subunits (e.g., glutathionylation of the 75 kDa subunit), making recovery dependent on GSH pool and protein turnover rates."
+    },
+    {
+      "statement": "3**: Supratherapeutic [Met] (>100 \u00b5M plasma) achieves >5 mM mitochondrial [Met], causing irreversible Complex I inhibition via kinetic trapping, PMF collapse, and ROS-mediated GSH depletion. **TYPE**: 2 (novel but plausible) **CONFIDENCE**: 0.82 **MECHANISM**: At [Met] > IC\u2085\u2080 (~2\u201310 mM), Met binds Complex I irreversibly (kinetic trapping), NADH accumulation reverses malate-aspartate shuttle, and PMF collapse triggers lactate efflux via MCT1/4. **FALSIFIABLE BY**: Lactic acidosis at [Met] < IC\u2085\u2080 for Complex I, or lack of correlation between mitochondrial [Met] and toxicity.",
+      "mechanism": ": At [Met] > IC\u2085\u2080 (~2\u201310 mM), Met binds Complex I irreversibly (kinetic trapping), NADH accumulation reverses malate-aspartate shuttle, and PMF collapse triggers lactate efflux via MCT1/4.",
+      "falsifiable_by": ": Lactic acidosis at [Met] < IC\u2085\u2080 for Complex I, or lack of correlation between mitochondrial [Met] and toxicity.",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('mct1', 'upregulates', 'pmf'), ('mechanism', 'interacts', 'nadh'), ('by', 'interacts', 'nadh')})",
+      "chunk_text": "3**: Supratherapeutic [Met] (>100 \u00b5M plasma) achieves >5 mM mitochondrial [Met], causing irreversible Complex I inhibition via kinetic trapping, PMF collapse, and ROS-mediated GSH depletion. **TYPE**: 2 (novel but plausible) **CONFIDENCE**: 0.82 **MECHANISM**: At [Met] > IC\u2085\u2080 (~2\u201310 mM), Met binds Complex I irreversibly (kinetic trapping), NADH accumulation reverses malate-aspartate shuttle, and PMF collapse triggers lactate efflux via MCT1/4. **FALSIFIABLE BY**: Lactic acidosis at [Met] < IC\u2085\u2080 "
+    },
+    {
+      "statement": "4**: Metformin\u2019s dose-dependent effects are modulated by redox-sensitive feedback loops: low doses enhance mitophagy via AMPK-PINK1, while high doses deplete GSH, accelerating mitochondrial dysfunction. **TYPE**: 3 (speculative) **CONFIDENCE**: 0.65 **MECHANISM**: AMPK-PINK1 axis promotes mitophagy at low [Met], but high [Met] depletes GSH, increasing ROS and inhibiting PINK1-mediated clearance. **FALSIFIABLE BY**: Metformin-treated cells with GSH supplementation showing no toxicity at high doses, or PINK1-knockout mice exhibiting no therapeutic effect. ---",
+      "mechanism": ": AMPK-PINK1 axis promotes mitophagy at low [Met], but high [Met] depletes GSH, increasing ROS and inhibiting PINK1-mediated clearance.",
+      "falsifiable_by": ": Metformin-treated cells with GSH supplementation showing no toxicity at high doses, or PINK1-knockout mice exhibiting no therapeutic effect. --- **",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('gsh', 'upregulates', 'pink1'), ('pink1', 'downregulates', 'ros'), ('gsh', 'upregulates', 'ros')})",
+      "chunk_text": "4**: Metformin\u2019s dose-dependent effects are modulated by redox-sensitive feedback loops: low doses enhance mitophagy via AMPK-PINK1, while high doses deplete GSH, accelerating mitochondrial dysfunction. **TYPE**: 3 (speculative) **CONFIDENCE**: 0.65 **MECHANISM**: AMPK-PINK1 axis promotes mitophagy at low [Met], but high [Met] depletes GSH, increasing ROS and inhibiting PINK1-mediated clearance. **FALSIFIABLE BY**: Metformin-treated cells with GSH supplementation showing no toxicity at high dose"
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.02644327350209703,
+      "cosine": 0.6974595606327056,
+      "jsd": 0.09961676960656957,
+      "kappa": 0.8935185185185185,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.3888888888888889,
+        "2": 0.6111111111111112,
+        "3": 0.0
+      },
+      "type_01_ratio": 0.3888888888888889,
+      "n_claims_per_model": [
+        4,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.17850842521323068,
+      "cosine": 0.8287463843822479,
+      "jsd": 0.17688036508620902,
+      "kappa": 0.92003219198127,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.16666666666666666,
+        "2": 0.4444444444444444,
+        "3": 0.3888888888888889
+      },
+      "type_01_ratio": 0.16666666666666666,
+      "n_claims_per_model": [
+        4,
+        4,
+        4,
+        3,
+        3
+      ]
+    }
+  ]
+}

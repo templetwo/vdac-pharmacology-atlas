@@ -1,0 +1,167 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "The Chol/CL ratio in the OMM physically determines the fraction of VDAC1 in honeycomb vs. dispersed states, and this ratio is mechanistically embedded in the apoptotic threshold equation.",
+      "mechanism": "Cholesterol stabilizes honeycomb arrays via lipid packing, while cardiolipin disrupts them by introducing negative curvature, shifting VDAC1 to oligomerization-competent monomers.",
+      "falsifiable_by": "Observing VDAC1 honeycomb persistence in high-CL membranes *without* cholesterol, or failure of the threshold equation to predict apoptosis in cells with experimentally clamped Chol/CL ratios.",
+      "type": 0,
+      "confidence": 0.826,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cl', 'interacts', 'omm'), ('omm', 'interacts', 'vdac1')})",
+      "chunk_text": "The Chol/CL ratio in the OMM physically determines the fraction of VDAC1 in honeycomb vs. dispersed states, and this ratio is mechanistically embedded in the apoptotic threshold equation."
+    },
+    {
+      "statement": "Lipophilic drugs (e.g., CBD, statins) alter VDAC1 supramolecular organization by changing local membrane order, independent of direct protein binding.",
+      "mechanism": "High-logP drugs partition into the OMM, altering lipid packing/order and indirectly destabilizing honeycomb arrays via membrane fluidity changes.",
+      "falsifiable_by": "Drugs with similar logP but no membrane-ordering effects failing to alter VDAC1 organization, or direct binding (e.g., via cryo-EM) being necessary for observed effects.",
+      "type": 0,
+      "confidence": 0.65,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cbd', 'modulates', 'vdac1'), ('omm', 'interacts', 'vdac1')})",
+      "chunk_text": "Lipophilic drugs (e.g., CBD, statins) alter VDAC1 supramolecular organization by changing local membrane order, independent of direct protein binding."
+    },
+    {
+      "statement": "HK-II displacement from VDAC1 promotes honeycomb disassembly by unmasking cardiolipin microdomains, converting protected arrays into oligomerization-competent monomers.",
+      "mechanism": "HK-II binding sterically shields cardiolipin; its removal exposes cardiolipin, which disrupts honeycombs and frees VDAC1 for oligomerization.",
+      "falsifiable_by": "HK-II mutants that bind VDAC1 but do not mask cardiolipin failing to prevent honeycomb disassembly, or cardiolipin depletion blocking HK-II displacement effects.",
+      "type": 0,
+      "confidence": 0.65,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('hk', 'modulates', 'vdac1'), ('hk', 'upregulates', 'vdac1'), ('hk', 'interacts', 'vdac1')})",
+      "chunk_text": "HK-II displacement from VDAC1 promotes honeycomb disassembly by unmasking cardiolipin microdomains, converting protected arrays into oligomerization-competent monomers."
+    },
+    {
+      "statement": "The honeycomb-to-dispersed transition is the physical rate-limiting step for VDAC-mediated apoptosis, as oligomerization is only permissible from the dispersed state.",
+      "mechanism": "The honeycomb array sterically and allosterically inhibits pro-apoptotic oligomerization; disassembly unlocks this conformational capability.",
+      "falsifiable_by": "Observing VDAC oligomerization and cytochrome c release directly from intact honeycomb arrays without prior lattice disassembly. \u2500\u2500\u2500",
+      "type": 1,
+      "confidence": 0.717,
+      "overlap_count": 3,
+      "models": [
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "The honeycomb-to-dispersed transition is the physical rate-limiting step for VDAC-mediated apoptosis, as oligomerization is only permissible from the dispersed state."
+    },
+    {
+      "statement": "Lipophilic drugs like CBD can trigger VDAC1-mediated apoptosis primarily by altering local membrane fluidity and order, thereby destabilizing cholesterol-rich honeycomb domains, rather than through direct, high-affinity binding to VDAC1.",
+      "mechanism": "The drug partitions into the OMM, acting as a chaotropic (disordering) agent that lowers the energy barrier for cardiolipin to disrupt VDAC1 arrays, effectively lowering the apoptotic threshold.",
+      "falsifiable_by": "Demonstrating that a hydrophilic CBD analog with an identical VDAC1 Kd (if one could be made) produces an equivalent pro-apoptotic effect, or that CBD fails to alter membrane order at concentrations that induce apoptosis.",
+      "type": 3,
+      "confidence": 0.75,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('omm', 'modulates', 'vdac1'), ('cbd', 'upregulates', 'vdac1'), ('omm', 'downregulates', 'vdac1')})",
+      "chunk_text": "Lipophilic drugs like CBD can trigger VDAC1-mediated apoptosis primarily by altering local membrane fluidity and order, thereby destabilizing cholesterol-rich honeycomb domains, rather than through direct, high-affinity binding to VDAC1."
+    },
+    {
+      "statement": "The dissociation of HK-II from VDAC1 is a critical sensitizing step that unmasks local cardiolipin pools, initiating the honeycomb-to-dispersed transition and committing the cell to apoptosis.",
+      "mechanism": "HK-II binding sterically shields or locally sequesters cardiolipin, and its removal exposes VDAC1 to cardiolipin's disruptive effects, triggering disassembly of the protective array.",
+      "falsifiable_by": "High-resolution imaging showing that VDAC1 arrays remain stable after HK-II dissociation in cells where cardiolipin is depleted or its interaction with VDAC1 is blocked. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.7,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('hk', 'interacts', 'vdac1')})",
+      "chunk_text": "The dissociation of HK-II from VDAC1 is a critical sensitizing step that unmasks local cardiolipin pools, initiating the honeycomb-to-dispersed transition and committing the cell to apoptosis."
+    },
+    {
+      "statement": "VDAC oligomerization into cytochrome c-releasing pores occurs exclusively from the dispersed (non-honeycomb) state, making array disassembly the rate-limiting step and physical point-of-no-return.",
+      "mechanism": "Honeycomb geometry locks VDAC into non-oligomeric interfaces; only freed monomers can reorient into the distinct oligomeric contacts required for pore formation.",
+      "falsifiable_by": "Evidence of oligomeric/apoptotic VDAC pores forming directly within intact honeycomb arrays; or kinetic data showing oligomerization is faster than array dissolution. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.6,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('vdac', 'interacts', 'cytochrome_c')})",
+      "chunk_text": "VDAC oligomerization into cytochrome c-releasing pores occurs exclusively from the dispersed (non-honeycomb) state, making array disassembly the rate-limiting step and physical point-of-no-return."
+    },
+    {
+      "statement": "The proposed threshold equation Threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL) is a plausible phenomenological model but is not yet experimentally validated as written \u2014 the multiplicative separability of protein and lipid terms is an assumption.",
+      "mechanism": "The equation assumes independent modular contributions of HK-II displacement, Bcl-xL removal, and lipid composition, which likely exhibit non-linear coupling.",
+      "falsifiable_by": "Systematic measurement of apoptotic threshold across factorial combinations of f_HKII, f_BclxL, and Chol/CL showing non-separable interaction terms.",
+      "type": 3,
+      "confidence": 0.4,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('cl', 'interacts', 'hk')})",
+      "chunk_text": "The proposed threshold equation Threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL) is a plausible phenomenological model but is not yet experimentally validated as written \u2014 the multiplicative separability of protein and lipid terms is an assumption."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.047136752136752134,
+      "cosine": 0.8412853658199311,
+      "jsd": 0.1393390533928864,
+      "kappa": 0.9672252401338272,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.25,
+        "2": 0.5,
+        "3": 0.25
+      },
+      "type_01_ratio": 0.25,
+      "n_claims_per_model": [
+        5,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.6522727272727272,
+      "cosine": 0.9047281205654144,
+      "jsd": 0.180092840660007,
+      "kappa": 0.9333052027511708,
+      "type_distribution": {
+        "0": 0.65,
+        "1": 0.15,
+        "2": 0.0,
+        "3": 0.2
+      },
+      "type_01_ratio": 0.8,
+      "n_claims_per_model": [
+        5,
+        4,
+        4,
+        3,
+        4
+      ]
+    }
+  ]
+}

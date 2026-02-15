@@ -1,0 +1,57 @@
+{
+  "synthesized_claims": [
+    "SynthesizedClaim(statement='Aged hippocampus shows pathologically elevated GABAergic tone, such that low-dose THC (CB1 on interneurons) restores balance via disinhibition, specific to aging vs. young.', mechanism='Aging \u2191perineuronal nets/GABA release elevates inhib tone; low THC reduces it toward youth levels without young overexcitation.', falsifiable_by='Patch-clamp in aged/young slices shows no baseline GABA tone excess pre-THC, or THC fails to selectively improve aged LTP.', type=0, confidence=0.696, overlap_count=5, models=['claude', 'deepseek', 'gemini', 'grok', 'mistral'], tuples=frozenset({('gaba', 'upregulates', 'thc')}), chunk_text='Aged hippocampus shows pathologically elevated GABAergic tone, such that low-dose THC (CB1 on interneurons) restores balance via disinhibition, specific to aging vs. young.')",
+    "SynthesizedClaim(statement='1:** The biphasic (inverted-U) dose-response of THC occurs because low CB1 occupancy (<20%) preferentially engages Gi/o-ERK-CREB-BDNF signaling, while high occupancy recruits \u03b2-arrestin-2, causing receptor internalization and silencing mitogenic pathways.', mechanism='Low-dose THC produces biased signaling at CB1, sustaining Gi/o coupling to ERK/CREB without triggering \u03b2-arrestin-mediated internalization, thereby upregulating BDNF.', falsifiable_by='In a \u03b2-arrestin-2 KO aged mouse model, the cognitive benefits of low-dose THC vanish or the dose-response curve becomes linear.', type=0, confidence=0.73, overlap_count=4, models=['claude', 'deepseek', 'gemini', 'grok'], tuples=frozenset({('bdnf', 'upregulates', 'creb'), ('bdnf', 'upregulates', 'thc')}), chunk_text='1:** The biphasic (inverted-U) dose-response of THC occurs because low CB1 occupancy (<20%) preferentially engages Gi/o-ERK-CREB-BDNF signaling, while high occupancy recruits \u03b2-arrestin-2, causing receptor internalization and silencing mitogenic pathways.')",
+    "SynthesizedClaim(statement='Synaptic remodeling dominates (spine density \u219125-35%, complexity via PSD-95), mediated by BDNF but requiring LTP; neurogenesis secondary (<10% contribution).', mechanism='Disinhibition lowers LTP threshold, stabilizes actin spines', falsifiable_by='', type=2, confidence=0.765, overlap_count=2, models=['claude', 'grok'], tuples=frozenset({('bdnf', 'interacts', 'ltp'), ('psd', 'interacts', 'bdnf')}), chunk_text='Synaptic remodeling dominates (spine density \u219125-35%, complexity via PSD-95), mediated by BDNF but requiring LTP; neurogenesis secondary (<10% contribution).')",
+    "SynthesizedClaim(statement='2:** Chronic low-dose THC restores plasticity predominantly via rapid synaptic remodeling (increased spine density/complexity), with BDNF as a necessary mediator and neurogenesis as a delayed, secondary contributor.', mechanism='Sustained disinhibition (lowering GABA tone from a pathologically high baseline toward EC50 ~15 uM efficacy) lowers LTP threshold, enabling spine formation/stabilization driven by CREB-BDNF-TrkB signaling.', falsifiable_by='Spine density rescue by THC is blocked by hippocampal infusion of a TrkB antagonist, while blocking neurogenesis (e.g., temozolomide) only attenuates long-term (>8 week) maintenance.', type=2, confidence=0.6, overlap_count=2, models=['deepseek', 'mistral'], tuples=frozenset({('bdnf', 'downregulates', 'gaba'), ('ec50', 'downregulates', 'ltp')}), chunk_text='2:** Chronic low-dose THC restores plasticity predominantly via rapid synaptic remodeling (increased spine density/complexity), with BDNF as a necessary mediator and neurogenesis as a delayed, secondary contributor.')",
+    "SynthesizedClaim(statement='The rapid cognitive restoration is driven primarily by synaptic remodeling (dendritic spine formation), with adult neurogenesis (rate ~700 neurons/day) being a slower, secondary contributor to long-term consolidation.', mechanism='BDNF-mediated LTP enhancement rapidly stabilizes new dendritic spines over hours to days, while the integration of new neurons from neurogenesis is a multi-week process, making it an insufficient explanation for acute cognitive reversal.', falsifiable_by='Pharmacological blockade of spine formation, but not neurogenesis, prevents the rapid cognitive benefits of low-dose THC in aged mice. \u2500\u2500\u2500', type=3, confidence=0.9, overlap_count=1, models=['gemini'], tuples=frozenset({('bdnf', 'interacts', 'ltp')}), chunk_text='The rapid cognitive restoration is driven primarily by synaptic remodeling (dendritic spine formation), with adult neurogenesis (rate ~700 neurons/day) being a slower, secondary contributor to long-term consolidation.')",
+    "SynthesizedClaim(statement='4**: THC alters glutamate diffusion kinetics via CB1-mediated AMPA receptor nanodomain clustering, despite fixed synaptic cleft width (20 nm). - **TYPE**: 3 (speculative, singular thread) - **CONFIDENCE**: 0.55 - **MECHANISM**: CB1 activation redistributes AMPA receptors into nanodomains, accelerating glutamate clearance and sharpening synaptic signaling. - **FALSIFIABLE BY**: Super-resolution imaging shows no change in AMPA receptor clustering post-THC; glutamate uncaging reveals unchanged diffusion kinetics. ---', mechanism=': CB1 activation redistributes AMPA receptors into nanodomains, accelerating glutamate clearance and sharpening synaptic signaling. - **FALSIFIABLE BY**: Super-resolution imaging shows no change in AMPA receptor clustering post-THC; glutamate uncaging reveals unchanged diffusion kinetics. --- **', falsifiable_by=': Super-resolution imaging shows no change in AMPA receptor clustering post-THC; glutamate uncaging reveals unchanged diffusion kinetics. --- **', type=3, confidence=0.5, overlap_count=1, models=['mistral'], tuples=frozenset({('cb1', 'modulates', 'thc')}), chunk_text='4**: THC alters glutamate diffusion kinetics via CB1-mediated AMPA receptor nanodomain clustering, despite fixed synaptic cleft width (20 nm). - **TYPE**: 3 (speculative, singular thread) - **CONFIDENCE**: 0.55 - **MECHANISM**: CB1 activation redistributes AMPA receptors into nanodomains, accelerating glutamate clearance and sharpening synaptic signaling. - **FALSIFIABLE BY**: Super-resolution imaging shows no change in AMPA receptor clustering post-THC; glutamate uncaging reveals unchanged diff')",
+    "SynthesizedClaim(statement='4:** CB1 activation redistributes AMPA receptors into synaptic nanodomains, improving glutamate signaling efficiency without altering cleft geometry (20 nm invariant).', mechanism='CB1-mediated retrograde signaling activates postsynaptic CaMKII, which phosphorylates stargazin, trapping GluA1-containing AMPARs at PSD nanodomains aligned with release sites.', falsifiable_by='STORM/PALM imaging shows no AMPAR redistribution post-THC; or stargazin phospho-mutants show identical cognitive rescue. \u2500\u2500\u2500', type=3, confidence=0.4, overlap_count=1, models=['claude'], tuples=frozenset({('ampars', 'upregulates', 'cb1'), ('ampa', 'modulates', 'cb1')}), chunk_text='4:** CB1 activation redistributes AMPA receptors into synaptic nanodomains, improving glutamate signaling efficiency without altering cleft geometry (20 nm invariant).')"
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.06151515151515152,
+      "cosine": 0.8212023079395294,
+      "jsd": 0.14604576847450007,
+      "kappa": 0.8841657810839529,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.35294117647058826,
+        "2": 0.5882352941176471,
+        "3": 0.058823529411764705
+      },
+      "type_01_ratio": 0.35294117647058826,
+      "n_claims_per_model": [
+        4,
+        4,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.421547619047619,
+      "cosine": 0.8960245072841644,
+      "jsd": 0.11947915874562128,
+      "kappa": 0.9682237051159833,
+      "type_distribution": {
+        "0": 0.5625,
+        "1": 0.0,
+        "2": 0.25,
+        "3": 0.1875
+      },
+      "type_01_ratio": 0.5625,
+      "n_claims_per_model": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  ]
+}

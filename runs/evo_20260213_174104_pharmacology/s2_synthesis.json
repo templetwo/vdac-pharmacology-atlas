@@ -1,0 +1,137 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "CBD, erastin, and DIDS engage three structurally and mechanistically distinct VDAC1 sites \u2014 lipid-protein interface (CBD), interior barrel wall \u03b214-19 (erastin), and pore vestibule lysines (DIDS) \u2014 with no significant competitive overlap.",
+      "mechanism": "Site selection is governed by ligand physicochemistry: CBD's logP ~6.3 confines it to the membrane-embedded helix groove; erastin's moderate polarity (logP ~2.2) accesses a partially desolvated barrel cavity via the aqueous pore; DIDS's bis-isothiocyanate groups undergo irreversible nucleophilic attack by K12/K20.",
+      "falsifiable_by": "Competition binding assays showing CBD displaces erastin, or a cryo-EM structure placing CBD inside the barrel lumen rather than at the lipid interface.",
+      "type": 0,
+      "confidence": 0.633,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'dids'), ('dids', 'interacts', 'vdac1'), ('vdac1', 'interacts', 'k12'), ('k12', 'interacts', 'k20')})",
+      "chunk_text": "CBD, erastin, and DIDS engage three structurally and mechanistically distinct VDAC1 sites \u2014 lipid-protein interface (CBD), interior barrel wall \u03b214-19 (erastin), and pore vestibule lysines (DIDS) \u2014 with no significant competitive overlap."
+    },
+    {
+      "statement": "VDAC2's 11-residue N-terminal extension sterically remodels the helix-groove pocket, reducing CBD-type ligand affinity by \u226510-fold and enabling VDAC1-selective design without relying solely on cofactor competition.",
+      "mechanism": "The extended VDAC2 N-terminus occupies space equivalent to CBD's binding groove in VDAC1, creating a steric filter; molecular dynamics suggest this extension samples conformations that cap the vestibule.",
+      "falsifiable_by": "VDAC2-\u039411 truncation mutant restoring CBD binding to VDAC1-equivalent Kd; or NMR/HDX-MS showing the VDAC2 extension is fully disordered and does not contact the helix-groove region.",
+      "type": 1,
+      "confidence": 0.7,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini"
+      ],
+      "tuples": "frozenset({('cbd', 'downregulates', 'vdac2'), ('cbd', 'interacts', 'vdac1')})",
+      "chunk_text": "VDAC2's 11-residue N-terminal extension sterically remodels the helix-groove pocket, reducing CBD-type ligand affinity by \u226510-fold and enabling VDAC1-selective design without relying solely on cofactor competition."
+    },
+    {
+      "statement": "2**: VDAC2\u2019s +11aa N-terminal extension sterically occludes VDAC1-like CBD/erastin sites, enabling >10-fold VDAC1 selectivity at 1\u201311 \u03bcM. *TYPE*: 1 *CONFIDENCE*: 0.75 *MECHANISM*: The extended N-term in VDAC2 (unstructured/helical) shields the gating domain, reducing ligand access vs. VDAC1\u2019s compact helix. *FALSIFIABLE BY*: Chimeric VDAC1/2 constructs (VDAC1 + VDAC2 N-term) showing reduced CBD affinity; cryo-EM of VDAC2 with CBD bound.",
+      "mechanism": ": The extended N-term in VDAC2 (unstructured/helical) shields the gating domain, reducing ligand access vs. VDAC1\u2019s compact helix.",
+      "falsifiable_by": ": Chimeric VDAC1/2 constructs (VDAC1 + VDAC2 N-term) showing reduced CBD affinity; cryo-EM of VDAC2 with CBD bound.",
+      "type": 1,
+      "confidence": 0.667,
+      "overlap_count": 3,
+      "models": [
+        "deepseek",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac1', 'downregulates', 'vdac2')})",
+      "chunk_text": "2**: VDAC2\u2019s +11aa N-terminal extension sterically occludes VDAC1-like CBD/erastin sites, enabling >10-fold VDAC1 selectivity at 1\u201311 \u03bcM. *TYPE*: 1 *CONFIDENCE*: 0.75 *MECHANISM*: The extended N-term in VDAC2 (unstructured/helical) shields the gating domain, reducing ligand access vs. VDAC1\u2019s compact helix. *FALSIFIABLE BY*: Chimeric VDAC1/2 constructs (VDAC1 + VDAC2 N-term) showing reduced CBD affinity; cryo-EM of VDAC2 with CBD bound."
+    },
+    {
+      "statement": "3**: N-term helix ligands (e.g., CBD) act as allosteric gating modulators (EC50 ~11 \u03bcM), while barrel ligands (erastin/DIDS) act as pore blockers (Ki <1 \u03bcM). *TYPE*: 1 *CONFIDENCE*: 0.70 *MECHANISM*: Hel",
+      "mechanism": ": Hel",
+      "falsifiable_by": "",
+      "type": 1,
+      "confidence": 0.583,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "deepseek",
+        "mistral"
+      ],
+      "tuples": "frozenset({('confidence', 'interacts', 'mechanism'), ('ec50', 'interacts', 'dids'), ('dids', 'interacts', 'type'), ('cbd', 'interacts', 'ec50'), ('type', 'interacts', 'confidence')})",
+      "chunk_text": "3**: N-term helix ligands (e.g., CBD) act as allosteric gating modulators (EC50 ~11 \u03bcM), while barrel ligands (erastin/DIDS) act as pore blockers (Ki <1 \u03bcM). *TYPE*: 1 *CONFIDENCE*: 0.70 *MECHANISM*: Hel"
+    },
+    {
+      "statement": "Within its therapeutic window (1-10 \u03bcM), CBD achieves only partial VDAC1 occupancy (~30-48%) while achieving near-saturating occupancy of higher-affinity off-targets like TRPV1 (~71-83%).",
+      "mechanism": "Based on the Michaelis-Menten binding equation ([L]/([L]+Kd)), a plasma concentration of 5 \u03bcM CBD results in ~31% VDAC1 occupancy (5/(5+11)) but ~71% TRPV1 occupancy (5/(5+2)).",
+      "falsifiable_by": "In situ cellular thermal shift assays (CETSA) in a relevant cell line demonstrating that VDAC1 stabilization by CBD is more pronounced than TRPV1 stabilization at therapeutic concentrations. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.95,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'trpv1')})",
+      "chunk_text": "Within its therapeutic window (1-10 \u03bcM), CBD achieves only partial VDAC1 occupancy (~30-48%) while achieving near-saturating occupancy of higher-affinity off-targets like TRPV1 (~71-83%)."
+    },
+    {
+      "statement": "At clinical concentrations (1\u201310 \u03bcM), CBD achieves only ~30\u201350% VDAC1 occupancy (Kd = 11 \u03bcM), producing graded gating modulation rather than channel ablation \u2014 this partial occupancy is pharmacologically essential for tolerability.",
+      "mechanism": "Simple Langmuir occupancy: at [CBD] = 5 \u03bcM and Kd = 11 \u03bcM, fractional occupancy = 5/(5+11) \u2248 0.31; at 10 \u03bcM, \u2248 0.48. This sub-saturating engagement preserves mitochondrial ATP/ADP flux while modulating calcium and metabolite gating.",
+      "falsifiable_by": "Demonstrating steep Hill coefficient (nH > 2) indicating cooperative binding that shifts occupancy curve, or showing VDAC1-independent mechanism dominates CBD's mitochondrial effects.",
+      "type": 3,
+      "confidence": 0.8,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'atp'), ('atp', 'interacts', 'adp'), ('cbd', 'interacts', 'vdac1')})",
+      "chunk_text": "At clinical concentrations (1\u201310 \u03bcM), CBD achieves only ~30\u201350% VDAC1 occupancy (Kd = 11 \u03bcM), producing graded gating modulation rather than channel ablation \u2014 this partial occupancy is pharmacologically essential for tolerability."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.0903113553113553,
+      "cosine": 0.7489520668983459,
+      "jsd": 0.3118012687341807,
+      "kappa": 0.7299065420560747,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.4666666666666667,
+        "2": 0.4666666666666667,
+        "3": 0.06666666666666667
+      },
+      "type_01_ratio": 0.4666666666666667,
+      "n_claims_per_model": [
+        4,
+        3,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.37439560439560443,
+      "cosine": 0.8343852400779724,
+      "jsd": 0.25012846486490636,
+      "kappa": 0.8603355492244379,
+      "type_distribution": {
+        "0": 0.26666666666666666,
+        "1": 0.6,
+        "2": 0.0,
+        "3": 0.13333333333333333
+      },
+      "type_01_ratio": 0.8666666666666667,
+      "n_claims_per_model": [
+        4,
+        3,
+        1,
+        3,
+        4
+      ]
+    }
+  ]
+}

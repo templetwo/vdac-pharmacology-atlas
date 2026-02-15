@@ -1,0 +1,184 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260211_201329_pharmacology+bioelectric",
+  "timestamp": "2026-02-11T20:15:25.032727+00:00",
+  "question": "Does circadian cycling of mitochondrial membrane potential alter the dose-response threshold at which CBD shifts from cytoprotective to cytotoxic effects via VDAC1, and what time-dependent mechanisms govern this transition?",
+  "outcome": "S3_FAILED",
+  "cycles": 3,
+  "total_calls": 15,
+  "convergence_report": {
+    "stage": "S3",
+    "passed": false,
+    "convergence_score": 0.4838,
+    "convergence_threshold": 0.85,
+    "convergence_pass": false,
+    "jaccard": 0.1474,
+    "jaccard_threshold": 0.85,
+    "jaccard_pass": false,
+    "type_01_ratio": 0.4,
+    "type_01_threshold": 0.65,
+    "type_pass": false,
+    "cosine": 0.4838,
+    "jsd": 0.3129,
+    "kappa": 0.7931,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.4,
+      "2": 0.13333333333333333,
+      "3": 0.4666666666666667
+    },
+    "divergence_map": {
+      "total_unique_claims": 16,
+      "most_divergent": [
+        {
+          "statement": "1:** Circadian \u0394\u03a8m oscillates with amplitude ~15-20 mV (trough ~-160 to -165 mV during late rest phase, peak ~-180 mV during active phase), driven by clock-controlled expression of ETC complex subunits and UCP2/3.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.6
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2:** VDAC1 gating responds to OMM voltage (not \u0394\u03a8m directly); at depolarized \u0394\u03a8m (~-160 mV), reduced Donnan potential across IMS keeps VDAC1 in high-conductance open state, where CBD binds the open pore without inducing oligomerization\u2014this is the cytoprotective regime.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.55
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3:** The cytotoxic transition occurs NOT at depolarized \u0394\u03a8m but at **hyperpolarized** \u0394\u03a8m (~-180 mV), where VDAC1 partial closure promotes oligomerization; CBD at \u22655 \u03bcM stabilizes closed-state oligomeric pores, enabling cytochrome c release. The established consensus (depolarized = toxic) may be inverted.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            3
+          ],
+          "confidences": [
+            0.45
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4:** Circadian hexokinase-II dissociation from VDAC1 (regulated by GSK3\u03b2/AKT cycling) is the dominant modulator of CBD's therapeutic window, more than \u0394\u03a8m per se.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            3
+          ],
+          "confidences": [
+            0.35
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "1**: Circadian \u0394\u03a8m depolarization (e.g., -160 mV nighttime) reduces CBD\u2019s cytotoxic threshold to **3\u20135 \u03bcM (sub-Kd)**, while hyperpolarization (-180 mV daytime) raises it to **15\u201320 \u03bcM**. **TYPE**: 1 (refines prior convergence) **CONFIDENCE**: 0.7 **MECHANISM**: Depolarized \u0394\u03a8m increases VDAC1 open probability, enhancing CBD binding cooperativity (Hill >1) and accelerating oligomerization-driven cyt c release. **FALSIFIABLE BY**: Measuring CBD IC50 in cells with \u0394\u03a8m clamped to -160 mV vs. -180 mV using FCCP/oligomycin.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2**: VDAC1\u2019s open probability peaks at **-170 mV** and declines linearly to **50% at -150 mV**, with closure promoting oligomerization. **TYPE**: 2 (novel prediction) **CONFIDENCE**: 0.6 **MECHANISM**: The N-terminal \u03b1-helix of VDAC1 acts as a voltage sensor, blocking the pore at depolarized potentials (consistent with *mistral*\u2019s singular claim). **FALSIFIABLE BY**: Patch-clamp recordings of VDAC1 in proteoliposomes at -140 mV vs. -180 mV, or cryo-EM structures under these conditions.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3**: Cytoprotective CBD effects (via TRPV1/2, Kd 2\u20133.7 \u03bcM) dominate at **\u0394\u03a8m > -170 mV**, while cytotoxic effects (VDAC1-mediated) emerge at **\u0394\u03a8m < -160 mV** due to oligomerization. **TYPE**: 1 (integrates singular threads) **CONFIDENCE**: 0.65 **MECHANISM**: Hyperpolarized \u0394\u03a8m favors VDAC1 closure, limiting CBD access to oligomerization sites, while TRPV1/2 remain active at lower CBD concentrations. **FALSIFIABLE BY**: Super-resolution microscopy of VDAC1 oligomers in cells treated with CBD at clamped \u0394\u03a8m (-150 mV vs. -170 mV).",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4**: The outer mitochondrial membrane (OMM) voltage\u2014modulated by \u0394\u03a8m via Donnan equilibrium\u2014directly gates VDAC1, with depolarized \u0394\u03a8m reducing OMM voltage and favoring VDAC1\u2019s open state. **TYPE**: 2 (mechanistic refinement) **CONFIDENCE**: 0.55 **MECHANISM**: \u0394\u03a8m depolarization decreases the intermembrane space potential, lowering OMM voltage and stabilizing VDAC1\u2019s anion-permeable open conformation. **FALSIFIABLE BY**: Simultaneous measurements of \u0394\u03a8m (TMRM) and OMM voltage (OMM-targeted voltage sensors) in cells under circadian \u0394\u03a8m cycling. ---",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Circadian depolarized \u0394\u03a8m (-165 mV nighttime) lowers CBD cytotoxic IC50 3-5x (to 3-5 \u03bcM from 15 \u03bcM daytime), enabling sub-Kd (11 \u03bcM) toxicity via VDAC1.",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.72
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "VDAC1 P_open >80% at depolarized \u0394\u03a8m (>-160 mV) vs <30% at hyperpolarized (<-170 mV), validating grok singular, rejecting mistral inversion.",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.81
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        }
+      ],
+      "models_present": [
+        "claude",
+        "mistral",
+        "grok",
+        "gemini",
+        "deepseek"
+      ]
+    },
+    "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+  }
+}

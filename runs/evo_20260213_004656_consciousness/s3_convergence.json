@@ -1,0 +1,175 @@
+{
+  "stage": "S3",
+  "passed": false,
+  "convergence_score": 0.8462,
+  "convergence_threshold": 0.85,
+  "convergence_pass": false,
+  "jaccard": 0.7192,
+  "jaccard_threshold": 0.85,
+  "jaccard_pass": false,
+  "type_01_ratio": 0.5,
+  "type_01_threshold": 0.65,
+  "type_pass": false,
+  "cosine": 0.8462,
+  "jsd": 0.1774,
+  "kappa": 0.973,
+  "type_distribution": {
+    "0": 0.2,
+    "1": 0.3,
+    "2": 0.3,
+    "3": 0.2
+  },
+  "divergence_map": {
+    "total_unique_claims": 20,
+    "most_divergent": [
+      {
+        "statement": "1**: Semantically rigid tokens show higher FIM effective rank (predicted: 8\u201315 vs. 3\u20137) and greater anisotropy (condition number >15 vs. <6), reflecting that rigid tokens impose sharper, multi-directional constraints on the loss surface. **TYPE**: 1 **CONFIDENCE**: 0.72 **MECHANISM**: Rigid tokens (e.g., \"if,\" \"because,\" verb-argument slots) constrain many downstream predictions simultaneously, creating multiple large eigenvalues in \u2207\u00b2log p; flexible tokens modulate fewer dimensions, yielding flatter spectra. **FALSIFIABLE BY**: Computing per-token FIM on GPT-2/LLaMA and finding no significant rank or condition number difference between rigid and flexible token classes (p > 0.05, effect size d < 0.3).",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "2**: FIM anisotropy (variance of log-eigenvalues) predicts passage-level coherence 10\u201325% better than attention entropy or perplexity alone, measured by \u0394R\u00b2 in regression on human coherence judgments. **TYPE**: 1 **CONFIDENCE**: 0.60 **MECHANISM**: Anisotropy captures geometric constraint structure\u2014how many independent directions matter\u2014while perplexity and entropy collapse this to scalar uncertainty, losing structural information about binding dependencies. **FALSIFIABLE BY**: Regression showing FIM anisotropy adds \u0394R\u00b2 < 0.03 over perplexity+attention entropy baseline on standard coherence benchmarks.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "3**: The combination of FIM anisotropy and token entropy outperforms either alone, because anisotropy captures constraint geometry while entropy captures uncertainty magnitude\u2014orthogonal information axes. **TYPE**: 1 **CONFIDENCE**: 0.65 **MECHANISM**: Anisotropy and entropy are partially decorrelated: a token can have moderate entropy but highly anisotropic FIM (constrained in specific directions), or high entropy with isotropic FIM (uniformly uncertain). **FALSIFIABLE BY**: Interaction term or combined model showing no improvement over best single predictor.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "4**: Layer-wise FIM spectral evolution for rigid tokens shows rank concentration in middle layers (layers 8\u201320 in 24-layer models), analogous to a \"binding phase\" where syntactic constraints crystallize\u2014but calling this \"gamma-like\" is metaphorical, not mechanistic. **TYPE**: 3 **CONFIDENCE**: 0.45 **MECHANISM**: Middle layers are where syntactic/semantic integration peaks (per probing literature); FIM rank should peak where the model is most sensitive to token identity for predicting structure. **FALSIFIABLE BY**: Layer-wise FIM showing monotonic rank increase/decrease rather than mid-layer concentration for rigid tokens.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "5**: \"Discrete bonding geometries\" is a productive metaphor, not a literal mechanism. The FIM spectra reflect continuous variation in constraint density, not discrete clusters. **TYPE**: 0 **CONFIDENCE**: 0.80 **MECHANISM**: Language constraints are graded; the appearance of discreteness would require bimodal eigenvalue distributions, which continuous optimization is unlikely to produce. **FALSIFIABLE BY**: Clustering analysis of FIM spectra revealing discrete, well-separated spectral types with gap statistics significantly above null. \u2500\u2500\u2500",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "1**: Semantically rigid tokens exhibit higher FIM effective rank (8\u201312 vs. 3\u20136 for flexible tokens) and anisotropy (condition number >20 vs. <8). **TYPE**: 1 **CONFIDENCE**: 0.75 **MECHANISM**: Rigid tokens (e.g., \"if\", \"because\") encode obligatory syntactic dependencies, yielding sharper loss gradients and more principal curvature directions in FIM=\u2207\u00b2log p(next|ctx). **FALSIFIABLE BY**: Rigid tokens failing to show higher rank/anisotropy in controlled experiments (e.g., masked language modeling with counterfactual tokens).",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "2**: FIM anisotropy predicts coherence (r=0.6\u20130.7) better than attention entropy (r=0.4\u20130.5) or PPL (r=0.3\u20130.4), with a 30\u201350% improvement in explained variance. **TYPE**: 1 **CONFIDENCE**: 0.70 **MECHANISM**: Anisotropy captures multi-directional geometric constraints on meaning (e.g., verb-argument binding), while entropy/PPL average over uncertainty without resolving structural dependencies. **FALSIFIABLE BY**: Coherence metrics correlating more strongly with entropy/PPL than FIM anisotropy, or anisotropy failing to improve prediction beyond baseline (e.g., in out-of-distribution text).",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "3**: Static FIM spectra do not reveal gamma/Kuramoto-like dynamics, but *dynamic* FIM (computed across sequential layers/heads) oscillates at 30\u2013100 Hz for binding tokens. **TYPE**: 1 **CONFIDENCE**: 0.65 **MECHANISM**: Binding is a temporal phenomenon; static FIM captures instantaneous sensitivity, while dynamic FIM tracks phase coherence across processing steps (e.g., attention heads synchronizing at gamma frequencies). **FALSIFIABLE BY**: Dynamic FIM spectra failing to show gamma-band oscillations for binding tokens, or oscillations appearing for non-binding tokens.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "4**: FIM anisotropy and token entropy are *complementary* predictors of coherence: their combination (e.g., anisotropy \u00d7 entropy) outperforms either alone. **TYPE**: 2 **CONFIDENCE**: 0.60 **MECHANISM**: Anisotropy captures structural constraints, while entropy reflects uncertainty; their interaction may resolve both syntactic rigidity and semantic flexibility. **FALSIFIABLE BY**: Combined metrics failing to improve coherence prediction over anisotropy alone, or entropy dominating the interaction term.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "5**: The \"discrete bonding geometry\" in FIM spectra is an emergent metaphor for syntactic necessity, not a literal mechanism (e.g., no physical bonds). **TYPE**: 3 **CONFIDENCE**: 0.80 **MECHANISM**: FIM spectra describe the learned manifold of language, where sharp curvature reflects obligatory dependencies (e.g., \"if X then Y\"), but no discrete \"bonds\" exist. **FALSIFIABLE BY**: Evidence of literal geometric structures (e.g., topological invariants) in FIM spectra that map to syntactic rules. ---",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      }
+    ],
+    "models_present": [
+      "claude",
+      "mistral",
+      "grok",
+      "gemini",
+      "deepseek"
+    ]
+  },
+  "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+}

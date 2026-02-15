@@ -1,0 +1,56 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260213_214547_pharmacology
+Date: 2026-02-13
+Protocol: evo-1.0
+
+QUESTION:
+  Does the supramolecular organization of VDAC1 in the outer mitochondrial membrane — specifically its lipid-dependent transition between dense honeycomb arrays and dispersed monomers — determine the pharmacological outcome of VDAC-binding drugs? Recent AFM and molecular dynamics studies (2024-2025) show that: (a) cholesterol and PE stabilize VDAC1 honeycomb assemblies, (b) cardiolipin disrupts these assemblies, freeing VDAC monomers, and (c) VDAC preferentially localizes to cardiolipin-rich OMM-IMM contact sites. Given these findings: (1) Does the Chol/CL ratio in the OMM physically determine the fraction of VDAC1 in honeycomb-protected vs dispersed-oligomerization-competent states, and is this the biophysical basis of the apoptotic threshold equation Threshold = K/[(1-f_HKII)(1-f_BclxL)]*(Chol/CL)? (2) Does HK-II displacement from VDAC1 promote honeycomb disassembly by unmasking cardiolipin microdomains, thereby converting protected VDAC arrays into oligomerization-competent monomers? (3) Can lipophilic drugs (CBD logP 6.3, statins logP 4-5) alter VDAC supramolecular organization by changing local membrane order, independent of direct protein binding — and would this constitute a previously unrecognized mechanism of VDAC pharmacology? (4) Does the honeycomb-to-dispersed transition represent the physical instantiation of the point of no return in VDAC-mediated apoptosis — i.e., is oligomerization only possible from the dispersed state, making membrane reorganization the rate-limiting step rather than any single molecular binding event?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 10
+  Promoted to TYPE 1: 1
+  Novel (no literature): 4
+  Contradicted: 2
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 10/18
+
+HYPOTHESES (ranked by testability):
+  H1. IF VDAC1 is reconstituted into supported lipid bilayers with Chol/CL molar ratios ranging from 0.5 to 10, THEN AFM imagi
+     Testability: 8.0/10
+     Effect size: 0.8117 (Cohen's d)
+     Power: 1.0
+
+  H3. IF CBD (1-10 μM) is added to VDAC1-containing reconstituted bilayers, THEN honeycomb array density will change by ≥30% a
+     Testability: 7.0/10
+     Effect size: 0.9216 (Cohen's d)
+     Power: 1.0
+
+  H2. IF HK-II is displaced from VDAC1 honeycomb arrays (by glucose-6-phosphate or clotrimazole treatment), THEN within 10-30 
+     Testability: 6.0/10
+     Effect size: 0.8146 (Cohen's d)
+     Power: 1.0
+
+  H4. IF the honeycomb-to-dispersed transition is the rate-limiting step for apoptosis, THEN: (a) pre-dispersing VDAC arrays (
+     Testability: 5.0/10
+     Effect size: 0.0 (Cohen's d)
+     Power: 0.0
+
+BUDGET:
+  Total LLM calls: 17
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

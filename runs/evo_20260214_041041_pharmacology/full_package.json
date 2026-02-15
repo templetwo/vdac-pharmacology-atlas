@@ -1,0 +1,184 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260214_041041_pharmacology",
+  "timestamp": "2026-02-14T04:12:41.587835+00:00",
+  "question": "What are the mechanisms by which psilocybin produces dose-dependent divergent outcomes \u2014 neuroplasticity and therapeutic benefit at low doses versus perceptual destabilization and adverse psychological effects at high doses \u2014 with specific reference to 5-HT2A receptor occupancy thresholds, biased agonism, and downstream signaling pathway selection?",
+  "outcome": "S3_FAILED",
+  "cycles": 3,
+  "total_calls": 15,
+  "convergence_report": {
+    "stage": "S3",
+    "passed": false,
+    "convergence_score": 0.724,
+    "convergence_threshold": 0.85,
+    "convergence_pass": false,
+    "jaccard": 0.2425,
+    "jaccard_threshold": 0.85,
+    "jaccard_pass": false,
+    "type_01_ratio": 0.4,
+    "type_01_threshold": 0.75,
+    "type_pass": false,
+    "cosine": 0.724,
+    "jsd": 0.2232,
+    "kappa": 0.9378,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.4,
+      "2": 0.4,
+      "3": 0.2
+    },
+    "divergence_map": {
+      "total_unique_claims": 16,
+      "most_divergent": [
+        {
+          "statement": "1:** Therapeutic neuroplasticity occurs at ~15-50% 5-HT2A occupancy, where Gq/11-PLC-IP3/DAG signaling dominates, activating mTOR-dependent BDNF expression and dendritic spine growth in prefrontal cortex.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.8
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2:** Above ~60% occupancy, \u03b2-arrestin 2 recruitment increases supralinearly due to cooperative binding at 5-HT2A/mGluR2 heterodimers, uncoupling mGluR2 inhibitory signaling and producing excessive layer V cortical glutamate release.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.65
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3:** The therapeutic index is ~10-15 (ED50 plasticity ~3-5 mg oral psilocybin; TD50 destabilization ~40-60 mg), consistent with FDA TI \u2265 10 prior, and this ratio is governed by the ~3-5\u00d7 concentration gap between Gq EC50 and \u03b2-arrestin 2 EC50 at 5-HT2A.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.7
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4:** Psilocin Ki at 5-HT2A is 6-25 nM (pKi ~7.6-8.2), and with Hill coefficient ~1 (non-cooperative single-site), occupancy follows standard hyperbolic kinetics\u2014the apparent nonlinearity at ~60% is an emergent property of downstream pathway coupling, not receptor binding itself.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.9
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "1:** Psilocybin\u2019s therapeutic window (20\u201350% 5-HT2A occupancy) is defined by preferential Gq/11-PLC activation, driving BDNF/mTOR-mediated neuroplasticity in prefrontal cortex (PFC) without network desynchronization.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2:** Perceptual destabilization at >60% occupancy results from \u03b2-arrestin 2 recruitment to 5-HT2A/mGluR2 heterodimers, uncoupling mGluR2\u2019s inhibitory brake on glutamate release and causing thalamocortical desynchronization.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.75
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3:** The therapeutic index (TD50/ED50) of ~10\u201315 for psilocybin is constrained by the abrupt \u03b2-arrestin 2 recruitment threshold at >60% occupancy, aligning with FDA\u2019s minimum safety margin (PRIOR: therapeutic_index_minimum = 10.0).",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.8
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4:** Psilocin\u2019s Ki at 5-HT2A is 6\u201325 nM (pKi 7.6\u20138.2), with low doses (1\u201310 mg) yielding plasma concentrations of 2\u201320 nM (~10\u201360% occupancy) and high doses (>25 mg) reaching 100\u2013500 nM (>80\u201395% occupancy).",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.9
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "5 (SPECULATIVE):** CYP3A4 inhibition by CBD (threshold = 1.0 \u00b5M) may indirectly widen psilocybin\u2019s therapeutic window by reducing psilocin metabolism, but this effect is negligible at typical CBD doses (PRIOR: CBD_therapeutic_window = 1\u201310 \u00b5M).",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            3
+          ],
+          "confidences": [
+            0.6
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Psilocin Kd at human 5-HT2A = 6-25 nM (pKi 7.6-8.2), yielding ~20-50% occupancy at therapeutic 1-10 mg doses ([psilocin] 2-20 nM) and >80% at high >25 mg ([psilocin] >100 nM).",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.93
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        }
+      ],
+      "models_present": [
+        "claude",
+        "mistral",
+        "grok",
+        "gemini",
+        "deepseek"
+      ]
+    },
+    "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+  }
+}

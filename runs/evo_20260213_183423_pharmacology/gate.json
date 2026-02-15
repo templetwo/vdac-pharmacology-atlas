@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "claims": [
+    {
+      "statement": "Cardiolipin at OMM-IMM contact sites stabilizes VDAC in a partially closed state, altering both gating voltage-dependence and the accessibility of CBD's binding site.",
+      "falsifiable": true,
+      "falsifiable_reason": "It specifies a measurable gating shift of ~10-20 mV and unchanged CBD Kd in cardiolipin-free vs. cardiolipin-containing bilayers as disproof.",
+      "feasible": true,
+      "feasible_reason": "Planar bilayer electrophysiology with reconstituted VDAC and defined lipids uses standard patch-clamp setups.",
+      "novel": true,
+      "novel_reason": "It enables testing cardiolipin-specific modulation of VDAC gating and CBD binding at OMM-IMM sites in the context of healthy vs. cancer differences.",
+      "passed": true
+    },
+    {
+      "statement": "Cancer cell OMM cholesterol enrichment (typically 2-4\u00d7 vs normal) increases membrane partitioning of CBD, raising local membrane concentration and reducing the apparent Kd from ~11 \u00b5M (bulk) to an effective ~3-6 \u00b5M at the VDAC interface.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts a Kd reduction from ~11 \u00b5M to 3-6 \u00b5M in high-cholesterol nanodiscs, disproven by no shift in SPR or MST.",
+      "feasible": true,
+      "feasible_reason": "SPR/MST on VDAC in nanodiscs with 5% vs. 20% cholesterol is routine biophysical assay.",
+      "novel": true,
+      "novel_reason": "It quantifies cholesterol-driven CBD partitioning specific to cancer OMM, enabling selectivity predictions.",
+      "passed": true
+    },
+    {
+      "statement": "Olesoxime efficacy is membrane-cholesterol-dependent because its CRAC motif mediates initial membrane anchoring; in low-cholesterol membranes (neurons under stress), olesoxime partitions less efficiently, explaining variable neuroprotective outcomes across trials.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts abolished olesoxime-VDAC interaction upon M\u03b2CD cholesterol depletion.",
+      "feasible": true,
+      "feasible_reason": "Binding assays with M\u03b2CD treatment on VDAC in liposomes or cells are standard.",
+      "novel": true,
+      "novel_reason": "It links cholesterol dependence to variable neuroprotection, testable in the program's modulator context.",
+      "passed": true
+    },
+    {
+      "statement": "Liposomes engineered with cancer-mimetic lipid compositions (high cholesterol, low cardiolipin) would enhance CBD delivery to cancer OMM, potentially achieving VDAC-selective concentrations within the 1-10 \u00b5M therapeutic window while remaining below TRPV1/PPAR\u03b3 activation thresholds.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts differential potency in cytotoxicity assays, disproven by no difference between cancer-mimetic and generic liposomes.",
+      "feasible": true,
+      "feasible_reason": "Liposome formulation and cell viability assays are standard in lipid delivery studies.",
+      "novel": true,
+      "novel_reason": "It proposes composition-matched delivery for VDAC-selective CBD potency in cancer vs. normal cells.",
+      "passed": true
+    },
+    {
+      "statement": "Cancer mitochondria\u2019s elevated cholesterol/phospholipid ratio increases CBD\u2019s effective Kd by 3\u20135 \u00b5M due to reduced membrane partitioning.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts Kd >14 \u00b5M in cancer OMM vesicles due to high cholesterol.",
+      "feasible": true,
+      "feasible_reason": "Kd measurements in isolated OMM vesicles from cancer vs. healthy cells use ITC or SPR.",
+      "novel": true,
+      "novel_reason": "It provides a quantitative counter-prediction to partitioning enhancement, enabling resolution of conflicting cholesterol effects.",
+      "passed": true
+    },
+    {
+      "statement": "Olesoxime\u2019s neuroprotection requires >20 mol% cholesterol in OMM; below this threshold, it becomes neutral or cytotoxic.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts loss of protection at <15 mol% cholesterol in M\u03b2CD-treated neurons.",
+      "feasible": true,
+      "feasible_reason": "Dose-response in cholesterol-manipulated neurons via M\u03b2CD is feasible with viability assays.",
+      "novel": true,
+      "novel_reason": "It sets a cholesterol threshold for olesoxime's VDAC-mediated neuroprotection.",
+      "passed": true
+    },
+    {
+      "statement": "Liposomes with 1:1 CL/cholesterol enhance CBD potency in cancer cells (Kd ~5 \u00b5M) but reduce it in healthy cells (Kd ~20 \u00b5M).",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts opposing Kd shifts (5 \u00b5M cancer, 20 \u00b5M healthy) with CL/cholesterol liposomes.",
+      "feasible": true,
+      "feasible_reason": "Cell-type Kd measurements with tailored liposomes use standard binding or functional assays.",
+      "novel": true,
+      "novel_reason": "It hypothesizes cell-specific potency tuning via liposome fusion preferences.",
+      "passed": true
+    },
+    {
+      "statement": "Cardiolipin at OMM contact sites stabilizes VDAC in open conformation, potentially enhancing CBD binding.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts no CBD Kd shift in CL-enriched vs. PC liposomes via SPR.",
+      "feasible": true,
+      "feasible_reason": "SPR on VDAC in defined liposomes is a standard method.",
+      "novel": true,
+      "novel_reason": "It contrasts with Claim 1 on cardiolipin stabilizing open vs. closed VDAC, enabling direct comparison.",
+      "passed": true
+    },
+    {
+      "statement": "Cancer OMM higher chol/PL ratio increases membrane order, reducing effective CBD concentration at VDAC due to sequestration.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts identical CBD-VDAC Kd in cancer-mimic vs. healthy-mimic liposomes by ITC.",
+      "feasible": true,
+      "feasible_reason": "ITC on liposomes mimicking lipid compositions is routine.",
+      "novel": true,
+      "novel_reason": "It supports sequestration mechanism in cancer cholesterol effects, contrasting partitioning claims.",
+      "passed": true
+    },
+    {
+      "statement": "Olesoxime VDAC binding/efficacy depends on OMM cholesterol, enabling neuroprotection in chol-high healthy mitochondria.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts no potency difference in cholesterol-depleted vs. native liposomes.",
+      "feasible": true,
+      "feasible_reason": "Neuroprotection assays in cholesterol-modulated mito liposomes are feasible.",
+      "novel": true,
+      "novel_reason": "It frames cholesterol as enabling olesoxime in healthy vs. low-chol cancer mitochondria.",
+      "passed": true
+    },
+    {
+      "statement": "Lipid-specific liposomes can enhance VDAC modulator potency >2x in cancer cells via chol-targeted delivery.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts no >2x potency gain in chol-mimic liposomes in cancer xenografts.",
+      "feasible": true,
+      "feasible_reason": "In vivo potency in xenografts with liposome variants uses standard tumor models, though xenograft scaling is routine.",
+      "novel": true,
+      "novel_reason": "It quantifies liposome enhancement for VDAC modulators in cancer therapeutic window.",
+      "passed": true
+    },
+    {
+      "statement": "The higher cholesterol content in cancer cell OMM increases the local concentration of highly lipophilic drugs like CBD (logP 6.3), lowering the effective VDAC1-CBD Kd below the reported 11.0 uM and making VDAC a more prominent target within the therapeutic window [1.0, 10.0] uM specifically in cancer cells.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts Kd lowering in high-cholesterol proteoliposomes, disproven by no change.",
+      "feasible": true,
+      "feasible_reason": "Binding in low vs. high cholesterol proteoliposomes uses SPR or similar.",
+      "novel": true,
+      "novel_reason": "It directly predicts cancer-specific Kd shift into therapeutic range via partitioning.",
+      "passed": true
+    },
+    {
+      "statement": "Olesoxime's therapeutic activity is strictly dependent on a narrow range of membrane cholesterol concentration, making it neuroprotective in healthy neurons but inert in cells with dysregulated cholesterol metabolism (e.g., certain cancers or neurodegenerative states).",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts retained activity despite artificial cholesterol depletion or overload.",
+      "feasible": true,
+      "feasible_reason": "Binding and cytoprotection in cholesterol-manipulated cells via M\u03b2CD or loading are standard.",
+      "novel": true,
+      "novel_reason": "It defines a narrow cholesterol range for olesoxime-VDAC ternary complex efficacy.",
+      "passed": true
+    },
+    {
+      "statement": "Liposomes formulated with a cancer-like lipid profile (e.g., high cholesterol, low cardiolipin) will deliver VDAC modulators to cancer mitochondria more effectively than liposomes with a healthy lipid profile, increasing drug potency.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts identical IC50 for cancer-mimicking vs. healthy liposomes in cancer cells.",
+      "feasible": true,
+      "feasible_reason": "IC50 assays with lipid-variant liposomes in cell lines are straightforward.",
+      "novel": true,
+      "novel_reason": "It tests fusion-based delivery efficiency tied to OMM mimicry.",
+      "passed": true
+    },
+    {
+      "statement": "Cardiolipin at OMM contact sites alters VDAC gating dynamics, likely promoting a conformation with higher affinity for certain ligands (e.g., olesoxime) but not necessarily CBD.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts identical gating in PC vs. PC+CL membranes by electrophysiology.",
+      "feasible": true,
+      "feasible_reason": "VDAC gating in defined lipid bilayers via electrophysiology is standard.",
+      "novel": true,
+      "novel_reason": "It links cardiolipin to ligand-specific (olesoxime vs. CBD) VDAC conformations.",
+      "passed": true
+    },
+    {
+      "statement": "Increased OMM cholesterol in some cancers significantly raises the effective local concentration of CBD at VDAC, lowering its apparent functional Kd below the measured 11 \u00b5M.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts no Kd difference in high vs. low cholesterol nanodiscs.",
+      "feasible": true,
+      "feasible_reason": "CBD binding in cholesterol-variant nanodiscs uses routine assays.",
+      "novel": true,
+      "novel_reason": "It quantifies local CBD enrichment in cancer OMM for VDAC targeting.",
+      "passed": true
+    },
+    {
+      "statement": "Olesoxime's neuroprotective effect requires an optimal, intermediate OMM cholesterol level, explaining its cell-type-specific activity.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts identical binding/protection across very high and low cholesterol.",
+      "feasible": true,
+      "feasible_reason": "Assays in cholesterol-extreme cells via manipulation are feasible.",
+      "novel": true,
+      "novel_reason": "It explains cell-type specificity via optimal cholesterol for olesoxime recruitment and binding.",
+      "passed": true
+    }
+  ],
+  "n_passed": 17,
+  "n_failed": 0,
+  "total_calls": 1,
+  "latency_s": 12.68,
+  "recommendation": "Lab Gate PASSED. 17/17 claims cleared all three criteria. Proceeding to S4 hypothesis operationalization."
+}

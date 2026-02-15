@@ -1,0 +1,182 @@
+{
+  "parsed": [
+    {
+      "model": "claude",
+      "raw": "\n\n\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n\n**Sub-questions:**\n1. Does OMM lipid composition (cardiolipin at contact sites, cholesterol content) directly alter VDAC channel gating and ligand-binding affinity?\n2. Do cancer-specific lipid alterations (elevated cholesterol/sphingolipid ratios) shift the effective Kd of lipophilic VDAC modulators like CBD (logP 6.3) by altering membrane partitioning and local concentration?\n3. Does membrane cholesterol content gate olesoxime's VDAC binding via its cholesterol-recognition (CRAC/CARC) motif, explaining tissue-dependent efficacy?\n4. Can lipid-composition-tuned liposomes exploit these dependencies for cell-type-specific VDAC modulator delivery?\n\n**Key variables:** OMM cholesterol mol%, cardiolipin mol% at contact sites, CBD membrane partition coefficient, VDAC conformational equilibrium, effective local [CBD] at VDAC, olesoxime CRAC occupancy.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\nCLAIM: Cardiolipin at OMM-IMM contact sites stabilizes VDAC in a partially closed state, altering both gating voltage-dependence and the accessibility of CBD's binding site.\nTYPE: 2\nCONFIDENCE: 0.55\nMECHANISM: Cardiolipin's negative charge and cone-shape geometry modify VDAC barrel lipid-facing residues and electrostatic surface potential, shifting voltage-gating thresholds by ~10-20 mV as shown in reconstituted systems.\nFALSIFIABLE BY: Electrophysiology of VDAC in cardiolipin-free vs cardiolipin-containing planar bilayers showing no gating shift and unchanged CBD Kd.\n\nCLAIM: Cancer cell OMM cholesterol enrichment (typically 2-4\u00d7 vs normal) increases membrane partitioning of CBD, raising local membrane concentration and reducing the apparent Kd from ~11 \u00b5M (bulk) to an effective ~3-6 \u00b5M at the VDAC interface.\nTYPE: 3\nCONFIDENCE: 0.40\nMECHANISM: Cholesterol-rich membranes increase the partition coefficient of high-logP compounds; for CBD (logP 6.3), a 2-3\u00d7 cholesterol increase could raise local [CBD] ~2-3 fold via enhanced hydrophobic retention, but cholesterol also rigidifies the membrane, potentially occluding binding grooves.\nFALSIFIABLE BY: SPR or MST measurement of CBD-VDAC Kd in nanodiscs with defined cholesterol content (5% vs 20% mol) showing no Kd shift.\n\nCLAIM: Olesoxime efficacy is membrane-cholesterol-dependent because its CRAC motif mediates initial membrane anchoring; in low-cholesterol membranes (neurons under stress), olesoxime partitions less efficiently, explaining variable neuroprotective outcomes across trials.\nTYPE: 2\nCONFIDENCE: 0.50\nMECHANISM: CRAC-motif-cholesterol interaction serves as a prerequisite membrane docking step before lateral diffusion to VDAC; cholesterol depletion (e.g., M\u03b2CD) should abolish olesoxime-VDAC interaction.\nFALSIFIABLE BY: Olesoxime binding to VDAC measured \u00b1 M\u03b2CD treatment showing cholesterol-independent binding.\n\nCLAIM: Liposomes engineered with cancer-mimetic lipid compositions (high cholesterol, low cardiolipin) would enhance CBD delivery to cancer OMM, potentially achieving VDAC-selective concentrations within the 1-10 \u00b5M therapeutic window while remaining below TRPV1/PPAR\u03b3 activation thresholds.\nTYPE: 3\nCONFIDENCE: 0.30\nMECHANISM: Fusogenic liposomes matching target OMM composition preferentially transfer lipophilic cargo via membrane fusion; composition matching reduces thermodynamic barrier to transfer.\nFALSIFIABLE BY: In vitro cytotoxicity assay showing no differential potency of CBD-loaded cancer-mimetic vs generic liposomes on cancer vs normal cells.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n\n- Precise OMM cholesterol mol% in specific cancer types vs matched normal tissue (most data is whole-cell).\n- Whether CBD binds VDAC from the lipid bilayer interior or aqueous phase \u2014 this determines whether membrane partitioning enhances or is irrelevant to binding.\n- Cardiolipin mol% specifically at OMM contact sites in vivo (estimates range 1-5%).\n- Olesoxime's actual Kd for VDAC (poorly quantified).\n- Whether VDAC conformational states in intact OMM match reconstituted systems.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP \u2500\u2500\u2500\n\nMeasure CBD-VDAC1 binding kinetics via MST in lipid nanodiscs with systematically varied cholesterol (0%, 10%, 25%, 40% mol) and cardiolipin (0%, 5%) content.",
+      "claims": [
+        {
+          "statement": "Cardiolipin at OMM-IMM contact sites stabilizes VDAC in a partially closed state, altering both gating voltage-dependence and the accessibility of CBD's binding site.",
+          "type": 2,
+          "confidence": 0.55,
+          "mechanism": "Cardiolipin's negative charge and cone-shape geometry modify VDAC barrel lipid-facing residues and electrostatic surface potential, shifting voltage-gating thresholds by ~10-20 mV as shown in reconstituted systems.",
+          "falsifiable_by": "Electrophysiology of VDAC in cardiolipin-free vs cardiolipin-containing planar bilayers showing no gating shift and unchanged CBD Kd."
+        },
+        {
+          "statement": "Cancer cell OMM cholesterol enrichment (typically 2-4\u00d7 vs normal) increases membrane partitioning of CBD, raising local membrane concentration and reducing the apparent Kd from ~11 \u00b5M (bulk) to an effective ~3-6 \u00b5M at the VDAC interface.",
+          "type": 3,
+          "confidence": 0.4,
+          "mechanism": "Cholesterol-rich membranes increase the partition coefficient of high-logP compounds; for CBD (logP 6.3), a 2-3\u00d7 cholesterol increase could raise local [CBD] ~2-3 fold via enhanced hydrophobic retention, but cholesterol also rigidifies the membrane, potentially occluding binding grooves.",
+          "falsifiable_by": "SPR or MST measurement of CBD-VDAC Kd in nanodiscs with defined cholesterol content (5% vs 20% mol) showing no Kd shift."
+        },
+        {
+          "statement": "Olesoxime efficacy is membrane-cholesterol-dependent because its CRAC motif mediates initial membrane anchoring; in low-cholesterol membranes (neurons under stress), olesoxime partitions less efficiently, explaining variable neuroprotective outcomes across trials.",
+          "type": 2,
+          "confidence": 0.5,
+          "mechanism": "CRAC-motif-cholesterol interaction serves as a prerequisite membrane docking step before lateral diffusion to VDAC; cholesterol depletion (e.g., M\u03b2CD) should abolish olesoxime-VDAC interaction.",
+          "falsifiable_by": "Olesoxime binding to VDAC measured \u00b1 M\u03b2CD treatment showing cholesterol-independent binding."
+        },
+        {
+          "statement": "Liposomes engineered with cancer-mimetic lipid compositions (high cholesterol, low cardiolipin) would enhance CBD delivery to cancer OMM, potentially achieving VDAC-selective concentrations within the 1-10 \u00b5M therapeutic window while remaining below TRPV1/PPAR\u03b3 activation thresholds.",
+          "type": 3,
+          "confidence": 0.3,
+          "mechanism": "Fusogenic liposomes matching target OMM composition preferentially transfer lipophilic cargo via membrane fusion; composition matching reduces thermodynamic barrier to transfer.",
+          "falsifiable_by": "In vitro cytotoxicity assay showing no differential potency of CBD-loaded cancer-mimetic vs generic liposomes on cancer vs normal cells. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "mistral",
+      "raw": "---\n\n### \u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n**Sub-questions:**\n1. Does cardiolipin (CL) at OMM contact sites alter VDAC gating or CBD binding affinity?\n2. Does cancer-associated cholesterol/phospholipid imbalance shift the Kd of lipophilic VDAC modulators (e.g., CBD)?\n3. Does membrane cholesterol content dictate olesoxime\u2019s neuroprotective efficacy via VDAC binding?\n4. Can lipid-specific liposomes enhance VDAC modulator potency in a cell-type-dependent manner?\n\n**Key variables:**\n- Lipid composition (CL, cholesterol, phospholipids) at OMM.\n- VDAC-ligand binding affinity (Kd/EC50) in healthy vs. cancer mitochondria.\n- Ligand lipophilicity (CBD logP 6.3, olesoxime cholesterol motif).\n- Membrane partitioning and local concentration effects.\n\n---\n\n### \u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\n**CLAIM:** Cardiolipin at OMM contact sites increases VDAC\u2019s open probability and reduces CBD binding affinity by ~2-fold.\n**TYPE:** 2\n**CONFIDENCE:** 0.7\n**MECHANISM:** CL\u2019s negative curvature stabilizes VDAC\u2019s open state via electrostatic interactions with basic residues, competing with CBD\u2019s hydrophobic binding pocket.\n**FALSIFIABLE BY:** Reconstitution assays showing CBD Kd >20 \u00b5M in CL-enriched liposomes vs. 11 \u00b5M in control (Rimmerman baseline).\n\n**CLAIM:** Cancer mitochondria\u2019s elevated cholesterol/phospholipid ratio increases CBD\u2019s effective Kd by 3\u20135 \u00b5M due to reduced membrane partitioning.\n**TYPE:** 1\n**CONFIDENCE:** 0.8\n**MECHANISM:** Cholesterol rigidifies membranes, lowering CBD\u2019s free concentration at VDAC by ~30% (logP-dependent sequestration).\n**FALSIFIABLE BY:** Kd measurements in cancer vs. healthy OMM vesicles showing CBD Kd >14 \u00b5M in high-cholesterol conditions.\n\n**CLAIM:** Olesoxime\u2019s neuroprotection requires >20 mol% cholesterol in OMM; below this threshold, it becomes neutral or cytotoxic.\n**TYPE:** 3\n**CONFIDENCE:** 0.5\n**MECHANISM:** Cholesterol\u2019s CRAC motif binding may allosterically stabilize VDAC\u2019s closed state, preventing cytochrome c release.\n**FALSIFIABLE BY:** Olesoxime dose-response curves in neurons with cholesterol-depleted OMM (e.g., M\u03b2CD-treated) showing loss of protection at <15 mol% cholesterol.\n\n**CLAIM:** Liposomes with 1:1 CL/cholesterol enhance CBD potency in cancer cells (Kd ~5 \u00b5M) but reduce it in healthy cells (Kd ~20 \u00b5M).\n**TYPE:** 2\n**CONFIDENCE:** 0.6\n**MECHANISM:** CL-rich liposomes fuse preferentially with cancer OMM (high curvature), increasing local CBD concentration, while cholesterol-rich liposomes stabilize healthy OMM.\n**FALSIFIABLE BY:** Cell-type-specific Kd measurements with lipid-tailored liposomes showing opposite potency shifts.\n\n---\n\n### \u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n1. **Quantitative lipid maps:** OMM lipidomics for healthy vs. cancer mitochondria (e.g., mol% CL/cholesterol at contact sites).\n2. **VDAC structural plasticity:** How CL/cholesterol alter VDAC\u2019s pore conformation (e.g., cryo-EM of lipid-bound states).\n3. **Ligand partitioning:** Free vs. membrane-bound CBD/olesoxime ratios in native OMM vs. liposomes.\n4. **Therapeutic window:** Whether lipid-modulated Kd shifts (e.g., 5\u219220 \u00b5M) remain within CBD\u2019s [1\u201310 \u00b5M] clinical range.\n\n---\n\n### \u2500\u2500\u2500 SECTION 4: NEXT STEP \u2500\u2500\u2500\n**Reconstitute VDAC in proteoliposomes with titrated CL/cholesterol ratios; measure CBD/olesoxime Kd via fluorescence quenching.**",
+      "claims": [
+        {
+          "statement": "Cardiolipin at OMM contact sites increases VDAC\u2019s open probability and reduces CBD binding affinity by ~2-fold.",
+          "type": 2,
+          "confidence": 0.7,
+          "mechanism": "CL\u2019s negative curvature stabilizes VDAC\u2019s open state via electrostatic interactions with basic residues, competing with CBD\u2019s hydrophobic binding pocket.",
+          "falsifiable_by": "Reconstitution assays showing CBD Kd >20 \u00b5M in CL-enriched liposomes vs. 11 \u00b5M in control (Rimmerman baseline)."
+        },
+        {
+          "statement": "Cancer mitochondria\u2019s elevated cholesterol/phospholipid ratio increases CBD\u2019s effective Kd by 3\u20135 \u00b5M due to reduced membrane partitioning.",
+          "type": 1,
+          "confidence": 0.8,
+          "mechanism": "Cholesterol rigidifies membranes, lowering CBD\u2019s free concentration at VDAC by ~30% (logP-dependent sequestration).",
+          "falsifiable_by": "Kd measurements in cancer vs. healthy OMM vesicles showing CBD Kd >14 \u00b5M in high-cholesterol conditions."
+        },
+        {
+          "statement": "Olesoxime\u2019s neuroprotection requires >20 mol% cholesterol in OMM; below this threshold, it becomes neutral or cytotoxic.",
+          "type": 3,
+          "confidence": 0.5,
+          "mechanism": "Cholesterol\u2019s CRAC motif binding may allosterically stabilize VDAC\u2019s closed state, preventing cytochrome c release.",
+          "falsifiable_by": "Olesoxime dose-response curves in neurons with cholesterol-depleted OMM (e.g., M\u03b2CD-treated) showing loss of protection at <15 mol% cholesterol."
+        },
+        {
+          "statement": "Liposomes with 1:1 CL/cholesterol enhance CBD potency in cancer cells (Kd ~5 \u00b5M) but reduce it in healthy cells (Kd ~20 \u00b5M).",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "CL-rich liposomes fuse preferentially with cancer OMM (high curvature), increasing local CBD concentration, while cholesterol-rich liposomes stabilize healthy OMM.",
+          "falsifiable_by": "Cell-type-specific Kd measurements with lipid-tailored liposomes showing opposite potency shifts. --- ### \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "grok",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\nSub-questions:\n1. Does cardiolipin (CL) at OMM-IMM contact sites alter VDAC gating or CBD binding?\n2. Do cancer-elevated cholesterol/phospholipid ratios change effective Kd for lipophilic VDAC ligands like CBD?\n3. Does OMM cholesterol content dictate olesoxime (CRAC-motif binder) neuroprotection via VDAC?\n4. Can liposomes with healthy/cancer-specific lipids modulate VDAC ligand potency cell-type-dependently?\n\nKey variables: OMM lipids (CL content, chol/PL ratio), VDAC states (gating, oligomerization), ligand affinity (CBD Kd=11\u03bcM prior; olesoxime binding), healthy vs cancer mitochondria.\nRelationships: Lipids modulate VDAC conformation/binding pocket \u2192 altered gating/Kd; lipophilicity (CBD logP 6.3) amplifies membrane partitioning effects.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: Cardiolipin at OMM contact sites stabilizes VDAC in open conformation, potentially enhancing CBD binding.\nTYPE: 2\nCONFIDENCE: 0.8\nMECHANISM: CL directly binds VDAC C-terminal helix, promoting monomeric/open states that expose ligand sites.\nFALSIFIABLE BY: No Kd shift for CBD in CL-enriched vs PC liposomes via SPR.\n\nCLAIM: Cancer OMM higher chol/PL ratio increases membrane order, reducing effective CBD concentration at VDAC due to sequestration.\nTYPE: 3\nCONFIDENCE: 0.6\nMECHANISM: Lipophilic CBD (logP 6.3, Kd=11\u03bcM) partitions preferentially into ordered chol-rich domains, lowering free [CBD] for VDAC.\nFALSIFIABLE BY: Identical CBD-VDAC Kd in cancer-mimic vs healthy-mimic liposomes by ITC.\n\nCLAIM: Olesoxime VDAC binding/efficacy depends on OMM cholesterol, enabling neuroprotection in chol-high healthy mitochondria.\nTYPE: 2\nCONFIDENCE: 0.7\nMECHANISM: CRAC motif requires chol for membrane insertion/VDAC stabilization; low chol (e.g., cancer) abolishes affinity.\nFALSIFIABLE BY: No potency difference in chol-depleted vs native mito liposomes for neuroprotection assays.\n\nCLAIM: Lipid-specific liposomes can enhance VDAC modulator potency >2x in cancer cells via chol-targeted delivery.\nTYPE: 3\nCONFIDENCE: 0.5\nMECHANISM: Cancer OMM-like chol/PL liposomes increase local modulator partitioning, shifting effective Kd into therapeutic window (1-10\u03bcM).\nFALSIFIABLE BY: No potency gain in vivo for chol-mimic liposomes vs plain in cancer xenografts.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\nMissing: Quantitative OMM lipidomes (CL%, chol/PL) in healthy vs cancer mitochondria (esp. contact sites). Direct Kd measurements for CBD/olesoxime in native-like liposomes. VDAC gating kinetics in cancer lipids. In situ binding affinities at MAMs. Cancer-specific VDAC isoforms/PTMs affecting lipid sensitivity.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nReconstitute VDAC in healthy/cancer OMM-mimic liposomes; measure CBD Kd via SPR/ITC.",
+      "claims": [
+        {
+          "statement": "Cardiolipin at OMM contact sites stabilizes VDAC in open conformation, potentially enhancing CBD binding.",
+          "type": 2,
+          "confidence": 0.8,
+          "mechanism": "CL directly binds VDAC C-terminal helix, promoting monomeric/open states that expose ligand sites.",
+          "falsifiable_by": "No Kd shift for CBD in CL-enriched vs PC liposomes via SPR."
+        },
+        {
+          "statement": "Cancer OMM higher chol/PL ratio increases membrane order, reducing effective CBD concentration at VDAC due to sequestration.",
+          "type": 3,
+          "confidence": 0.6,
+          "mechanism": "Lipophilic CBD (logP 6.3, Kd=11\u03bcM) partitions preferentially into ordered chol-rich domains, lowering free [CBD] for VDAC.",
+          "falsifiable_by": "Identical CBD-VDAC Kd in cancer-mimic vs healthy-mimic liposomes by ITC."
+        },
+        {
+          "statement": "Olesoxime VDAC binding/efficacy depends on OMM cholesterol, enabling neuroprotection in chol-high healthy mitochondria.",
+          "type": 2,
+          "confidence": 0.7,
+          "mechanism": "CRAC motif requires chol for membrane insertion/VDAC stabilization; low chol (e.g., cancer) abolishes affinity.",
+          "falsifiable_by": "No potency difference in chol-depleted vs native mito liposomes for neuroprotection assays."
+        },
+        {
+          "statement": "Lipid-specific liposomes can enhance VDAC modulator potency >2x in cancer cells via chol-targeted delivery.",
+          "type": 3,
+          "confidence": 0.5,
+          "mechanism": "Cancer OMM-like chol/PL liposomes increase local modulator partitioning, shifting effective Kd into therapeutic window (1-10\u03bcM).",
+          "falsifiable_by": "No potency gain in vivo for chol-mimic liposomes vs plain in cancer xenografts. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "gemini",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1.  How do specific outer mitochondrial membrane (OMM) lipids, particularly cardiolipin and cholesterol, locally alter VDAC structure and its binding affinity for small molecule ligands?\n2.  Do the characteristic differences in OMM lipid composition between healthy and cancerous cells (e.g., cholesterol content) create a differential therapeutic window for lipophilic VDAC modulators like CBD?\n3.  Can the lipid-dependency of VDAC-ligand interactions be exploited to design cell-type-specific therapeutic strategies, either through selective drug design (like olesoxime) or targeted delivery systems (liposomes)?\n\nKey variables:\n*   Independent: OMM lipid composition (cholesterol, cardiolipin, phospholipid ratios), ligand properties (lipophilicity, LogP).\n*   Dependent: VDAC conformation/gating, ligand-VDAC binding affinity (Kd), cellular response (e.g., apoptosis, neuroprotection).\n*   Context: Cell type (healthy vs. cancer).\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: The higher cholesterol content in cancer cell OMM increases the local concentration of highly lipophilic drugs like CBD (logP 6.3), lowering the effective VDAC1-CBD Kd below the reported 11.0 uM and making VDAC a more prominent target within the therapeutic window [1.0, 10.0] uM specifically in cancer cells.\nTYPE: 2\nCONFIDENCE: 0.8\nMECHANISM: Increased membrane cholesterol enhances the partitioning of hydrophobic molecules into the OMM, elevating the drug concentration in the direct vicinity of VDAC and thus increasing the apparent binding affinity.\nFALSIFIABLE BY: Measuring CBD-VDAC1 binding in proteoliposomes with low (healthy) vs. high (cancer-like) cholesterol content and finding no significant change in the measured Kd.\n\nCLAIM: Olesoxime's therapeutic activity is strictly dependent on a narrow range of membrane cholesterol concentration, making it neuroprotective in healthy neurons but inert in cells with dysregulated cholesterol metabolism (e.g., certain cancers or neurodegenerative states).\nTYPE: 1\nCONFIDENCE: 0.9\nMECHANISM: Olesoxime's cholesterol-recognition amino acid consensus (CRAC) motif requires a direct interaction with a cholesterol molecule to achieve the correct conformation for high-affinity binding to VDAC, and this ternary complex is unstable outside an optimal cholesterol concentration range.\nFALSIFIABLE BY: Demonstrating that olesoxime retains VDAC binding and cytoprotective activity in cells that have been artificially depleted of or overloaded with membrane cholesterol.\n\nCLAIM: Liposomes formulated with a cancer-like lipid profile (e.g., high cholesterol, low cardiolipin) will deliver VDAC modulators to cancer mitochondria more effectively than liposomes with a healthy lipid profile, increasing drug potency.\nTYPE: 2\nCONFIDENCE: 0.75\nMECHANISM: Enhanced membrane fusion and/or lipid exchange between vesicles and the OMM is favored when their lipid compositions are similar, leading to more efficient drug transfer.\nFALSIFIABLE BY: Showing that the IC50 of a VDAC-targeting drug delivered by cancer-mimicking vs. healthy-mimicking liposomes is identical in a cancer cell line.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1.  The precise, quantitative lipid composition of the OMM and its specific microdomains (i.e., contact sites) in various human cancer subtypes vs. their healthy tissue of origin. This data is critical for designing truly biomimetic delivery systems.\n2.  The partitioning coefficient (Kp) of CBD and other VDAC ligands into mitochondrial membranes of healthy vs. cancer cells. This would directly quantify the change in local drug concentration, which is a central premise of my first claim.\n3.  High-resolution structural data (e.g., Cryo-EM) of VDAC1 embedded within a lipid bilayer containing cholesterol, which would reveal if cholesterol induces specific allosteric changes in the VDAC barrel or simply acts as a passive solvent.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nReconstitute purified VDAC1 into liposomes with systematically varied cholesterol content (5-30 mol%) and measure the Kd of CBD binding via microscale thermophoresis to directly quantify the impact of membrane cholesterol on binding affinity.",
+      "claims": [
+        {
+          "statement": "The higher cholesterol content in cancer cell OMM increases the local concentration of highly lipophilic drugs like CBD (logP 6.3), lowering the effective VDAC1-CBD Kd below the reported 11.0 uM and making VDAC a more prominent target within the therapeutic window [1.0, 10.0] uM specifically in cancer cells.",
+          "type": 2,
+          "confidence": 0.8,
+          "mechanism": "Increased membrane cholesterol enhances the partitioning of hydrophobic molecules into the OMM, elevating the drug concentration in the direct vicinity of VDAC and thus increasing the apparent binding affinity.",
+          "falsifiable_by": "Measuring CBD-VDAC1 binding in proteoliposomes with low (healthy) vs. high (cancer-like) cholesterol content and finding no significant change in the measured Kd."
+        },
+        {
+          "statement": "Olesoxime's therapeutic activity is strictly dependent on a narrow range of membrane cholesterol concentration, making it neuroprotective in healthy neurons but inert in cells with dysregulated cholesterol metabolism (e.g., certain cancers or neurodegenerative states).",
+          "type": 1,
+          "confidence": 0.9,
+          "mechanism": "Olesoxime's cholesterol-recognition amino acid consensus (CRAC) motif requires a direct interaction with a cholesterol molecule to achieve the correct conformation for high-affinity binding to VDAC, and this ternary complex is unstable outside an optimal cholesterol concentration range.",
+          "falsifiable_by": "Demonstrating that olesoxime retains VDAC binding and cytoprotective activity in cells that have been artificially depleted of or overloaded with membrane cholesterol."
+        },
+        {
+          "statement": "Liposomes formulated with a cancer-like lipid profile (e.g., high cholesterol, low cardiolipin) will deliver VDAC modulators to cancer mitochondria more effectively than liposomes with a healthy lipid profile, increasing drug potency.",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "Enhanced membrane fusion and/or lipid exchange between vesicles and the OMM is favored when their lipid compositions are similar, leading to more efficient drug transfer.",
+          "falsifiable_by": "Showing that the IC50 of a VDAC-targeting drug delivered by cancer-mimicking vs. healthy-mimicking liposomes is identical in a cancer cell line. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "deepseek",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1. How does the specific lipid microenvironment at OMM contact sites (e.g., cardiolipin patches) alter VDAC structure/function compared to bulk OMM? 2. How do cancer-associated shifts in OMM cholesterol/phospholipid ratio affect the membrane partitioning and effective local concentration of lipophilic ligands (like CBD) near VDAC? 3. Does the efficacy of cholesterol-sensitive VDAC ligands (like olesoxime) depend on a threshold membrane cholesterol level, explaining cell-type-specific outcomes? 4. Can lipid composition of a delivery vehicle be tuned to selectively enrich a VDAC modulator in a target cell's OMM? Key variables: local lipid composition, ligand logP/membrane partition coefficient, VDAC-lipid binding sites, apparent Kd at the membrane.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: Cardiolipin at OMM contact sites alters VDAC gating dynamics, likely promoting a conformation with higher affinity for certain ligands (e.g., olesoxime) but not necessarily CBD.\nTYPE: 2\nCONFIDENCE: 0.7\nMECHANISM: Cardiolipin's negative charge and conical shape distort local membrane curvature and electrostatics, stabilizing specific VDAC oligomeric states or tilts.\nFALSIFIABLE BY: In vitro electrophysiology showing identical VDAC gating in pure PC vs PC+cardiolipin membranes.\n\nCLAIM: Increased OMM cholesterol in some cancers significantly raises the effective local concentration of CBD at VDAC, lowering its apparent functional Kd below the measured 11 \u00b5M.\nTYPE: 1\nCONFIDENCE: 0.8\nMECHANISM: Higher cholesterol increases membrane order and partition coefficient for lipophilic CBD (logP 6.3), enriching it in the OMM and increasing probability of VDAC interaction.\nFALSIFIABLE BY: Measuring CBD binding to VDAC in lipid nanodiscs with high vs low cholesterol showing no Kd difference.\n\nCLAIM: Olesoxime's neuroprotective effect requires an optimal, intermediate OMM cholesterol level, explaining its cell-type-specific activity.\nTYPE: 2\nCONFIDENCE: 0.75\nMECHANISM: Too little cholesterol prevents olesoxime's membrane recruitment via its cholesterol-recognition motif; too much cholesterol competitively inhibits its specific binding site on VDAC.\nFALSIFIABLE BY: Olesoxime showing identical VDAC binding and cytoprotection in cells with very high and very low membrane cholesterol.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1. Quantitative lipidomics data for OMM (not whole mitochondria) in specific cancer vs healthy cell lines. 2. Experimentally determined membrane-water partition coefficient (logKp) for CBD in membranes of varying cholesterol content. 3. High-resolution structure of VDAC1 in a native-like lipid bilayer containing cardiolipin and cholesterol. 4. Direct measurement of the apparent Kd of CBD for VDAC in intact cancer vs normal mitochondria, using a membrane-embedded assay.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nMeasure CBD binding affinity (via fluorescence quenching or SPR) to purified VDAC reconstituted into lipid nanodiscs with defined compositions mimicking healthy vs cancer OMM.",
+      "claims": [
+        {
+          "statement": "Cardiolipin at OMM contact sites alters VDAC gating dynamics, likely promoting a conformation with higher affinity for certain ligands (e.g., olesoxime) but not necessarily CBD.",
+          "type": 2,
+          "confidence": 0.7,
+          "mechanism": "Cardiolipin's negative charge and conical shape distort local membrane curvature and electrostatics, stabilizing specific VDAC oligomeric states or tilts.",
+          "falsifiable_by": "In vitro electrophysiology showing identical VDAC gating in pure PC vs PC+cardiolipin membranes."
+        },
+        {
+          "statement": "Increased OMM cholesterol in some cancers significantly raises the effective local concentration of CBD at VDAC, lowering its apparent functional Kd below the measured 11 \u00b5M.",
+          "type": 1,
+          "confidence": 0.8,
+          "mechanism": "Higher cholesterol increases membrane order and partition coefficient for lipophilic CBD (logP 6.3), enriching it in the OMM and increasing probability of VDAC interaction.",
+          "falsifiable_by": "Measuring CBD binding to VDAC in lipid nanodiscs with high vs low cholesterol showing no Kd difference."
+        },
+        {
+          "statement": "Olesoxime's neuroprotective effect requires an optimal, intermediate OMM cholesterol level, explaining its cell-type-specific activity.",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "Too little cholesterol prevents olesoxime's membrane recruitment via its cholesterol-recognition motif; too much cholesterol competitively inhibits its specific binding site on VDAC.",
+          "falsifiable_by": "Olesoxime showing identical VDAC binding and cytoprotection in cells with very high and very low membrane cholesterol. \u2500\u2500\u2500"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "round_num": 0,
+    "jaccard": 0.12721070596070594,
+    "cosine": 0.8805730462074279,
+    "jsd": 0.15861032101715816,
+    "kappa": 0.9647283126787415,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.16666666666666666,
+      "2": 0.5555555555555556,
+      "3": 0.2777777777777778
+    },
+    "type_01_ratio": 0.16666666666666666,
+    "n_claims_per_model": [
+      4,
+      4,
+      4,
+      3,
+      3
+    ]
+  },
+  "total_calls": 5
+}

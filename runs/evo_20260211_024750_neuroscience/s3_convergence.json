@@ -1,0 +1,175 @@
+{
+  "stage": "S3",
+  "passed": false,
+  "convergence_score": 0.896,
+  "convergence_threshold": 0.85,
+  "convergence_pass": true,
+  "jaccard": 0.4215,
+  "jaccard_threshold": 0.85,
+  "jaccard_pass": false,
+  "type_01_ratio": 0.5625,
+  "type_01_threshold": 0.75,
+  "type_pass": false,
+  "cosine": 0.896,
+  "jsd": 0.1195,
+  "kappa": 0.9682,
+  "type_distribution": {
+    "0": 0.5625,
+    "1": 0.0,
+    "2": 0.25,
+    "3": 0.1875
+  },
+  "divergence_map": {
+    "total_unique_claims": 17,
+    "most_divergent": [
+      {
+        "statement": "1:** Low-dose THC reverses cognitive decline specifically because aged hippocampus has pathologically elevated inhibitory tone; CB1 activation on CCK+ interneurons reduces GABA release, restoring excitation/inhibition balance toward young-adult levels.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.78
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "2:** Synaptic remodeling (spine density increase ~20-40%) is the primary structural substrate, with BDNF as a necessary but insufficient mediator; neurogenesis (~700 neurons/day baseline, declining with age) contributes modestly over longer timescales (>4 weeks).",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.72
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "3:** The biphasic dose-response reflects a molecular switch: low CB1 occupancy (<20%) preferentially engages Gi\u2192ERK\u2192CREB phosphorylation, while high occupancy (>60%) recruits \u03b2-arrestin-2, triggering receptor internalization and mTOR-mediated translational suppression.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.6
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "4:** CB1 activation redistributes AMPA receptors into synaptic nanodomains, improving glutamate signaling efficiency without altering cleft geometry (20 nm invariant).",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          3
+        ],
+        "confidences": [
+          0.4
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "1**: Low-dose THC restores hippocampal BDNF to [20,30] ng/mL via CB1-mediated disinhibition of pyramidal neurons, normalizing CREB-dependent transcription. - **TYPE**: 1 (mechanistic, supported by prior BDNF ranges) - **CONFIDENCE**: 0.85 - **MECHANISM**: THC binds CB1 on GABAergic interneurons (EC50 = 15 \u00b5M), reducing inhibitory tone and boosting CREB phosphorylation in pyramidal neurons, driving BDNF transcription. - **FALSIFIABLE BY**: CB1 knockout or CREB inhibition blocks BDNF restoration; GABA-A antagonists mimic THC\u2019s effect.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "2**: Chronic low-dose THC restores neuroplasticity primarily through synaptic remodeling (20\u201340% \u2191spine density), with BDNF as a permissive but insufficient mediator. - **TYPE**: 1 (aligned with converged claims) - **CONFIDENCE**: 0.75 - **MECHANISM**: CB1 disinhibition enhances LTP, stabilizing new dendritic spines via actin polymerization (BDNF facilitates but doesn\u2019t drive spine formation). - **FALSIFIABLE BY**: BDNF overexpression fails to rescue spine density in CB1 knockouts; spine density increases precede BDNF normalization.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "3**: THC\u2019s effects are contingent on pathologically elevated inhibitory tone in aging, acting as a corrective rather than a general cognitive enhancer. - **TYPE**: 2 (emerging, supported by singular threads) - **CONFIDENCE**: 0.65 - **MECHANISM**: Aged hippocampus exhibits hyperactive GABAergic interneurons; THC\u2019s disinhibition lowers LTP threshold to youthful levels. - **FALSIFIABLE BY**: Young animals with normal inhibitory tone show no cognitive benefit from THC; GABA-A antagonists fail to enhance cognition in aged models.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "4**: THC alters glutamate diffusion kinetics via CB1-mediated AMPA receptor nanodomain clustering, despite fixed synaptic cleft width (20 nm). - **TYPE**: 3 (speculative, singular thread) - **CONFIDENCE**: 0.55 - **MECHANISM**: CB1 activation redistributes AMPA receptors into nanodomains, accelerating glutamate clearance and sharpening synaptic signaling. - **FALSIFIABLE BY**: Super-resolution imaging shows no change in AMPA receptor clustering post-THC; glutamate uncaging reveals unchanged diffusion kinetics. ---",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "Aged hippocampus shows pathologically elevated GABAergic tone, such that low-dose THC (CB1 on interneurons) restores balance via disinhibition, specific to aging vs. young.",
+        "models_supporting": [
+          "grok"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.75
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "Biphasic THC response arises as low occupancy (<30%) favors Gi-ERK/CREB-BDNF, high (>70%) triggers \u03b2-arrestin desensitization/internalization.",
+        "models_supporting": [
+          "grok"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.72
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      }
+    ],
+    "models_present": [
+      "claude",
+      "mistral",
+      "grok",
+      "gemini",
+      "deepseek"
+    ]
+  },
+  "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+}

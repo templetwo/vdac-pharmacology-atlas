@@ -1,0 +1,210 @@
+{
+  "passed": true,
+  "claims": [
+    {
+      "statement": "Valproic acid modulates VDAC1 indirectly \u2014 it alters VDAC expression and oligomerization state via effects on cardiolipin and ceramide metabolism \u2014 but no direct high-affinity binding (Kd < 50 \u00b5M) has been demonstrated.",
+      "falsifiable": true,
+      "falsifiable_reason": "Specifies bilayer electrophysiology test showing no direct modulation at <100 \u00b5M as disproof.",
+      "feasible": true,
+      "feasible_reason": "Planar bilayer electrophysiology with purified VDAC is a standard method in mitochondrial ion channel research.",
+      "novel": true,
+      "novel_reason": "Enables quantitative distinction between direct binding and indirect lipid-mediated effects in VPA-VDAC context.",
+      "passed": true
+    },
+    {
+      "statement": "NAPQI interacts with VDAC1 via covalent modification of exposed cysteine residue(s) (Cys127, Cys232), contributing to mitochondrial permeability transition during acetaminophen toxicity.",
+      "falsifiable": true,
+      "falsifiable_reason": "Mass spectrometry failing to detect NAPQI adducts on specific VDAC cysteines disproves it.",
+      "feasible": true,
+      "feasible_reason": "LC-MS/MS on isolated mitochondria from treated cells is routine proteomics.",
+      "novel": true,
+      "novel_reason": "Links specific covalent sites to APAP toxicity cascade, enabling targeted mutant validation.",
+      "passed": true
+    },
+    {
+      "statement": "Metformin at mitochondrial matrix concentrations (estimated 1\u201310 mM due to membrane-potential-driven accumulation) likely modulates VDAC gating from the intermembrane space side, but published direct binding data are absent.",
+      "falsifiable": true,
+      "falsifiable_reason": "Planar bilayer recordings showing no gating effect up to 10 mM disproves direct modulation.",
+      "feasible": true,
+      "feasible_reason": "Bilayer electrophysiology with concentration titration is standard for VDAC.",
+      "novel": true,
+      "novel_reason": "Tests charge-sensitive gating hypothesis at accumulated concentrations, advancing metformin-VDAC synthesis.",
+      "passed": true
+    },
+    {
+      "statement": "Lipophilic statins (atorvastatin, simvastatin; logP >4) partition into the outer mitochondrial membrane at sufficient concentrations to alter VDAC-lipid interactions and gating, representing a plausible contributor to statin myopathy.",
+      "falsifiable": true,
+      "falsifiable_reason": "No conductance change in atorvastatin-doped membranes at therapeutic levels disproves it.",
+      "feasible": true,
+      "feasible_reason": "Reconstituted VDAC in doped liposomes with electrophysiology is feasible.",
+      "novel": true,
+      "novel_reason": "Quantifies statin membrane partitioning as myopathy variable, testable against lipophilicity predictions.",
+      "passed": true
+    },
+    {
+      "statement": "A systematic VDAC interaction landscape for the top 20 mitochondrially-active drugs does not currently exist in published literature; predicted occupancy ranking would place lipophilic weak acids/bases with membrane-partitioning coefficients >100 as highest-risk.",
+      "falsifiable": true,
+      "falsifiable_reason": "Finding a published systematic screen for \u226510 drugs disproves the literature gap.",
+      "feasible": true,
+      "feasible_reason": "Literature search and meta-analysis of existing screens is straightforward.",
+      "novel": true,
+      "novel_reason": "Identifies key gap for high-throughput VDAC screen of top mito-drugs, enabling landscape mapping.",
+      "passed": true
+    },
+    {
+      "statement": "Valproic acid (VPA) engages VDAC1 at therapeutically relevant concentrations (Cmax ~500\u2013700 \u00b5M).",
+      "falsifiable": true,
+      "falsifiable_reason": "VDAC1 knockout abolishing VPA depolarization/swelling disproves engagement at Cmax.",
+      "feasible": true,
+      "feasible_reason": "CRISPR KO in hepatocytes with mito imaging is standard.",
+      "novel": true,
+      "novel_reason": "Ties therapeutic VPA levels to VDAC Ca\u00b2\u207a flux like CBD, falsifiable in cells.",
+      "passed": true
+    },
+    {
+      "statement": "NAPQI (acetaminophen metabolite) covalently modifies VDAC1 cysteines, contributing to mitochondrial permeability transition (MPT) pore opening.",
+      "falsifiable": true,
+      "falsifiable_reason": "MS failing to detect adducts or cysteine mutants resisting toxicity disproves it.",
+      "feasible": true,
+      "feasible_reason": "MS and mutant expression in cells are routine.",
+      "novel": true,
+      "novel_reason": "Specifies Cys sites in MPT, enabling site-directed validation in APAP model.",
+      "passed": true
+    },
+    {
+      "statement": "Metformin does not directly modulate VDAC gating but may indirectly alter VDAC conductance via Complex I inhibition and \u0394\u03c8m collapse.",
+      "falsifiable": true,
+      "falsifiable_reason": "Direct binding detected by SPR/MST at <1 mM disproves no-direct-modulation claim.",
+      "feasible": true,
+      "feasible_reason": "SPR or MST for protein-ligand Kd is standard biophysical assay.",
+      "novel": true,
+      "novel_reason": "Distinguishes indirect \u0394\u03c8m from direct effects, refining metformin hypothesis.",
+      "passed": true
+    },
+    {
+      "statement": "Lipophilic statins (e.g., atorvastatin) occupy VDAC1 at concentrations linked to myopathy (Cmax ~0.1\u20131 \u00b5M), competing with cholesterol for membrane microdomains.",
+      "falsifiable": true,
+      "falsifiable_reason": "No conductance change at 1 \u00b5M in liposome reconstitution disproves it.",
+      "feasible": true,
+      "feasible_reason": "VDAC reconstitution and patch-clamp is feasible.",
+      "novel": true,
+      "novel_reason": "Proposes pore intercalation mechanism testable at myopathy concentrations.",
+      "passed": true
+    },
+    {
+      "statement": "The top 20 mitochondrial-acting drugs\u2019 VDAC interaction likelihood correlates with logP > 3 and pKa < 7.4 (anionic at cytosolic pH).",
+      "falsifiable": true,
+      "falsifiable_reason": "Screen showing no logP/pKa correlation with affinity disproves it.",
+      "feasible": true,
+      "feasible_reason": "QSAR-guided binding screen (e.g., MST) of 20 drugs is doable.",
+      "novel": true,
+      "novel_reason": "Provides predictive model for VDAC-drug prioritization across top mito-drugs.",
+      "passed": true
+    },
+    {
+      "statement": "Valproic acid (VPA) modulates VDAC1 oligomerization and conductance at therapeutic concentrations (~50\u03bcM free).",
+      "falsifiable": true,
+      "falsifiable_reason": "Patch-clamp showing no effect at 10-100 \u00b5M disproves modulation.",
+      "feasible": true,
+      "feasible_reason": "Electrophysiology on purified VDAC is standard.",
+      "novel": true,
+      "novel_reason": "Specifies N-helix binding at free therapeutic levels, linking to oligomerization.",
+      "passed": true
+    },
+    {
+      "statement": "NAPQI covalently modifies VDAC1 cysteines in toxicity cascade, potentiating MPT at supratherapeutic acetaminophen doses (>150\u03bcg/mL).",
+      "falsifiable": true,
+      "falsifiable_reason": "LC-MS lacking adducts in exposed mito disproves covalent modification.",
+      "feasible": true,
+      "feasible_reason": "Proteomics on treated mitochondria is routine.",
+      "novel": true,
+      "novel_reason": "Connects arylation to ROS/MPT amplification at supratherapeutic doses.",
+      "passed": true
+    },
+    {
+      "statement": "Lipophilic statins (atorvastatin) occupy VDAC1 at muscle mito concentrations (~1-10\u03bcM), contributing to myopathy.",
+      "falsifiable": true,
+      "falsifiable_reason": "Docking score worse than CBD disproves occupancy.",
+      "feasible": true,
+      "feasible_reason": "AutoDock on PDB:3EMN is standard computational screen.",
+      "novel": true,
+      "novel_reason": "Ranks atorvastatin vs. CBD benchmark, guiding experimental follow-up.",
+      "passed": true
+    },
+    {
+      "statement": "Among top 20 mito drugs (metformin, atorva, aspirin, omeprazole), predicted VDAC1 interactors at C_eff/TI: VPA >>> aspirin > simvastatin > naproxen; metformin/levothyroxine negligible.",
+      "falsifiable": true,
+      "falsifiable_reason": "CETSA showing no thermal shift for top candidates disproves prediction.",
+      "feasible": true,
+      "feasible_reason": "CETSA for VDAC stability is established biophysical method.",
+      "novel": true,
+      "novel_reason": "QSAR-based ranking enables prioritized testing of top 20 mito-drugs.",
+      "passed": true
+    },
+    {
+      "statement": "Valproic acid (VPA) directly modulates VDAC1, promoting an open state that contributes to its mitochondrial toxicity.",
+      "falsifiable": true,
+      "falsifiable_reason": "No change in open probability/conductance at 500 \u00b5M in bilayer disproves it.",
+      "feasible": true,
+      "feasible_reason": "Reconstituted bilayer assays are standard for VDAC gating.",
+      "novel": true,
+      "novel_reason": "Predicts open-state stabilization at high Cmax, contrasting closed-state modulators.",
+      "passed": true
+    },
+    {
+      "statement": "The reactive acetaminophen metabolite, NAPQI, covalently modifies VDAC1, contributing to the mitochondrial permeability transition and subsequent cell death in overdose.",
+      "falsifiable": true,
+      "falsifiable_reason": "MS failing to identify adducts while hitting other targets disproves it.",
+      "feasible": true,
+      "feasible_reason": "MS on hepatocyte mito fractions is feasible.",
+      "novel": true,
+      "novel_reason": "Positions NAPQI-VDAC in MPT sensitization pathway.",
+      "passed": true
+    },
+    {
+      "statement": "Lipophilic statins (e.g., atorvastatin) are low-affinity VDAC modulators, and their accumulation in the outer mitochondrial membrane is a key initiating factor in statin-associated myopathy.",
+      "falsifiable": true,
+      "falsifiable_reason": "VDAC1 KO mice resistant despite statin accumulation disproves it.",
+      "feasible": false,
+      "feasible_reason": "Muscle-specific VDAC1 KO mice require novel engineering beyond standard labs.",
+      "novel": true,
+      "novel_reason": "Allosteric constraint hypothesis advances myopathy mechanism if feasible.",
+      "passed": false
+    },
+    {
+      "statement": "Valproic acid and its reactive metabolites likely engage VDAC1, contributing to its hepatotoxicity, given its known induction of mitochondrial permeability transition.",
+      "falsifiable": true,
+      "falsifiable_reason": "Unchanged toxicity in VDAC KO or no binding <100 \u00b5M disproves it.",
+      "feasible": true,
+      "feasible_reason": "KO cells and binding assays (e.g., MST) are standard.",
+      "novel": true,
+      "novel_reason": "Implicates VPA metabolites in Cys modification like NAPQI claims.",
+      "passed": true
+    },
+    {
+      "statement": "Acetaminophen toxicity (NAPQI) does not primarily involve direct VDAC modulation; its mitochondrial dysfunction is downstream of JNK activation and MPT pore opening.",
+      "falsifiable": true,
+      "falsifiable_reason": "Direct NAPQI inhibition of VDAC before JNK in isolated mito disproves it.",
+      "feasible": true,
+      "feasible_reason": "Isolated mito electrophysiology with inhibitors is feasible.",
+      "novel": true,
+      "novel_reason": "Contrasts direct vs. JNK-downstream models, resolvable experimentally.",
+      "passed": true
+    },
+    {
+      "statement": "Lipophilic statins (atorvastatin, simvastatin) at high myopathic concentrations partition into the mitochondrial outer membrane and non-specifically disrupt VDAC oligomerization, contributing to myopathy.",
+      "falsifiable": true,
+      "falsifiable_reason": "No change in conductance/oligomer at micro vs. nanomolar statin disproves it.",
+      "feasible": true,
+      "feasible_reason": "Muscle mito exposure with electrophysiology/Western is standard.",
+      "novel": true,
+      "novel_reason": "Quantifies dose-dependent disruption of HK-II coupling in myopathy.",
+      "passed": true
+    }
+  ],
+  "n_passed": 19,
+  "n_failed": 1,
+  "total_calls": 1,
+  "latency_s": 8.93,
+  "recommendation": "Lab Gate PASSED with filter. 19/20 claims cleared. 1 filtered: 'Lipophilic statins (e.g., atorvastatin) are low-af...' not feasible"
+}

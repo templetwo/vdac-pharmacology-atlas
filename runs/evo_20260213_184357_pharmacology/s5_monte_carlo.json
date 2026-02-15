@@ -1,0 +1,247 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF purified human VDAC1 is reconstituted in planar lipid bilayers and exposed to valproic acid (50\u2013700 \u00b5M), THEN single-channel open probability (Po) will shift by \u226515% relative to vehicle, with an EC50 between 100\u2013500 \u00b5M.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "VPA_concentration": {
+          "mean": 491.7869533865987,
+          "std": 286.9237572404375,
+          "median": 484.2141397685728,
+          "ci_lower": 37.41280735358023,
+          "ci_upper": 964.5314130908279,
+          "min": 17.288647053495456,
+          "max": 992.4518084152787
+        },
+        "VDAC1_conductance_baseline": {
+          "mean": 4.005319615128467,
+          "std": 0.2838175447917678,
+          "median": 4.013481057398586,
+          "ci_lower": 3.5361087004805962,
+          "ci_upper": 4.4801204223600495,
+          "min": 3.5054298341287007,
+          "max": 4.499104730474238
+        },
+        "Po_baseline": {
+          "mean": 0.899719957679971,
+          "std": 0.029783137016239084,
+          "median": 0.9002104648856195,
+          "ci_lower": 0.8517097066971175,
+          "ci_upper": 0.9484026603848248,
+          "min": 0.8501233062511908,
+          "max": 0.9498743370066765
+        },
+        "delta_Po_threshold": {
+          "mean": 0.17780616700255872,
+          "std": 0.07291310316824465,
+          "median": 0.17273317023790474,
+          "ci_lower": 0.06064761100960938,
+          "ci_upper": 0.2958806734515747,
+          "min": 0.05012968604142638,
+          "max": 0.29985547730604695
+        },
+        "membrane_composition_POPC_fraction": {
+          "mean": 0.8493459639339019,
+          "std": 0.0879184054162143,
+          "median": 0.8458709032439287,
+          "ci_lower": 0.7111463094497485,
+          "ci_upper": 0.9927462460834703,
+          "min": 0.7003202395068241,
+          "max": 0.999003163455746
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4996434455974755,
+          "std": 0.12255297031415406,
+          "median": 0.5032191473846217,
+          "ci_lower": 0.25830920877384034,
+          "ci_upper": 0.7414176430071064,
+          "min": 0.15758184713280732,
+          "max": 0.8156161995315163
+        }
+      },
+      "effect_size": 0.8117,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF primary mouse hepatocytes or HepaRG cells are exposed to hepatotoxic APAP concentrations (5\u201320 mM), THEN LC-MS/MS of immunoprecipitated VDAC1 will reveal NAPQI adducts (mass shift +149.05 Da) on Cys127 and/or Cys232 in \u226560% of biological replicates, with adduct abundance correlating with APAP dose (Spearman \u03c1 > 0.7).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "APAP_concentration": {
+          "mean": 10.467268562436752,
+          "std": 5.416354957119177,
+          "median": 10.402976741674173,
+          "ci_lower": 1.5008028329009606,
+          "ci_upper": 19.45078126138309,
+          "min": 1.0598529025414332,
+          "max": 19.95975314120829
+        },
+        "NAPQI_adduct_mass_shift": {
+          "mean": 149.0499161118908,
+          "std": 0.0057126773975157965,
+          "median": 149.05006173325415,
+          "ci_lower": 149.04042470510862,
+          "ci_upper": 149.05935596943763,
+          "min": 149.0400444099413,
+          "max": 149.0599116532303
+        },
+        "GSH_depletion_threshold": {
+          "mean": 80.01795826444189,
+          "std": 5.71211615253424,
+          "median": 79.600430355144,
+          "ci_lower": 70.68104321498168,
+          "ci_upper": 89.55182046435631,
+          "min": 70.33660626411269,
+          "max": 89.95684081659226
+        },
+        "time_post_exposure": {
+          "mean": 13.182405625444307,
+          "std": 6.549672670560351,
+          "median": 13.706502068988225,
+          "ci_lower": 2.4908317731370584,
+          "ci_upper": 23.38928685352933,
+          "min": 2.123931886794108,
+          "max": 23.95592552547042
+        },
+        "Cys127_solvent_accessibility": {
+          "mean": 0.5550872221029354,
+          "std": 0.14924965133595036,
+          "median": 0.562886361939873,
+          "ci_lower": 0.3198876196218435,
+          "ci_upper": 0.7923077891600171,
+          "min": 0.30222010771195457,
+          "max": 0.7988143760373221
+        },
+        "adduct_detection_limit": {
+          "mean": 0.5551385080694838,
+          "std": 0.26021907986044696,
+          "median": 0.553190061090725,
+          "ci_lower": 0.11914138348576142,
+          "ci_upper": 0.9703134480898065,
+          "min": 0.10574869098959563,
+          "max": 0.998318951469515
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5031926438219704,
+          "std": 0.1257065673277554,
+          "median": 0.5121638268242518,
+          "ci_lower": 0.25899060343633096,
+          "ci_upper": 0.7318112446129387,
+          "min": 0.15396205160070953,
+          "max": 0.8792706634594079
+        }
+      },
+      "effect_size": 0.814,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF VDAC1 is reconstituted in bilayers pre-doped with atorvastatin or simvastatin at membrane concentrations equivalent to myopathic tissue exposure (1\u201310 \u00b5M bulk, yielding ~100\u20131000 \u00b5M membrane concentration given logP ~4), THEN VDAC1 conductance will decrease by \u226520% and voltage-dependent closure will shift by \u22655 mV (V\u2080 shift), compared to cholesterol-only membranes.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "statin_bulk_concentration": {
+          "mean": 24.42370790432453,
+          "std": 14.384493298526007,
+          "median": 23.177991474869234,
+          "ci_lower": 1.9717611004796567,
+          "ci_upper": 48.635415672021615,
+          "min": 0.374216768325765,
+          "max": 49.76974574189961
+        },
+        "membrane_partition_coefficient": {
+          "mean": 4896.303539228575,
+          "std": 2907.6322054273323,
+          "median": 4763.400911120018,
+          "ci_lower": 346.85710548981615,
+          "ci_upper": 9702.18287090166,
+          "min": 112.73388777840518,
+          "max": 9928.550323889924
+        },
+        "VDAC1_V0_baseline": {
+          "mean": 24.819150202287585,
+          "std": 2.9537352719215235,
+          "median": 24.60867062967507,
+          "ci_lower": 20.261489496105526,
+          "ci_upper": 29.71363971155947,
+          "min": 20.033238152606874,
+          "max": 29.947990911726148
+        },
+        "delta_V0_threshold": {
+          "mean": 5.754623640299745,
+          "std": 2.2540717146102307,
+          "median": 5.501030255392617,
+          "ci_lower": 2.1717205129843635,
+          "ci_upper": 9.6137342457262,
+          "min": 2.0034612043686604,
+          "max": 9.976479216230455
+        },
+        "cholesterol_mol_percent": {
+          "mean": 16.315567038473286,
+          "std": 9.016295746995718,
+          "median": 17.69759621624384,
+          "ci_lower": 1.1079695944153565,
+          "ci_upper": 29.26679291311488,
+          "min": 0.038175235085791126,
+          "max": 29.84415606650816
+        },
+        "conductance_reduction_threshold": {
+          "mean": 25.465992439805913,
+          "std": 8.629922348316514,
+          "median": 25.877261280339443,
+          "ci_lower": 10.986707629193786,
+          "ci_upper": 39.44139601704959,
+          "min": 10.001363046950685,
+          "max": 39.999090075304
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.497092075396723,
+          "std": 0.11812534802979514,
+          "median": 0.49466291062120527,
+          "ci_lower": 0.26904883163234905,
+          "ci_upper": 0.747870377447734,
+          "min": 0.135362612783667,
+          "max": 0.8268591734411609
+        }
+      },
+      "effect_size": 0.806,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF purified VDAC1 is exposed to metformin (0.01\u201310 mM) in reconstituted bilayers, THEN no change in conductance or gating will be observed (\u0394Po < 5%, \u0394conductance < 10%); HOWEVER, in intact mitochondria, metformin (1\u201310 mM) will reduce VDAC-dependent metabolite flux (ATP/ADP exchange measured by luciferase) by \u226530%, an effect abolished by \u0394\u03c8m clamping with FCCP.",
+      "n_iterations": 300,
+      "parameters_sampled": {},
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5,
+          "std": 0.0,
+          "median": 0.5,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "min": 0.5,
+          "max": 0.5
+        }
+      },
+      "effect_size": 0.0,
+      "power_estimate": 0.0,
+      "convergence_check": true,
+      "seed": 45
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_iterations": 1200,
+  "total_calls": 0
+}

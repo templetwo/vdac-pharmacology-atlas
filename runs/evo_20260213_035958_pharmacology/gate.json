@@ -1,0 +1,210 @@
+{
+  "passed": true,
+  "claims": [
+    {
+      "statement": "Membrane partitioning of CBD (logP 6.3) creates local mitochondrial membrane concentrations 100-1000\u00d7 above free aqueous levels, potentially achieving VDAC1 occupancy even when bulk free hepatic concentration is <11 \u00b5M \u2014 but this same enrichment eliminates any cancer-selectivity argument.",
+      "falsifiable": true,
+      "falsifiable_reason": "It specifies a concrete quantitative threshold (<50\u00d7 membrane enrichment) that would disprove the occupancy mechanism.",
+      "feasible": true,
+      "feasible_reason": "Measuring CBD in isolated mitochondrial membranes vs. cytosol uses standard fractionation, LC-MS, and hepatocyte dosing protocols.",
+      "novel": true,
+      "novel_reason": "Enables quantitative test of local concentration hypothesis central to resolving pharmacokinetic challenges in the research question.",
+      "passed": true
+    },
+    {
+      "statement": "CBD likely modulates VDAC gating allosterically from within the membrane rather than physically occluding the pore lumen, meaning ATP starvation and ROS generation are not mutually exclusive but represent a continuum of conductance dysregulation.",
+      "falsifiable": true,
+      "falsifiable_reason": "Predicts graded subconductance states vs. binary, disproven by electrophysiology showing only open/closed.",
+      "feasible": true,
+      "feasible_reason": "VDAC reconstitution in planar lipid bilayers for single-channel electrophysiology and cryo-EM are established biophysical methods.",
+      "novel": true,
+      "novel_reason": "Resolves challenge (4) by unifying occlusion vs. lock-open dichotomy into testable gating continuum.",
+      "passed": true
+    },
+    {
+      "statement": "CBD does not meaningfully discriminate between VDAC1 and VDAC2, and dual inhibition poses a genuine apoptotic risk to healthy hepatocytes, undermining the model's therapeutic selectivity premise.",
+      "falsifiable": true,
+      "falsifiable_reason": "Requires >10\u00d7 Kd difference; equal affinity disproves selectivity.",
+      "feasible": true,
+      "feasible_reason": "Isoform-specific binding assays (e.g., SPR, ITC) with recombinant VDAC1/2 are routine.",
+      "novel": true,
+      "novel_reason": "Directly tests challenge (2) selectivity premise, critical for therapeutic window.",
+      "passed": true
+    },
+    {
+      "statement": "A 2\u00d7 ROS scavenging differential between healthy and cancer hepatocytes is insufficient to explain selective toxicity; realistic glutathione depletion occurs at intracellular CBD concentrations of ~20-50 \u00b5M, which would affect both cell types.",
+      "falsifiable": true,
+      "falsifiable_reason": "Predicts <5\u00d7 IC50 differential; larger gap disproves insufficiency claim.",
+      "feasible": true,
+      "feasible_reason": "GSH assays and dose-response in matched hepatocyte/HCC lines use standard fluorimetry or HPLC.",
+      "novel": true,
+      "novel_reason": "Quantifies ROS scavenging realism in challenge (3), enabling selectivity margin calculation.",
+      "passed": true
+    },
+    {
+      "statement": "1:** *CBD is unlikely to reach VDAC1-saturating concentrations (\u226511 \u00b5M) in healthy hepatocytes under standard oral dosing, but 7-OH-CBD may contribute to VDAC1 occupancy.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by hepatic [CBD] >11 \u00b5M or 7-OH-CBD Kd >11 \u00b5M.",
+      "feasible": true,
+      "feasible_reason": "In vivo PK measurement or in vitro binding (ITC/SPR) with metabolite are standard.",
+      "novel": true,
+      "novel_reason": "Addresses challenge (1) on metabolic clearance and metabolite contribution.",
+      "passed": true
+    },
+    {
+      "statement": "2:** *CBD binds VDAC1 and VDAC2 non-selectively, risking apoptosis in healthy hepatocytes via VDAC2 inhibition.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by >10\u00d7 Kd difference or no apoptosis change with VDAC2 modulation.",
+      "feasible": true,
+      "feasible_reason": "Binding assays and siRNA/overexpression apoptosis assays (Annexin V) are routine.",
+      "novel": true,
+      "novel_reason": "Tests challenge (2) isoform selectivity and healthy cell apoptosis risk.",
+      "passed": true
+    },
+    {
+      "statement": "3:** *The 2x ROS scavenging ratio is unrealistic for human hepatocytes; glutathione depletion occurs at [CBD] \u226550 \u00b5M, far above therapeutic levels.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by >1.5\u00d7 ROS ratio or GSH depletion at <50 \u00b5M.",
+      "feasible": true,
+      "feasible_reason": "ROS (DCFH-DA) and GSH quantification in human hepatocytes at low [CBD] use plate readers.",
+      "novel": true,
+      "novel_reason": "Challenges (3) ROS ratio realism with human-specific thresholds.",
+      "passed": true
+    },
+    {
+      "statement": "4:** *CBD does not physically occlude the VDAC pore but alters gating kinetics, favoring a \"locked open\" state that uncouples mitochondria and generates ROS\u2014ATP starvation is a secondary effect.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by occlusion (zero conductance) without gating change or ROS preceding ATP drop.",
+      "feasible": true,
+      "feasible_reason": "Single-channel electrophysiology and time-course metabolomics (LC-MS) are standard.",
+      "novel": true,
+      "novel_reason": "Distinguishes mechanisms in challenge (4), prioritizing ROS vs. starvation.",
+      "passed": true
+    },
+    {
+      "statement": "5 (SINGULAR):** *The dual-pathway model\u2019s mutual exclusivity is a false dichotomy; CBD may simultaneously induce ROS (via VDAC gating) and ATP starvation (via reduced ADP/ATP exchange), with starvation dominating at higher [CBD].",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven if ROS and ATP effects are temporally exclusive, not simultaneous.",
+      "feasible": true,
+      "feasible_reason": "Time-resolved metabolomics (LC-MS) and ROS/ATP assays track kinetics.",
+      "novel": true,
+      "novel_reason": "Unifies dual-pathway false dichotomy in challenge (4) via dose-dependence.",
+      "passed": true
+    },
+    {
+      "statement": "Steady-state free hepatic [CBD] remains <11 \u00b5M (VDAC1 Kd) under 20-1500 mg/day oral dosing due to first-pass CYP3A4/2C19 metabolism (CL~40-100 L/h) and low bioavailability.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by biopsy [CBD]_free >11 \u00b5M at steady-state.",
+      "feasible": false,
+      "feasible_reason": "Human liver biopsies at steady-state dosing require clinical intervention beyond standard lab methods.",
+      "novel": true,
+      "novel_reason": "Anchors PK challenge (1) but feasibility limits program utility.",
+      "passed": false
+    },
+    {
+      "statement": "7-OH-CBD (primary metabolite, ~20-40% of dose) likely binds VDAC1 with Kd~10-20 \u00b5M, structurally analogous to CBD.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by measured Kd >50 \u00b5M.",
+      "feasible": true,
+      "feasible_reason": "ITC/SPR binding with purified 7-OH-CBD and VDAC1 is straightforward.",
+      "novel": true,
+      "novel_reason": "Extends challenge (1) to key metabolite's binding potential.",
+      "passed": true
+    },
+    {
+      "statement": "CBD lacks selectivity for VDAC1 over VDAC2 (predicted Kd_VDAC2~5-15 \u00b5M); inhibits VDAC2 anti-apoptotic BH3-binding, sensitizing healthy hepatocytes.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by >5\u00d7 Kd difference between isoforms.",
+      "feasible": true,
+      "feasible_reason": "Predicted Kd testable via isoform-specific binding in lipid environments.",
+      "novel": true,
+      "novel_reason": "Quantifies non-selectivity risk in challenge (2).",
+      "passed": true
+    },
+    {
+      "statement": "Singular threads valid: CBD (logP 6.3) binds VDAC membrane domain allosterically, altering gating",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by evidence of pore lumen binding, not membrane allosteric.",
+      "feasible": true,
+      "feasible_reason": "Binding site mapping via mutagenesis or cryo-EM is standard.",
+      "novel": false,
+      "novel_reason": "Restates Claim 2 mechanism without advancing unique testable prediction.",
+      "passed": false
+    },
+    {
+      "statement": "The VDAC1-centric model fails on pharmacokinetic grounds; sustained free intra-hepatocyte concentrations required for VDAC1 saturation (Kd=11\u00b5M) are unattainable via oral dosing within the therapeutic window, though transient accumulation in lipid droplets or impaired metabolism could create risk.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by biopsy [CBD]_free >11 \u00b5M in therapeutic window.",
+      "feasible": false,
+      "feasible_reason": "Relies on human liver biopsies, not feasible in standard lab settings.",
+      "novel": true,
+      "novel_reason": "Synthesizes PK failure for challenge (1) but gated by feasibility.",
+      "passed": false
+    },
+    {
+      "statement": "The model's proposed cancer-selectivity is undermined by CBD's likely lack of isoform selectivity between VDAC1 and the anti-apoptotic VDAC2, making general hepatotoxicity an expected on-target effect at sufficient concentrations.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by >10-fold VDAC1 affinity over VDAC2.",
+      "feasible": true,
+      "feasible_reason": "Competition binding assays with isoforms are routine.",
+      "novel": true,
+      "novel_reason": "Directly falsifies selectivity undermining challenge (2).",
+      "passed": true
+    },
+    {
+      "statement": "The \"occlusion vs. lock-open\" framing is a false dichotomy; a unified mechanism of allosteric gating modulation by membrane-partitioned CBD is more plausible, where the outcome (low-conductance starvation vs. high-conductance uncoupling) depends on the pre-existing metabolic state of the cell.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by simple block without gating or voltage effects.",
+      "feasible": true,
+      "feasible_reason": "Electrophysiology in bilayers tests gating probability changes.",
+      "novel": true,
+      "novel_reason": "Provides unified allosteric model resolving challenge (4) dichotomy.",
+      "passed": true
+    },
+    {
+      "statement": "Oral CBD is unlikely to cause direct VDAC1-mediated hepatotoxicity in healthy livers at standard therapeutic doses (<10 \u00b5M plasma), as first-pass metabolism prevents sustained free hepatic concentrations \u226511 \u00b5M.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by hepatic [CBD] >15 \u00b5M or 7-OH-CBD Kd <5 \u00b5M.",
+      "feasible": false,
+      "feasible_reason": "In vivo free hepatic measurement post-dosing requires clinical access.",
+      "novel": true,
+      "novel_reason": "Reinforces PK safety margin for challenge (1).",
+      "passed": false
+    },
+    {
+      "statement": "CBD likely inhibits both VDAC1 and VDAC2 with similar affinity, creating a pro-apoptotic background state in hepatocytes that lowers the threshold for secondary insults.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by >10\u00d7 selectivity or no BAK enhancement in VDAC2 systems.",
+      "feasible": true,
+      "feasible_reason": "Lipid bilayer binding and BAK pore assays are biophysical standards.",
+      "novel": true,
+      "novel_reason": "Links VDAC2 inhibition to apoptosis threshold in challenge (2).",
+      "passed": true
+    },
+    {
+      "statement": "The dual-pathway model is mechanistically confused; CBD's lipophilicity favors membrane-embedded binding that alters VDAC gating dynamics, potentially increasing conductance (promoting uncoupling/ROS) *and* reducing metabolite flux (promoting energy stress) as parallel, not mutually exclusive, outcomes.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by exclusive occlusion or full-open without mixed effects.",
+      "feasible": true,
+      "feasible_reason": "Electrophysiology distinguishes gating from block/uncoupling.",
+      "novel": true,
+      "novel_reason": "Parallel outcomes advance challenge (4) beyond binary model.",
+      "passed": true
+    },
+    {
+      "statement": "The 2x ROS scavenging ratio is plausible for hepatocytes vs. hepatocellular carcinoma (HCC), but glutathione depletion requires intracellular [CBD] >20 \u00b5M, a concentration unlikely in healthy liver but possible in metabolically compromised cells or with high-dose IV administration.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproven by <1.5\u00d7 GSH difference or identical EC50 in hepatocytes/HCC.",
+      "feasible": true,
+      "feasible_reason": "GSH content and CBD depletion EC50 in cell lines use standard assays.",
+      "novel": true,
+      "novel_reason": "Tests challenge (3) plausibility with concentration thresholds.",
+      "passed": true
+    }
+  ],
+  "n_passed": 16,
+  "n_failed": 4,
+  "total_calls": 1,
+  "latency_s": 10.97,
+  "recommendation": "Lab Gate PASSED with filter. 16/20 claims cleared. 4 filtered: 'Steady-state free hepatic [CBD] remains <11 \u00b5M (VD...' not feasible; 'Singular threads valid: CBD (logP 6.3) binds VDAC ...' lacks novelty; 'The VDAC1-centric model fails on pharmacokinetic g...' not feasible"
+}

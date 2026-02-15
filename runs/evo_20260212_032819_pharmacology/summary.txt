@@ -1,0 +1,35 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260212_032819_pharmacology
+Date: 2026-02-12
+Protocol: evo-1.0
+
+QUESTION:
+  What determines whether VDAC1 engagement by a small molecule results in neuroprotection versus cytotoxicity? Specifically, how do cell-type-specific cofactor landscapes — including HK-II occupancy, Bcl-2 family association, and tubulin binding — set the threshold at which VDAC1 transitions from metabolic gating to oligomerization-mediated apoptosis?
+
+CONVERGENCE:
+  S2 rounds: ?
+  Early stopped: ?
+  Final Jaccard: ?
+  Final TYPE 0/1: ?
+  S3 gate: FAILED
+
+VERIFICATION:
+  TYPE 2 claims checked: 0
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 0
+
+LAB GATE:
+  Result: FAILED
+  Claims passed: 0/0
+
+BUDGET:
+  Total LLM calls: ?
+  Target range: 92-142
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

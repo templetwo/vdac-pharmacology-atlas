@@ -1,0 +1,56 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260210_224206_pharmacology+bioelectric
+Date: 2026-02-10
+Protocol: evo-1.0
+
+QUESTION:
+  What are the mechanisms by which CBD induces selective cytotoxicity in cancer cells while sparing healthy cells, with specific reference to VDAC1-mediated mitochondrial membrane potential disruption?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 5
+  Promoted to TYPE 1: 0
+  Novel (no literature): 2
+  Contradicted: 0
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 10/21
+
+HYPOTHESES (ranked by testability):
+  H1. IF cancer cells (MDA-MB-231) are treated with 11 µM CBD, THEN ΔΨm will depolarize by ≥20 mV (from ~−120 mV to ~−95 mV), 
+     Testability: 9.0/10
+     Effect size: 0.9309 (Cohen's d)
+     Power: 1.0
+
+  H2. IF CBD cytotoxicity operates through a two-stage mechanism (TRPV1/2 Ca²⁺ priming at 2–4 µM, then VDAC1 engagement at ~11
+     Testability: 8.0/10
+     Effect size: 0.9473 (Cohen's d)
+     Power: 1.0
+
+  H3. IF selectivity is a threshold phenomenon dependent on baseline ΔΨm, THEN pre-treating healthy cells (MCF-10A) with low-d
+     Testability: 8.0/10
+     Effect size: 0.806 (Cohen's d)
+     Power: 1.0
+
+  H4. IF VDAC1's voltage-dependent gating renders it already partially closed at −180 mV (healthy cell potential), THEN CBD (1
+     Testability: 5.0/10
+     Effect size: 0.0 (Cohen's d)
+     Power: 0.0
+
+BUDGET:
+  Total LLM calls: 12
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

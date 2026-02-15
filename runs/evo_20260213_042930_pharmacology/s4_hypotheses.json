@@ -1,0 +1,268 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF primary human hepatocytes from NAFLD/alcohol-use donors are compared to healthy donor hepatocytes under identical culture conditions, THEN de novo GSH synthesis flux (measured by \u00b2H-glycine or \u00b9\u00b3C-cysteine incorporation) will be \u226450% of healthy controls (healthy: 0.5\u20132.3 \u03bcmol/g/hr; NAFLD: <0.5\u20131.0 \u03bcmol/g/hr), with GCL enzymatic activity reduced by \u22652-fold.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "GSH_synthesis_healthy",
+          "unit": "\u03bcmol/g/hr",
+          "low": 0.5,
+          "high": 2.3,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "GSH_synthesis_NAFLD",
+          "unit": "\u03bcmol/g/hr",
+          "low": 0.1,
+          "high": 1.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "intracellular_cysteine_NAFLD",
+          "unit": "%",
+          "low": 30.0,
+          "high": 70.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Obtain cryopreserved primary human hepatocytes from healthy (n\u22656) and biopsy-confirmed NAFLD/alcohol-use (n\u22656) donors (BioIVT/Lonza). Culture in sandwich configuration. Measure GSH synthesis flux via \u00b9\u00b3C\u2082-glycine pulse-chase with LC-MS/MS over 6 hr. Parallel GCL activity assay (\u03b3-glutamylcysteine formation) and intracellular cysteine quantification. Normalize to protein and viable cell count.",
+      "expected_outcome": "NAFLD/alcohol hepatocytes show \u22652x reduction in GSH flux and GCL activity; cysteine pools depleted \u226540%.",
+      "null_outcome": "NAFLD hepatocytes maintain GSH synthesis within 50% of healthy",
+      "dose_ranges": {},
+      "readouts": [
+        "\u00b9\u00b3C-GSH isotopologue enrichment (LC-MS/MS)",
+        "GCL enzymatic activity (spectrophotometric)",
+        "total/oxidized GSH (Tietze recycling assay)",
+        "intracellular cysteine (HPLC-fluorescence)"
+      ],
+      "controls": [
+        "BSO (GCL inhibitor",
+        "positive control for synthesis block)",
+        "NAC supplementation (cysteine rescue)",
+        "heat-inactivated lysate (assay background)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H2",
+      "prediction": "IF reconstituted human VDAC1 in planar lipid bilayers is exposed to CBD at Kd-relevant concentrations (5\u201320 \u03bcM) for 2 hr, THEN upon complete washout, channel conductance, open probability, and voltage-dependent gating will return to within 90% of pre-exposure baseline within 4 hr (t_recovery < 4 hr), with no persistent gating abnormality at 12 hr.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CBD_Kd_VDAC1",
+          "unit": "\u03bcM",
+          "low": 5.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "t_off_CBD",
+          "unit": "hr",
+          "low": 0.25,
+          "high": 4.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "gating_recovery_fraction_at_4hr",
+          "unit": "(uniform)",
+          "low": 0.7,
+          "high": 1.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "baseline_open_probability",
+          "unit": "at",
+          "low": 0.5,
+          "high": 0.9,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 6.0,
+      "experimental_protocol": "Express and purify recombinant human VDAC1; reconstitute into DPhPC planar lipid bilayers. Record single-channel conductance at \u00b110 to \u00b160 mV (voltage ramp protocol) before, during (5, 11, 20 \u03bcM CBD in cis chamber, 2 hr exposure), and after washout (perfusion with CBD-free buffer; recordings at 1, 2, 4, 8, 12 hr post-washout). Analyze open probability, conductance histogram, and voltage-gating midpoint (V\u2080). n\u22658 independent bilayers per condition.",
+      "expected_outcome": "CBD shifts V\u2080 and reduces open probability during exposure; washout restores all parameters to \u226590% baseline by 4 hr, with complete recovery by 12 hr. No hysteresis.",
+      "null_outcome": "Gating parameters remain >10% shifted from baseline at \u226512 hr post-washout, indicating persistent conformational memory or post-translational modification \u2014 falsifying reversibility claim.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            5.0,
+            11.0,
+            20.0
+          ],
+          "unit": "\u03bcM"
+        }
+      },
+      "readouts": [
+        "Single-channel conductance (pA)",
+        "open probability (Po)",
+        "voltage-gating midpoint (V\u2080",
+        "mV)",
+        "dwell-time analysis (ms)",
+        "current-voltage relationships"
+      ],
+      "controls": [
+        "Vehicle (ethanol \u22640.1%)",
+        "DIDS (known VDAC blocker",
+        "irreversible positive control)",
+        "cholesterol hemisuccinate (lipophilic non-VDAC ligand",
+        "specificity control)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H3",
+      "prediction": "IF healthy primary human hepatocytes are exposed to physiologically relevant CBD concentrations (0.5\u20132 \u03bcM, reflecting 50 mg oral dose post-first-pass) for 14 consecutive days with daily media renewal, THEN total intracellular GSH will remain \u226580% of vehicle control throughout, with no progressive decline trend (slope of GSH vs. time not significantly <0).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CBD_hepatic_Cmax_50mg_oral",
+          "unit": "\u03bcM",
+          "low": 0.3,
+          "high": 2.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "GSH_baseline_healthy",
+          "unit": "mM",
+          "low": 5.0,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "daily_ROS_increment",
+          "unit": "%",
+          "low": 0.0,
+          "high": 15.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 8.0,
+      "experimental_protocol": "Sandwich-cultured primary human hepatocytes (healthy donors, n\u22654 donors, triplicate per condition). Daily exposure to CBD (0.5, 1.0, 2.0 \u03bcM) or vehicle in fresh media for 14 days. Harvest cells at days 1, 3, 7, 10, 14. Measure total GSH/GSSG (luminescent assay), mitochondrial superoxide (MitoSOX), ATP (CellTiter-Glo), and viability (LDH release). Include BSO co-treatment arm (GSH-synthesis-blocked positive control) and NAFLD-model arm (palmitate/oleate-loaded hepatocytes) to test vulnerability.",
+      "expected_outcome": "Healthy hepatocytes maintain GSH \u226580% baseline at all timepoints; no progressive decline. NAFLD-model cells show measurable GSH erosion by day 7\u201314 at \u22651 \u03bcM CBD. This supports the null hypothesis defeat for healthy liver but confirms vulnerability in compromised liver.",
+      "null_outcome": "Healthy hepatocytes show progressive GSH decline (>20% by day 14) with significant negative slope \u2014 supporting the chronic depletion hypothesis and indicating the EFSA concern is warranted even for healthy individuals.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "unit": "\u03bcM"
+        },
+        "Palmitate loading": {
+          "doses": [
+            200.0,
+            400.0
+          ],
+          "unit": "\u03bcM"
+        }
+      },
+      "readouts": [
+        "GSH/GSSG ratio (GSH-Glo)",
+        "MitoSOX fluorescence (flow cytometry)",
+        "ATP (CellTiter-Glo)",
+        "LDH release",
+        "albumin secretion (hepatocyte function)",
+        "CYP3A4 activity (functional integrity)"
+      ],
+      "controls": [
+        "Vehicle (DMSO \u22640.1%)",
+        "BSO 100 \u03bcM (GSH synthesis block)",
+        "NAC 5 mM (cysteine supplementation rescue)",
+        "APAP 5 mM (positive hepatotoxicity control)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H4",
+      "prediction": "IF 7-OH-CBD has 2\u20134x longer terminal half-life than parent CBD, THEN at steady-state daily dosing (simulated by repeated exposure), 7-OH-CBD will accumulate to concentrations representing \u226520% of total VDAC-binding ligand pool, and will produce measurable mitochondrial effects (membrane potential depolarization, reduced oxygen consumption) at concentrations achievable through accumulation (0.5\u20135 \u03bcM).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CBD_t_half",
+          "unit": "hr",
+          "low": 1.5,
+          "high": 5.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "7OH_CBD_t_half",
+          "unit": "hr",
+          "low": 4.0,
+          "high": 18.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "7OH_CBD_accumulation_ratio",
+          "unit": "at",
+          "low": 1.5,
+          "high": 4.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "7OH_CBD_Kd_VDAC1",
+          "unit": "\u03bcM",
+          "low": 5.0,
+          "high": 50.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "VDAC_fractional_occupancy_7OH",
+          "unit": "at",
+          "low": 0.05,
+          "high": 0.4,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 5.0,
+      "experimental_protocol": "(A) Binding: Measure 7-OH-CBD affinity for purified VDAC1 via microscale thermophoresis (MST) or surface plasmon resonance (SPR), comparing to parent CBD. (B) Functional: Treat HepG2 cells or primary hepatocytes with 7-OH-CBD (0.5, 1, 2, 5 \u03bcM) alone and in combination with CBD (1 \u03bcM) for 24\u201372 hr. Measure mitochondrial membrane potential (TMRM), oxygen consumption rate (Seahorse XF), and ATP. (C) Accumulation modeling: Use measured Kd values and published PK to calculate fractional VDAC occupancy at simulated steady-state.",
+      "expected_outcome": "7-OH-CBD binds VDAC1 with Kd within 3x of parent CBD; at accumulation-relevant concentrations (\u22651 \u03bcM), it produces additive mitochondrial depolarization when combined with CBD, effectively extending the VDAC occupancy window by \u226530%.",
+      "null_outcome": "7-OH-CBD has >10x weaker VDAC affinity than CBD, does not accumulate above 0.5 \u03bcM at steady state, and produces no measurable mitochondrial effects alone or additively \u2014 metabolite contribution is negligible.",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": []
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_calls": 1,
+  "latency_s": 59.57
+}

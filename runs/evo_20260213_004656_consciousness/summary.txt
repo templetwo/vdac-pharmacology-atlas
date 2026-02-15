@@ -1,0 +1,35 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260213_004656_consciousness
+Date: 2026-02-13
+Protocol: evo-1.0
+
+QUESTION:
+  Does the spectral decomposition of per-token Fisher Information matrices in pretrained transformers reveal discrete bonding geometries — specifically, do semantically rigid tokens (logical connectives, verb-argument bindings) show higher-rank, more anisotropic FIM spectra than semantically flexible tokens (adjectives, adverbs), and does this spectral structure predict coherence better than attention entropy or perplexity alone?
+
+CONVERGENCE:
+  S2 rounds: ?
+  Early stopped: ?
+  Final Jaccard: ?
+  Final TYPE 0/1: ?
+  S3 gate: FAILED
+
+VERIFICATION:
+  TYPE 2 claims checked: 0
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 0
+
+LAB GATE:
+  Result: FAILED
+  Claims passed: 0/0
+
+BUDGET:
+  Total LLM calls: ?
+  Target range: 92-142
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

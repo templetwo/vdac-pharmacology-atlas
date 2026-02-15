@@ -1,0 +1,249 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "The iterative process converges to a single, collapsed semantic parse, fundamentally differing from the superposition state maintained by global attention.",
+      "mechanism": "The FIM-guided updates perform energy minimization on a coherence landscape; the system settles into a single low-energy attractor state (a specific parse), effectively performing inference rather than representation-building.",
+      "falsifiable_by": "Finding that final token representations after I>25 iterations can be linearly decoded into multiple, conflicting semantic parses with comparable probabilities.",
+      "type": 2,
+      "confidence": 0.875,
+      "overlap_count": 2,
+      "models": [
+        "deepseek",
+        "gemini"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "The iterative process converges to a single, collapsed semantic parse, fundamentally differing from the superposition state maintained by global attention."
+    },
+    {
+      "statement": "Long-range (D=40) dependencies are resolved in sub-linear time, I \u2248 15-25 iterations, via a Kuramoto-like phase transition to global coherence (C>0.4), not by linear information propagation.",
+      "mechanism": "With optimal coupling (K=2.0), local FIM-guided rotations rapidly align phases, triggering a system-wide, non-linear synchronization that establishes long-range order well before a signal could traverse the entire 40-token chain.",
+      "falsifiable_by": "An experiment where the required iterations I scales linearly with dependency distance D (i.e., I \u221d D) across trials with K=2.0.",
+      "type": 2,
+      "confidence": 0.7,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "gemini"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "Long-range (D=40) dependencies are resolved in sub-linear time, I \u2248 15-25 iterations, via a Kuramoto-like phase transition to global coherence (C>0.4), not by linear information propagation."
+    },
+    {
+      "statement": "2**: *Entropy creeps to the LANTERN upper bound (H\u21924.5 nats) after I\u224825 iterations, but FIM-guided rotations avoid catastrophic over-smoothing by preserving local discriminative geometry (analogous to C-C bond rigidity).* **TYPE**: 0 (validated by prior overlap) **CONFIDENCE**: 0.75 **MECHANISM**: FIM acts as a local metric, constraining rotations to geodesic paths that minimize distortion. Unlike GNNs, this preserves token-specific curvature, but entropy accumulates via thermal noise (hydrogen-bond-like energy scales: 4\u201340 kJ/mol). **FALSIFIABLE BY**: Observing *H*<4.5 nats at *I*>25 in a system with *K*=2.0, or loss of local token identity (e.g., all tokens converging to identical embeddings). ---",
+      "mechanism": ": FIM acts as a local metric, constraining rotations to geodesic paths that minimize distortion. Unlike GNNs, this preserves token-specific curvature, but entropy accumulates via thermal noise (hydrogen-bond-like energy scales: 4\u201340 kJ/mol).",
+      "falsifiable_by": ": Observing *H*<4.5 nats at *I*>25 in a system with *K*=2.0, or loss of local token identity (e.g., all tokens converging to identical embeddings). ---",
+      "type": 2,
+      "confidence": 0.675,
+      "overlap_count": 2,
+      "models": [
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('fim', 'interacts', 'type'), ('gnns', 'interacts', 'falsifiable'), ('mechanism', 'interacts', 'gnns'), ('confidence', 'interacts', 'mechanism'), ('falsifiable', 'interacts', 'by'), ('type', 'interacts', 'confidence'), ('lantern', 'interacts', 'fim')})",
+      "chunk_text": "2**: *Entropy creeps to the LANTERN upper bound (H\u21924.5 nats) after I\u224825 iterations, but FIM-guided rotations avoid catastrophic over-smoothing by preserving local discriminative geometry (analogous to C-C bond rigidity).* **TYPE**: 0 (validated by prior overlap) **CONFIDENCE**: 0.75 **MECHANISM**: FIM acts as a local metric, constraining rotations to geodesic paths that minimize distortion. Unlike GNNs, this preserves token-specific curvature, but entropy accumulates via thermal noise (hydrogen-"
+    },
+    {
+      "statement": "Iterated local FIM rotations do NOT converge to the same representation as global attention. They converge to a single parse (collapsing ambiguity), whereas global attention maintains a superposition over parses weighted by softmax scores.",
+      "mechanism": "Local iterative propagation acts as a sequential belief-propagation algorithm that commits to locally consistent interpretations, pruning alternatives that global attention preserves via parallel weighted access to all positions.",
+      "falsifiable_by": "Constructing a garden-path sentence and showing that after convergence, the local system retains probability mass on the initial misparse comparable to global attention's allocation.",
+      "type": 2,
+      "confidence": 0.575,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "mistral"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "Iterated local FIM rotations do NOT converge to the same representation as global attention. They converge to a single parse (collapsing ambiguity), whereas global attention maintains a superposition over parses weighted by softmax scores."
+    },
+    {
+      "statement": "The fundamental limit is not catastrophic over-smoothing but gradual entropy creep to the LANTERN upper bound (~4.5 nats), which degrades discriminative information after ~25 iterations, regardless of D. This supports the established consensus and singular degradation threads.",
+      "mechanism": "Each FIM-guided rotation injects a small amount of noise (approximated by hydrogen-bond energy scale 4-40 kJ/mol), causing entropy to increase asymptotically toward the system's maximum. At ~4.5 nats, specific information is lost.",
+      "falsifiable_by": "Observing entropy plateau below 4 nats after 40+ iterations, or information fidelity remaining high (>90%) past I=30.",
+      "type": 3,
+      "confidence": 0.9,
+      "overlap_count": 1,
+      "models": [
+        "deepseek"
+      ],
+      "tuples": "frozenset({('lantern', 'interacts', 'fim')})",
+      "chunk_text": "The fundamental limit is not catastrophic over-smoothing but gradual entropy creep to the LANTERN upper bound (~4.5 nats), which degrades discriminative information after ~25 iterations, regardless of D. This supports the established consensus and singular degradation threads."
+    },
+    {
+      "statement": "No global attention equivalence; local iter approximates but degrades at I>25 (H>4.5 nats) unlike O(1) attention mixing.",
+      "mechanism": "Chain locality forces sequential propagation (I\u221dD), with FIM mitigating but not eliminating diffusion-like loss (vs. attention's all-pairs).",
+      "falsifiable_by": "Embeddings match attention cos-sim >0.95 at D=40, I=40. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.82,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "No global attention equivalence; local iter approximates but degrades at I>25 (H>4.5 nats) unlike O(1) attention mixing."
+    },
+    {
+      "statement": "Min I=D/2=20 suffices for D=40 chain if C>0.4 & K=2.0 (validates singulars), via Kuramoto wave propagation at speed ~K*C.",
+      "mechanism": "Local rotations sync phases oscillatorily (Kuramoto K_opt=2), propagating global mode diffusively but accelerated beyond linear GNN by FIM non-Euclidean shortcuts.",
+      "falsifiable_by": "Sim with K=2, C=0.3 shows I>40 needed.",
+      "type": 3,
+      "confidence": 0.8,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('gnn', 'interacts', 'fim')})",
+      "chunk_text": "Min I=D/2=20 suffices for D=40 chain if C>0.4 & K=2.0 (validates singulars), via Kuramoto wave propagation at speed ~K*C."
+    },
+    {
+      "statement": "Entropy creep to 4.5 nats is not GNN-style over-smoothing but a phase decoherence, occurring when the system fails to exceed the global synchrony threshold (C<0.4) within ~25 iterations.",
+      "mechanism": "If global phase-lock is not achieved, continued local rotations become chaotic and uncoordinated, maximizing system entropy up to the LANTERN limit; this is a failure of ignition, not a degradation of an existing signal.",
+      "falsifiable_by": "Observing entropy consistently climbing to 4.5 nats even in runs where coherence C > 0.4 was successfully achieved and maintained. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.8,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('gnn', 'interacts', 'lantern')})",
+      "chunk_text": "Entropy creep to 4.5 nats is not GNN-style over-smoothing but a phase decoherence, occurring when the system fails to exceed the global synchrony threshold (C<0.4) within ~25 iterations."
+    },
+    {
+      "statement": "For D=40, the required iterations I is less than D if phase synchrony (C) exceeds the neural threshold (0.4) and coupling K=2.0, enabling Kuramoto-like rapid global alignment. I ~ 25-30.",
+      "mechanism": "Local FIM rotations transmit phase; when C>0.4, a global synchrony event (\"ignition\") rapidly coordinates distant tokens, shortcutting pure diffusion.",
+      "falsifiable_by": "Simulation showing I scales linearly with D (I\u2248D) even when C>0.4 and K=2.0.",
+      "type": 3,
+      "confidence": 0.8,
+      "overlap_count": 1,
+      "models": [
+        "deepseek"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "For D=40, the required iterations I is less than D if phase synchrony (C) exceeds the neural threshold (0.4) and coupling K=2.0, enabling Kuramoto-like rapid global alignment. I ~ 25-30."
+    },
+    {
+      "statement": "Entropy creep reaches the LANTERN upper bound (~4.5 nats) at approximately I\u224825-30 iterations, creating a soft degradation regime \u2014 not catastrophic collapse \u2014 where representations lose fine-grained distinctions but retain coarse structure.",
+      "mechanism": "Each FIM rotation preserves local geometry but introduces small projection errors in orthogonal subspaces; these accumulate as entropy increase \u0394H\u22480.05-0.08 nats/iteration, reaching saturation at ~4.5 nats after ~25-30 steps from a starting entropy of ~2.5 nats.",
+      "falsifiable_by": "Measuring \u0394H per iteration empirically; if \u0394H<0.02 or >0.15, the iteration bound shifts dramatically.",
+      "type": 3,
+      "confidence": 0.75,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('lantern', 'interacts', 'fim')})",
+      "chunk_text": "Entropy creep reaches the LANTERN upper bound (~4.5 nats) at approximately I\u224825-30 iterations, creating a soft degradation regime \u2014 not catastrophic collapse \u2014 where representations lose fine-grained distinctions but retain coarse structure."
+    },
+    {
+      "statement": "For chain topology, I=D is a lower bound for information propagation across D tokens, but FIM-guided rotations achieve effective propagation in I\u2248D/2 to D iterations due to geodesic shortcuts on the information manifold.",
+      "mechanism": "FIM defines a Riemannian metric where high-curvature (informative) directions propagate faster than low-curvature ones, effectively shortcutting the naive diffusion limit by preferentially rotating along discriminative subspaces.",
+      "falsifiable_by": "Empirical measurement showing I scales as D\u00b2 (diffusive) rather than linearly, or showing no speedup over isotropic propagation.",
+      "type": 3,
+      "confidence": 0.7,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "For chain topology, I=D is a lower bound for information propagation across D tokens, but FIM-guided rotations achieve effective propagation in I\u2248D/2 to D iterations due to geodesic shortcuts on the information manifold."
+    },
+    {
+      "statement": "Converges to single parse (not attention superposition), as entropy suppression (RLHF 0.17) collapses ambiguity below LLM H_typ=0.5-3 nats.",
+      "mechanism": "Iterative geodesic flow minimizes free energy, selecting definite geometry vs. attention's quadratic superposition.",
+      "falsifiable_by": "Equiv. parse tree output matching attention on garden-path benchmarks.",
+      "type": 3,
+      "confidence": 0.7,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('rlhf', 'interacts', 'llm')})",
+      "chunk_text": "Converges to single parse (not attention superposition), as entropy suppression (RLHF 0.17) collapses ambiguity below LLM H_typ=0.5-3 nats."
+    },
+    {
+      "statement": "1**: *For D=40 garden-path sentences, I\u226440 iterations suffice to resolve dependencies if C\u22650.4 and K=2.0, via Kuramoto-like global synchronization of FIM-guided rotations.* **TYPE**: 1 (theoretical prediction with empirical priors) **CONFIDENCE**: 0.85 **MECHANISM**: FIM defines a Riemannian manifold where local rotations act as coupled oscillators (Kuramoto model). At *K*=2.0, phase locking propagates coherence across *D* tokens in *I*\u2248*D* steps, matching the *global_workspace_ignition_threshold* (200\u2013300 ms). **FALSIFIABLE BY**: Empirical failure to resolve garden-path ambiguity (e.g., \"The horse raced past the barn fell\") in *I*\u226440 with *C*>0.4, or *H*>4.5 nats at *I*=40. ---",
+      "mechanism": ": FIM defines a Riemannian manifold where local rotations act as coupled oscillators (Kuramoto model). At *K*=2.0, phase locking propagates coherence across *D* tokens in *I*\u2248*D* steps, matching the *global_workspace_ignition_threshold* (200\u2013300 ms).",
+      "falsifiable_by": ": Empirical failure to resolve garden-path ambiguity (e.g., \"The horse raced past the barn fell\") in *I*\u226440 with *C*>0.4, or *H*>4.5 nats at *I*=40. ---",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('fim', 'interacts', 'type'), ('confidence', 'interacts', 'mechanism'), ('falsifiable', 'interacts', 'by'), ('type', 'interacts', 'confidence'), ('mechanism', 'interacts', 'falsifiable')})",
+      "chunk_text": "1**: *For D=40 garden-path sentences, I\u226440 iterations suffice to resolve dependencies if C\u22650.4 and K=2.0, via Kuramoto-like global synchronization of FIM-guided rotations.* **TYPE**: 1 (theoretical prediction with empirical priors) **CONFIDENCE**: 0.85 **MECHANISM**: FIM defines a Riemannian manifold where local rotations act as coupled oscillators (Kuramoto model). At *K*=2.0, phase locking propagates coherence across *D* tokens in *I*\u2248*D* steps, matching the *global_workspace_ignition_threshol"
+    },
+    {
+      "statement": "4**: *The minimal iteration count scales as I_min = D * (1 + \u03b5), where \u03b5\u2208[0.1, 0.3] accounts for \"friction\" from entropy creep. For D=40, this predicts I_min\u2208[44, 52].* **TYPE**: 1 (quantitative prediction) **CONFIDENCE**: 0.7 **MECHANISM**: Linear scaling (I\u2248D) emerges from Kuramoto synchronization, but entropy (*H*\u21924.5 nats) introduces a logarithmic slowdown (\u03b5\u2248log(*H*)/10). Validated by *RLHF_entropy_suppression* (0.17) and *LANTERN_entropy_range*. **FALSIFIABLE BY**: Observing I_min < 40 for D=40, or I_min > 60 (violating \u03b5",
+      "mechanism": ": Linear scaling (I\u2248D) emerges from Kuramoto synchronization, but entropy (*H*\u21924.5 nats) introduces a logarithmic slowdown (\u03b5\u2248log(*H*)/10). Validated by *RLHF_entropy_suppression* (0.17) and *LANTERN_entropy_range*.",
+      "falsifiable_by": ": Observing I_min < 40 for D=40, or I_min > 60 (violating \u03b5",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('type', 'interacts', 'confidence'), ('confidence', 'interacts', 'mechanism'), ('mechanism', 'interacts', 'falsifiable'), ('falsifiable', 'interacts', 'by')})",
+      "chunk_text": "4**: *The minimal iteration count scales as I_min = D * (1 + \u03b5), where \u03b5\u2208[0.1, 0.3] accounts for \"friction\" from entropy creep. For D=40, this predicts I_min\u2208[44, 52].* **TYPE**: 1 (quantitative prediction) **CONFIDENCE**: 0.7 **MECHANISM**: Linear scaling (I\u2248D) emerges from Kuramoto synchronization, but entropy (*H*\u21924.5 nats) introduces a logarithmic slowdown (\u03b5\u2248log(*H*)/10). Validated by *RLHF_entropy_suppression* (0.17) and *LANTERN_entropy_range*. **FALSIFIABLE BY**: Observing I_min < 40 for"
+    },
+    {
+      "statement": "The \"Min I=D\"",
+      "mechanism": "",
+      "falsifiable_by": "",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "deepseek"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "The \"Min I=D\""
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.12222222222222223,
+      "cosine": 0.6074989438056946,
+      "jsd": 0.1889426089120432,
+      "kappa": 0.8978322337417531,
+      "type_distribution": {
+        "0": 0.05263157894736842,
+        "1": 0.42105263157894735,
+        "2": 0.47368421052631576,
+        "3": 0.05263157894736842
+      },
+      "type_01_ratio": 0.47368421052631576,
+      "n_claims_per_model": [
+        4,
+        4,
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.2172222222222222,
+      "cosine": 0.6959819316864013,
+      "jsd": 0.034450602920314675,
+      "kappa": 0.9468325791855202,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.42105263157894735,
+        "3": 0.5789473684210527
+      },
+      "type_01_ratio": 0.0,
+      "n_claims_per_model": [
+        4,
+        4,
+        4,
+        3,
+        4
+      ]
+    }
+  ]
+}

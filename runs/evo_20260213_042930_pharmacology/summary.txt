@@ -1,0 +1,56 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260213_042930_pharmacology
+Date: 2026-02-13
+Protocol: evo-1.0
+
+QUESTION:
+  Chronic Dosing Dynamics: GSH Regeneration vs Cumulative Mitochondrial Load. Context: The acute model establishes CBD as a universal mitochondrial stressor (VDAC1+VDAC2 engagement), with survival determined by GSH buffering capacity (>20 uM threshold). The EFSA limit (2mg/day) targets chronic exposure. This session stress-tests the chronic accumulation hypothesis. Questions: (1) GSH Synthesis Rate: What is the de novo glutathione synthesis rate in healthy human hepatocytes (umol/g liver/hr)? Does it vary by >2x between healthy and metabolically compromised liver (NAFLD, hepatitis, alcohol use)? (2) Daily Load vs Recovery: At 50mg oral CBD/day (~0.7 mg/kg), given 6-19% bioavailability and CYP450 first-pass, does the estimated daily ROS/mitochondrial load exceed the 24hr GSH regeneration capacity? What safety margin exists? (3) VDAC Binding Reversibility: Is CBD-VDAC1 binding reversible on the timescale of dosing intervals (12-24 hr)? If allosteric (not pore occlusion), does the gating perturbation persist after CBD dissociates, or does the channel reset? (4) Metabolite Accumulation: 7-OH-CBD has slower clearance than parent CBD. At steady-state daily dosing, does 7-OH-CBD accumulate to concentrations that contribute meaningful VDAC occupancy? Does this effectively widen the occupancy window beyond what parent CBD alone would predict? (5) Dual Pathway Under Chronic Load: The acute model shows parallel ATP starvation + ROS generation (allosteric gating, not occlusion). Under chronic sub-threshold dosing, does cumulative ATP deficit compound independently of ROS/GSH status? Null hypothesis to defeat: Daily 50mg CBD in a healthy liver causes progressive GSH depletion, cumulative VDAC dysfunction, or metabolite-driven occupancy expansion that narrows the safety margin over weeks-months of use.
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 10
+  Promoted to TYPE 1: 1
+  Novel (no literature): 8
+  Contradicted: 0
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 8/24
+
+HYPOTHESES (ranked by testability):
+  H3. IF healthy primary human hepatocytes are exposed to physiologically relevant CBD concentrations (0.5–2 μM, reflecting 50
+     Testability: 8.0/10
+     Effect size: 1.3491 (Cohen's d)
+     Power: 1.0
+
+  H1. IF primary human hepatocytes from NAFLD/alcohol-use donors are compared to healthy donor hepatocytes under identical cul
+     Testability: 7.0/10
+     Effect size: 1.2324 (Cohen's d)
+     Power: 1.0
+
+  H2. IF reconstituted human VDAC1 in planar lipid bilayers is exposed to CBD at Kd-relevant concentrations (5–20 μM) for 2 hr
+     Testability: 6.0/10
+     Effect size: 1.0586 (Cohen's d)
+     Power: 1.0
+
+  H4. IF 7-OH-CBD has 2–4x longer terminal half-life than parent CBD, THEN at steady-state daily dosing (simulated by repeated
+     Testability: 5.0/10
+     Effect size: 0.8509 (Cohen's d)
+     Power: 1.0
+
+BUDGET:
+  Total LLM calls: 17
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

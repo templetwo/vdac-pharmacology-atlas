@@ -1,0 +1,116 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "Olesoxime's therapeutic activity is strictly dependent on a narrow range of membrane cholesterol concentration, making it neuroprotective in healthy neurons but inert in cells with dysregulated cholesterol metabolism (e.g., certain cancers or neurodegenerative states).",
+      "mechanism": "Olesoxime's cholesterol-recognition amino acid consensus (CRAC) motif requires a direct interaction with a cholesterol molecule to achieve the correct conformation for high-affinity binding to VDAC, and this ternary complex is unstable outside an optimal cholesterol concentration range.",
+      "falsifiable_by": "Demonstrating that olesoxime retains VDAC binding and cytoprotective activity in cells that have been artificially depleted of or overloaded with membrane cholesterol.",
+      "type": 0,
+      "confidence": 0.67,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('crac', 'interacts', 'vdac')})",
+      "chunk_text": "Olesoxime's therapeutic activity is strictly dependent on a narrow range of membrane cholesterol concentration, making it neuroprotective in healthy neurons but inert in cells with dysregulated cholesterol metabolism (e.g., certain cancers or neurodegenerative states)."
+    },
+    {
+      "statement": "Increased OMM cholesterol in some cancers significantly raises the effective local concentration of CBD at VDAC, lowering its apparent functional Kd below the measured 11 \u00b5M.",
+      "mechanism": "Higher cholesterol increases membrane order and partition coefficient for lipophilic CBD (logP 6.3), enriching it in the OMM and increasing probability of VDAC interaction.",
+      "falsifiable_by": "Measuring CBD binding to VDAC in lipid nanodiscs with high vs low cholesterol showing no Kd difference.",
+      "type": 0,
+      "confidence": 0.667,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('omm', 'upregulates', 'vdac'), ('cbd', 'upregulates', 'vdac'), ('cbd', 'downregulates', 'vdac')})",
+      "chunk_text": "Increased OMM cholesterol in some cancers significantly raises the effective local concentration of CBD at VDAC, lowering its apparent functional Kd below the measured 11 \u00b5M."
+    },
+    {
+      "statement": "Cardiolipin at OMM contact sites alters VDAC gating dynamics, likely promoting a conformation with higher affinity for certain ligands (e.g., olesoxime) but not necessarily CBD.",
+      "mechanism": "Cardiolipin's negative charge and conical shape distort local membrane curvature and electrostatics, stabilizing specific VDAC oligomeric states or tilts.",
+      "falsifiable_by": "In vitro electrophysiology showing identical VDAC gating in pure PC vs PC+cardiolipin membranes.",
+      "type": 0,
+      "confidence": 0.688,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('omm', 'modulates', 'vdac'), ('cbd', 'upregulates', 'vdac')})",
+      "chunk_text": "Cardiolipin at OMM contact sites alters VDAC gating dynamics, likely promoting a conformation with higher affinity for certain ligands (e.g., olesoxime) but not necessarily CBD."
+    },
+    {
+      "statement": "Liposomes formulated with a cancer-like lipid profile (e.g., high cholesterol, low cardiolipin) will deliver VDAC modulators to cancer mitochondria more effectively than liposomes with a healthy lipid profile, increasing drug potency.",
+      "mechanism": "Enhanced membrane fusion and/or lipid exchange between vesicles and the OMM is favored when their lipid compositions are similar, leading to more efficient drug transfer.",
+      "falsifiable_by": "Showing that the IC50 of a VDAC-targeting drug delivered by cancer-mimicking vs. healthy-mimicking liposomes is identical in a cancer cell line. \u2500\u2500\u2500",
+      "type": 1,
+      "confidence": 0.517,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "gemini",
+        "grok"
+      ],
+      "tuples": "frozenset({('omm', 'upregulates', 'vdac')})",
+      "chunk_text": "Liposomes formulated with a cancer-like lipid profile (e.g., high cholesterol, low cardiolipin) will deliver VDAC modulators to cancer mitochondria more effectively than liposomes with a healthy lipid profile, increasing drug potency."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.12721070596070594,
+      "cosine": 0.8805730462074279,
+      "jsd": 0.15861032101715816,
+      "kappa": 0.9647283126787415,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.16666666666666666,
+        "2": 0.5555555555555556,
+        "3": 0.2777777777777778
+      },
+      "type_01_ratio": 0.16666666666666666,
+      "n_claims_per_model": [
+        4,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.9200000000000002,
+      "cosine": 0.951178103685379,
+      "jsd": 0.06554437953129585,
+      "kappa": 0.9299999999999995,
+      "type_distribution": {
+        "0": 0.8235294117647058,
+        "1": 0.17647058823529413,
+        "2": 0.0,
+        "3": 0.0
+      },
+      "type_01_ratio": 1.0,
+      "n_claims_per_model": [
+        4,
+        3,
+        4,
+        3,
+        3
+      ]
+    }
+  ]
+}

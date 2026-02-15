@@ -1,0 +1,933 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260213_184357_pharmacology",
+  "timestamp": "2026-02-13T18:45:52.889103+00:00",
+  "question": "Beyond CBD, which commonly prescribed drugs or their metabolites interact with VDAC at therapeutically relevant concentrations? (1) Valproic acid is a known hepatotoxin and mitochondrial modulator \u2014 does it engage VDAC1? (2) Acetaminophen toxicity involves mitochondrial dysfunction \u2014 is VDAC part of the NAPQI damage cascade? (3) Metformin accumulates in mitochondria and inhibits Complex I \u2014 does it also modulate VDAC gating? (4) Statins (particularly lipophilic ones like atorvastatin) partition into membranes \u2014 is VDAC occupancy a hidden variable in statin-associated myopathy? (5) What is the predicted VDAC interaction landscape for the top 20 most prescribed drugs with known mitochondrial effects?",
+  "convergence_report": {
+    "s1_initial": {
+      "n_models_responded": 5,
+      "initial_jaccard": 0.05083333333333333,
+      "initial_cosine": 0.8294755935668945
+    },
+    "s2_refinement": {
+      "total_rounds": 0,
+      "early_stopped": false,
+      "final_jaccard": 0.0,
+      "final_cosine": 0.0,
+      "final_jsd": 0.0,
+      "final_type_01_ratio": 0.0
+    },
+    "s3_gate": {
+      "passed": true,
+      "jaccard": 0.7343,
+      "type_01_ratio": 0.8182,
+      "recommendation": ""
+    }
+  },
+  "verification": {
+    "n_type2_input": 10,
+    "n_promoted": 0,
+    "n_held": 5,
+    "n_novel": 3,
+    "n_contradicted": 2,
+    "total_calls": 10
+  },
+  "gate": {
+    "passed": true,
+    "n_passed": 19,
+    "n_failed": 1,
+    "recommendation": "Lab Gate PASSED with filter. 19/20 claims cleared. 1 filtered: 'Lipophilic statins (e.g., atorvastatin) are low-af...' not feasible",
+    "claims": [
+      {
+        "statement": "Valproic acid modulates VDAC1 indirectly \u2014 it alters VDAC expression and oligomerization state via e",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "NAPQI interacts with VDAC1 via covalent modification of exposed cysteine residue(s) (Cys127, Cys232)",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Metformin at mitochondrial matrix concentrations (estimated 1\u201310 mM due to membrane-potential-driven",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Lipophilic statins (atorvastatin, simvastatin; logP >4) partition into the outer mitochondrial membr",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "A systematic VDAC interaction landscape for the top 20 mitochondrially-active drugs does not current",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Valproic acid (VPA) engages VDAC1 at therapeutically relevant concentrations (Cmax ~500\u2013700 \u00b5M).",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "NAPQI (acetaminophen metabolite) covalently modifies VDAC1 cysteines, contributing to mitochondrial ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Metformin does not directly modulate VDAC gating but may indirectly alter VDAC conductance via Compl",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Lipophilic statins (e.g., atorvastatin) occupy VDAC1 at concentrations linked to myopathy (Cmax ~0.1",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The top 20 mitochondrial-acting drugs\u2019 VDAC interaction likelihood correlates with logP > 3 and pKa ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Valproic acid (VPA) modulates VDAC1 oligomerization and conductance at therapeutic concentrations (~",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "NAPQI covalently modifies VDAC1 cysteines in toxicity cascade, potentiating MPT at supratherapeutic ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Lipophilic statins (atorvastatin) occupy VDAC1 at muscle mito concentrations (~1-10\u03bcM), contributing",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Among top 20 mito drugs (metformin, atorva, aspirin, omeprazole), predicted VDAC1 interactors at C_e",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Valproic acid (VPA) directly modulates VDAC1, promoting an open state that contributes to its mitoch",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The reactive acetaminophen metabolite, NAPQI, covalently modifies VDAC1, contributing to the mitocho",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Lipophilic statins (e.g., atorvastatin) are low-affinity VDAC modulators, and their accumulation in ",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Valproic acid and its reactive metabolites likely engage VDAC1, contributing to its hepatotoxicity, ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Acetaminophen toxicity (NAPQI) does not primarily involve direct VDAC modulation; its mitochondrial ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Lipophilic statins (atorvastatin, simvastatin) at high myopathic concentrations partition into the m",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF purified human VDAC1 is reconstituted in planar lipid bilayers and exposed to valproic acid (50\u2013700 \u00b5M), THEN single-channel open probability (Po) will shift by \u226515% relative to vehicle, with an EC50 between 100\u2013500 \u00b5M.",
+      "testability_score": 9.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "VPA_concentration",
+          "range": "10.0-1000.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "VDAC1_conductance_baseline",
+          "range": "3.5-4.5 nS",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Po_baseline",
+          "range": "0.85-0.95 (normal,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "delta_Po_threshold",
+          "range": "0.05-0.3 (uniform)",
+          "distribution": "uniform"
+        },
+        {
+          "name": "membrane_composition_POPC_fraction",
+          "range": "0.7-1.0 (uniform)",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.8117,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4996434455974755,
+            "std": 0.12255297031415406,
+            "median": 0.5032191473846217,
+            "ci_lower": 0.25830920877384034,
+            "ci_upper": 0.7414176430071064,
+            "min": 0.15758184713280732,
+            "max": 0.8156161995315163
+          }
+        }
+      }
+    },
+    {
+      "id": "H2",
+      "prediction": "IF primary mouse hepatocytes or HepaRG cells are exposed to hepatotoxic APAP concentrations (5\u201320 mM), THEN LC-MS/MS of immunoprecipitated VDAC1 will reveal NAPQI adducts (mass shift +149.05 Da) on Cys127 and/or Cys232 in \u226560% of biological replicates, with adduct abundance correlating with APAP dose (Spearman \u03c1 > 0.7).",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "APAP_concentration",
+          "range": "1.0-20.0 mM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "NAPQI_adduct_mass_shift",
+          "range": "149.04-149.06 Da",
+          "distribution": "uniform"
+        },
+        {
+          "name": "GSH_depletion_threshold",
+          "range": "70.0-90.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "time_post_exposure",
+          "range": "2.0-24.0 hours",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Cys127_solvent_accessibility",
+          "range": "0.3-0.8 fractional",
+          "distribution": "uniform"
+        },
+        {
+          "name": "adduct_detection_limit",
+          "range": "0.1-1.0 %",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.814,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5031926438219704,
+            "std": 0.1257065673277554,
+            "median": 0.5121638268242518,
+            "ci_lower": 0.25899060343633096,
+            "ci_upper": 0.7318112446129387,
+            "min": 0.15396205160070953,
+            "max": 0.8792706634594079
+          }
+        }
+      }
+    },
+    {
+      "id": "H3",
+      "prediction": "IF VDAC1 is reconstituted in bilayers pre-doped with atorvastatin or simvastatin at membrane concentrations equivalent to myopathic tissue exposure (1\u201310 \u00b5M bulk, yielding ~100\u20131000 \u00b5M membrane concentration given logP ~4), THEN VDAC1 conductance will decrease by \u226520% and voltage-dependent closure will shift by \u22655 mV (V\u2080 shift), compared to cholesterol-only membranes.",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "statin_bulk_concentration",
+          "range": "0.1-50.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "membrane_partition_coefficient",
+          "range": "100.0-10000.0 (log-normal,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "VDAC1_V0_baseline",
+          "range": "20.0-30.0 mV",
+          "distribution": "uniform"
+        },
+        {
+          "name": "delta_V0_threshold",
+          "range": "2.0-10.0 mV",
+          "distribution": "uniform"
+        },
+        {
+          "name": "cholesterol_mol_percent",
+          "range": "0.0-30.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "conductance_reduction_threshold",
+          "range": "10.0-40.0 %",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.806,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.497092075396723,
+            "std": 0.11812534802979514,
+            "median": 0.49466291062120527,
+            "ci_lower": 0.26904883163234905,
+            "ci_upper": 0.747870377447734,
+            "min": 0.135362612783667,
+            "max": 0.8268591734411609
+          }
+        }
+      }
+    },
+    {
+      "id": "H4",
+      "prediction": "IF purified VDAC1 is exposed to metformin (0.01\u201310 mM) in reconstituted bilayers, THEN no change in conductance or gating will be observed (\u0394Po < 5%, \u0394conductance < 10%); HOWEVER, in intact mitochondria, metformin (1\u201310 mM) will reduce VDAC-dependent metabolite flux (ATP/ADP exchange measured by luciferase) by \u226530%, an effect abolished by \u0394\u03c8m clamping with FCCP.",
+      "testability_score": 5.0,
+      "key_variables": [],
+      "parameters": [],
+      "monte_carlo": {
+        "effect_size": 0.0,
+        "power": 0.0,
+        "converged": true,
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5,
+            "std": 0.0,
+            "median": 0.5,
+            "ci_lower": 0.5,
+            "ci_upper": 0.5,
+            "min": 0.5,
+            "max": 0.5
+          }
+        }
+      }
+    }
+  ],
+  "simulations": {
+    "n_hypotheses_simulated": 4,
+    "total_iterations": 1200,
+    "llm_calls": 0,
+    "results": [
+      {
+        "hypothesis_id": "H1",
+        "n_iterations": 300,
+        "effect_size": 0.8117,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "VPA_concentration": {
+            "mean": 491.7869533865987,
+            "std": 286.9237572404375,
+            "median": 484.2141397685728,
+            "ci_lower": 37.41280735358023,
+            "ci_upper": 964.5314130908279,
+            "min": 17.288647053495456,
+            "max": 992.4518084152787
+          },
+          "VDAC1_conductance_baseline": {
+            "mean": 4.005319615128467,
+            "std": 0.2838175447917678,
+            "median": 4.013481057398586,
+            "ci_lower": 3.5361087004805962,
+            "ci_upper": 4.4801204223600495,
+            "min": 3.5054298341287007,
+            "max": 4.499104730474238
+          },
+          "Po_baseline": {
+            "mean": 0.899719957679971,
+            "std": 0.029783137016239084,
+            "median": 0.9002104648856195,
+            "ci_lower": 0.8517097066971175,
+            "ci_upper": 0.9484026603848248,
+            "min": 0.8501233062511908,
+            "max": 0.9498743370066765
+          },
+          "delta_Po_threshold": {
+            "mean": 0.17780616700255872,
+            "std": 0.07291310316824465,
+            "median": 0.17273317023790474,
+            "ci_lower": 0.06064761100960938,
+            "ci_upper": 0.2958806734515747,
+            "min": 0.05012968604142638,
+            "max": 0.29985547730604695
+          },
+          "membrane_composition_POPC_fraction": {
+            "mean": 0.8493459639339019,
+            "std": 0.0879184054162143,
+            "median": 0.8458709032439287,
+            "ci_lower": 0.7111463094497485,
+            "ci_upper": 0.9927462460834703,
+            "min": 0.7003202395068241,
+            "max": 0.999003163455746
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H2",
+        "n_iterations": 300,
+        "effect_size": 0.814,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "APAP_concentration": {
+            "mean": 10.467268562436752,
+            "std": 5.416354957119177,
+            "median": 10.402976741674173,
+            "ci_lower": 1.5008028329009606,
+            "ci_upper": 19.45078126138309,
+            "min": 1.0598529025414332,
+            "max": 19.95975314120829
+          },
+          "NAPQI_adduct_mass_shift": {
+            "mean": 149.0499161118908,
+            "std": 0.0057126773975157965,
+            "median": 149.05006173325415,
+            "ci_lower": 149.04042470510862,
+            "ci_upper": 149.05935596943763,
+            "min": 149.0400444099413,
+            "max": 149.0599116532303
+          },
+          "GSH_depletion_threshold": {
+            "mean": 80.01795826444189,
+            "std": 5.71211615253424,
+            "median": 79.600430355144,
+            "ci_lower": 70.68104321498168,
+            "ci_upper": 89.55182046435631,
+            "min": 70.33660626411269,
+            "max": 89.95684081659226
+          },
+          "time_post_exposure": {
+            "mean": 13.182405625444307,
+            "std": 6.549672670560351,
+            "median": 13.706502068988225,
+            "ci_lower": 2.4908317731370584,
+            "ci_upper": 23.38928685352933,
+            "min": 2.123931886794108,
+            "max": 23.95592552547042
+          },
+          "Cys127_solvent_accessibility": {
+            "mean": 0.5550872221029354,
+            "std": 0.14924965133595036,
+            "median": 0.562886361939873,
+            "ci_lower": 0.3198876196218435,
+            "ci_upper": 0.7923077891600171,
+            "min": 0.30222010771195457,
+            "max": 0.7988143760373221
+          },
+          "adduct_detection_limit": {
+            "mean": 0.5551385080694838,
+            "std": 0.26021907986044696,
+            "median": 0.553190061090725,
+            "ci_lower": 0.11914138348576142,
+            "ci_upper": 0.9703134480898065,
+            "min": 0.10574869098959563,
+            "max": 0.998318951469515
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H3",
+        "n_iterations": 300,
+        "effect_size": 0.806,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "statin_bulk_concentration": {
+            "mean": 24.42370790432453,
+            "std": 14.384493298526007,
+            "median": 23.177991474869234,
+            "ci_lower": 1.9717611004796567,
+            "ci_upper": 48.635415672021615,
+            "min": 0.374216768325765,
+            "max": 49.76974574189961
+          },
+          "membrane_partition_coefficient": {
+            "mean": 4896.303539228575,
+            "std": 2907.6322054273323,
+            "median": 4763.400911120018,
+            "ci_lower": 346.85710548981615,
+            "ci_upper": 9702.18287090166,
+            "min": 112.73388777840518,
+            "max": 9928.550323889924
+          },
+          "VDAC1_V0_baseline": {
+            "mean": 24.819150202287585,
+            "std": 2.9537352719215235,
+            "median": 24.60867062967507,
+            "ci_lower": 20.261489496105526,
+            "ci_upper": 29.71363971155947,
+            "min": 20.033238152606874,
+            "max": 29.947990911726148
+          },
+          "delta_V0_threshold": {
+            "mean": 5.754623640299745,
+            "std": 2.2540717146102307,
+            "median": 5.501030255392617,
+            "ci_lower": 2.1717205129843635,
+            "ci_upper": 9.6137342457262,
+            "min": 2.0034612043686604,
+            "max": 9.976479216230455
+          },
+          "cholesterol_mol_percent": {
+            "mean": 16.315567038473286,
+            "std": 9.016295746995718,
+            "median": 17.69759621624384,
+            "ci_lower": 1.1079695944153565,
+            "ci_upper": 29.26679291311488,
+            "min": 0.038175235085791126,
+            "max": 29.84415606650816
+          },
+          "conductance_reduction_threshold": {
+            "mean": 25.465992439805913,
+            "std": 8.629922348316514,
+            "median": 25.877261280339443,
+            "ci_lower": 10.986707629193786,
+            "ci_upper": 39.44139601704959,
+            "min": 10.001363046950685,
+            "max": 39.999090075304
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H4",
+        "n_iterations": 300,
+        "effect_size": 0.0,
+        "power": 0.0,
+        "converged": true,
+        "parameters": {}
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF purified human VDAC1 is reconstituted in planar lipid bilayers and exposed to valproic acid (50\u2013700 \u00b5M), THEN single-channel open probability (Po) will shift by \u226515% relative to vehicle, with an EC50 between 100\u2013500 \u00b5M.",
+      "protocol": "Reconstitute purified recombinant hVDAC1 (E. coli expression, refolded in LDAO) into DPhPC planar bilayers using the painting method. Record single-channel currents at \u00b130 mV under voltage-clamp before and after sequential VPA additions (10, 50, 100, 300, 700, 1000 \u00b5M) to the cis chamber. Analyze Po, conductance substates, and gating kinetics across \u22655 independent bilayers per condition. Timeline: 6\u20138 weeks.",
+      "dose_ranges": {
+        "VPA": {
+          "doses": [
+            10.0,
+            50.0,
+            100.0,
+            300.0,
+            700.0,
+            1000.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "Single-channel conductance (nS)",
+        "open probability (Po)",
+        "mean open/closed dwell times",
+        "current-voltage relationships",
+        "all-points amplitude histograms"
+      ],
+      "controls": [
+        "Vehicle (equivalent Na\u207a addition as sodium valproate)",
+        "DIDS (200 \u00b5M",
+        "known VDAC blocker",
+        "positive control)",
+        "octanoic acid (300 \u00b5M",
+        "chain-length-matched fatty acid control)",
+        "heat-denatured VDAC (negative reconstitution control)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "VPA at 100\u2013700 \u00b5M shifts Po by >15%, likely toward open state (fatty acid analog behavior), with",
+      "null_outcome": "No statistically significant change in Po, conductance, or gating kinetics at any VPA concentration up to 1 mM across \u22655 bilayers (p > 0.05, paired t-test)."
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF primary mouse hepatocytes or HepaRG cells are exposed to hepatotoxic APAP concentrations (5\u201320 mM), THEN LC-MS/MS of immunoprecipitated VDAC1 will reveal NAPQI adducts (mass shift +149.05 Da) on Cys127 and/or Cys232 in \u226560% of biological replicates, with adduct abundance correlating with APAP dose (Spearman \u03c1 > 0.7).",
+      "protocol": "Treat HepaRG cells (CYP2E1-competent) with APAP (1, 5, 10, 20 mM) for 2, 6, and 12 h. Isolate mitochondria by differential centrifugation, immunoprecipitate VDAC1 (anti-VDAC1 ab15895), digest with trypsin/chymotrypsin, and analyze by nanoLC-MS/MS (Orbitrap) with targeted PRM for Cys127/Cys232-containing peptides \u00b1 149.05 Da modification. Parallel: BSO pre-treatment (GSH depletion) and NAC co-treatment arms. Timeline: 10\u201312 weeks.",
+      "dose_ranges": {
+        "APAP": {
+          "doses": [
+            1000.0,
+            5000.0,
+            10000.0,
+            20000.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "treatment": {
+          "doses": [
+            200.0
+          ],
+          "unit": "\u00b5M"
+        },
+        "NAC": {
+          "doses": [
+            5000.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "NAPQI-Cys adduct identification (PRM-MS)",
+        "adduct site occupancy (%)",
+        "VDAC1 oligomerization (BN-PAGE/crosslinking)",
+        "cytochrome c release (ELISA)",
+        "mitochondrial membrane potential (TMRM)",
+        "cell viability (LDH)",
+        "GSH levels (monochlorobimane)"
+      ],
+      "controls": [
+        "Vehicle (DMSO)",
+        "APAP + NAC (adduct prevention)",
+        "BSO alone (GSH depletion without NAPQI)",
+        "NAPQI direct addition to isolated mitochondria (cell-free positive control)",
+        "VDAC1-IP from untreated cells (baseline)",
+        "isotype IgG IP (specificity)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "NAPQI adducts detected on Cys232 (most accessible) at \u22655 mM APAP by 6 h, increasing with",
+      "null_outcome": "No NAPQI adducts detected on any VDAC1 cysteine at any dose/timepoint despite confirmed adducts on known targets (GAPDH, GST), indicating VDAC1 cysteines are not preferentially modified by NAPQI in situ."
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF VDAC1 is reconstituted in bilayers pre-doped with atorvastatin or simvastatin at membrane concentrations equivalent to myopathic tissue exposure (1\u201310 \u00b5M bulk, yielding ~100\u20131000 \u00b5M membrane concentration given logP ~4), THEN VDAC1 conductance will decrease by \u226520% and voltage-dependent closure will shift by \u22655 mV (V\u2080 shift), compared to cholesterol-only membranes.",
+      "protocol": "Reconstitute hVDAC1 in DPhPC/cholesterol (80:20) planar bilayers. Pre-incubate lipid mixtures with atorvastatin, simvastatin, or pravastatin (hydrophilic control) at 0.1, 1, 5, 10, 50 \u00b5M before bilayer formation. Record multichannel and single-channel I-V curves from -60 to +60 mV in 5 mV steps. Calculate G-V curves, V\u2080, and gating charge. Compare statin-doped vs. vehicle-doped membranes. Confirm membrane incorporation by fluorescence anisotropy (DPH). Timeline: 8\u201310 weeks.",
+      "dose_ranges": {
+        "Atorvastatin": {
+          "doses": [
+            0.1,
+            1.0,
+            5.0,
+            10.0,
+            50.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Simvastatin": {
+          "doses": [
+            0.1,
+            1.0,
+            5.0,
+            10.0,
+            50.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Pravastatin": {
+          "doses": [
+            0.1,
+            1.0,
+            5.0,
+            10.0,
+            50.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "Single-channel conductance (nS)",
+        "G-V relationship",
+        "V\u2080 and gating charge (Boltzmann fit)",
+        "open probability at \u00b130 mV",
+        "DPH fluorescence anisotropy (membrane order)",
+        "statin membrane concentration (LC-MS of bilayer lipid extract)"
+      ],
+      "controls": [
+        "Vehicle-doped bilayers (ethanol",
+        "matched volume)",
+        "cholesterol-enriched bilayers (40 mol%",
+        "known VDAC modulator",
+        "positive control)",
+        "pravastatin (hydrophilic statin",
+        "negative pharmacological control)",
+        "protein-free bilayers with statins (membrane-only effects)",
+        "DIDS (VDAC block positive control)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "Atorvastatin and simvastatin (logP ~4\u20135) shift V\u2080 leftward by 5\u201315 mV and reduce maximal conductance by 20\u201340% at \u22655 \u00b5M bulk concentration, consistent with altered bilayer mechanics. Pravastatin (logP ~\u22120.8) shows no effect. Effect magnitude correlates with membrane statin content.",
+      "null_outcome": "No significant difference in conductance, V\u2080, or gating parameters between statin-doped and"
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF purified VDAC1 is exposed to metformin (0.01\u201310 mM) in reconstituted bilayers, THEN no change in conductance or gating will be observed (\u0394Po < 5%, \u0394conductance < 10%); HOWEVER, in intact mitochondria, metformin (1\u201310 mM) will reduce VDAC-dependent metabolite flux (ATP/ADP exchange measured by luciferase) by \u226530%, an effect abolished by \u0394\u03c8m clamping with FCCP.",
+      "protocol": "",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": [],
+      "expected_outcome": "",
+      "null_outcome": ""
+    }
+  ],
+  "budget": {
+    "s1_calls": 5,
+    "s2_calls": 0,
+    "verify_calls": 10,
+    "gate_calls": 1,
+    "s4_calls": 1,
+    "s5_calls": 0,
+    "total_calls": 17,
+    "budget_target": "92-142 calls"
+  },
+  "audit_trail": {
+    "session_seed": 1771008239,
+    "s2_rounds": [],
+    "s3_gate": {
+      "stage": "S3",
+      "passed": true,
+      "convergence_score": 0.9547,
+      "convergence_threshold": 0.85,
+      "convergence_pass": true,
+      "jaccard": 0.7343,
+      "jaccard_threshold": 0.85,
+      "jaccard_pass": false,
+      "type_01_ratio": 0.8182,
+      "type_01_threshold": 0.75,
+      "type_pass": true,
+      "cosine": 0.9547,
+      "jsd": 0.1521,
+      "kappa": 0.9536,
+      "type_distribution": {
+        "0": 0.6818181818181818,
+        "1": 0.13636363636363635,
+        "2": 0.09090909090909091,
+        "3": 0.09090909090909091
+      }
+    },
+    "final_claims": [
+      {
+        "statement": "Valproic acid modulates VDAC1 indirectly \u2014 it alters VDAC expression and oligomerization state via effects on cardiolipin and ceramide metabolism \u2014 but no direct high-affinity binding (Kd < 50 \u00b5M) has been demonstrated.",
+        "type": 2,
+        "confidence": 0.55,
+        "mechanism": "VPA disrupts fatty acid \u03b2-oxidation, alters mitochondrial membrane lipid composition, shifting VDAC gating indirectly rather than through pore occupancy.",
+        "falsifiable_by": "Bilayer electrophysiology showing VPA directly modulates VDAC conductance at <100 \u00b5M in purified reconstituted system.",
+        "model": "claude"
+      },
+      {
+        "statement": "NAPQI interacts with VDAC1 via covalent modification of exposed cysteine residue(s) (Cys127, Cys232), contributing to mitochondrial permeability transition during acetaminophen toxicity.",
+        "type": 3,
+        "confidence": 0.45,
+        "mechanism": "NAPQI is a potent electrophile that modifies protein thiols; VDAC1 has solvent-accessible cysteines in the channel wall; thiol modification is known to shift VDAC gating to closed state.",
+        "falsifiable_by": "Mass spectrometry of VDAC from APAP-treated hepatocyte mitochondria showing no NAPQI adducts on VDAC cysteines.",
+        "model": "claude"
+      },
+      {
+        "statement": "Metformin at mitochondrial matrix concentrations (estimated 1\u201310 mM due to membrane-potential-driven accumulation) likely modulates VDAC gating from the intermembrane space side, but published direct binding data are absent.",
+        "type": 3,
+        "confidence": 0.35,
+        "mechanism": "Metformin is a cationic biguanide that accumulates ~1000\u00d7 in mitochondria; VDAC voltage-sensing is charge-sensitive; high local concentrations could alter channel selectivity.",
+        "falsifiable_by": "Planar bilayer recordings with metformin titration showing no effect on VDAC conductance up to 10 mM.",
+        "model": "claude"
+      },
+      {
+        "statement": "Lipophilic statins (atorvastatin, simvastatin; logP >4) partition into the outer mitochondrial membrane at sufficient concentrations to alter VDAC-lipid interactions and gating, representing a plausible contributor to statin myopathy.",
+        "type": 3,
+        "confidence": 0.3,
+        "mechanism": "Membrane-partitioned statins alter bilayer properties (thickness, curvature) around VDAC, modifying voltage-dependent gating similar to cholesterol modulation of VDAC.",
+        "falsifiable_by": "No difference in VDAC conductance in membranes doped with atorvastatin at membrane concentrations equivalent to therapeutic exposure.",
+        "model": "claude"
+      },
+      {
+        "statement": "A systematic VDAC interaction landscape for the top 20 mitochondrially-active drugs does not currently exist in published literature; predicted occupancy ranking would place lipophilic weak acids/bases with membrane-partitioning coefficients >100 as highest-risk.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "No systematic screen has been published; this is a gap, not a finding.",
+        "falsifiable_by": "Discovery of a published systematic VDAC-drug interaction screen covering \u226510 common drugs. \u2500\u2500\u2500",
+        "model": "claude"
+      },
+      {
+        "statement": "Valproic acid (VPA) engages VDAC1 at therapeutically relevant concentrations (Cmax ~500\u2013700 \u00b5M).",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "VPA\u2019s anionic amphiphilic structure may bind VDAC1\u2019s voltage-sensing N-terminal domain, altering gating and Ca\u00b2\u207a flux (mimicking CBD\u2019s effect).",
+        "falsifiable_by": "VDAC1 knockout in hepatocytes abolishes VPA-induced mitochondrial depolarization or swelling.",
+        "model": "mistral"
+      },
+      {
+        "statement": "NAPQI (acetaminophen metabolite) covalently modifies VDAC1 cysteines, contributing to mitochondrial permeability transition (MPT) pore opening.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "NAPQI\u2019s electrophilic quinoneimine reacts with VDAC1\u2019s Cys127/Cys232, disrupting \u03b2-barrel stability and promoting MPT.",
+        "falsifiable_by": "Mass spectrometry fails to detect NAPQI-VDAC1 adducts in vivo, or VDAC1 cysteine mutants resist acetaminophen toxicity.",
+        "model": "mistral"
+      },
+      {
+        "statement": "Metformin does not directly modulate VDAC gating but may indirectly alter VDAC conductance via Complex I inhibition and \u0394\u03c8m collapse.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "Metformin\u2019s cationic accumulation in mitochondria depolarizes \u0394\u03c8m, reducing VDAC\u2019s voltage-dependent gating without direct binding.",
+        "falsifiable_by": "Metformin binds VDAC1 in surface plasmon resonance (SPR) or microscale thermophoresis (MST) assays (Kd < 1 mM).",
+        "model": "mistral"
+      },
+      {
+        "statement": "Lipophilic statins (e.g., atorvastatin) occupy VDAC1 at concentrations linked to myopathy (Cmax ~0.1\u20131 \u00b5M), competing with cholesterol for membrane microdomains.",
+        "type": 2,
+        "confidence": 0.5,
+        "mechanism": "Statins\u2019 planar aromatic rings intercalate into VDAC1\u2019s \u03b2-barrel, disrupting anion selectivity and ATP/ADP flux.",
+        "falsifiable_by": "VDAC1 reconstitution in liposomes shows no statin-induced conductance changes at 1 \u00b5M.",
+        "model": "mistral"
+      },
+      {
+        "statement": "The top 20 mitochondrial-acting drugs\u2019 VDAC interaction likelihood correlates with logP > 3 and pKa < 7.4 (anionic at cytosolic pH).",
+        "type": 3,
+        "confidence": 0.4,
+        "mechanism": "Drugs with high logP partition into mitochondrial membranes, increasing VDAC1 encounter probability; anionic charge favors binding to VDAC1\u2019s cationic N-terminus.",
+        "falsifiable_by": "A screen of 20 drugs finds no correlation between logP/pKa and VDAC1 binding affinity. --- \u2500\u2500\u2500",
+        "model": "mistral"
+      },
+      {
+        "statement": "Valproic acid (VPA) modulates VDAC1 oligomerization and conductance at therapeutic concentrations (~50\u03bcM free).",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "VPA, an amphipathic carboxylate, binds VDAC1 N-terminal \u03b1-helix, disrupting \u03b2-barrel stability like nucleotides.",
+        "falsifiable_by": "Patch-clamp electrophysiology showing no VPA effect on purified VDAC1 at 10-100\u03bcM.",
+        "model": "grok"
+      },
+      {
+        "statement": "NAPQI covalently modifies VDAC1 cysteines in toxicity cascade, potentiating MPT at supratherapeutic acetaminophen doses (>150\u03bcg/mL).",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "NAPQI arylation of Cys residues alters VDAC1 gating/oligomerization, amplifying ROS/permeability as in MPT pore models.",
+        "falsifiable_by": "LC-MS proteomics of NAPQI-exposed mito lacking VDAC1 adducts.",
+        "model": "grok"
+      },
+      {
+        "statement": "Metformin does not directly engage VDAC1 gating at therapeutic mito concentrations (>>100\u03bcM).",
+        "type": 2,
+        "confidence": 0.9,
+        "mechanism": "Metformin's polypharmacy on Complex I/ANT lacks structural mimicry to VDAC1 ligands (e.g., no amphipathicity for MOM partition).",
+        "falsifiable_by": "SPR/BLI assay showing metformin Kd <500\u03bcM on VDAC1 protein.",
+        "model": "grok"
+      },
+      {
+        "statement": "Lipophilic statins (atorvastatin) occupy VDAC1 at muscle mito concentrations (~1-10\u03bcM), contributing to myopathy.",
+        "type": 3,
+        "confidence": 0.4,
+        "mechanism": "Atorvastatin's lipophilicity enables MOM insertion, sterically occluding VDAC1 pore like cholesterol.",
+        "falsifiable_by": "In silico docking (e.g., AutoDock) scoring atorvastatin < CBD to VDAC1 PDB:3EMN.",
+        "model": "grok"
+      },
+      {
+        "statement": "Among top 20 mito drugs (metformin, atorva, aspirin, omeprazole), predicted VDAC1 interactors at C_eff/TI: VPA >>> aspirin > simvastatin > naproxen; metformin/levothyroxine negligible.",
+        "type": 3,
+        "confidence": 0.5,
+        "mechanism": "QSAR: logP>3 + H-bond acceptors correlate with VDAC1 \u03b2-sheet binding (CBD analog).",
+        "falsifiable_by": "CETSA shift assay on VDAC1 thermal stability by top 5 candidates. \u2500\u2500\u2500",
+        "model": "grok"
+      },
+      {
+        "statement": "Valproic acid (VPA) directly modulates VDAC1, promoting an open state that contributes to its mitochondrial toxicity.",
+        "type": 1,
+        "confidence": 0.9,
+        "mechanism": "VPA, a fatty acid anion present at high therapeutic concentrations (300-700 \u00b5M), electrostatically and hydrophobically interacts with VDAC1, stabilizing its high-conductance state.",
+        "falsifiable_by": "A reconstituted VDAC1 lipid bilayer system showing no change in channel open probability or conductance in the presence of 500 \u00b5M VPA.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The reactive acetaminophen metabolite, NAPQI, covalently modifies VDAC1, contributing to the mitochondrial permeability transition and subsequent cell death in overdose.",
+        "type": 2,
+        "confidence": 0.8,
+        "mechanism": "Electrophilic NAPQI forms covalent adducts with nucleophilic VDAC1 cysteine residues, causing pathological channel dysregulation that sensitizes the mitochondrial permeability transition pore.",
+        "falsifiable_by": "Mass spectrometry of mitochondrial fractions from NAPQI-treated hepatocytes failing to identify VDAC1-NAPQI adducts, while other known targets are modified.",
+        "model": "gemini"
+      },
+      {
+        "statement": "Lipophilic statins (e.g., atorvastatin) are low-affinity VDAC modulators, and their accumulation in the outer mitochondrial membrane is a key initiating factor in statin-associated myopathy.",
+        "type": 3,
+        "confidence": 0.6,
+        "mechanism": "High local concentrations of the statin in the outer membrane allosterically constrain VDAC's conformation, impairing metabolite flux and triggering downstream mitochondrial stress pathways.",
+        "falsifiable_by": "Muscle-specific VDAC1 knockout mice showing complete resistance to statin-induced myopathy despite similar statin accumulation in muscle tissue.",
+        "model": "gemini"
+      },
+      {
+        "statement": "Metformin does not directly modulate VDAC gating in a therapeutically meaningful way.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "Metformin's polar, cationic structure and primary localization within the mitochondrial matrix make a direct, high-affinity interaction with the outer membrane VDAC channel unlikely.",
+        "falsifiable_by": "Electrophysiology experiments demonstrating a significant shift in VDAC1 gating voltage at metformin concentrations achievable in the intermembrane space (<5 mM). \u2500\u2500\u2500",
+        "model": "gemini"
+      },
+      {
+        "statement": "Valproic acid and its reactive metabolites likely engage VDAC1, contributing to its hepatotoxicity, given its known induction of mitochondrial permeability transition.",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "A reactive metabolite (e.g., 2,4-diene VPA) covalently modifies VDAC cysteine residues, altering its gating and promoting cytochrome c release.",
+        "falsifiable_by": "Demonstrating that VPA toxicity is unchanged in VDAC1/3 knockout hepatocytes or that VPA shows no direct binding to purified VDAC at <100 \u00b5M.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "Acetaminophen toxicity (NAPQI) does not primarily involve direct VDAC modulation; its mitochondrial dysfunction is downstream of JNK activation and MPT pore opening.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "NAPQI depletes glutathione and causes oxidative stress, leading to JNK translocation to mitochondria and MPT pore opening via BIM, not direct VDAC blockade.",
+        "falsifiable_by": "Showing NAPQI directly binds and inhibits VDAC conductance before JNK activation in isolated mitochondrial experiments.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "Lipophilic statins (atorvastatin, simvastatin) at high myopathic concentrations partition into the mitochondrial outer membrane and non-specifically disrupt VDAC oligomerization, contributing to myopathy.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "By intercalating into the membrane, they alter lipid-protein interactions critical for VDAC's \u03b2-barrel stability and hexokinase-II binding, impairing metabolic coupling.",
+        "falsifiable_by": "Finding no change in VDAC conductance or oligomer state in muscle mitochondria exposed to therapeutic (nanomolar) vs. myopathic (micromolar) statin concentrations. \u2500\u2500\u2500",
+        "model": "deepseek"
+      }
+    ]
+  }
+}

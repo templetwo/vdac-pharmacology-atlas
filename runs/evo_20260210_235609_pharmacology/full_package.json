@@ -1,0 +1,184 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260210_235609_pharmacology",
+  "timestamp": "2026-02-10T23:57:53.921523+00:00",
+  "question": "What mechanisms explain why low-dose lithium is neuroprotective while therapeutic-dose lithium causes nephrotoxicity?",
+  "outcome": "S3_FAILED",
+  "cycles": 3,
+  "total_calls": 15,
+  "convergence_report": {
+    "stage": "S3",
+    "passed": false,
+    "convergence_score": 0.8029,
+    "convergence_threshold": 0.85,
+    "convergence_pass": false,
+    "jaccard": 0.3191,
+    "jaccard_threshold": 0.85,
+    "jaccard_pass": false,
+    "type_01_ratio": 0.4118,
+    "type_01_threshold": 0.75,
+    "type_pass": false,
+    "cosine": 0.8029,
+    "jsd": 0.2893,
+    "kappa": 0.916,
+    "type_distribution": {
+      "0": 0.23529411764705882,
+      "1": 0.17647058823529413,
+      "2": 0.35294117647058826,
+      "3": 0.23529411764705882
+    },
+    "divergence_map": {
+      "total_unique_claims": 18,
+      "most_divergent": [
+        {
+          "statement": "1:** Differential tissue accumulation is the primary mechanistic driver \u2014 renal principal cells concentrate Li\u207a 3\u201310\u00d7 plasma via ENaC entry and poor basolateral efflux, while brain parenchyma equilibrates at 0.5\u20131.2\u00d7 plasma.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.88
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2:** Neuroprotection at low dose is mediated primarily by indirect GSK-3\u03b2 inhibition via Akt-Ser9 phosphorylation amplification, with effective EC50 ~0.2\u20130.5 mM intracellular \u2014 achievable at plasma [Li\u207a] of 0.2\u20130.4 mM.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3:** Nephrotoxicity involves a threshold/cooperative mechanism (effective Hill n \u2248 1.5\u20132.5) because damage requires simultaneous IMPase inhibition (Ki ~0.8 mM), disrupted AQP2 trafficking, and ER stress \u2014 each independently insufficient.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.7
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4:** The clinical therapeutic index (~2\u20133) dramatically underestimates the *brain-specific* TI because brain [Li\u207a] at toxic plasma levels (~1.5 mM) remains ~1\u20131.8 mM \u2014 still below direct GSK-3\u03b2 Ki \u2014 while kidney [Li\u207a] reaches 5\u201315 mM.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.75
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "1:** *Low-dose lithium achieves neuroprotection via indirect GSK-3\u03b2 inhibition (Akt-mediated Ser9 phosphorylation) at intracellular [Li\u207a] ~0.2\u20130.5 mM, below the direct Mg\u00b2\u207a-competitive Ki (~2 mM).",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.9
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2:** *Nephrotoxicity arises from intracellular [Li\u207a] trapping in renal principal cells (2\u201320\u00d7 plasma levels) due to ENaC-mediated uptake and poor Na\u207a/K\u207a-ATPase efflux, exceeding IMPase Ki (~0.8 mM) and disrupting AQP2 trafficking.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.92
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3:** *Nephrotoxicity exhibits a Hill coefficient >1 (n=1.5\u20133) due to cooperative damage pathways (e.g., NLRP3 inflammasome activation) triggered by lysosomal Li\u207a overload.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.75
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4:** *The therapeutic index (TI) of lithium is artifactually low (~2\u20133) because brain [Li\u207a] remains below nephrotoxic thresholds (1\u20132 mM) at therapeutic doses, while kidney [Li\u207a] reaches 4\u201316 mM.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "5:** *ENaC\u2019s Li\u207a permeability is the primary determinant of nephrotoxicity, not systemic [Li\u207a].",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.8
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Low-dose neuroprotection primarily via indirect GSK-3\u03b2 inhibition (Akt-Ser9 phosphorylation), EC50_brain ~0.2-0.5 mM intracellular, achieved at plasma 0.1-0.3 mM (brain [Li\u207a] ~0.2-0.5 mM).",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.9
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        }
+      ],
+      "models_present": [
+        "claude",
+        "mistral",
+        "grok",
+        "gemini",
+        "deepseek"
+      ]
+    },
+    "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+  }
+}

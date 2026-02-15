@@ -1,0 +1,177 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "The Warburg phenotype's biphasic response to CBD is a direct consequence of its target affinity profile: low doses (<5 \u00b5M) favor cytoprotective TRPV1/PPAR\u03b3 signaling (EC50 2-5 \u00b5M), while cytotoxic effects only manifest when CBD concentrations approach VDAC1's Kd (11 \u00b5M) and can overcome the high-affinity HK-II \"buffer.\"",
+      "mechanism": "CBD follows mass-action kinetics, engaging its highest-affinity targets first; protective signaling is initiated before the concentration is sufficient to achieve the high VDAC1 occupancy required for HK-II displacement and apoptosis.",
+      "falsifiable_by": "A highly specific VDAC1-binding CBD analog (Kd < 1 \u00b5M) failing to induce apoptosis at low doses in Warburg cells.",
+      "type": 0,
+      "confidence": 0.77,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'trpv1'), ('trpv1', 'interacts', 'ec50'), ('vdac1', 'interacts', 'hk'), ('ec50', 'interacts', 'vdac1')})",
+      "chunk_text": "The Warburg phenotype's biphasic response to CBD is a direct consequence of its target affinity profile: low doses (<5 \u00b5M) favor cytoprotective TRPV1/PPAR\u03b3 signaling (EC50 2-5 \u00b5M), while cytotoxic effects only manifest when CBD concentrations approach VDAC1's Kd (11 \u00b5M) and can overcome the high-affinity HK-II \"buffer.\""
+    },
+    {
+      "statement": "3: The synergistic apoptosis induced by 2-DG + ABT-737 arises because they multiplicatively reduce the cofactor \"clamp\" on VDAC1 oligomerization, shifting the dose-response of a VDAC1-binding molecule (e.g., CBD) leftward by a predictable factor based on occupancy reduction.",
+      "mechanism": "2-DG (via G6P depletion) reduces HK-II-VDAC1 affinity, ABT-737 displaces Bcl-xL; their combined effect on the occupancy product lowers the energy barrier for VDAC1 conformational change to a pro-apoptotic state.",
+      "falsifiable_by": "Testing the combination with a range of VDAC1 binders and showing synergy collapses if either cofactor's binding is rendered irreversible. \u2500\u2500\u2500",
+      "type": 0,
+      "confidence": 0.677,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('abt', 'downregulates', 'vdac1'), ('cbd', 'interacts', 'vdac1'), ('g6p', 'downregulates', 'hk')})",
+      "chunk_text": "3: The synergistic apoptosis induced by 2-DG + ABT-737 arises because they multiplicatively reduce the cofactor \"clamp\" on VDAC1 oligomerization, shifting the dose-response of a VDAC1-binding molecule (e.g., CBD) leftward by a predictable factor based on occupancy reduction."
+    },
+    {
+      "statement": "1: HK-II displacement from VDAC1 is a necessary permissive step that unmasks cardiolipin microdomains, enabling Bax recruitment and lipid peroxidation\u2014the primary driver of cytochrome c release. Direct VDAC1 conductance change is a secondary consequence of this membrane remodeling.",
+      "mechanism": "Displaced HK-II exposes CL, facilitating Bax insertion and ROS-induced CL peroxidation, which destabilizes the OMM and releases cyt c, while VDAC1 may subsequently adopt a sustained open state.",
+      "falsifiable_by": "Demonstrating cytochrome c release and apoptosis in cells where HK-II is displaced but CL peroxidation or Bax recruitment is pharmacologically/genetically blocked.",
+      "type": 1,
+      "confidence": 0.773,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "deepseek",
+        "mistral"
+      ],
+      "tuples": "frozenset({('hk', 'interacts', 'vdac1'), ('ros', 'interacts', 'omm'), ('cl', 'interacts', 'ros'), ('cytochrome_c_release', 'interacts', 'cl'), ('vdac1', 'interacts', 'cytochrome_c_release')})",
+      "chunk_text": "1: HK-II displacement from VDAC1 is a necessary permissive step that unmasks cardiolipin microdomains, enabling Bax recruitment and lipid peroxidation\u2014the primary driver of cytochrome c release. Direct VDAC1 conductance change is a secondary consequence of this membrane remodeling."
+    },
+    {
+      "statement": "4:** Cardiolipin enrichment at the OMM lowers the apoptotic threshold by ~2-fold by stabilizing VDAC1 oligomers and facilitating Bax insertion, while cholesterol opposes this by rigidifying the membrane and stabilizing monomeric VDAC1.",
+      "mechanism": "Cardiolipin's cone-shaped geometry promotes negative curvature at oligomer interfaces; cholesterol increases bilayer order, raising the energy barrier for conformational transitions required for oligomerization.",
+      "falsifiable_by": "Reconstituting VDAC1 in liposomes of defined CL/cholesterol ratios and measuring oligomerization kinetics \u00b1 CBD; no lipid dependence would refute this. \u2500\u2500\u2500",
+      "type": 2,
+      "confidence": 0.475,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "mistral"
+      ],
+      "tuples": "frozenset({('omm', 'downregulates', 'vdac1')})",
+      "chunk_text": "4:** Cardiolipin enrichment at the OMM lowers the apoptotic threshold by ~2-fold by stabilizing VDAC1 oligomers and facilitating Bax insertion, while cholesterol opposes this by rigidifying the membrane and stabilizing monomeric VDAC1."
+    },
+    {
+      "statement": "HK-II displacement is a necessary permissive event, but the irreversible death commitment is the subsequent VDAC1 oligomerization into a Bax/Bak-receptive macropore, a process allosterically promoted by exposed cardiolipin.",
+      "mechanism": "Displacing HK-II unmasks VDAC1 and its proximal cardiolipin, creating a nucleation site for both VDAC1 self-assembly and Bax insertion, which are the true points of no return.",
+      "falsifiable_by": "Evidence showing that a non-oligomerizing VDAC1 mutant, when HK-II is displaced, still permits Bax/Bak-mediated cytochrome c release at the same rate as wild-type.",
+      "type": 3,
+      "confidence": 0.85,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('hk', 'interacts', 'vdac1')})",
+      "chunk_text": "HK-II displacement is a necessary permissive event, but the irreversible death commitment is the subsequent VDAC1 oligomerization into a Bax/Bak-receptive macropore, a process allosterically promoted by exposed cardiolipin."
+    },
+    {
+      "statement": "HK-II displacement by CBD/erastin is the primary cyt c release trigger via CL unmasking/peroxidation, secondary to VDAC conductance change; tubulin blockade acts redundantly but weaker.",
+      "mechanism": "HK-II shields OMM CL from peroxidation/Bax; displacement exposes CL, recruiting Bax/oligomerizing VDAC for cyt c egress independent of channel pore dilation.",
+      "falsifiable_by": "HK-II KD cells show no cyt c release or attenuated response to CBD/erastin despite conductance increase (patch-clamp + cyt c assay).",
+      "type": 3,
+      "confidence": 0.82,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('cbd', 'upregulates', 'cl')})",
+      "chunk_text": "HK-II displacement by CBD/erastin is the primary cyt c release trigger via CL unmasking/peroxidation, secondary to VDAC conductance change; tubulin blockade acts redundantly but weaker."
+    },
+    {
+      "statement": "The apoptotic threshold [Drug] for a VDAC1-targeting agent is inversely proportional to the fraction of \"free\" VDAC1, defined as VDAC1 not bound by either HK-II or Bcl-xL, and directly proportional to the membrane cholesterol:cardiolipin ratio.",
+      "mechanism": "Both HK-II/Bcl-xL and cholesterol act as independent negative regulators of VDAC1 oligomerization, increasing the activation energy that must be overcome by the drug binding event.",
+      "falsifiable_by": "A cell line with engineered high cholesterol and low HK-II expression showing the same apoptotic sensitivity to CBD as a low cholesterol, low HK-II line. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.75,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'hk')})",
+      "chunk_text": "The apoptotic threshold [Drug] for a VDAC1-targeting agent is inversely proportional to the fraction of \"free\" VDAC1, defined as VDAC1 not bound by either HK-II or Bcl-xL, and directly proportional to the membrane cholesterol:cardiolipin ratio."
+    },
+    {
+      "statement": "CL enrichment lowers apoptotic [CBD] EC50 ~2-3x (11\u21924-6 \u00b5M) by promoting VDAC oligomerization/Bax insertion; cholesterol raises it equivalently by rigidifying OMM/anti-oligomer.",
+      "mechanism": "CL peroxidation post-HK-II displacement facilitates VDAC hexamer cyt c channel; chol stabilizes monomeric low-conductance VDAC, blocking allosteric apo-gate.",
+      "falsifiable_by": "OMM liposome swaps (high/low CL/chol) +/- CBD show no EC50 shift in cyt c flux or Bax binding (lipidomics + proteomics).",
+      "type": 3,
+      "confidence": 0.68,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('cbd', 'downregulates', 'cl'), ('ec50', 'upregulates', 'vdac')})",
+      "chunk_text": "CL enrichment lowers apoptotic [CBD] EC50 ~2-3x (11\u21924-6 \u00b5M) by promoting VDAC oligomerization/Bax insertion; cholesterol raises it equivalently by rigidifying OMM/anti-oligomer."
+    },
+    {
+      "statement": "Tubulin blockade reinforces Bcl-xL but not HK-II; its displacement by CBD requires >20 \u00b5M, contributing <20% to gate-shift.",
+      "mechanism": "Microtubule-detached tubulin plugs VDAC semi-independently of HK-II, but low-affinity binding yields minor cytoprotection vs dominant metabolic HK-II.",
+      "falsifiable_by": "Vinblastine (tubulin stabilizer) + low CBD blocks death in HK-II-low cells only. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.55,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'vdac'), ('hk', 'interacts', 'cbd')})",
+      "chunk_text": "Tubulin blockade reinforces Bcl-xL but not HK-II; its displacement by CBD requires >20 \u00b5M, contributing <20% to gate-shift."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.05742424242424242,
+      "cosine": 0.7937113642692566,
+      "jsd": 0.15728103989791886,
+      "kappa": 0.9139384129186418,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.42105263157894735,
+        "2": 0.47368421052631576,
+        "3": 0.10526315789473684
+      },
+      "type_01_ratio": 0.42105263157894735,
+      "n_claims_per_model": [
+        4,
+        4,
+        5,
+        3,
+        3
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.5529286073403721,
+      "cosine": 0.9214948177337646,
+      "jsd": 0.2502283819155408,
+      "kappa": 0.9470643056849951,
+      "type_distribution": {
+        "0": 0.47368421052631576,
+        "1": 0.15789473684210525,
+        "2": 0.10526315789473684,
+        "3": 0.2631578947368421
+      },
+      "type_01_ratio": 0.631578947368421,
+      "n_claims_per_model": [
+        4,
+        4,
+        5,
+        3,
+        3
+      ]
+    }
+  ]
+}

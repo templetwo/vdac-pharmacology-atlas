@@ -139,11 +139,16 @@ across five molecules and four target classes:
 
 ## What's Here
 
+**[INDEX.md](INDEX.md)** — Complete navigational map: every run, every gold extraction, every figure, cross-referenced to manuscript layers.
+
 ```
 vdac-pharmacology-atlas/
 ├── README.md
+├── INDEX.md                             # Corpus index — the map to everything
 ├── CITATION.cff                        # Machine-readable citation metadata
 ├── LICENSE                              # CC BY 4.0
+├── runs/                                # 22 IRIS Gate Evo runs (raw JSON data)
+├── gold/                                # 22 gold extractions (curated analysis)
 ├── data/
 │   ├── vdac_modulators.csv              # 17 known VDAC-interacting compounds
 │   ├── vdac_isoform_comparison.csv      # VDAC1 vs VDAC2 vs VDAC3 features

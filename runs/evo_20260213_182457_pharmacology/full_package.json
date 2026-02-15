@@ -1,0 +1,184 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260213_182457_pharmacology",
+  "timestamp": "2026-02-13T18:27:00.304214+00:00",
+  "question": "How does the VDAC1 cofactor landscape \u2014 specifically hexokinase-II (HK-II) occupancy, Bcl-xL binding, tubulin blockade, and membrane lipid composition (cardiolipin, cholesterol) \u2014 determine whether a VDAC-binding small molecule produces cytoprotection vs cytotoxicity? (1) Does HK-II displacement from VDAC1 by CBD or erastin trigger cytochrome c release, and is this the primary death signal rather than direct conductance change? (2) Does the Warburg phenotype (high glycolysis, high HK-II-VDAC1 coupling) paradoxically protect cancer cells from VDAC-mediated apoptosis at low CBD doses while sensitizing them at high doses? (3) Can pharmacological manipulation of the cofactor landscape (e.g., 2-deoxyglucose to displace HK-II, ABT-737 to displace Bcl-xL) predictably shift the VDAC decision gate from survival to apoptosis?",
+  "outcome": "S3_FAILED",
+  "cycles": 3,
+  "total_calls": 15,
+  "convergence_report": {
+    "stage": "S3",
+    "passed": false,
+    "convergence_score": 0.9215,
+    "convergence_threshold": 0.85,
+    "convergence_pass": true,
+    "jaccard": 0.5529,
+    "jaccard_threshold": 0.85,
+    "jaccard_pass": false,
+    "type_01_ratio": 0.6316,
+    "type_01_threshold": 0.75,
+    "type_pass": false,
+    "cosine": 0.9215,
+    "jsd": 0.2502,
+    "kappa": 0.9471,
+    "type_distribution": {
+      "0": 0.47368421052631576,
+      "1": 0.15789473684210525,
+      "2": 0.10526315789473684,
+      "3": 0.2631578947368421
+    },
+    "divergence_map": {
+      "total_unique_claims": 19,
+      "most_divergent": [
+        {
+          "statement": "1:** HK-II displacement is necessary but insufficient for cytochrome c release; the commitment point is VDAC1 oligomerization into a cytochrome c\u2013permeable supercomplex, which requires concurrent loss of Bcl-xL restraint AND permissive lipid environment (cardiolipin exposure).",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.72
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2:** The Warburg phenotype creates a biphasic dose-response with a sharp inflection, not a gradual curve. At [CBD] < Kd (< 11 \u00b5M), VDAC1 occupancy by HK-II remains >90% due to affinity mismatch (HK-II Kd ~nM vs CBD Kd = 11 \u00b5M), and cytoprotective targets (TRPV1 Kd=2 \u00b5M, PPAR\u03b3 EC50=5 \u00b5M) dominate. Above ~15\u201320 \u00b5M, cooperative displacement occurs because HK-II binding is stabilized by G6P product; once metabolic flux is disrupted, HK-II affinity drops, creating a positive-feedback collapse.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.68
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3:** 2-DG + ABT-737 synergy is supra-additive because they collapse two independent stabilizing clamps simultaneously, lowering the effective CBD concentration needed for apoptosis from ~20 \u00b5M to within the therapeutic window (1\u201310 \u00b5M).",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.65
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4:** Cardiolipin enrichment at the OMM lowers the apoptotic threshold by ~2-fold by stabilizing VDAC1 oligomers and facilitating Bax insertion, while cholesterol opposes this by rigidifying the membrane and stabilizing monomeric VDAC1.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            3
+          ],
+          "confidences": [
+            0.45
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "1:** HK-II displacement by CBD/erastin is the *primary* death signal, with cytochrome c release driven by CL peroxidation (via Bax recruitment) rather than direct VDAC1 conductance changes.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2:** The Warburg phenotype (high HK-II-VDAC1 coupling) creates a biphasic CBD response: cytoprotection at low doses (<5 \u00b5M) via TRPV1/PPAR\u03b3 survival signaling, and apoptosis at high doses (>15 \u00b5M) via HK-II displacement and anti-apoptotic reserve saturation.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.8
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3:** 2-DG + ABT-737 synergistically shift the VDAC1 decision gate toward apoptosis by simultaneously removing HK-II (metabolic clamp) and Bcl-xL (signaling clamp), lowering the apoptotic threshold [CBD] by \u22653-fold.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.75
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4:** Cardiolipin (CL) enrichment in the OMM lowers the apoptotic threshold for CBD by ~2\u20133-fold (EC50 shift from ~20 \u00b5M to ~8 \u00b5M) by promoting VDAC1 oligomerization and Bax insertion, while cholesterol elevation raises it equivalently.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "HK-II displacement by CBD/erastin is the primary cyt c release trigger via CL unmasking/peroxidation, secondary to VDAC conductance change; tubulin blockade acts redundantly but weaker.",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.82
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "Warburg high HK-II-VDAC occupancy (>80%) protects vs low CBD (1-5 \u00b5M, <50% displacement) via glycolytic ATP + TRPV1/PPAR\u03b3 cytoprotection (EC50 2-5 \u00b5M), but sensitizes at high (15+ \u00b5M) by saturating HK-II buffer (mass-action >Kd=11 \u00b5M).",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.79
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        }
+      ],
+      "models_present": [
+        "claude",
+        "mistral",
+        "grok",
+        "gemini",
+        "deepseek"
+      ]
+    },
+    "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+  }
+}

@@ -1,0 +1,900 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260213_042930_pharmacology",
+  "timestamp": "2026-02-13T04:31:24.356114+00:00",
+  "question": "Chronic Dosing Dynamics: GSH Regeneration vs Cumulative Mitochondrial Load. Context: The acute model establishes CBD as a universal mitochondrial stressor (VDAC1+VDAC2 engagement), with survival determined by GSH buffering capacity (>20 uM threshold). The EFSA limit (2mg/day) targets chronic exposure. This session stress-tests the chronic accumulation hypothesis. Questions: (1) GSH Synthesis Rate: What is the de novo glutathione synthesis rate in healthy human hepatocytes (umol/g liver/hr)? Does it vary by >2x between healthy and metabolically compromised liver (NAFLD, hepatitis, alcohol use)? (2) Daily Load vs Recovery: At 50mg oral CBD/day (~0.7 mg/kg), given 6-19% bioavailability and CYP450 first-pass, does the estimated daily ROS/mitochondrial load exceed the 24hr GSH regeneration capacity? What safety margin exists? (3) VDAC Binding Reversibility: Is CBD-VDAC1 binding reversible on the timescale of dosing intervals (12-24 hr)? If allosteric (not pore occlusion), does the gating perturbation persist after CBD dissociates, or does the channel reset? (4) Metabolite Accumulation: 7-OH-CBD has slower clearance than parent CBD. At steady-state daily dosing, does 7-OH-CBD accumulate to concentrations that contribute meaningful VDAC occupancy? Does this effectively widen the occupancy window beyond what parent CBD alone would predict? (5) Dual Pathway Under Chronic Load: The acute model shows parallel ATP starvation + ROS generation (allosteric gating, not occlusion). Under chronic sub-threshold dosing, does cumulative ATP deficit compound independently of ROS/GSH status? Null hypothesis to defeat: Daily 50mg CBD in a healthy liver causes progressive GSH depletion, cumulative VDAC dysfunction, or metabolite-driven occupancy expansion that narrows the safety margin over weeks-months of use.",
+  "convergence_report": {
+    "s1_initial": {
+      "n_models_responded": 5,
+      "initial_jaccard": 0.12109333476980536,
+      "initial_cosine": 0.8548868000507355
+    },
+    "s2_refinement": {
+      "total_rounds": 0,
+      "early_stopped": false,
+      "final_jaccard": 0.0,
+      "final_cosine": 0.0,
+      "final_jsd": 0.0,
+      "final_type_01_ratio": 0.0
+    },
+    "s3_gate": {
+      "passed": true,
+      "jaccard": 0.479,
+      "type_01_ratio": 0.8182,
+      "recommendation": ""
+    }
+  },
+  "verification": {
+    "n_type2_input": 10,
+    "n_promoted": 1,
+    "n_held": 1,
+    "n_novel": 8,
+    "n_contradicted": 0,
+    "total_calls": 10
+  },
+  "gate": {
+    "passed": true,
+    "n_passed": 8,
+    "n_failed": 16,
+    "recommendation": "Lab Gate PASSED with filter. 8/24 claims cleared. 16 filtered: 'At 50mg oral CBD/day, peak portal CBD concentratio...' not feasible; '7-OH-CBD accumulation at steady-state (50mg/day) m...' not feasible; 'The null hypothesis (progressive GSH depletion at ...' not feasible",
+    "claims": [
+      {
+        "statement": "Healthy hepatocyte de novo GSH synthesis is ~0.3-0.5 umol/g liver/hr (~10-18 umol/g/day), yielding ~",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "At 50mg oral CBD/day, peak portal CBD concentration is ~0.5-2 uM, yielding VDAC1 fractional occupanc",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "CBD-VDAC1 binding is reversible on timescales of 1-4 hours based on lipophilic ligand-membrane prote",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "7-OH-CBD accumulation at steady-state (50mg/day) may increase effective VDAC occupancy window by 30-",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The null hypothesis (progressive GSH depletion at 50mg/day in healthy liver) is likely defeated. The",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Healthy human hepatocytes synthesize GSH at 0.5\u20131.2 \u03bcmol/g liver/hr, but this drops >2x in NAFLD/alc",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "At 50mg oral CBD/day (6\u201319% bioavailability), the daily ROS load exceeds 24hr GSH regeneration capac",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "CBD-VDAC1 binding is reversible within 12\u201324 hr, but allosteric gating perturbations (e.g., proton l",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "7-OH-CBD accumulates to 2\u20135x parent CBD levels at steady-state (50mg/day), contributing meaningful V",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Chronic sub-threshold CBD dosing causes cumulative ATP deficit independent of ROS/GSH status, due to",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Healthy human hepatocyte GSH synthesis rate is 3-6 \u03bcmol/g liver/hr (total liver ~5-10 mmol/day).",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Synthesis rate drops >2x (to <2 \u03bcmol/g/hr) in NAFLD/hepatitis/alcohol livers due to GCLH downregulat",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "At 50mg/day oral CBD, steady-state hepatic [CBD] ~0.1-0.5\u03bcM (plasma 0.05-0.2\u03bcM \u00d7 liver enrichment), ",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Safety margin >50x (TI>>10) in healthy liver; narrows to ~5-10x in compromised.",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "CBD-VDAC1 binding reversible (t_off <<12hr); allosteric gating resets post-dissociation.",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "7-OH-CBD accumulates 2-5x (t1/2~3x CBD), but [7OH_ss] <0.2\u03bcM, negligible VDAC occ (<2%) sans affinit",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Null defeated: no progressive GSH/VDAC/ATP cumulation at 50mg/day healthy liver.",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The *de novo* GSH synthesis rate in a healthy human liver (~2.3 umol/g/hr) is robust, but can be imp",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "At 50mg/day, the peak mitochondrial VDAC occupancy in a healthy individual remains far below the tox",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "CBD-VDAC allosteric binding is reversible on a timescale of hours, and the channel's gating function",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "At 50 mg oral CBD/day, the estimated peak hepatic portal concentration of CBD + 7-OH-CBD is < 5 \u03bcM, ",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "In a healthy liver, daily GSH synthesis capacity (~5-10 \u03bcmol/g liver/24h) vastly exceeds the oxidati",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "7-OH-CBD accumulation at steady-state does not meaningfully widen the VDAC occupancy window because ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "The null hypothesis of progressive GSH depletion or cumulative VDAC dysfunction from 50 mg/day in he",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H3",
+      "prediction": "IF healthy primary human hepatocytes are exposed to physiologically relevant CBD concentrations (0.5\u20132 \u03bcM, reflecting 50 mg oral dose post-first-pass) for 14 consecutive days with daily media renewal, THEN total intracellular GSH will remain \u226580% of vehicle control throughout, with no progressive decline trend (slope of GSH vs. time not significantly <0).",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CBD_hepatic_Cmax_50mg_oral",
+          "range": "0.3-2.0 \u03bcM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "GSH_baseline_healthy",
+          "range": "5.0-10.0 mM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "daily_ROS_increment",
+          "range": "0.0-15.0 %",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.3491,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4846130604667432,
+            "std": 0.17447785768735383,
+            "median": 0.4807657029809055,
+            "ci_lower": 0.17907321860047104,
+            "ci_upper": 0.8467307341231144,
+            "min": 0.09168612310539136,
+            "max": 0.9203909248497035
+          }
+        }
+      }
+    },
+    {
+      "id": "H1",
+      "prediction": "IF primary human hepatocytes from NAFLD/alcohol-use donors are compared to healthy donor hepatocytes under identical culture conditions, THEN de novo GSH synthesis flux (measured by \u00b2H-glycine or \u00b9\u00b3C-cysteine incorporation) will be \u226450% of healthy controls (healthy: 0.5\u20132.3 \u03bcmol/g/hr; NAFLD: <0.5\u20131.0 \u03bcmol/g/hr), with GCL enzymatic activity reduced by \u22652-fold.",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "GSH_synthesis_healthy",
+          "range": "0.5-2.3 \u03bcmol/g/hr",
+          "distribution": "uniform"
+        },
+        {
+          "name": "GSH_synthesis_NAFLD",
+          "range": "0.1-1.0 \u03bcmol/g/hr",
+          "distribution": "uniform"
+        },
+        {
+          "name": "intracellular_cysteine_NAFLD",
+          "range": "30.0-70.0 %",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.2324,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.49639089339915654,
+            "std": 0.16010728478958,
+            "median": 0.49146351500883206,
+            "ci_lower": 0.2030219924192064,
+            "ci_upper": 0.7974069041524601,
+            "min": 0.041905635562250895,
+            "max": 0.8682869883070754
+          }
+        }
+      }
+    },
+    {
+      "id": "H2",
+      "prediction": "IF reconstituted human VDAC1 in planar lipid bilayers is exposed to CBD at Kd-relevant concentrations (5\u201320 \u03bcM) for 2 hr, THEN upon complete washout, channel conductance, open probability, and voltage-dependent gating will return to within 90% of pre-exposure baseline within 4 hr (t_recovery < 4 hr), with no persistent gating abnormality at 12 hr.",
+      "testability_score": 6.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CBD_Kd_VDAC1",
+          "range": "5.0-20.0 \u03bcM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "t_off_CBD",
+          "range": "0.25-4.0 hr",
+          "distribution": "uniform"
+        },
+        {
+          "name": "gating_recovery_fraction_at_4hr",
+          "range": "0.7-1.0 (uniform)",
+          "distribution": "uniform"
+        },
+        {
+          "name": "baseline_open_probability",
+          "range": "0.5-0.9 at",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.0586,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5008179913288715,
+            "std": 0.15033298505938425,
+            "median": 0.49565309807699487,
+            "ci_lower": 0.22200505107204196,
+            "ci_upper": 0.7868062895933343,
+            "min": 0.13596457092550324,
+            "max": 0.9110213034155875
+          }
+        }
+      }
+    },
+    {
+      "id": "H4",
+      "prediction": "IF 7-OH-CBD has 2\u20134x longer terminal half-life than parent CBD, THEN at steady-state daily dosing (simulated by repeated exposure), 7-OH-CBD will accumulate to concentrations representing \u226520% of total VDAC-binding ligand pool, and will produce measurable mitochondrial effects (membrane potential depolarization, reduced oxygen consumption) at concentrations achievable through accumulation (0.5\u20135 \u03bcM).",
+      "testability_score": 5.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CBD_t_half",
+          "range": "1.5-5.0 hr",
+          "distribution": "uniform"
+        },
+        {
+          "name": "7OH_CBD_t_half",
+          "range": "4.0-18.0 hr",
+          "distribution": "uniform"
+        },
+        {
+          "name": "7OH_CBD_accumulation_ratio",
+          "range": "1.5-4.0 at",
+          "distribution": "uniform"
+        },
+        {
+          "name": "7OH_CBD_Kd_VDAC1",
+          "range": "5.0-50.0 \u03bcM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "VDAC_fractional_occupancy_7OH",
+          "range": "0.05-0.4 at",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.8509,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4937493934496894,
+            "std": 0.12943841657848718,
+            "median": 0.49787577609649714,
+            "ci_lower": 0.2328841551824252,
+            "ci_upper": 0.7200388722954524,
+            "min": 0.1632636605171135,
+            "max": 0.8203192999267144
+          }
+        }
+      }
+    }
+  ],
+  "simulations": {
+    "n_hypotheses_simulated": 4,
+    "total_iterations": 1200,
+    "llm_calls": 0,
+    "results": [
+      {
+        "hypothesis_id": "H1",
+        "n_iterations": 300,
+        "effect_size": 1.2324,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "GSH_synthesis_healthy": {
+            "mean": 1.375976278884725,
+            "std": 0.5216795586189772,
+            "median": 1.3622075268519507,
+            "ci_lower": 0.5498414679156004,
+            "ci_upper": 2.235511660165141,
+            "min": 0.5132520855518099,
+            "max": 2.2862760153005066
+          },
+          "GSH_synthesis_NAFLD": {
+            "mean": 0.5547876536156211,
+            "std": 0.25543579031259106,
+            "median": 0.5621329516587277,
+            "ci_lower": 0.132497830432537,
+            "ci_upper": 0.9821083801240444,
+            "min": 0.10488685071583043,
+            "max": 0.9991942574268148
+          },
+          "intracellular_cysteine_NAFLD": {
+            "mean": 49.887983071988415,
+            "std": 11.913254806495635,
+            "median": 50.08418595424786,
+            "ci_lower": 30.683882678847027,
+            "ci_upper": 69.36106415392993,
+            "min": 30.049322500476325,
+            "max": 69.94973480267059
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H2",
+        "n_iterations": 300,
+        "effect_size": 1.0586,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "CBD_Kd_VDAC1": {
+            "mean": 12.474159391397437,
+            "std": 4.276069702988823,
+            "median": 12.423402690795399,
+            "ci_lower": 5.39537065755339,
+            "ci_upper": 19.566406258986646,
+            "min": 5.047252291480079,
+            "max": 19.968226164111808
+          },
+          "t_off_CBD": {
+            "mean": 2.1092709795273996,
+            "std": 1.071127012033702,
+            "median": 2.136574985155146,
+            "ci_lower": 0.3296322078668409,
+            "ci_upper": 3.8792442695592926,
+            "min": 0.25832686399046906,
+            "max": 3.9834349806836165
+          },
+          "gating_recovery_fraction_at_4hr": {
+            "mean": 0.8502693739666283,
+            "std": 0.08568174228801362,
+            "median": 0.84400645532716,
+            "ci_lower": 0.7102156482247253,
+            "ci_upper": 0.9932773069653447,
+            "min": 0.7050490939616904,
+            "max": 0.9993526122488838
+          },
+          "baseline_open_probability": {
+            "mean": 0.7033164659171692,
+            "std": 0.11908495764655186,
+            "median": 0.7128454921634223,
+            "ci_lower": 0.5089242140570374,
+            "ci_upper": 0.8888961246096242,
+            "min": 0.5022533070326202,
+            "max": 0.899198645917644
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H3",
+        "n_iterations": 300,
+        "effect_size": 1.3491,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "CBD_hepatic_Cmax_50mg_oral": {
+            "mean": 1.12866339553811,
+            "std": 0.4900528779056956,
+            "median": 1.0862241584624788,
+            "ci_lower": 0.3637674122407899,
+            "ci_upper": 1.9535111551590532,
+            "min": 0.3093420542315391,
+            "max": 1.9921556665577023
+          },
+          "GSH_baseline_healthy": {
+            "mean": 7.4223755248629155,
+            "std": 1.468501113852188,
+            "median": 7.35525298541415,
+            "ci_lower": 5.1246753058029375,
+            "ci_upper": 9.849587308536192,
+            "min": 5.00643125645374,
+            "max": 9.96391430499491
+          },
+          "daily_ROS_increment": {
+            "mean": 7.228725303431371,
+            "std": 4.430602907882285,
+            "median": 6.913005944512608,
+            "ci_lower": 0.39223424415828917,
+            "ci_upper": 14.570459567339203,
+            "min": 0.049857228910310525,
+            "max": 14.921986367589223
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H4",
+        "n_iterations": 300,
+        "effect_size": 0.8509,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "CBD_t_half": {
+            "mean": 3.2877045354699783,
+            "std": 1.0051714325452623,
+            "median": 3.2642094616948505,
+            "ci_lower": 1.5705483496676809,
+            "ci_upper": 4.941816161296219,
+            "min": 1.5001896736793299,
+            "max": 4.99281023423911
+          },
+          "7OH_CBD_t_half": {
+            "mean": 11.018718110093056,
+            "std": 4.09900797707745,
+            "median": 11.4291741600645,
+            "ci_lower": 4.2666853776283995,
+            "ci_upper": 17.17556866067257,
+            "min": 4.038832965747437,
+            "max": 17.86756349587852
+          },
+          "7OH_CBD_accumulation_ratio": {
+            "mean": 2.714722823903494,
+            "std": 0.728970782635286,
+            "median": 2.7287063110803644,
+            "ci_lower": 1.5789494911416728,
+            "ci_upper": 3.8921852044003775,
+            "min": 1.5156144786433838,
+            "max": 3.9946999342348217
+          },
+          "7OH_CBD_Kd_VDAC1": {
+            "mean": 26.84563811175854,
+            "std": 13.130277015177477,
+            "median": 26.048993412123686,
+            "ci_lower": 6.39172881670865,
+            "ci_upper": 48.60640452857999,
+            "min": 5.409895394156321,
+            "max": 49.600093533948915
+          },
+          "VDAC_fractional_occupancy_7OH": {
+            "mean": 0.2198513182441323,
+            "std": 0.09953846154905427,
+            "median": 0.23230759470766155,
+            "ci_lower": 0.056077644453681685,
+            "ci_upper": 0.38094654521990734,
+            "min": 0.05000714383252155,
+            "max": 0.3995406821990465
+          }
+        }
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF primary human hepatocytes from NAFLD/alcohol-use donors are compared to healthy donor hepatocytes under identical culture conditions, THEN de novo GSH synthesis flux (measured by \u00b2H-glycine or \u00b9\u00b3C-cysteine incorporation) will be \u226450% of healthy controls (healthy: 0.5\u20132.3 \u03bcmol/g/hr; NAFLD: <0.5\u20131.0 \u03bcmol/g/hr), with GCL enzymatic activity reduced by \u22652-fold.",
+      "protocol": "Obtain cryopreserved primary human hepatocytes from healthy (n\u22656) and biopsy-confirmed NAFLD/alcohol-use (n\u22656) donors (BioIVT/Lonza). Culture in sandwich configuration. Measure GSH synthesis flux via \u00b9\u00b3C\u2082-glycine pulse-chase with LC-MS/MS over 6 hr. Parallel GCL activity assay (\u03b3-glutamylcysteine formation) and intracellular cysteine quantification. Normalize to protein and viable cell count.",
+      "dose_ranges": {},
+      "readouts": [
+        "\u00b9\u00b3C-GSH isotopologue enrichment (LC-MS/MS)",
+        "GCL enzymatic activity (spectrophotometric)",
+        "total/oxidized GSH (Tietze recycling assay)",
+        "intracellular cysteine (HPLC-fluorescence)"
+      ],
+      "controls": [
+        "BSO (GCL inhibitor",
+        "positive control for synthesis block)",
+        "NAC supplementation (cysteine rescue)",
+        "heat-inactivated lysate (assay background)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "NAFLD/alcohol hepatocytes show \u22652x reduction in GSH flux and GCL activity; cysteine pools depleted \u226540%.",
+      "null_outcome": "NAFLD hepatocytes maintain GSH synthesis within 50% of healthy"
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF reconstituted human VDAC1 in planar lipid bilayers is exposed to CBD at Kd-relevant concentrations (5\u201320 \u03bcM) for 2 hr, THEN upon complete washout, channel conductance, open probability, and voltage-dependent gating will return to within 90% of pre-exposure baseline within 4 hr (t_recovery < 4 hr), with no persistent gating abnormality at 12 hr.",
+      "protocol": "Express and purify recombinant human VDAC1; reconstitute into DPhPC planar lipid bilayers. Record single-channel conductance at \u00b110 to \u00b160 mV (voltage ramp protocol) before, during (5, 11, 20 \u03bcM CBD in cis chamber, 2 hr exposure), and after washout (perfusion with CBD-free buffer; recordings at 1, 2, 4, 8, 12 hr post-washout). Analyze open probability, conductance histogram, and voltage-gating midpoint (V\u2080). n\u22658 independent bilayers per condition.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            5.0,
+            11.0,
+            20.0
+          ],
+          "unit": "\u03bcM"
+        }
+      },
+      "readouts": [
+        "Single-channel conductance (pA)",
+        "open probability (Po)",
+        "voltage-gating midpoint (V\u2080",
+        "mV)",
+        "dwell-time analysis (ms)",
+        "current-voltage relationships"
+      ],
+      "controls": [
+        "Vehicle (ethanol \u22640.1%)",
+        "DIDS (known VDAC blocker",
+        "irreversible positive control)",
+        "cholesterol hemisuccinate (lipophilic non-VDAC ligand",
+        "specificity control)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "CBD shifts V\u2080 and reduces open probability during exposure; washout restores all parameters to \u226590% baseline by 4 hr, with complete recovery by 12 hr. No hysteresis.",
+      "null_outcome": "Gating parameters remain >10% shifted from baseline at \u226512 hr post-washout, indicating persistent conformational memory or post-translational modification \u2014 falsifying reversibility claim."
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF healthy primary human hepatocytes are exposed to physiologically relevant CBD concentrations (0.5\u20132 \u03bcM, reflecting 50 mg oral dose post-first-pass) for 14 consecutive days with daily media renewal, THEN total intracellular GSH will remain \u226580% of vehicle control throughout, with no progressive decline trend (slope of GSH vs. time not significantly <0).",
+      "protocol": "Sandwich-cultured primary human hepatocytes (healthy donors, n\u22654 donors, triplicate per condition). Daily exposure to CBD (0.5, 1.0, 2.0 \u03bcM) or vehicle in fresh media for 14 days. Harvest cells at days 1, 3, 7, 10, 14. Measure total GSH/GSSG (luminescent assay), mitochondrial superoxide (MitoSOX), ATP (CellTiter-Glo), and viability (LDH release). Include BSO co-treatment arm (GSH-synthesis-blocked positive control) and NAFLD-model arm (palmitate/oleate-loaded hepatocytes) to test vulnerability.",
+      "dose_ranges": {
+        "CBD": {
+          "doses": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "unit": "\u03bcM"
+        },
+        "Palmitate loading": {
+          "doses": [
+            200.0,
+            400.0
+          ],
+          "unit": "\u03bcM"
+        }
+      },
+      "readouts": [
+        "GSH/GSSG ratio (GSH-Glo)",
+        "MitoSOX fluorescence (flow cytometry)",
+        "ATP (CellTiter-Glo)",
+        "LDH release",
+        "albumin secretion (hepatocyte function)",
+        "CYP3A4 activity (functional integrity)"
+      ],
+      "controls": [
+        "Vehicle (DMSO \u22640.1%)",
+        "BSO 100 \u03bcM (GSH synthesis block)",
+        "NAC 5 mM (cysteine supplementation rescue)",
+        "APAP 5 mM (positive hepatotoxicity control)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "Healthy hepatocytes maintain GSH \u226580% baseline at all timepoints; no progressive decline. NAFLD-model cells show measurable GSH erosion by day 7\u201314 at \u22651 \u03bcM CBD. This supports the null hypothesis defeat for healthy liver but confirms vulnerability in compromised liver.",
+      "null_outcome": "Healthy hepatocytes show progressive GSH decline (>20% by day 14) with significant negative slope \u2014 supporting the chronic depletion hypothesis and indicating the EFSA concern is warranted even for healthy individuals."
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF 7-OH-CBD has 2\u20134x longer terminal half-life than parent CBD, THEN at steady-state daily dosing (simulated by repeated exposure), 7-OH-CBD will accumulate to concentrations representing \u226520% of total VDAC-binding ligand pool, and will produce measurable mitochondrial effects (membrane potential depolarization, reduced oxygen consumption) at concentrations achievable through accumulation (0.5\u20135 \u03bcM).",
+      "protocol": "(A) Binding: Measure 7-OH-CBD affinity for purified VDAC1 via microscale thermophoresis (MST) or surface plasmon resonance (SPR), comparing to parent CBD. (B) Functional: Treat HepG2 cells or primary hepatocytes with 7-OH-CBD (0.5, 1, 2, 5 \u03bcM) alone and in combination with CBD (1 \u03bcM) for 24\u201372 hr. Measure mitochondrial membrane potential (TMRM), oxygen consumption rate (Seahorse XF), and ATP. (C) Accumulation modeling: Use measured Kd values and published PK to calculate fractional VDAC occupancy at simulated steady-state.",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": [],
+      "expected_outcome": "7-OH-CBD binds VDAC1 with Kd within 3x of parent CBD; at accumulation-relevant concentrations (\u22651 \u03bcM), it produces additive mitochondrial depolarization when combined with CBD, effectively extending the VDAC occupancy window by \u226530%.",
+      "null_outcome": "7-OH-CBD has >10x weaker VDAC affinity than CBD, does not accumulate above 0.5 \u03bcM at steady state, and produces no measurable mitochondrial effects alone or additively \u2014 metabolite contribution is negligible."
+    }
+  ],
+  "budget": {
+    "s1_calls": 5,
+    "s2_calls": 0,
+    "verify_calls": 10,
+    "gate_calls": 1,
+    "s4_calls": 1,
+    "s5_calls": 0,
+    "total_calls": 17,
+    "budget_target": "92-142 calls"
+  },
+  "audit_trail": {
+    "session_seed": 1770956972,
+    "s2_rounds": [],
+    "s3_gate": {
+      "stage": "S3",
+      "passed": true,
+      "convergence_score": 0.9024,
+      "convergence_threshold": 0.85,
+      "convergence_pass": true,
+      "jaccard": 0.479,
+      "jaccard_threshold": 0.85,
+      "jaccard_pass": false,
+      "type_01_ratio": 0.8182,
+      "type_01_threshold": 0.75,
+      "type_pass": true,
+      "cosine": 0.9024,
+      "jsd": 0.156,
+      "kappa": 0.9526,
+      "type_distribution": {
+        "0": 0.5454545454545454,
+        "1": 0.2727272727272727,
+        "2": 0.0,
+        "3": 0.18181818181818182
+      }
+    },
+    "final_claims": [
+      {
+        "statement": "Healthy hepatocyte de novo GSH synthesis is ~0.3-0.5 umol/g liver/hr (~10-18 umol/g/day), yielding ~15-27 mmol/day whole-liver capacity. Compromised liver (NAFLD/alcohol) reduces this by 2-4x.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "Rate-limited by glutamate-cysteine ligase activity; cysteine availability drops in metabolic liver disease.",
+        "falsifiable_by": "Direct measurements showing <2x variation between healthy and NAFLD hepatocytes in GSH turnover flux studies.",
+        "model": "claude"
+      },
+      {
+        "statement": "At 50mg oral CBD/day, peak portal CBD concentration is ~0.5-2 uM, yielding VDAC1 fractional occupancy of ~4-15% (using Kd=11 uM). This generates ROS load well within the 24hr GSH regeneration budget (consuming <5% of daily synthesis capacity in healthy liver).",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "Low fractional occupancy produces modest mitochondrial stress; hepatic GSH pool (~7 mmol total) turns over ~4-6x daily, providing massive buffer.",
+        "falsifiable_by": "Pharmacokinetic data showing portal CBD concentrations >5 uM after 50mg oral dosing, or direct measurement of hepatic GSH depletion >10% at this dose.",
+        "model": "claude"
+      },
+      {
+        "statement": "CBD-VDAC1 binding is reversible on timescales of 1-4 hours based on lipophilic ligand-membrane protein kinetics; allosteric gating perturbation resets upon dissociation without persistent conformational memory.",
+        "type": 3,
+        "confidence": 0.45,
+        "mechanism": "No evidence for covalent modification; VDAC gating is voltage/lipid-dependent and channels reconstitute normal conductance states in bilayer experiments after ligand washout.",
+        "falsifiable_by": "Electrophysiology showing persistent gating abnormality post-CBD washout, or evidence of post-translational modification induced by CBD binding.",
+        "model": "claude"
+      },
+      {
+        "statement": "7-OH-CBD accumulation at steady-state (50mg/day) may increase effective VDAC occupancy window by 30-60%, but total combined occupancy remains below levels causing net GSH depletion in healthy liver.",
+        "type": 3,
+        "confidence": 0.4,
+        "mechanism": "7-OH-CBD has ~2-3x longer half-life; if VDAC affinity is similar to parent, trough occupancy rises but peak combined concentration likely remains <3-4 uM.",
+        "falsifiable_by": "Measurement of 7-OH-CBD VDAC binding affinity showing Kd <3 uM, or steady-state 7-OH-CBD plasma levels exceeding parent compound.",
+        "model": "claude"
+      },
+      {
+        "statement": "The null hypothesis (progressive GSH depletion at 50mg/day in healthy liver) is likely defeated. The safety margin is ~5-10x for GSH flux but narrows to ~2-3x in compromised liver.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "Daily GSH synthesis vastly exceeds estimated oxidative load from low fractional VDAC occupancy; however, compromised liver loses both synthesis capacity and baseline GSH reserves simultaneously.",
+        "falsifiable_by": "Longitudinal clinical data showing declining GSH/GSSG ratios or rising ALT over 3-6 months of 50mg/day CBD in healthy volunteers. \u2500\u2500\u2500",
+        "model": "claude"
+      },
+      {
+        "statement": "Healthy human hepatocytes synthesize GSH at 0.5\u20131.2 \u03bcmol/g liver/hr, but this drops >2x in NAFLD/alcohol-related liver disease due to limited cysteine availability and ATP depletion.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "GSH synthesis is rate-limited by \u03b3-glutamylcysteine ligase (GCL) activity, which depends on ATP and cysteine; metabolic stress reduces both.",
+        "falsifiable_by": "Direct measurement of GCL activity and GSH flux in healthy vs. diseased human liver biopsies under controlled conditions.",
+        "model": "mistral"
+      },
+      {
+        "statement": "At 50mg oral CBD/day (6\u201319% bioavailability), the daily ROS load exceeds 24hr GSH regeneration capacity in metabolically compromised livers, but not in healthy livers, assuming a safety margin of 2\u20135x.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "CYP450-mediated CBD metabolism generates ROS; GSH regeneration capacity (~12\u201324 \u03bcmol/g/day) may be saturated if ROS flux >0.5\u20131 \u03bcmol/g/hr (e.g., in NAFLD).",
+        "falsifiable_by": "Longitudinal GSH/GSSG ratios in liver biopsies from healthy vs. NAFLD subjects dosed with 50mg CBD/day for 4+ weeks.",
+        "model": "mistral"
+      },
+      {
+        "statement": "CBD-VDAC1 binding is reversible within 12\u201324 hr, but allosteric gating perturbations (e.g., proton leak) may persist for hours post-dissociation, narrowing the safety margin.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "VDAC1-CBD Kd (11 \u03bcM) suggests rapid dissociation, but allosteric effects (e.g., altered gating kinetics) may outlast occupancy.",
+        "falsifiable_by": "Patch-clamp studies of VDAC1 conductance in isolated mitochondria after CBD washout, with time-resolved recovery of wild-type gating.",
+        "model": "mistral"
+      },
+      {
+        "statement": "7-OH-CBD accumulates to 2\u20135x parent CBD levels at steady-state (50mg/day), contributing meaningful VDAC occupancy due to slower clearance and comparable affinity.",
+        "type": 2,
+        "confidence": 0.5,
+        "mechanism": "7-OH-CBD has ~3x longer half-life than CBD (18\u201332 hr vs. 6\u201312 hr) and similar VDAC1 affinity (estimated Kd ~10\u201320 \u03bcM).",
+        "falsifiable_by": "Steady-state plasma/hepatic 7-OH-CBD levels in chronic dosing studies, with VDAC1 occupancy assays in liver homogenates.",
+        "model": "mistral"
+      },
+      {
+        "statement": "Chronic sub-threshold CBD dosing causes cumulative ATP deficit independent of ROS/GSH status, due to persistent VDAC-mediated proton leak.",
+        "type": 3,
+        "confidence": 0.4,
+        "mechanism": "Allosteric VDAC1 perturbation may uncouple ATP synthesis from ROS generation, allowing ATP depletion to compound even if GSH remains adequate.",
+        "falsifiable_by": "Longitudinal ATP/ADP ratios in liver mitochondria from chronic CBD-dosed animals, with ROS/GSH clamped via NAC or BSO. --- \u2500\u2500\u2500",
+        "model": "mistral"
+      },
+      {
+        "statement": "Healthy human hepatocyte GSH synthesis rate is 3-6 \u03bcmol/g liver/hr (total liver ~5-10 mmol/day).",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "Extrapolated from rat hepatocyte data (20-40 nmol/mg prot/hr, ~150-250mg prot/g liver) and human turnover studies.",
+        "falsifiable_by": "Primary human hepatocyte assays showing rate outside 2-8 \u03bcmol/g/hr.",
+        "model": "grok"
+      },
+      {
+        "statement": "Synthesis rate drops >2x (to <2 \u03bcmol/g/hr) in NAFLD/hepatitis/alcohol livers due to GCLH downregulation.",
+        "type": 2,
+        "confidence": 0.8,
+        "mechanism": "Oxidative stress/inflammation impairs cystine uptake and enzyme expression (e.g., Lu 2013 review).",
+        "falsifiable_by": "Biopsies with normal rates despite pathology.",
+        "model": "grok"
+      },
+      {
+        "statement": "At 50mg/day oral CBD, steady-state hepatic [CBD] ~0.1-0.5\u03bcM (plasma 0.05-0.2\u03bcM \u00d7 liver enrichment), VDAC occ <5%, ROS load <<1 \u03bcmol/g liver/day (<2% GSH capacity).",
+        "type": 3,
+        "confidence": 0.6,
+        "mechanism": "F=0.06-0.19 \u2192 ss_CBD = (dose\u00b7F / CL) / (1-e^{-k\u03c4}); first-pass transient; ROS~k\u00b7[CBD]\u00b7mito# but sub-Kd occupancy yields negligible integrated load vs 50-100\u03bcmol/g/day capacity.",
+        "falsifiable_by": "Human PK-PD with hepatic ROS measured >5% GSH use.",
+        "model": "grok"
+      },
+      {
+        "statement": "Safety margin >50x (TI>>10) in healthy liver; narrows to ~5-10x in compromised.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "Therapeutic 1-10\u03bcM >> chronic ss 0.1\u03bcM; threshold >20\u03bcM GSH drop requires >10x overload.",
+        "falsifiable_by": "Chronic trials showing GSH <80% baseline at 50mg/day.",
+        "model": "grok"
+      },
+      {
+        "statement": "CBD-VDAC1 binding reversible (t_off <<12hr); allosteric gating resets post-dissociation.",
+        "type": 3,
+        "confidence": 0.5,
+        "mechanism": "Non-covalent H-bond/hydrophobic; VDAC dynamics (ns-\u03bcs gating) >> drug residence (<hr, per k_off~Kd/k_on).",
+        "falsifiable_by": "Washout electrophysiol. showing persistent gating change >1hr.",
+        "model": "grok"
+      },
+      {
+        "statement": "7-OH-CBD accumulates 2-5x (t1/2~3x CBD), but [7OH_ss] <0.2\u03bcM, negligible VDAC occ (<2%) sans affinity data.",
+        "type": 3,
+        "confidence": 0.4,
+        "mechanism": "Major metabolite (30-40% dose), slower CL; assumes Kd>>CBD (steric/OH group).",
+        "falsifiable_by": "7OH-VDAC Kd <10\u03bcM + ss>1\u03bcM.",
+        "model": "grok"
+      },
+      {
+        "statement": "Null defeated: no progressive GSH/VDAC/ATP cumulation at 50mg/day healthy liver.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "Reversible low-occupancy + GSH >> load; ATP deficit scales linearly/reverses, no compounding.",
+        "falsifiable_by": "Serial biopsies showing GSH decline or VDAC dysfunction over 4wks. \u2500\u2500\u2500",
+        "model": "grok"
+      },
+      {
+        "statement": "The *de novo* GSH synthesis rate in a healthy human liver (~2.3 umol/g/hr) is robust, but can be impaired by >50% (>2x difference) in metabolically compromised states like NAFLD, drastically reducing the buffering capacity.",
+        "type": 1,
+        "confidence": 0.9,
+        "mechanism": "Healthy hepatocytes maintain high GSH turnover, but conditions like NAFLD involve oxidative stress and inflammation that both consume GSH and downregulate key synthesis enzymes (e.g., GCLC).",
+        "falsifiable_by": "A study showing that GSH synthesis rates in cohorts with diagnosed, moderate-to-severe NAFLD are consistently within 50% of healthy controls.",
+        "model": "gemini"
+      },
+      {
+        "statement": "At 50mg/day, the peak mitochondrial VDAC occupancy in a healthy individual remains far below the toxic threshold, and the resultant ROS load is a minor fraction (<5%) of the liver's daily GSH regeneration capacity.",
+        "type": 2,
+        "confidence": 0.8,
+        "mechanism": "A 50mg oral dose yields low micromolar or sub-micromolar plasma concentrations; even with first-pass accumulation, sustained hepatocyte concentrations are unlikely to approach the 11 uM VDAC1 Kd, resulting in minimal occupancy and a negligible oxidative burden.",
+        "falsifiable_by": "Direct measurement of hepatocyte CBD concentration via liver biopsy or advanced imaging in subjects at steady-state 50mg/day dosing, showing levels consistently >5 uM.",
+        "model": "gemini"
+      },
+      {
+        "statement": "CBD-VDAC allosteric binding is reversible on a timescale of hours, and the channel's gating function resets upon CBD dissociation, preventing cumulative VDAC dysfunction between standard 12-24 hour dosing intervals.",
+        "type": 2,
+        "confidence": 0.85,
+        "mechanism": "Allosteric modulation is typically a transient, concentration-dependent process; without a covalent bond or induced conformational lock, the protein should revert to its native state as local CBD concentration decreases post-absorption.",
+        "falsifiable_by": "Patch-clamp electrophysiology showing that VDAC channels from CBD-treated mitochondria retain altered gating properties even after extensive washout. \u2500\u2500\u2500",
+        "model": "gemini"
+      },
+      {
+        "statement": "At 50 mg oral CBD/day, the estimated peak hepatic portal concentration of CBD + 7-OH-CBD is < 5 \u03bcM, which is below the VDAC1 Kd (11 \u03bcM) for most of the dosing interval.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "Low oral bioavailability (6-19%) and high first-pass metabolism limit systemic and hepatic exposure of parent CBD.",
+        "falsifiable_by": "Direct measurement of hepatic portal vein concentrations in a primate model showing sustained concentrations >10 \u03bcM.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "In a healthy liver, daily GSH synthesis capacity (~5-10 \u03bcmol/g liver/24h) vastly exceeds the oxidative load from sub-Kd CBD exposure, preventing progressive depletion.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "The GSH system is a high-capacity, inducible buffer; the predicted molar quantity of ROS from partial VDAC engagement at low [CBD] is negligible relative to GSH turnover.",
+        "falsifiable_by": "Liver biopsy studies in chronic CBD users showing a >40% reduction in GSH/GSSG ratio compared to matched controls.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "7-OH-CBD accumulation at steady-state does not meaningfully widen the VDAC occupancy window because its concentration remains low and its VDAC1 affinity is unknown but likely weaker than CBD.",
+        "type": 3,
+        "confidence": 0.6,
+        "mechanism": "7-OH-CBD's slower clearance is offset by its lower lipophilicity and probable reduced affinity for the VDAC1 pore wall compared to the parent cannabinoid.",
+        "falsifiable_by": "Radioligand binding assay showing 7-OH-CBD VDAC1 Kd < 20 \u03bcM and pharmacokinetic data showing its steady-state C_min > 2 \u03bcM.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "The null hypothesis of progressive GSH depletion or cumulative VDAC dysfunction from 50 mg/day in healthy liver is defeated; the primary chronic risk is from pre-existing liver compromise, not cumulative load in healthy tissue.",
+        "type": 2,
+        "confidence": 0.8,
+        "mechanism": "The safety margin is defined by acute buffering capacity, not cumulative damage, provided each day's stressor load is cleared within the hepatic recovery cycle.",
+        "falsifiable_by": "Longitudinal study in healthy subjects showing a dose-dependent rise in serum ALT or mitochondrial DNA damage after 3 months of 50 mg/day use. \u2500\u2500\u2500",
+        "model": "deepseek"
+      }
+    ]
+  }
+}

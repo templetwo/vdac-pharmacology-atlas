@@ -1,0 +1,157 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "Valproic acid (VPA) directly modulates VDAC1, promoting an open state that contributes to its mitochondrial toxicity.",
+      "mechanism": "VPA, a fatty acid anion present at high therapeutic concentrations (300-700 \u00b5M), electrostatically and hydrophobically interacts with VDAC1, stabilizing its high-conductance state.",
+      "falsifiable_by": "A reconstituted VDAC1 lipid bilayer system showing no change in channel open probability or conductance in the presence of 500 \u00b5M VPA.",
+      "type": 0,
+      "confidence": 0.72,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac1', 'upregulates', 'vpa'), ('vdac1', 'interacts', 'vpa'), ('vdac1', 'modulates', 'vpa')})",
+      "chunk_text": "Valproic acid (VPA) directly modulates VDAC1, promoting an open state that contributes to its mitochondrial toxicity."
+    },
+    {
+      "statement": "NAPQI interacts with VDAC1 via covalent modification of exposed cysteine residue(s) (Cys127, Cys232), contributing to mitochondrial permeability transition during acetaminophen toxicity.",
+      "mechanism": "NAPQI is a potent electrophile that modifies protein thiols; VDAC1 has solvent-accessible cysteines in the channel wall; thiol modification is known to shift VDAC gating to closed state.",
+      "falsifiable_by": "Mass spectrometry of VDAC from APAP-treated hepatocyte mitochondria showing no NAPQI adducts on VDAC cysteines.",
+      "type": 0,
+      "confidence": 0.64,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('napqi', 'interacts', 'vdac1')})",
+      "chunk_text": "NAPQI interacts with VDAC1 via covalent modification of exposed cysteine residue(s) (Cys127, Cys232), contributing to mitochondrial permeability transition during acetaminophen toxicity."
+    },
+    {
+      "statement": "Lipophilic statins (e.g., atorvastatin) are low-affinity VDAC modulators, and their accumulation in the outer mitochondrial membrane is a key initiating factor in statin-associated myopathy.",
+      "mechanism": "High local concentrations of the statin in the outer membrane allosterically constrain VDAC's conformation, impairing metabolite flux and triggering downstream mitochondrial stress pathways.",
+      "falsifiable_by": "Muscle-specific VDAC1 knockout mice showing complete resistance to statin-induced myopathy despite similar statin accumulation in muscle tissue.",
+      "type": 0,
+      "confidence": 0.5,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "Lipophilic statins (e.g., atorvastatin) are low-affinity VDAC modulators, and their accumulation in the outer mitochondrial membrane is a key initiating factor in statin-associated myopathy."
+    },
+    {
+      "statement": "Metformin at mitochondrial matrix concentrations (estimated 1\u201310 mM due to membrane-potential-driven accumulation) likely modulates VDAC gating from the intermembrane space side, but published direct binding data are absent.",
+      "mechanism": "Metformin is a cationic biguanide that accumulates ~1000\u00d7 in mitochondria; VDAC voltage-sensing is charge-sensitive; high local concentrations could alter channel selectivity.",
+      "falsifiable_by": "Planar bilayer recordings with metformin titration showing no effect on VDAC conductance up to 10 mM.",
+      "type": 1,
+      "confidence": 0.633,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "Metformin at mitochondrial matrix concentrations (estimated 1\u201310 mM due to membrane-potential-driven accumulation) likely modulates VDAC gating from the intermembrane space side, but published direct binding data are absent."
+    },
+    {
+      "statement": "The top 20 mitochondrial-acting drugs\u2019 VDAC interaction likelihood correlates with logP > 3 and pKa < 7.4 (anionic at cytosolic pH).",
+      "mechanism": "Drugs with high logP partition into mitochondrial membranes, increasing VDAC1 encounter probability; anionic charge favors binding to VDAC1\u2019s cationic N-terminus.",
+      "falsifiable_by": "A screen of 20 drugs finds no correlation between logP/pKa and VDAC1 binding affinity. --- \u2500\u2500\u2500",
+      "type": 2,
+      "confidence": 0.625,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac', 'upregulates', 'vdac1')})",
+      "chunk_text": "The top 20 mitochondrial-acting drugs\u2019 VDAC interaction likelihood correlates with logP > 3 and pKa < 7.4 (anionic at cytosolic pH)."
+    },
+    {
+      "statement": "Metformin does not directly engage VDAC1 gating at therapeutic mito concentrations (>>100\u03bcM).",
+      "mechanism": "Metformin's polypharmacy on Complex I/ANT lacks structural mimicry to VDAC1 ligands (e.g., no amphipathicity for MOM partition).",
+      "falsifiable_by": "SPR/BLI assay showing metformin Kd <500\u03bcM on VDAC1 protein.",
+      "type": 3,
+      "confidence": 0.9,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('ant', 'interacts', 'mom'), ('vdac1', 'interacts', 'ant')})",
+      "chunk_text": "Metformin does not directly engage VDAC1 gating at therapeutic mito concentrations (>>100\u03bcM)."
+    },
+    {
+      "statement": "Among top 20 mito drugs (metformin, atorva, aspirin, omeprazole), predicted VDAC1 interactors at C_eff/TI: VPA >>> aspirin > simvastatin > naproxen; metformin/levothyroxine negligible.",
+      "mechanism": "QSAR: logP>3 + H-bond acceptors correlate with VDAC1 \u03b2-sheet binding (CBD analog).",
+      "falsifiable_by": "CETSA shift assay on VDAC1 thermal stability by top 5 candidates. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'vdac1')})",
+      "chunk_text": "Among top 20 mito drugs (metformin, atorva, aspirin, omeprazole), predicted VDAC1 interactors at C_eff/TI: VPA >>> aspirin > simvastatin > naproxen; metformin/levothyroxine negligible."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.05083333333333333,
+      "cosine": 0.8294755935668945,
+      "jsd": 0.08692102301923141,
+      "kappa": 0.9605815538391641,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.22727272727272727,
+        "2": 0.45454545454545453,
+        "3": 0.3181818181818182
+      },
+      "type_01_ratio": 0.22727272727272727,
+      "n_claims_per_model": [
+        5,
+        5,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.7342857142857143,
+      "cosine": 0.9547163903713226,
+      "jsd": 0.15210217430971282,
+      "kappa": 0.9535649935649934,
+      "type_distribution": {
+        "0": 0.6818181818181818,
+        "1": 0.13636363636363635,
+        "2": 0.09090909090909091,
+        "3": 0.09090909090909091
+      },
+      "type_01_ratio": 0.8181818181818181,
+      "n_claims_per_model": [
+        5,
+        5,
+        5,
+        4,
+        3
+      ]
+    }
+  ]
+}
