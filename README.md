@@ -221,6 +221,7 @@ This is open science under CC BY 4.0. If you have:
 | IRIS Gate Evo | [templetwo/iris-gate-evo](https://github.com/templetwo/iris-gate-evo) | Convergence engine — multi-model validation |
 | IRIS Evo Findings | [templetwo/iris-evo-findings](https://github.com/templetwo/iris-evo-findings) | Run data, gold extraction, cross-run analysis |
 | bioRxiv Preprint | [BIORXIV/2026/706165](https://doi.org/10.1101/2026.02.16.706165) | Manuscript under review |
+| Hugging Face Dataset | [TheTempleofTwo/vdac-pharmacology-atlas](https://huggingface.co/datasets/TheTempleofTwo/vdac-pharmacology-atlas) | Full convergence corpus (22 runs, 159 claims) |
 | OSF Archive | [osf.io/nuxhv](https://osf.io/nuxhv/) | Datasets, protocol packages |
 
 ## License
