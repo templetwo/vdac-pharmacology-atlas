@@ -31,6 +31,10 @@ abstract: >-
   and 24 operationalized hypotheses. The central finding is a cofactor equation
   whose every variable has a physical address on the protein, and whose every
   term cancer corrupts simultaneously.
+identifiers:
+  - type: other
+    value: "BIORXIV/2026/706165"
+    description: "bioRxiv manuscript ID"
 references:
   - type: software
     title: "IRIS Gate Evo"

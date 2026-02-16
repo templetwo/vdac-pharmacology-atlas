@@ -4,7 +4,8 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Status: v1.0 Released](https://img.shields.io/badge/Status-v1.0%20Released-blue.svg)]()
-[![Preprint: OSF](https://img.shields.io/badge/Preprint-OSF-orange.svg)](https://osf.io/nuxhv/)
+[![Preprint: bioRxiv](https://img.shields.io/badge/Preprint-bioRxiv-b31b1b.svg)](https://doi.org/10.1101/2026.02.16.706165)
+[![Archive: OSF](https://img.shields.io/badge/Archive-OSF-orange.svg)](https://osf.io/nuxhv/)
 
 **Anthony J. Vasquez Sr.** (Delaware Valley University) and **Claude Opus 4.6** (Anthropic)
 
@@ -219,7 +220,8 @@ This is open science under CC BY 4.0. If you have:
 | CBD Two-Pathway Model | [templetwo/cbd-two-pathway-model](https://github.com/templetwo/cbd-two-pathway-model) | Proof of concept — CBD as VDAC stress test |
 | IRIS Gate Evo | [templetwo/iris-gate-evo](https://github.com/templetwo/iris-gate-evo) | Convergence engine — multi-model validation |
 | IRIS Evo Findings | [templetwo/iris-evo-findings](https://github.com/templetwo/iris-evo-findings) | Run data, gold extraction, cross-run analysis |
-| OSF Archive | [osf.io/nuxhv](https://osf.io/nuxhv/) | Preprint, datasets, protocol packages |
+| bioRxiv Preprint | [BIORXIV/2026/706165](https://doi.org/10.1101/2026.02.16.706165) | Manuscript under review |
+| OSF Archive | [osf.io/nuxhv](https://osf.io/nuxhv/) | Datasets, protocol packages |
 
 ## License
 
@@ -234,7 +236,8 @@ CC BY 4.0. Use it, build on it, cite it.
   author={Vasquez, Anthony J., Sr. and Claude Opus 4.6},
   year={2026},
   url={https://github.com/templetwo/vdac-pharmacology-atlas},
-  note={Preprint. 20 IRIS runs, 139 claims, 5 independent AI models.
-        CC BY 4.0.}
+  journal={bioRxiv},
+  doi={10.1101/2026.02.16.706165},
+  note={20 IRIS runs, 139 claims, 5 independent AI models. CC BY 4.0.}
 }
 ```
