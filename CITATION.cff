@@ -31,7 +31,11 @@ abstract: >-
   and 24 operationalized hypotheses. The central finding is a cofactor equation
   whose every variable has a physical address on the protein, and whose every
   term cancer corrupts simultaneously.
+doi: "10.17605/OSF.IO/C9RQB"
 identifiers:
+  - type: doi
+    value: "10.17605/OSF.IO/C9RQB"
+    description: "OSF archive DOI"
   - type: other
     value: "BIORXIV/2026/706165"
     description: "bioRxiv manuscript ID"
