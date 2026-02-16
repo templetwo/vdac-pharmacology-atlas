@@ -5,7 +5,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Status: v1.0 Released](https://img.shields.io/badge/Status-v1.0%20Released-blue.svg)]()
 [![Preprint: bioRxiv](https://img.shields.io/badge/Preprint-bioRxiv-b31b1b.svg)](https://doi.org/10.1101/2026.02.16.706165)
-[![Archive: OSF](https://img.shields.io/badge/Archive-OSF-orange.svg)](https://osf.io/nuxhv/)
+[![Archive: OSF](https://img.shields.io/badge/Archive-OSF-orange.svg)](https://osf.io/c9rqb/)
 
 **Anthony J. Vasquez Sr.** (Delaware Valley University) and **Claude Opus 4.6** (Anthropic)
 
@@ -222,7 +222,7 @@ This is open science under CC BY 4.0. If you have:
 | IRIS Evo Findings | [templetwo/iris-evo-findings](https://github.com/templetwo/iris-evo-findings) | Run data, gold extraction, cross-run analysis |
 | bioRxiv Preprint | [BIORXIV/2026/706165](https://doi.org/10.1101/2026.02.16.706165) | Manuscript under review |
 | Hugging Face Dataset | [TheTempleofTwo/vdac-pharmacology-atlas](https://huggingface.co/datasets/TheTempleofTwo/vdac-pharmacology-atlas) | Full convergence corpus (22 runs, 159 claims) |
-| OSF Archive | [osf.io/nuxhv](https://osf.io/nuxhv/) | Datasets, protocol packages |
+| OSF Archive | [osf.io/c9rqb](https://osf.io/c9rqb/) | Manuscript, datasets, protocol packages |
 
 ## License
 
