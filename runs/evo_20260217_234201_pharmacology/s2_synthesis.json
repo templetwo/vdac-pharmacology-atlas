@@ -1,0 +1,168 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "3:** Mfn2-mediated cholesterol transfer at ER-mitochondria contacts stabilizes VDAC1 in a closed, low-conductance state, reducing accessibility of pore-targeting drugs (e.g., CBD) by 2\u20134-fold.",
+      "mechanism": "Cholesterol thickens the OMM, favoring VDAC1\u2019s closed conformation where the N-terminal helix occludes the pore, altering the binding pocket for ligands requiring the open state.",
+      "falsifiable_by": "VDAC1 conductance measurements in Mfn2-KO cells showing no cholesterol-dependent closure, or CBD binding assays in cholesterol-depleted OMM.",
+      "type": 0,
+      "confidence": 0.63,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cbd', 'downregulates', 'vdac1')})",
+      "chunk_text": "3:** Mfn2-mediated cholesterol transfer at ER-mitochondria contacts stabilizes VDAC1 in a closed, low-conductance state, reducing accessibility of pore-targeting drugs (e.g., CBD) by 2\u20134-fold."
+    },
+    {
+      "statement": "5:** The transient VDAC1 distortion during fission is pharmacologically irrelevant for drugs with slow binding kinetics (e.g., CBD, Kd = 11 \u00b5M), as the fission neck\u2019s lifetime (~1\u201310 ms) is orders of magnitude shorter than the drug\u2019s residence time (~seconds).",
+      "mechanism": "Drug binding requires milliseconds to seconds; the fission neck\u2019s high-curvature state is too brief to significantly alter steady-state drug occupancy.",
+      "falsifiable_by": "Single-molecule tracking showing CBD binding/unbinding during fission events, or drugs with faster kinetics (e.g., doxorubicin, IC50 = 0.5 \u00b5M) exhibiting altered efficacy during fission. --- ###",
+      "type": 0,
+      "confidence": 0.788,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'vdac1')})",
+      "chunk_text": "5:** The transient VDAC1 distortion during fission is pharmacologically irrelevant for drugs with slow binding kinetics (e.g., CBD, Kd = 11 \u00b5M), as the fission neck\u2019s lifetime (~1\u201310 ms) is orders of magnitude shorter than the drug\u2019s residence time (~seconds)."
+    },
+    {
+      "statement": "Mitochondrial fragmentation disrupts VDAC1 hexagonal lattices by reducing available flat membrane patches (<100 nm), shifting the population towards dispersed monomers/dimers and altering pharmacology for drugs that bind at oligomeric interfaces.",
+      "mechanism": "The high curvature of small, fragmented mitochondria is energetically unfavorable for large, rigid protein lattices, favoring entropically-driven dispersal of VDAC1 monomers.",
+      "falsifiable_by": "Cryo-EM tomography showing no significant difference in VDAC1 lattice domain size between hyper-fused and hyper-fragmented mitochondria.",
+      "type": 0,
+      "confidence": 0.475,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "Mitochondrial fragmentation disrupts VDAC1 hexagonal lattices by reducing available flat membrane patches (<100 nm), shifting the population towards dispersed monomers/dimers and altering pharmacology for drugs that bind at oligomeric interfaces."
+    },
+    {
+      "statement": "VDAC1 density (~3,000/\u00b5m\u00b2) is conserved in fragmented vs. fused mitochondria, as total OMM area scales with biogenesis, not morphology; fragmentation dilutes lattice domains but not local density.",
+      "mechanism": "Import/transcription couples VDAC1 to mt mass; fission multiplies organelles without net OMM loss.",
+      "falsifiable_by": "Quantitative WB + EM on size-fractionated isolated mitochondria showing density \u221d total OMM, not fragment #.",
+      "type": 1,
+      "confidence": 0.667,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'omm')})",
+      "chunk_text": "VDAC1 density (~3,000/\u00b5m\u00b2) is conserved in fragmented vs. fused mitochondria, as total OMM area scales with biogenesis, not morphology; fragmentation dilutes lattice domains but not local density."
+    },
+    {
+      "statement": "Drp1-mediated fission induces transient high-curvature constriction (neck radius ~20-50 nm) that distorts VDAC1 \u03b2-barrel, widening pore conductance ~1.5-2x but not forcing stable oligomerization (reverts <10s post-scission).",
+      "mechanism": "Curvature stress elongates \u03b2-strands, exposing binding pockets temporarily, but elastic relaxation and VDAC1 mobility restore monomer state.",
+      "falsifiable_by": "CryoET of Drp1 puncta showing unchanged VDAC1 barrel diameter/oligomer % vs. controls.",
+      "type": 2,
+      "confidence": 0.725,
+      "overlap_count": 2,
+      "models": [
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "Drp1-mediated fission induces transient high-curvature constriction (neck radius ~20-50 nm) that distorts VDAC1 \u03b2-barrel, widening pore conductance ~1.5-2x but not forcing stable oligomerization (reverts <10s post-scission)."
+    },
+    {
+      "statement": "5**: Mdivi-1 (Drp1 inhibitor) indirectly reduces VDAC1 drug accessibility by promoting fusion, increasing ER-mito contacts, enriching OMM cholesterol, and stabilizing closed VDAC1.",
+      "mechanism": "Mdivi-1 \u2192 hyperfusion \u2192 more MAM contacts \u2192 cholesterol transfer \u2192 VDAC1 closed state. This predicts mdivi-1 pre-treatment would increase CBD's apparent Kd from ~11 \u00b5M to ~25-40 \u00b5M.",
+      "falsifiable_by": "CBD dose-response in mdivi-1-pretreated",
+      "type": 2,
+      "confidence": 0.45,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "mistral"
+      ],
+      "tuples": "frozenset({('er', 'upregulates', 'vdac1'), ('cbd', 'upregulates', 'vdac1')})",
+      "chunk_text": "5**: Mdivi-1 (Drp1 inhibitor) indirectly reduces VDAC1 drug accessibility by promoting fusion, increasing ER-mito contacts, enriching OMM cholesterol, and stabilizing closed VDAC1."
+    },
+    {
+      "statement": "2: Fragmentation does not alter the *effective* VDAC1 target density for a drug in solution, because the increased organelle count is offset by conserved total OMM area and maintained surface density, leaving the drug's target encounter rate unchanged.",
+      "mechanism": "The drug's diffusion and binding are governed by the total number of accessible targets in the cell volume, not their distribution across many small organelles.",
+      "falsifiable_by": "Quantitative super-resolution imaging showing a >2-fold change in VDAC1 surface density (molecules/\u00b5m\u00b2) between fused and fragmented states in the same cell line.",
+      "type": 3,
+      "confidence": 0.65,
+      "overlap_count": 1,
+      "models": [
+        "deepseek"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'omm')})",
+      "chunk_text": "2: Fragmentation does not alter the *effective* VDAC1 target density for a drug in solution, because the increased organelle count is offset by conserved total OMM area and maintained surface density, leaving the drug's target encounter rate unchanged."
+    },
+    {
+      "statement": "Fusion-promoting drugs (mdivi-1) indirectly worsen VDAC1 pharmacology (e.g., CBD EC50 \u21911.5-2x) by enriching OMM chol and flattening geometry, stabilizing closed states.",
+      "mechanism": "Inhibited fission \u2192 Mfn2\u2191 \u2192 chol transfer\u2191 \u2192 lattice reformation \u2192 low-affinity VDAC1.",
+      "falsifiable_by": "mdivi-1 treated cells with chol oxidase showing restored CBD potency. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.55,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('ec50', 'interacts', 'omm'), ('vdac1', 'interacts', 'cbd'), ('cbd', 'interacts', 'ec50')})",
+      "chunk_text": "Fusion-promoting drugs (mdivi-1) indirectly worsen VDAC1 pharmacology (e.g., CBD EC50 \u21911.5-2x) by enriching OMM chol and flattening geometry, stabilizing closed states."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.14032106782106782,
+      "cosine": 0.8467268347740173,
+      "jsd": 0.19592811249199166,
+      "kappa": 0.8998412194347412,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.2727272727272727,
+        "2": 0.45454545454545453,
+        "3": 0.2727272727272727
+      },
+      "type_01_ratio": 0.2727272727272727,
+      "n_claims_per_model": [
+        5,
+        5,
+        5,
+        3,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.4666666666666667,
+      "cosine": 0.9389935553073883,
+      "jsd": 0.17191329150251947,
+      "kappa": 0.930882882882883,
+      "type_distribution": {
+        "0": 0.5909090909090909,
+        "1": 0.13636363636363635,
+        "2": 0.18181818181818182,
+        "3": 0.09090909090909091
+      },
+      "type_01_ratio": 0.7272727272727273,
+      "n_claims_per_model": [
+        5,
+        5,
+        5,
+        3,
+        4
+      ]
+    }
+  ]
+}

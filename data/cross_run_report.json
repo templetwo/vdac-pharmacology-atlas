@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-14T06:07:24.323186+00:00",
+  "timestamp": "2026-02-17T23:41:19.454834+00:00",
   "runs_analyzed": [
     {
       "session_id": "evo_20260210_232904_pharmacology",
@@ -126,9 +126,61 @@
       "question": "What are the mechanisms by which metformin produces dose-dependent divergent outcomes \u2014 metabolic benefit and insulin sensitization at therapeutic doses versus lactic acidosis and mitochondrial toxici",
       "s3_passed": false,
       "n_claims": 12
+    },
+    {
+      "session_id": "evo_20260217_035010_pharmacology",
+      "domain": "pharmacology",
+      "question": "Does ultrasound exposure at clinically relevant intensities (0.1-3 W/cm\u00b2, 1-3 MHz diagnostic or 20-100 kHz therapeutic) alter VDAC1 oligomeric state through outer mitochondrial membrane lipid reorgani",
+      "s3_passed": true,
+      "n_claims": 6
+    },
+    {
+      "session_id": "evo_20260217_035450_pharmacology",
+      "domain": "pharmacology",
+      "question": "Does ultrasound exposure at clinically relevant intensities (0.1-3 W/cm\u00b2, 1-3 MHz diagnostic or 20-100 kHz therapeutic) alter VDAC1 oligomeric state through outer mitochondrial membrane lipid reorgani",
+      "s3_passed": false,
+      "n_claims": 9
+    },
+    {
+      "session_id": "evo_20260217_233407_pharmacology",
+      "domain": "pharmacology",
+      "question": "What are the mechanisms by which erastin induces ferroptotic cell death through VDAC1/2/3, and why does it show selectivity for RAS-mutant cancer cells? Specifically: (1) Does erastin bind VDAC direct",
+      "s3_passed": false,
+      "n_claims": 10
+    },
+    {
+      "session_id": "evo_20260217_233429_pharmacology",
+      "domain": "pharmacology",
+      "question": "What are the mechanisms by which ketamine produces rapid antidepressant effects within hours, and is there a mitochondrial component beyond NMDA receptor antagonism? Specifically: (1) Does ketamine at",
+      "s3_passed": true,
+      "n_claims": 8
     }
   ],
   "cross_matches": [
+    {
+      "run_a": "evo_20260213_214547_pharmacology",
+      "run_b": "evo_20260217_035010_pharmacology",
+      "cosine": 0.8045,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 0,
+      "type_b": 0,
+      "statement_a": "The Chol/CL ratio in the OMM physically determines the fraction of VDAC1 in honeycomb vs. dispersed states, and this ratio is mechanistically embedded in the apoptotic threshold equation.",
+      "statement_b": "Reorganization of OMM cholesterol-rich lipid domains can shift VDAC1 from a honeycomb to a dispersed state.",
+      "mechanism_a": "Cholesterol stabilizes honeycomb arrays via lipid packing, while cardiolipin disrupts them by introducing negative curvature, shifting VDAC1 to oligomerization-competent monomers.",
+      "mechanism_b": "VDAC1 localization and oligomerization are modulated by lipid environment; cholesterol depletion disperses VDAC1 clusters, implying mechanical disruption of cholesterol domains would have a similar ef"
+    },
+    {
+      "run_a": "evo_20260217_035010_pharmacology",
+      "run_b": "evo_20260217_035450_pharmacology",
+      "cosine": 0.8,
+      "classification": "CROSS-PROMOTED",
+      "type_a": 0,
+      "type_b": 2,
+      "statement_a": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells.",
+      "statement_b": "4**: *Cancer cells with cholesterol-loaded OMMs exhibit higher apoptotic thresholds under US due to stabilized VDAC1 monomers.* **TYPE**: 1 **CONFIDENCE**: 0.80 **MECHANISM**: Elevated Chol increases ",
+      "mechanism_a": "Elevated chol rigidifies domains but reduces CL-VDAC affinity, making lattice fragile to lower shear.",
+      "mechanism_b": ": Elevated Chol increases the cofactor equation\u2019s threshold (Threshold \u221d [Chol]/[CL]), requiring greater mechanical perturbation to trigger oligomerization."
+    },
     {
       "run_a": "evo_20260211_024747_pharmacology",
       "run_b": "evo_20260211_024750_neuroscience",
@@ -142,6 +194,18 @@
       "mechanism_b": "Low-dose THC produces biased signaling at CB1, sustaining Gi/o coupling to ERK/CREB without triggering \u03b2-arrestin-mediated internalization, thereby upregulating BDNF."
     },
     {
+      "run_a": "evo_20260217_035010_pharmacology",
+      "run_b": "evo_20260217_035450_pharmacology",
+      "cosine": 0.7896,
+      "classification": "CROSS-VALIDATED SINGULAR",
+      "type_a": 0,
+      "type_b": 3,
+      "statement_a": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells.",
+      "statement_b": "The elevated OMM cholesterol in cancer cells acts as a \"mechanoresistor,\" increasing the acoustic energy density required to trigger VDAC1-mediated apoptosis by a factor of 2-4 compared to normal cell",
+      "mechanism_a": "Elevated chol rigidifies domains but reduces CL-VDAC affinity, making lattice fragile to lower shear.",
+      "mechanism_b": "Increased cholesterol content (~35 mol% vs. <10%) raises the membrane's bending rigidity and stabilizes VDAC1 monomers, requiring more violent or numerous cavitation events to achieve the critical loc"
+    },
+    {
       "run_a": "evo_20260213_035958_pharmacology",
       "run_b": "evo_20260213_042930_pharmacology",
       "cosine": 0.789,
@@ -152,6 +216,18 @@
       "statement_b": "At 50mg/day oral CBD, steady-state hepatic [CBD] ~0.1-0.5\u03bcM (plasma 0.05-0.2\u03bcM \u00d7 liver enrichment), VDAC occ <5%, ROS load <<1 \u03bcmol/g liver/day (<2% GSH capacity).",
       "mechanism_a": "High first-pass CYP450 metabolism (CYP2C19/CYP3A4) and low bioavailability (6\u201319%) limit steady-state free liver [CBD] to ~1\u201310 \u00b5M; 7-OH-CBD (Kd unknown) may accumulate due to slower clearance.",
       "mechanism_b": "F=0.06-0.19 \u2192 ss_CBD = (dose\u00b7F / CL) / (1-e^{-k\u03c4}); first-pass transient; ROS~k\u00b7[CBD]\u00b7mito# but sub-Kd occupancy yields negligible integrated load vs 50-100\u03bcmol/g/day capacity."
+    },
+    {
+      "run_a": "evo_20260217_035010_pharmacology",
+      "run_b": "evo_20260217_035450_pharmacology",
+      "cosine": 0.7818,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 0,
+      "type_b": 1,
+      "statement_a": "Ultrasound at clinically relevant frequencies and intensities can deliver sufficient mechanical energy to the OMM to transiently disrupt lipid microdomains.",
+      "statement_b": "Therapeutic ultrasound (20-100 kHz) coupled with microbubbles generates localized inertial cavitation events capable of transiently expelling cholesterol from the VDAC1 lipid annulus, thereby favoring",
+      "mechanism_a": "Acoustic radiation force and cavitation-induced shear stress generate pressure and strain fields within the cell that exceed the low energy barriers for lipid lateral diffusion and phase separation.",
+      "mechanism_b": "The collapse of a cavitation microbubble near the OMM produces localized shear stresses (>1 MPa) and thermal spikes that overcome the ~20 kJ/mol energy barrier for cholesterol desorption from ordered "
     },
     {
       "run_a": "evo_20260210_232904_pharmacology",
@@ -204,6 +280,18 @@
   ],
   "cross_validated_singulars": [
     {
+      "run_a": "evo_20260217_035010_pharmacology",
+      "run_b": "evo_20260217_035450_pharmacology",
+      "cosine": 0.7896,
+      "classification": "CROSS-VALIDATED SINGULAR",
+      "type_a": 0,
+      "type_b": 3,
+      "statement_a": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells.",
+      "statement_b": "The elevated OMM cholesterol in cancer cells acts as a \"mechanoresistor,\" increasing the acoustic energy density required to trigger VDAC1-mediated apoptosis by a factor of 2-4 compared to normal cell",
+      "mechanism_a": "Elevated chol rigidifies domains but reduces CL-VDAC affinity, making lattice fragile to lower shear.",
+      "mechanism_b": "Increased cholesterol content (~35 mol% vs. <10%) raises the membrane's bending rigidity and stabilizes VDAC1 monomers, requiring more violent or numerous cavitation events to achieve the critical loc"
+    },
+    {
       "run_a": "evo_20260210_232904_pharmacology",
       "run_b": "evo_20260210_235609_pharmacology",
       "cosine": 0.7765,
@@ -230,6 +318,18 @@
   ],
   "independent_replications": [
     {
+      "run_a": "evo_20260213_214547_pharmacology",
+      "run_b": "evo_20260217_035010_pharmacology",
+      "cosine": 0.8045,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 0,
+      "type_b": 0,
+      "statement_a": "The Chol/CL ratio in the OMM physically determines the fraction of VDAC1 in honeycomb vs. dispersed states, and this ratio is mechanistically embedded in the apoptotic threshold equation.",
+      "statement_b": "Reorganization of OMM cholesterol-rich lipid domains can shift VDAC1 from a honeycomb to a dispersed state.",
+      "mechanism_a": "Cholesterol stabilizes honeycomb arrays via lipid packing, while cardiolipin disrupts them by introducing negative curvature, shifting VDAC1 to oligomerization-competent monomers.",
+      "mechanism_b": "VDAC1 localization and oligomerization are modulated by lipid environment; cholesterol depletion disperses VDAC1 clusters, implying mechanical disruption of cholesterol domains would have a similar ef"
+    },
+    {
       "run_a": "evo_20260213_035958_pharmacology",
       "run_b": "evo_20260213_042930_pharmacology",
       "cosine": 0.789,
@@ -240,6 +340,18 @@
       "statement_b": "At 50mg/day oral CBD, steady-state hepatic [CBD] ~0.1-0.5\u03bcM (plasma 0.05-0.2\u03bcM \u00d7 liver enrichment), VDAC occ <5%, ROS load <<1 \u03bcmol/g liver/day (<2% GSH capacity).",
       "mechanism_a": "High first-pass CYP450 metabolism (CYP2C19/CYP3A4) and low bioavailability (6\u201319%) limit steady-state free liver [CBD] to ~1\u201310 \u00b5M; 7-OH-CBD (Kd unknown) may accumulate due to slower clearance.",
       "mechanism_b": "F=0.06-0.19 \u2192 ss_CBD = (dose\u00b7F / CL) / (1-e^{-k\u03c4}); first-pass transient; ROS~k\u00b7[CBD]\u00b7mito# but sub-Kd occupancy yields negligible integrated load vs 50-100\u03bcmol/g/day capacity."
+    },
+    {
+      "run_a": "evo_20260217_035010_pharmacology",
+      "run_b": "evo_20260217_035450_pharmacology",
+      "cosine": 0.7818,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 0,
+      "type_b": 1,
+      "statement_a": "Ultrasound at clinically relevant frequencies and intensities can deliver sufficient mechanical energy to the OMM to transiently disrupt lipid microdomains.",
+      "statement_b": "Therapeutic ultrasound (20-100 kHz) coupled with microbubbles generates localized inertial cavitation events capable of transiently expelling cholesterol from the VDAC1 lipid annulus, thereby favoring",
+      "mechanism_a": "Acoustic radiation force and cavitation-induced shear stress generate pressure and strain fields within the cell that exceed the low energy barriers for lipid lateral diffusion and phase separation.",
+      "mechanism_b": "The collapse of a cavitation microbubble near the OMM produces localized shear stresses (>1 MPa) and thermal spikes that overcome the ~20 kJ/mol energy barrier for cholesterol desorption from ordered "
     }
   ],
   "structural_patterns": {
@@ -258,7 +370,9 @@
       "evo_20260213_182457_pharmacology",
       "evo_20260213_214547_pharmacology",
       "evo_20260214_041041_pharmacology",
-      "evo_20260214_043936_pharmacology"
+      "evo_20260214_043936_pharmacology",
+      "evo_20260217_035450_pharmacology",
+      "evo_20260217_233407_pharmacology"
     ],
     "dose_dependent": [
       "evo_20260210_232904_pharmacology",
@@ -268,7 +382,8 @@
       "evo_20260213_042930_pharmacology",
       "evo_20260213_174104_pharmacology",
       "evo_20260213_182457_pharmacology",
-      "evo_20260214_041041_pharmacology"
+      "evo_20260214_041041_pharmacology",
+      "evo_20260217_233429_pharmacology"
     ],
     "kinetic": [
       "evo_20260211_024747_pharmacology",
@@ -276,12 +391,12 @@
     ]
   },
   "stats": {
-    "total_claims": 159,
-    "cross_matches_found": 6,
-    "cross_validated_singulars": 2,
+    "total_claims": 192,
+    "cross_matches_found": 10,
+    "cross_validated_singulars": 3,
     "convergent_singulars": 0,
-    "independent_replications": 1,
-    "cross_promoted": 3,
+    "independent_replications": 3,
+    "cross_promoted": 4,
     "structural_patterns_found": 4
   }
 }

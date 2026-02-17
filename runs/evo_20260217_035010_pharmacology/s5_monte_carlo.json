@@ -1,0 +1,311 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF isolated mitochondria are exposed to 1-3 MHz ultrasound at 0.1-3 W/cm\u00b2 ISPTA in degassed buffer (cavitation suppressed), THEN Laurdan generalized polarization (GP) of the OMM will change by <0.02 GP units (within noise), compared to >0.05 GP shift with positive control M\u03b2CD cholesterol depletion.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "US_frequency": {
+          "mean": 1.9733069765385831,
+          "std": 0.5796439540210858,
+          "median": 1.958008363168834,
+          "ci_lower": 1.0553794087951116,
+          "ci_upper": 2.9283462890723793,
+          "min": 1.014724539502011,
+          "max": 2.9847511281116743
+        },
+        "US_intensity": {
+          "mean": 1.5654268838725565,
+          "std": 0.8230708798961266,
+          "median": 1.5890950664559003,
+          "ci_lower": 0.20471523139373027,
+          "ci_upper": 2.942349224844143,
+          "min": 0.11574651897323135,
+          "max": 2.997403718375292
+        },
+        "exposure_duration": {
+          "mean": 158.9808130741237,
+          "std": 48.555871520673016,
+          "median": 154.39746576794118,
+          "ci_lower": 80.4832122355535,
+          "ci_upper": 269.42400902774216,
+          "min": 69.51724053005853,
+          "max": 300.0
+        },
+        "dissolved_O2": {
+          "mean": 4.343069354912586,
+          "std": 2.1845114763378706,
+          "median": 4.268542825516596,
+          "ci_lower": 0.7805799527631463,
+          "ci_upper": 7.876420203547241,
+          "min": 0.5038905812427914,
+          "max": 7.995664319181409
+        },
+        "temperature": {
+          "mean": 31.016947237917762,
+          "std": 3.506235556274648,
+          "median": 30.815314012854195,
+          "ci_lower": 25.47135615201247,
+          "ci_upper": 36.709849843338816,
+          "min": 25.012809580272968,
+          "max": 36.960126538229844
+        },
+        "Laurdan_GP_baseline": {
+          "mean": 0.402731212985456,
+          "std": 0.05727875772243417,
+          "median": 0.39935369309900304,
+          "ci_lower": 0.31013994859003247,
+          "ci_upper": 0.4952706402421584,
+          "min": 0.30086115513353573,
+          "max": 0.4997659274667317
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5055296045180179,
+          "std": 0.11208919454403508,
+          "median": 0.5039188719504609,
+          "ci_lower": 0.29619190609487905,
+          "ci_upper": 0.7140369607101351,
+          "min": 0.15158533542712532,
+          "max": 0.7477331490094221
+        }
+      },
+      "effect_size": 0.9143,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF isolated mitochondria are exposed to 40 kHz ultrasound at 1-3 W/cm\u00b2 in air-saturated buffer, THEN OMM lipid domain reorganization (Laurdan GP decrease >0.05 and cholesterol-filipin puncta dispersal >30%) will occur; this effect will be abolished (>80% reduction) in degassed buffer.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "US_frequency": {
+          "mean": 59.862183420786316,
+          "std": 22.805705082607055,
+          "median": 59.59148101757546,
+          "ci_lower": 22.108643506951413,
+          "ci_upper": 97.6875000479288,
+          "min": 20.252012221227087,
+          "max": 99.83053954192964
+        },
+        "US_intensity": {
+          "mean": 1.7395139863515998,
+          "std": 0.7140846746891346,
+          "median": 1.7577166567700973,
+          "ci_lower": 0.553088138577894,
+          "ci_upper": 2.919496179706195,
+          "min": 0.5055512426603127,
+          "max": 2.9889566537890775
+        },
+        "mechanical_index": {
+          "mean": 1.15152645247756,
+          "std": 0.4855298729654104,
+          "median": 1.1160365801872407,
+          "ci_lower": 0.3578886732734434,
+          "ci_upper": 1.9619047394702864,
+          "min": 0.3286115324495791,
+          "max": 1.9963314694103418
+        },
+        "dissolved_O2_degassed": {
+          "mean": 0.6066329318343385,
+          "std": 0.23816991529310372,
+          "median": 0.6256909843268446,
+          "ci_lower": 0.21784842811407487,
+          "ci_upper": 0.9777922492192485,
+          "min": 0.2045066140652403,
+          "max": 0.998397291835288
+        },
+        "dissolved_O2_normal": {
+          "mean": 7.020348888411741,
+          "std": 0.5969986053438014,
+          "median": 7.0515454477594925,
+          "ci_lower": 6.079550478487374,
+          "ci_upper": 7.969231156640069,
+          "min": 6.008880430847818,
+          "max": 7.995257504149288
+        },
+        "cavitation_dose": {
+          "mean": 258.8943750528152,
+          "std": 77.99919238694272,
+          "median": 249.1586154768275,
+          "ci_lower": 135.5827658363923,
+          "ci_upper": 456.18745453885003,
+          "min": 113.88068878173019,
+          "max": 500.0
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5052058599378313,
+          "std": 0.11692618460479731,
+          "median": 0.508427374453284,
+          "ci_lower": 0.2545960079532066,
+          "ci_upper": 0.7238333473022839,
+          "min": 0.1791059054802655,
+          "max": 0.8282651149203355
+        }
+      },
+      "effect_size": 1.0029,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF OMM cholesterol is depleted by M\u03b2CD (5-10 mM, 30 min), THEN VDAC1 oligomerization (measured by EGS crosslinking and VDAC1-FRET) will increase >2-fold relative to vehicle, with concurrent loss of VDAC1 honeycomb clustering (>40% decrease in cluster size by STORM).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "M\u03b2CD_concentration": {
+          "mean": 7.824286786784436,
+          "std": 4.035729582752788,
+          "median": 7.474787187338062,
+          "ci_lower": 1.5251433949241522,
+          "ci_upper": 14.617150689545143,
+          "min": 1.0769345642597337,
+          "max": 14.935399606945783
+        },
+        "treatment_time": {
+          "mean": 36.801379723766246,
+          "std": 13.216510024669692,
+          "median": 36.19727686872735,
+          "ci_lower": 16.12207775222644,
+          "ci_upper": 58.64628577682573,
+          "min": 15.05788130808366,
+          "max": 59.6752287449542
+        },
+        "cholesterol_depletion_fraction": {
+          "mean": 0.4891490121372548,
+          "std": 0.17722411631529145,
+          "median": 0.47652023778050434,
+          "ci_lower": 0.21568936976633157,
+          "ci_upper": 0.7828183826935683,
+          "min": 0.20199428915641243,
+          "max": 0.796879454703569
+        },
+        "VDAC1_oligomer_baseline": {
+          "mean": 0.12039919325562025,
+          "std": 0.04226384464894183,
+          "median": 0.11564431728861159,
+          "ci_lower": 0.053219759618456826,
+          "ci_upper": 0.19275751710736627,
+          "min": 0.05006489758191238,
+          "max": 0.19955898530432106
+        },
+        "VDAC1_cluster_diameter_baseline": {
+          "mean": 145.26226815389313,
+          "std": 36.06518298798287,
+          "median": 150.79038486497538,
+          "ci_lower": 84.43187837766142,
+          "ci_upper": 197.0671716524595,
+          "min": 80.15270094034317,
+          "max": 199.37662426603262
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4934038742106948,
+          "std": 0.13223648032747326,
+          "median": 0.4865524462283509,
+          "ci_lower": 0.25886351030839905,
+          "ci_upper": 0.7579434521888677,
+          "min": 0.1525064590343752,
+          "max": 0.8466002656183298
+        }
+      },
+      "effect_size": 0.9216,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF cancer cells (MCF-7, HeLa) and matched normal cells (MCF-10A, HEK293) are exposed to graded mechanical perturbation (M\u03b2CD titration as lipid disruption proxy, or 40 kHz US with cavitation), THEN cancer cells will show a sharper sigmoidal dose-response curve for VDAC1 oligomerization (Hill coefficient >3 vs. <2 for normal cells) with a higher intensity threshold (EC50 ~1.3-2\u00d7 that of normal cells), but greater maximal response.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "cancer_OMM_cholesterol": {
+          "mean": 22.66159086629991,
+          "std": 4.307877568051124,
+          "median": 22.56089769297793,
+          "ci_lower": 15.302350070004348,
+          "ci_upper": 29.750640691269513,
+          "min": 15.000812887197128,
+          "max": 29.969186718167617
+        },
+        "normal_OMM_cholesterol": {
+          "mean": 10.013370078637896,
+          "std": 2.9278628407696075,
+          "median": 10.306552971474643,
+          "ci_lower": 5.190489555448856,
+          "ci_upper": 14.41112047190898,
+          "min": 5.027737832676741,
+          "max": 14.905402497056086
+        },
+        "cancer_OMM_cardiolipin": {
+          "mean": 6.401223906929783,
+          "std": 2.041118191378801,
+          "median": 6.44037767102502,
+          "ci_lower": 3.221058575196684,
+          "ci_upper": 9.698118572321057,
+          "min": 3.043720540201474,
+          "max": 9.9851598158575
+        },
+        "normal_OMM_cardiolipin": {
+          "mean": 14.85458624705745,
+          "std": 2.9178393367061055,
+          "median": 14.67755409158304,
+          "ci_lower": 10.3092730703797,
+          "ci_upper": 19.69031211746222,
+          "min": 10.09108786536807,
+          "max": 19.91113189643309
+        },
+        "Hill_coefficient_cancer": {
+          "mean": 3.941157922790083,
+          "std": 1.1375824177034772,
+          "median": 4.083515368087561,
+          "ci_lower": 2.069458793756362,
+          "ci_upper": 5.782246231084655,
+          "min": 2.0000816438002462,
+          "max": 5.994750653703388
+        },
+        "Hill_coefficient_normal": {
+          "mean": 1.981552037631302,
+          "std": 0.5821685579939196,
+          "median": 1.9842205951252674,
+          "ci_lower": 1.05471370526107,
+          "ci_upper": 2.9437971900561166,
+          "min": 1.0035158659943753,
+          "max": 2.9956495874753912
+        },
+        "EC50_ratio_cancer_to_normal": {
+          "mean": 1.9143458750203186,
+          "std": 0.5826862550119838,
+          "median": 1.8761086181321511,
+          "ci_lower": 1.0262447196036495,
+          "ci_upper": 2.897373882000006,
+          "min": 1.0038630810489277,
+          "max": 2.991868127861922
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4880994176534654,
+          "std": 0.10833855687962254,
+          "median": 0.48864511650981735,
+          "ci_lower": 0.2810282207039965,
+          "ci_upper": 0.6921607647909988,
+          "min": 0.21616770810465907,
+          "max": 0.8175493589536735
+        }
+      },
+      "effect_size": 0.5705,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 45
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_iterations": 1200,
+  "total_calls": 0
+}

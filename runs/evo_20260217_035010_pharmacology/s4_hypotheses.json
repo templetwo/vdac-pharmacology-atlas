@@ -1,0 +1,381 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF isolated mitochondria are exposed to 1-3 MHz ultrasound at 0.1-3 W/cm\u00b2 ISPTA in degassed buffer (cavitation suppressed), THEN Laurdan generalized polarization (GP) of the OMM will change by <0.02 GP units (within noise), compared to >0.05 GP shift with positive control M\u03b2CD cholesterol depletion.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "US_frequency",
+          "unit": "MHz",
+          "low": 1.0,
+          "high": 3.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "US_intensity",
+          "unit": "W/cm\u00b2",
+          "low": 0.1,
+          "high": 3.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "exposure_duration",
+          "unit": "s",
+          "low": 10.0,
+          "high": 300.0,
+          "distribution": "log-normal",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "dissolved_O2",
+          "unit": "mg/L",
+          "low": 0.5,
+          "high": 8.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "temperature",
+          "unit": "\u00b0C",
+          "low": 25.0,
+          "high": 37.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "Laurdan_GP_baseline",
+          "unit": "(normal,",
+          "low": 0.3,
+          "high": 0.5,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 8.0,
+      "experimental_protocol": "Isolate mitochondria from HeLa cells by differential centrifugation, load with Laurdan (5 \u03bcM, 30 min). Expose in degassed vs. non-degassed PBS to pulsed US (1 MHz and 3 MHz, 0.5/1.0/3.0 W/cm\u00b2, 60s) using a calibrated transducer with hydrophone verification. Image Laurdan GP by two-photon microscopy immediately pre/post. Parallel samples with 5 mM M\u03b2CD (30 min) as positive control. Timeline: 2 weeks.",
+      "expected_outcome": "No significant Laurdan GP change in degassed conditions at any intensity; possible GP shift (>0.03) only in non-degassed samples at \u22651 W/cm\u00b2 (cavitation-dependent). M\u03b2CD positive",
+      "null_outcome": "Significant GP change (>0.03) in degassed samples, indicating direct mechanical coupling independent of cavitation.",
+      "dose_ranges": {
+        "M\u03b2CD": {
+          "doses": [
+            1.0,
+            2.5,
+            5.0,
+            10.0
+          ],
+          "unit": "mM;"
+        },
+        "US intensity": {
+          "doses": [
+            0.1,
+            0.5,
+            1.0,
+            3.0
+          ],
+          "unit": "W/cm\u00b2"
+        }
+      },
+      "readouts": [
+        "Laurdan GP (two-photon",
+        "340/440 nm excitation",
+        "440/490 nm emission ratio)",
+        "temperature monitoring (thermocouple)",
+        "cavitation detection (passive cavitation detector)"
+      ],
+      "controls": [
+        "Sham US (transducer off)",
+        "degassed vs. air-saturated buffer",
+        "M\u03b2CD positive control",
+        "heat-matched control (water bath to US-equivalent \u0394T)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H2",
+      "prediction": "IF isolated mitochondria are exposed to 40 kHz ultrasound at 1-3 W/cm\u00b2 in air-saturated buffer, THEN OMM lipid domain reorganization (Laurdan GP decrease >0.05 and cholesterol-filipin puncta dispersal >30%) will occur; this effect will be abolished (>80% reduction) in degassed buffer.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "US_frequency",
+          "unit": "kHz",
+          "low": 20.0,
+          "high": 100.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "US_intensity",
+          "unit": "W/cm\u00b2",
+          "low": 0.5,
+          "high": 3.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "mechanical_index",
+          "unit": "(derived)",
+          "low": 0.3,
+          "high": 2.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "dissolved_O2_degassed",
+          "unit": "mg/L",
+          "low": 0.2,
+          "high": 1.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "dissolved_O2_normal",
+          "unit": "mg/L",
+          "low": 6.0,
+          "high": 8.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "cavitation_dose",
+          "unit": "mV\u00b7s",
+          "low": 0.0,
+          "high": 500.0,
+          "distribution": "log-normal",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Isolate mitochondria from HeLa/HEK293 cells. Expose to 40 kHz US (0.5, 1.0, 2.0, 3.0 W/cm\u00b2, 30-120s pulsed) in degassed (<1 mg/L O\u2082) or air-saturated buffer. Monitor cavitation via broadband noise (passive cavitation detector). Fix immediately, stain with filipin (cholesterol) and NAO (cardiolipin), image by structured illumination microscopy. Assess membrane integrity via cytochrome c release ELISA. Timeline: 3 weeks.",
+      "expected_outcome": "Air-saturated:",
+      "null_outcome": "Equal lipid reorganization in degassed and air-saturated conditions, indicating direct mechanical (non-cavitation) mechanism at kHz.",
+      "dose_ranges": {
+        "US intensity": {
+          "doses": [
+            0.5,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unit": "W/cm\u00b2;"
+        },
+        "exposure time": {
+          "doses": [
+            30.0,
+            60.0,
+            120.0
+          ],
+          "unit": "s"
+        }
+      },
+      "readouts": [
+        "Laurdan GP",
+        "filipin puncta count/dispersion (SIM)",
+        "NAO fluorescence redistribution",
+        "passive cavitation detection (broadband emission)",
+        "cytochrome c ELISA (membrane integrity)"
+      ],
+      "controls": [
+        "Sham US",
+        "degassed vs. saturated buffer",
+        "digitonin (0.01%) as membrane permeabilization positive control",
+        "temperature-matched controls",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H3",
+      "prediction": "IF OMM cholesterol is depleted by M\u03b2CD (5-10 mM, 30 min), THEN VDAC1 oligomerization (measured by EGS crosslinking and VDAC1-FRET) will increase >2-fold relative to vehicle, with concurrent loss of VDAC1 honeycomb clustering (>40% decrease in cluster size by STORM).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "M\u03b2CD_concentration",
+          "unit": "mM",
+          "low": 1.0,
+          "high": 15.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "treatment_time",
+          "unit": "min",
+          "low": 15.0,
+          "high": 60.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "cholesterol_depletion_fraction",
+          "unit": "(normal,",
+          "low": 0.2,
+          "high": 0.8,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "VDAC1_oligomer_baseline",
+          "unit": "fraction",
+          "low": 0.05,
+          "high": 0.2,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "VDAC1_cluster_diameter_baseline",
+          "unit": "nm",
+          "low": 80.0,
+          "high": 200.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 9.0,
+      "experimental_protocol": "Treat HEK293 and HeLa cells with M\u03b2CD (0, 1, 2.5, 5, 10 mM, 30 min, 37\u00b0C). For crosslinking: isolate mitochondria, treat with EGS (0.5 mM, 30 min), quench, run SDS-PAGE/Western for VDAC1 (monomer ~32 kDa, dimer ~64 kDa, oligomers >96 kDa). For FRET: transfect VDAC1-mCerulean + VDAC1-mVenus, measure FRET efficiency by acceptor photobleaching. For clustering: fix, immunostain VDAC1, image by STORM. Verify cholesterol depletion by Amplex Red assay on isolated mitochondria. Timeline: 2 weeks.",
+      "expected_outcome": "Dose-dependent increase in VDAC1 dimer/oligomer bands (>2-fold at 5 mM M\u03b2CD), increased FRET efficiency (>1.5-fold), decreased STORM cluster size (>40%), correlating with cholesterol depletion (>40%). Partial rescue by cholesterol repletion (cholesterol-M\u03b2CD complexes).",
+      "null_outcome": "No change in VDAC1 oligomeric state or clustering despite >40% cholesterol depletion, refuting lipid-dependent VDAC1 state model.",
+      "dose_ranges": {
+        "M\u03b2CD": {
+          "doses": [
+            0.0,
+            1.0,
+            2.5,
+            5.0,
+            10.0
+          ],
+          "unit": "mM;"
+        },
+        "M\u03b2CD rescue": {
+          "doses": [
+            0.0,
+            50.0,
+            100.0,
+            200.0
+          ],
+          "unit": "\u03bcM"
+        }
+      },
+      "readouts": [
+        "VDAC1 crosslinking/Western blot (oligomer:monomer ratio)",
+        "FRET efficiency",
+        "STORM cluster analysis (Ripley's K)",
+        "Amplex Red cholesterol assay",
+        "cytochrome c release",
+        "caspase-3 activity"
+      ],
+      "controls": [
+        "Vehicle (PBS)",
+        "cholesterol-M\u03b2CD repletion rescue",
+        "filipin staining confirmation",
+        "VDAC1-KD cells (shRNA) for antibody specificity",
+        "cardiolipin-supplemented liposomes",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H4",
+      "prediction": "IF cancer cells (MCF-7, HeLa) and matched normal cells (MCF-10A, HEK293) are exposed to graded mechanical perturbation (M\u03b2CD titration as lipid disruption proxy, or 40 kHz US with cavitation), THEN cancer cells will show a sharper sigmoidal dose-response curve for VDAC1 oligomerization (Hill coefficient >3 vs. <2 for normal cells) with a higher intensity threshold (EC50 ~1.3-2\u00d7 that of normal cells), but greater maximal response.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "cancer_OMM_cholesterol",
+          "unit": "mol%",
+          "low": 15.0,
+          "high": 30.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "normal_OMM_cholesterol",
+          "unit": "mol%",
+          "low": 5.0,
+          "high": 15.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "cancer_OMM_cardiolipin",
+          "unit": "mol%",
+          "low": 3.0,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "normal_OMM_cardiolipin",
+          "unit": "mol%",
+          "low": 10.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "Hill_coefficient_cancer",
+          "unit": "(log-normal)",
+          "low": 2.0,
+          "high": 6.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "Hill_coefficient_normal",
+          "unit": "(log-normal)",
+          "low": 1.0,
+          "high": 3.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "EC50_ratio_cancer_to_normal",
+          "unit": "(log-normal,",
+          "low": 1.0,
+          "high": 3.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Culture MCF-7 vs. MCF-10A and HeLa vs. HEK293 in parallel. First, characterize baseline OMM lipidomes by LC-MS/MS on isolated mitochondria. Then expose to graded M\u03b2CD (0-15 mM, 8",
+      "expected_outcome": "",
+      "null_outcome": "",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": []
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_calls": 1,
+  "latency_s": 54.52
+}

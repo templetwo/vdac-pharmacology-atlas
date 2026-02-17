@@ -1,0 +1,51 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260217_234138_pharmacology
+Date: 2026-02-17
+Protocol: evo-1.0
+
+QUESTION:
+  What is the role of calcium oscillations in VDAC1 gating, and does the frequency of mitochondrial calcium uptake encode information about cell fate? Specifically: (1) VDAC1 is voltage-gated and calcium-permeable — do physiological calcium oscillations (0.1-10 Hz) open and close VDAC1 rhythmically, creating a pulsatile metabolite flux? (2) Does the frequency of calcium transients determine whether VDAC1 stays monomeric (survival) or oligomerizes (death) — is there a frequency threshold? (3) How does the MCU (mitochondrial calcium uniporter) on the IMM coordinate with VDAC1 on the OMM to create a two-gate calcium filter? (4) Do cancer cells show altered calcium oscillation frequencies that keep VDAC1 in the monomeric state, and is this another mechanism of gate-jamming beyond HK-II/Bcl-xL/cholesterol? (5) Can calcium oscillation frequency be a therapeutic target — could pacing mitochondrial calcium uptake shift VDAC1 toward the oligomeric (pro-apoptotic) state in cancer?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 9
+  Promoted to TYPE 1: 1
+  Novel (no literature): 3
+  Contradicted: 0
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 8/21
+
+HYPOTHESES (ranked by testability):
+  H1. IF reconstituted VDAC1 in planar lipid bilayers is exposed to sinusoidal Ca²⁺ waveforms (0.1–10 Hz, amplitude 0.1–10 µM)
+     Testability: 8.0/10
+     Effect size: 1.7384 (Cohen's d)
+     Power: 1.0
+
+  H2. IF isolated mitochondria are exposed to Ca²⁺ pulses of identical total integral (e.g., 50 µM·s) but different frequencie
+     Testability: 7.0/10
+     Effect size: 0.814 (Cohen's d)
+     Power: 1.0
+
+  H3. IF cytosolic Ca²⁺ oscillations are delivered at varying frequencies (0.1–10 Hz) to intact cells expressing genetically e
+     Testability: 6.0/10
+     Effect size: 0.806 (Cohen's d)
+     Power: 1.0
+
+BUDGET:
+  Total LLM calls: 16
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

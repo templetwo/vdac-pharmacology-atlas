@@ -1,0 +1,35 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260217_234201_pharmacology
+Date: 2026-02-17
+Protocol: evo-1.0
+
+QUESTION:
+  What is the relationship between mitochondrial dynamics (fission/fusion) and VDAC1 pharmacology — does mitochondrial fragmentation alter drug access to VDAC1? Specifically: (1) During Drp1-mediated fission, does the mechanical constriction of the OMM physically alter VDAC1 conformation or force oligomerization? (2) Do fragmented mitochondria (common in cancer, neurodegeneration) have different VDAC1 density per unit membrane area vs fused networks — does fragmentation concentrate or dilute the target? (3) Is the honeycomb lattice arrangement of VDAC1 only possible in flat membrane regions of fused mitochondria, meaning fragmentation breaks the lattice and shifts VDAC1 toward dispersed monomers? (4) Does Mfn2 (mitofusin 2) at ER-mitochondria contact sites influence VDAC1 state through tethering-dependent lipid transfer (especially cholesterol and cardiolipin)? (5) Can mitochondrial dynamics-targeting drugs (mdivi-1, M1 hydrazone) indirectly modulate VDAC1 pharmacology by changing the membrane geometry the protein sits in?
+
+CONVERGENCE:
+  S2 rounds: ?
+  Early stopped: ?
+  Final Jaccard: ?
+  Final TYPE 0/1: ?
+  S3 gate: FAILED
+
+VERIFICATION:
+  TYPE 2 claims checked: 0
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 0
+
+LAB GATE:
+  Result: FAILED
+  Claims passed: 0/0
+
+BUDGET:
+  Total LLM calls: ?
+  Target range: 92-142
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

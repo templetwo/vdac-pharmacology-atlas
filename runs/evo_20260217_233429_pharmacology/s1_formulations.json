@@ -1,0 +1,203 @@
+{
+  "parsed": [
+    {
+      "model": "claude",
+      "raw": "\n\n\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n\n**Sub-questions:**\n1. Does ketamine's rapid timeline (2-4h) require a non-transcriptional mechanism (bioenergetic rescue) in addition to the BDNF/mTOR synaptogenesis pathway?\n2. Does sub-anesthetic ketamine alter mitochondrial function (membrane potential, VDAC1 state, complex I activity) at clinically relevant concentrations (~1-10 \u00b5M brain tissue)?\n3. Does (2R,6R)-HNK act through a distinct mechanism from ketamine itself, and does it have mitochondrial targets?\n4. Does the structural isomorphism pattern (dose\u2192pathway, tissue\u2192outcome) with Hill coefficient mismatch explain ketamine's therapeutic window?\n\n**Key variables:** Ketamine brain Cmax (~5-10 \u00b5M at 0.5 mg/kg IV), NMDAR Ki (~1 \u00b5M), BDNF/mTOR activation threshold, mitochondrial membrane potential (\u0394\u03a8m), HNK concentrations (sustained >24h), Hill coefficients for therapeutic vs. toxic targets.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\nCLAIM: Sub-anesthetic ketamine (0.5 mg/kg IV) produces brain concentrations (~5-10 \u00b5M) sufficient to partially block NMDARs on GABAergic interneurons, disinhibiting glutamate release, triggering AMPAR-dependent BDNF/mTOR signaling within 2 hours.\nTYPE: 1\nCONFIDENCE: 0.85\nMECHANISM: Preferential NMDAR blockade on fast-spiking interneurons causes cortical disinhibition \u2192 glutamate burst \u2192 AMPAR \u2192 BDNF \u2192 mTOR \u2192 synaptic protein synthesis.\nFALSIFIABLE BY: Showing AMPAR antagonism does not block ketamine's rapid antidepressant effect in humans.\n\nCLAIM: Ketamine at 5-10 \u00b5M alters mitochondrial membrane potential and bioenergetics, likely through complex I modulation and possibly VDAC1 state changes, contributing to but not solely explaining rapid onset.\nTYPE: 2\nCONFIDENCE: 0.50\nMECHANISM: Ketamine's lipophilicity allows mitochondrial membrane accumulation; transient \u0394\u03a8m hyperpolarization may enhance ATP production supporting rapid synaptogenesis.\nFALSIFIABLE BY: Direct measurement showing no \u0394\u03a8m change in cortical neurons at 5-10 \u00b5M ketamine within 1-2 hours.\n\nCLAIM: (2R,6R)-HNK sustains antidepressant effects independent of NMDAR blockade, potentially through AMPAR potentiation and a distinct mitochondrial mechanism involving enhanced oxidative phosphorylation.\nTYPE: 2\nCONFIDENCE: 0.55\nMECHANISM: HNK's longer half-life and AMPAR-dependent (not NMDAR-dependent) signaling maintains synaptic potentiation; mitochondrial effects may support sustained bioenergetic demands of new synapses.\nFALSIFIABLE BY: Demonstrating HNK has zero effect on mitochondrial respiration in isolated brain mitochondria and that AMPAR blockade eliminates all HNK effects.\n\nCLAIM: Ketamine follows structural isomorphism \u2014 sub-anesthetic doses engage BDNF/mTOR synaptogenesis (Hill n\u22481-2 for NMDAR), supra-anesthetic engages widespread channel blockade and neurotoxicity (Hill n\u22481), and the therapeutic window can be modeled by Hill coefficient mismatch analogous to metformin.\nTYPE: 3\nCONFIDENCE: 0.40\nMECHANISM: Cooperative engagement of the disinhibition circuit (effective Hill n>1 due to network-level cooperativity of interneuron blockade) saturates before non-cooperative toxic blockade of excitatory neurons scales linearly.\nFALSIFIABLE BY: Showing ketamine's dose-response for antidepressant vs. dissociative/neurotoxic effects both fit identical Hill coefficients with no separation.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n\n- Direct VDAC1 binding data for ketamine/HNK (no published Kd exists).\n- Whether mitochondrial effects are causal or epiphenomenal to antidepressant response.\n- Precise Hill coefficient for ketamine's antidepressant effect at the network level vs. dissociation.\n- HNK concentrations in human brain tissue (only plasma data available).\n- Whether bioenergetic rescue precedes or follows synaptic protein synthesis temporally.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP \u2500\u2500\u2500\n\nMeasure \u0394\u03a8m and oxygen consumption rate in human iPSC-derived cortical neurons exposed to ketamine (1-100 \u00b5M) and (2R,6R)-HNK (1-50 \u00b5M) at 30-minute intervals over 4 hours, with and without AMPAR blockade.",
+      "claims": [
+        {
+          "statement": "Sub-anesthetic ketamine (0.5 mg/kg IV) produces brain concentrations (~5-10 \u00b5M) sufficient to partially block NMDARs on GABAergic interneurons, disinhibiting glutamate release, triggering AMPAR-dependent BDNF/mTOR signaling within 2 hours.",
+          "type": 1,
+          "confidence": 0.85,
+          "mechanism": "Preferential NMDAR blockade on fast-spiking interneurons causes cortical disinhibition \u2192 glutamate burst \u2192 AMPAR \u2192 BDNF \u2192 mTOR \u2192 synaptic protein synthesis.",
+          "falsifiable_by": "Showing AMPAR antagonism does not block ketamine's rapid antidepressant effect in humans."
+        },
+        {
+          "statement": "Ketamine at 5-10 \u00b5M alters mitochondrial membrane potential and bioenergetics, likely through complex I modulation and possibly VDAC1 state changes, contributing to but not solely explaining rapid onset.",
+          "type": 2,
+          "confidence": 0.5,
+          "mechanism": "Ketamine's lipophilicity allows mitochondrial membrane accumulation; transient \u0394\u03a8m hyperpolarization may enhance ATP production supporting rapid synaptogenesis.",
+          "falsifiable_by": "Direct measurement showing no \u0394\u03a8m change in cortical neurons at 5-10 \u00b5M ketamine within 1-2 hours."
+        },
+        {
+          "statement": "(2R,6R)-HNK sustains antidepressant effects independent of NMDAR blockade, potentially through AMPAR potentiation and a distinct mitochondrial mechanism involving enhanced oxidative phosphorylation.",
+          "type": 2,
+          "confidence": 0.55,
+          "mechanism": "involving enhanced oxidative phosphorylation.",
+          "falsifiable_by": "Demonstrating HNK has zero effect on mitochondrial respiration in isolated brain mitochondria and that AMPAR blockade eliminates all HNK effects."
+        },
+        {
+          "statement": "Ketamine follows structural isomorphism \u2014 sub-anesthetic doses engage BDNF/mTOR synaptogenesis (Hill n\u22481-2 for NMDAR), supra-anesthetic engages widespread channel blockade and neurotoxicity (Hill n\u22481), and the therapeutic window can be modeled by Hill coefficient mismatch analogous to metformin.",
+          "type": 3,
+          "confidence": 0.4,
+          "mechanism": "Cooperative engagement of the disinhibition circuit (effective Hill n>1 due to network-level cooperativity of interneuron blockade) saturates before non-cooperative toxic blockade of excitatory neurons scales linearly.",
+          "falsifiable_by": "Showing ketamine's dose-response for antidepressant vs. dissociative/neurotoxic effects both fit identical Hill coefficients with no separation. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "mistral",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n**Sub-questions:**\n1. **Mitochondrial involvement:** Does ketamine (0.5 mg/kg IV) directly alter mitochondrial membrane potential (\u0394\u03a8m) or VDAC1 state, independent of NMDA antagonism?\n2. **Temporal mechanism:** Is synaptic plasticity via BDNF/mTOR sufficient to explain rapid (2-4h) antidepressant effects, or is mitochondrial bioenergetic rescue a necessary co-mechanism?\n3. **Dose-pathway isomorphism:** Does ketamine exhibit structural isomorphism (sub-anesthetic \u2192 synaptogenesis; supra-anesthetic \u2192 dissociation/neurotoxicity) with distinct mitochondrial roles?\n4. **Metabolite (2R,6R)-HNK:** Does (2R,6R)-HNK sustain antidepressant effects via a mitochondrial target (e.g., VDAC1, ETC complexes) distinct from ketamine\u2019s primary action?\n\n**Key variables:**\n- \u0394\u03a8m, VDAC1 state (mitochondrial)\n- BDNF, mTOR, synaptic plasticity (synaptic)\n- Ketamine dose (sub- vs. supra-anesthetic)\n- (2R,6R)-HNK concentration/target\n- Hill coefficient mismatch (therapeutic vs. toxic targets)\n\n---\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\n**CLAIM:** Ketamine at 0.5 mg/kg IV transiently depolarizes \u0394\u03a8m in cortical neurons within 1\u20132 hours, likely via VDAC1 modulation.\n**TYPE:** 2 (hypothesis with indirect support)\n**CONFIDENCE:** 0.65\n**MECHANISM:** NMDA antagonism \u2192 reduced Ca\u00b2\u207a influx \u2192 VDAC1 conformational shift \u2192 transient \u0394\u03a8m depolarization \u2192 bioenergetic reset.\n**FALSIFIABLE BY:** No change in \u0394\u03a8m or VDAC1 state in *in vivo* models (e.g., Seahorse assay, JC-1 staining) post-ketamine.\n\n**CLAIM:** Mitochondrial bioenergetic rescue contributes to ketamine\u2019s rapid antidepressant effects, but is not sufficient alone (synaptic plasticity is primary).\n**TYPE:** 1 (evidence-based, debated)\n**CONFIDENCE:** 0.75\n**MECHANISM:** \u0394\u03a8m depolarization \u2192 ROS signaling \u2192 PGC-1\u03b1 activation \u2192 mitochondrial biogenesis \u2192 supports synaptogenesis (BDNF/mTOR).\n**FALSIFIABLE BY:** Ketamine\u2019s effects persist in *mitochondrial DNA-depleted* neurons or *PGC-1\u03b1 KO* mice.\n\n**CLAIM:** Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage BDNF/mTOR via \u0394\u03a8m modulation, while supra-anesthetic doses (>1 mg/kg) disrupt \u0394\u03a8m chronically, causing neurotoxicity.\n**TYPE:** 2 (plausible but unproven)\n**CONFIDENCE:** 0.60\n**MECHANISM:** Low-dose \u0394\u03a8m depolarization \u2192 hormesis; high-dose \u0394\u03a8m collapse \u2192 apoptosis (via VDAC1/ANT opening).\n**FALSIFIABLE BY:** Identical \u0394\u03a8m changes at sub- and supra-anesthetic doses in *ex vivo* brain slices.\n\n**CLAIM:** (2R,6R)-HNK sustains antidepressant effects via mitochondrial Complex I inhibition, distinct from ketamine\u2019s NMDA antagonism.\n**TYPE:** 3 (speculative)\n**CONFIDENCE:** 0.40\n**MECHANISM:** (2R,6R)-HNK binds Complex I \u2192 mild ROS \u2192 Nrf2 activation \u2192 antioxidant response \u2192 synaptic stabilization.\n**FALSIFIABLE BY:** No antidepressant effect in *Ndufs4 KO* mice (Complex I-deficient) or with Complex I inhibitors (e.g., rotenone).\n\n**CLAIM:** Ketamine\u2019s therapeutic window can be predicted by a Hill coefficient mismatch (n\u22482 for NMDA vs. n\u22481 for mitochondrial targets), similar to metformin.\n**TYPE:** 2 (analogous to metformin, untested)\n**CONFIDENCE:** 0.50\n**MECHANISM:** NMDA receptors (n\u22482) saturate at lower doses than mitochondrial targets (n\u22481), creating a safety margin.\n**FALSIFIABLE BY:** Hill coefficients for ketamine\u2019s NMDA vs. VDAC1/\u0394\u03a8m effects are identical (n\u22481).\n\n---\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n1. **Direct mitochondrial measurements:** No *in vivo* data on \u0394\u03a8m or VDAC1 state in human/rodent cortex post-0.5 mg/kg ketamine.\n2. **Causal hierarchy:** Does mitochondrial bioenergetic rescue precede or parallel synaptic plasticity? (e.g., time-resolved Seahorse + electrophysiology).\n3. **(2R,6R)-HNK\u2019s target:** No binding assays for (2R,6R)-HNK vs. mitochondrial proteins (e.g., VDAC1, Complex I).\n4. **Dose-response curves:** Missing Hill coefficients for ketamine\u2019s effects on NMDA vs. mitochondrial targets in the same tissue.\n5. **Metabolic context:** Does ketamine\u2019s mitochondrial effect depend on baseline bioenergetic stress (e.g., depression-induced mitochondrial dysfunction)?\n\n---\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP \u2500\u2500\u2500\n**Experiment:** *In vivo* multiphoton imaging of \u0394\u03a8m (",
+      "claims": [
+        {
+          "statement": "Ketamine at 0.5 mg/kg IV transiently depolarizes \u0394\u03a8m in cortical neurons within 1\u20132 hours, likely via VDAC1 modulation.",
+          "type": 2,
+          "confidence": 0.65,
+          "mechanism": "NMDA antagonism \u2192 reduced Ca\u00b2\u207a influx \u2192 VDAC1 conformational shift \u2192 transient \u0394\u03a8m depolarization \u2192 bioenergetic reset.",
+          "falsifiable_by": "No change in \u0394\u03a8m or VDAC1 state in *in vivo* models (e.g., Seahorse assay, JC-1 staining) post-ketamine."
+        },
+        {
+          "statement": "Mitochondrial bioenergetic rescue contributes to ketamine\u2019s rapid antidepressant effects, but is not sufficient alone (synaptic plasticity is primary).",
+          "type": 1,
+          "confidence": 0.75,
+          "mechanism": "\u0394\u03a8m depolarization \u2192 ROS signaling \u2192 PGC-1\u03b1 activation \u2192 mitochondrial biogenesis \u2192 supports synaptogenesis (BDNF/mTOR).",
+          "falsifiable_by": "Ketamine\u2019s effects persist in *mitochondrial DNA-depleted* neurons or *PGC-1\u03b1 KO* mice."
+        },
+        {
+          "statement": "Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage BDNF/mTOR via \u0394\u03a8m modulation, while supra-anesthetic doses (>1 mg/kg) disrupt \u0394\u03a8m chronically, causing neurotoxicity.",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "Low-dose \u0394\u03a8m depolarization \u2192 hormesis; high-dose \u0394\u03a8m collapse \u2192 apoptosis (via VDAC1/ANT opening).",
+          "falsifiable_by": "Identical \u0394\u03a8m changes at sub- and supra-anesthetic doses in *ex vivo* brain slices."
+        },
+        {
+          "statement": "(2R,6R)-HNK sustains antidepressant effects via mitochondrial Complex I inhibition, distinct from ketamine\u2019s NMDA antagonism.",
+          "type": 3,
+          "confidence": 0.4,
+          "mechanism": "(2R,6R)-HNK binds Complex I \u2192 mild ROS \u2192 Nrf2 activation \u2192 antioxidant response \u2192 synaptic stabilization.",
+          "falsifiable_by": "No antidepressant effect in *Ndufs4 KO* mice (Complex I-deficient) or with Complex I inhibitors (e.g., rotenone)."
+        },
+        {
+          "statement": "Ketamine\u2019s therapeutic window can be predicted by a Hill coefficient mismatch (n\u22482 for NMDA vs. n\u22481 for mitochondrial targets), similar to metformin.",
+          "type": 2,
+          "confidence": 0.5,
+          "mechanism": "NMDA receptors (n\u22482) saturate at lower doses than mitochondrial targets (n\u22481), creating a safety margin.",
+          "falsifiable_by": "Hill coefficients for ketamine\u2019s NMDA vs. VDAC1/\u0394\u03a8m effects are identical (n\u22481). --- \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "grok",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\nSub-questions:\n(1) Does sub-anesthetic ketamine (0.5 mg/kg IV) directly modulate mitochondrial \u0394\u03a8m or VDAC1, beyond NMDA effects?\n(2) Is rapid antidepressant onset (2-4h) driven primarily by synaptic plasticity (BDNF/mTOR) or mitochondrial bioenergetics?\n(3) Does ketamine exhibit dose-pathway isomorphism (sub-anesthetic: synaptogenesis; supra-anesthetic: dissociation/neurotoxicity), with HNK driving sustained effects via unique targets? Can therapeutic window be modeled by Hill coefficient mismatch (n>1 cooperative target before n=1 toxic)?\n\nKey variables: [dose (0.5 vs >2 mg/kg)], [\u0394\u03a8m (mito mem pot)], [VDAC1 conductance], [BDNF/mTOR (synaptogenesis)], [HNK plasma levels], [Hill_n (target coop: NMDA=1, mito?=1-2)]. Relationships: low [dose] saturates synaptogenesis (EC50~nM) before full NMDA/myo block (\u03bcM); mito rescue amplifies if \u0394\u03a8m\u2191.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: Sub-anesthetic ketamine (0.5 mg/kg IV) does not significantly alter neuronal mitochondrial \u0394\u03a8m or VDAC1 state in vivo within 2-4h.\nTYPE: 2\nCONFIDENCE: 0.8\nMECHANISM: Peak plasma [ketamine]~0.2 \u03bcM insufficient to inhibit mito complex I/VDAC (IC50>10 \u03bcM per in vitro); indirect NMDA disinhibition boosts ATP demand without \u0394\u03a8m shift.\nFALSIFIABLE BY: TMRE/JC-1 imaging in rodent PFC showing >15% \u0394\u03a8m change 2h post-dose.\n\nCLAIM: Rapid antidepressant onset (2-4h) aligns with synaptic plasticity (AMPA/mTOR/BDNF translation) more than mitochondrial bioenergetics alone.\nTYPE: 1\nCONFIDENCE: 0.95\nMECHANISM: NMDA-GluN2B block disinhibits pyramidal Glu release \u2192 AMPA activation \u2192 eEF2 dephos \u2192 BDNF translation (peaks 1-4h), vs SSRIs' transcriptional delay.\nFALSIFIABLE BY: BDNF/mTOR KO mice lacking rapid effects despite ketamine dosing.\n\nCLAIM: Ketamine follows dose-pathway isomorphism: sub-anesthetic \u2192 BDNF/mTOR synaptogenesis; supra-anesthetic \u2192 full NMDA block/dissociation + neurotoxicity.\nTYPE: 1\nCONFIDENCE: 0.9\nMECHANISM: Low dose (nM) preferentially blocks extrasynaptic NMDA \u2192 burst firing/synaptogenesis; high (\u03bcM) engages synaptic NMDA \u2192 global inhibition/ROS.\nFALSIFIABLE BY: Iso-effective synaptogenesis/neurotox at single dose across tissues.\n\nCLAIM: (2R,6R)-HNK mediates sustained (>24h) effects independently of NMDA, without direct mitochondrial targeting.\nTYPE: 1\nCONFIDENCE: 0.85\nMECHANISM: HNK peaks 4-8h, activates AMPA/mGluR1 without channel block, sustaining PSD95/AMPAR insertion; no reported VDAC1/\u0394\u03a8m interaction (unlike CBD Kd=11\u03bcM).\nFALSIFIABLE BY: HNK infusion producing no sustained AD in AMPAR KO but intact in mito OXPHOS KO.\n\nCLAIM: Ketamine therapeutic window predictable by Hill mismatch: cooperative synaptogenesis target (n~1.5-2) saturates before linear NMDA/myo tox (n=1, per prior Hill_standard=1.0).\nTYPE: 3\nCONFIDENCE: 0.6\nMECHANISM: Like metformin (AMPK n>1 before CI block), low-dose eEPSC burst (coop) precedes full NMDA occupancy; TI>10 mirrors FDA prior.\nFALSIFIABLE BY: Dose-response curves showing n=1 for both pathways (no mismatch).\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\nNo direct in vivo measures of VDAC1 oligomerization/flux post-0.5 mg/kg ketamine in human/rat PFC. Missing: HNK Kd at VDAC1 vs CBD (11\u03bcM prior); Hill_n for ketamine-AMPA/mTOR in depression models. Ketamine brain [ ] timecourse in depressed vs control (altered PK?). No head-head synaptic vs mito blocker trials (e.g. rotenone co-admin).\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nLive TMRE/VDAC-GFP imaging in iPSC neurons or rodent PFC slices, 0-4h post-0.5 mg/kg ketamine IV.",
+      "claims": [
+        {
+          "statement": "Sub-anesthetic ketamine (0.5 mg/kg IV) does not significantly alter neuronal mitochondrial \u0394\u03a8m or VDAC1 state in vivo within 2-4h.",
+          "type": 2,
+          "confidence": 0.8,
+          "mechanism": "Peak plasma [ketamine]~0.2 \u03bcM insufficient to inhibit mito complex I/VDAC (IC50>10 \u03bcM per in vitro); indirect NMDA disinhibition boosts ATP demand without \u0394\u03a8m shift.",
+          "falsifiable_by": "TMRE/JC-1 imaging in rodent PFC showing >15% \u0394\u03a8m change 2h post-dose."
+        },
+        {
+          "statement": "Rapid antidepressant onset (2-4h) aligns with synaptic plasticity (AMPA/mTOR/BDNF translation) more than mitochondrial bioenergetics alone.",
+          "type": 1,
+          "confidence": 0.95,
+          "mechanism": "NMDA-GluN2B block disinhibits pyramidal Glu release \u2192 AMPA activation \u2192 eEF2 dephos \u2192 BDNF translation (peaks 1-4h), vs SSRIs' transcriptional delay.",
+          "falsifiable_by": "BDNF/mTOR KO mice lacking rapid effects despite ketamine dosing."
+        },
+        {
+          "statement": "Ketamine follows dose-pathway isomorphism: sub-anesthetic \u2192 BDNF/mTOR synaptogenesis; supra-anesthetic \u2192 full NMDA block/dissociation + neurotoxicity.",
+          "type": 1,
+          "confidence": 0.9,
+          "mechanism": "Low dose (nM) preferentially blocks extrasynaptic NMDA \u2192 burst firing/synaptogenesis; high (\u03bcM) engages synaptic NMDA \u2192 global inhibition/ROS.",
+          "falsifiable_by": "Iso-effective synaptogenesis/neurotox at single dose across tissues."
+        },
+        {
+          "statement": "(2R,6R)-HNK mediates sustained (>24h) effects independently of NMDA, without direct mitochondrial targeting.",
+          "type": 1,
+          "confidence": 0.85,
+          "mechanism": "HNK peaks 4-8h, activates AMPA/mGluR1 without channel block, sustaining PSD95/AMPAR insertion; no reported VDAC1/\u0394\u03a8m interaction (unlike CBD Kd=11\u03bcM).",
+          "falsifiable_by": "HNK infusion producing no sustained AD in AMPAR KO but intact in mito OXPHOS KO."
+        },
+        {
+          "statement": "Ketamine therapeutic window predictable by Hill mismatch: cooperative synaptogenesis target (n~1.5-2) saturates before linear NMDA/myo tox (n=1, per prior Hill_standard=1.0).",
+          "type": 3,
+          "confidence": 0.6,
+          "mechanism": "Like metformin (AMPK n>1 before CI block), low-dose eEPSC burst (coop) precedes full NMDA occupancy; TI>10 mirrors FDA prior.",
+          "falsifiable_by": "Dose-response curves showing n=1 for both pathways (no mismatch). \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "gemini",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\nThis question breaks down into four core inquiries:\n1.  **Causality of Mitochondrial Effects:** Are observed mitochondrial changes (\u0394\u03a8m, VDAC1 state) a direct effect of ketamine binding to mitochondrial targets, or are they a downstream consequence of primary synaptic events (i.e., NMDAR antagonism)?\n2.  **Temporal Mechanism of Action:** Is the rapid antidepressant onset (2-4 hours) sufficiently explained by the known timeline of BDNF/mTOR-dependent synaptic protein synthesis, or is a more immediate bioenergetic rescue required as a prerequisite?\n3.  **Dose-Pathway Specificity:** Does ketamine's pharmacology follow a \"dose-picks-pathway\" model, where sub-anesthetic and supra-anesthetic doses engage distinct primary molecular targets or downstream cascades, leading to therapeutic versus toxic outcomes?\n4.  **Metabolite Contribution:** How does the metabolite (2R,6R)-HNK sustain antidepressant effects, and does its mechanism involve a mitochondrial target distinct from its parent compound?\n\nKey variables include ketamine/HNK concentration, NMDAR vs. AMPAR activity, mTOR signaling, mitochondrial membrane potential (\u0394\u03a8m), and the rate of synaptogenesis. The central relationship is the sequence and interdependence of these variables following a sub-anesthetic dose.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: At sub-anesthetic doses, ketamine-induced changes in mitochondrial membrane potential are primarily a downstream, homeostatic response to the glutamate surge caused by NMDAR antagonism on interneurons, not a direct drug-mitochondria interaction.\nTYPE: 2\nCONFIDENCE: 0.85\nMECHANISM: NMDAR blockade on GABAergic interneurons disinhibits pyramidal neurons, causing a glutamate surge that increases AMPAR-mediated activity and subsequent metabolic demand, forcing mitochondria to adapt.\nFALSIFIABLE BY: Evidence of high-affinity (nanomolar Kd) ketamine binding to a mitochondrial protein that directly alters its function in the absence of extracellular glutamate signaling or NMDAR activity.\n\nCLAIM: The rapid onset of antidepressant effects is consistent with a synergistic model where mitochondrial bioenergetic rescue is a necessary, rate-limiting prerequisite for the ATP-intensive process of BDNF/mTOR-dependent synaptogenesis.\nTYPE: 2\nCONFIDENCE: 0.75\nMECHANISM: Chronic stress impairs mitochondrial function; ketamine rapidly restores bioenergetic capacity, providing the ATP required to fuel the protein synthesis and cytoskeletal rearrangement for new synapse formation.\nFALSIFIABLE BY: Demonstrating that ketamine-induced synaptogenesis proceeds at a normal rate and magnitude even when mitochondrial ATP synthesis is pharmacologically clamped at pre-treatment (impaired) levels.\n\nCLAIM: The metabolite (2R,6R)-HNK sustains antidepressant effects via a non-NMDAR mechanism involving AMPA receptor potentiation, and any mitochondrial effects are secondary to this primary synaptic action.\nTYPE: 1\nCONFIDENCE: 0.90\nMECHANISM: HNK directly enhances AMPAR throughput, promoting synaptogenesis through the same downstream BDNF/mTOR pathway as ketamine but with a longer half-life and without NMDAR-mediated side effects.\nFALSIFIABLE BY: Identifying a direct, high-affinity mitochondrial target for HNK that is required for its antidepressant action, independent of AMPAR activity.\n\nCLAIM: Ketamine's therapeutic window likely arises from a mismatch in dose-response curves between therapeutic and dissociative targets, a phenomenon that could be modeled by differing Hill coefficients.\nTYPE: 3\nCONFIDENCE: 0.50\nMECHANISM: If the therapeutic target (e.g., extrasynaptic NMDARs on interneurons) exhibits higher cooperativity (n>1) than the dissociative target, it would saturate sharply within a narrow concentration range, creating a therapeutic window before the less cooperative (n\u22481) target is fully engaged.\nFALSIFIABLE BY: Pharmacological studies showing that the Hill coefficients for ketamine's binding and functional effect at sites mediating therapeutic versus dissociative effects are identical.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\nThe primary unknown is the cell-type-specific bioenergetic state in vivo. We lack direct, real-time measurements of mitochondrial membrane potential (\u0394\u03a8m) and ATP levels specifically within prefrontal cortex GABAergic interneurons versus pyramidal neurons during and after a therapeutic ketamine infusion. The binding affinities (Kd) of ketamine and HNK for VDAC1 and other mitochondrial respiratory chain complexes under physiological conditions are also poorly constrained. Finally, it is unknown if the NMDAR subtypes on interneurons have different cooperativity (Hill coefficient) for ketamine binding compared to those on pyramidal neurons, which is the core assumption of the therapeutic window model.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nUse in-vivo two-photon imaging of a mitochondrial membrane potential sensor (e.g., TMRM) to measure \u0394\u03a8m changes in genetically-identified PFC interneurons vs. pyramidal neurons in an awake mouse following a 0.5 mg/kg ketamine-equivalent dose.",
+      "claims": [
+        {
+          "statement": "At sub-anesthetic doses, ketamine-induced changes in mitochondrial membrane potential are primarily a downstream, homeostatic response to the glutamate surge caused by NMDAR antagonism on interneurons, not a direct drug-mitochondria interaction.",
+          "type": 2,
+          "confidence": 0.85,
+          "mechanism": "NMDAR blockade on GABAergic interneurons disinhibits pyramidal neurons, causing a glutamate surge that increases AMPAR-mediated activity and subsequent metabolic demand, forcing mitochondria to adapt.",
+          "falsifiable_by": "Evidence of high-affinity (nanomolar Kd) ketamine binding to a mitochondrial protein that directly alters its function in the absence of extracellular glutamate signaling or NMDAR activity."
+        },
+        {
+          "statement": "The rapid onset of antidepressant effects is consistent with a synergistic model where mitochondrial bioenergetic rescue is a necessary, rate-limiting prerequisite for the ATP-intensive process of BDNF/mTOR-dependent synaptogenesis.",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "Chronic stress impairs mitochondrial function; ketamine rapidly restores bioenergetic capacity, providing the ATP required to fuel the protein synthesis and cytoskeletal rearrangement for new synapse formation.",
+          "falsifiable_by": "Demonstrating that ketamine-induced synaptogenesis proceeds at a normal rate and magnitude even when mitochondrial ATP synthesis is pharmacologically clamped at pre-treatment (impaired) levels."
+        },
+        {
+          "statement": "The metabolite (2R,6R)-HNK sustains antidepressant effects via a non-NMDAR mechanism involving AMPA receptor potentiation, and any mitochondrial effects are secondary to this primary synaptic action.",
+          "type": 1,
+          "confidence": 0.9,
+          "mechanism": "involving AMPA receptor potentiation, and any mitochondrial effects are secondary to this primary synaptic action.",
+          "falsifiable_by": "Identifying a direct, high-affinity mitochondrial target for HNK that is required for its antidepressant action, independent of AMPAR activity."
+        },
+        {
+          "statement": "Ketamine's therapeutic window likely arises from a mismatch in dose-response curves between therapeutic and dissociative targets, a phenomenon that could be modeled by differing Hill coefficients.",
+          "type": 3,
+          "confidence": 0.5,
+          "mechanism": "If the therapeutic target (e.g., extrasynaptic NMDARs on interneurons) exhibits higher cooperativity (n>1) than the dissociative target, it would saturate sharply within a narrow concentration range, creating a therapeutic window before the less cooperative (n\u22481) target is fully engaged.",
+          "falsifiable_by": "Pharmacological studies showing that the Hill coefficients for ketamine's binding and functional effect at sites mediating therapeutic versus dissociative effects are identical. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "deepseek",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1. What are the primary molecular targets of ketamine and its metabolite (2R,6R)-HNK, and do they include mitochondrial proteins like VDAC1?\n2. How do the kinetics of NMDA receptor antagonism, synaptic plasticity (BDNF/mTOR), and mitochondrial bioenergetics (ATP, membrane potential) interact to produce the rapid (2-4h) antidepressant onset?\n3. Does the dose-response relationship for ketamine's effects (therapeutic vs. dissociative/neurotoxic) follow a structural isomorphism pattern, and can it be modeled by differential target engagement with distinct Hill coefficients?\n4. Can a quantitative safety model (like the Hill coefficient mismatch for metformin) predict ketamine's therapeutic window based on target saturation curves?\n\nKey variables: Ketamine dose, NMDA-R occupancy, mitochondrial membrane potential (\u0394\u03a8m), VDAC1 conductance, BDNF release, mTOR activation, (2R,6R)-HNK concentration. Relationships: Dose determines primary target engagement (NMDA-R vs. others). Target engagement kinetics influence downstream bioenergetic and synaptic pathways with different time constants, culminating in net antidepressant effect.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\n\nCLAIM: The rapid (2-4h) antidepressant onset requires a mitochondrial bioenergetic component (e.g., transient \u0394\u03a8m hyperpolarization, increased ATP) that enables the subsequent BDNF/mTOR-dependent synaptogenesis.\nTYPE: 1\nCONFIDENCE: 0.7\nMECHANISM: Ketamine-induced NMDA-R blockade rapidly decreases excitatory drive on inhibitory interneurons, disinhibiting pyramidal neurons and causing a burst of glutamate that activates AMPA receptors; this surge in neuronal activity increases ATP demand, which is met by a ketamine-mediated potentiation of mitochondrial function, possibly via VDAC1 modulation.\nFALSIFIABLE BY: Showing that blocking the initial mitochondrial response (e.g., with VDAC1 inhibitors or mitochondrial uncouplers) abolishes the rapid behavioral and synaptic effects, even if BDNF is present.\n\nCLAIM: Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage a cooperative, high-affinity target system (NMDA-R on GABAergic interneurons \u2192 BDNF/mTOR), while supra-anesthetic doses engage lower-affinity, non-cooperative targets (e.g., broader NMDA-R blockade, other channels) leading to dissociation and potential neurotoxicity.\nTYPE: 2\nCONFIDENCE: 0.8\nMECHANISM: Dose picks pathway via differential receptor occupancy and circuit engagement; tissue (prefrontal cortex vs. thalamocortical) determines the functional outcome (synaptogenesis vs. disrupted connectivity).\nFALSIFIABLE BY: PET imaging showing identical NMDA-R occupancy patterns at sub-anesthetic and anesthetic doses, or failure to separate synaptic/behavioral effects by dose in animal models.\n\nCLAIM: (2R,6R)-HNK contributes to sustained effects via a distinct, non-NMDA target, likely involving mitochondrial bioenergetic regulation (e.g., enhancing electron transport chain efficiency).\nTYPE: 1\nCONFIDENCE: 0.6\nMECHANISM: (2R,6R)-HNK lacks significant NMDA-R affinity but can enhance AMPA-R throughput and may directly interact with mitochondrial complexes or adenine nucleotide translocator to sustain elevated ATP production needed for synaptic maintenance.\nFALSIFIABLE BY: Demonstrating that (2R,6R)-HNK has no effect on mitochondrial respiration or membrane potential in vitro, or that its in vivo effects are abolished in AMPA-R knockout mice.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1. The direct binding constant (Kd) of ketamine and (2R,6R)-HNK for VDAC1 or other mitochondrial proteins. Without this, the mitochondrial component remains correlative.\n2. The precise time course of mitochondrial membrane potential (\u0394\u03a8m) changes in prefrontal cortex neurons following a single sub-anesthetic ketamine dose in vivo. Current data are from cell cultures or indirect measures.\n3. The Hill coefficients for ketamine's engagement of its therapeutic target (likely a specific NMDA-R population) versus its dissociative/neurotoxic targets. This quantitative data is needed to model the therapeutic window.\n4. Whether the bioenergetic rescue occurs first and is necessary for the glutamate burst, or vice versa.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nSimultaneously measure, in vivo, prefrontal cortex neuronal \u0394\u03a8m (via genetically encoded sensor) and extracellular glutamate/BDNF levels in real time after a single 0.5 mg/kg IV ketamine dose in a depression model.",
+      "claims": [
+        {
+          "statement": "The rapid (2-4h) antidepressant onset requires a mitochondrial bioenergetic component (e.g., transient \u0394\u03a8m hyperpolarization, increased ATP) that enables the subsequent BDNF/mTOR-dependent synaptogenesis.",
+          "type": 1,
+          "confidence": 0.7,
+          "mechanism": "Ketamine-induced NMDA-R blockade rapidly decreases excitatory drive on inhibitory interneurons, disinhibiting pyramidal neurons and causing a burst of glutamate that activates AMPA receptors; this surge in neuronal activity increases ATP demand, which is met by a ketamine-mediated potentiation of mitochondrial function, possibly via VDAC1 modulation.",
+          "falsifiable_by": "Showing that blocking the initial mitochondrial response (e.g., with VDAC1 inhibitors or mitochondrial uncouplers) abolishes the rapid behavioral and synaptic effects, even if BDNF is present."
+        },
+        {
+          "statement": "Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage a cooperative, high-affinity target system (NMDA-R on GABAergic interneurons \u2192 BDNF/mTOR), while supra-anesthetic doses engage lower-affinity, non-cooperative targets (e.g., broader NMDA-R blockade, other channels) leading to dissociation and potential neurotoxicity.",
+          "type": 2,
+          "confidence": 0.8,
+          "mechanism": "Dose picks pathway via differential receptor occupancy and circuit engagement; tissue (prefrontal cortex vs. thalamocortical) determines the functional outcome (synaptogenesis vs. disrupted connectivity).",
+          "falsifiable_by": "PET imaging showing identical NMDA-R occupancy patterns at sub-anesthetic and anesthetic doses, or failure to separate synaptic/behavioral effects by dose in animal models."
+        },
+        {
+          "statement": "(2R,6R)-HNK contributes to sustained effects via a distinct, non-NMDA target, likely involving mitochondrial bioenergetic regulation (e.g., enhancing electron transport chain efficiency).",
+          "type": 1,
+          "confidence": 0.6,
+          "mechanism": "(2R,6R)-HNK lacks significant NMDA-R affinity but can enhance AMPA-R throughput and may directly interact with mitochondrial complexes or adenine nucleotide translocator to sustain elevated ATP production needed for synaptic maintenance.",
+          "falsifiable_by": "Demonstrating that (2R,6R)-HNK has no effect on mitochondrial respiration or membrane potential in vitro, or that its in vivo effects are abolished in AMPA-R knockout mice. \u2500\u2500\u2500"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "round_num": 0,
+    "jaccard": 0.026515151515151512,
+    "cosine": 0.8978602409362793,
+    "jsd": 0.07800619037085829,
+    "kappa": 0.9594716077215724,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.38095238095238093,
+      "2": 0.42857142857142855,
+      "3": 0.19047619047619047
+    },
+    "type_01_ratio": 0.38095238095238093,
+    "n_claims_per_model": [
+      4,
+      5,
+      5,
+      4,
+      3
+    ]
+  },
+  "total_calls": 5
+}

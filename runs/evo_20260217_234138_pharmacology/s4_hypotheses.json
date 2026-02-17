@@ -1,0 +1,304 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF reconstituted VDAC1 in planar lipid bilayers is exposed to sinusoidal Ca\u00b2\u207a waveforms (0.1\u201310 Hz, amplitude 0.1\u201310 \u00b5M), THEN single-channel open probability (Po) will oscillate in phase with Ca\u00b2\u207a at \u22641 Hz (coherence >0.7) but lose phase-locking at >5 Hz (coherence <0.3), with the channel adopting a time-averaged intermediate conductance (~60% of full open state).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "VDAC1_gating_tau",
+          "unit": "ms",
+          "low": 1.0,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "coherence_threshold",
+          "unit": "(uniform)",
+          "low": 0.3,
+          "high": 0.7,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 8.0,
+      "experimental_protocol": "Reconstitute purified human VDAC1 into DPhPC planar bilayers. Use a piezo-driven perfusion system (Bhatt et al. rapid-exchange method) to deliver defined Ca\u00b2\u207a waveforms (0.1, 0.5, 1, 2, 5, 10 Hz; 1 \u00b5M peak) while recording single-channel currents at \u00b130 mV with Axopatch 200B. Analyze Po power spectra and stimulus-response coherence. Timeline: 8 weeks.",
+      "expected_outcome": "Po power spectrum shows peak at stimulus frequency for \u22641 Hz; peak disappears at >5 Hz with Po converging to ~0.5\u20130.6. Metabolite flux (measured by ATP/ADP transport in vesicle assays) shows pulsatile release at 0.5 Hz but steady-state at 10 Hz.",
+      "null_outcome": "No frequency-dependent difference in coherence; VDAC1 gating is Ca\u00b2\u207a-insensitive or tracks all frequencies equally. Alternatively, no gating response to Ca\u00b2\u207a at any frequency.",
+      "dose_ranges": {
+        "free": {
+          "doses": [
+            0.05,
+            0.1,
+            0.5,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "EGTA buffer": {
+          "doses": [
+            1.0
+          ],
+          "unit": "mM"
+        }
+      },
+      "readouts": [
+        "Single-channel conductance (pA)",
+        "open probability",
+        "power spectral density",
+        "stimulus-response coherence function",
+        "ATP flux (luciferase assay in vesicle system)"
+      ],
+      "controls": [
+        "Ca\u00b2\u207a-free (1 mM EGTA)",
+        "steady-state Ca\u00b2\u207a (1 \u00b5M constant)",
+        "heat-inactivated VDAC1",
+        "E73Q VDAC1 mutant (Ca\u00b2\u207a-binding site disrupted)",
+        "empty bilayer",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H2",
+      "prediction": "IF isolated mitochondria are exposed to Ca\u00b2\u207a pulses of identical total integral (e.g., 50 \u00b5M\u00b7s) but different frequencies (0.2 Hz vs. 2 Hz vs. constant), THEN the 2 Hz",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "pulse_frequency",
+          "unit": "Hz",
+          "low": 0.1,
+          "high": 5.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "pulse_amplitude",
+          "unit": "\u00b5M",
+          "low": 1.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "total_Ca_integral",
+          "unit": "\u00b5M\u00b7s",
+          "low": 20.0,
+          "high": 100.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "NCLX_Vmax",
+          "unit": "nmol/mg/min",
+          "low": 5.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "NCLX_tau_efflux",
+          "unit": "s",
+          "low": 3.0,
+          "high": 15.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "oligomerization_threshold_matrix_Ca",
+          "unit": "\u00b5M",
+          "low": 5.0,
+          "high": 50.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Isolate liver/HeLa mitochondria by differential centrifugation. Deliver Ca\u00b2\u207a pulses via microinjector into respiring mitochondria (succinate + rotenone) at 0.2, 0.5, 1, 2, 5 Hz, matched for total Ca\u00b2\u207a integral (50 \u00b5M\u00b7s). Monitor matrix Ca\u00b2\u207a (Rhod-2 AM), membrane potential (TMRM). After 10-min protocols, cross-link with EGS, run BN-PAGE and SDS-PAGE for VDAC1 oligomers (anti-VDAC1 ab), and ELISA for cytochrome c in supernatant. Include \u00b1CGP-37157 (NCLX inhibitor) and \u00b1CsA (mPTP inhibitor). Timeline: 10 weeks.",
+      "expected_outcome": "At matched integral, 2 Hz produces progressive matrix Ca\u00b2\u207a elevation (staircase pattern, final >20 \u00b5M) while 0.2 Hz allows full efflux between pulses (sawtooth, final <5 \u00b5M). VDAC1 oligomer:monomer ratio increases sharply above ~1\u20132 Hz. CGP-37157 shifts threshold leftward (oligomerization at lower frequencies). CsA blocks oligomerization at all frequencies.",
+      "null_outcome": "Oligomerization depends only on total Ca\u00b2\u207a integral regardless of frequency. Matrix Ca\u00b2\u207a returns to baseline between pulses at all frequencies. No frequency threshold exists.",
+      "dose_ranges": {
+        "pulses": {
+          "doses": [
+            2.0,
+            5.0,
+            10.0,
+            20.0
+          ],
+          "unit": "\u00b5M"
+        },
+        "37157": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "CsA": {
+          "doses": [
+            0.5,
+            1.0,
+            5.0
+          ],
+          "unit": "\u00b5M;"
+        }
+      },
+      "readouts": [
+        "Matrix [Ca\u00b2\u207a] (Rhod-2 fluorescence",
+        "plate reader/confocal)",
+        "\u0394\u03a8m (TMRM)",
+        "VDAC1 oligomers (BN-PAGE + Western)",
+        "cytochrome c release (ELISA)",
+        "mPTP opening (calcein-CoCl\u2082 assay)"
+      ],
+      "controls": [
+        "No Ca\u00b2\u207a (vehicle)",
+        "constant Ca\u00b2\u207a at equivalent steady-state",
+        "boiled mitochondria",
+        "VDAC1-knockdown mitochondria (shRNA)",
+        "frequency-matched but half-integral protocols",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H3",
+      "prediction": "IF cytosolic Ca\u00b2\u207a oscillations are delivered at varying frequencies (0.1\u201310 Hz) to intact cells expressing genetically encoded Ca\u00b2\u207a indicators in cytosol, IMS, and matrix, THEN IMS [Ca\u00b2\u207a] will track cytosolic oscillations near-linearly (gain ~0.8 at 0.5 Hz), but matrix [Ca\u00b2\u207a] will show nonlinear bandpass behavior: attenuated at <0.1 Hz (efflux-dominated) and >3 Hz (MCU cannot activate between pulses), with peak transmission at 0.3\u20131 Hz, where IMS microdomains transiently exceed MCU Kd (~10\u201320 \u00b5M).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "MCU_Kd",
+          "unit": "\u00b5M",
+          "low": 5.0,
+          "high": 30.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "MCU_Hill",
+          "unit": "(normal,",
+          "low": 2.0,
+          "high": 5.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "IMS_microdomain_peak",
+          "unit": "\u00b5M",
+          "low": 5.0,
+          "high": 50.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "VDAC1_Ca_Kd",
+          "unit": "mM",
+          "low": 0.1,
+          "high": 1.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "NCLX_rate",
+          "unit": "nmol/mg/min",
+          "low": 2.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "bandpass_peak_freq",
+          "unit": "Hz",
+          "low": 0.1,
+          "high": 2.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 6.0,
+      "experimental_protocol": "HeLa cells co-expressing CEPIA3mt (matrix), LAR-GECO1.2-IMS (IMS-targeted), and jRCaMP1b (cytosol). Drive Ca\u00b2\u207a oscillations using OptoSTIM1 (blue light-activated STIM1) at defined frequencies (0.05, 0.1, 0.3, 0.5, 1, 3, 5, 10 Hz). Image all three compartments simultaneously with spinning-disk confocal at 20 Hz. Repeat \u00b1VDAC1 knockdown (siRNA), \u00b1MCU knockdown (siRNA), \u00b1Ru360, \u00b1VBIT-4 (VDAC1 oligomerization inhibitor). Compute transfer functions (cytosol\u2192IMS, IMS\u2192matrix) at each frequency. Timeline: 14 weeks.",
+      "expected_outcome": "Cytosol\u2192IMS transfer function is relatively flat (low-pass, cutoff ~5 Hz). IMS\u2192matrix transfer function shows bandpass: gain peaks at 0.3\u20131 Hz, drops at <0.1 Hz and >3 Hz. MCU knockdown abolishes matrix uptake at all frequencies. VDAC1 knockdown reduces IMS peak [Ca\u00b2\u207a] below MCU threshold, collapsing matrix uptake. VBIT-4 has minimal effect on Ca\u00b2\u207a transfer (affects oligomerization, not conductance).",
+      "null_outcome": "Matrix Ca\u00b2\u207a tracks cytosolic oscillations linearly at all frequencies (no bandpass). IMS [Ca\u00b2\u207a] never exceeds MCU Kd. VDAC1 knockdown has no effect on IMS Ca\u00b2\u207a dynamics.",
+      "dose_ranges": {
+        "Ru360": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "4": {
+          "doses": [
+            2.0,
+            5.0,
+            10.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "siVDAC1": {
+          "doses": [
+            10.0,
+            25.0,
+            50.0
+          ],
+          "unit": "nM;"
+        },
+        "siMCU": {
+          "doses": [
+            10.0,
+            25.0,
+            50.0
+          ],
+          "unit": "nM;"
+        },
+        "OptoSTIM1 light": {
+          "doses": [
+            0.5,
+            1.0,
+            5.0
+          ],
+          "unit": "mW/mm\u00b2"
+        }
+      },
+      "readouts": [
+        "Fluorescence intensity time-series (3 channels)",
+        "power spectral density",
+        "cross-spectral coherence",
+        "transfer function gain/phase",
+        "peak IMS [Ca\u00b2\u207a] per oscillation cycle"
+      ],
+      "controls": [
+        "Dark (no stimulation)",
+        "constitutive OptoSTIM1 (constant light)",
+        "scrambled siRNA",
+        "MCU-D261A dominant-negative",
+        "thapsigargin (ER Ca\u00b2"
+      ]
+    }
+  ],
+  "n_hypotheses": 3,
+  "total_calls": 1,
+  "latency_s": 56.87
+}

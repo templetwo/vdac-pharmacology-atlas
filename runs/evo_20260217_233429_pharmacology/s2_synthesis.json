@@ -1,0 +1,168 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage a cooperative, high-affinity target system (NMDA-R on GABAergic interneurons \u2192 BDNF/mTOR), while supra-anesthetic doses engage lower-affinity, non-cooperative targets (e.g., broader NMDA-R blockade, other channels) leading to dissociation and potential neurotoxicity.",
+      "mechanism": "Dose picks pathway via differential receptor occupancy and circuit engagement; tissue (prefrontal cortex vs. thalamocortical) determines the functional outcome (synaptogenesis vs. disrupted connectivity).",
+      "falsifiable_by": "PET imaging showing identical NMDA-R occupancy patterns at sub-anesthetic and anesthetic doses, or failure to separate synaptic/behavioral effects by dose in animal models.",
+      "type": 0,
+      "confidence": 0.675,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('bdnf', 'downregulates', 'nmda')})",
+      "chunk_text": "Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage a cooperative, high-affinity target system (NMDA-R on GABAergic interneurons \u2192 BDNF/mTOR), while supra-anesthetic doses engage lower-affinity, non-cooperative targets (e.g., broader NMDA-R blockade, other channels) leading to dissociation and potential neurotoxicity."
+    },
+    {
+      "statement": "The rapid onset of antidepressant effects is consistent with a synergistic model where mitochondrial bioenergetic rescue is a necessary, rate-limiting prerequisite for the ATP-intensive process of BDNF/mTOR-dependent synaptogenesis.",
+      "mechanism": "Chronic stress impairs mitochondrial function; ketamine rapidly restores bioenergetic capacity, providing the ATP required to fuel the protein synthesis and cytoskeletal rearrangement for new synapse formation.",
+      "falsifiable_by": "Demonstrating that ketamine-induced synaptogenesis proceeds at a normal rate and magnitude even when mitochondrial ATP synthesis is pharmacologically clamped at pre-treatment (impaired) levels.",
+      "type": 1,
+      "confidence": 0.733,
+      "overlap_count": 3,
+      "models": [
+        "deepseek",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('atp', 'interacts', 'bdnf')})",
+      "chunk_text": "The rapid onset of antidepressant effects is consistent with a synergistic model where mitochondrial bioenergetic rescue is a necessary, rate-limiting prerequisite for the ATP-intensive process of BDNF/mTOR-dependent synaptogenesis."
+    },
+    {
+      "statement": "Ketamine at 5-10 \u00b5M alters mitochondrial membrane potential and bioenergetics, likely through complex I modulation and possibly VDAC1 state changes, contributing to but not solely explaining rapid onset.",
+      "mechanism": "Ketamine's lipophilicity allows mitochondrial membrane accumulation; transient \u0394\u03a8m hyperpolarization may enhance ATP production supporting rapid synaptogenesis.",
+      "falsifiable_by": "Direct measurement showing no \u0394\u03a8m change in cortical neurons at 5-10 \u00b5M ketamine within 1-2 hours.",
+      "type": 1,
+      "confidence": 0.65,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('atp', 'upregulates', 'vdac1')})",
+      "chunk_text": "Ketamine at 5-10 \u00b5M alters mitochondrial membrane potential and bioenergetics, likely through complex I modulation and possibly VDAC1 state changes, contributing to but not solely explaining rapid onset."
+    },
+    {
+      "statement": "(2R,6R)-HNK sustains antidepressant effects independent of NMDAR blockade, potentially through AMPAR potentiation and a distinct mitochondrial mechanism involving enhanced oxidative phosphorylation.",
+      "mechanism": "involving enhanced oxidative phosphorylation.",
+      "falsifiable_by": "Demonstrating HNK has zero effect on mitochondrial respiration in isolated brain mitochondria and that AMPAR blockade eliminates all HNK effects.",
+      "type": 1,
+      "confidence": 0.617,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('hnk', 'interacts', 'nmdar'), ('nmdar', 'interacts', 'ampar')})",
+      "chunk_text": "(2R,6R)-HNK sustains antidepressant effects independent of NMDAR blockade, potentially through AMPAR potentiation and a distinct mitochondrial mechanism involving enhanced oxidative phosphorylation."
+    },
+    {
+      "statement": "Ketamine therapeutic window predictable by Hill mismatch: cooperative synaptogenesis target (n~1.5-2) saturates before linear NMDA/myo tox (n=1, per prior Hill_standard=1.0).",
+      "mechanism": "Like metformin (AMPK n>1 before CI block), low-dose eEPSC burst (coop) precedes full NMDA occupancy; TI>10 mirrors FDA prior.",
+      "falsifiable_by": "Dose-response curves showing n=1 for both pathways (no mismatch). \u2500\u2500\u2500",
+      "type": 1,
+      "confidence": 0.533,
+      "overlap_count": 3,
+      "models": [
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('ci', 'downregulates', 'nmda')})",
+      "chunk_text": "Ketamine therapeutic window predictable by Hill mismatch: cooperative synaptogenesis target (n~1.5-2) saturates before linear NMDA/myo tox (n=1, per prior Hill_standard=1.0)."
+    },
+    {
+      "statement": "At sub-anesthetic doses, ketamine-induced changes in mitochondrial membrane potential are primarily a downstream, homeostatic response to the glutamate surge caused by NMDAR antagonism on interneurons, not a direct drug-mitochondria interaction.",
+      "mechanism": "NMDAR blockade on GABAergic interneurons disinhibits pyramidal neurons, causing a glutamate surge that increases AMPAR-mediated activity and subsequent metabolic demand, forcing mitochondria to adapt.",
+      "falsifiable_by": "Evidence of high-affinity (nanomolar Kd) ketamine binding to a mitochondrial protein that directly alters its function in the absence of extracellular glutamate signaling or NMDAR activity.",
+      "type": 2,
+      "confidence": 0.85,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "gemini"
+      ],
+      "tuples": "frozenset({('ampar', 'upregulates', 'nmdar')})",
+      "chunk_text": "At sub-anesthetic doses, ketamine-induced changes in mitochondrial membrane potential are primarily a downstream, homeostatic response to the glutamate surge caused by NMDAR antagonism on interneurons, not a direct drug-mitochondria interaction."
+    },
+    {
+      "statement": "(2R,6R)-HNK mediates sustained (>24h) effects independently of NMDA, without direct mitochondrial targeting.",
+      "mechanism": "HNK peaks 4-8h, activates AMPA/mGluR1 without channel block, sustaining PSD95/AMPAR insertion; no reported VDAC1/\u0394\u03a8m interaction (unlike CBD Kd=11\u03bcM).",
+      "falsifiable_by": "HNK infusion producing no sustained AD in AMPAR KO but intact in mito OXPHOS KO.",
+      "type": 2,
+      "confidence": 0.725,
+      "overlap_count": 2,
+      "models": [
+        "deepseek",
+        "grok"
+      ],
+      "tuples": "frozenset({('ampa', 'upregulates', 'hnk'), ('ampa', 'downregulates', 'psd95'), ('hnk', 'modulates', 'nmda')})",
+      "chunk_text": "(2R,6R)-HNK mediates sustained (>24h) effects independently of NMDA, without direct mitochondrial targeting."
+    },
+    {
+      "statement": "Rapid antidepressant onset (2-4h) aligns with synaptic plasticity (AMPA/mTOR/BDNF translation) more than mitochondrial bioenergetics alone.",
+      "mechanism": "NMDA-GluN2B block disinhibits pyramidal Glu release \u2192 AMPA activation \u2192 eEF2 dephos \u2192 BDNF translation (peaks 1-4h), vs SSRIs' transcriptional delay.",
+      "falsifiable_by": "BDNF/mTOR KO mice lacking rapid effects despite ketamine dosing.",
+      "type": 3,
+      "confidence": 0.95,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('ampa', 'downregulates', 'nmda')})",
+      "chunk_text": "Rapid antidepressant onset (2-4h) aligns with synaptic plasticity (AMPA/mTOR/BDNF translation) more than mitochondrial bioenergetics alone."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.026515151515151512,
+      "cosine": 0.8978602409362793,
+      "jsd": 0.07800619037085829,
+      "kappa": 0.9594716077215724,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.38095238095238093,
+        "2": 0.42857142857142855,
+        "3": 0.19047619047619047
+      },
+      "type_01_ratio": 0.38095238095238093,
+      "n_claims_per_model": [
+        4,
+        5,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.31067821067821066,
+      "cosine": 0.9031901478767395,
+      "jsd": 0.1210769883520996,
+      "kappa": 0.9594700047582447,
+      "type_distribution": {
+        "0": 0.19047619047619047,
+        "1": 0.5714285714285714,
+        "2": 0.19047619047619047,
+        "3": 0.047619047619047616
+      },
+      "type_01_ratio": 0.7619047619047619,
+      "n_claims_per_model": [
+        4,
+        5,
+        5,
+        4,
+        3
+      ]
+    }
+  ]
+}

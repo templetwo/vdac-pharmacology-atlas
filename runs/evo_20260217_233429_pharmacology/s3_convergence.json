@@ -1,0 +1,22 @@
+{
+  "stage": "S3",
+  "passed": true,
+  "convergence_score": 0.9032,
+  "convergence_threshold": 0.85,
+  "convergence_pass": true,
+  "jaccard": 0.3107,
+  "jaccard_threshold": 0.85,
+  "jaccard_pass": false,
+  "type_01_ratio": 0.7619,
+  "type_01_threshold": 0.75,
+  "type_pass": true,
+  "cosine": 0.9032,
+  "jsd": 0.1211,
+  "kappa": 0.9595,
+  "type_distribution": {
+    "0": 0.19047619047619047,
+    "1": 0.5714285714285714,
+    "2": 0.19047619047619047,
+    "3": 0.047619047619047616
+  }
+}

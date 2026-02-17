@@ -1,0 +1,175 @@
+{
+  "stage": "S3",
+  "passed": false,
+  "convergence_score": 0.939,
+  "convergence_threshold": 0.85,
+  "convergence_pass": true,
+  "jaccard": 0.4667,
+  "jaccard_threshold": 0.85,
+  "jaccard_pass": false,
+  "type_01_ratio": 0.7273,
+  "type_01_threshold": 0.75,
+  "type_pass": false,
+  "cosine": 0.939,
+  "jsd": 0.1719,
+  "kappa": 0.9309,
+  "type_distribution": {
+    "0": 0.5909090909090909,
+    "1": 0.13636363636363635,
+    "2": 0.18181818181818182,
+    "3": 0.09090909090909091
+  },
+  "divergence_map": {
+    "total_unique_claims": 22,
+    "most_divergent": [
+      {
+        "statement": "1**: Drp1-mediated fission constriction is pharmacologically irrelevant for VDAC1-targeting drugs with \u00b5M Kd.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.8
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "2**: VDAC1 surface density is approximately conserved (~3,000-5,000 copies/\u00b5m\u00b2) regardless of fission/fusion state.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.65
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "3**: Mfn2-dependent ER-mito contact sites enrich OMM cholesterol by 5-15 mol%, shifting VDAC1 toward closed state and reducing CBD binding affinity by ~2-5 fold.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.55
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "4**: VDAC1 hexagonal supralattice requires flat membrane domains \u226580-120 nm; fragmented mitochondria (radius ~150 nm) retain reduced flat patches, shifting equilibrium toward monomers/dimers with distinct pharmacological profiles.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          3
+        ],
+        "confidences": [
+          0.35
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "5**: Mdivi-1 (Drp1 inhibitor) indirectly reduces VDAC1 drug accessibility by promoting fusion, increasing ER-mito contacts, enriching OMM cholesterol, and stabilizing closed VDAC1.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          3
+        ],
+        "confidences": [
+          0.4
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "1:** Drp1-mediated fission induces transient, high-curvature OMM constriction that distorts VDAC1\u2019s \u03b2-barrel, reducing pore conductance and altering drug-binding pockets, but does not force stable oligomerization.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.75
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "2:** VDAC1 density per unit OMM area is conserved (~3,000 copies/\u00b5m\u00b2) between fragmented and fused mitochondria, but fragmentation reduces the size of VDAC1\u2019s hexagonal lattice domains, shifting equilibrium toward monomers/dimers.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.6
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "3:** Mfn2-mediated cholesterol transfer at ER-mitochondria contacts stabilizes VDAC1 in a closed, low-conductance state, reducing accessibility of pore-targeting drugs (e.g., CBD) by 2\u20134-fold.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.65
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "4:** Dynamics-targeting drugs (e.g., mdivi-1) indirectly reduce VDAC1-targeting drug efficacy by promoting fusion, which enriches OMM cholesterol (via Mfn2) and stabilizes VDAC1\u2019s closed state.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          3
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "5:** The transient VDAC1 distortion during fission is pharmacologically irrelevant for drugs with slow binding kinetics (e.g., CBD, Kd = 11 \u00b5M), as the fission neck\u2019s lifetime (~1\u201310 ms) is orders of magnitude shorter than the drug\u2019s residence time (~seconds).",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.8
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      }
+    ],
+    "models_present": [
+      "claude",
+      "mistral",
+      "grok",
+      "gemini",
+      "deepseek"
+    ]
+  },
+  "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+}

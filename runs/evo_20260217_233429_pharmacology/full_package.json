@@ -1,0 +1,991 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260217_233429_pharmacology",
+  "timestamp": "2026-02-17T23:36:14.121832+00:00",
+  "question": "What are the mechanisms by which ketamine produces rapid antidepressant effects within hours, and is there a mitochondrial component beyond NMDA receptor antagonism? Specifically: (1) Does ketamine at sub-anesthetic doses (0.5 mg/kg IV) alter mitochondrial membrane potential or VDAC1 state? (2) Is the rapid onset (2-4 hours vs weeks for SSRIs) consistent with a synaptic plasticity mechanism alone, or does mitochondrial bioenergetic rescue contribute? (3) Does ketamine follow the structural isomorphism pattern \u2014 dose picks pathway, tissue determines outcome \u2014 with sub-anesthetic producing BDNF/mTOR-dependent synaptogenesis and supra-anesthetic producing dissociation/neurotoxicity? (4) What is the role of ketamine's metabolite (2R,6R)-HNK in sustained antidepressant effects, and does it have a distinct mitochondrial target? (5) Can the therapeutic window be predicted by the same Hill coefficient mismatch that governs metformin (cooperative target saturates before toxic target engages)?",
+  "convergence_report": {
+    "s1_initial": {
+      "n_models_responded": 5,
+      "initial_jaccard": 0.026515151515151512,
+      "initial_cosine": 0.8978602409362793
+    },
+    "s2_refinement": {
+      "total_rounds": 0,
+      "early_stopped": false,
+      "final_jaccard": 0.0,
+      "final_cosine": 0.0,
+      "final_jsd": 0.0,
+      "final_type_01_ratio": 0.0
+    },
+    "s3_gate": {
+      "passed": true,
+      "jaccard": 0.3107,
+      "type_01_ratio": 0.7619,
+      "recommendation": ""
+    }
+  },
+  "verification": {
+    "n_type2_input": 9,
+    "n_promoted": 0,
+    "n_held": 5,
+    "n_novel": 2,
+    "n_contradicted": 2,
+    "total_calls": 9
+  },
+  "gate": {
+    "passed": true,
+    "n_passed": 7,
+    "n_failed": 12,
+    "recommendation": "Lab Gate PASSED with filter. 7/19 claims cleared. 12 filtered: 'Sub-anesthetic ketamine (0.5 mg/kg IV) produces br...' lacks novelty; 'Ketamine follows structural isomorphism \u2014 sub-anes...' not feasible; 'Mitochondrial bioenergetic rescue contributes to k...' not feasible",
+    "claims": [
+      {
+        "statement": "Sub-anesthetic ketamine (0.5 mg/kg IV) produces brain concentrations (~5-10 \u00b5M) sufficient to partia",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Ketamine at 5-10 \u00b5M alters mitochondrial membrane potential and bioenergetics, likely through comple",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "(2R,6R)-HNK sustains antidepressant effects independent of NMDAR blockade, potentially through AMPAR",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Ketamine follows structural isomorphism \u2014 sub-anesthetic doses engage BDNF/mTOR synaptogenesis (Hill",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Ketamine at 0.5 mg/kg IV transiently depolarizes \u0394\u03a8m in cortical neurons within 1\u20132 hours, likely vi",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Mitochondrial bioenergetic rescue contributes to ketamine\u2019s rapid antidepressant effects, but is not",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage BDNF/mTOR via \u0394\u03a8m ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "(2R,6R)-HNK sustains antidepressant effects via mitochondrial Complex I inhibition, distinct from ke",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Ketamine\u2019s therapeutic window can be predicted by a Hill coefficient mismatch (n\u22482 for NMDA vs. n\u22481 ",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Rapid antidepressant onset (2-4h) aligns with synaptic plasticity (AMPA/mTOR/BDNF translation) more ",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Ketamine follows dose-pathway isomorphism: sub-anesthetic \u2192 BDNF/mTOR synaptogenesis; supra-anesthet",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "(2R,6R)-HNK mediates sustained (>24h) effects independently of NMDA, without direct mitochondrial ta",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Ketamine therapeutic window predictable by Hill mismatch: cooperative synaptogenesis target (n~1.5-2",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The rapid onset of antidepressant effects is consistent with a synergistic model where mitochondrial",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The metabolite (2R,6R)-HNK sustains antidepressant effects via a non-NMDAR mechanism involving AMPA ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "Ketamine's therapeutic window likely arises from a mismatch in dose-response curves between therapeu",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The rapid (2-4h) antidepressant onset requires a mitochondrial bioenergetic component (e.g., transie",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage a cooperative, hig",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "(2R,6R)-HNK contributes to sustained effects via a distinct, non-NMDA target, likely involving mitoc",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF primary rat cortical neurons are exposed to ketamine at 5-10 \u00b5M for 1-2 hours, THEN JC-1 fluorescence ratio (red/green) will show a transient depolarization of 15-30% at 30-60 min followed by partial recovery, compared to vehicle. At 50-100 \u00b5M (supra-anesthetic equivalent), \u0394\u03a8m depolarization will exceed 40% without recovery by 4 hours.",
+      "testability_score": 9.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "ketamine_concentration",
+          "range": "1.0-100.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "delta_psi_change_low_dose",
+          "range": "10.0-35.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "delta_psi_change_high_dose",
+          "range": "30.0-70.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "recovery_time_low_dose",
+          "range": "30.0-120.0 min",
+          "distribution": "uniform"
+        },
+        {
+          "name": "exposure_duration",
+          "range": "0.5-4.0 hours",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.8117,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4996434455974755,
+            "std": 0.12255297031415406,
+            "median": 0.5032191473846218,
+            "ci_lower": 0.25830920877384034,
+            "ci_upper": 0.7414176430071063,
+            "min": 0.15758184713280732,
+            "max": 0.8156161995315162
+          }
+        }
+      }
+    },
+    {
+      "id": "H3",
+      "prediction": "IF isolated mouse brain mitochondria or cultured cortical neurons are treated with (2R,6R)-HNK at 1-10 \u00b5M, THEN oxygen consumption rate (OCR) for basal and maximal respiration will increase by 15-40% within 60 min, and this effect will persist in the presence of AP5 (NMDAR antagonist, 50 \u00b5M) but will be abolished by NBQX (AMPAR antagonist, 10 \u00b5M, in neurons only) or by complex I inhibitor rotenone (0.5 \u00b5M).",
+      "testability_score": 9.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "HNK_concentration",
+          "range": "0.5-20.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "OCR_increase_basal",
+          "range": "10.0-50.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "OCR_increase_maximal",
+          "range": "5.0-45.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "complex_I_activity_change",
+          "range": "5.0-30.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "AMPAR_block_reversal",
+          "range": "50.0-100.0 %",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9216,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4934038742106948,
+            "std": 0.1322364803274733,
+            "median": 0.4865524462283509,
+            "ci_lower": 0.25886351030839905,
+            "ci_upper": 0.7579434521888677,
+            "min": 0.1525064590343752,
+            "max": 0.8466002656183298
+          }
+        }
+      }
+    },
+    {
+      "id": "H4",
+      "prediction": "IF the dose-response curves for ketamine's synaptogenic effect (spine density increase in PFC layer V pyramidal neurons) and neurotoxic effect (caspase-3 activation or LDH release) are fitted to Hill equations, THEN the synaptogenic target will show a Hill coefficient of 1.0-1.5 (hyperbolic, low cooperativity) with EC\u2085\u2080 ~5 \u00b5M, while the neurotoxic target will show a Hill coefficient of 2.5-4.0 (sigmoidal, high cooperativity) with EC\u2085\u2080 ~50-80 \u00b5M, creating a \u22655-fold therapeutic window where synaptogenesis saturates before neurotoxicity engages.",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "EC50_synaptogenesis",
+          "range": "2.0-15.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "EC50_neurotoxicity",
+          "range": "30.0-120.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Hill_synaptogenesis",
+          "range": "0.8-2.0 (normal,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Hill_neurotoxicity",
+          "range": "1.5-5.0 (normal,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "therapeutic_window_ratio",
+          "range": "3.0-20.0 fold",
+          "distribution": "log-normal"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9296,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.497224750511621,
+            "std": 0.12072347361695072,
+            "median": 0.5048134881118675,
+            "ci_lower": 0.2660358928202372,
+            "ci_upper": 0.714968279800657,
+            "min": 0.17969116842425975,
+            "max": 0.7897103818861907
+          }
+        }
+      }
+    },
+    {
+      "id": "H2",
+      "prediction": "IF mice receive ketamine (10 mg/kg IP, sub-anesthetic) preceded by the mitochondrial uncoupler FCCP (low-dose ICV, 0.5 nmol) or VDAC1 inhibitor DIDS (ICV, 10 nmol), THEN the antidepressant-like effect in the forced swim test at 2h post-injection will be abolished (immobility time returns to \u226590% of vehicle control), even though BDNF protein levels in PFC remain elevated.",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "ketamine_dose",
+          "range": "5.0-15.0 mg/kg",
+          "distribution": "uniform"
+        },
+        {
+          "name": "FCCP_ICV_dose",
+          "range": "0.1-1.0 nmol",
+          "distribution": "log-normal"
+        },
+        {
+          "name": "DIDS_ICV_dose",
+          "range": "5.0-20.0 nmol",
+          "distribution": "uniform"
+        },
+        {
+          "name": "immobility_reduction_ketamine_alone",
+          "range": "30.0-60.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "immobility_rescue_by_blocker",
+          "range": "0.0-100.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "BDNF_fold_increase",
+          "range": "1.2-2.0 fold",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.7949,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5068718625039587,
+            "std": 0.11896771315788991,
+            "median": 0.511008923585794,
+            "ci_lower": 0.25953729893507077,
+            "ci_upper": 0.742168911782628,
+            "min": 0.16775729700642555,
+            "max": 0.7844240690036981
+          }
+        }
+      }
+    }
+  ],
+  "simulations": {
+    "n_hypotheses_simulated": 4,
+    "total_iterations": 1200,
+    "llm_calls": 0,
+    "results": [
+      {
+        "hypothesis_id": "H1",
+        "n_iterations": 300,
+        "effect_size": 0.8117,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "ketamine_concentration": {
+            "mean": 49.178695338659864,
+            "std": 28.69237572404375,
+            "median": 48.42141397685728,
+            "ci_lower": 3.741280735358023,
+            "ci_upper": 96.45314130908278,
+            "min": 1.7288647053495456,
+            "max": 99.24518084152787
+          },
+          "delta_psi_change_low_dose": {
+            "mean": 22.632990378211694,
+            "std": 7.095438619794194,
+            "median": 22.83702643496466,
+            "ci_lower": 10.902717512014917,
+            "ci_upper": 34.50301055900123,
+            "min": 10.13574585321751,
+            "max": 34.977618261855966
+          },
+          "delta_psi_change_high_dose": {
+            "mean": 49.887983071988415,
+            "std": 11.913254806495635,
+            "median": 50.08418595424786,
+            "ci_lower": 30.683882678847027,
+            "ci_upper": 69.36106415392993,
+            "min": 30.049322500476325,
+            "max": 69.94973480267059
+          },
+          "recovery_time_low_dose": {
+            "mean": 76.01022012092112,
+            "std": 26.248717140568072,
+            "median": 74.18394128564572,
+            "ci_lower": 33.833139963459374,
+            "ci_upper": 118.51704244256689,
+            "min": 30.0466869749135,
+            "max": 119.94797183017691
+          },
+          "exposure_duration": {
+            "mean": 2.2423695792288556,
+            "std": 1.0257147298558333,
+            "median": 2.2018272045125005,
+            "ci_lower": 0.6300402769137339,
+            "ci_upper": 3.9153728709738203,
+            "min": 0.5037361275796153,
+            "max": 3.988370240317037
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H2",
+        "n_iterations": 300,
+        "effect_size": 0.7949,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "ketamine_dose": {
+            "mean": 9.982772927598292,
+            "std": 2.850713135325882,
+            "median": 9.948935127196933,
+            "ci_lower": 5.263580438368926,
+            "ci_upper": 14.7109375059911,
+            "min": 5.031501527653386,
+            "max": 14.978817442741205
+          },
+          "FCCP_ICV_dose": {
+            "mean": 0.5672734119132622,
+            "std": 0.1608567548408481,
+            "median": 0.5489567405756629,
+            "ci_lower": 0.310650747581694,
+            "ci_upper": 0.9531441568119959,
+            "min": 0.19962219043821455,
+            "max": 1.0
+          },
+          "DIDS_ICV_dose": {
+            "mean": 12.521717584633391,
+            "std": 4.313450892561118,
+            "median": 12.200322766358006,
+            "ci_lower": 5.510782411236265,
+            "ci_upper": 19.663865348267233,
+            "min": 5.252454698084522,
+            "max": 19.967630612444193
+          },
+          "immobility_reduction_ketamine_alone": {
+            "mean": 45.32124286143225,
+            "std": 8.958250498919853,
+            "median": 46.07262764474727,
+            "ci_lower": 30.669316054277807,
+            "ci_upper": 59.167209345721815,
+            "min": 30.16899802744651,
+            "max": 59.939898443823296
+          },
+          "immobility_rescue_by_blocker": {
+            "mean": 51.23665105566144,
+            "std": 29.75034218540036,
+            "median": 52.77929497802168,
+            "ci_lower": 3.9775239243686933,
+            "ci_upper": 98.46155783200342,
+            "min": 0.4440215423909155,
+            "max": 99.7628752074644
+          },
+          "BDNF_fold_increase": {
+            "mean": 1.5993910059576397,
+            "std": 0.23016144948870113,
+            "median": 1.591568172138151,
+            "ci_lower": 1.2170145630984546,
+            "ci_upper": 1.9736119538576056,
+            "min": 1.2051099475463072,
+            "max": 1.998505734639569
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H3",
+        "n_iterations": 300,
+        "effect_size": 0.9216,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "HNK_concentration": {
+            "mean": 10.005256595878322,
+            "std": 5.621194775977096,
+            "median": 9.51845358236373,
+            "ci_lower": 1.2314497286443549,
+            "ci_upper": 19.46674560329502,
+            "min": 0.6071588573617719,
+            "max": 19.910020881103055
+          },
+          "OCR_increase_basal": {
+            "mean": 29.37900419890333,
+            "std": 11.748008910817504,
+            "median": 28.8420238833132,
+            "ci_lower": 10.997402446423498,
+            "ci_upper": 48.79669846828954,
+            "min": 10.05145005162992,
+            "max": 49.71131443995929
+          },
+          "OCR_increase_maximal": {
+            "mean": 24.27660080915032,
+            "std": 11.814941087686094,
+            "median": 23.434682518700285,
+            "ci_lower": 6.045957984422104,
+            "ci_upper": 43.85455884623788,
+            "min": 5.132952610427495,
+            "max": 44.7919636469046
+          },
+          "complex_I_activity_change": {
+            "mean": 16.733198875936704,
+            "std": 7.043974108156971,
+            "median": 15.94071954810193,
+            "ci_lower": 5.536626603076137,
+            "ci_upper": 28.792919517894372,
+            "min": 5.010816263652064,
+            "max": 29.92649755072017
+          },
+          "AMPAR_block_reversal": {
+            "mean": 77.19261173078881,
+            "std": 15.027159578326197,
+            "median": 79.49599369373973,
+            "ci_lower": 51.84661599069226,
+            "ci_upper": 98.7779881885248,
+            "min": 50.06362539180965,
+            "max": 99.74026011084693
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H4",
+        "n_iterations": 300,
+        "effect_size": 0.9296,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "EC50_synaptogenesis": {
+            "mean": 8.64004541745992,
+            "std": 3.7334938923109737,
+            "median": 8.552778000580876,
+            "ci_lower": 2.2620367273371005,
+            "ci_upper": 14.783888599100244,
+            "min": 2.000704502237511,
+            "max": 14.97329515574527
+          },
+          "EC50_neurotoxicity": {
+            "mean": 75.12033070774106,
+            "std": 26.350765566926466,
+            "median": 77.75897674327177,
+            "ci_lower": 31.71440599903971,
+            "ci_upper": 114.70008424718081,
+            "min": 30.249640494090666,
+            "max": 119.14862247350477
+          },
+          "Hill_synaptogenesis": {
+            "mean": 1.383066955473677,
+            "std": 0.3499059756649373,
+            "median": 1.389779029318575,
+            "ci_lower": 0.837895755748003,
+            "ci_upper": 1.9482488981121813,
+            "min": 0.8074949497488242,
+            "max": 1.9974559684327144
+          },
+          "Hill_neurotoxicity": {
+            "mean": 3.1991051864701086,
+            "std": 1.021243767847137,
+            "median": 3.1371439320540646,
+            "ci_lower": 1.608245574632895,
+            "ci_upper": 4.891609241111777,
+            "min": 1.531880752878825,
+            "max": 4.968896163751582
+          },
+          "therapeutic_window_ratio": {
+            "mean": 11.545326522122044,
+            "std": 3.013469183854401,
+            "median": 11.244314376420501,
+            "ci_lower": 6.791509688866755,
+            "ci_upper": 18.684521579838837,
+            "min": 4.989673201283794,
+            "max": 20.0
+          }
+        }
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF primary rat cortical neurons are exposed to ketamine at 5-10 \u00b5M for 1-2 hours, THEN JC-1 fluorescence ratio (red/green) will show a transient depolarization of 15-30% at 30-60 min followed by partial recovery, compared to vehicle. At 50-100 \u00b5M (supra-anesthetic equivalent), \u0394\u03a8m depolarization will exceed 40% without recovery by 4 hours.",
+      "protocol": "Culture DIV14 rat cortical neurons in 96-well plates. Treat with ketamine (1, 5, 10, 25, 50, 100 \u00b5M) \u00b1 VDAC1 inhibitor DIDS (100 \u00b5M). Measure \u0394\u03a8m via JC-1 live imaging at 15, 30, 60, 120, 240 min using plate reader and confocal. Parallel wells for TMRM confirmation and MTT viability at 4h and 24h.",
+      "dose_ranges": {
+        "Ketamine": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            25.0,
+            50.0,
+            100.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "DIDS": {
+          "doses": [
+            100.0
+          ],
+          "unit": "\u00b5M;"
+        }
+      },
+      "readouts": [
+        "JC-1 ratio (530/590 nm)",
+        "TMRM fluorescence",
+        "MTT viability",
+        "ATP luminescence (CellTiter-Glo)"
+      ],
+      "controls": [
+        "1 \u00b5M",
+        "READOUTS: JC-1 ratio (530/590 nm)",
+        "TMRM fluorescence",
+        "MTT viability",
+        "ATP luminescence (CellTiter-Glo)",
+        "CONTROLS: Vehicle (saline)",
+        "FCCP (1 \u00b5M",
+        "full depolarization positive control)",
+        "oligomycin (1 \u00b5M",
+        "hyperpolarization control)",
+        "DIDS alone",
+        "heat-killed cells",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "Biphasic",
+      "null_outcome": "No significant \u0394\u03a8m change at any dose within 4h, or identical magnitude/kinetics across all doses (no dose-pathway isomorphism)."
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF mice receive ketamine (10 mg/kg IP, sub-anesthetic) preceded by the mitochondrial uncoupler FCCP (low-dose ICV, 0.5 nmol) or VDAC1 inhibitor DIDS (ICV, 10 nmol), THEN the antidepressant-like effect in the forced swim test at 2h post-injection will be abolished (immobility time returns to \u226590% of vehicle control), even though BDNF protein levels in PFC remain elevated.",
+      "protocol": "Male C57BL/6 mice (n=12/group, 6 groups) with pre-implanted ICV cannulae. Groups: (1) vehicle+vehicle, (2) vehicle+ketamine, (3) FCCP+ketamine, (4) DIDS+ketamine, (5) FCCP+vehicle, (6) DIDS+vehicle. ICV pretreatment 30 min before ketamine IP. FST and sucrose preference at 2h and 24h. Sacrifice at 2.5h; PFC dissected for BDNF ELISA, ATP assay, and JC-1 staining of acute slices.",
+      "dose_ranges": {
+        "Ketamine": {
+          "doses": [
+            5.0,
+            10.0,
+            15.0
+          ],
+          "unit": "mg/kg"
+        },
+        "FCCP": {
+          "doses": [
+            0.1,
+            0.5,
+            1.0
+          ],
+          "unit": "nmol"
+        },
+        "DIDS": {
+          "doses": [
+            5.0,
+            10.0,
+            20.0
+          ],
+          "unit": "nmol"
+        }
+      },
+      "readouts": [
+        "FST immobility (sec)",
+        "sucrose preference (%)",
+        "PFC BDNF (pg/mg",
+        "ELISA)",
+        "PFC ATP (luminescence)",
+        "PFC \u0394\u03a8m (JC-1 ex vivo)",
+        "locomotor activity (open field",
+        "to exclude sedation confound)"
+      ],
+      "controls": [
+        "Vehicle-vehicle",
+        "each blocker alone (to exclude depressogenic effects of mitochondrial disruption)",
+        "locomotor controls",
+        "rapamycin+ketamine group (mTOR blockade positive control for behavioral abolition)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "Ketamine alone reduces immobility ~45% and increases PFC ATP/BDNF. FCCP or DIDS pretreatment blocks behavioral improvement and ATP increase but BDNF remains partially elevated, demonstrating that mitochondrial function is required downstream of or parallel to BDNF for behavioral output.",
+      "null_outcome": "FCCP/DIDS pretreatment has no effect on ketamine's behavioral response, indicating mitochondrial bioenergetics are dispensable for rapid antidepressant action."
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF isolated mouse brain mitochondria or cultured cortical neurons are treated with (2R,6R)-HNK at 1-10 \u00b5M, THEN oxygen consumption rate (OCR) for basal and maximal respiration will increase by 15-40% within 60 min, and this effect will persist in the presence of AP5 (NMDAR antagonist, 50 \u00b5M) but will be abolished by NBQX (AMPAR antagonist, 10 \u00b5M, in neurons only) or by complex I inhibitor rotenone (0.5 \u00b5M).",
+      "protocol": "Seahorse XFe96: (A) Isolated mouse brain mitochondria treated with HNK (0.5, 1, 5, 10, 20 \u00b5M) \u00b1 rotenone (0.5 \u00b5M), measuring OCR with MitoStress test (oligomycin/FCCP/antimycin A). (B) DIV14 cortical neurons treated with HNK (same",
+      "dose_ranges": {
+        "HNK": {
+          "doses": [
+            0.5,
+            1.0,
+            5.0,
+            10.0,
+            20.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "AP5": {
+          "doses": [
+            50.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "NBQX": {
+          "doses": [
+            10.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Rotenone": {
+          "doses": [
+            0.5
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Ketamine comparator": {
+          "doses": [
+            10.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "OCR (pmol O\u2082/min)",
+        "ECAR (mpH/min)",
+        "spare respiratory capacity (%)",
+        "complex I specific activity (nmol NADH oxidized/min/mg)",
+        "ATP production rate (Seahorse real-time ATP assay)"
+      ],
+      "controls": [
+        "Vehicle",
+        "ketamine (10 \u00b5M",
+        "parent compound comparator)",
+        "(2S",
+        "6S)-HNK (inactive enantiomer",
+        "stereoselectivity control)",
+        "rotenone alone",
+        "FCCP alone",
+        "heat-inactivated mitochondria",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "HNK at 5-10 \u00b5M increases basal OCR ~25% and maximal OCR ~20% in both isolated mitochondria and neurons. In isolated mitochondria (no receptors), the effect persists with AP5/NBQX, confirming a direct mitochondrial target. In neurons, NBQX partially attenuates (~50%) suggesting dual mechanism. Rotenone abolishes the OCR increase, localizing the target to complex I or upstream.",
+      "null_outcome": "HNK produces no OCR change in isolated mitochondria at any concentration, and all neuronal effects are fully blocked by NBQX, indicating purely AMPAR-mediated mechanism with no direct mitochondrial component."
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF the dose-response curves for ketamine's synaptogenic effect (spine density increase in PFC layer V pyramidal neurons) and neurotoxic effect (caspase-3 activation or LDH release) are fitted to Hill equations, THEN the synaptogenic target will show a Hill coefficient of 1.0-1.5 (hyperbolic, low cooperativity) with EC\u2085\u2080 ~5 \u00b5M, while the neurotoxic target will show a Hill coefficient of 2.5-4.0 (sigmoidal, high cooperativity) with EC\u2085\u2080 ~50-80 \u00b5M, creating a \u22655-fold therapeutic window where synaptogenesis saturates before neurotoxicity engages.",
+      "protocol": "DIV14 rat cort",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": [],
+      "expected_outcome": "",
+      "null_outcome": ""
+    }
+  ],
+  "budget": {
+    "s1_calls": 5,
+    "s2_calls": 0,
+    "verify_calls": 9,
+    "gate_calls": 1,
+    "s4_calls": 1,
+    "s5_calls": 0,
+    "total_calls": 16,
+    "budget_target": "92-142 calls"
+  },
+  "audit_trail": {
+    "session_seed": 1771371271,
+    "s2_rounds": [],
+    "s3_gate": {
+      "stage": "S3",
+      "passed": true,
+      "convergence_score": 0.9032,
+      "convergence_threshold": 0.85,
+      "convergence_pass": true,
+      "jaccard": 0.3107,
+      "jaccard_threshold": 0.85,
+      "jaccard_pass": false,
+      "type_01_ratio": 0.7619,
+      "type_01_threshold": 0.75,
+      "type_pass": true,
+      "cosine": 0.9032,
+      "jsd": 0.1211,
+      "kappa": 0.9595,
+      "type_distribution": {
+        "0": 0.19047619047619047,
+        "1": 0.5714285714285714,
+        "2": 0.19047619047619047,
+        "3": 0.047619047619047616
+      }
+    },
+    "final_claims": [
+      {
+        "statement": "Sub-anesthetic ketamine (0.5 mg/kg IV) produces brain concentrations (~5-10 \u00b5M) sufficient to partially block NMDARs on GABAergic interneurons, disinhibiting glutamate release, triggering AMPAR-dependent BDNF/mTOR signaling within 2 hours.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "Preferential NMDAR blockade on fast-spiking interneurons causes cortical disinhibition \u2192 glutamate burst \u2192 AMPAR \u2192 BDNF \u2192 mTOR \u2192 synaptic protein synthesis.",
+        "falsifiable_by": "Showing AMPAR antagonism does not block ketamine's rapid antidepressant effect in humans.",
+        "model": "claude"
+      },
+      {
+        "statement": "Ketamine at 5-10 \u00b5M alters mitochondrial membrane potential and bioenergetics, likely through complex I modulation and possibly VDAC1 state changes, contributing to but not solely explaining rapid onset.",
+        "type": 2,
+        "confidence": 0.5,
+        "mechanism": "Ketamine's lipophilicity allows mitochondrial membrane accumulation; transient \u0394\u03a8m hyperpolarization may enhance ATP production supporting rapid synaptogenesis.",
+        "falsifiable_by": "Direct measurement showing no \u0394\u03a8m change in cortical neurons at 5-10 \u00b5M ketamine within 1-2 hours.",
+        "model": "claude"
+      },
+      {
+        "statement": "(2R,6R)-HNK sustains antidepressant effects independent of NMDAR blockade, potentially through AMPAR potentiation and a distinct mitochondrial mechanism involving enhanced oxidative phosphorylation.",
+        "type": 2,
+        "confidence": 0.55,
+        "mechanism": "involving enhanced oxidative phosphorylation.",
+        "falsifiable_by": "Demonstrating HNK has zero effect on mitochondrial respiration in isolated brain mitochondria and that AMPAR blockade eliminates all HNK effects.",
+        "model": "claude"
+      },
+      {
+        "statement": "Ketamine follows structural isomorphism \u2014 sub-anesthetic doses engage BDNF/mTOR synaptogenesis (Hill n\u22481-2 for NMDAR), supra-anesthetic engages widespread channel blockade and neurotoxicity (Hill n\u22481), and the therapeutic window can be modeled by Hill coefficient mismatch analogous to metformin.",
+        "type": 3,
+        "confidence": 0.4,
+        "mechanism": "Cooperative engagement of the disinhibition circuit (effective Hill n>1 due to network-level cooperativity of interneuron blockade) saturates before non-cooperative toxic blockade of excitatory neurons scales linearly.",
+        "falsifiable_by": "Showing ketamine's dose-response for antidepressant vs. dissociative/neurotoxic effects both fit identical Hill coefficients with no separation. \u2500\u2500\u2500",
+        "model": "claude"
+      },
+      {
+        "statement": "Ketamine at 0.5 mg/kg IV transiently depolarizes \u0394\u03a8m in cortical neurons within 1\u20132 hours, likely via VDAC1 modulation.",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "NMDA antagonism \u2192 reduced Ca\u00b2\u207a influx \u2192 VDAC1 conformational shift \u2192 transient \u0394\u03a8m depolarization \u2192 bioenergetic reset.",
+        "falsifiable_by": "No change in \u0394\u03a8m or VDAC1 state in *in vivo* models (e.g., Seahorse assay, JC-1 staining) post-ketamine.",
+        "model": "mistral"
+      },
+      {
+        "statement": "Mitochondrial bioenergetic rescue contributes to ketamine\u2019s rapid antidepressant effects, but is not sufficient alone (synaptic plasticity is primary).",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "\u0394\u03a8m depolarization \u2192 ROS signaling \u2192 PGC-1\u03b1 activation \u2192 mitochondrial biogenesis \u2192 supports synaptogenesis (BDNF/mTOR).",
+        "falsifiable_by": "Ketamine\u2019s effects persist in *mitochondrial DNA-depleted* neurons or *PGC-1\u03b1 KO* mice.",
+        "model": "mistral"
+      },
+      {
+        "statement": "Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage BDNF/mTOR via \u0394\u03a8m modulation, while supra-anesthetic doses (>1 mg/kg) disrupt \u0394\u03a8m chronically, causing neurotoxicity.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "Low-dose \u0394\u03a8m depolarization \u2192 hormesis; high-dose \u0394\u03a8m collapse \u2192 apoptosis (via VDAC1/ANT opening).",
+        "falsifiable_by": "Identical \u0394\u03a8m changes at sub- and supra-anesthetic doses in *ex vivo* brain slices.",
+        "model": "mistral"
+      },
+      {
+        "statement": "(2R,6R)-HNK sustains antidepressant effects via mitochondrial Complex I inhibition, distinct from ketamine\u2019s NMDA antagonism.",
+        "type": 3,
+        "confidence": 0.4,
+        "mechanism": "(2R,6R)-HNK binds Complex I \u2192 mild ROS \u2192 Nrf2 activation \u2192 antioxidant response \u2192 synaptic stabilization.",
+        "falsifiable_by": "No antidepressant effect in *Ndufs4 KO* mice (Complex I-deficient) or with Complex I inhibitors (e.g., rotenone).",
+        "model": "mistral"
+      },
+      {
+        "statement": "Ketamine\u2019s therapeutic window can be predicted by a Hill coefficient mismatch (n\u22482 for NMDA vs. n\u22481 for mitochondrial targets), similar to metformin.",
+        "type": 2,
+        "confidence": 0.5,
+        "mechanism": "NMDA receptors (n\u22482) saturate at lower doses than mitochondrial targets (n\u22481), creating a safety margin.",
+        "falsifiable_by": "Hill coefficients for ketamine\u2019s NMDA vs. VDAC1/\u0394\u03a8m effects are identical (n\u22481). --- \u2500\u2500\u2500",
+        "model": "mistral"
+      },
+      {
+        "statement": "Sub-anesthetic ketamine (0.5 mg/kg IV) does not significantly alter neuronal mitochondrial \u0394\u03a8m or VDAC1 state in vivo within 2-4h.",
+        "type": 2,
+        "confidence": 0.8,
+        "mechanism": "Peak plasma [ketamine]~0.2 \u03bcM insufficient to inhibit mito complex I/VDAC (IC50>10 \u03bcM per in vitro); indirect NMDA disinhibition boosts ATP demand without \u0394\u03a8m shift.",
+        "falsifiable_by": "TMRE/JC-1 imaging in rodent PFC showing >15% \u0394\u03a8m change 2h post-dose.",
+        "model": "grok"
+      },
+      {
+        "statement": "Rapid antidepressant onset (2-4h) aligns with synaptic plasticity (AMPA/mTOR/BDNF translation) more than mitochondrial bioenergetics alone.",
+        "type": 1,
+        "confidence": 0.95,
+        "mechanism": "NMDA-GluN2B block disinhibits pyramidal Glu release \u2192 AMPA activation \u2192 eEF2 dephos \u2192 BDNF translation (peaks 1-4h), vs SSRIs' transcriptional delay.",
+        "falsifiable_by": "BDNF/mTOR KO mice lacking rapid effects despite ketamine dosing.",
+        "model": "grok"
+      },
+      {
+        "statement": "Ketamine follows dose-pathway isomorphism: sub-anesthetic \u2192 BDNF/mTOR synaptogenesis; supra-anesthetic \u2192 full NMDA block/dissociation + neurotoxicity.",
+        "type": 1,
+        "confidence": 0.9,
+        "mechanism": "Low dose (nM) preferentially blocks extrasynaptic NMDA \u2192 burst firing/synaptogenesis; high (\u03bcM) engages synaptic NMDA \u2192 global inhibition/ROS.",
+        "falsifiable_by": "Iso-effective synaptogenesis/neurotox at single dose across tissues.",
+        "model": "grok"
+      },
+      {
+        "statement": "(2R,6R)-HNK mediates sustained (>24h) effects independently of NMDA, without direct mitochondrial targeting.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "HNK peaks 4-8h, activates AMPA/mGluR1 without channel block, sustaining PSD95/AMPAR insertion; no reported VDAC1/\u0394\u03a8m interaction (unlike CBD Kd=11\u03bcM).",
+        "falsifiable_by": "HNK infusion producing no sustained AD in AMPAR KO but intact in mito OXPHOS KO.",
+        "model": "grok"
+      },
+      {
+        "statement": "Ketamine therapeutic window predictable by Hill mismatch: cooperative synaptogenesis target (n~1.5-2) saturates before linear NMDA/myo tox (n=1, per prior Hill_standard=1.0).",
+        "type": 3,
+        "confidence": 0.6,
+        "mechanism": "Like metformin (AMPK n>1 before CI block), low-dose eEPSC burst (coop) precedes full NMDA occupancy; TI>10 mirrors FDA prior.",
+        "falsifiable_by": "Dose-response curves showing n=1 for both pathways (no mismatch). \u2500\u2500\u2500",
+        "model": "grok"
+      },
+      {
+        "statement": "At sub-anesthetic doses, ketamine-induced changes in mitochondrial membrane potential are primarily a downstream, homeostatic response to the glutamate surge caused by NMDAR antagonism on interneurons, not a direct drug-mitochondria interaction.",
+        "type": 2,
+        "confidence": 0.85,
+        "mechanism": "NMDAR blockade on GABAergic interneurons disinhibits pyramidal neurons, causing a glutamate surge that increases AMPAR-mediated activity and subsequent metabolic demand, forcing mitochondria to adapt.",
+        "falsifiable_by": "Evidence of high-affinity (nanomolar Kd) ketamine binding to a mitochondrial protein that directly alters its function in the absence of extracellular glutamate signaling or NMDAR activity.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The rapid onset of antidepressant effects is consistent with a synergistic model where mitochondrial bioenergetic rescue is a necessary, rate-limiting prerequisite for the ATP-intensive process of BDNF/mTOR-dependent synaptogenesis.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "Chronic stress impairs mitochondrial function; ketamine rapidly restores bioenergetic capacity, providing the ATP required to fuel the protein synthesis and cytoskeletal rearrangement for new synapse formation.",
+        "falsifiable_by": "Demonstrating that ketamine-induced synaptogenesis proceeds at a normal rate and magnitude even when mitochondrial ATP synthesis is pharmacologically clamped at pre-treatment (impaired) levels.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The metabolite (2R,6R)-HNK sustains antidepressant effects via a non-NMDAR mechanism involving AMPA receptor potentiation, and any mitochondrial effects are secondary to this primary synaptic action.",
+        "type": 1,
+        "confidence": 0.9,
+        "mechanism": "involving AMPA receptor potentiation, and any mitochondrial effects are secondary to this primary synaptic action.",
+        "falsifiable_by": "Identifying a direct, high-affinity mitochondrial target for HNK that is required for its antidepressant action, independent of AMPAR activity.",
+        "model": "gemini"
+      },
+      {
+        "statement": "Ketamine's therapeutic window likely arises from a mismatch in dose-response curves between therapeutic and dissociative targets, a phenomenon that could be modeled by differing Hill coefficients.",
+        "type": 3,
+        "confidence": 0.5,
+        "mechanism": "If the therapeutic target (e.g., extrasynaptic NMDARs on interneurons) exhibits higher cooperativity (n>1) than the dissociative target, it would saturate sharply within a narrow concentration range, creating a therapeutic window before the less cooperative (n\u22481) target is fully engaged.",
+        "falsifiable_by": "Pharmacological studies showing that the Hill coefficients for ketamine's binding and functional effect at sites mediating therapeutic versus dissociative effects are identical. \u2500\u2500\u2500",
+        "model": "gemini"
+      },
+      {
+        "statement": "The rapid (2-4h) antidepressant onset requires a mitochondrial bioenergetic component (e.g., transient \u0394\u03a8m hyperpolarization, increased ATP) that enables the subsequent BDNF/mTOR-dependent synaptogenesis.",
+        "type": 1,
+        "confidence": 0.7,
+        "mechanism": "Ketamine-induced NMDA-R blockade rapidly decreases excitatory drive on inhibitory interneurons, disinhibiting pyramidal neurons and causing a burst of glutamate that activates AMPA receptors; this surge in neuronal activity increases ATP demand, which is met by a ketamine-mediated potentiation of mitochondrial function, possibly via VDAC1 modulation.",
+        "falsifiable_by": "Showing that blocking the initial mitochondrial response (e.g., with VDAC1 inhibitors or mitochondrial uncouplers) abolishes the rapid behavioral and synaptic effects, even if BDNF is present.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage a cooperative, high-affinity target system (NMDA-R on GABAergic interneurons \u2192 BDNF/mTOR), while supra-anesthetic doses engage lower-affinity, non-cooperative targets (e.g., broader NMDA-R blockade, other channels) leading to dissociation and potential neurotoxicity.",
+        "type": 2,
+        "confidence": 0.8,
+        "mechanism": "Dose picks pathway via differential receptor occupancy and circuit engagement; tissue (prefrontal cortex vs. thalamocortical) determines the functional outcome (synaptogenesis vs. disrupted connectivity).",
+        "falsifiable_by": "PET imaging showing identical NMDA-R occupancy patterns at sub-anesthetic and anesthetic doses, or failure to separate synaptic/behavioral effects by dose in animal models.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "(2R,6R)-HNK contributes to sustained effects via a distinct, non-NMDA target, likely involving mitochondrial bioenergetic regulation (e.g., enhancing electron transport chain efficiency).",
+        "type": 1,
+        "confidence": 0.6,
+        "mechanism": "(2R,6R)-HNK lacks significant NMDA-R affinity but can enhance AMPA-R throughput and may directly interact with mitochondrial complexes or adenine nucleotide translocator to sustain elevated ATP production needed for synaptic maintenance.",
+        "falsifiable_by": "Demonstrating that (2R,6R)-HNK has no effect on mitochondrial respiration or membrane potential in vitro, or that its in vivo effects are abolished in AMPA-R knockout mice. \u2500\u2500\u2500",
+        "model": "deepseek"
+      }
+    ]
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF primary rat cortical neurons are exposed to ketamine at 5-10 \u00b5M for 1-2 hours, THEN JC-1 fluorescence ratio (red/green) will show a transient depolarization of 15-30% at 30-60 min followed by partial recovery, compared to vehicle. At 50-100 \u00b5M (supra-anesthetic equivalent), \u0394\u03a8m depolarization will exceed 40% without recovery by 4 hours.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "ketamine_concentration": {
+          "mean": 49.178695338659864,
+          "std": 28.69237572404375,
+          "median": 48.42141397685728,
+          "ci_lower": 3.741280735358023,
+          "ci_upper": 96.45314130908278,
+          "min": 1.7288647053495456,
+          "max": 99.24518084152787
+        },
+        "delta_psi_change_low_dose": {
+          "mean": 22.632990378211694,
+          "std": 7.095438619794194,
+          "median": 22.83702643496466,
+          "ci_lower": 10.902717512014917,
+          "ci_upper": 34.50301055900123,
+          "min": 10.13574585321751,
+          "max": 34.977618261855966
+        },
+        "delta_psi_change_high_dose": {
+          "mean": 49.887983071988415,
+          "std": 11.913254806495635,
+          "median": 50.08418595424786,
+          "ci_lower": 30.683882678847027,
+          "ci_upper": 69.36106415392993,
+          "min": 30.049322500476325,
+          "max": 69.94973480267059
+        },
+        "recovery_time_low_dose": {
+          "mean": 76.01022012092112,
+          "std": 26.248717140568072,
+          "median": 74.18394128564572,
+          "ci_lower": 33.833139963459374,
+          "ci_upper": 118.51704244256689,
+          "min": 30.0466869749135,
+          "max": 119.94797183017691
+        },
+        "exposure_duration": {
+          "mean": 2.2423695792288556,
+          "std": 1.0257147298558333,
+          "median": 2.2018272045125005,
+          "ci_lower": 0.6300402769137339,
+          "ci_upper": 3.9153728709738203,
+          "min": 0.5037361275796153,
+          "max": 3.988370240317037
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4996434455974755,
+          "std": 0.12255297031415406,
+          "median": 0.5032191473846218,
+          "ci_lower": 0.25830920877384034,
+          "ci_upper": 0.7414176430071063,
+          "min": 0.15758184713280732,
+          "max": 0.8156161995315162
+        }
+      },
+      "effect_size": 0.8117,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF mice receive ketamine (10 mg/kg IP, sub-anesthetic) preceded by the mitochondrial uncoupler FCCP (low-dose ICV, 0.5 nmol) or VDAC1 inhibitor DIDS (ICV, 10 nmol), THEN the antidepressant-like effect in the forced swim test at 2h post-injection will be abolished (immobility time returns to \u226590% of vehicle control), even though BDNF protein levels in PFC remain elevated.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "ketamine_dose": {
+          "mean": 9.982772927598292,
+          "std": 2.850713135325882,
+          "median": 9.948935127196933,
+          "ci_lower": 5.263580438368926,
+          "ci_upper": 14.7109375059911,
+          "min": 5.031501527653386,
+          "max": 14.978817442741205
+        },
+        "FCCP_ICV_dose": {
+          "mean": 0.5672734119132622,
+          "std": 0.1608567548408481,
+          "median": 0.5489567405756629,
+          "ci_lower": 0.310650747581694,
+          "ci_upper": 0.9531441568119959,
+          "min": 0.19962219043821455,
+          "max": 1.0
+        },
+        "DIDS_ICV_dose": {
+          "mean": 12.521717584633391,
+          "std": 4.313450892561118,
+          "median": 12.200322766358006,
+          "ci_lower": 5.510782411236265,
+          "ci_upper": 19.663865348267233,
+          "min": 5.252454698084522,
+          "max": 19.967630612444193
+        },
+        "immobility_reduction_ketamine_alone": {
+          "mean": 45.32124286143225,
+          "std": 8.958250498919853,
+          "median": 46.07262764474727,
+          "ci_lower": 30.669316054277807,
+          "ci_upper": 59.167209345721815,
+          "min": 30.16899802744651,
+          "max": 59.939898443823296
+        },
+        "immobility_rescue_by_blocker": {
+          "mean": 51.23665105566144,
+          "std": 29.75034218540036,
+          "median": 52.77929497802168,
+          "ci_lower": 3.9775239243686933,
+          "ci_upper": 98.46155783200342,
+          "min": 0.4440215423909155,
+          "max": 99.7628752074644
+        },
+        "BDNF_fold_increase": {
+          "mean": 1.5993910059576397,
+          "std": 0.23016144948870113,
+          "median": 1.591568172138151,
+          "ci_lower": 1.2170145630984546,
+          "ci_upper": 1.9736119538576056,
+          "min": 1.2051099475463072,
+          "max": 1.998505734639569
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5068718625039587,
+          "std": 0.11896771315788991,
+          "median": 0.511008923585794,
+          "ci_lower": 0.25953729893507077,
+          "ci_upper": 0.742168911782628,
+          "min": 0.16775729700642555,
+          "max": 0.7844240690036981
+        }
+      },
+      "effect_size": 0.7949,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF isolated mouse brain mitochondria or cultured cortical neurons are treated with (2R,6R)-HNK at 1-10 \u00b5M, THEN oxygen consumption rate (OCR) for basal and maximal respiration will increase by 15-40% within 60 min, and this effect will persist in the presence of AP5 (NMDAR antagonist, 50 \u00b5M) but will be abolished by NBQX (AMPAR antagonist, 10 \u00b5M, in neurons only) or by complex I inhibitor rotenone (0.5 \u00b5M).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "HNK_concentration": {
+          "mean": 10.005256595878322,
+          "std": 5.621194775977096,
+          "median": 9.51845358236373,
+          "ci_lower": 1.2314497286443549,
+          "ci_upper": 19.46674560329502,
+          "min": 0.6071588573617719,
+          "max": 19.910020881103055
+        },
+        "OCR_increase_basal": {
+          "mean": 29.37900419890333,
+          "std": 11.748008910817504,
+          "median": 28.8420238833132,
+          "ci_lower": 10.997402446423498,
+          "ci_upper": 48.79669846828954,
+          "min": 10.05145005162992,
+          "max": 49.71131443995929
+        },
+        "OCR_increase_maximal": {
+          "mean": 24.27660080915032,
+          "std": 11.814941087686094,
+          "median": 23.434682518700285,
+          "ci_lower": 6.045957984422104,
+          "ci_upper": 43.85455884623788,
+          "min": 5.132952610427495,
+          "max": 44.7919636469046
+        },
+        "complex_I_activity_change": {
+          "mean": 16.733198875936704,
+          "std": 7.043974108156971,
+          "median": 15.94071954810193,
+          "ci_lower": 5.536626603076137,
+          "ci_upper": 28.792919517894372,
+          "min": 5.010816263652064,
+          "max": 29.92649755072017
+        },
+        "AMPAR_block_reversal": {
+          "mean": 77.19261173078881,
+          "std": 15.027159578326197,
+          "median": 79.49599369373973,
+          "ci_lower": 51.84661599069226,
+          "ci_upper": 98.7779881885248,
+          "min": 50.06362539180965,
+          "max": 99.74026011084693
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4934038742106948,
+          "std": 0.1322364803274733,
+          "median": 0.4865524462283509,
+          "ci_lower": 0.25886351030839905,
+          "ci_upper": 0.7579434521888677,
+          "min": 0.1525064590343752,
+          "max": 0.8466002656183298
+        }
+      },
+      "effect_size": 0.9216,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF the dose-response curves for ketamine's synaptogenic effect (spine density increase in PFC layer V pyramidal neurons) and neurotoxic effect (caspase-3 activation or LDH release) are fitted to Hill equations, THEN the synaptogenic target will show a Hill coefficient of 1.0-1.5 (hyperbolic, low cooperativity) with EC\u2085\u2080 ~5 \u00b5M, while the neurotoxic target will show a Hill coefficient of 2.5-4.0 (sigmoidal, high cooperativity) with EC\u2085\u2080 ~50-80 \u00b5M, creating a \u22655-fold therapeutic window where synaptogenesis saturates before neurotoxicity engages.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "EC50_synaptogenesis": {
+          "mean": 8.64004541745992,
+          "std": 3.7334938923109737,
+          "median": 8.552778000580876,
+          "ci_lower": 2.2620367273371005,
+          "ci_upper": 14.783888599100244,
+          "min": 2.000704502237511,
+          "max": 14.97329515574527
+        },
+        "EC50_neurotoxicity": {
+          "mean": 75.12033070774106,
+          "std": 26.350765566926466,
+          "median": 77.75897674327177,
+          "ci_lower": 31.71440599903971,
+          "ci_upper": 114.70008424718081,
+          "min": 30.249640494090666,
+          "max": 119.14862247350477
+        },
+        "Hill_synaptogenesis": {
+          "mean": 1.383066955473677,
+          "std": 0.3499059756649373,
+          "median": 1.389779029318575,
+          "ci_lower": 0.837895755748003,
+          "ci_upper": 1.9482488981121813,
+          "min": 0.8074949497488242,
+          "max": 1.9974559684327144
+        },
+        "Hill_neurotoxicity": {
+          "mean": 3.1991051864701086,
+          "std": 1.021243767847137,
+          "median": 3.1371439320540646,
+          "ci_lower": 1.608245574632895,
+          "ci_upper": 4.891609241111777,
+          "min": 1.531880752878825,
+          "max": 4.968896163751582
+        },
+        "therapeutic_window_ratio": {
+          "mean": 11.545326522122044,
+          "std": 3.013469183854401,
+          "median": 11.244314376420501,
+          "ci_lower": 6.791509688866755,
+          "ci_upper": 18.684521579838837,
+          "min": 4.989673201283794,
+          "max": 20.0
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.497224750511621,
+          "std": 0.12072347361695072,
+          "median": 0.5048134881118675,
+          "ci_lower": 0.2660358928202372,
+          "ci_upper": 0.714968279800657,
+          "min": 0.17969116842425975,
+          "max": 0.7897103818861907
+        }
+      },
+      "effect_size": 0.9296,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 45
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_iterations": 1200,
+  "total_calls": 0
+}

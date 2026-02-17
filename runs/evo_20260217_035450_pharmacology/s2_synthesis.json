@@ -1,0 +1,171 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "Therapeutic ultrasound (20-100 kHz) coupled with microbubbles generates localized inertial cavitation events capable of transiently expelling cholesterol from the VDAC1 lipid annulus, thereby favoring oligomerization.",
+      "mechanism": "The collapse of a cavitation microbubble near the OMM produces localized shear stresses (>1 MPa) and thermal spikes that overcome the ~20 kJ/mol energy barrier for cholesterol desorption from ordered lipid domains.",
+      "falsifiable_by": "Super-resolution imaging of fluorescently tagged VDAC1 and a cholesterol-sensitive probe (e.g., filipin) in isolated mitochondria showing their de-localization within 100 ms of a targeted cavitation event.",
+      "type": 1,
+      "confidence": 0.733,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "gemini",
+        "grok"
+      ],
+      "tuples": "frozenset({('omm', 'interacts', 'mpa'), ('vdac1', 'interacts', 'omm')})",
+      "chunk_text": "Therapeutic ultrasound (20-100 kHz) coupled with microbubbles generates localized inertial cavitation events capable of transiently expelling cholesterol from the VDAC1 lipid annulus, thereby favoring oligomerization."
+    },
+    {
+      "statement": "2**: Diagnostic ultrasound (1-3 MHz, 0.1-3 W/cm\u00b2) is insufficient to measurably alter OMM Chol/CL ratio or VDAC1 oligomeric state in the absence of exogenous microbubbles. **TYPE**: 1 **CONFIDENCE**: 0.85 **MECHANISM**: At MHz frequencies, the cavitation threshold in tissue exceeds ~4 W/cm\u00b2 (mechanical index >1.9); radiation force produces membrane tensions of ~0.1-0.5 mN/m, well below the ~2-4 mN/m threshold for lipid domain reorganization, and thermal effects at ISPTA <720 mW/cm\u00b2 yield <1\u00b0C local rise\u2014insufficient for phase transitions. **FALSIFIABLE BY**: Demonstration of VDAC1 oligomeric shift (by native PAGE or FRET) in intact cells exposed to standard B-mode diagnostic US without contrast agents.",
+      "mechanism": ": At MHz frequencies, the cavitation threshold in tissue exceeds ~4 W/cm\u00b2 (mechanical index >1.9); radiation force produces membrane tensions of ~0.1-0.5 mN/m, well below the ~2-4 mN/m threshold for lipid domain reorganization, and thermal effects at ISPTA <720 mW/cm\u00b2 yield <1\u00b0C local rise\u2014insufficient for phase transitions.",
+      "falsifiable_by": ": Demonstration of VDAC1 oligomeric shift (by native PAGE or FRET) in intact cells exposed to standard B-mode diagnostic US without contrast agents.",
+      "type": 2,
+      "confidence": 0.7,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "gemini"
+      ],
+      "tuples": "frozenset({('mhz', 'modulates', 'omm')})",
+      "chunk_text": "2**: Diagnostic ultrasound (1-3 MHz, 0.1-3 W/cm\u00b2) is insufficient to measurably alter OMM Chol/CL ratio or VDAC1 oligomeric state in the absence of exogenous microbubbles. **TYPE**: 1 **CONFIDENCE**: 0.85 **MECHANISM**: At MHz frequencies, the cavitation threshold in tissue exceeds ~4 W/cm\u00b2 (mechanical index >1.9); radiation force produces membrane tensions of ~0.1-0.5 mN/m, well below the ~2-4 mN/m threshold for lipid domain reorganization, and thermal effects at ISPTA <720 mW/cm\u00b2 yield <1\u00b0C lo"
+    },
+    {
+      "statement": "4**: *Cancer cells with cholesterol-loaded OMMs exhibit higher apoptotic thresholds under US due to stabilized VDAC1 monomers.* **TYPE**: 1 **CONFIDENCE**: 0.80 **MECHANISM**: Elevated Chol increases the cofactor equation\u2019s threshold (Threshold \u221d [Chol]/[CL]), requiring greater mechanical perturbation to trigger oligomerization. **FALSIFIABLE BY**: Comparing US-induced cytochrome c release in cholesterol-depleted vs. -loaded cancer cells (e.g., via statin treatment).",
+      "mechanism": ": Elevated Chol increases the cofactor equation\u2019s threshold (Threshold \u221d [Chol]/[CL]), requiring greater mechanical perturbation to trigger oligomerization.",
+      "falsifiable_by": ": Comparing US-induced cytochrome c release in cholesterol-depleted vs. -loaded cancer cells (e.g., via statin treatment).",
+      "type": 2,
+      "confidence": 0.5,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cl', 'upregulates', 'mechanism'), ('cancer_cell', 'upregulates', 'cl'), ('cl', 'upregulates', 'falsifiable')})",
+      "chunk_text": "4**: *Cancer cells with cholesterol-loaded OMMs exhibit higher apoptotic thresholds under US due to stabilized VDAC1 monomers.* **TYPE**: 1 **CONFIDENCE**: 0.80 **MECHANISM**: Elevated Chol increases the cofactor equation\u2019s threshold (Threshold \u221d [Chol]/[CL]), requiring greater mechanical perturbation to trigger oligomerization. **FALSIFIABLE BY**: Comparing US-induced cytochrome c release in cholesterol-depleted vs. -loaded cancer cells (e.g., via statin treatment)."
+    },
+    {
+      "statement": "The elevated OMM cholesterol in cancer cells acts as a \"mechanoresistor,\" increasing the acoustic energy density required to trigger VDAC1-mediated apoptosis by a factor of 2-4 compared to normal cells.",
+      "mechanism": "Increased cholesterol content (~35 mol% vs. <10%) raises the membrane's bending rigidity and stabilizes VDAC1 monomers, requiring more violent or numerous cavitation events to achieve the critical local density of VDAC1 oligomers needed for apoptosis initiation.",
+      "falsifiable_by": "A dose-response experiment showing that cancer cells require a statistically significant higher acoustic intensity (W/cm\u00b2) or longer duration of therapeutic US to induce the same level of cytochrome c release as isogenic normal cells. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.75,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('cancer_cell', 'upregulates', 'vdac1')})",
+      "chunk_text": "The elevated OMM cholesterol in cancer cells acts as a \"mechanoresistor,\" increasing the acoustic energy density required to trigger VDAC1-mediated apoptosis by a factor of 2-4 compared to normal cells."
+    },
+    {
+      "statement": "3**: The honeycomb-to-dispersed lattice transition is mechanosensitive with a lateral tension threshold of ~2-5 mN/m, but this transition requires sustained tension (>100 ms) rather than the microsecond transients from cavitation events. **TYPE**: 2 **CONFIDENCE**: 0.55 **MECHANISM**: The honeycomb lattice is stabilized by cooperative protein-protein contacts across ~6 interfaces per hexamer and by bridging cardiolipin molecules; disruption requires sustained bilayer area expansion of >3-5% to progressively break these contacts, whereas transient cavitation-induced perturbations relax within microseconds, allowing re-annealing. **FALSIFIABLE BY**: Single-molecule AFM pulling experiments on VDAC1 hexamers in supported bilayers showing lattice disruption at <1 mN/m or within <1 ms pulses.",
+      "mechanism": ": The honeycomb lattice is stabilized by cooperative protein-protein contacts across ~6 interfaces per hexamer and by bridging cardiolipin molecules; disruption requires sustained bilayer area expansion of >3-5% to progressively break these contacts, whereas transient cavitation-induced perturbations relax within microseconds, allowing re-annealing.",
+      "falsifiable_by": ": Single-molecule AFM pulling experiments on VDAC1 hexamers in supported bilayers showing lattice disruption at <1 mN/m or within <1 ms pulses.",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('afm', 'interacts', 'vdac1'), ('confidence', 'interacts', 'mechanism'), ('mechanism', 'interacts', 'falsifiable'), ('falsifiable', 'interacts', 'by'), ('type', 'interacts', 'confidence'), ('by', 'interacts', 'afm')})",
+      "chunk_text": "3**: The honeycomb-to-dispersed lattice transition is mechanosensitive with a lateral tension threshold of ~2-5 mN/m, but this transition requires sustained tension (>100 ms) rather than the microsecond transients from cavitation events. **TYPE**: 2 **CONFIDENCE**: 0.55 **MECHANISM**: The honeycomb lattice is stabilized by cooperative protein-protein contacts across ~6 interfaces per hexamer and by bridging cardiolipin molecules; disruption requires sustained bilayer area expansion of >3-5% to p"
+    },
+    {
+      "statement": "1**: *Therapeutic US (20\u2013100 kHz, >0.5 W/cm\u00b2) transiently alters OMM Chol/CL ratio via inertial cavitation, but diagnostic US (1\u20133 MHz, <3 W/cm\u00b2) does not.* **TYPE**: 1 (mechanistic, testable) **CONFIDENCE**: 0.85 **MECHANISM**: Inertial cavitation at low frequencies generates shear stresses (~100 kPa\u20131 MPa) exceeding Chol\u2019s desorption energy (~20 kJ/mol), disrupting rafts; MHz US lacks sufficient strain rate. **FALSIFIABLE BY**: FRET-based Chol/CL sensors on isolated mitochondria showing <5% ratio change under diagnostic US or >10% change under therapeutic US.",
+      "mechanism": ": Inertial cavitation at low frequencies generates shear stresses (~100 kPa\u20131 MPa) exceeding Chol\u2019s desorption energy (~20 kJ/mol), disrupting rafts; MHz US lacks sufficient strain rate.",
+      "falsifiable_by": ": FRET-based Chol/CL sensors on isolated mitochondria showing <5% ratio change under diagnostic US or >10% change under therapeutic US.",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('mhz', 'modulates', 'mpa'), ('omm', 'modulates', 'us')})",
+      "chunk_text": "1**: *Therapeutic US (20\u2013100 kHz, >0.5 W/cm\u00b2) transiently alters OMM Chol/CL ratio via inertial cavitation, but diagnostic US (1\u20133 MHz, <3 W/cm\u00b2) does not.* **TYPE**: 1 (mechanistic, testable) **CONFIDENCE**: 0.85 **MECHANISM**: Inertial cavitation at low frequencies generates shear stresses (~100 kPa\u20131 MPa) exceeding Chol\u2019s desorption energy (~20 kJ/mol), disrupting rafts; MHz US lacks sufficient strain rate. **FALSIFIABLE BY**: FRET-based Chol/CL sensors on isolated mitochondria showing <5% ra"
+    },
+    {
+      "statement": "2**: *VDAC1\u2019s monomer-dimer-honeycomb equilibrium is mechanosensitive, with Chol depletion favoring honeycomb formation (per Threshold \u221d [Chol]/[CL]).* **TYPE**: 1 **CONFIDENCE**: 0.75 **MECHANISM**: Chol rigidifies the lipid annulus, stabilizing monomers; CL promotes oligomerization by increasing membrane curvature and protein-protein interactions. **FALSIFIABLE BY**: Single-molecule AFM or cryo-EM showing >20% shift in VDAC1 oligomeric distribution after Chol depletion (e.g., M\u03b2CD treatment) in proteoliposomes.",
+      "mechanism": ": Chol rigidifies the lipid annulus, stabilizing monomers; CL promotes oligomerization by increasing membrane curvature and protein-protein interactions.",
+      "falsifiable_by": ": Single-molecule AFM or cryo-EM showing >20% shift in VDAC1 oligomeric distribution after Chol depletion (e.g., M\u03b2CD treatment) in proteoliposomes.",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('cl', 'upregulates', 'falsifiable')})",
+      "chunk_text": "2**: *VDAC1\u2019s monomer-dimer-honeycomb equilibrium is mechanosensitive, with Chol depletion favoring honeycomb formation (per Threshold \u221d [Chol]/[CL]).* **TYPE**: 1 **CONFIDENCE**: 0.75 **MECHANISM**: Chol rigidifies the lipid annulus, stabilizing monomers; CL promotes oligomerization by increasing membrane curvature and protein-protein interactions. **FALSIFIABLE BY**: Single-molecule AFM or cryo-EM showing >20% shift in VDAC1 oligomeric distribution after Chol depletion (e.g., M\u03b2CD treatment) i"
+    },
+    {
+      "statement": "3**: *The honeycomb\u2192dispersed lattice transition requires sustained membrane tension (>2 mN/m), which clinical US (0.1\u20133 W/cm\u00b2) cannot achieve without cavitation.* **TYPE**: 1 **CONFIDENCE**: 0.70 **MECHANISM**: Lattice dispersion necessitates overcoming protein-protein and lipid-bridging energies; transient US-induced tension (<1 mN/m) relaxes faster than the transition\u2019s activation time (~ms). **FALSIFIABLE BY**: Patch-clamp or fluorescence recovery after photobleaching (FRAP) showing lattice disruption in mitochondria under >2 mN/m tension (e.g., micropipette aspiration).",
+      "mechanism": ": Lattice dispersion necessitates overcoming protein-protein and lipid-bridging energies; transient US-induced tension (<1 mN/m) relaxes faster than the transition\u2019s activation time (~ms).",
+      "falsifiable_by": ": Patch-clamp or fluorescence recovery after photobleaching (FRAP) showing lattice disruption in mitochondria under >2 mN/m tension (e.g., micropipette aspiration).",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('by', 'interacts', 'frap'), ('confidence', 'interacts', 'mechanism'), ('us', 'interacts', 'type'), ('mechanism', 'interacts', 'falsifiable'), ('falsifiable', 'interacts', 'by'), ('type', 'interacts', 'confidence')})",
+      "chunk_text": "3**: *The honeycomb\u2192dispersed lattice transition requires sustained membrane tension (>2 mN/m), which clinical US (0.1\u20133 W/cm\u00b2) cannot achieve without cavitation.* **TYPE**: 1 **CONFIDENCE**: 0.70 **MECHANISM**: Lattice dispersion necessitates overcoming protein-protein and lipid-bridging energies; transient US-induced tension (<1 mN/m) relaxes faster than the transition\u2019s activation time (~ms). **FALSIFIABLE BY**: Patch-clamp or fluorescence recovery after photobleaching (FRAP) showing lattice "
+    },
+    {
+      "statement": "5 (TYPE 3)**: *Diagnostic US (1\u20133 MHz) may indirectly sensitize VDAC1 to apoptosis by transiently disrupting Bcl-xL/VDAC1 interactions via mild heating (<1\u00b0C).* **TYPE**: 3 (speculative) **CONFIDENCE**: 0.40 **MECHANISM**: Localized heating could reduce Bcl-xL\u2019s affinity for VDAC1 (\u0394G ~0.5 kJ/mol/\u00b0C), lowering the apoptotic threshold without altering Chol/CL. **FALSIFIABLE BY**: Isothermal titration calorimetry (ITC) showing >10% change in Bcl-xL/VDAC1 Kd under 1\u20133 MHz US. --- ###",
+      "mechanism": ": Localized heating could reduce Bcl-xL\u2019s affinity for VDAC1 (\u0394G ~0.5 kJ/mol/\u00b0C), lowering the apoptotic threshold without altering Chol/CL.",
+      "falsifiable_by": ": Isothermal titration calorimetry (ITC) showing >10% change in Bcl-xL/VDAC1 Kd under 1\u20133 MHz US. --- ### **",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('us', 'downregulates', 'vdac1'), ('cl', 'downregulates', 'vdac1'), ('cl', 'modulates', 'vdac1'), ('mechanism', 'downregulates', 'vdac1')})",
+      "chunk_text": "5 (TYPE 3)**: *Diagnostic US (1\u20133 MHz) may indirectly sensitize VDAC1 to apoptosis by transiently disrupting Bcl-xL/VDAC1 interactions via mild heating (<1\u00b0C).* **TYPE**: 3 (speculative) **CONFIDENCE**: 0.40 **MECHANISM**: Localized heating could reduce Bcl-xL\u2019s affinity for VDAC1 (\u0394G ~0.5 kJ/mol/\u00b0C), lowering the apoptotic threshold without altering Chol/CL. **FALSIFIABLE BY**: Isothermal titration calorimetry (ITC) showing >10% change in Bcl-xL/VDAC1 Kd under 1\u20133 MHz US. --- ###"
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.07633215523454107,
+      "cosine": 0.4295566689223051,
+      "jsd": 0.34982164014921174,
+      "kappa": 0.7961569024055478,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.23076923076923078,
+        "2": 0.6923076923076923,
+        "3": 0.07692307692307693
+      },
+      "type_01_ratio": 0.23076923076923078,
+      "n_claims_per_model": [
+        4,
+        5,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.13037193825507615,
+      "cosine": 0.4823025450110435,
+      "jsd": 0.2609502168163358,
+      "kappa": 0.8969939815261818,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.23076923076923078,
+        "2": 0.3076923076923077,
+        "3": 0.46153846153846156
+      },
+      "type_01_ratio": 0.23076923076923078,
+      "n_claims_per_model": [
+        4,
+        5,
+        1,
+        3,
+        0
+      ]
+    }
+  ]
+}

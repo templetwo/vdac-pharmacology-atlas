@@ -1,0 +1,220 @@
+{
+  "passed": true,
+  "claims": [
+    {
+      "statement": "VDAC1 gating kinetics (~1\u201310 ms transitions) are fast enough to partially track Ca\u00b2\u207a oscillations at 0.1\u20131 Hz, but at >5 Hz, VDAC1 effectively time-averages the signal, remaining in a partially open state rather than cycling fully open/closed.",
+      "falsifiable": true,
+      "falsifiable_reason": "The claim predicts a frequency-dependent transition in VDAC1 gating behavior (full cycling <5 Hz, time-averaging >5 Hz); single-channel recordings with sinusoidal Ca\u00b2\u207a waveforms at 0.1\u201310 Hz can directly test whether open probability (P_o) oscillates or plateaus.",
+      "feasible": true,
+      "feasible_reason": "Reconstituted VDAC1 in planar lipid bilayers with controlled Ca\u00b2\u207a gradients and patch-clamp electrophysiology is a standard technique[2].",
+      "novel": true,
+      "novel_reason": "The quantitative prediction that gating kinetics (~1\u201310 ms) create a frequency cutoff (~5 Hz) for metabolite flux modulation is not established in the literature and would directly test the oscillation-gating hypothesis.\n\n**CLAIM 2:**\nFALSIFIABLE: YES \u2014 The claim can be falsified by demonstrating that total Ca\u00b2\u207a load (integral over time) predicts oligomerization equally well across different frequency protocols, making frequency itself epiphenomenal.\nFEASIBLE: PARTIALLY \u2014 Requires simultaneous measurement of matrix Ca\u00b2\u207a accumulation (fluorescent indicators like Fluo-4 or Rhod-2) and VDAC1 oligomerization state (BN-PAGE, FRET, or cross-linking) in isolated mitochondria exposed to controlled frequency protocols; feasible but technically demanding.\nNOVEL: YES \u2014 The distinction between frequency-dependent gating and frequency-independent cumulative load is mechanistically important and testable, but the claim's confidence (0.35) reflects genuine uncertainty about whether frequency is a true independent variable.\n\n**CLAIM 3:**\nFALSIFIABLE: YES \u2014 The claim predicts IMS [Ca\u00b2\u207a] reaches 10\u201320 \u03bcM during oscillations and that MCU activation (Kd ~10\u201320 \u03bcM, Hill n=3\u20134) occurs only at peaks; direct measurement of IMS [Ca\u00b2\u207a] via targeted fluorescent indicators (e.g., D1cpv in IMS) would falsify if [Ca\u00b2\u207a] never exceeds MCU Kd.\nFEASIBLE: YES \u2014 Super-resolution microscopy or FRAP-based Ca\u00b2\u207a imaging at VDAC1-MCU contact sites is technically feasible with current methods[1].\nNOVEL: YES \u2014 The quantitative prediction of a two-gate bandpass filter with defined Kd values and Hill coefficients is a testable mechanistic model that goes beyond the general concept of VDAC1-MCU coordination[1].\n\n**CLAIM 4:**\nFALSIFIABLE: YES \u2014 Comprehensive Ca\u00b2\u207a imaging in matched cancer/normal cell lines can directly measure oscillation amplitude, frequency, and irregularity; absence of systematic differences would falsify.\nFEASIBLE: YES \u2014 Live-cell fluorescence microscopy with Ca\u00b2\u207a indicators (Fluo-4, Fura-2) is routine; requires matched cell line pairs.\nNOVEL: PARTIALLY \u2014 The claim that cancer cells remodel oscillation *frequency* as a distinct gate-jamming mechanism is novel, but the underlying observation (altered Ca\u00b2\u207a signaling in cancer) is well-established[3]. The novelty lies in linking frequency changes to VDAC1 monomerization, which is not yet demonstrated.\n\n**CLAIM 5:**\nFALSIFIABLE: YES \u2014 Patch-clamp recordings showing no gating response to 0.1\u201310 Hz Ca\u00b2\u207a pulses, or metabolomics showing no rhythmic ATP/ADP/ROS flux, would falsify.\nFEASIBLE: YES \u2014 Both single-channel electrophysiology and metabolomics are standard techniques.\nNOVEL: YES \u2014 The specific prediction that physiological oscillations create pulsatile metabolite flux (not just Ca\u00b2\u207a flux) is testable and would represent a functional consequence of VDAC1 gating.\n\n**CLAIM 6:**\nFALSIFIABLE: YES \u2014 FRET or cross-linking assays showing no frequency-dependent oligomerization, or in vivo Ca\u00b2\u207a clamping at 1\u20135 Hz failing to induce apoptosis, would falsify.\nFEASIBLE: PARTIALLY \u2014 Requires optogenetic or pharmacological tools to impose defined frequency protocols on isolated mitochondria or cells; feasible but requires specialized equipment (e.g., opto-MCU, or pulsed photolysis of caged Ca\u00b2\u207a).\nNOVEL: YES \u2014 The quantitative prediction of a frequency threshold (~1\u20135 Hz) for oligomerization is the core hypothesis of the program and is not established in literature.\n\n**CLAIM 7:**\nFALSIFIABLE: YES \u2014 Simultaneous Ca\u00b2\u207a imaging in cytosol/IMS showing no frequency-dependent attenuation, or MCU knockout failing to disrupt VDAC1-mediated oscillations, would falsify.\nFEASIBLE: YES \u2014 Dual-wavelength Ca\u00b2\u207a imaging with compartment-specific indicators is feasible; MCU-KO cells are available.\nNOVEL: YES \u2014 The mechanistic model of VDAC1 and MCU as a two-gate filter with defined frequency response is a testable prediction that integrates multiple observations[1][3].\n\n**CLAIM 8:**\nFALSIFIABLE: YES \u2014 Single-cell Ca\u00b2\u207a imaging showing no frequency differences between cancer and normal cells, or VDAC1 oligomerization assays showing no correlation with frequency, would falsify.\nFEASIBLE: YES \u2014 Live-cell imaging and biochemical oligomerization assays are standard.\nNOVEL: PARTIALLY \u2014 The claim that cancer cells maintain low-frequency oscillations to prevent VDAC1 oligomerization is novel, but the underlying observation (altered Ca\u00b2\u207a signaling in cancer) is established. The link to VDAC1 monomerization is speculative.\n\n**CLAIM 9:**\nFALSIFIABLE: YES \u2014 In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity at <10x effective dose, would falsify.\nFEASIBLE: NO \u2014 Requires in vivo optogenetic or pharmacological pacing of mitochondrial Ca\u00b2\u207a uptake in cancer models, which demands specialized transgenic animals and real-time imaging; not feasible with current standard methods.\nNOVEL: YES \u2014 The therapeutic hypothesis that pacing Ca\u00b2\u207a oscillations",
+      "passed": true
+    },
+    {
+      "statement": "VDAC1 oligomerization is driven by cumulative matrix Ca\u00b2\u207a overload rather than directly by oscillation frequency \u2014 but frequency encodes the *rate* of matrix accumulation, so a frequency threshold (~1\u20132 Hz sustained) effectively exists above which oligomerization probability sharply increases.",
+      "falsifiable": true,
+      "falsifiable_reason": "The claim can be falsified by demonstrating that total Ca\u00b2\u207a load (integral over time) predicts oligomerization equally well across different frequency protocols, making frequency itself epiphenomenal.",
+      "feasible": true,
+      "feasible_reason": "Super-resolution microscopy or FRAP-based Ca\u00b2\u207a imaging at VDAC1-MCU contact sites is technically feasible with current methods[1].",
+      "novel": true,
+      "novel_reason": "The quantitative prediction of a two-gate bandpass filter with defined Kd values and Hill coefficients is a testable mechanistic model that goes beyond the general concept of VDAC1-MCU coordination[1].\n\n**CLAIM 4:**\nFALSIFIABLE: YES \u2014 Comprehensive Ca\u00b2\u207a imaging in matched cancer/normal cell lines can directly measure oscillation amplitude, frequency, and irregularity; absence of systematic differences would falsify.\nFEASIBLE: YES \u2014 Live-cell fluorescence microscopy with Ca\u00b2\u207a indicators (Fluo-4, Fura-2) is routine; requires matched cell line pairs.\nNOVEL: PARTIALLY \u2014 The claim that cancer cells remodel oscillation *frequency* as a distinct gate-jamming mechanism is novel, but the underlying observation (altered Ca\u00b2\u207a signaling in cancer) is well-established[3]. The novelty lies in linking frequency changes to VDAC1 monomerization, which is not yet demonstrated.\n\n**CLAIM 5:**\nFALSIFIABLE: YES \u2014 Patch-clamp recordings showing no gating response to 0.1\u201310 Hz Ca\u00b2\u207a pulses, or metabolomics showing no rhythmic ATP/ADP/ROS flux, would falsify.\nFEASIBLE: YES \u2014 Both single-channel electrophysiology and metabolomics are standard techniques.\nNOVEL: YES \u2014 The specific prediction that physiological oscillations create pulsatile metabolite flux (not just Ca\u00b2\u207a flux) is testable and would represent a functional consequence of VDAC1 gating.\n\n**CLAIM 6:**\nFALSIFIABLE: YES \u2014 FRET or cross-linking assays showing no frequency-dependent oligomerization, or in vivo Ca\u00b2\u207a clamping at 1\u20135 Hz failing to induce apoptosis, would falsify.\nFEASIBLE: PARTIALLY \u2014 Requires optogenetic or pharmacological tools to impose defined frequency protocols on isolated mitochondria or cells; feasible but requires specialized equipment (e.g., opto-MCU, or pulsed photolysis of caged Ca\u00b2\u207a).\nNOVEL: YES \u2014 The quantitative prediction of a frequency threshold (~1\u20135 Hz) for oligomerization is the core hypothesis of the program and is not established in literature.\n\n**CLAIM 7:**\nFALSIFIABLE: YES \u2014 Simultaneous Ca\u00b2\u207a imaging in cytosol/IMS showing no frequency-dependent attenuation, or MCU knockout failing to disrupt VDAC1-mediated oscillations, would falsify.\nFEASIBLE: YES \u2014 Dual-wavelength Ca\u00b2\u207a imaging with compartment-specific indicators is feasible; MCU-KO cells are available.\nNOVEL: YES \u2014 The mechanistic model of VDAC1 and MCU as a two-gate filter with defined frequency response is a testable prediction that integrates multiple observations[1][3].\n\n**CLAIM 8:**\nFALSIFIABLE: YES \u2014 Single-cell Ca\u00b2\u207a imaging showing no frequency differences between cancer and normal cells, or VDAC1 oligomerization assays showing no correlation with frequency, would falsify.\nFEASIBLE: YES \u2014 Live-cell imaging and biochemical oligomerization assays are standard.\nNOVEL: PARTIALLY \u2014 The claim that cancer cells maintain low-frequency oscillations to prevent VDAC1 oligomerization is novel, but the underlying observation (altered Ca\u00b2\u207a signaling in cancer) is established. The link to VDAC1 monomerization is speculative.\n\n**CLAIM 9:**\nFALSIFIABLE: YES \u2014 In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity at <10x effective dose, would falsify.\nFEASIBLE: NO \u2014 Requires in vivo optogenetic or pharmacological pacing of mitochondrial Ca\u00b2\u207a uptake in cancer models, which demands specialized transgenic animals and real-time imaging; not feasible with current standard methods.\nNOVEL: YES \u2014 The therapeutic hypothesis that pacing Ca\u00b2\u207a oscillations",
+      "passed": true
+    },
+    {
+      "statement": "VDAC1-MCU form a two-gate filter where VDAC1 (low selectivity, high conductance, Kd ~0.5 mM) gates bulk Ca\u00b2\u207a entry into the IMS, while MCU (high selectivity, Kd ~10\u201320 \u03bcM, cooperative Hill ~3\u20134) acts as a nonlinear threshold detector \u2014 together creating bandpass filtering of Ca\u00b2\u207a signals.",
+      "falsifiable": true,
+      "falsifiable_reason": "The claim predicts IMS [Ca\u00b2\u207a] reaches 10\u201320 \u03bcM during oscillations and that MCU activation (Kd ~10\u201320 \u03bcM, Hill n=3\u20134) occurs only at peaks; direct measurement of IMS [Ca\u00b2\u207a] via targeted fluorescent indicators (e.g., D1cpv in IMS) would falsify if [Ca\u00b2\u207a] never exceeds MCU Kd.",
+      "feasible": true,
+      "feasible_reason": "Super-resolution microscopy or FRAP-based Ca\u00b2\u207a imaging at VDAC1-MCU contact sites is technically feasible with current methods[1].",
+      "novel": true,
+      "novel_reason": "The quantitative prediction of a two-gate bandpass filter with defined Kd values and Hill coefficients is a testable mechanistic model that goes beyond the general concept of VDAC1-MCU coordination[1].\n\n**CLAIM 4:**\nFALSIFIABLE: YES \u2014 Comprehensive Ca\u00b2\u207a imaging in matched cancer/normal cell lines can directly measure oscillation amplitude, frequency, and irregularity; absence of systematic differences would falsify.\nFEASIBLE: YES \u2014 Live-cell fluorescence microscopy with Ca\u00b2\u207a indicators (Fluo-4, Fura-2) is routine; requires matched cell line pairs.\nNOVEL: PARTIALLY \u2014 The claim that cancer cells remodel oscillation *frequency* as a distinct gate-jamming mechanism is novel, but the underlying observation (altered Ca\u00b2\u207a signaling in cancer) is well-established[3]. The novelty lies in linking frequency changes to VDAC1 monomerization, which is not yet demonstrated.\n\n**CLAIM 5:**\nFALSIFIABLE: YES \u2014 Patch-clamp recordings showing no gating response to 0.1\u201310 Hz Ca\u00b2\u207a pulses, or metabolomics showing no rhythmic ATP/ADP/ROS flux, would falsify.\nFEASIBLE: YES \u2014 Both single-channel electrophysiology and metabolomics are standard techniques.\nNOVEL: YES \u2014 The specific prediction that physiological oscillations create pulsatile metabolite flux (not just Ca\u00b2\u207a flux) is testable and would represent a functional consequence of VDAC1 gating.\n\n**CLAIM 6:**\nFALSIFIABLE: YES \u2014 FRET or cross-linking assays showing no frequency-dependent oligomerization, or in vivo Ca\u00b2\u207a clamping at 1\u20135 Hz failing to induce apoptosis, would falsify.\nFEASIBLE: PARTIALLY \u2014 Requires optogenetic or pharmacological tools to impose defined frequency protocols on isolated mitochondria or cells; feasible but requires specialized equipment (e.g., opto-MCU, or pulsed photolysis of caged Ca\u00b2\u207a).\nNOVEL: YES \u2014 The quantitative prediction of a frequency threshold (~1\u20135 Hz) for oligomerization is the core hypothesis of the program and is not established in literature.\n\n**CLAIM 7:**\nFALSIFIABLE: YES \u2014 Simultaneous Ca\u00b2\u207a imaging in cytosol/IMS showing no frequency-dependent attenuation, or MCU knockout failing to disrupt VDAC1-mediated oscillations, would falsify.\nFEASIBLE: YES \u2014 Dual-wavelength Ca\u00b2\u207a imaging with compartment-specific indicators is feasible; MCU-KO cells are available.\nNOVEL: YES \u2014 The mechanistic model of VDAC1 and MCU as a two-gate filter with defined frequency response is a testable prediction that integrates multiple observations[1][3].\n\n**CLAIM 8:**\nFALSIFIABLE: YES \u2014 Single-cell Ca\u00b2\u207a imaging showing no frequency differences between cancer and normal cells, or VDAC1 oligomerization assays showing no correlation with frequency, would falsify.\nFEASIBLE: YES \u2014 Live-cell imaging and biochemical oligomerization assays are standard.\nNOVEL: PARTIALLY \u2014 The claim that cancer cells maintain low-frequency oscillations to prevent VDAC1 oligomerization is novel, but the underlying observation (altered Ca\u00b2\u207a signaling in cancer) is established. The link to VDAC1 monomerization is speculative.\n\n**CLAIM 9:**\nFALSIFIABLE: YES \u2014 In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity at <10x effective dose, would falsify.\nFEASIBLE: NO \u2014 Requires in vivo optogenetic or pharmacological pacing of mitochondrial Ca\u00b2\u207a uptake in cancer models, which demands specialized transgenic animals and real-time imaging; not feasible with current standard methods.\nNOVEL: YES \u2014 The therapeutic hypothesis that pacing Ca\u00b2\u207a oscillations",
+      "passed": true
+    },
+    {
+      "statement": "Cancer cells remodel Ca\u00b2\u207a oscillation machinery (IP3R, SERCA, STIM/Orai) to reduce oscillation amplitude and increase frequency irregularity, maintaining VDAC1 in monomeric state \u2014 this represents a distinct gate-jamming mechanism complementary to HK-II binding.",
+      "falsifiable": true,
+      "falsifiable_reason": "Comprehensive Ca\u00b2\u207a imaging in matched cancer/normal cell lines can directly measure oscillation amplitude, frequency, and irregularity; absence of systematic differences would falsify.",
+      "feasible": true,
+      "feasible_reason": "Live-cell fluorescence microscopy with Ca\u00b2\u207a indicators (Fluo-4, Fura-2) is routine; requires matched cell line pairs.",
+      "novel": true,
+      "novel_reason": "The specific prediction that physiological oscillations create pulsatile metabolite flux (not just Ca\u00b2\u207a flux) is testable and would represent a functional consequence of VDAC1 gating.\n\n**CLAIM 6:**\nFALSIFIABLE: YES \u2014 FRET or cross-linking assays showing no frequency-dependent oligomerization, or in vivo Ca\u00b2\u207a clamping at 1\u20135 Hz failing to induce apoptosis, would falsify.\nFEASIBLE: PARTIALLY \u2014 Requires optogenetic or pharmacological tools to impose defined frequency protocols on isolated mitochondria or cells; feasible but requires specialized equipment (e.g., opto-MCU, or pulsed photolysis of caged Ca\u00b2\u207a).\nNOVEL: YES \u2014 The quantitative prediction of a frequency threshold (~1\u20135 Hz) for oligomerization is the core hypothesis of the program and is not established in literature.\n\n**CLAIM 7:**\nFALSIFIABLE: YES \u2014 Simultaneous Ca\u00b2\u207a imaging in cytosol/IMS showing no frequency-dependent attenuation, or MCU knockout failing to disrupt VDAC1-mediated oscillations, would falsify.\nFEASIBLE: YES \u2014 Dual-wavelength Ca\u00b2\u207a imaging with compartment-specific indicators is feasible; MCU-KO cells are available.\nNOVEL: YES \u2014 The mechanistic model of VDAC1 and MCU as a two-gate filter with defined frequency response is a testable prediction that integrates multiple observations[1][3].\n\n**CLAIM 8:**\nFALSIFIABLE: YES \u2014 Single-cell Ca\u00b2\u207a imaging showing no frequency differences between cancer and normal cells, or VDAC1 oligomerization assays showing no correlation with frequency, would falsify.\nFEASIBLE: YES \u2014 Live-cell imaging and biochemical oligomerization assays are standard.\nNOVEL: PARTIALLY \u2014 The claim that cancer cells maintain low-frequency oscillations to prevent VDAC1 oligomerization is novel, but the underlying observation (altered Ca\u00b2\u207a signaling in cancer) is established. The link to VDAC1 monomerization is speculative.\n\n**CLAIM 9:**\nFALSIFIABLE: YES \u2014 In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity at <10x effective dose, would falsify.\nFEASIBLE: NO \u2014 Requires in vivo optogenetic or pharmacological pacing of mitochondrial Ca\u00b2\u207a uptake in cancer models, which demands specialized transgenic animals and real-time imaging; not feasible with current standard methods.\nNOVEL: YES \u2014 The therapeutic hypothesis that pacing Ca\u00b2\u207a oscillations",
+      "passed": true
+    },
+    {
+      "statement": "Physiological Ca\u00b2\u207a oscillations (0.1\u201310 Hz) rhythmically gate VDAC1, producing pulsatile metabolite flux.",
+      "falsifiable": true,
+      "falsifiable_reason": "Patch-clamp recordings showing no gating response to 0.1\u201310 Hz Ca\u00b2\u207a pulses, or metabolomics showing no rhythmic ATP/ADP/ROS flux, would falsify.",
+      "feasible": true,
+      "feasible_reason": "Both single-channel electrophysiology and metabolomics are standard techniques.",
+      "novel": true,
+      "novel_reason": "The specific prediction that physiological oscillations create pulsatile metabolite flux (not just Ca\u00b2\u207a flux) is testable and would represent a functional consequence of VDAC1 gating.\n\n**CLAIM 6:**\nFALSIFIABLE: YES \u2014 FRET or cross-linking assays showing no frequency-dependent oligomerization, or in vivo Ca\u00b2\u207a clamping at 1\u20135 Hz failing to induce apoptosis, would falsify.\nFEASIBLE: PARTIALLY \u2014 Requires optogenetic or pharmacological tools to impose defined frequency protocols on isolated mitochondria or cells; feasible but requires specialized equipment (e.g., opto-MCU, or pulsed photolysis of caged Ca\u00b2\u207a).\nNOVEL: YES \u2014 The quantitative prediction of a frequency threshold (~1\u20135 Hz) for oligomerization is the core hypothesis of the program and is not established in literature.\n\n**CLAIM 7:**\nFALSIFIABLE: YES \u2014 Simultaneous Ca\u00b2\u207a imaging in cytosol/IMS showing no frequency-dependent attenuation, or MCU knockout failing to disrupt VDAC1-mediated oscillations, would falsify.\nFEASIBLE: YES \u2014 Dual-wavelength Ca\u00b2\u207a imaging with compartment-specific indicators is feasible; MCU-KO cells are available.\nNOVEL: YES \u2014 The mechanistic model of VDAC1 and MCU as a two-gate filter with defined frequency response is a testable prediction that integrates multiple observations[1][3].\n\n**CLAIM 8:**\nFALSIFIABLE: YES \u2014 Single-cell Ca\u00b2\u207a imaging showing no frequency differences between cancer and normal cells, or VDAC1 oligomerization assays showing no correlation with frequency, would falsify.\nFEASIBLE: YES \u2014 Live-cell imaging and biochemical oligomerization assays are standard.\nNOVEL: PARTIALLY \u2014 The claim that cancer cells maintain low-frequency oscillations to prevent VDAC1 oligomerization is novel, but the underlying observation (altered Ca\u00b2\u207a signaling in cancer) is established. The link to VDAC1 monomerization is speculative.\n\n**CLAIM 9:**\nFALSIFIABLE: YES \u2014 In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity at <10x effective dose, would falsify.\nFEASIBLE: NO \u2014 Requires in vivo optogenetic or pharmacological pacing of mitochondrial Ca\u00b2\u207a uptake in cancer models, which demands specialized transgenic animals and real-time imaging; not feasible with current standard methods.\nNOVEL: YES \u2014 The therapeutic hypothesis that pacing Ca\u00b2\u207a oscillations",
+      "passed": true
+    },
+    {
+      "statement": "Ca\u00b2\u207a transient frequency determines VDAC1 oligomerization state, with a threshold (~1\u20135 Hz) favoring apoptosis via oligomerization.",
+      "falsifiable": true,
+      "falsifiable_reason": "FRET or cross-linking assays showing no frequency-dependent oligomerization, or in vivo Ca\u00b2\u207a clamping at 1\u20135 Hz failing to induce apoptosis, would falsify.",
+      "feasible": true,
+      "feasible_reason": "Dual-wavelength Ca\u00b2\u207a imaging with compartment-specific indicators is feasible; MCU-KO cells are available.",
+      "novel": true,
+      "novel_reason": "The mechanistic model of VDAC1 and MCU as a two-gate filter with defined frequency response is a testable prediction that integrates multiple observations[1][3].\n\n**CLAIM 8:**\nFALSIFIABLE: YES \u2014 Single-cell Ca\u00b2\u207a imaging showing no frequency differences between cancer and normal cells, or VDAC1 oligomerization assays showing no correlation with frequency, would falsify.\nFEASIBLE: YES \u2014 Live-cell imaging and biochemical oligomerization assays are standard.\nNOVEL: PARTIALLY \u2014 The claim that cancer cells maintain low-frequency oscillations to prevent VDAC1 oligomerization is novel, but the underlying observation (altered Ca\u00b2\u207a signaling in cancer) is established. The link to VDAC1 monomerization is speculative.\n\n**CLAIM 9:**\nFALSIFIABLE: YES \u2014 In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity at <10x effective dose, would falsify.\nFEASIBLE: NO \u2014 Requires in vivo optogenetic or pharmacological pacing of mitochondrial Ca\u00b2\u207a uptake in cancer models, which demands specialized transgenic animals and real-time imaging; not feasible with current standard methods.\nNOVEL: YES \u2014 The therapeutic hypothesis that pacing Ca\u00b2\u207a oscillations",
+      "passed": true
+    },
+    {
+      "statement": "VDAC1 and MCU act as a \"two-gate\" Ca\u00b2\u207a filter, where VDAC1\u2019s OMM gating sets the amplitude and MCU\u2019s IMM uptake shapes the frequency response.",
+      "falsifiable": true,
+      "falsifiable_reason": "Simultaneous Ca\u00b2\u207a imaging in cytosol/IMS showing no frequency-dependent attenuation, or MCU knockout failing to disrupt VDAC1-mediated oscillations, would falsify.",
+      "feasible": true,
+      "feasible_reason": "Dual-wavelength Ca\u00b2\u207a imaging with compartment-specific indicators is feasible; MCU-KO cells are available.",
+      "novel": true,
+      "novel_reason": "The mechanistic model of VDAC1 and MCU as a two-gate filter with defined frequency response is a testable prediction that integrates multiple observations[1][3].\n\n**CLAIM 8:**\nFALSIFIABLE: YES \u2014 Single-cell Ca\u00b2\u207a imaging showing no frequency differences between cancer and normal cells, or VDAC1 oligomerization assays showing no correlation with frequency, would falsify.\nFEASIBLE: YES \u2014 Live-cell imaging and biochemical oligomerization assays are standard.\nNOVEL: PARTIALLY \u2014 The claim that cancer cells maintain low-frequency oscillations to prevent VDAC1 oligomerization is novel, but the underlying observation (altered Ca\u00b2\u207a signaling in cancer) is established. The link to VDAC1 monomerization is speculative.\n\n**CLAIM 9:**\nFALSIFIABLE: YES \u2014 In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity at <10x effective dose, would falsify.\nFEASIBLE: NO \u2014 Requires in vivo optogenetic or pharmacological pacing of mitochondrial Ca\u00b2\u207a uptake in cancer models, which demands specialized transgenic animals and real-time imaging; not feasible with current standard methods.\nNOVEL: YES \u2014 The therapeutic hypothesis that pacing Ca\u00b2\u207a oscillations",
+      "passed": true
+    },
+    {
+      "statement": "Cancer cells exhibit altered Ca\u00b2\u207a oscillation frequencies (e.g., sustained low-frequency spikes) to maintain VDAC1 in a monomeric, pro-survival state, independent of HK-II/Bcl-xL/cholesterol.",
+      "falsifiable": true,
+      "falsifiable_reason": "Single-cell Ca\u00b2\u207a imaging showing no frequency differences between cancer and normal cells, or VDAC1 oligomerization assays showing no correlation with frequency, would falsify.",
+      "feasible": true,
+      "feasible_reason": "Live-cell imaging and biochemical oligomerization assays are standard.",
+      "novel": true,
+      "novel_reason": "The therapeutic hypothesis that pacing Ca\u00b2\u207a oscillations",
+      "passed": true
+    },
+    {
+      "statement": "Pacing mitochondrial Ca\u00b2\u207a uptake (e.g., via optogenetics or pharmacological modulators) can shift VDAC1 toward oligomerization and apoptosis in cancer, with a therapeutic index >10.",
+      "falsifiable": true,
+      "falsifiable_reason": "In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity at <10x effective dose, would falsify.",
+      "feasible": false,
+      "feasible_reason": "Requires in vivo optogenetic or pharmacological pacing of mitochondrial Ca\u00b2\u207a uptake in cancer models, which demands specialized transgenic animals and real-time imaging; not feasible with current standard methods.",
+      "novel": true,
+      "novel_reason": "The therapeutic hypothesis that pacing Ca\u00b2\u207a oscillations",
+      "passed": false
+    },
+    {
+      "statement": "VDAC1 is Ca\u00b2\u207a-permeable and its conductance is modulated by physiological [Ca\u00b2\u207a] (\u03bcM range), but gating kinetics (~ms) allow rhythmic response to 0.1-10 Hz oscillations, creating pulsatile IMS Ca\u00b2\u207a/metabolite flux.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "High-frequency Ca\u00b2\u207a oscillations (>1-2 Hz) promote VDAC1 oligomerization (pro-death) vs. low-frequency (<0.5 Hz, survival) via sustained IMS/matrix Ca\u00b2\u207a overload, with ~1 Hz threshold.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "VDAC1/MCU form a two-gate filter: VDAC1 permits cytosolic Ca\u00b2\u207a bursts to IMS (rate-limited by voltage/Ca\u00b2\u207a gating); MCU rectifies high-freq bursts for matrix uptake (K_d ~1-20 \u03bcM, Hill n>1).",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "Cancer cells exhibit lower Ca\u00b2\u207a oscillation freq. (0.1-0.5 Hz vs. 1-5 Hz normal), stabilizing monomeric VDAC1, additive to HK-II/Bcl-xL jamming.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "Pacing mito Ca\u00b2\u207a uptake freq. (>2 Hz) is viable therapeutic target to oligomerize VDAC1 in cancer (safety index >10 if selective), superior to CBD (Kd=11 \u03bcM, window 1-10 \u03bcM but CYP3A4 IC50=1 \u03bcM).",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "VDAC1 gating is fast enough to follow physiological calcium oscillations, creating a pulsatile flux of both Ca2+ and metabolites across the outer mitochondrial membrane.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "A sustained, high-frequency (>1 Hz) mitochondrial Ca2+ signal is required to trigger VDAC1 oligomerization, while low-frequency (<0.1 Hz) signals permit relaxation to the monomeric state.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "The coordination of low-affinity VDAC1 and high-affinity MCU creates a band-pass filter, allowing mitochondria to respond to large, rapid Ca2+ spikes while ignoring small, slow fluctuations.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "Physiological Ca\u00b2\u207a oscillations (0.1\u201310 Hz) can rhythmically modulate VDAC1 gating, creating pulsatile metabolite flux.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "A high-frequency threshold of mitochondrial Ca\u00b2\u207a uptake promotes VDAC1 oligomerization and apoptosis.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "Cancer cells can evade apoptosis by maintaining Ca\u00b2\u207a oscillation frequencies below the VDAC1 oligomerization threshold.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "Therapeutically pacing mitochondrial Ca\u00b2\u207a uptake (e.g., via optogenetic MCU) can shift VDAC1 to an oligomeric, pro-apoptotic state.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    }
+  ],
+  "n_passed": 8,
+  "n_failed": 13,
+  "total_calls": 1,
+  "latency_s": 22.21,
+  "recommendation": "Lab Gate PASSED with filter. 8/21 claims cleared. 13 filtered: 'Pacing mitochondrial Ca\u00b2\u207a uptake (e.g., via optoge...' not feasible; 'VDAC1 is Ca\u00b2\u207a-permeable and its conductance is mod...' lacks falsifiability; 'VDAC1 is Ca\u00b2\u207a-permeable and its conductance is mod...' not feasible"
+}

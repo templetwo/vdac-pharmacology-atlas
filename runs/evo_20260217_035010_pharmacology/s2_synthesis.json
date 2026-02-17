@@ -1,0 +1,140 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "Reorganization of OMM cholesterol-rich lipid domains can shift VDAC1 from a honeycomb to a dispersed state.",
+      "mechanism": "VDAC1 localization and oligomerization are modulated by lipid environment; cholesterol depletion disperses VDAC1 clusters, implying mechanical disruption of cholesterol domains would have a similar effect.",
+      "falsifiable_by": "Showing that ultrasound-induced VDAC1 dispersion occurs even in cholesterol-depleted OMMs where domains are already disrupted.",
+      "type": 0,
+      "confidence": 0.67,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('omm', 'interacts', 'vdac1')})",
+      "chunk_text": "Reorganization of OMM cholesterol-rich lipid domains can shift VDAC1 from a honeycomb to a dispersed state."
+    },
+    {
+      "statement": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells.",
+      "mechanism": "Elevated chol rigidifies domains but reduces CL-VDAC affinity, making lattice fragile to lower shear.",
+      "falsifiable_by": "Dose-response curves (oligomerization vs. I) identical in cancer/healthy mito liposomes.",
+      "type": 0,
+      "confidence": 0.48,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cl', 'downregulates', 'us'), ('cl', 'downregulates', 'healthy_cell'), ('cl', 'upregulates', 'healthy_cell')})",
+      "chunk_text": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells."
+    },
+    {
+      "statement": "Ultrasound at clinically relevant frequencies and intensities can deliver sufficient mechanical energy to the OMM to transiently disrupt lipid microdomains.",
+      "mechanism": "Acoustic radiation force and cavitation-induced shear stress generate pressure and strain fields within the cell that exceed the low energy barriers for lipid lateral diffusion and phase separation.",
+      "falsifiable_by": "Super-resolution imaging of fluorescently-labeled cholesterol and cardiolipin in the OMM of isolated mitochondria showing no spatial reorganization during sonication at 3 W/cm\u00b2.",
+      "type": 0,
+      "confidence": 0.74,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "Ultrasound at clinically relevant frequencies and intensities can deliver sufficient mechanical energy to the OMM to transiently disrupt lipid microdomains."
+    },
+    {
+      "statement": "No direct evidence links clinical US to VDAC1 oligomerization via lipids.",
+      "mechanism": "Literature shows US membrane effects (sonoporation) but not OMM-specific VDAC1 state change.",
+      "falsifiable_by": "Peer-reviewed study demonstrating US-VDAC1 oligomerization in intact cells. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 1.0,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'omm'), ('us', 'interacts', 'vdac1')})",
+      "chunk_text": "No direct evidence links clinical US to VDAC1 oligomerization via lipids."
+    },
+    {
+      "statement": "1:** Ultrasound at 1\u20133 MHz (0.1\u20133 W/cm\u00b2) can propagate mechanical energy to the OMM with sufficient intensity to disrupt cholesterol/cardiolipin domains, but 20\u2013100 kHz therapeutic US is unlikely to do so at these intensities.",
+      "mechanism": "MHz US generates cavitation and microstreaming near membranes, while kHz US requires higher intensities for comparable mechanical effects due to longer wavelengths and lower energy deposition at the OMM.",
+      "falsifiable_by": "*In vitro* measurements of OMM lipid domain reorganization (e.g., Laurdan GP imaging) under US exposure showing no change at 20\u2013100 kHz but detectable shifts at 1\u20133 MHz. ---",
+      "type": 3,
+      "confidence": 0.7,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('omm', 'downregulates', 'us'), ('omm', 'modulates', 'us')})",
+      "chunk_text": "1:** Ultrasound at 1\u20133 MHz (0.1\u20133 W/cm\u00b2) can propagate mechanical energy to the OMM with sufficient intensity to disrupt cholesterol/cardiolipin domains, but 20\u2013100 kHz therapeutic US is unlikely to do so at these intensities."
+    },
+    {
+      "statement": "4:** The mechanical energy required to reorganize OMM lipids exceeds the thermal noise floor but is within the range of clinically relevant US intensities (1\u20133 MHz, 0.5\u20133 W/cm\u00b2).",
+      "mechanism": "Lipid domain reorganization requires ~10\u207b\u00b2\u2070\u201310\u207b\u00b9\u2079 J per molecule (estimated from membrane bending rigidity), achievable via MHz US microstreaming at 1\u20133 W/cm\u00b2.",
+      "falsifiable_by": "Molecular dynamics simulations or atomic force microscopy showing no lipid domain disruption at these US parameters. --- \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.6,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('us', 'interacts', 'mhz'), ('omm', 'interacts', 'us')})",
+      "chunk_text": "4:** The mechanical energy required to reorganize OMM lipids exceeds the thermal noise floor but is within the range of clinically relevant US intensities (1\u20133 MHz, 0.5\u20133 W/cm\u00b2)."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.06337662337662338,
+      "cosine": 0.8588027894496918,
+      "jsd": 0.13755581831567176,
+      "kappa": 0.9469852104664394,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.2777777777777778,
+        "2": 0.4444444444444444,
+        "3": 0.2777777777777778
+      },
+      "type_01_ratio": 0.2777777777777778,
+      "n_claims_per_model": [
+        4,
+        4,
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.69,
+      "cosine": 0.9613838970661164,
+      "jsd": 0.09679145054262103,
+      "kappa": 0.8431372549019607,
+      "type_distribution": {
+        "0": 0.8235294117647058,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.17647058823529413
+      },
+      "type_01_ratio": 0.8235294117647058,
+      "n_claims_per_model": [
+        3,
+        4,
+        4,
+        3,
+        3
+      ]
+    }
+  ]
+}

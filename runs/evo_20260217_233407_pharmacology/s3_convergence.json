@@ -1,0 +1,175 @@
+{
+  "stage": "S3",
+  "passed": false,
+  "convergence_score": 0.8053,
+  "convergence_threshold": 0.85,
+  "convergence_pass": false,
+  "jaccard": 0.1297,
+  "jaccard_threshold": 0.85,
+  "jaccard_pass": false,
+  "type_01_ratio": 0.4375,
+  "type_01_threshold": 0.75,
+  "type_pass": false,
+  "cosine": 0.8053,
+  "jsd": 0.1864,
+  "kappa": 0.9676,
+  "type_distribution": {
+    "0": 0.25,
+    "1": 0.1875,
+    "2": 0.125,
+    "3": 0.4375
+  },
+  "divergence_map": {
+    "total_unique_claims": 17,
+    "most_divergent": [
+      {
+        "statement": "Erastin binds VDAC2/3 directly (Kd ~5\u201315 \u03bcM) at a site overlapping the N-terminal helix docking region, stabilizing the open/cation-selective state; it does NOT primarily bind VDAC1.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.75
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "Erastin's primary ferroptosis mechanism is system Xc\u207b inhibition (GSH depletion \u2192 GPX4 inactivation \u2192 lipid peroxide accumulation); VDAC opening is an amplifying co-mechanism that increases mitochondrial ROS and iron release, but is neither necessary nor sufficient alone.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.8
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "The cofactor equation (Threshold = K/[(1-f_HKII)(1-f_BclxL)] \u00d7 [Chol]/[CL]) is directionally valid for predicting VDAC opening probability but quantitatively incomplete for predicting ferroptosis \u2014 it must be multiplied by terms for labile iron pool [LIP], ACSL4 activity, and inverse basal GSH to predict cell death.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.7
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "RAS-mutant 10-fold sensitivity arises from convergent rewiring across both erastin targets simultaneously: (a) VDAC axis \u2014 reduced HKII-VDAC binding, altered [Chol]/[CL]; (b) metabolic axis \u2014 upregulated TFRC (\u2191LIP), increased ACSL4/LPCAT3 (\u2191PUFA-PLs), higher system Xc\u207b dependence due to elevated ROS from oncogene-driven OXPHOS. No single axis accounts for the full 10-fold shift.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.78
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "1**: Erastin binds directly to VDAC2/3 (Kd ~5\u201310 \u03bcM), stabilizing the open, cation-selective state by displacing the N-terminal helix and promoting hexameric assembly. **TYPE**: 1 (empirical support: docking studies, mutagenesis) **CONFIDENCE**: 0.85 **MECHANISM**: Erastin docks into the VDAC \u03b2-barrel pocket, disrupting autoinhibition and increasing conductance for Ca\u00b2\u207a/Na\u207a influx. **FALSIFIABLE BY**: VDAC2/3 knockout or point mutations in the binding pocket abolishing erastin sensitivity without affecting basal P_open.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "2**: VDAC opening by erastin is *necessary but not sufficient* for ferroptosis; it amplifies lipid peroxide accumulation by increasing labile iron (via mitochondrial Ca\u00b2\u207a overload) and depleting GSH (via mitochondrial ROS and system Xc\u207b inhibition). **TYPE**: 1 (supported by VDAC2 KO rescue, iron chelation studies) **CONFIDENCE**: 0.8 **MECHANISM**: Cation influx (Ca\u00b2\u207a/Na\u207a) disrupts mitochondrial redox balance, generating ROS that oxidize PUFAs and deplete GSH, while system Xc\u207b inhibition blocks cystine import for GPX4 synthesis. **FALSIFIABLE BY**: VDAC2/3 KO cells showing no ferroptosis despite erastin treatment *if* system Xc\u207b is also inhibited.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "3**: RAS-mutant cells\u2019 10x sensitivity arises from *both* VDAC-state dependency (\u2193f_HKII, \u2191[Chol]/[CL]) *and* metabolic rewiring (\u2191TFRC, \u2191ACSL4, \u2191OXPHOS), creating a \"perfect storm\" for ferroptosis. **TYPE**: 1 (supported by HKII/Bcl-xL overexpression studies, lipidomics) **CONFIDENCE**: 0.85 **MECHANISM**: Oncogenic RAS reduces HKII-VDAC binding (lower f_HKII), increases cholesterol/CL ratio, and upregulates iron/PUFA metabolism, making cells hypersensitive to VDAC opening and GSH depletion. **FALSIFIABLE BY**: Restoring f_HKII or reducing [Chol]/[CL] in RAS-mutant cells to WT levels *and* observing loss of 10x sensitivity.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "4**: The cofactor equation predicts *basal* VDAC vulnerability but is insufficient alone; iron availability (TFRC), ACSL4 activity, and basal GSH levels are required to determine whether VDAC opening triggers death. **TYPE**: 2 (theoretical, partial empirical support) **CONFIDENCE**: 0.75 **MECHANISM**: The equation models P_open but omits downstream effectors (iron, PUFA, GPX4) that convert VDAC opening into ferroptosis. **FALSIFIABLE BY**: Cells with identical equation-predicted thresholds but differing iron/ACSL4 levels showing divergent erastin sensitivity.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "5**: Erastin-induced VDAC opening shifts conductance from anion-selective to cation-selective by altering the voltage-dependent gating curve, increasing Ca\u00b2\u207a influx at physiological voltages. **TYPE**: 1 (supported by patch-clamp studies) **CONFIDENCE**: 0.8 **MECHANISM**: Erastin binding stabilizes the open state, reducing the voltage threshold for cation selectivity and enabling Ca\u00b2\u207a influx even at resting membrane potentials. **FALSIFIABLE BY**: Voltage-clamp recordings showing no conductance shift in VDAC2/3 KO cells or with erastin-resistant mutants. ---",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.5
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "Erastin binds VDAC2/3 directly (Kd 5-10\u03bcM, not VDAC1), stabilizing open cation-selective state via \u03b2-barrel docking, displacing N-helix.",
+        "models_supporting": [
+          "grok"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.85
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      }
+    ],
+    "models_present": [
+      "claude",
+      "mistral",
+      "grok",
+      "gemini",
+      "deepseek"
+    ]
+  },
+  "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+}

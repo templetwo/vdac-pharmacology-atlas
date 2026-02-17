@@ -1,0 +1,168 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "VDAC1 oligomerization is primarily an amplifier, not the initial trigger; mPTP opening is initiated by matrix Ca\u00b2\u207a overload acting on CypD-sensitized ANT/ATP synthase components at the IMM.",
+      "mechanism": "Matrix Ca\u00b2\u207a activates CypD binding to the IMM pore component (likely ATP synthase c-ring or ANT), causing initial permeability transition; subsequent \u0394\u03a8m collapse and cytochrome c release then promote VDAC1 oligomerization at the OMM, which releases pro-apoptotic factors and locks in commitment.",
+      "falsifiable_by": "Demonstrating that VDAC1 oligomerization inhibitors (e.g., VBIT-4) prevent mPTP opening itself (not just downstream amplification) in isolated mitoplasts retaining OMM.",
+      "type": 0,
+      "confidence": 0.73,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('ant', 'upregulates', 'cytochrome_c_release'), ('cytochrome_c_release', 'upregulates', 'vdac1'), ('ant', 'upregulates', 'vdac1')})",
+      "chunk_text": "VDAC1 oligomerization is primarily an amplifier, not the initial trigger; mPTP opening is initiated by matrix Ca\u00b2\u207a overload acting on CypD-sensitized ANT/ATP synthase components at the IMM."
+    },
+    {
+      "statement": "CypD and VDAC1 do not directly bind but form a functional trans-membrane complex bridged by the core pore component (e.g., F-ATP synthase) at the OMM-IMM contact site.",
+      "mechanism": "CypD binding to its matrix-facing target (e.g., OSCP subunit of ATP synthase) lowers the Ca2+ concentration required to trigger the pore's conformational change, effectively sensitizing the system which is anchored at the contact site, allowing engagement with VDAC1.",
+      "falsifiable_by": "Demonstration of direct, high-affinity binding between CypD and VDAC1 in a lipid environment, or Cryo-EM data showing the open mPTP structure lacks a physical bridge between the matrix and outer membrane.",
+      "type": 0,
+      "confidence": 0.688,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('atp', 'interacts', 'vdac1'), ('atp', 'upregulates', 'vdac1'), ('imm', 'interacts', 'oscp'), ('atp', 'downregulates', 'vdac1')})",
+      "chunk_text": "CypD and VDAC1 do not directly bind but form a functional trans-membrane complex bridged by the core pore component (e.g., F-ATP synthase) at the OMM-IMM contact site."
+    },
+    {
+      "statement": "mPTP can open without VDAC1 oligomerization (e.g., via ANT-CypD interaction alone), but this leads to a reversible, transient pore associated with apoptotic signaling, whereas VDAC1 engagement commits to irreversible, necrotic death.",
+      "mechanism": "ANT-mediated pore is smaller and regulated, allowing controlled cytochrome c release; VDAC1 oligomerization causes catastrophic solute exchange, osmotic swelling, and OMM rupture.",
+      "falsifiable_by": "Observation of rapid, full necrotic death in cells lacking functional VDAC1 oligomerization under calcium overload conditions. \u2500\u2500\u2500",
+      "type": 0,
+      "confidence": 0.613,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('omm', 'upregulates', 'vdac1')})",
+      "chunk_text": "mPTP can open without VDAC1 oligomerization (e.g., via ANT-CypD interaction alone), but this leads to a reversible, transient pore associated with apoptotic signaling, whereas VDAC1 engagement commits to irreversible, necrotic death."
+    },
+    {
+      "statement": "The Ca\u00b2\u207a threshold for irreversible mPTP opening is *lower in cardiac mitochondria* (~200 \u00b5M) than hepatic (~500 \u00b5M) or neuronal (~300 \u00b5M) due to differential cardiolipin content and CypD expression.",
+      "mechanism": "Cardiolipin stabilizes mPTP components, while CypD lowers the Ca\u00b2\u207a threshold; cardiac mitochondria have high cardiolipin and CypD, reducing the required Ca\u00b2\u207a.",
+      "falsifiable_by": "Comparative Ca\u00b2\u207a retention capacity assays in isolated mitochondria from each tissue, with cardiolipin/CypD manipulation.",
+      "type": 1,
+      "confidence": 0.617,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "The Ca\u00b2\u207a threshold for irreversible mPTP opening is *lower in cardiac mitochondria* (~200 \u00b5M) than hepatic (~500 \u00b5M) or neuronal (~300 \u00b5M) due to differential cardiolipin content and CypD expression."
+    },
+    {
+      "statement": "Irreversible VDAC1-mPTP coupling occurs above matrix [Ca\u00b2\u207a] ~200-500 \u03bcM; cardiac mito most sensitive (~200 \u03bcM), neuronal ~300 \u03bcM, hepatic ~500 \u03bcM due to ROS/CypD expression variance.",
+      "mechanism": "Threshold exceeds CypD dissociation Kd (~nM), propagating ROS to VDAC gating at contacts.",
+      "falsifiable_by": "Dose-response curves in tissue-specific mito showing uniform threshold.",
+      "type": 2,
+      "confidence": 0.675,
+      "overlap_count": 2,
+      "models": [
+        "deepseek",
+        "grok"
+      ],
+      "tuples": "frozenset({('ros', 'interacts', 'vdac'), ('vdac1', 'interacts', 'ros')})",
+      "chunk_text": "Irreversible VDAC1-mPTP coupling occurs above matrix [Ca\u00b2\u207a] ~200-500 \u03bcM; cardiac mito most sensitive (~200 \u03bcM), neuronal ~300 \u03bcM, hepatic ~500 \u03bcM due to ROS/CypD expression variance."
+    },
+    {
+      "statement": "The OMM-IMM contact site is the *physical locus* of the life/death decision, where Ca\u00b2\u207a microdomains and protein-protein interactions converge to determine mPTP irreversibility.",
+      "mechanism": "Contact sites concentrate VDAC1, ANT, and CypD, creating a Ca\u00b2\u207a-sensitive \"decision node\" where local [Ca\u00b2\u207a] and protein interactions dictate pore stability.",
+      "falsifiable_by": "Disrupting contact sites (e.g., mitofilin knockdown) and measuring mPTP opening kinetics under Ca\u00b2\u207a stress. --- \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.85,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'ant'), ('imm', 'interacts', 'vdac1'), ('omm', 'interacts', 'imm')})",
+      "chunk_text": "The OMM-IMM contact site is the *physical locus* of the life/death decision, where Ca\u00b2\u207a microdomains and protein-protein interactions converge to determine mPTP irreversibility."
+    },
+    {
+      "statement": "CypD at IMM matrix face and VDAC1 at OMM do not form a stable trans-membrane death complex; CypD regulates core mPTP (ATP synthase), VDAC amplifies separately.",
+      "mechanism": "Genetic CypD KO blocks mPTP without affecting VDAC; no direct CypD-VDAC binding evidenced.",
+      "falsifiable_by": "Co-IP or FRET showing CypD-VDAC1 interaction in PT-induced mito.",
+      "type": 3,
+      "confidence": 0.75,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('ko', 'upregulates', 'vdac'), ('ko', 'downregulates', 'vdac')})",
+      "chunk_text": "CypD at IMM matrix face and VDAC1 at OMM do not form a stable trans-membrane death complex; CypD regulates core mPTP (ATP synthase), VDAC amplifies separately."
+    },
+    {
+      "statement": "Contact sites (MICOS/OPA1) localize mPTP-VDAC coupling as decision hub, aligning pores for Ca\u00b2\u207a/ROS flux.",
+      "mechanism": "~20% mito surface contacts enable signal amplification without full rupture.",
+      "falsifiable_by": "Contact-site disruptors (e.g., Mitofusin siRNA) abolishing PT sans swelling. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.7,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('opa1', 'interacts', 'vdac'), ('micos', 'interacts', 'opa1'), ('vdac', 'interacts', 'ros')})",
+      "chunk_text": "Contact sites (MICOS/OPA1) localize mPTP-VDAC coupling as decision hub, aligning pores for Ca\u00b2\u207a/ROS flux."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.03233580145344851,
+      "cosine": 0.8329009115695953,
+      "jsd": 0.1487712129538735,
+      "kappa": 0.9493817152907886,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.3333333333333333,
+        "2": 0.5238095238095238,
+        "3": 0.14285714285714285
+      },
+      "type_01_ratio": 0.3333333333333333,
+      "n_claims_per_model": [
+        4,
+        5,
+        5,
+        3,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.5442909867909869,
+      "cosine": 0.9303436994552612,
+      "jsd": 0.17585625705298374,
+      "kappa": 0.9679950066443845,
+      "type_distribution": {
+        "0": 0.6190476190476191,
+        "1": 0.14285714285714285,
+        "2": 0.09523809523809523,
+        "3": 0.14285714285714285
+      },
+      "type_01_ratio": 0.7619047619047619,
+      "n_claims_per_model": [
+        4,
+        5,
+        5,
+        3,
+        4
+      ]
+    }
+  ]
+}

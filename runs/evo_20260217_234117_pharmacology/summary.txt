@@ -1,0 +1,56 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260217_234117_pharmacology
+Date: 2026-02-17
+Protocol: evo-1.0
+
+QUESTION:
+  How does the mitochondrial permeability transition pore (mPTP) interact with VDAC1 to execute the final commitment to cell death, and what determines the point of no return? Specifically: (1) Does VDAC1 oligomerization precede or follow mPTP opening — is VDAC the trigger or the amplifier? (2) What is the role of cyclophilin D binding at the matrix face while VDAC engages at the OMM — do they form a trans-membrane death complex? (3) Is there a calcium concentration threshold at which VDAC1-mPTP coupling becomes irreversible, and does this threshold differ between cardiac, neuronal, and hepatic mitochondria? (4) Can the mPTP be opened without VDAC1 oligomerization (via ANT alone), and if so, does this produce a different mode of death (apoptosis vs necrosis)? (5) What role does the contact site — where OMM meets IMM — play as the physical location where the life/death decision is executed?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 10
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 2
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 10/19
+
+HYPOTHESES (ranked by testability):
+  H2. IF mitochondria from mouse heart, brain cortex, and liver are subjected to sequential Ca²⁺ boluses (10 µM increments), T
+     Testability: 9.0/10
+     Effect size: 1.0586 (Cohen's d)
+     Power: 1.0
+
+  H1. IF isolated mitoplasts (OMM-stripped) are exposed to Ca²⁺ (200 µM) + Pi (2 mM), THEN CsA-sensitive ΔΨm collapse occurs w
+     Testability: 8.0/10
+     Effect size: 0.9309 (Cohen's d)
+     Power: 1.0
+
+  H3. IF VDAC1 is genetically ablated (CRISPR triple-KO of VDAC1/2/3) in HeLa or MEF cells, THEN Ca²⁺ overload (ionomycin 5 µM
+     Testability: 7.0/10
+     Effect size: 0.9903 (Cohen's d)
+     Power: 1.0
+
+  H4. IF proximity ligation assay (PLA) or FRET is performed on intact energized mitochondria during
+     Testability: 5.0/10
+     Effect size: 0.0 (Cohen's d)
+     Power: 0.0
+
+BUDGET:
+  Total LLM calls: 17
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

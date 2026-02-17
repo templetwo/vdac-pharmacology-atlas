@@ -1,0 +1,388 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF primary rat cortical neurons are exposed to ketamine at 5-10 \u00b5M for 1-2 hours, THEN JC-1 fluorescence ratio (red/green) will show a transient depolarization of 15-30% at 30-60 min followed by partial recovery, compared to vehicle. At 50-100 \u00b5M (supra-anesthetic equivalent), \u0394\u03a8m depolarization will exceed 40% without recovery by 4 hours.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "ketamine_concentration",
+          "unit": "\u00b5M",
+          "low": 1.0,
+          "high": 100.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "delta_psi_change_low_dose",
+          "unit": "%",
+          "low": 10.0,
+          "high": 35.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "delta_psi_change_high_dose",
+          "unit": "%",
+          "low": 30.0,
+          "high": 70.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "recovery_time_low_dose",
+          "unit": "min",
+          "low": 30.0,
+          "high": 120.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "exposure_duration",
+          "unit": "hours",
+          "low": 0.5,
+          "high": 4.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 9.0,
+      "experimental_protocol": "Culture DIV14 rat cortical neurons in 96-well plates. Treat with ketamine (1, 5, 10, 25, 50, 100 \u00b5M) \u00b1 VDAC1 inhibitor DIDS (100 \u00b5M). Measure \u0394\u03a8m via JC-1 live imaging at 15, 30, 60, 120, 240 min using plate reader and confocal. Parallel wells for TMRM confirmation and MTT viability at 4h and 24h.",
+      "expected_outcome": "Biphasic",
+      "null_outcome": "No significant \u0394\u03a8m change at any dose within 4h, or identical magnitude/kinetics across all doses (no dose-pathway isomorphism).",
+      "dose_ranges": {
+        "Ketamine": {
+          "doses": [
+            1.0,
+            5.0,
+            10.0,
+            25.0,
+            50.0,
+            100.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "DIDS": {
+          "doses": [
+            100.0
+          ],
+          "unit": "\u00b5M;"
+        }
+      },
+      "readouts": [
+        "JC-1 ratio (530/590 nm)",
+        "TMRM fluorescence",
+        "MTT viability",
+        "ATP luminescence (CellTiter-Glo)"
+      ],
+      "controls": [
+        "1 \u00b5M",
+        "READOUTS: JC-1 ratio (530/590 nm)",
+        "TMRM fluorescence",
+        "MTT viability",
+        "ATP luminescence (CellTiter-Glo)",
+        "CONTROLS: Vehicle (saline)",
+        "FCCP (1 \u00b5M",
+        "full depolarization positive control)",
+        "oligomycin (1 \u00b5M",
+        "hyperpolarization control)",
+        "DIDS alone",
+        "heat-killed cells",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H2",
+      "prediction": "IF mice receive ketamine (10 mg/kg IP, sub-anesthetic) preceded by the mitochondrial uncoupler FCCP (low-dose ICV, 0.5 nmol) or VDAC1 inhibitor DIDS (ICV, 10 nmol), THEN the antidepressant-like effect in the forced swim test at 2h post-injection will be abolished (immobility time returns to \u226590% of vehicle control), even though BDNF protein levels in PFC remain elevated.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "ketamine_dose",
+          "unit": "mg/kg",
+          "low": 5.0,
+          "high": 15.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "FCCP_ICV_dose",
+          "unit": "nmol",
+          "low": 0.1,
+          "high": 1.0,
+          "distribution": "log-normal",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "DIDS_ICV_dose",
+          "unit": "nmol",
+          "low": 5.0,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "immobility_reduction_ketamine_alone",
+          "unit": "%",
+          "low": 30.0,
+          "high": 60.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "immobility_rescue_by_blocker",
+          "unit": "%",
+          "low": 0.0,
+          "high": 100.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "BDNF_fold_increase",
+          "unit": "fold",
+          "low": 1.2,
+          "high": 2.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Male C57BL/6 mice (n=12/group, 6 groups) with pre-implanted ICV cannulae. Groups: (1) vehicle+vehicle, (2) vehicle+ketamine, (3) FCCP+ketamine, (4) DIDS+ketamine, (5) FCCP+vehicle, (6) DIDS+vehicle. ICV pretreatment 30 min before ketamine IP. FST and sucrose preference at 2h and 24h. Sacrifice at 2.5h; PFC dissected for BDNF ELISA, ATP assay, and JC-1 staining of acute slices.",
+      "expected_outcome": "Ketamine alone reduces immobility ~45% and increases PFC ATP/BDNF. FCCP or DIDS pretreatment blocks behavioral improvement and ATP increase but BDNF remains partially elevated, demonstrating that mitochondrial function is required downstream of or parallel to BDNF for behavioral output.",
+      "null_outcome": "FCCP/DIDS pretreatment has no effect on ketamine's behavioral response, indicating mitochondrial bioenergetics are dispensable for rapid antidepressant action.",
+      "dose_ranges": {
+        "Ketamine": {
+          "doses": [
+            5.0,
+            10.0,
+            15.0
+          ],
+          "unit": "mg/kg"
+        },
+        "FCCP": {
+          "doses": [
+            0.1,
+            0.5,
+            1.0
+          ],
+          "unit": "nmol"
+        },
+        "DIDS": {
+          "doses": [
+            5.0,
+            10.0,
+            20.0
+          ],
+          "unit": "nmol"
+        }
+      },
+      "readouts": [
+        "FST immobility (sec)",
+        "sucrose preference (%)",
+        "PFC BDNF (pg/mg",
+        "ELISA)",
+        "PFC ATP (luminescence)",
+        "PFC \u0394\u03a8m (JC-1 ex vivo)",
+        "locomotor activity (open field",
+        "to exclude sedation confound)"
+      ],
+      "controls": [
+        "Vehicle-vehicle",
+        "each blocker alone (to exclude depressogenic effects of mitochondrial disruption)",
+        "locomotor controls",
+        "rapamycin+ketamine group (mTOR blockade positive control for behavioral abolition)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H3",
+      "prediction": "IF isolated mouse brain mitochondria or cultured cortical neurons are treated with (2R,6R)-HNK at 1-10 \u00b5M, THEN oxygen consumption rate (OCR) for basal and maximal respiration will increase by 15-40% within 60 min, and this effect will persist in the presence of AP5 (NMDAR antagonist, 50 \u00b5M) but will be abolished by NBQX (AMPAR antagonist, 10 \u00b5M, in neurons only) or by complex I inhibitor rotenone (0.5 \u00b5M).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "HNK_concentration",
+          "unit": "\u00b5M",
+          "low": 0.5,
+          "high": 20.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "OCR_increase_basal",
+          "unit": "%",
+          "low": 10.0,
+          "high": 50.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "OCR_increase_maximal",
+          "unit": "%",
+          "low": 5.0,
+          "high": 45.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "complex_I_activity_change",
+          "unit": "%",
+          "low": 5.0,
+          "high": 30.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "AMPAR_block_reversal",
+          "unit": "%",
+          "low": 50.0,
+          "high": 100.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 9.0,
+      "experimental_protocol": "Seahorse XFe96: (A) Isolated mouse brain mitochondria treated with HNK (0.5, 1, 5, 10, 20 \u00b5M) \u00b1 rotenone (0.5 \u00b5M), measuring OCR with MitoStress test (oligomycin/FCCP/antimycin A). (B) DIV14 cortical neurons treated with HNK (same",
+      "expected_outcome": "HNK at 5-10 \u00b5M increases basal OCR ~25% and maximal OCR ~20% in both isolated mitochondria and neurons. In isolated mitochondria (no receptors), the effect persists with AP5/NBQX, confirming a direct mitochondrial target. In neurons, NBQX partially attenuates (~50%) suggesting dual mechanism. Rotenone abolishes the OCR increase, localizing the target to complex I or upstream.",
+      "null_outcome": "HNK produces no OCR change in isolated mitochondria at any concentration, and all neuronal effects are fully blocked by NBQX, indicating purely AMPAR-mediated mechanism with no direct mitochondrial component.",
+      "dose_ranges": {
+        "HNK": {
+          "doses": [
+            0.5,
+            1.0,
+            5.0,
+            10.0,
+            20.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "AP5": {
+          "doses": [
+            50.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "NBQX": {
+          "doses": [
+            10.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Rotenone": {
+          "doses": [
+            0.5
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Ketamine comparator": {
+          "doses": [
+            10.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "OCR (pmol O\u2082/min)",
+        "ECAR (mpH/min)",
+        "spare respiratory capacity (%)",
+        "complex I specific activity (nmol NADH oxidized/min/mg)",
+        "ATP production rate (Seahorse real-time ATP assay)"
+      ],
+      "controls": [
+        "Vehicle",
+        "ketamine (10 \u00b5M",
+        "parent compound comparator)",
+        "(2S",
+        "6S)-HNK (inactive enantiomer",
+        "stereoselectivity control)",
+        "rotenone alone",
+        "FCCP alone",
+        "heat-inactivated mitochondria",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H4",
+      "prediction": "IF the dose-response curves for ketamine's synaptogenic effect (spine density increase in PFC layer V pyramidal neurons) and neurotoxic effect (caspase-3 activation or LDH release) are fitted to Hill equations, THEN the synaptogenic target will show a Hill coefficient of 1.0-1.5 (hyperbolic, low cooperativity) with EC\u2085\u2080 ~5 \u00b5M, while the neurotoxic target will show a Hill coefficient of 2.5-4.0 (sigmoidal, high cooperativity) with EC\u2085\u2080 ~50-80 \u00b5M, creating a \u22655-fold therapeutic window where synaptogenesis saturates before neurotoxicity engages.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "EC50_synaptogenesis",
+          "unit": "\u00b5M",
+          "low": 2.0,
+          "high": 15.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "EC50_neurotoxicity",
+          "unit": "\u00b5M",
+          "low": 30.0,
+          "high": 120.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "Hill_synaptogenesis",
+          "unit": "(normal,",
+          "low": 0.8,
+          "high": 2.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "Hill_neurotoxicity",
+          "unit": "(normal,",
+          "low": 1.5,
+          "high": 5.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "therapeutic_window_ratio",
+          "unit": "fold",
+          "low": 3.0,
+          "high": 20.0,
+          "distribution": "log-normal",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 8.0,
+      "experimental_protocol": "DIV14 rat cort",
+      "expected_outcome": "",
+      "null_outcome": "",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": []
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_calls": 1,
+  "latency_s": 53.61
+}

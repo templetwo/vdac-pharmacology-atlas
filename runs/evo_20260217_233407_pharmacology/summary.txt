@@ -1,0 +1,35 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260217_233407_pharmacology
+Date: 2026-02-17
+Protocol: evo-1.0
+
+QUESTION:
+  What are the mechanisms by which erastin induces ferroptotic cell death through VDAC1/2/3, and why does it show selectivity for RAS-mutant cancer cells? Specifically: (1) Does erastin bind VDAC directly or alter its gating indirectly through lipid/protein interactions? (2) How does VDAC opening by erastin connect to GSH depletion, GPX4 inhibition, and lipid peroxide accumulation? (3) Does the cofactor equation (Threshold = K/[(1-f_HKII)(1-f_BclxL)] × [Chol]/[CL]) predict which cells are vulnerable to erastin-induced ferroptosis? (4) Why do RAS-mutant cells show 10-fold greater sensitivity — is this a VDAC-state dependency or a metabolic reserve difference? (5) What is the relationship between erastin-induced VDAC opening and the voltage-dependent conductance shift from anion-selective to cation-selective state?
+
+CONVERGENCE:
+  S2 rounds: ?
+  Early stopped: ?
+  Final Jaccard: ?
+  Final TYPE 0/1: ?
+  S3 gate: FAILED
+
+VERIFICATION:
+  TYPE 2 claims checked: 0
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 0
+
+LAB GATE:
+  Result: FAILED
+  Claims passed: 0/0
+
+BUDGET:
+  Total LLM calls: ?
+  Target range: 92-142
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

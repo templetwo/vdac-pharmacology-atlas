@@ -1,0 +1,154 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "Physiological Ca\u00b2\u207a oscillations (0.1\u201310 Hz) can rhythmically modulate VDAC1 gating, creating pulsatile metabolite flux.",
+      "mechanism": "Cytosolic Ca\u00b2\u207a binds to VDAC1, altering its voltage-dependent gating kinetics on a timescale matching oscillation periods.",
+      "falsifiable_by": "Direct patch-clamp of VDAC1 in intact mitochondria showing no change in open probability when challenged with physiological-frequency Ca\u00b2\u207a pulses.",
+      "type": 0,
+      "confidence": 0.72,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "Physiological Ca\u00b2\u207a oscillations (0.1\u201310 Hz) can rhythmically modulate VDAC1 gating, creating pulsatile metabolite flux."
+    },
+    {
+      "statement": "VDAC1 oligomerization is driven by cumulative matrix Ca\u00b2\u207a overload rather than directly by oscillation frequency \u2014 but frequency encodes the *rate* of matrix accumulation, so a frequency threshold (~1\u20132 Hz sustained) effectively exists above which oligomerization probability sharply increases.",
+      "mechanism": "High-frequency Ca\u00b2\u207a pulses exceed mitochondrial Ca\u00b2\u207a efflux capacity (NCLX), causing progressive matrix Ca\u00b2\u207a accumulation \u2192 mPTP sensitization \u2192 VDAC1 oligomerization via conformational changes/cytochrome c release.",
+      "falsifiable_by": "Demonstrating that total Ca\u00b2\u207a load, not frequency, determines oligomerization when integral is matched across different frequency protocols.",
+      "type": 0,
+      "confidence": 0.55,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('nclx', 'upregulates', 'vdac1')})",
+      "chunk_text": "VDAC1 oligomerization is driven by cumulative matrix Ca\u00b2\u207a overload rather than directly by oscillation frequency \u2014 but frequency encodes the *rate* of matrix accumulation, so a frequency threshold (~1\u20132 Hz sustained) effectively exists above which oligomerization probability sharply increases."
+    },
+    {
+      "statement": "VDAC1/MCU form a two-gate filter: VDAC1 permits cytosolic Ca\u00b2\u207a bursts to IMS (rate-limited by voltage/Ca\u00b2\u207a gating); MCU rectifies high-freq bursts for matrix uptake (K_d ~1-20 \u03bcM, Hill n>1).",
+      "mechanism": "Spatial proximity (~10 nm) and MICU1/2 sensing ensure MCU activates only at peak [Ca\u00b2\u207a]_IMS >5 \u03bcM from VDAC1.",
+      "falsifiable_by": "Super-res EM or FRAP showing no VDAC1-MCU co-localization/flux coupling.",
+      "type": 1,
+      "confidence": 0.8,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('mcu', 'upregulates', 'vdac1')})",
+      "chunk_text": "VDAC1/MCU form a two-gate filter: VDAC1 permits cytosolic Ca\u00b2\u207a bursts to IMS (rate-limited by voltage/Ca\u00b2\u207a gating); MCU rectifies high-freq bursts for matrix uptake (K_d ~1-20 \u03bcM, Hill n>1)."
+    },
+    {
+      "statement": "Cancer cells remodel Ca\u00b2\u207a oscillation machinery (IP3R, SERCA, STIM/Orai) to reduce oscillation amplitude and increase frequency irregularity, maintaining VDAC1 in monomeric state \u2014 this represents a distinct gate-jamming mechanism complementary to HK-II binding.",
+      "mechanism": "complementary to HK-II binding.",
+      "falsifiable_by": "Comprehensive Ca\u00b2\u207a imaging in matched cancer/normal cells showing no systematic difference in mitochondrial Ca\u00b2\u207a oscillation parameters. \u2500\u2500\u2500",
+      "type": 1,
+      "confidence": 0.5,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('stim', 'downregulates', 'vdac1'), ('stim', 'upregulates', 'vdac1')})",
+      "chunk_text": "Cancer cells remodel Ca\u00b2\u207a oscillation machinery (IP3R, SERCA, STIM/Orai) to reduce oscillation amplitude and increase frequency irregularity, maintaining VDAC1 in monomeric state \u2014 this represents a distinct gate-jamming mechanism complementary to HK-II binding."
+    },
+    {
+      "statement": "Pacing mitochondrial Ca\u00b2\u207a uptake (e.g., via optogenetics or pharmacological modulators) can shift VDAC1 toward oligomerization and apoptosis in cancer, with a therapeutic index >10.",
+      "mechanism": "Forced high-frequency Ca\u00b2\u207a transients (e.g., 5 Hz) may override cancer\u2019s endogenous low-frequency signals, inducing VDAC1 oligomerization and cytochrome c release.",
+      "falsifiable_by": "In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity (e.g., cardiac arrhythmias) at <10x effective dose. --- \u2500\u2500\u2500",
+      "type": 2,
+      "confidence": 0.537,
+      "overlap_count": 2,
+      "models": [
+        "deepseek",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'cytochrome_c_release')})",
+      "chunk_text": "Pacing mitochondrial Ca\u00b2\u207a uptake (e.g., via optogenetics or pharmacological modulators) can shift VDAC1 toward oligomerization and apoptosis in cancer, with a therapeutic index >10."
+    },
+    {
+      "statement": "The coordination of low-affinity VDAC1 and high-affinity MCU creates a band-pass filter, allowing mitochondria to respond to large, rapid Ca2+ spikes while ignoring small, slow fluctuations.",
+      "mechanism": "VDAC1 passes high-amplitude Ca2+ signals into the intermembrane space, creating a localized pool that is then efficiently taken up by the high-affinity MCU, effectively filtering for salient signals.",
+      "falsifiable_by": "Direct measurement of intermembrane space Ca2+ showing its concentration profile is a simple, non-filtered reflection of cytosolic Ca2+ dynamics. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.85,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'mcu')})",
+      "chunk_text": "The coordination of low-affinity VDAC1 and high-affinity MCU creates a band-pass filter, allowing mitochondria to respond to large, rapid Ca2+ spikes while ignoring small, slow fluctuations."
+    },
+    {
+      "statement": "Pacing mito Ca\u00b2\u207a uptake freq. (>2 Hz) is viable therapeutic target to oligomerize VDAC1 in cancer (safety index >10 if selective), superior to CBD (Kd=11 \u03bcM, window 1-10 \u03bcM but CYP3A4 IC50=1 \u03bcM).",
+      "mechanism": "Opto/genetic MCU pacing (e.g., opto-MCU) forces high-freq uptake, bypassing cancer-damped signals.",
+      "falsifiable_by": "Freq.-paced MCF7 cells (dox IC50=0.5 \u03bcM benchmark) showing no apoptosis shift vs. vehicle. \u2500\u2500\u2500",
+      "type": 3,
+      "confidence": 0.4,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('cbd', 'interacts', 'cyp3a4'), ('ic50', 'interacts', 'mcu'), ('cyp3a4', 'interacts', 'ic50'), ('vdac1', 'interacts', 'cbd')})",
+      "chunk_text": "Pacing mito Ca\u00b2\u207a uptake freq. (>2 Hz) is viable therapeutic target to oligomerize VDAC1 in cancer (safety index >10 if selective), superior to CBD (Kd=11 \u03bcM, window 1-10 \u03bcM but CYP3A4 IC50=1 \u03bcM)."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.016666666666666666,
+      "cosine": 0.7881645500659943,
+      "jsd": 0.07371934832450587,
+      "kappa": 0.9726950914142627,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.2857142857142857,
+        "2": 0.42857142857142855,
+        "3": 0.2857142857142857
+      },
+      "type_01_ratio": 0.2857142857142857,
+      "n_claims_per_model": [
+        4,
+        5,
+        5,
+        3,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.2422222222222222,
+      "cosine": 0.8650308966636657,
+      "jsd": 0.22873794183593846,
+      "kappa": 0.9633121707415914,
+      "type_distribution": {
+        "0": 0.47368421052631576,
+        "1": 0.3157894736842105,
+        "2": 0.10526315789473684,
+        "3": 0.10526315789473684
+      },
+      "type_01_ratio": 0.7894736842105263,
+      "n_claims_per_model": [
+        4,
+        5,
+        5,
+        3,
+        2
+      ]
+    }
+  ]
+}

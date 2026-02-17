@@ -1,0 +1,190 @@
+{
+  "passed": true,
+  "claims": [
+    {
+      "statement": "Diagnostic ultrasound (1-3 MHz, 0.1-3 W/cm\u00b2) delivers insufficient mechanical energy to the OMM to reorganize lipid domains directly; attenuation and spatial averaging reduce local OMM stress to sub-threshold levels (<1 pN/nm\u00b2).",
+      "falsifiable": true,
+      "falsifiable_reason": "It specifies a concrete experimental condition (Laurdan GP changes during diagnostic-intensity insonation) that would disprove OMM lipid order alteration.",
+      "feasible": true,
+      "feasible_reason": "Laurdan GP imaging is a standard fluorescence microscopy technique for lipid order in live cells or isolated mitochondria.",
+      "novel": true,
+      "novel_reason": "It enables a quantitative test distinguishing diagnostic US insufficiency from therapeutic effects, anchoring frequency-specific predictions in the research program.",
+      "passed": true
+    },
+    {
+      "statement": "Low-frequency therapeutic ultrasound (20-100 kHz) at higher intensities can induce cavitation-mediated local stresses sufficient to perturb OMM lipid organization, but this operates through transient cavitation rather than direct mechanical coupling.",
+      "falsifiable": true,
+      "falsifiable_reason": "It implies suppression of effects in degassed media (cavitation-free) would disprove cavitation mediation.",
+      "feasible": true,
+      "feasible_reason": "Degassing media and applying low-frequency US with lipid imaging are routine in ultrasound biophysics labs.",
+      "novel": true,
+      "novel_reason": "It differentiates cavitation-dependent mechanisms, enabling controls for direct mechanical vs. indirect effects on OMM.",
+      "passed": true
+    },
+    {
+      "statement": "VDAC1 oligomeric state is lipid-environment-dependent, with cholesterol stabilizing monomeric/honeycomb states and cholesterol depletion promoting oligomerization-competent dispersed states.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts no oligomerization change with M\u03b2CD cholesterol depletion, directly testing lipid dependence.",
+      "feasible": true,
+      "feasible_reason": "M\u03b2CD treatment followed by VDAC1 crosslinking or FRET assays uses standard biochemical and imaging tools.",
+      "novel": true,
+      "novel_reason": "It links specific lipids to VDAC1 states, enabling synthesis with US perturbation for mechanistic validation.",
+      "passed": true
+    },
+    {
+      "statement": "Cancer cell OMMs, with elevated cholesterol, would paradoxically be MORE resistant to mechanically-induced VDAC1 oligomerization at moderate perturbation, but the compressed phase diagram means a sharper transition once threshold is exceeded.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts monotonic rather than threshold dose-response curves in cancer vs. normal mitochondria.",
+      "feasible": true,
+      "feasible_reason": "Dose-response US exposure with oligomerization assays in isolated mitochondria is achievable with cell culture standards.",
+      "novel": true,
+      "novel_reason": "It generates a testable prediction of paradoxical resistance and sharp transitions unique to cancer lipidomes.",
+      "passed": true
+    },
+    {
+      "statement": "1:** Ultrasound at 1\u20133 MHz (0.1\u20133 W/cm\u00b2) can propagate mechanical energy to the OMM with sufficient intensity to disrupt cholesterol/cardiolipin domains, but 20\u2013100 kHz therapeutic US is unlikely to do so at these intensities.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts no lipid change at kHz but shifts at MHz, testable via Laurdan GP under specific exposures.",
+      "feasible": true,
+      "feasible_reason": "In vitro Laurdan imaging during frequency-specific US is standard in membrane biophysics.",
+      "novel": true,
+      "novel_reason": "It inverts Claim 1/9, creating a convergent debate on frequency efficacy for OMM targeting.",
+      "passed": true
+    },
+    {
+      "statement": "2:** Reorganization of cholesterol/cardiolipin domains in the OMM can shift VDAC1 from honeycomb (protected) to dispersed (oligomerization-competent) states, but this depends on lipid composition thresholds.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts no VDAC1 state transition in liposomes despite domain changes, isolating lipid effects.",
+      "feasible": true,
+      "feasible_reason": "Single-molecule tracking in synthetic liposomes with varied lipids uses established microscopy.",
+      "novel": true,
+      "novel_reason": "TYPE 1 convergence strengthens the core hypothesis linking domains to states, enabling liposome-based US tests.",
+      "passed": true
+    },
+    {
+      "statement": "3:** Cancer cells (elevated OMM cholesterol, reduced cardiolipin) have a lower threshold for US-induced VDAC1 state transitions compared to healthy cells, but the effect size is modest (<2-fold change in US intensity).",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts no threshold difference between cancer and healthy cells despite lipid changes.",
+      "feasible": true,
+      "feasible_reason": "Comparative US studies in MCF-7 vs. normal cells with oligomerization assays are standard.",
+      "novel": true,
+      "novel_reason": "It opposes Claims 11/15/18, enabling direct test of cancer-specific thresholds central to the program.",
+      "passed": true
+    },
+    {
+      "statement": "4:** The mechanical energy required to reorganize OMM lipids exceeds the thermal noise floor but is within the range of clinically relevant US intensities (1\u20133 MHz, 0.5\u20133 W/cm\u00b2).",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts no disruption in MD sims or AFM at specified US parameters.",
+      "feasible": true,
+      "feasible_reason": "MD simulations and AFM on lipid bilayers under US-mimicked stress are feasible with current tools.",
+      "novel": true,
+      "novel_reason": "It quantifies energy thresholds (~10\u207b\u00b2\u2070 J), enabling precise US intensity predictions.",
+      "passed": true
+    },
+    {
+      "statement": "Ultrasound mechanical energy at 0.1-3 W/cm\u00b2 propagates to OMM with ~0.1-2 MPa pressures, exceeding lipid reorganization thresholds (~0.1 MPa shear).",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts intracellular pressure <0.1 MPa at mitochondria via optical tweezers mapping.",
+      "feasible": true,
+      "feasible_reason": "Optical tweezers for pressure sensing in cells is an established technique.",
+      "novel": true,
+      "novel_reason": "It provides quantitative pressure estimates (0.1-2 MPa), falsifiable benchmark for mechanical propagation.",
+      "passed": true
+    },
+    {
+      "statement": "Lipid domain reorganization by mechanical stress destabilizes VDAC1 honeycomb lattice, promoting dispersed/oligomeric state.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts no lattice disruption under US despite lipid mixing, via FRET/EM/FRAP.",
+      "feasible": true,
+      "feasible_reason": "FRET, EM, and FRAP on VDAC1 under US are standard imaging/biophysical methods.",
+      "novel": true,
+      "novel_reason": "It directly tests the honeycomb-to-dispersed transition under mechanical stress.",
+      "passed": true
+    },
+    {
+      "statement": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells.",
+      "falsifiable": true,
+      "falsifiable_reason": "It predicts identical dose-response curves in cancer vs. healthy mito liposomes.",
+      "feasible": true,
+      "feasible_reason": "Liposome models with defined lipids and US dose-responses use routine protocols.",
+      "novel": true,
+      "novel_reason": "It quantifies cancer threshold shift (~0.5x I), testable prediction differentiating cell types.",
+      "passed": true
+    },
+    {
+      "statement": "No direct evidence links clinical US to VDAC1 oligomerization via lipids.",
+      "falsifiable": true,
+      "falsifiable_reason": "A single peer-reviewed study showing US-VDAC1 oligomerization in cells would disprove it.",
+      "feasible": true,
+      "feasible_reason": "The implied experiment (US exposure + VDAC1 assays in intact cells) is lab-standard.",
+      "novel": true,
+      "novel_reason": "It highlights the evidence gap, framing the entire program as novel and worth pursuing.",
+      "passed": true
+    },
+    {
+      "statement": "Ultrasound at clinically relevant frequencies and intensities can deliver sufficient mechanical energy to the OMM to transiently disrupt lipid microdomains.",
+      "falsifiable": true,
+      "falsifiable_reason": "Super-resolution imaging showing no cholesterol/CL reorganization during sonication disproves it.",
+      "feasible": true,
+      "feasible_reason": "Fluorescent labeling and super-res imaging of isolated mitochondria under US is feasible.",
+      "novel": true,
+      "novel_reason": "TYPE 1 convergence supports mechanical energy delivery, core to question (1).",
+      "passed": true
+    },
+    {
+      "statement": "The honeycomb lattice of VDAC1 is stabilized by cardiolipin-rich domains, and its disruption by cholesterol enrichment or mechanical perturbation promotes a dispersed, oligomerization-competent monomeric state.",
+      "falsifiable": true,
+      "falsifiable_reason": "Cryo-EM showing honeycomb persistence in high-chol/low-CL liposomes or no dispersion under stress disproves it.",
+      "feasible": true,
+      "feasible_reason": "Cryo-EM and liposome reconstitution with mechanical perturbation are established.",
+      "novel": true,
+      "novel_reason": "It specifies CL stabilization vs. chol disruption, enabling lipid-specific US tests.",
+      "passed": true
+    },
+    {
+      "statement": "The altered lipidome of cancer cell OMMs lowers the acoustic energy threshold required to induce VDAC1 dispersal and subsequent oligomerization.",
+      "falsifiable": true,
+      "falsifiable_reason": "Dose-response showing identical US intensity for apoptosis in cancer vs. healthy cells disproves it.",
+      "feasible": true,
+      "feasible_reason": "US-induced apoptosis assays comparing cell types are standard.",
+      "novel": true,
+      "novel_reason": "It posits cancer lipidome pre-poises VDAC1, predicting lower thresholds testable vs. Claim 4/7.",
+      "passed": true
+    },
+    {
+      "statement": "Ultrasound at therapeutic kHz frequencies (20-100 kHz) is more likely than diagnostic MHz frequencies to propagate mechanical energy capable of reorganizing OMM lipid domains.",
+      "falsifiable": true,
+      "falsifiable_reason": "Direct measurement showing less OMM displacement at kHz than MHz disproves it.",
+      "feasible": true,
+      "feasible_reason": "Lipid displacement imaging under equivalent intensities is routine.",
+      "novel": true,
+      "novel_reason": "TYPE 1 status creates frequency debate with Claims 1/5, enabling comparative protocols.",
+      "passed": true
+    },
+    {
+      "statement": "Reorganization of OMM cholesterol-rich lipid domains can shift VDAC1 from a honeycomb to a dispersed state.",
+      "falsifiable": true,
+      "falsifiable_reason": "VDAC1 dispersion under US persisting in chol-depleted OMMs disproves domain mediation.",
+      "feasible": true,
+      "feasible_reason": "Cholesterol depletion + US + dispersion assays (e.g., tracking) are standard.",
+      "novel": true,
+      "novel_reason": "TYPE 1 convergence directly tests question (2), linking domains to states.",
+      "passed": true
+    },
+    {
+      "statement": "Cancer cell OMMs (high cholesterol) have a lower threshold for ultrasound-induced VDAC1 dispersion than healthy cell OMMs.",
+      "falsifiable": true,
+      "falsifiable_reason": "Data showing healthy cells need lower US intensity for equivalent dispersion disproves it.",
+      "feasible": true,
+      "feasible_reason": "Comparative intensity-response in cells with dispersion assays is feasible.",
+      "novel": true,
+      "novel_reason": "It predicts lower cancer thresholds via rigidity, synthesizing with Claims 4/7/11/15 for debate resolution.",
+      "passed": true
+    }
+  ],
+  "n_passed": 18,
+  "n_failed": 0,
+  "total_calls": 1,
+  "latency_s": 10.62,
+  "recommendation": "Lab Gate PASSED. 18/18 claims cleared all three criteria. Proceeding to S4 hypothesis operationalization."
+}

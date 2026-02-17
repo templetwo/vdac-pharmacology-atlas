@@ -1,0 +1,203 @@
+{
+  "parsed": [
+    {
+      "model": "claude",
+      "raw": "\n\n\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n\n**Sub-questions:**\n1. Does VDAC1 gating respond dynamically to physiological Ca\u00b2\u207a oscillation frequencies (0.1\u201310 Hz), or is its gating kinetics too slow to track these oscillations?\n2. Is VDAC1 oligomerization a frequency-decoded process \u2014 does sustained/high-frequency Ca\u00b2\u207a loading cross a threshold that triggers oligomeric pore formation (apoptosis), while low-frequency/pulsatile signals maintain monomeric VDAC1 (survival)?\n3. How do VDAC1 (OMM) and MCU (IMM) form a coordinated two-gate filter with distinct Ca\u00b2\u207a affinity and kinetics?\n4. Do cancer cells exploit altered Ca\u00b2\u207a oscillation patterns to jam VDAC1 in monomeric/survival mode, complementing HK-II/Bcl-xL/cholesterol mechanisms?\n\n**Key variables:** Ca\u00b2\u207a oscillation frequency, VDAC1 gating kinetics (ms-scale), MCU Kd (~10\u201320 \u03bcM), VDAC1 Ca\u00b2\u207a permeability, matrix Ca\u00b2\u207a accumulation rate, oligomerization threshold [Ca\u00b2\u207a]m.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\nCLAIM: VDAC1 gating kinetics (~1\u201310 ms transitions) are fast enough to partially track Ca\u00b2\u207a oscillations at 0.1\u20131 Hz, but at >5 Hz, VDAC1 effectively time-averages the signal, remaining in a partially open state rather than cycling fully open/closed.\nTYPE: 2\nCONFIDENCE: 0.45\nMECHANISM: VDAC1 voltage-dependent gating occurs on ms timescales in bilayers, but cytoplasmic Ca\u00b2\u207a oscillations modulate local [Ca\u00b2\u207a] over 100ms\u201310s periods, creating frequency-dependent filtering.\nFALSIFIABLE BY: Single-channel recordings of VDAC1 in reconstituted membranes exposed to defined Ca\u00b2\u207a waveforms at 0.1\u201310 Hz showing no frequency-dependent gating differences.\n\nCLAIM: VDAC1 oligomerization is driven by cumulative matrix Ca\u00b2\u207a overload rather than directly by oscillation frequency \u2014 but frequency encodes the *rate* of matrix accumulation, so a frequency threshold (~1\u20132 Hz sustained) effectively exists above which oligomerization probability sharply increases.\nTYPE: 3\nCONFIDENCE: 0.35\nMECHANISM: High-frequency Ca\u00b2\u207a pulses exceed mitochondrial Ca\u00b2\u207a efflux capacity (NCLX), causing progressive matrix Ca\u00b2\u207a accumulation \u2192 mPTP sensitization \u2192 VDAC1 oligomerization via conformational changes/cytochrome c release.\nFALSIFIABLE BY: Demonstrating that total Ca\u00b2\u207a load, not frequency, determines oligomerization when integral is matched across different frequency protocols.\n\nCLAIM: VDAC1-MCU form a two-gate filter where VDAC1 (low selectivity, high conductance, Kd ~0.5 mM) gates bulk Ca\u00b2\u207a entry into the IMS, while MCU (high selectivity, Kd ~10\u201320 \u03bcM, cooperative Hill ~3\u20134) acts as a nonlinear threshold detector \u2014 together creating bandpass filtering of Ca\u00b2\u207a signals.\nTYPE: 1\nCONFIDENCE: 0.70\nMECHANISM: IMS Ca\u00b2\u207a microdomains at VDAC1-MCU contact points reach ~10\u201320 \u03bcM during oscillations, exceeding MCU's activation threshold only during peak phases, creating pulsatile matrix uptake.\nFALSIFIABLE BY: Showing IMS [Ca\u00b2\u207a] at VDAC1-MCU junctions never exceeds MCU Kd during physiological oscillations.\n\nCLAIM: Cancer cells remodel Ca\u00b2\u207a oscillation machinery (IP3R, SERCA, STIM/Orai) to reduce oscillation amplitude and increase frequency irregularity, maintaining VDAC1 in monomeric state \u2014 this represents a distinct gate-jamming mechanism complementary to HK-II binding.\nTYPE: 3\nCONFIDENCE: 0.30\nMECHANISM: Reduced ER-mitochondria Ca\u00b2\u207a transfer (e.g., via Akt-phosphorylated IP3R3, truncated MAM contacts) lowers peak IMS [Ca\u00b2\u207a], preventing VDAC1 oligomerization threshold.\nFALSIFIABLE BY: Comprehensive Ca\u00b2\u207a imaging in matched cancer/normal cells showing no systematic difference in mitochondrial Ca\u00b2\u207a oscillation parameters.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n\n- VDAC1 gating kinetics *in situ* in intact OMM under physiological Ca\u00b2\u207a",
+      "claims": [
+        {
+          "statement": "VDAC1 gating kinetics (~1\u201310 ms transitions) are fast enough to partially track Ca\u00b2\u207a oscillations at 0.1\u20131 Hz, but at >5 Hz, VDAC1 effectively time-averages the signal, remaining in a partially open state rather than cycling fully open/closed.",
+          "type": 2,
+          "confidence": 0.45,
+          "mechanism": "VDAC1 voltage-dependent gating occurs on ms timescales in bilayers, but cytoplasmic Ca\u00b2\u207a oscillations modulate local [Ca\u00b2\u207a] over 100ms\u201310s periods, creating frequency-dependent filtering.",
+          "falsifiable_by": "Single-channel recordings of VDAC1 in reconstituted membranes exposed to defined Ca\u00b2\u207a waveforms at 0.1\u201310 Hz showing no frequency-dependent gating differences."
+        },
+        {
+          "statement": "VDAC1 oligomerization is driven by cumulative matrix Ca\u00b2\u207a overload rather than directly by oscillation frequency \u2014 but frequency encodes the *rate* of matrix accumulation, so a frequency threshold (~1\u20132 Hz sustained) effectively exists above which oligomerization probability sharply increases.",
+          "type": 3,
+          "confidence": 0.35,
+          "mechanism": "High-frequency Ca\u00b2\u207a pulses exceed mitochondrial Ca\u00b2\u207a efflux capacity (NCLX), causing progressive matrix Ca\u00b2\u207a accumulation \u2192 mPTP sensitization \u2192 VDAC1 oligomerization via conformational changes/cytochrome c release.",
+          "falsifiable_by": "Demonstrating that total Ca\u00b2\u207a load, not frequency, determines oligomerization when integral is matched across different frequency protocols."
+        },
+        {
+          "statement": "VDAC1-MCU form a two-gate filter where VDAC1 (low selectivity, high conductance, Kd ~0.5 mM) gates bulk Ca\u00b2\u207a entry into the IMS, while MCU (high selectivity, Kd ~10\u201320 \u03bcM, cooperative Hill ~3\u20134) acts as a nonlinear threshold detector \u2014 together creating bandpass filtering of Ca\u00b2\u207a signals.",
+          "type": 1,
+          "confidence": 0.7,
+          "mechanism": "IMS Ca\u00b2\u207a microdomains at VDAC1-MCU contact points reach ~10\u201320 \u03bcM during oscillations, exceeding MCU's activation threshold only during peak phases, creating pulsatile matrix uptake.",
+          "falsifiable_by": "Showing IMS [Ca\u00b2\u207a] at VDAC1-MCU junctions never exceeds MCU Kd during physiological oscillations."
+        },
+        {
+          "statement": "Cancer cells remodel Ca\u00b2\u207a oscillation machinery (IP3R, SERCA, STIM/Orai) to reduce oscillation amplitude and increase frequency irregularity, maintaining VDAC1 in monomeric state \u2014 this represents a distinct gate-jamming mechanism complementary to HK-II binding.",
+          "type": 3,
+          "confidence": 0.3,
+          "mechanism": "complementary to HK-II binding.",
+          "falsifiable_by": "Comprehensive Ca\u00b2\u207a imaging in matched cancer/normal cells showing no systematic difference in mitochondrial Ca\u00b2\u207a oscillation parameters. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "mistral",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n**Sub-questions:**\n1. Do physiological Ca\u00b2\u207a oscillations (0.1\u201310 Hz) rhythmically gate VDAC1, producing pulsatile metabolite flux?\n2. Does Ca\u00b2\u207a transient frequency determine VDAC1 monomer-oligomer equilibrium, with a threshold favoring apoptosis?\n3. How do VDAC1 (OMM) and MCU (IMM) coordinate to filter Ca\u00b2\u207a signals, and does this create a frequency-dependent \"two-gate\" system?\n4. Do cancer cells exploit altered Ca\u00b2\u207a oscillation frequencies to lock VDAC1 in a monomeric (pro-survival) state, and can this be therapeutically targeted?\n\n**Key variables:**\n- Ca\u00b2\u207a oscillation frequency (Hz)\n- VDAC1 gating state (open/closed, monomer/oligomer)\n- MCU-mediated Ca\u00b2\u207a uptake rate\n- Metabolite flux (ATP/ADP, ROS, NADH)\n- Cell fate (survival/apoptosis)\n- Cancer-specific alterations (HK-II, Bcl-xL, cholesterol)\n\n---\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n**CLAIM:** Physiological Ca\u00b2\u207a oscillations (0.1\u201310 Hz) rhythmically gate VDAC1, producing pulsatile metabolite flux.\n**TYPE:** 1 (supported by indirect evidence)\n**CONFIDENCE:** 0.7\n**MECHANISM:** VDAC1\u2019s voltage-dependent gating is modulated by Ca\u00b2\u207a binding (EF-hand-like motifs), causing conformational shifts that transiently open/close the pore in sync with cytosolic Ca\u00b2\u207a spikes.\n**FALSIFIABLE BY:** Patch-clamp recordings of VDAC1 in lipid bilayers showing no gating response to 0.1\u201310 Hz Ca\u00b2\u207a pulses, or metabolomics data showing no rhythmic flux of ATP/ADP/ROS.\n\n**CLAIM:** Ca\u00b2\u207a transient frequency determines VDAC1 oligomerization state, with a threshold (~1\u20135 Hz) favoring apoptosis via oligomerization.\n**TYPE:** 2 (speculative, mechanism plausible)\n**CONFIDENCE:** 0.5\n**MECHANISM:** High-frequency Ca\u00b2\u207a spikes may saturate VDAC1\u2019s Ca\u00b2\u207a-binding sites, stabilizing an oligomerization-competent conformation (e.g., via exposure of hydrophobic interfaces), while low-frequency spikes favor monomeric states.\n**FALSIFIABLE BY:** FRET or cross-linking assays showing no frequency-dependent oligomerization in isolated mitochondria, or in vivo data where Ca\u00b2\u207a clamping at 1\u20135 Hz fails to induce apoptosis.\n\n**CLAIM:** VDAC1 and MCU act as a \"two-gate\" Ca\u00b2\u207a filter, where VDAC1\u2019s OMM gating sets the amplitude and MCU\u2019s IMM uptake shapes the frequency response.\n**TYPE:** 1 (mechanistically coherent)\n**CONFIDENCE:** 0.8\n**MECHANISM:** VDAC1\u2019s voltage/ligand gating controls Ca\u00b2\u207a entry into the intermembrane space, while MCU\u2019s cooperative Ca\u00b2\u207a binding (Hill coefficient >1) integrates these signals, filtering low-amplitude/high-frequency noise.\n**FALSIFIABLE BY:** Simultaneous Ca\u00b2\u207a imaging in cytosol/IMM showing no frequency-dependent attenuation of signals, or MCU knockout failing to disrupt VDAC1-mediated Ca\u00b2\u207a oscillations.\n\n**CLAIM:** Cancer cells exhibit altered Ca\u00b2\u207a oscillation frequencies (e.g., sustained low-frequency spikes) to maintain VDAC1 in a monomeric, pro-survival state, independent of HK-II/Bcl-xL/cholesterol.\n**TYPE:** 2 (emerging evidence, not definitive)\n**CONFIDENCE:** 0.6\n**MECHANISM:** Oncogenic signaling (e.g., PI3K/AKT) may dampen IP\u2083R-mediated Ca\u00b2\u207a release, reducing oscillation frequency and locking VDAC1 in a monomeric state that supports Warburg metabolism.\n**FALSIFIABLE BY:** Single-cell Ca\u00b2\u207a imaging in cancer vs. normal cells showing no frequency differences, or VDAC1 oligomerization assays in cancer cells showing no correlation with oscillation frequency.\n\n**CLAIM:** Pacing mitochondrial Ca\u00b2\u207a uptake (e.g., via optogenetics or pharmacological modulators) can shift VDAC1 toward oligomerization and apoptosis in cancer, with a therapeutic index >10.\n**TYPE:** 3 (high-risk, high-reward)\n**CONFIDENCE:** 0.4\n**MECHANISM:** Forced high-frequency Ca\u00b2\u207a transients (e.g., 5 Hz) may override cancer\u2019s endogenous low-frequency signals, inducing VDAC1 oligomerization and cytochrome c release.\n**FALSIFIABLE BY:** In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity (e.g., cardiac arrhythmias) at <10x effective dose.\n\n---\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n1. **Direct evidence of VDAC1 gating by Ca\u00b2\u207a oscillations:** No single-channel recordings under physiological Ca\u00b2\u207a pulse trains (0.1\u201310 Hz) exist.\n2. **Frequency threshold for oligomerization:** No quantitative data on how Ca\u00b2\u207a spike frequency maps to VDAC1 monomer/oligomer ratios.\n3. **Cancer-specific oscillation signatures:** Limited comparative Ca\u00b2\u207a imaging datasets (cancer vs. normal) across multiple cell lines.\n4",
+      "claims": [
+        {
+          "statement": "Physiological Ca\u00b2\u207a oscillations (0.1\u201310 Hz) rhythmically gate VDAC1, producing pulsatile metabolite flux.",
+          "type": 1,
+          "confidence": 0.7,
+          "mechanism": "VDAC1\u2019s voltage-dependent gating is modulated by Ca\u00b2\u207a binding (EF-hand-like motifs), causing conformational shifts that transiently open/close the pore in sync with cytosolic Ca\u00b2\u207a spikes.",
+          "falsifiable_by": "Patch-clamp recordings of VDAC1 in lipid bilayers showing no gating response to 0.1\u201310 Hz Ca\u00b2\u207a pulses, or metabolomics data showing no rhythmic flux of ATP/ADP/ROS."
+        },
+        {
+          "statement": "Ca\u00b2\u207a transient frequency determines VDAC1 oligomerization state, with a threshold (~1\u20135 Hz) favoring apoptosis via oligomerization.",
+          "type": 2,
+          "confidence": 0.5,
+          "mechanism": "plausible)",
+          "falsifiable_by": "FRET or cross-linking assays showing no frequency-dependent oligomerization in isolated mitochondria, or in vivo data where Ca\u00b2\u207a clamping at 1\u20135 Hz fails to induce apoptosis."
+        },
+        {
+          "statement": "VDAC1 and MCU act as a \"two-gate\" Ca\u00b2\u207a filter, where VDAC1\u2019s OMM gating sets the amplitude and MCU\u2019s IMM uptake shapes the frequency response.",
+          "type": 1,
+          "confidence": 0.8,
+          "mechanism": "VDAC1\u2019s voltage/ligand gating controls Ca\u00b2\u207a entry into the intermembrane space, while MCU\u2019s cooperative Ca\u00b2\u207a binding (Hill coefficient >1) integrates these signals, filtering low-amplitude/high-frequency noise.",
+          "falsifiable_by": "Simultaneous Ca\u00b2\u207a imaging in cytosol/IMM showing no frequency-dependent attenuation of signals, or MCU knockout failing to disrupt VDAC1-mediated Ca\u00b2\u207a oscillations."
+        },
+        {
+          "statement": "Cancer cells exhibit altered Ca\u00b2\u207a oscillation frequencies (e.g., sustained low-frequency spikes) to maintain VDAC1 in a monomeric, pro-survival state, independent of HK-II/Bcl-xL/cholesterol.",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "Oncogenic signaling (e.g., PI3K/AKT) may dampen IP\u2083R-mediated Ca\u00b2\u207a release, reducing oscillation frequency and locking VDAC1 in a monomeric state that supports Warburg metabolism.",
+          "falsifiable_by": "Single-cell Ca\u00b2\u207a imaging in cancer vs. normal cells showing no frequency differences, or VDAC1 oligomerization assays in cancer cells showing no correlation with oscillation frequency."
+        },
+        {
+          "statement": "Pacing mitochondrial Ca\u00b2\u207a uptake (e.g., via optogenetics or pharmacological modulators) can shift VDAC1 toward oligomerization and apoptosis in cancer, with a therapeutic index >10.",
+          "type": 3,
+          "confidence": 0.4,
+          "mechanism": "Forced high-frequency Ca\u00b2\u207a transients (e.g., 5 Hz) may override cancer\u2019s endogenous low-frequency signals, inducing VDAC1 oligomerization and cytochrome c release.",
+          "falsifiable_by": "In vivo models showing no apoptosis induction at therapeutic doses, or off-target toxicity (e.g., cardiac arrhythmias) at <10x effective dose. --- \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "grok",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\nSub-questions:\n(1) Do physiological Ca\u00b2\u207a oscillations (0.1-10 Hz) rhythmically gate VDAC1, enabling pulsatile metabolite flux?\n(2) Does Ca\u00b2\u207a oscillation frequency dictate VDAC1 monomeric (survival) vs. oligomeric (death) state, via a threshold?\n(3) How do VDAC1 (OMM) and MCU (IMM) form a two-gate Ca\u00b2\u207a filter?\n(4) In cancer, do altered Ca\u00b2\u207a frequencies maintain VDAC1 monomeric state (beyond HK-II/Bcl-xL)? Is frequency pacing therapeutic?\n\nKey variables: Ca\u00b2\u207a freq. (f, 0.1-10 Hz), VDAC1 P_open (gated by [Ca\u00b2\u207a]_IMS, voltage), oligomer state (mono f< thresh \u2192 survival; oligo f> thresh \u2192 death), MCU flux (V_max ~ [Ca\u00b2\u207a]_IMS), metabolite flux (pulsatile \u221d P_open), cell fate.\nRelationships: f \u2192 [Ca\u00b2\u207a]_cyto \u2192 VDAC1 gating \u2192 [Ca\u00b2\u207a]_IMS \u2192 MCU uptake \u2192 matrix [Ca\u00b2\u207a] \u2192 VDAC1 oligo threshold.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: VDAC1 is Ca\u00b2\u207a-permeable and its conductance is modulated by physiological [Ca\u00b2\u207a] (\u03bcM range), but gating kinetics (~ms) allow rhythmic response to 0.1-10 Hz oscillations, creating pulsatile IMS Ca\u00b2\u207a/metabolite flux.\nTYPE: 1\nCONFIDENCE: 0.85\nMECHANISM: Ca\u00b2\u207a binds VDAC1 C-terminus, stabilizing open state at low [Ca\u00b2\u207a] and promoting closure/flux modulation at peaks.\nFALSIFIABLE BY: Patch-clamp on isolated mito showing no P_open oscillation at 0.1-10 Hz sinusoidal [Ca\u00b2\u207a]_ext.\n\nCLAIM: High-frequency Ca\u00b2\u207a oscillations (>1-2 Hz) promote VDAC1 oligomerization (pro-death) vs. low-frequency (<0.5 Hz, survival) via sustained IMS/matrix Ca\u00b2\u207a overload, with ~1 Hz threshold.\nTYPE: 2\nCONFIDENCE: 0.65\nMECHANISM: Freq-dependent MCU rectification amplifies matrix Ca\u00b2\u207a at high f, triggering ROS/PTP that stabilizes VDAC1 oligomers.\nFALSIFIABLE BY: VDAC1 oligomer assays (BN-PAGE) in MCU-KO cells showing no freq-dependent shift.\n\nCLAIM: VDAC1/MCU form a two-gate filter: VDAC1 permits cytosolic Ca\u00b2\u207a bursts to IMS (rate-limited by voltage/Ca\u00b2\u207a gating); MCU rectifies high-freq bursts for matrix uptake (K_d ~1-20 \u03bcM, Hill n>1).\nTYPE: 1\nCONFIDENCE: 0.9\nMECHANISM: Spatial proximity (~10 nm) and MICU1/2 sensing ensure MCU activates only at peak [Ca\u00b2\u207a]_IMS >5 \u03bcM from VDAC1.\nFALSIFIABLE BY: Super-res EM or FRAP showing no VDAC1-MCU co-localization/flux coupling.\n\nCLAIM: Cancer cells exhibit lower Ca\u00b2\u207a oscillation freq. (0.1-0.5 Hz vs. 1-5 Hz normal), stabilizing monomeric VDAC1, additive to HK-II/Bcl-xL jamming.\nTYPE: 2\nCONFIDENCE: 0.6\nMECHANISM: Upregulated PMCA/SERCA pumps dampen freq., preventing Ca\u00b2\u207a overload-induced oligomerization.\nFALSIFIABLE BY: Live-cell imaging in matched normal/cancer lines showing no freq. difference.\n\nCLAIM: Pacing mito Ca\u00b2\u207a uptake freq. (>2 Hz) is viable therapeutic target to oligomerize VDAC1 in cancer (safety index >10 if selective), superior to CBD (Kd=11 \u03bcM, window 1-10 \u03bcM but CYP3A4 IC50=1 \u03bcM).\nTYPE: 3\nCONFIDENCE: 0.4\nMECHANISM: Opto/genetic MCU pacing (e.g., opto-MCU) forces high-freq uptake, bypassing cancer-damped signals.\nFALSIFIABLE BY: Freq.-paced MCF7 cells (dox IC50=0.5 \u03bcM benchmark) showing no apoptosis shift vs. vehicle.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\nPrecise VDAC1 Ca\u00b2\u207a dose-response for oligomerization (no direct Kd/IC50). Freq. threshold validated in vivo (human tissue imaging). Quantitative model of VDAC1-MCU Ca\u00b2\u207a flux coupling (no rate constants). Cancer-specific freq. distributions (primary vs. cell lines). CBD competition with Ca\u00b2\u207a on VDAC1 (binding site overlap?). No head-to-head TI data for freq. pacing vs. dox/CBD.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nHigh-content imaging: CRISPR VDAC1-GFP in MCF7; impose 0.1-10 Hz Ca\u00b2\u207a optogenetics; quantify oligomerization (FRET) vs. apoptosis.",
+      "claims": [
+        {
+          "statement": "VDAC1 is Ca\u00b2\u207a-permeable and its conductance is modulated by physiological [Ca\u00b2\u207a] (\u03bcM range), but gating kinetics (~ms) allow rhythmic response to 0.1-10 Hz oscillations, creating pulsatile IMS Ca\u00b2\u207a/metabolite flux.",
+          "type": 1,
+          "confidence": 0.85,
+          "mechanism": "Ca\u00b2\u207a binds VDAC1 C-terminus, stabilizing open state at low [Ca\u00b2\u207a] and promoting closure/flux modulation at peaks.",
+          "falsifiable_by": "Patch-clamp on isolated mito showing no P_open oscillation at 0.1-10 Hz sinusoidal [Ca\u00b2\u207a]_ext."
+        },
+        {
+          "statement": "High-frequency Ca\u00b2\u207a oscillations (>1-2 Hz) promote VDAC1 oligomerization (pro-death) vs. low-frequency (<0.5 Hz, survival) via sustained IMS/matrix Ca\u00b2\u207a overload, with ~1 Hz threshold.",
+          "type": 2,
+          "confidence": 0.65,
+          "mechanism": "Freq-dependent MCU rectification amplifies matrix Ca\u00b2\u207a at high f, triggering ROS/PTP that stabilizes VDAC1 oligomers.",
+          "falsifiable_by": "VDAC1 oligomer assays (BN-PAGE) in MCU-KO cells showing no freq-dependent shift."
+        },
+        {
+          "statement": "VDAC1/MCU form a two-gate filter: VDAC1 permits cytosolic Ca\u00b2\u207a bursts to IMS (rate-limited by voltage/Ca\u00b2\u207a gating); MCU rectifies high-freq bursts for matrix uptake (K_d ~1-20 \u03bcM, Hill n>1).",
+          "type": 1,
+          "confidence": 0.9,
+          "mechanism": "Spatial proximity (~10 nm) and MICU1/2 sensing ensure MCU activates only at peak [Ca\u00b2\u207a]_IMS >5 \u03bcM from VDAC1.",
+          "falsifiable_by": "Super-res EM or FRAP showing no VDAC1-MCU co-localization/flux coupling."
+        },
+        {
+          "statement": "Cancer cells exhibit lower Ca\u00b2\u207a oscillation freq. (0.1-0.5 Hz vs. 1-5 Hz normal), stabilizing monomeric VDAC1, additive to HK-II/Bcl-xL jamming.",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "Upregulated PMCA/SERCA pumps dampen freq., preventing Ca\u00b2\u207a overload-induced oligomerization.",
+          "falsifiable_by": "Live-cell imaging in matched normal/cancer lines showing no freq. difference."
+        },
+        {
+          "statement": "Pacing mito Ca\u00b2\u207a uptake freq. (>2 Hz) is viable therapeutic target to oligomerize VDAC1 in cancer (safety index >10 if selective), superior to CBD (Kd=11 \u03bcM, window 1-10 \u03bcM but CYP3A4 IC50=1 \u03bcM).",
+          "type": 3,
+          "confidence": 0.4,
+          "mechanism": "Opto/genetic MCU pacing (e.g., opto-MCU) forces high-freq uptake, bypassing cancer-damped signals.",
+          "falsifiable_by": "Freq.-paced MCF7 cells (dox IC50=0.5 \u03bcM benchmark) showing no apoptosis shift vs. vehicle. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "gemini",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1.  What are the kinetics of VDAC1 gating in response to transient, localized calcium influx, and can the channel's open probability track physiological oscillation frequencies (0.1-10 Hz)?\n2.  Is there a frequency-dependent threshold for calcium signals that determines whether VDAC1 conformational changes are transient (pro-survival) or accumulate to trigger stable oligomerization (pro-apoptotic)?\n3.  Do cancer cells suppress high-frequency mitochondrial calcium transients as a dynamic gate-jamming mechanism to prevent VDAC1-mediated apoptosis?\n\nKey variables:\n*   **Independent:** Cytosolic Ca2+ oscillation frequency (Hz) and amplitude (\u00b5M).\n*   **Dependent:** VDAC1 open probability (P\u2092), VDAC1 oligomerization state, mitochondrial metabolite flux, and apoptotic signaling activation.\n*   **Mediating:** Outer mitochondrial membrane potential (\u0394\u03a8\u2092\u2098\u2098), MCU uptake rate, intermembrane space [Ca2+].\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: VDAC1 gating is fast enough to follow physiological calcium oscillations, creating a pulsatile flux of both Ca2+ and metabolites across the outer mitochondrial membrane.\nTYPE: 2\nCONFIDENCE: 0.9\nMECHANISM: The rapid influx of Ca2+ ions through the VDAC1 pore alters the local transmembrane potential, and since VDAC1's voltage-gating operates on a millisecond timescale, it can rhythmically open and close in sync with sub-10 Hz signals.\nFALSIFIABLE BY: Single-channel patch-clamp recordings of VDAC1 in a reconstituted lipid bilayer showing no change in open probability (P\u2092) when exposed to oscillating calcium gradients at 1-10 Hz.\n\nCLAIM: A sustained, high-frequency (>1 Hz) mitochondrial Ca2+ signal is required to trigger VDAC1 oligomerization, while low-frequency (<0.1 Hz) signals permit relaxation to the monomeric state.\nTYPE: 3\nCONFIDENCE: 0.7\nMECHANISM: High-frequency pulses cause cumulative, incomplete conformational relaxation in VDAC1 monomers, progressively exposing interaction domains that lead to irreversible oligomerization and pore formation.\nFALSIFIABLE BY: Super-resolution microscopy (dSTORM/PALM) of mitochondria showing VDAC1 oligomerization is dependent only on the integrated Ca2+ load (total concentration over time), not the signal frequency.\n\nCLAIM: The coordination of low-affinity VDAC1 and high-affinity MCU creates a band-pass filter, allowing mitochondria to respond to large, rapid Ca2+ spikes while ignoring small, slow fluctuations.\nTYPE: 2\nCONFIDENCE: 0.85\nMECHANISM: VDAC1 passes high-amplitude Ca2+ signals into the intermembrane space, creating a localized pool that is then efficiently taken up by the high-affinity MCU, effectively filtering for salient signals.\nFALSIFIABLE BY: Direct measurement of intermembrane space Ca2+ showing its concentration profile is a simple, non-filtered reflection of cytosolic Ca2+ dynamics.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\nThe most critical unknown is the in-situ relaxation time of a VDAC1 monomer after a single calcium-induced conformational shift. We do not know if this relaxation takes milliseconds or seconds in a native membrane environment, which is the key parameter determining the frequency threshold for cumulative effects. Additionally, the precise stoichiometry and stability of VDAC1 oligomers (dimers vs. hexamers) as a function of Ca2+ signal duration and frequency are unknown. We lack data on the specific Ca2+ oscillation frequencies prevalent in various cancer subtypes versus healthy tissue.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nUse optogenetics to pace cytosolic Ca2+ oscillations at varying frequencies (0.01-10 Hz) in live cells, and use super-resolution microscopy to quantify the corresponding VDAC1 oligomerization state in real-time.",
+      "claims": [
+        {
+          "statement": "VDAC1 gating is fast enough to follow physiological calcium oscillations, creating a pulsatile flux of both Ca2+ and metabolites across the outer mitochondrial membrane.",
+          "type": 2,
+          "confidence": 0.9,
+          "mechanism": "The rapid influx of Ca2+ ions through the VDAC1 pore alters the local transmembrane potential, and since VDAC1's voltage-gating operates on a millisecond timescale, it can rhythmically open and close in sync with sub-10 Hz signals.",
+          "falsifiable_by": "Single-channel patch-clamp recordings of VDAC1 in a reconstituted lipid bilayer showing no change in open probability (P\u2092) when exposed to oscillating calcium gradients at 1-10 Hz."
+        },
+        {
+          "statement": "A sustained, high-frequency (>1 Hz) mitochondrial Ca2+ signal is required to trigger VDAC1 oligomerization, while low-frequency (<0.1 Hz) signals permit relaxation to the monomeric state.",
+          "type": 3,
+          "confidence": 0.7,
+          "mechanism": "High-frequency pulses cause cumulative, incomplete conformational relaxation in VDAC1 monomers, progressively exposing interaction domains that lead to irreversible oligomerization and pore formation.",
+          "falsifiable_by": "Super-resolution microscopy (dSTORM/PALM) of mitochondria showing VDAC1 oligomerization is dependent only on the integrated Ca2+ load (total concentration over time), not the signal frequency."
+        },
+        {
+          "statement": "The coordination of low-affinity VDAC1 and high-affinity MCU creates a band-pass filter, allowing mitochondria to respond to large, rapid Ca2+ spikes while ignoring small, slow fluctuations.",
+          "type": 2,
+          "confidence": 0.85,
+          "mechanism": "VDAC1 passes high-amplitude Ca2+ signals into the intermembrane space, creating a localized pool that is then efficiently taken up by the high-affinity MCU, effectively filtering for salient signals.",
+          "falsifiable_by": "Direct measurement of intermembrane space Ca2+ showing its concentration profile is a simple, non-filtered reflection of cytosolic Ca2+ dynamics. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "deepseek",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1. **Mechanistic Coupling:** How do cytosolic Ca\u00b2\u207a oscillations (0.1\u201310 Hz) directly influence VDAC1 gating kinetics and metabolite flux? Key variables: Ca\u00b2\u207a concentration, oscillation frequency, VDAC1 open probability, ATP/ADP flux.\n2. **Fate Decision:** Does Ca\u00b2\u207a oscillation frequency determine VDAC1 oligomerization state (monomer vs. oligomer) and thereby cell fate? Key variables: frequency threshold, oligomerization kinetics, apoptosis induction.\n3. **System Coordination:** How do MCU (IMM) and VDAC1 (OMM) kinetics interact to create a frequency-filtered Ca\u00b2\u207a signal into the matrix? Key variables: MCU activation rate, mitochondrial Ca\u00b2\u207a buffering, inter-membrane coupling.\n4. **Pathological Dysregulation:** Do cancer cells exhibit specific Ca\u00b2\u207a oscillation signatures that favor monomeric VDAC1, contributing to apoptosis resistance alongside known binding partners?\n5. **Therapeutic Translation:** Can external pacing of Ca\u00b2\u207a oscillations be used to force VDAC1 oligomerization and restore apoptosis in cancer cells?\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: Physiological Ca\u00b2\u207a oscillations (0.1\u201310 Hz) can rhythmically modulate VDAC1 gating, creating pulsatile metabolite flux.\nTYPE: 1\nCONFIDENCE: 0.7\nMECHANISM: Cytosolic Ca\u00b2\u207a binds to VDAC1, altering its voltage-dependent gating kinetics on a timescale matching oscillation periods.\nFALSIFIABLE BY: Direct patch-clamp of VDAC1 in intact mitochondria showing no change in open probability when challenged with physiological-frequency Ca\u00b2\u207a pulses.\n\nCLAIM: A high-frequency threshold of mitochondrial Ca\u00b2\u207a uptake promotes VDAC1 oligomerization and apoptosis.\nTYPE: 2\nCONFIDENCE: 0.6\nMECHANISM: Sustained high-frequency Ca\u00b2\u207a pulses cause localized OMM lipid peroxidation or conformational strain, driving VDAC1 oligomerization and cytochrome c release.\nFALSIFIABLE BY: Demonstrating that forced high-frequency Ca\u00b2\u207a oscillations do not increase VDAC1 oligomers or apoptosis in cells lacking MCU.\n\nCLAIM: Cancer cells can evade apoptosis by maintaining Ca\u00b2\u207a oscillation frequencies below the VDAC1 oligomerization threshold.\nTYPE: 2\nCONFIDENCE: 0.65\nMECHANISM: Altered ER-mitochondria coupling or upregulated Ca\u00b2\u207a buffers limit mitochondrial Ca\u00b2\u207a transient frequency, keeping VDAC1 monomeric and non-apoptotic.\nFALSIFIABLE BY: Showing that cancer cells with known apoptosis resistance have higher, not lower, mitochondrial Ca\u00b2\u207a oscillation frequencies.\n\nCLAIM: Therapeutically pacing mitochondrial Ca\u00b2\u207a uptake (e.g., via optogenetic MCU) can shift VDAC1 to an oligomeric, pro-apoptotic state.\nTYPE: 3\nCONFIDENCE: 0.5\nMECHANISM: Forced high-frequency Ca\u00b2\u207a entry via MCU creates a local OMM microenvironment that favors VDAC1-VDAC1 interactions.\nFALSIFIABLE BY: Pacing fails to induce VDAC1 oligomers or apoptosis even when combined with metabolic stress.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1. The direct binding kinetics of Ca\u00b2\u207a to VDAC1 at physiological oscillation frequencies are unknown. Missing: stopped-flow or FRET data on Ca\u00b2\u207a-VDAC1 binding/unbinding rates.\n2. The exact lipid/protein microenvironment of VDAC1 in the OMM during high Ca\u00b2\u207a flux is unclear. Missing: in situ structural data (e.g., cryo-ET) of VDAC1 arrays under Ca\u00b2\u207a pacing.\n3. The quantitative relationship between mitochondrial matrix Ca\u00b2\u207a transient amplitude/frequency and VDAC1 oligomerization yield is missing. Requires single-cell, simultaneous Ca\u00b2\u207a imaging and oligomer detection.\n4. Whether cancer cell lines show systematic differences in mitochondrial Ca\u00b2\u207a oscillation frequencies compared to non-transformed cells is not comprehensively mapped.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nDevelop an optogenetic system to pace MCU-mediated Ca\u00b2\u207a uptake at defined frequencies in live cells and correlate with real-time VDAC1 oligomerization (FRET biosensor) and cell fate.",
+      "claims": [
+        {
+          "statement": "Physiological Ca\u00b2\u207a oscillations (0.1\u201310 Hz) can rhythmically modulate VDAC1 gating, creating pulsatile metabolite flux.",
+          "type": 1,
+          "confidence": 0.7,
+          "mechanism": "Cytosolic Ca\u00b2\u207a binds to VDAC1, altering its voltage-dependent gating kinetics on a timescale matching oscillation periods.",
+          "falsifiable_by": "Direct patch-clamp of VDAC1 in intact mitochondria showing no change in open probability when challenged with physiological-frequency Ca\u00b2\u207a pulses."
+        },
+        {
+          "statement": "A high-frequency threshold of mitochondrial Ca\u00b2\u207a uptake promotes VDAC1 oligomerization and apoptosis.",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "Sustained high-frequency Ca\u00b2\u207a pulses cause localized OMM lipid peroxidation or conformational strain, driving VDAC1 oligomerization and cytochrome c release.",
+          "falsifiable_by": "Demonstrating that forced high-frequency Ca\u00b2\u207a oscillations do not increase VDAC1 oligomers or apoptosis in cells lacking MCU."
+        },
+        {
+          "statement": "Cancer cells can evade apoptosis by maintaining Ca\u00b2\u207a oscillation frequencies below the VDAC1 oligomerization threshold.",
+          "type": 2,
+          "confidence": 0.65,
+          "mechanism": "Altered ER-mitochondria coupling or upregulated Ca\u00b2\u207a buffers limit mitochondrial Ca\u00b2\u207a transient frequency, keeping VDAC1 monomeric and non-apoptotic.",
+          "falsifiable_by": "Showing that cancer cells with known apoptosis resistance have higher, not lower, mitochondrial Ca\u00b2\u207a oscillation frequencies."
+        },
+        {
+          "statement": "Therapeutically pacing mitochondrial Ca\u00b2\u207a uptake (e.g., via optogenetic MCU) can shift VDAC1 to an oligomeric, pro-apoptotic state.",
+          "type": 3,
+          "confidence": 0.5,
+          "mechanism": "Forced high-frequency Ca\u00b2\u207a entry via MCU creates a local OMM microenvironment that favors VDAC1-VDAC1 interactions.",
+          "falsifiable_by": "Pacing fails to induce VDAC1 oligomers or apoptosis even when combined with metabolic stress. \u2500\u2500\u2500"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "round_num": 0,
+    "jaccard": 0.016666666666666666,
+    "cosine": 0.7881645500659943,
+    "jsd": 0.07371934832450587,
+    "kappa": 0.9726950914142627,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.2857142857142857,
+      "2": 0.42857142857142855,
+      "3": 0.2857142857142857
+    },
+    "type_01_ratio": 0.2857142857142857,
+    "n_claims_per_model": [
+      4,
+      5,
+      5,
+      3,
+      4
+    ]
+  },
+  "total_calls": 5
+}

@@ -1,0 +1,35 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260217_035450_pharmacology
+Date: 2026-02-17
+Protocol: evo-1.0
+
+QUESTION:
+  Does ultrasound exposure at clinically relevant intensities (0.1-3 W/cm², 1-3 MHz diagnostic or 20-100 kHz therapeutic) alter VDAC1 oligomeric state through outer mitochondrial membrane lipid reorganization? Specifically: (1) Do diagnostic or therapeutic ultrasound frequencies induce measurable changes in outer mitochondrial membrane cholesterol/cardiolipin ratio? (2) Does mechanical perturbation of the lipid annulus surrounding VDAC1 shift the monomer-dimer-honeycomb equilibrium? (3) Is the honeycomb-to-dispersed lattice transition — the rate-limiting step for apoptosis — mechanosensitive? (4) Do cancer cells with cholesterol-loaded OMMs show differential VDAC1 response to ultrasound vs normal cells? Context: VDAC1 state depends on its lipid environment (cholesterol rigidifies, cardiolipin promotes oligomerization). The cofactor equation Threshold = K/[(1-f_HKII)(1-f_BclxL)] × [Chol]/[CL] predicts that altering the Chol/CL ratio changes the apoptotic threshold. Ultrasound is known to cause membrane reorganization through acoustic cavitation and radiation force. The question is whether this reorganization is sufficient to shift VDAC1 between functional states at clinically relevant intensities.
+
+CONVERGENCE:
+  S2 rounds: ?
+  Early stopped: ?
+  Final Jaccard: ?
+  Final TYPE 0/1: ?
+  S3 gate: FAILED
+
+VERIFICATION:
+  TYPE 2 claims checked: 0
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 0
+
+LAB GATE:
+  Result: FAILED
+  Claims passed: 0/0
+
+BUDGET:
+  Total LLM calls: ?
+  Target range: 92-142
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

@@ -1,0 +1,203 @@
+{
+  "parsed": [
+    {
+      "model": "claude",
+      "raw": "\n\n\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n\n**Sub-questions:**\n1. **Temporal ordering**: Does VDAC1 oligomerization at the OMM causally precede mPTP opening at the IMM, or does matrix Ca\u00b2\u207a overload open mPTP first, with VDAC1 oligomerization amplifying commitment?\n2. **Trans-membrane complex architecture**: Do CypD (matrix face) and VDAC1 (OMM) physically couple through contact sites via ANT/Pi carrier intermediaries to form a single decision-executing complex?\n3. **Threshold irreversibility**: Is there a quantifiable [Ca\u00b2\u207a]_mito threshold for irreversible mPTP-VDAC1 coupling, and does tissue-specific mitochondrial composition (cardiolipin content, CypD expression levels, VDAC isoform ratios) shift this threshold?\n4. **Pathway divergence**: Does ANT-only mPTP opening (without VDAC1 oligomerization) produce sub-conductance/transient openings favoring apoptosis, while VDAC1 oligomerization commits to full conductance necrosis?\n\n**Key variables**: Matrix [Ca\u00b2\u207a], CypD expression density, VDAC1:VDAC2:VDAC3 ratios, cardiolipin oxidation state, \u0394\u03a8m, contact site density, ANT conformation (c-state vs m-state).\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\nCLAIM: VDAC1 oligomerization is primarily an amplifier, not the initial trigger; mPTP opening is initiated by matrix Ca\u00b2\u207a overload acting on CypD-sensitized ANT/ATP synthase components at the IMM.\nTYPE: 2\nCONFIDENCE: 0.65\nMECHANISM: Matrix Ca\u00b2\u207a activates CypD binding to the IMM pore component (likely ATP synthase c-ring or ANT), causing initial permeability transition; subsequent \u0394\u03a8m collapse and cytochrome c release then promote VDAC1 oligomerization at the OMM, which releases pro-apoptotic factors and locks in commitment.\nFALSIFIABLE BY: Demonstrating that VDAC1 oligomerization inhibitors (e.g., VBIT-4) prevent mPTP opening itself (not just downstream amplification) in isolated mitoplasts retaining OMM.\n\nCLAIM: CypD and VDAC1 do not form a stable trans-membrane complex but are functionally coupled through contact sites where ANT bridges IMM-OMM, creating a transient signaling hub rather than a fixed structural pore.\nTYPE: 2\nCONFIDENCE: 0.55\nMECHANISM: ANT physically interacts with VDAC1 at contact sites (demonstrated by co-IP and crosslinking) while CypD binds ANT's matrix-facing domain; this tripartite interaction is dynamic, Ca\u00b2\u207a-dependent, and stabilized by oxidative stress rather than constitutive.\nFALSIFIABLE BY: Cryo-ET structures showing a stable CypD-ANT-VDAC1 complex persisting in non-stressed mitochondria at contact sites.\n\nCLAIM: The irreversible Ca\u00b2\u207a threshold differs across tissues: cardiac ~50-100 \u00b5M matrix Ca\u00b2\u207a, neuronal ~20-50 \u00b5M, hepatic ~100-200 \u00b5M, reflecting CypD expression levels and cardiolipin composition.\nTYPE: 3\nCONFIDENCE: 0.30\nMECHANISM: Neuronal mitochondria have higher CypD:ANT ratios and lower Ca\u00b2\u207a buffering capacity; cardiac mitochondria have intermediate sensitivity modulated by high cardiolipin content; hepatic mitochondria have greatest Ca\u00b2\u207a retention capacity.\nFALSIFIABLE BY: Systematic calcium retention capacity assays across freshly isolated tissue-specific mitochondria with simultaneous VDAC1 oligomerization monitoring (crosslinking + native PAGE).\n\nCLAIM: ANT-mediated mPTP opening without VDAC1 oligomerization produces transient, low-conductance openings associated with apoptotic signaling (ROS flickers, limited cytochrome c release), while VDAC1 oligomerization enables high-conductance, sustained opening committing to necrosis.\nTYPE: 2\nCONFIDENCE: 0.50\nMECHANISM: VDAC1 oligomers form large OMM pores (~4 nm) releasing cytochrome c en masse and collapsing \u0394\u03a8m irreversibly; without oligomerization, OMM remains semi-intact, permitting MOMP-regulated apoptosis via Bax/Bak.\nFALSIFIABLE BY: Showing that VDAC1-knockout cells still undergo necrotic death with identical kinetics upon mPTP opening.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n\n- **Molecular identity of mPTP** remains contested (ATP synthase dimer vs. ANT vs. novel entity); this",
+      "claims": [
+        {
+          "statement": "VDAC1 oligomerization is primarily an amplifier, not the initial trigger; mPTP opening is initiated by matrix Ca\u00b2\u207a overload acting on CypD-sensitized ANT/ATP synthase components at the IMM.",
+          "type": 2,
+          "confidence": 0.65,
+          "mechanism": "Matrix Ca\u00b2\u207a activates CypD binding to the IMM pore component (likely ATP synthase c-ring or ANT), causing initial permeability transition; subsequent \u0394\u03a8m collapse and cytochrome c release then promote VDAC1 oligomerization at the OMM, which releases pro-apoptotic factors and locks in commitment.",
+          "falsifiable_by": "Demonstrating that VDAC1 oligomerization inhibitors (e.g., VBIT-4) prevent mPTP opening itself (not just downstream amplification) in isolated mitoplasts retaining OMM."
+        },
+        {
+          "statement": "CypD and VDAC1 do not form a stable trans-membrane complex but are functionally coupled through contact sites where ANT bridges IMM-OMM, creating a transient signaling hub rather than a fixed structural pore.",
+          "type": 2,
+          "confidence": 0.55,
+          "mechanism": "ANT physically interacts with VDAC1 at contact sites (demonstrated by co-IP and crosslinking) while CypD binds ANT's matrix-facing domain; this tripartite interaction is dynamic, Ca\u00b2\u207a-dependent, and stabilized by oxidative stress rather than constitutive.",
+          "falsifiable_by": "Cryo-ET structures showing a stable CypD-ANT-VDAC1 complex persisting in non-stressed mitochondria at contact sites."
+        },
+        {
+          "statement": "The irreversible Ca\u00b2\u207a threshold differs across tissues: cardiac ~50-100 \u00b5M matrix Ca\u00b2\u207a, neuronal ~20-50 \u00b5M, hepatic ~100-200 \u00b5M, reflecting CypD expression levels and cardiolipin composition.",
+          "type": 3,
+          "confidence": 0.3,
+          "mechanism": "Neuronal mitochondria have higher CypD:ANT ratios and lower Ca\u00b2\u207a buffering capacity; cardiac mitochondria have intermediate sensitivity modulated by high cardiolipin content; hepatic mitochondria have greatest Ca\u00b2\u207a retention capacity.",
+          "falsifiable_by": "Systematic calcium retention capacity assays across freshly isolated tissue-specific mitochondria with simultaneous VDAC1 oligomerization monitoring (crosslinking + native PAGE)."
+        },
+        {
+          "statement": "ANT-mediated mPTP opening without VDAC1 oligomerization produces transient, low-conductance openings associated with apoptotic signaling (ROS flickers, limited cytochrome c release), while VDAC1 oligomerization enables high-conductance, sustained opening committing to necrosis.",
+          "type": 2,
+          "confidence": 0.5,
+          "mechanism": "VDAC1 oligomers form large OMM pores (~4 nm) releasing cytochrome c en masse and collapsing \u0394\u03a8m irreversibly; without oligomerization, OMM remains semi-intact, permitting MOMP-regulated apoptosis via Bax/Bak.",
+          "falsifiable_by": "Showing that VDAC1-knockout cells still undergo necrotic death with identical kinetics upon mPTP opening. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "mistral",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n**Sub-questions:**\n1. **Temporal hierarchy:** Does VDAC1 oligomerization precede or follow mPTP opening, and is it causal or correlative?\n2. **Spatial coordination:** Do VDAC1 (OMM) and cyclophilin D (matrix) form a trans-membrane death complex, or act independently?\n3. **Thresholds & tissue specificity:** Is there a Ca\u00b2\u207a concentration threshold for irreversible VDAC1-mPTP coupling, and does it vary by tissue?\n4. **Redundancy & death modality:** Can mPTP open without VDAC1 (e.g., via ANT), and does this alter the death pathway (apoptosis vs. necrosis)?\n\n**Key variables:**\n- **VDAC1 oligomerization state** (monomer/dimer/oligomer)\n- **mPTP components** (VDAC1, ANT, CypD, ATP synthase)\n- **Ca\u00b2\u207a concentration** (local vs. bulk)\n- **Contact site integrity** (OMM-IMM proximity)\n- **Death modality** (apoptosis: cytochrome c release; necrosis: swelling/rupture)\n\n**Relationships:**\n- VDAC1 oligomerization \u2194 mPTP opening (bidirectional?)\n- CypD binding \u2194 mPTP sensitivity (cooperative?)\n- Ca\u00b2\u207a threshold \u2194 tissue-specific lipid/protein composition\n- Contact site disruption \u2194 death signal amplification\n\n---\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\n**CLAIM:** VDAC1 oligomerization *follows* initial mPTP opening but *amplifies* the pore\u2019s conductance, acting as a positive feedback loop.\n**TYPE:** 2 (mechanistic speculation with partial evidence)\n**CONFIDENCE:** 0.7\n**MECHANISM:** mPTP opening (via ANT/CypD) disrupts IMM potential, triggering VDAC1 oligomerization at OMM to stabilize the pore and enable massive solute flux.\n**FALSIFIABLE BY:** Time-resolved super-resolution imaging showing VDAC1 oligomerization *preceding* IMM depolarization in single mitochondria.\n\n**CLAIM:** VDAC1 and CypD do *not* form a direct trans-membrane complex but are functionally coupled via Ca\u00b2\u207a microdomains at contact sites.\n**TYPE:** 1 (supported by structural/biochemical data)\n**CONFIDENCE:** 0.8\n**MECHANISM:** CypD binds ATP synthase/ANT at IMM, while VDAC1 at OMM regulates Ca\u00b2\u207a influx; their interaction is mediated by Ca\u00b2\u207a-dependent conformational changes, not physical bridging.\n**FALSIFIABLE BY:** Cryo-EM or FRET showing direct VDAC1-CypD interaction in intact mitochondria.\n\n**CLAIM:** The Ca\u00b2\u207a threshold for irreversible mPTP opening is *lower in cardiac mitochondria* (~200 \u00b5M) than hepatic (~500 \u00b5M) or neuronal (~300 \u00b5M) due to differential cardiolipin content and CypD expression.\n**TYPE:** 1 (tissue-specific data exist but thresholds are debated)\n**CONFIDENCE:** 0.6\n**MECHANISM:** Cardiolipin stabilizes mPTP components, while CypD lowers the Ca\u00b2\u207a threshold; cardiac mitochondria have high cardiolipin and CypD, reducing the required Ca\u00b2\u207a.\n**FALSIFIABLE BY:** Comparative Ca\u00b2\u207a retention capacity assays in isolated mitochondria from each tissue, with cardiolipin/CypD manipulation.\n\n**CLAIM:** mPTP can open *without VDAC1 oligomerization* (e.g., via ANT/CypD alone), but this produces *apoptosis* (cytochrome c release) rather than necrosis (swelling/rupture).\n**TYPE:** 2 (plausible but unproven)\n**CONFIDENCE:** 0.5\n**MECHANISM:** VDAC1 oligomerization enables large-scale OMM permeabilization, while ANT-driven mPTP opening is limited to IMM, favoring cytochrome c release over osmotic catastrophe.\n**FALSIFIABLE BY:** CRISPR knockout of VDAC1 in cells, followed by Ca\u00b2\u207a overload to compare death phenotypes (apoptosis vs. necrosis markers).\n\n**CLAIM:** The OMM-IMM contact site is the *physical locus* of the life/death decision, where Ca\u00b2\u207a microdomains and protein-protein interactions converge to determine mPTP irreversibility.\n**TYPE:** 1 (structural biology supports this)\n**CONFIDENCE:** 0.85\n**MECHANISM:** Contact sites concentrate VDAC1, ANT, and CypD, creating a Ca\u00b2\u207a-sensitive \"decision node\" where local [Ca\u00b2\u207a] and protein interactions dictate pore stability.\n**FALSIFIABLE BY:** Disrupting contact sites (e.g., mitofilin knockdown) and measuring mPTP opening kinetics under Ca\u00b2\u207a stress.\n\n---\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n1. **Stoichiometry:** The exact ratio of VDAC1:ANT:CypD in the mPTP complex is unknown; does it vary by tissue or stress?\n2. **Ca\u00b2\u207a microdomains:** Local [Ca\u00b2\u207a] at contact sites vs. bulk mitochondrial [Ca\u00b2\u207a] during mPTP opening is unmeasured.\n3. **Lipid role:** How cardiolip",
+      "claims": [
+        {
+          "statement": "VDAC1 oligomerization *follows* initial mPTP opening but *amplifies* the pore\u2019s conductance, acting as a positive feedback loop.",
+          "type": 2,
+          "confidence": 0.7,
+          "mechanism": "mPTP opening (via ANT/CypD) disrupts IMM potential, triggering VDAC1 oligomerization at OMM to stabilize the pore and enable massive solute flux.",
+          "falsifiable_by": "Time-resolved super-resolution imaging showing VDAC1 oligomerization *preceding* IMM depolarization in single mitochondria."
+        },
+        {
+          "statement": "VDAC1 and CypD do *not* form a direct trans-membrane complex but are functionally coupled via Ca\u00b2\u207a microdomains at contact sites.",
+          "type": 1,
+          "confidence": 0.8,
+          "mechanism": "CypD binds ATP synthase/ANT at IMM, while VDAC1 at OMM regulates Ca\u00b2\u207a influx; their interaction is mediated by Ca\u00b2\u207a-dependent conformational changes, not physical bridging.",
+          "falsifiable_by": "Cryo-EM or FRET showing direct VDAC1-CypD interaction in intact mitochondria."
+        },
+        {
+          "statement": "The Ca\u00b2\u207a threshold for irreversible mPTP opening is *lower in cardiac mitochondria* (~200 \u00b5M) than hepatic (~500 \u00b5M) or neuronal (~300 \u00b5M) due to differential cardiolipin content and CypD expression.",
+          "type": 1,
+          "confidence": 0.6,
+          "mechanism": "Cardiolipin stabilizes mPTP components, while CypD lowers the Ca\u00b2\u207a threshold; cardiac mitochondria have high cardiolipin and CypD, reducing the required Ca\u00b2\u207a.",
+          "falsifiable_by": "Comparative Ca\u00b2\u207a retention capacity assays in isolated mitochondria from each tissue, with cardiolipin/CypD manipulation."
+        },
+        {
+          "statement": "mPTP can open *without VDAC1 oligomerization* (e.g., via ANT/CypD alone), but this produces *apoptosis* (cytochrome c release) rather than necrosis (swelling/rupture).",
+          "type": 2,
+          "confidence": 0.5,
+          "mechanism": "VDAC1 oligomerization enables large-scale OMM permeabilization, while ANT-driven mPTP opening is limited to IMM, favoring cytochrome c release over osmotic catastrophe.",
+          "falsifiable_by": "CRISPR knockout of VDAC1 in cells, followed by Ca\u00b2\u207a overload to compare death phenotypes (apoptosis vs. necrosis markers)."
+        },
+        {
+          "statement": "The OMM-IMM contact site is the *physical locus* of the life/death decision, where Ca\u00b2\u207a microdomains and protein-protein interactions converge to determine mPTP irreversibility.",
+          "type": 1,
+          "confidence": 0.85,
+          "mechanism": "Contact sites concentrate VDAC1, ANT, and CypD, creating a Ca\u00b2\u207a-sensitive \"decision node\" where local [Ca\u00b2\u207a] and protein interactions dictate pore stability.",
+          "falsifiable_by": "Disrupting contact sites (e.g., mitofilin knockdown) and measuring mPTP opening kinetics under Ca\u00b2\u207a stress. --- \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "grok",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\nSub-questions:  \n(1) Temporal/causal relation: Does VDAC1 oligomerization trigger or amplify mPTP opening?  \n(2) Structural coordination: Does CypD (IMM matrix) + VDAC1 (OMM) form a trans-membrane complex at contact sites?  \n(3) Thresholds/modalities: Tissue-specific [Ca\u00b2\u207a] irreversibility; mPTP via ANT sans VDAC \u2192 apoptosis/necrosis?  \n\nKey variables: [Ca\u00b2\u207a]_matrix, CypD_bind_state, VDAC_oligo_state, mPTP_open_prob, contact_site_density.  \nRelationships: [Ca\u00b2\u207a] > threshold \u2192 CypD binds \u2192 mPTP opens \u2192 swelling \u2192 VDAC oligomerizes \u2192 OMM rupture; contact sites couple OMM/IMM signals.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: VDAC1 oligomerization follows mPTP opening, amplifying OMM permeabilization rather than triggering.  \nTYPE: 2  \nCONFIDENCE: 0.85  \nMECHANISM: Matrix Ca\u00b2\u207a overload induces CypD-dependent mPTP in IMM, causing swelling/OMM rupture that secondarily drives VDAC1 hexamerization for cyt c release.  \nFALSIFIABLE BY: Live-cell super-res imaging showing VDAC1 oligomers before mPTP Ca\u00b2\u207a flux in isolated mito.\n\nCLAIM: CypD at IMM matrix face and VDAC1 at OMM do not form a stable trans-membrane death complex; CypD regulates core mPTP (ATP synthase), VDAC amplifies separately.  \nTYPE: 1  \nCONFIDENCE: 0.75  \nMECHANISM: Genetic CypD KO blocks mPTP without affecting VDAC; no direct CypD-VDAC binding evidenced.  \nFALSIFIABLE BY: Co-IP or FRET showing CypD-VDAC1 interaction in PT-induced mito.\n\nCLAIM: Irreversible VDAC1-mPTP coupling occurs above matrix [Ca\u00b2\u207a] ~200-500 \u03bcM; cardiac mito most sensitive (~200 \u03bcM), neuronal ~300 \u03bcM, hepatic ~500 \u03bcM due to ROS/CypD expression variance.  \nTYPE: 3  \nCONFIDENCE: 0.60  \nMECHANISM: Threshold exceeds CypD dissociation Kd (~nM), propagating ROS to VDAC gating at contacts.  \nFALSIFIABLE BY: Dose-response curves in tissue-specific mito showing uniform threshold.\n\nCLAIM: mPTP opens without VDAC1 oligomerization (core via ATP synthase, not ANT); VDAC-indep \u2192 necrosis, VDAC-dep \u2192 apoptosis hybrid.  \nTYPE: 2  \nCONFIDENCE: 0.80  \nMECHANISM: VDAC1/2/3 triple-KO mito still exhibit CsA-sensitive swelling; ANT mutants retain PT.  \nFALSIFIABLE BY: VDAC-KO mito failing CsA-sensitive \u0394\u03a8m collapse.\n\nCLAIM: Contact sites (MICOS/OPA1) localize mPTP-VDAC coupling as decision hub, aligning pores for Ca\u00b2\u207a/ROS flux.  \nTYPE: 3  \nCONFIDENCE: 0.70  \nMECHANISM: ~20% mito surface contacts enable signal amplification without full rupture.  \nFALSIFIABLE BY: Contact-site disruptors (e.g., Mitofusin siRNA) abolishing PT sans swelling.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\nExact mPTP core composition (ATP synthase vs. others unresolved). Tissue-specific VDAC1:oligomer Kd and Ca\u00b2\u207a cooperativity (n_Hill?). Real-time CypD-VDAC distance in PT via cryoET. ANT role vestigial? No quantitative [Ca\u00b2\u207a]_threshold data across human tissues. Priors (CBD-VDAC Kd=11\u03bcM) irrelevant sans CBD context. Would change: CryoEM structures of PT complexes.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nTime-resolved cryoET of cardiac mito contact sites during Ca\u00b2\u207a-induced PT.\n\n\u2500\u2500\u2500",
+      "claims": [
+        {
+          "statement": "VDAC1 oligomerization follows mPTP opening, amplifying OMM permeabilization rather than triggering.",
+          "type": 2,
+          "confidence": 0.85,
+          "mechanism": "Matrix Ca\u00b2\u207a overload induces CypD-dependent mPTP in IMM, causing swelling/OMM rupture that secondarily drives VDAC1 hexamerization for cyt c release.",
+          "falsifiable_by": "Live-cell super-res imaging showing VDAC1 oligomers before mPTP Ca\u00b2\u207a flux in isolated mito."
+        },
+        {
+          "statement": "CypD at IMM matrix face and VDAC1 at OMM do not form a stable trans-membrane death complex; CypD regulates core mPTP (ATP synthase), VDAC amplifies separately.",
+          "type": 1,
+          "confidence": 0.75,
+          "mechanism": "Genetic CypD KO blocks mPTP without affecting VDAC; no direct CypD-VDAC binding evidenced.",
+          "falsifiable_by": "Co-IP or FRET showing CypD-VDAC1 interaction in PT-induced mito."
+        },
+        {
+          "statement": "Irreversible VDAC1-mPTP coupling occurs above matrix [Ca\u00b2\u207a] ~200-500 \u03bcM; cardiac mito most sensitive (~200 \u03bcM), neuronal ~300 \u03bcM, hepatic ~500 \u03bcM due to ROS/CypD expression variance.",
+          "type": 3,
+          "confidence": 0.6,
+          "mechanism": "Threshold exceeds CypD dissociation Kd (~nM), propagating ROS to VDAC gating at contacts.",
+          "falsifiable_by": "Dose-response curves in tissue-specific mito showing uniform threshold."
+        },
+        {
+          "statement": "mPTP opens without VDAC1 oligomerization (core via ATP synthase, not ANT); VDAC-indep \u2192 necrosis, VDAC-dep \u2192 apoptosis hybrid.",
+          "type": 2,
+          "confidence": 0.8,
+          "mechanism": "VDAC1/2/3 triple-KO mito still exhibit CsA-sensitive swelling; ANT mutants retain PT.",
+          "falsifiable_by": "VDAC-KO mito failing CsA-sensitive \u0394\u03a8m collapse."
+        },
+        {
+          "statement": "Contact sites (MICOS/OPA1) localize mPTP-VDAC coupling as decision hub, aligning pores for Ca\u00b2\u207a/ROS flux.",
+          "type": 3,
+          "confidence": 0.7,
+          "mechanism": "~20% mito surface contacts enable signal amplification without full rupture.",
+          "falsifiable_by": "Contact-site disruptors (e.g., Mitofusin siRNA) abolishing PT sans swelling. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "gemini",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\nThe core question concerns the sequence, structure, and threshold of the VDAC1-mPTP interaction that commits a cell to death. I will decompose this into three sub-questions:\n\n1.  **Sequence & Causality:** What is the temporal order of events? Does VDAC1 oligomerization trigger mPTP opening, or does an initial, inner membrane-based pore opening recruit and trigger VDAC1 oligomerization as an amplification step?\n2.  **Structural Assembly:** How do components across two membranes (matrix-facing CypD, inner membrane pore, outer membrane VDAC1) physically constitute a functional death pore, and is the OMM-IMM contact site the essential scaffold for this assembly?\n3.  **Threshold & Outcome:** What biophysical property (e.g., matrix Ca2+ concentration) defines the irreversible commitment, and how does the specific molecular composition of the pore (e.g., with or without VDAC1 oligomers) dictate the mode of cell death (apoptosis vs. necrosis)?\n\nKey variables: VDAC1 oligomerization state, mPTP conductance state, CypD-binding status, matrix [Ca2+], and contact site integrity.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: VDAC1 oligomerization is an amplifier, not the primary trigger, of mPTP opening. It follows and stabilizes the initial high-conductance state.\nTYPE: 2\nCONFIDENCE: 0.75\nMECHANISM: Matrix Ca2+ overload, sensed by an inner membrane component (likely the F-ATP synthase), initiates a conformational change causing a low-conductance flicker; this change promotes interaction with and subsequent oligomerization of VDAC1 at contact sites to create the stable, high-conductance pore.\nFALSIFIABLE BY: Evidence from super-resolution microscopy showing VDAC1 oligomerization consistently preceding the initial release of matrix-loaded calcein.\n\nCLAIM: CypD and VDAC1 do not directly bind but form a functional trans-membrane complex bridged by the core pore component (e.g., F-ATP synthase) at the OMM-IMM contact site.\nTYPE: 2\nCONFIDENCE: 0.80\nMECHANISM: CypD binding to its matrix-facing target (e.g., OSCP subunit of ATP synthase) lowers the Ca2+ concentration required to trigger the pore's conformational change, effectively sensitizing the system which is anchored at the contact site, allowing engagement with VDAC1.\nFALSIFIABLE BY: Demonstration of direct, high-affinity binding between CypD and VDAC1 in a lipid environment, or Cryo-EM data showing the open mPTP structure lacks a physical bridge between the matrix and outer membrane.\n\nCLAIM: The Ca2+ threshold for irreversible mPTP opening is tissue-specific, determined by the local expression levels of regulatory proteins like CypD and Bcl-2 family members.\nTYPE: 1\nCONFIDENCE: 0.95\nMECHANISM: Cardiac mitochondria, with high metabolic flux and different regulatory protein stoichiometries, have a different Ca2+ buffering capacity and CypD expression level than neuronal or hepatic mitochondria, altering their sensitivity to identical Ca2+ insults.\nFALSIFIABLE BY: Finding identical Ca2+ opening thresholds in mitochondria isolated from heart, brain, and liver when controlling for all variables except intrinsic protein expression.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\nThe primary unknown is the high-resolution structure of the fully assembled, open-state mPTP-VDAC1 complex *in situ*. We lack a definitive parts list and stoichiometry. We do not know if VDAC1 oligomers form a channel-within-a-channel or a barrel-stave structure with the inner membrane pore. Furthermore, the precise Ca2+ concentration in the mitochondrial microdomain that triggers irreversible opening in different cell types has not been reliably measured in real-time. The kinetics of VDAC1 oligomerization versus pore opening are also unresolved at the single-organelle level.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nPerform Cryo-electron tomography (Cryo-ET) on isolated, Ca2+-stressed mitochondria, frozen at millisecond intervals post-stimulus, to capture the structural dynamics of VDAC1 and ATP synthase at contact sites during mPTP opening.",
+      "claims": [
+        {
+          "statement": "VDAC1 oligomerization is an amplifier, not the primary trigger, of mPTP opening. It follows and stabilizes the initial high-conductance state.",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "Matrix Ca2+ overload, sensed by an inner membrane component (likely the F-ATP synthase), initiates a conformational change causing a low-conductance flicker; this change promotes interaction with and subsequent oligomerization of VDAC1 at contact sites to create the stable, high-conductance pore.",
+          "falsifiable_by": "Evidence from super-resolution microscopy showing VDAC1 oligomerization consistently preceding the initial release of matrix-loaded calcein."
+        },
+        {
+          "statement": "CypD and VDAC1 do not directly bind but form a functional trans-membrane complex bridged by the core pore component (e.g., F-ATP synthase) at the OMM-IMM contact site.",
+          "type": 2,
+          "confidence": 0.8,
+          "mechanism": "CypD binding to its matrix-facing target (e.g., OSCP subunit of ATP synthase) lowers the Ca2+ concentration required to trigger the pore's conformational change, effectively sensitizing the system which is anchored at the contact site, allowing engagement with VDAC1.",
+          "falsifiable_by": "Demonstration of direct, high-affinity binding between CypD and VDAC1 in a lipid environment, or Cryo-EM data showing the open mPTP structure lacks a physical bridge between the matrix and outer membrane."
+        },
+        {
+          "statement": "The Ca2+ threshold for irreversible mPTP opening is tissue-specific, determined by the local expression levels of regulatory proteins like CypD and Bcl-2 family members.",
+          "type": 1,
+          "confidence": 0.95,
+          "mechanism": "Cardiac mitochondria, with high metabolic flux and different regulatory protein stoichiometries, have a different Ca2+ buffering capacity and CypD expression level than neuronal or hepatic mitochondria, altering their sensitivity to identical Ca2+ insults.",
+          "falsifiable_by": "Finding identical Ca2+ opening thresholds in mitochondria isolated from heart, brain, and liver when controlling for all variables except intrinsic protein expression. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "deepseek",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1. What is the temporal and functional hierarchy between VDAC1 oligomerization and mPTP opening in initiating cell death?\n2. What is the structural and functional nature of the interaction between OMM-bound VDAC1 and IMM/matrix proteins like CypD and ANT at contact sites?\n3. Are there tissue-specific calcium thresholds for irreversible mPTP/VDAC1 coupling, and what determines them?\n4. Does the molecular composition of the pore (ANT-only vs. VDAC1-inclusive) dictate the mode of cell death (apoptotic vs. necrotic)?\n\nKey variables: [Ca\u00b2\u207a] matrix, VDAC1 oligomerization state, CypD binding affinity to IMM, ANT conformation, OMM-IMM contact site integrity.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\n\nCLAIM: VDAC1 oligomerization at OMM-IMM contact sites precedes and facilitates sustained mPTP opening, acting as an amplifier rather than the sole trigger.\nTYPE: 1\nCONFIDENCE: 0.7\nMECHANISM: Oligomeric VDAC1 clusters create a high-conductance pathway for Ca\u00b2\u207a and metabolic solute flux across the OMM, lowering the threshold for IMM depolarization via mPTP.\nFALSIFIABLE BY: Demonstrating that genetic ablation of VDAC1 does not delay or prevent mPTP opening in response to standard calcium overload insults.\n\nCLAIM: CypD binding to the IMM matrix face and VDAC1 at the OMM do not form a stable, direct trans-membrane complex, but cooperate allosterically via contact-site tethering proteins.\nTYPE: 2\nCONFIDENCE: 0.6\nMECHANISM: Proximity at contact sites allows CypD-mediated lowering of the mPTP activation threshold to be synchronized with VDAC1-mediated OMM permeabilization, without a fixed stoichiometric complex.\nFALSIFIABLE BY: Cryo-EM structure of a native mitochondrial membrane supercomplex showing a direct, continuous protein channel from VDAC1 through to ANT, with CypD bound.\n\nCLAIM: The calcium threshold for irreversible mPTP/VDAC1 coupling is tissue-specific, being lowest in cardiac mitochondria due to higher baseline oxidative stress and CypD expression.\nTYPE: 1\nCONFIDENCE: 0.75\nMECHANISM: Tissue-specific metabolic profiles and ROS production modulate the redox state of critical cysteines in VDAC1 and ANT, altering their sensitivity to calcium-induced opening.\nFALSIFIABLE BY: In vitro calcium retention capacity assays showing identical thresholds for purified mitochondria from heart, brain, and liver when matched for matrix pH and redox state.\n\nCLAIM: mPTP can open without VDAC1 oligomerization (e.g., via ANT-CypD interaction alone), but this leads to a reversible, transient pore associated with apoptotic signaling, whereas VDAC1 engagement commits to irreversible, necrotic death.\nTYPE: 2\nCONFIDENCE: 0.65\nMECHANISM: ANT-mediated pore is smaller and regulated, allowing controlled cytochrome c release; VDAC1 oligomerization causes catastrophic solute exchange, osmotic swelling, and OMM rupture.\nFALSIFIABLE BY: Observation of rapid, full necrotic death in cells lacking functional VDAC1 oligomerization under calcium overload conditions.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1. The precise molecular identity of the mPTP pore at atomic resolution under physiological conditions.\n2. The exact set of proteins that tether the OMM and IMM at contact sites, and how their composition changes during stress.\n3. Quantitative, real-time in vivo measurements of matrix [Ca\u00b2\u207a] at the moment of irreversible pore coupling in different tissues.\n4. The specific post-translational modifications (e.g., VDAC1 phosphorylation, oxidation) that switch its function from metabolite channel to death amplifier.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nDevelop a genetically encoded, contact-site-targeted biosensor to simultaneously report VDAC1 oligomerization status and IMM depolarization in live cells during death induction.",
+      "claims": [
+        {
+          "statement": "VDAC1 oligomerization at OMM-IMM contact sites precedes and facilitates sustained mPTP opening, acting as an amplifier rather than the sole trigger.",
+          "type": 1,
+          "confidence": 0.7,
+          "mechanism": "Oligomeric VDAC1 clusters create a high-conductance pathway for Ca\u00b2\u207a and metabolic solute flux across the OMM, lowering the threshold for IMM depolarization via mPTP.",
+          "falsifiable_by": "Demonstrating that genetic ablation of VDAC1 does not delay or prevent mPTP opening in response to standard calcium overload insults."
+        },
+        {
+          "statement": "CypD binding to the IMM matrix face and VDAC1 at the OMM do not form a stable, direct trans-membrane complex, but cooperate allosterically via contact-site tethering proteins.",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "Proximity at contact sites allows CypD-mediated lowering of the mPTP activation threshold to be synchronized with VDAC1-mediated OMM permeabilization, without a fixed stoichiometric complex.",
+          "falsifiable_by": "Cryo-EM structure of a native mitochondrial membrane supercomplex showing a direct, continuous protein channel from VDAC1 through to ANT, with CypD bound."
+        },
+        {
+          "statement": "The calcium threshold for irreversible mPTP/VDAC1 coupling is tissue-specific, being lowest in cardiac mitochondria due to higher baseline oxidative stress and CypD expression.",
+          "type": 1,
+          "confidence": 0.75,
+          "mechanism": "Tissue-specific metabolic profiles and ROS production modulate the redox state of critical cysteines in VDAC1 and ANT, altering their sensitivity to calcium-induced opening.",
+          "falsifiable_by": "In vitro calcium retention capacity assays showing identical thresholds for purified mitochondria from heart, brain, and liver when matched for matrix pH and redox state."
+        },
+        {
+          "statement": "mPTP can open without VDAC1 oligomerization (e.g., via ANT-CypD interaction alone), but this leads to a reversible, transient pore associated with apoptotic signaling, whereas VDAC1 engagement commits to irreversible, necrotic death.",
+          "type": 2,
+          "confidence": 0.65,
+          "mechanism": "ANT-mediated pore is smaller and regulated, allowing controlled cytochrome c release; VDAC1 oligomerization causes catastrophic solute exchange, osmotic swelling, and OMM rupture.",
+          "falsifiable_by": "Observation of rapid, full necrotic death in cells lacking functional VDAC1 oligomerization under calcium overload conditions. \u2500\u2500\u2500"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "round_num": 0,
+    "jaccard": 0.03233580145344851,
+    "cosine": 0.8329009115695953,
+    "jsd": 0.1487712129538735,
+    "kappa": 0.9493817152907886,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.3333333333333333,
+      "2": 0.5238095238095238,
+      "3": 0.14285714285714285
+    },
+    "type_01_ratio": 0.3333333333333333,
+    "n_claims_per_model": [
+      4,
+      5,
+      5,
+      3,
+      4
+    ]
+  },
+  "total_calls": 5
+}

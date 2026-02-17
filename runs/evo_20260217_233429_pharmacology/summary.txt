@@ -1,0 +1,56 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260217_233429_pharmacology
+Date: 2026-02-17
+Protocol: evo-1.0
+
+QUESTION:
+  What are the mechanisms by which ketamine produces rapid antidepressant effects within hours, and is there a mitochondrial component beyond NMDA receptor antagonism? Specifically: (1) Does ketamine at sub-anesthetic doses (0.5 mg/kg IV) alter mitochondrial membrane potential or VDAC1 state? (2) Is the rapid onset (2-4 hours vs weeks for SSRIs) consistent with a synaptic plasticity mechanism alone, or does mitochondrial bioenergetic rescue contribute? (3) Does ketamine follow the structural isomorphism pattern — dose picks pathway, tissue determines outcome — with sub-anesthetic producing BDNF/mTOR-dependent synaptogenesis and supra-anesthetic producing dissociation/neurotoxicity? (4) What is the role of ketamine's metabolite (2R,6R)-HNK in sustained antidepressant effects, and does it have a distinct mitochondrial target? (5) Can the therapeutic window be predicted by the same Hill coefficient mismatch that governs metformin (cooperative target saturates before toxic target engages)?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 9
+  Promoted to TYPE 1: 0
+  Novel (no literature): 2
+  Contradicted: 2
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 7/19
+
+HYPOTHESES (ranked by testability):
+  H1. IF primary rat cortical neurons are exposed to ketamine at 5-10 µM for 1-2 hours, THEN JC-1 fluorescence ratio (red/gree
+     Testability: 9.0/10
+     Effect size: 0.8117 (Cohen's d)
+     Power: 1.0
+
+  H3. IF isolated mouse brain mitochondria or cultured cortical neurons are treated with (2R,6R)-HNK at 1-10 µM, THEN oxygen c
+     Testability: 9.0/10
+     Effect size: 0.9216 (Cohen's d)
+     Power: 1.0
+
+  H4. IF the dose-response curves for ketamine's synaptogenic effect (spine density increase in PFC layer V pyramidal neurons)
+     Testability: 8.0/10
+     Effect size: 0.9296 (Cohen's d)
+     Power: 1.0
+
+  H2. IF mice receive ketamine (10 mg/kg IP, sub-anesthetic) preceded by the mitochondrial uncoupler FCCP (low-dose ICV, 0.5 n
+     Testability: 7.0/10
+     Effect size: 0.7949 (Cohen's d)
+     Power: 1.0
+
+BUDGET:
+  Total LLM calls: 16
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

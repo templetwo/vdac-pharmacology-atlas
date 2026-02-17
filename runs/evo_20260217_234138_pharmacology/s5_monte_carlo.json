@@ -1,0 +1,199 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF reconstituted VDAC1 in planar lipid bilayers is exposed to sinusoidal Ca\u00b2\u207a waveforms (0.1\u201310 Hz, amplitude 0.1\u201310 \u00b5M), THEN single-channel open probability (Po) will oscillate in phase with Ca\u00b2\u207a at \u22641 Hz (coherence >0.7) but lose phase-locking at >5 Hz (coherence <0.3), with the channel adopting a time-averaged intermediate conductance (~60% of full open state).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "VDAC1_gating_tau": {
+          "mean": 5.3798813944236255,
+          "std": 2.6083977930948863,
+          "median": 5.311037634259753,
+          "ci_lower": 1.2492073395780021,
+          "ci_upper": 9.677558300825707,
+          "min": 1.0662604277590497,
+          "max": 9.931380076502533
+        },
+        "coherence_threshold": {
+          "mean": 0.502127846051387,
+          "std": 0.11352701791670711,
+          "median": 0.5053924229594344,
+          "ci_lower": 0.31444348019223867,
+          "ci_upper": 0.6920481689440198,
+          "min": 0.30217193365148015,
+          "max": 0.6996418921896954
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.49598655169887973,
+          "std": 0.20778121272441308,
+          "median": 0.5099359577949223,
+          "ci_lower": 0.10429917087967923,
+          "ci_upper": 0.8775921376447611,
+          "min": 0.04493707763429475,
+          "max": 0.9508535635090402
+        }
+      },
+      "effect_size": 1.7384,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF isolated mitochondria are exposed to Ca\u00b2\u207a pulses of identical total integral (e.g., 50 \u00b5M\u00b7s) but different frequencies (0.2 Hz vs. 2 Hz vs. constant), THEN the 2 Hz",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "pulse_frequency": {
+          "mean": 2.541558734523163,
+          "std": 1.3968494363096822,
+          "median": 2.5249782123264977,
+          "ci_lower": 0.22915441480077406,
+          "ci_upper": 4.858359377935639,
+          "min": 0.11543574855015909,
+          "max": 4.989620546943191
+        },
+        "pulse_amplitude": {
+          "mean": 10.420306296272157,
+          "std": 5.427043527637424,
+          "median": 10.558646591452739,
+          "ci_lower": 1.4034698531919938,
+          "ci_upper": 19.38817096576708,
+          "min": 1.0421894442183766,
+          "max": 19.91607056879699
+        },
+        "total_Ca_integral": {
+          "mean": 60.071833057767535,
+          "std": 22.84846461013696,
+          "median": 58.40172142057604,
+          "ci_lower": 22.72417285992675,
+          "ci_upper": 98.20728185742524,
+          "min": 21.346425056450784,
+          "max": 99.82736326636902
+        },
+        "NCLX_Vmax": {
+          "mean": 12.624367471893848,
+          "std": 4.465685911745695,
+          "median": 12.981705956128335,
+          "ci_lower": 5.334658027138904,
+          "ci_upper": 19.583604672860908,
+          "min": 5.0844990137232555,
+          "max": 19.969949221911648
+        },
+        "NCLX_tau_efflux": {
+          "mean": 9.122093330470447,
+          "std": 3.5819916320628087,
+          "median": 9.309272686556952,
+          "ci_lower": 3.4773028709242433,
+          "ci_upper": 14.815386939840412,
+          "min": 3.05328258508691,
+          "max": 14.971545024895729
+        },
+        "oligomerization_threshold_matrix_Ca": {
+          "mean": 27.7569254034742,
+          "std": 13.010953993022348,
+          "median": 27.659503054536252,
+          "ci_lower": 5.957069174288071,
+          "ci_upper": 48.51567240449032,
+          "min": 5.287434549479782,
+          "max": 49.91594757347575
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5031926438219824,
+          "std": 0.125706567327753,
+          "median": 0.5121638268242026,
+          "ci_lower": 0.2589906034363514,
+          "ci_upper": 0.7318112446129255,
+          "min": 0.15396205160059426,
+          "max": 0.8792706634595029
+        }
+      },
+      "effect_size": 0.814,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF cytosolic Ca\u00b2\u207a oscillations are delivered at varying frequencies (0.1\u201310 Hz) to intact cells expressing genetically encoded Ca\u00b2\u207a indicators in cytosol, IMS, and matrix, THEN IMS [Ca\u00b2\u207a] will track cytosolic oscillations near-linearly (gain ~0.8 at 0.5 Hz), but matrix [Ca\u00b2\u207a] will show nonlinear bandpass behavior: attenuated at <0.1 Hz (efflux-dominated) and >3 Hz (MCU cannot activate between pulses), with peak transmission at 0.3\u20131 Hz, where IMS microdomains transiently exceed MCU Kd (~10\u201320 \u00b5M).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "MCU_Kd": {
+          "mean": 17.18622640497221,
+          "std": 7.206659969201406,
+          "median": 16.562119977389393,
+          "ci_lower": 5.937756062364557,
+          "ci_upper": 29.3163405170449,
+          "min": 5.13738315046381,
+          "max": 29.884642155260327
+        },
+        "MCU_Hill": {
+          "mean": 3.4534253149177503,
+          "std": 0.8811006683113128,
+          "median": 3.41315179124849,
+          "ci_lower": 2.0748051834817627,
+          "ci_upper": 4.909752385121715,
+          "min": 2.003858753872244,
+          "max": 4.978348582996946
+        },
+        "IMS_microdomain_peak": {
+          "mean": 26.686175910294114,
+          "std": 13.291808723646858,
+          "median": 25.739017833537822,
+          "ci_lower": 6.176702732474868,
+          "ci_upper": 48.711378702017605,
+          "min": 5.149571686730932,
+          "max": 49.76595910276767
+        },
+        "VDAC1_Ca_Kd": {
+          "mean": 0.5223951595337213,
+          "std": 0.253583067893651,
+          "median": 0.49386590373166944,
+          "ci_lower": 0.11931855771074092,
+          "ci_upper": 0.9565451026441975,
+          "min": 0.1003893854914743,
+          "max": 0.9973539118259263
+        },
+        "NCLX_rate": {
+          "mean": 11.789340223083974,
+          "std": 5.40977744819743,
+          "median": 12.618557729746305,
+          "ci_lower": 2.664781756649214,
+          "ci_upper": 19.560075747868925,
+          "min": 2.0229051410514747,
+          "max": 19.906493639904895
+        },
+        "bandpass_peak_freq": {
+          "mean": 1.079512854521041,
+          "std": 0.5465617487267124,
+          "median": 1.1055598810881646,
+          "ci_lower": 0.16249148318227308,
+          "ci_upper": 1.9646217477464742,
+          "min": 0.10008632630687675,
+          "max": 1.9999423714359197
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.497092075396723,
+          "std": 0.11812534802979514,
+          "median": 0.4946629106212052,
+          "ci_lower": 0.26904883163234905,
+          "ci_upper": 0.747870377447734,
+          "min": 0.135362612783667,
+          "max": 0.8268591734411609
+        }
+      },
+      "effect_size": 0.806,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    }
+  ],
+  "n_hypotheses": 3,
+  "total_iterations": 900,
+  "total_calls": 0
+}

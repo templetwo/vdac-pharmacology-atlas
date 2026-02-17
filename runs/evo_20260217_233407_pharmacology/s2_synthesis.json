@@ -1,0 +1,186 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "Erastin binds VDAC2/3 directly (Kd 5-10\u03bcM, not VDAC1), stabilizing open cation-selective state via \u03b2-barrel docking, displacing N-helix.",
+      "mechanism": "Binding promotes hexamerization and voltage-gating override, shifting from anion- (physiol V) to cation-selective (Ca\u00b2\u207a/Fe\u00b2\u207a influx).",
+      "falsifiable_by": "SPR/ITC assay showing Kd>50\u03bcM or no VDAC2/3 preference.",
+      "type": 0,
+      "confidence": 0.69,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('vdac2', 'interacts', 'vdac1')})",
+      "chunk_text": "Erastin binds VDAC2/3 directly (Kd 5-10\u03bcM, not VDAC1), stabilizing open cation-selective state via \u03b2-barrel docking, displacing N-helix."
+    },
+    {
+      "statement": "Erastin's primary ferroptosis mechanism is system Xc\u207b inhibition (GSH depletion \u2192 GPX4 inactivation \u2192 lipid peroxide accumulation); VDAC opening is an amplifying co-mechanism that increases mitochondrial ROS and iron release, but is neither necessary nor sufficient alone.",
+      "mechanism": "is system Xc\u207b inhibition (GSH depletion \u2192 GPX4 inactivation \u2192 lipid peroxide accumulation); VDAC opening is an amplifying co-mechanism that increases mitochondrial ROS and iron release, but is neither necessary nor sufficient alone.",
+      "falsifiable_by": "VDAC2/3 knockout completely abolishing erastin-induced ferroptosis even when system Xc\u207b is confirmed inhibited, demonstrating VDAC is the essential target.",
+      "type": 1,
+      "confidence": 0.75,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('ros', 'upregulates', 'vdac')})",
+      "chunk_text": "Erastin's primary ferroptosis mechanism is system Xc\u207b inhibition (GSH depletion \u2192 GPX4 inactivation \u2192 lipid peroxide accumulation); VDAC opening is an amplifying co-mechanism that increases mitochondrial ROS and iron release, but is neither necessary nor sufficient alone."
+    },
+    {
+      "statement": "4**: The cofactor equation predicts *basal* VDAC vulnerability but is insufficient alone; iron availability (TFRC), ACSL4 activity, and basal GSH levels are required to determine whether VDAC opening triggers death. **TYPE**: 2 (theoretical, partial empirical support) **CONFIDENCE**: 0.75 **MECHANISM**: The equation models P_open but omits downstream effectors (iron, PUFA, GPX4) that convert VDAC opening into ferroptosis. **FALSIFIABLE BY**: Cells with identical equation-predicted thresholds but differing iron/ACSL4 levels showing divergent erastin sensitivity.",
+      "mechanism": ": The equation models P_open but omits downstream effectors (iron, PUFA, GPX4) that convert VDAC opening into ferroptosis.",
+      "falsifiable_by": ": Cells with identical equation-predicted thresholds but differing iron/ACSL4 levels showing divergent erastin sensitivity.",
+      "type": 2,
+      "confidence": 0.7,
+      "overlap_count": 2,
+      "models": [
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('type', 'upregulates', 'vdac')})",
+      "chunk_text": "4**: The cofactor equation predicts *basal* VDAC vulnerability but is insufficient alone; iron availability (TFRC), ACSL4 activity, and basal GSH levels are required to determine whether VDAC opening triggers death. **TYPE**: 2 (theoretical, partial empirical support) **CONFIDENCE**: 0.75 **MECHANISM**: The equation models P_open but omits downstream effectors (iron, PUFA, GPX4) that convert VDAC opening into ferroptosis. **FALSIFIABLE BY**: Cells with identical equation-predicted thresholds but"
+    },
+    {
+      "statement": "Erastin binding stabilizes a VDAC2/3 high-conductance, cation-selective state, leading to mitochondrial Ca\u00b2\u207a overload that activates Ca\u00b2\u207a-dependent phospholipases (e.g., PLA2G6), directly supplying PUFA substrates for lipid peroxidation.",
+      "mechanism": "This VDAC-driven pathway initiates lipid peroxidation independently of GSH status, acting in parallel with system Xc\u207b inhibition to overwhelm GPX4's reductive capacity.",
+      "falsifiable_by": "Showing that mitochondrial Ca\u00b2\u207a chelation (e.g., with Ru360 or BAPTA-AM) fails to rescue erastin-induced lipid peroxidation in VDAC2/3-expressing cells.",
+      "type": 3,
+      "confidence": 0.85,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('pla2g6', 'upregulates', 'vdac2')})",
+      "chunk_text": "Erastin binding stabilizes a VDAC2/3 high-conductance, cation-selective state, leading to mitochondrial Ca\u00b2\u207a overload that activates Ca\u00b2\u207a-dependent phospholipases (e.g., PLA2G6), directly supplying PUFA substrates for lipid peroxidation."
+    },
+    {
+      "statement": "VDAC opening connects to ferroptosis via mito Ca\u00b2\u207a/Fe\u00b2\u207a influx \u2192 ROS\u2191, synergizing xCT inhib (GSH\u2193 \u2192 GPX4\u2193 \u2192 PUFA-ROOH\u2191); VDAC enhances but xCT primary.",
+      "mechanism": "Cation influx disrupts mito redox, accelerating lipid peroxidation when GSH is limiting.",
+      "falsifiable_by": "VDAC2/3 KD rescues erastin alone but not +xCT inhib.",
+      "type": 3,
+      "confidence": 0.8,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('gsh', 'upregulates', 'ros'), ('gsh', 'modulates', 'vdac'), ('gsh', 'upregulates', 'vdac')})",
+      "chunk_text": "VDAC opening connects to ferroptosis via mito Ca\u00b2\u207a/Fe\u00b2\u207a influx \u2192 ROS\u2191, synergizing xCT inhib (GSH\u2193 \u2192 GPX4\u2193 \u2192 PUFA-ROOH\u2191); VDAC enhances but xCT primary."
+    },
+    {
+      "statement": "RAS-mutant 10-fold sensitivity arises from convergent rewiring across both erastin targets simultaneously: (a) VDAC axis \u2014 reduced HKII-VDAC binding, altered [Chol]/[CL]; (b) metabolic axis \u2014 upregulated TFRC (\u2191LIP), increased ACSL4/LPCAT3 (\u2191PUFA-PLs), higher system Xc\u207b dependence due to elevated ROS from oncogene-driven OXPHOS. No single axis accounts for the full 10-fold shift.",
+      "mechanism": "Oncogenic RAS (especially KRAS-G12V) transcriptionally upregulates TFRC",
+      "falsifiable_by": "",
+      "type": 3,
+      "confidence": 0.78,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('pls', 'upregulates', 'ros'), ('cl', 'interacts', 'vdac'), ('g12v', 'upregulates', 'tfrc')})",
+      "chunk_text": "RAS-mutant 10-fold sensitivity arises from convergent rewiring across both erastin targets simultaneously: (a) VDAC axis \u2014 reduced HKII-VDAC binding, altered [Chol]/[CL]; (b) metabolic axis \u2014 upregulated TFRC (\u2191LIP), increased ACSL4/LPCAT3 (\u2191PUFA-PLs), higher system Xc\u207b dependence due to elevated ROS from oncogene-driven OXPHOS. No single axis accounts for the full 10-fold shift."
+    },
+    {
+      "statement": "The cofactor equation (Threshold = K/[(1-f_HKII)(1-f_BclxL)] \u00d7 [Chol]/[CL]) is directionally valid for predicting VDAC opening probability but quantitatively incomplete for predicting ferroptosis \u2014 it must be multiplied by terms for labile iron pool [LIP], ACSL4 activity, and inverse basal GSH to predict cell death.",
+      "mechanism": "Low f_HKII and low f_BclxL increase VDAC open probability; high [Chol]/[CL] stiffens the membrane and shifts gating. But ferroptosis requires iron-catalyzed Fenton chemistry on PUFA-PLs when GPX4 is inactive \u2014 parameters the equation omits.",
+      "falsifiable_by": "Demonstrating that the cofactor equation alone (without iron/ACSL4/GSH terms) predicts erastin IC50 across >20 cell lines with R\u00b2 > 0.8.",
+      "type": 3,
+      "confidence": 0.7,
+      "overlap_count": 1,
+      "models": [
+        "claude"
+      ],
+      "tuples": "frozenset({('apoptosis', 'upregulates', 'vdac')})",
+      "chunk_text": "The cofactor equation (Threshold = K/[(1-f_HKII)(1-f_BclxL)] \u00d7 [Chol]/[CL]) is directionally valid for predicting VDAC opening probability but quantitatively incomplete for predicting ferroptosis \u2014 it must be multiplied by terms for labile iron pool [LIP], ACSL4 activity, and inverse basal GSH to predict cell death."
+    },
+    {
+      "statement": "3**: RAS-mutant cells\u2019 10x sensitivity arises from *both* VDAC-state dependency (\u2193f_HKII, \u2191[Chol]/[CL]) *and* metabolic rewiring (\u2191TFRC, \u2191ACSL4, \u2191OXPHOS), creating a \"perfect storm\" for ferroptosis. **TYPE**: 1 (supported by HKII/Bcl-xL overexpression studies, lipidomics) **CONFIDENCE**: 0.85 **MECHANISM**: Oncogenic RAS reduces HKII-VDAC binding (lower f_HKII), increases cholesterol/CL ratio, and upregulates iron/PUFA metabolism, making cells hypersensitive to VDAC opening and GSH depletion. **FALSIFIABLE BY**: Restoring f_HKII or reducing [Chol]/[CL] in RAS-mutant cells to WT levels *and* observing loss of 10x sensitivity.",
+      "mechanism": ": Oncogenic RAS reduces HKII-VDAC binding (lower f_HKII), increases cholesterol/CL ratio, and upregulates iron/PUFA metabolism, making cells hypersensitive to VDAC opening and GSH depletion.",
+      "falsifiable_by": ": Restoring f_HKII or reducing [Chol]/[CL] in RAS-mutant cells to WT levels *and* observing loss of 10x sensitivity.",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "mistral"
+      ],
+      "tuples": "frozenset({('cl', 'upregulates', 'vdac'), ('cl', 'downregulates', 'vdac'), ('hkii', 'downregulates', 'ras'), ('cl', 'upregulates', 'pufa'), ('cl', 'interacts', 'vdac'), ('by', 'downregulates', 'cl')})",
+      "chunk_text": "3**: RAS-mutant cells\u2019 10x sensitivity arises from *both* VDAC-state dependency (\u2193f_HKII, \u2191[Chol]/[CL]) *and* metabolic rewiring (\u2191TFRC, \u2191ACSL4, \u2191OXPHOS), creating a \"perfect storm\" for ferroptosis. **TYPE**: 1 (supported by HKII/Bcl-xL overexpression studies, lipidomics) **CONFIDENCE**: 0.85 **MECHANISM**: Oncogenic RAS reduces HKII-VDAC binding (lower f_HKII), increases cholesterol/CL ratio, and upregulates iron/PUFA metabolism, making cells hypersensitive to VDAC opening and GSH depletion. **"
+    },
+    {
+      "statement": "Cofactor eq directionally predicts in",
+      "mechanism": "",
+      "falsifiable_by": "",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "Cofactor eq directionally predicts in"
+    },
+    {
+      "statement": "The cofactor equation (Threshold = K/[(1-f_HKII)(1-f_BclxL)] \u00d7 [Chol]/[CL]) predicts the *mitochondrial priming* for erastin but requires a parallel \"ferroptotic substrate\" term (e.g.,",
+      "mechanism": "",
+      "falsifiable_by": "",
+      "type": 3,
+      "confidence": 0.5,
+      "overlap_count": 1,
+      "models": [
+        "deepseek"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "The cofactor equation (Threshold = K/[(1-f_HKII)(1-f_BclxL)] \u00d7 [Chol]/[CL]) predicts the *mitochondrial priming* for erastin but requires a parallel \"ferroptotic substrate\" term (e.g.,"
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.11328481700859164,
+      "cosine": 0.786045640707016,
+      "jsd": 0.09961676960656957,
+      "kappa": 0.8935185185185185,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.35294117647058826,
+        "2": 0.6470588235294118,
+        "3": 0.0
+      },
+      "type_01_ratio": 0.35294117647058826,
+      "n_claims_per_model": [
+        4,
+        5,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.1297222222222222,
+      "cosine": 0.805321204662323,
+      "jsd": 0.18636547825894756,
+      "kappa": 0.967639902676399,
+      "type_distribution": {
+        "0": 0.25,
+        "1": 0.1875,
+        "2": 0.125,
+        "3": 0.4375
+      },
+      "type_01_ratio": 0.4375,
+      "n_claims_per_model": [
+        4,
+        4,
+        3,
+        3,
+        2
+      ]
+    }
+  ]
+}

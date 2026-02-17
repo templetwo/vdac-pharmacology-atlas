@@ -1,0 +1,200 @@
+{
+  "passed": true,
+  "claims": [
+    {
+      "statement": "Sub-anesthetic ketamine (0.5 mg/kg IV) produces brain concentrations (~5-10 \u00b5M) sufficient to partially block NMDARs on GABAergic interneurons, disinhibiting glutamate release, triggering AMPAR-dependent BDNF/mTOR signaling within 2 hours.",
+      "falsifiable": true,
+      "falsifiable_reason": "Specifies AMPAR antagonism blocking the rapid antidepressant effect as a disproving condition.",
+      "feasible": true,
+      "feasible_reason": "Human studies with AMPAR antagonists like NBQX are established in ketamine antidepressant trials.",
+      "novel": false,
+      "novel_reason": "Restates well-established convergent mechanism without advancing mitochondrial synthesis.",
+      "passed": false
+    },
+    {
+      "statement": "Ketamine at 5-10 \u00b5M alters mitochondrial membrane potential and bioenergetics, likely through complex I modulation and possibly VDAC1 state changes, contributing to but not solely explaining rapid onset.",
+      "falsifiable": true,
+      "falsifiable_reason": "Direct measurement of no \u0394\u03a8m change at 5-10 \u00b5M ketamine within 1-2 hours disproves it.",
+      "feasible": true,
+      "feasible_reason": "Standard JC-1 staining or Seahorse assays in cortical neurons measure \u0394\u03a8m routinely.",
+      "novel": true,
+      "novel_reason": "Links specific concentration to mitochondrial effects, enabling quantitative test in research program.",
+      "passed": true
+    },
+    {
+      "statement": "(2R,6R)-HNK sustains antidepressant effects independent of NMDAR blockade, potentially through AMPAR potentiation and a distinct mitochondrial mechanism involving enhanced oxidative phosphorylation.",
+      "falsifiable": true,
+      "falsifiable_reason": "Zero effect on mitochondrial respiration plus AMPAR blockade eliminating effects disproves it.",
+      "feasible": true,
+      "feasible_reason": "Isolated mitochondria respiration assays and AMPAR blockers are standard.",
+      "novel": true,
+      "novel_reason": "Proposes distinct mitochondrial role for HNK, testable against synaptic primacy.",
+      "passed": true
+    },
+    {
+      "statement": "Ketamine follows structural isomorphism \u2014 sub-anesthetic doses engage BDNF/mTOR synaptogenesis (Hill n\u22481-2 for NMDAR), supra-anesthetic engages widespread channel blockade and neurotoxicity (Hill n\u22481), and the therapeutic window can be modeled by Hill coefficient mismatch analogous to metformin.",
+      "falsifiable": true,
+      "falsifiable_reason": "Identical Hill coefficients for antidepressant vs. dissociative/neurotoxic effects disprove mismatch.",
+      "feasible": false,
+      "feasible_reason": "Requires full dose-response modeling across behaviors in vivo, beyond standard lab methods.",
+      "novel": true,
+      "novel_reason": "Analogizes to metformin for predictive therapeutic window in dose isomorphism.",
+      "passed": false
+    },
+    {
+      "statement": "Ketamine at 0.5 mg/kg IV transiently depolarizes \u0394\u03a8m in cortical neurons within 1\u20132 hours, likely via VDAC1 modulation.",
+      "falsifiable": true,
+      "falsifiable_reason": "No \u0394\u03a8m or VDAC1 change in in vivo models post-ketamine disproves it.",
+      "feasible": true,
+      "feasible_reason": "Seahorse, JC-1 in vivo or ex vivo cortical neurons are routine.",
+      "novel": true,
+      "novel_reason": "Specifies transient depolarization via VDAC1, tying to NMDA-Ca2+ pathway.",
+      "passed": true
+    },
+    {
+      "statement": "Mitochondrial bioenergetic rescue contributes to ketamine\u2019s rapid antidepressant effects, but is not sufficient alone (synaptic plasticity is primary).",
+      "falsifiable": true,
+      "falsifiable_reason": "Ketamine effects persisting in mitochondrial DNA-depleted or PGC-1\u03b1 KO neurons disproves it.",
+      "feasible": false,
+      "feasible_reason": "Requires specialized KO mice or \u03c10 cells, not standard lab resources.",
+      "novel": true,
+      "novel_reason": "Positions mitochondrial rescue as supportive to primary synaptic plasticity.",
+      "passed": false
+    },
+    {
+      "statement": "Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage BDNF/mTOR via \u0394\u03a8m modulation, while supra-anesthetic doses (>1 mg/kg) disrupt \u0394\u03a8m chronically, causing neurotoxicity.",
+      "falsifiable": true,
+      "falsifiable_reason": "Identical \u0394\u03a8m changes at sub- vs. supra-anesthetic doses in ex vivo slices disproves it.",
+      "feasible": true,
+      "feasible_reason": "Ex vivo brain slice imaging with \u0394\u03a8m dyes is standard.",
+      "novel": true,
+      "novel_reason": "Dose-dependent \u0394\u03a8m hormesis vs. collapse advances isomorphism hypothesis.",
+      "passed": true
+    },
+    {
+      "statement": "(2R,6R)-HNK sustains antidepressant effects via mitochondrial Complex I inhibition, distinct from ketamine\u2019s NMDA antagonism.",
+      "falsifiable": true,
+      "falsifiable_reason": "No antidepressant effect in Ndufs4 KO or with rotenone disproves Complex I role.",
+      "feasible": false,
+      "feasible_reason": "Ndufs4 KO mice are non-standard and complex to generate/test.",
+      "novel": true,
+      "novel_reason": "Specific Complex I-ROS-Nrf2 mechanism for HNK sustains mitochondrial angle.",
+      "passed": false
+    },
+    {
+      "statement": "Ketamine\u2019s therapeutic window can be predicted by a Hill coefficient mismatch (n\u22482 for NMDA vs. n\u22481 for mitochondrial targets), similar to metformin.",
+      "falsifiable": true,
+      "falsifiable_reason": "Identical Hill coefficients (n\u22481) for NMDA vs. mitochondrial effects disprove mismatch.",
+      "feasible": false,
+      "feasible_reason": "Hill analysis needs advanced dose-response electrophysiology across targets.",
+      "novel": true,
+      "novel_reason": "Quantitative mismatch model predicts therapeutic window like metformin.",
+      "passed": false
+    },
+    {
+      "statement": "Rapid antidepressant onset (2-4h) aligns with synaptic plasticity (AMPA/mTOR/BDNF translation) more than mitochondrial bioenergetics alone.",
+      "falsifiable": true,
+      "falsifiable_reason": "BDNF/mTOR KO mice lacking rapid effects despite ketamine disproves synaptic primacy.",
+      "feasible": false,
+      "feasible_reason": "Requires BDNF/mTOR KO mice, not standard.",
+      "novel": false,
+      "novel_reason": "Aligns rapid onset with established synaptic timeline vs. SSRIs.",
+      "passed": false
+    },
+    {
+      "statement": "Ketamine follows dose-pathway isomorphism: sub-anesthetic \u2192 BDNF/mTOR synaptogenesis; supra-anesthetic \u2192 full NMDA block/dissociation + neurotoxicity.",
+      "falsifiable": true,
+      "falsifiable_reason": "Iso-effective synaptogenesis/neurotoxicity at single dose across tissues disproves it.",
+      "feasible": true,
+      "feasible_reason": "Dose-response in brain slices or cultures for synaptogenesis (spine density) vs. toxicity (LDH).",
+      "novel": true,
+      "novel_reason": "Tissue-outcome in dose-pathway isomorphism for program synthesis.",
+      "passed": true
+    },
+    {
+      "statement": "(2R,6R)-HNK mediates sustained (>24h) effects independently of NMDA, without direct mitochondrial targeting.",
+      "falsifiable": true,
+      "falsifiable_reason": "HNK no sustained effect in AMPAR KO but intact in mito OXPHOS KO disproves it.",
+      "feasible": false,
+      "feasible_reason": "Dual KO models (AMPA and OXPHOS) exceed standard methods.",
+      "novel": false,
+      "novel_reason": "Established non-NMDA AMPAR mechanism for HNK without mito novelty.",
+      "passed": false
+    },
+    {
+      "statement": "Ketamine therapeutic window predictable by Hill mismatch: cooperative synaptogenesis target (n~1.5-2) saturates before linear NMDA/myo tox (n=1, per prior Hill_standard=1.0).",
+      "falsifiable": true,
+      "falsifiable_reason": "Dose-response curves with n=1 for both pathways disprove mismatch.",
+      "feasible": false,
+      "feasible_reason": "Comprehensive curve fitting needs non-standard behavioral/electrophys assays.",
+      "novel": true,
+      "novel_reason": "Cooperative n~1.5-2 vs. linear n=1 mirrors metformin for window prediction.",
+      "passed": false
+    },
+    {
+      "statement": "The rapid onset of antidepressant effects is consistent with a synergistic model where mitochondrial bioenergetic rescue is a necessary, rate-limiting prerequisite for the ATP-intensive process of BDNF/mTOR-dependent synaptogenesis.",
+      "falsifiable": true,
+      "falsifiable_reason": "Normal synaptogenesis rate with clamped mitochondrial ATP disproves prerequisite role.",
+      "feasible": false,
+      "feasible_reason": "Pharmacological ATP clamping in vivo/stress models is not standard.",
+      "novel": true,
+      "novel_reason": "Synergistic mito prerequisite for ATP-intensive synaptogenesis is testable synthesis.",
+      "passed": false
+    },
+    {
+      "statement": "The metabolite (2R,6R)-HNK sustains antidepressant effects via a non-NMDAR mechanism involving AMPA receptor potentiation, and any mitochondrial effects are secondary to this primary synaptic action.",
+      "falsifiable": true,
+      "falsifiable_reason": "Direct high-affinity mito target required independent of AMPAR disproves secondary role.",
+      "feasible": true,
+      "feasible_reason": "AMPAR blockers in HNK-treated cultures assess independence.",
+      "novel": false,
+      "novel_reason": "Reiterates primary AMPAR with secondary mito, lacking program advance.",
+      "passed": false
+    },
+    {
+      "statement": "Ketamine's therapeutic window likely arises from a mismatch in dose-response curves between therapeutic and dissociative targets, a phenomenon that could be modeled by differing Hill coefficients.",
+      "falsifiable": true,
+      "falsifiable_reason": "Identical Hill coefficients for therapeutic vs. dissociative sites disproves mismatch.",
+      "feasible": false,
+      "feasible_reason": "Site-specific Hill fitting requires advanced pharmacology/PET, not standard.",
+      "novel": true,
+      "novel_reason": "Cooperativity mismatch creates window, enabling dose modeling.",
+      "passed": false
+    },
+    {
+      "statement": "The rapid (2-4h) antidepressant onset requires a mitochondrial bioenergetic component (e.g., transient \u0394\u03a8m hyperpolarization, increased ATP) that enables the subsequent BDNF/mTOR-dependent synaptogenesis.",
+      "falsifiable": true,
+      "falsifiable_reason": "Blocking initial mito response abolishes rapid effects despite BDNF disproves it.",
+      "feasible": true,
+      "feasible_reason": "VDAC1 inhibitors or uncouplers with ketamine in slices/cultures are feasible.",
+      "novel": true,
+      "novel_reason": "Mito as rate-limiting enabler of glutamate-AMPA burst is key synthesis.",
+      "passed": true
+    },
+    {
+      "statement": "Ketamine exhibits structural isomorphism: sub-anesthetic doses (0.5 mg/kg) engage a cooperative, high-affinity target system (NMDA-R on GABAergic interneurons \u2192 BDNF/mTOR), while supra-anesthetic doses engage lower-affinity, non-cooperative targets (e.g., broader NMDA-R blockade, other channels) leading to dissociation and potential neurotoxicity.",
+      "falsifiable": true,
+      "falsifiable_reason": "Identical NMDA occupancy or no dose separation in models disproves it.",
+      "feasible": false,
+      "feasible_reason": "PET imaging or multi-dose animal separation beyond standard lab.",
+      "novel": true,
+      "novel_reason": "Cooperative interneuron target vs. non-coop for toxicity advances isomorphism.",
+      "passed": false
+    },
+    {
+      "statement": "(2R,6R)-HNK contributes to sustained effects via a distinct, non-NMDA target, likely involving mitochondrial bioenergetic regulation (e.g., enhancing electron transport chain efficiency).",
+      "falsifiable": true,
+      "falsifiable_reason": "No effect on mito respiration/\u0394\u03a8m or abolished in AMPAR KO disproves it.",
+      "feasible": true,
+      "feasible_reason": "In vitro mito assays and AMPAR KO cultures are standard.",
+      "novel": true,
+      "novel_reason": "Direct mito interaction (ANT/ETC) for HNK sustains non-NMDA effects.",
+      "passed": true
+    }
+  ],
+  "n_passed": 7,
+  "n_failed": 12,
+  "total_calls": 1,
+  "latency_s": 8.84,
+  "recommendation": "Lab Gate PASSED with filter. 7/19 claims cleared. 12 filtered: 'Sub-anesthetic ketamine (0.5 mg/kg IV) produces br...' lacks novelty; 'Ketamine follows structural isomorphism \u2014 sub-anes...' not feasible; 'Mitochondrial bioenergetic rescue contributes to k...' not feasible"
+}

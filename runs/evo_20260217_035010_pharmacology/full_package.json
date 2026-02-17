@@ -1,0 +1,968 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260217_035010_pharmacology",
+  "timestamp": "2026-02-17T03:52:03.287230+00:00",
+  "question": "Does ultrasound exposure at clinically relevant intensities (0.1-3 W/cm\u00b2, 1-3 MHz diagnostic or 20-100 kHz therapeutic) alter VDAC1 oligomeric state through outer mitochondrial membrane lipid reorganization? Specifically: (1) Can mechanical energy at these frequencies propagate to the OMM with sufficient intensity to reorganize cholesterol/cardiolipin domains? (2) If so, does lipid domain reorganization shift VDAC1 between honeycomb (protected) and dispersed (oligomerization-competent) states? (3) Does the altered lipid environment of cancer cell OMMs (elevated cholesterol, reduced cardiolipin) change the threshold for mechanically-induced VDAC1 state transitions compared to healthy cells?",
+  "convergence_report": {
+    "s1_initial": {
+      "n_models_responded": 5,
+      "initial_jaccard": 0.06337662337662338,
+      "initial_cosine": 0.8588027894496918
+    },
+    "s2_refinement": {
+      "total_rounds": 0,
+      "early_stopped": false,
+      "final_jaccard": 0.0,
+      "final_cosine": 0.0,
+      "final_jsd": 0.0,
+      "final_type_01_ratio": 0.0
+    },
+    "s3_gate": {
+      "passed": true,
+      "jaccard": 0.69,
+      "type_01_ratio": 0.8235,
+      "recommendation": ""
+    }
+  },
+  "verification": {
+    "n_type2_input": 8,
+    "n_promoted": 0,
+    "n_held": 7,
+    "n_novel": 1,
+    "n_contradicted": 0,
+    "total_calls": 8
+  },
+  "gate": {
+    "passed": true,
+    "n_passed": 18,
+    "n_failed": 0,
+    "recommendation": "Lab Gate PASSED. 18/18 claims cleared all three criteria. Proceeding to S4 hypothesis operationalization.",
+    "claims": [
+      {
+        "statement": "Diagnostic ultrasound (1-3 MHz, 0.1-3 W/cm\u00b2) delivers insufficient mechanical energy to the OMM to r",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Low-frequency therapeutic ultrasound (20-100 kHz) at higher intensities can induce cavitation-mediat",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "VDAC1 oligomeric state is lipid-environment-dependent, with cholesterol stabilizing monomeric/honeyc",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Cancer cell OMMs, with elevated cholesterol, would paradoxically be MORE resistant to mechanically-i",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "1:** Ultrasound at 1\u20133 MHz (0.1\u20133 W/cm\u00b2) can propagate mechanical energy to the OMM with sufficient ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "2:** Reorganization of cholesterol/cardiolipin domains in the OMM can shift VDAC1 from honeycomb (pr",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "3:** Cancer cells (elevated OMM cholesterol, reduced cardiolipin) have a lower threshold for US-indu",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "4:** The mechanical energy required to reorganize OMM lipids exceeds the thermal noise floor but is ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Ultrasound mechanical energy at 0.1-3 W/cm\u00b2 propagates to OMM with ~0.1-2 MPa pressures, exceeding l",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Lipid domain reorganization by mechanical stress destabilizes VDAC1 honeycomb lattice, promoting dis",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transit",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "No direct evidence links clinical US to VDAC1 oligomerization via lipids.",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Ultrasound at clinically relevant frequencies and intensities can deliver sufficient mechanical ener",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The honeycomb lattice of VDAC1 is stabilized by cardiolipin-rich domains, and its disruption by chol",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The altered lipidome of cancer cell OMMs lowers the acoustic energy threshold required to induce VDA",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Ultrasound at therapeutic kHz frequencies (20-100 kHz) is more likely than diagnostic MHz frequencie",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Reorganization of OMM cholesterol-rich lipid domains can shift VDAC1 from a honeycomb to a dispersed",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Cancer cell OMMs (high cholesterol) have a lower threshold for ultrasound-induced VDAC1 dispersion t",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H3",
+      "prediction": "IF OMM cholesterol is depleted by M\u03b2CD (5-10 mM, 30 min), THEN VDAC1 oligomerization (measured by EGS crosslinking and VDAC1-FRET) will increase >2-fold relative to vehicle, with concurrent loss of VDAC1 honeycomb clustering (>40% decrease in cluster size by STORM).",
+      "testability_score": 9.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "M\u03b2CD_concentration",
+          "range": "1.0-15.0 mM",
+          "distribution": "uniform"
+        },
+        {
+          "name": "treatment_time",
+          "range": "15.0-60.0 min",
+          "distribution": "uniform"
+        },
+        {
+          "name": "cholesterol_depletion_fraction",
+          "range": "0.2-0.8 (normal,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "VDAC1_oligomer_baseline",
+          "range": "0.05-0.2 fraction",
+          "distribution": "uniform"
+        },
+        {
+          "name": "VDAC1_cluster_diameter_baseline",
+          "range": "80.0-200.0 nm",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9216,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4934038742106948,
+            "std": 0.13223648032747326,
+            "median": 0.4865524462283509,
+            "ci_lower": 0.25886351030839905,
+            "ci_upper": 0.7579434521888677,
+            "min": 0.1525064590343752,
+            "max": 0.8466002656183298
+          }
+        }
+      }
+    },
+    {
+      "id": "H1",
+      "prediction": "IF isolated mitochondria are exposed to 1-3 MHz ultrasound at 0.1-3 W/cm\u00b2 ISPTA in degassed buffer (cavitation suppressed), THEN Laurdan generalized polarization (GP) of the OMM will change by <0.02 GP units (within noise), compared to >0.05 GP shift with positive control M\u03b2CD cholesterol depletion.",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "US_frequency",
+          "range": "1.0-3.0 MHz",
+          "distribution": "uniform"
+        },
+        {
+          "name": "US_intensity",
+          "range": "0.1-3.0 W/cm\u00b2",
+          "distribution": "uniform"
+        },
+        {
+          "name": "exposure_duration",
+          "range": "10.0-300.0 s",
+          "distribution": "log-normal"
+        },
+        {
+          "name": "dissolved_O2",
+          "range": "0.5-8.0 mg/L",
+          "distribution": "uniform"
+        },
+        {
+          "name": "temperature",
+          "range": "25.0-37.0 \u00b0C",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Laurdan_GP_baseline",
+          "range": "0.3-0.5 (normal,",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9143,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5055296045180179,
+            "std": 0.11208919454403508,
+            "median": 0.5039188719504609,
+            "ci_lower": 0.29619190609487905,
+            "ci_upper": 0.7140369607101351,
+            "min": 0.15158533542712532,
+            "max": 0.7477331490094221
+          }
+        }
+      }
+    },
+    {
+      "id": "H2",
+      "prediction": "IF isolated mitochondria are exposed to 40 kHz ultrasound at 1-3 W/cm\u00b2 in air-saturated buffer, THEN OMM lipid domain reorganization (Laurdan GP decrease >0.05 and cholesterol-filipin puncta dispersal >30%) will occur; this effect will be abolished (>80% reduction) in degassed buffer.",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "US_frequency",
+          "range": "20.0-100.0 kHz",
+          "distribution": "uniform"
+        },
+        {
+          "name": "US_intensity",
+          "range": "0.5-3.0 W/cm\u00b2",
+          "distribution": "uniform"
+        },
+        {
+          "name": "mechanical_index",
+          "range": "0.3-2.0 (derived)",
+          "distribution": "uniform"
+        },
+        {
+          "name": "dissolved_O2_degassed",
+          "range": "0.2-1.0 mg/L",
+          "distribution": "uniform"
+        },
+        {
+          "name": "dissolved_O2_normal",
+          "range": "6.0-8.0 mg/L",
+          "distribution": "uniform"
+        },
+        {
+          "name": "cavitation_dose",
+          "range": "0.0-500.0 mV\u00b7s",
+          "distribution": "log-normal"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.0029,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5052058599378313,
+            "std": 0.11692618460479731,
+            "median": 0.508427374453284,
+            "ci_lower": 0.2545960079532066,
+            "ci_upper": 0.7238333473022839,
+            "min": 0.1791059054802655,
+            "max": 0.8282651149203355
+          }
+        }
+      }
+    },
+    {
+      "id": "H4",
+      "prediction": "IF cancer cells (MCF-7, HeLa) and matched normal cells (MCF-10A, HEK293) are exposed to graded mechanical perturbation (M\u03b2CD titration as lipid disruption proxy, or 40 kHz US with cavitation), THEN cancer cells will show a sharper sigmoidal dose-response curve for VDAC1 oligomerization (Hill coefficient >3 vs. <2 for normal cells) with a higher intensity threshold (EC50 ~1.3-2\u00d7 that of normal cells), but greater maximal response.",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "cancer_OMM_cholesterol",
+          "range": "15.0-30.0 mol%",
+          "distribution": "uniform"
+        },
+        {
+          "name": "normal_OMM_cholesterol",
+          "range": "5.0-15.0 mol%",
+          "distribution": "uniform"
+        },
+        {
+          "name": "cancer_OMM_cardiolipin",
+          "range": "3.0-10.0 mol%",
+          "distribution": "uniform"
+        },
+        {
+          "name": "normal_OMM_cardiolipin",
+          "range": "10.0-20.0 mol%",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Hill_coefficient_cancer",
+          "range": "2.0-6.0 (log-normal)",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Hill_coefficient_normal",
+          "range": "1.0-3.0 (log-normal)",
+          "distribution": "uniform"
+        },
+        {
+          "name": "EC50_ratio_cancer_to_normal",
+          "range": "1.0-3.0 (log-normal,",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.5705,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4880994176534654,
+            "std": 0.10833855687962254,
+            "median": 0.48864511650981735,
+            "ci_lower": 0.2810282207039965,
+            "ci_upper": 0.6921607647909988,
+            "min": 0.21616770810465907,
+            "max": 0.8175493589536735
+          }
+        }
+      }
+    }
+  ],
+  "simulations": {
+    "n_hypotheses_simulated": 4,
+    "total_iterations": 1200,
+    "llm_calls": 0,
+    "results": [
+      {
+        "hypothesis_id": "H1",
+        "n_iterations": 300,
+        "effect_size": 0.9143,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "US_frequency": {
+            "mean": 1.9733069765385831,
+            "std": 0.5796439540210858,
+            "median": 1.958008363168834,
+            "ci_lower": 1.0553794087951116,
+            "ci_upper": 2.9283462890723793,
+            "min": 1.014724539502011,
+            "max": 2.9847511281116743
+          },
+          "US_intensity": {
+            "mean": 1.5654268838725565,
+            "std": 0.8230708798961266,
+            "median": 1.5890950664559003,
+            "ci_lower": 0.20471523139373027,
+            "ci_upper": 2.942349224844143,
+            "min": 0.11574651897323135,
+            "max": 2.997403718375292
+          },
+          "exposure_duration": {
+            "mean": 158.9808130741237,
+            "std": 48.555871520673016,
+            "median": 154.39746576794118,
+            "ci_lower": 80.4832122355535,
+            "ci_upper": 269.42400902774216,
+            "min": 69.51724053005853,
+            "max": 300.0
+          },
+          "dissolved_O2": {
+            "mean": 4.343069354912586,
+            "std": 2.1845114763378706,
+            "median": 4.268542825516596,
+            "ci_lower": 0.7805799527631463,
+            "ci_upper": 7.876420203547241,
+            "min": 0.5038905812427914,
+            "max": 7.995664319181409
+          },
+          "temperature": {
+            "mean": 31.016947237917762,
+            "std": 3.506235556274648,
+            "median": 30.815314012854195,
+            "ci_lower": 25.47135615201247,
+            "ci_upper": 36.709849843338816,
+            "min": 25.012809580272968,
+            "max": 36.960126538229844
+          },
+          "Laurdan_GP_baseline": {
+            "mean": 0.402731212985456,
+            "std": 0.05727875772243417,
+            "median": 0.39935369309900304,
+            "ci_lower": 0.31013994859003247,
+            "ci_upper": 0.4952706402421584,
+            "min": 0.30086115513353573,
+            "max": 0.4997659274667317
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H2",
+        "n_iterations": 300,
+        "effect_size": 1.0029,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "US_frequency": {
+            "mean": 59.862183420786316,
+            "std": 22.805705082607055,
+            "median": 59.59148101757546,
+            "ci_lower": 22.108643506951413,
+            "ci_upper": 97.6875000479288,
+            "min": 20.252012221227087,
+            "max": 99.83053954192964
+          },
+          "US_intensity": {
+            "mean": 1.7395139863515998,
+            "std": 0.7140846746891346,
+            "median": 1.7577166567700973,
+            "ci_lower": 0.553088138577894,
+            "ci_upper": 2.919496179706195,
+            "min": 0.5055512426603127,
+            "max": 2.9889566537890775
+          },
+          "mechanical_index": {
+            "mean": 1.15152645247756,
+            "std": 0.4855298729654104,
+            "median": 1.1160365801872407,
+            "ci_lower": 0.3578886732734434,
+            "ci_upper": 1.9619047394702864,
+            "min": 0.3286115324495791,
+            "max": 1.9963314694103418
+          },
+          "dissolved_O2_degassed": {
+            "mean": 0.6066329318343385,
+            "std": 0.23816991529310372,
+            "median": 0.6256909843268446,
+            "ci_lower": 0.21784842811407487,
+            "ci_upper": 0.9777922492192485,
+            "min": 0.2045066140652403,
+            "max": 0.998397291835288
+          },
+          "dissolved_O2_normal": {
+            "mean": 7.020348888411741,
+            "std": 0.5969986053438014,
+            "median": 7.0515454477594925,
+            "ci_lower": 6.079550478487374,
+            "ci_upper": 7.969231156640069,
+            "min": 6.008880430847818,
+            "max": 7.995257504149288
+          },
+          "cavitation_dose": {
+            "mean": 258.8943750528152,
+            "std": 77.99919238694272,
+            "median": 249.1586154768275,
+            "ci_lower": 135.5827658363923,
+            "ci_upper": 456.18745453885003,
+            "min": 113.88068878173019,
+            "max": 500.0
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H3",
+        "n_iterations": 300,
+        "effect_size": 0.9216,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "M\u03b2CD_concentration": {
+            "mean": 7.824286786784436,
+            "std": 4.035729582752788,
+            "median": 7.474787187338062,
+            "ci_lower": 1.5251433949241522,
+            "ci_upper": 14.617150689545143,
+            "min": 1.0769345642597337,
+            "max": 14.935399606945783
+          },
+          "treatment_time": {
+            "mean": 36.801379723766246,
+            "std": 13.216510024669692,
+            "median": 36.19727686872735,
+            "ci_lower": 16.12207775222644,
+            "ci_upper": 58.64628577682573,
+            "min": 15.05788130808366,
+            "max": 59.6752287449542
+          },
+          "cholesterol_depletion_fraction": {
+            "mean": 0.4891490121372548,
+            "std": 0.17722411631529145,
+            "median": 0.47652023778050434,
+            "ci_lower": 0.21568936976633157,
+            "ci_upper": 0.7828183826935683,
+            "min": 0.20199428915641243,
+            "max": 0.796879454703569
+          },
+          "VDAC1_oligomer_baseline": {
+            "mean": 0.12039919325562025,
+            "std": 0.04226384464894183,
+            "median": 0.11564431728861159,
+            "ci_lower": 0.053219759618456826,
+            "ci_upper": 0.19275751710736627,
+            "min": 0.05006489758191238,
+            "max": 0.19955898530432106
+          },
+          "VDAC1_cluster_diameter_baseline": {
+            "mean": 145.26226815389313,
+            "std": 36.06518298798287,
+            "median": 150.79038486497538,
+            "ci_lower": 84.43187837766142,
+            "ci_upper": 197.0671716524595,
+            "min": 80.15270094034317,
+            "max": 199.37662426603262
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H4",
+        "n_iterations": 300,
+        "effect_size": 0.5705,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "cancer_OMM_cholesterol": {
+            "mean": 22.66159086629991,
+            "std": 4.307877568051124,
+            "median": 22.56089769297793,
+            "ci_lower": 15.302350070004348,
+            "ci_upper": 29.750640691269513,
+            "min": 15.000812887197128,
+            "max": 29.969186718167617
+          },
+          "normal_OMM_cholesterol": {
+            "mean": 10.013370078637896,
+            "std": 2.9278628407696075,
+            "median": 10.306552971474643,
+            "ci_lower": 5.190489555448856,
+            "ci_upper": 14.41112047190898,
+            "min": 5.027737832676741,
+            "max": 14.905402497056086
+          },
+          "cancer_OMM_cardiolipin": {
+            "mean": 6.401223906929783,
+            "std": 2.041118191378801,
+            "median": 6.44037767102502,
+            "ci_lower": 3.221058575196684,
+            "ci_upper": 9.698118572321057,
+            "min": 3.043720540201474,
+            "max": 9.9851598158575
+          },
+          "normal_OMM_cardiolipin": {
+            "mean": 14.85458624705745,
+            "std": 2.9178393367061055,
+            "median": 14.67755409158304,
+            "ci_lower": 10.3092730703797,
+            "ci_upper": 19.69031211746222,
+            "min": 10.09108786536807,
+            "max": 19.91113189643309
+          },
+          "Hill_coefficient_cancer": {
+            "mean": 3.941157922790083,
+            "std": 1.1375824177034772,
+            "median": 4.083515368087561,
+            "ci_lower": 2.069458793756362,
+            "ci_upper": 5.782246231084655,
+            "min": 2.0000816438002462,
+            "max": 5.994750653703388
+          },
+          "Hill_coefficient_normal": {
+            "mean": 1.981552037631302,
+            "std": 0.5821685579939196,
+            "median": 1.9842205951252674,
+            "ci_lower": 1.05471370526107,
+            "ci_upper": 2.9437971900561166,
+            "min": 1.0035158659943753,
+            "max": 2.9956495874753912
+          },
+          "EC50_ratio_cancer_to_normal": {
+            "mean": 1.9143458750203186,
+            "std": 0.5826862550119838,
+            "median": 1.8761086181321511,
+            "ci_lower": 1.0262447196036495,
+            "ci_upper": 2.897373882000006,
+            "min": 1.0038630810489277,
+            "max": 2.991868127861922
+          }
+        }
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF isolated mitochondria are exposed to 1-3 MHz ultrasound at 0.1-3 W/cm\u00b2 ISPTA in degassed buffer (cavitation suppressed), THEN Laurdan generalized polarization (GP) of the OMM will change by <0.02 GP units (within noise), compared to >0.05 GP shift with positive control M\u03b2CD cholesterol depletion.",
+      "protocol": "Isolate mitochondria from HeLa cells by differential centrifugation, load with Laurdan (5 \u03bcM, 30 min). Expose in degassed vs. non-degassed PBS to pulsed US (1 MHz and 3 MHz, 0.5/1.0/3.0 W/cm\u00b2, 60s) using a calibrated transducer with hydrophone verification. Image Laurdan GP by two-photon microscopy immediately pre/post. Parallel samples with 5 mM M\u03b2CD (30 min) as positive control. Timeline: 2 weeks.",
+      "dose_ranges": {
+        "M\u03b2CD": {
+          "doses": [
+            1.0,
+            2.5,
+            5.0,
+            10.0
+          ],
+          "unit": "mM;"
+        },
+        "US intensity": {
+          "doses": [
+            0.1,
+            0.5,
+            1.0,
+            3.0
+          ],
+          "unit": "W/cm\u00b2"
+        }
+      },
+      "readouts": [
+        "Laurdan GP (two-photon",
+        "340/440 nm excitation",
+        "440/490 nm emission ratio)",
+        "temperature monitoring (thermocouple)",
+        "cavitation detection (passive cavitation detector)"
+      ],
+      "controls": [
+        "Sham US (transducer off)",
+        "degassed vs. air-saturated buffer",
+        "M\u03b2CD positive control",
+        "heat-matched control (water bath to US-equivalent \u0394T)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "No significant Laurdan GP change in degassed conditions at any intensity; possible GP shift (>0.03) only in non-degassed samples at \u22651 W/cm\u00b2 (cavitation-dependent). M\u03b2CD positive",
+      "null_outcome": "Significant GP change (>0.03) in degassed samples, indicating direct mechanical coupling independent of cavitation."
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF isolated mitochondria are exposed to 40 kHz ultrasound at 1-3 W/cm\u00b2 in air-saturated buffer, THEN OMM lipid domain reorganization (Laurdan GP decrease >0.05 and cholesterol-filipin puncta dispersal >30%) will occur; this effect will be abolished (>80% reduction) in degassed buffer.",
+      "protocol": "Isolate mitochondria from HeLa/HEK293 cells. Expose to 40 kHz US (0.5, 1.0, 2.0, 3.0 W/cm\u00b2, 30-120s pulsed) in degassed (<1 mg/L O\u2082) or air-saturated buffer. Monitor cavitation via broadband noise (passive cavitation detector). Fix immediately, stain with filipin (cholesterol) and NAO (cardiolipin), image by structured illumination microscopy. Assess membrane integrity via cytochrome c release ELISA. Timeline: 3 weeks.",
+      "dose_ranges": {
+        "US intensity": {
+          "doses": [
+            0.5,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unit": "W/cm\u00b2;"
+        },
+        "exposure time": {
+          "doses": [
+            30.0,
+            60.0,
+            120.0
+          ],
+          "unit": "s"
+        }
+      },
+      "readouts": [
+        "Laurdan GP",
+        "filipin puncta count/dispersion (SIM)",
+        "NAO fluorescence redistribution",
+        "passive cavitation detection (broadband emission)",
+        "cytochrome c ELISA (membrane integrity)"
+      ],
+      "controls": [
+        "Sham US",
+        "degassed vs. saturated buffer",
+        "digitonin (0.01%) as membrane permeabilization positive control",
+        "temperature-matched controls",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "Air-saturated:",
+      "null_outcome": "Equal lipid reorganization in degassed and air-saturated conditions, indicating direct mechanical (non-cavitation) mechanism at kHz."
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF OMM cholesterol is depleted by M\u03b2CD (5-10 mM, 30 min), THEN VDAC1 oligomerization (measured by EGS crosslinking and VDAC1-FRET) will increase >2-fold relative to vehicle, with concurrent loss of VDAC1 honeycomb clustering (>40% decrease in cluster size by STORM).",
+      "protocol": "Treat HEK293 and HeLa cells with M\u03b2CD (0, 1, 2.5, 5, 10 mM, 30 min, 37\u00b0C). For crosslinking: isolate mitochondria, treat with EGS (0.5 mM, 30 min), quench, run SDS-PAGE/Western for VDAC1 (monomer ~32 kDa, dimer ~64 kDa, oligomers >96 kDa). For FRET: transfect VDAC1-mCerulean + VDAC1-mVenus, measure FRET efficiency by acceptor photobleaching. For clustering: fix, immunostain VDAC1, image by STORM. Verify cholesterol depletion by Amplex Red assay on isolated mitochondria. Timeline: 2 weeks.",
+      "dose_ranges": {
+        "M\u03b2CD": {
+          "doses": [
+            0.0,
+            1.0,
+            2.5,
+            5.0,
+            10.0
+          ],
+          "unit": "mM;"
+        },
+        "M\u03b2CD rescue": {
+          "doses": [
+            0.0,
+            50.0,
+            100.0,
+            200.0
+          ],
+          "unit": "\u03bcM"
+        }
+      },
+      "readouts": [
+        "VDAC1 crosslinking/Western blot (oligomer:monomer ratio)",
+        "FRET efficiency",
+        "STORM cluster analysis (Ripley's K)",
+        "Amplex Red cholesterol assay",
+        "cytochrome c release",
+        "caspase-3 activity"
+      ],
+      "controls": [
+        "Vehicle (PBS)",
+        "cholesterol-M\u03b2CD repletion rescue",
+        "filipin staining confirmation",
+        "VDAC1-KD cells (shRNA) for antibody specificity",
+        "cardiolipin-supplemented liposomes",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "Dose-dependent increase in VDAC1 dimer/oligomer bands (>2-fold at 5 mM M\u03b2CD), increased FRET efficiency (>1.5-fold), decreased STORM cluster size (>40%), correlating with cholesterol depletion (>40%). Partial rescue by cholesterol repletion (cholesterol-M\u03b2CD complexes).",
+      "null_outcome": "No change in VDAC1 oligomeric state or clustering despite >40% cholesterol depletion, refuting lipid-dependent VDAC1 state model."
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF cancer cells (MCF-7, HeLa) and matched normal cells (MCF-10A, HEK293) are exposed to graded mechanical perturbation (M\u03b2CD titration as lipid disruption proxy, or 40 kHz US with cavitation), THEN cancer cells will show a sharper sigmoidal dose-response curve for VDAC1 oligomerization (Hill coefficient >3 vs. <2 for normal cells) with a higher intensity threshold (EC50 ~1.3-2\u00d7 that of normal cells), but greater maximal response.",
+      "protocol": "Culture MCF-7 vs. MCF-10A and HeLa vs. HEK293 in parallel. First, characterize baseline OMM lipidomes by LC-MS/MS on isolated mitochondria. Then expose to graded M\u03b2CD (0-15 mM, 8",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": [],
+      "expected_outcome": "",
+      "null_outcome": ""
+    }
+  ],
+  "budget": {
+    "s1_calls": 5,
+    "s2_calls": 0,
+    "verify_calls": 8,
+    "gate_calls": 1,
+    "s4_calls": 1,
+    "s5_calls": 0,
+    "total_calls": 15,
+    "budget_target": "92-142 calls"
+  },
+  "audit_trail": {
+    "session_seed": 1771300214,
+    "s2_rounds": [],
+    "s3_gate": {
+      "stage": "S3",
+      "passed": true,
+      "convergence_score": 0.9614,
+      "convergence_threshold": 0.85,
+      "convergence_pass": true,
+      "jaccard": 0.69,
+      "jaccard_threshold": 0.85,
+      "jaccard_pass": false,
+      "type_01_ratio": 0.8235,
+      "type_01_threshold": 0.75,
+      "type_pass": true,
+      "cosine": 0.9614,
+      "jsd": 0.0968,
+      "kappa": 0.8431,
+      "type_distribution": {
+        "0": 0.8235294117647058,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.17647058823529413
+      }
+    },
+    "final_claims": [
+      {
+        "statement": "Diagnostic ultrasound (1-3 MHz, 0.1-3 W/cm\u00b2) delivers insufficient mechanical energy to the OMM to reorganize lipid domains directly; attenuation and spatial averaging reduce local OMM stress to sub-threshold levels (<1 pN/nm\u00b2).",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "At cellular scales (~10 \u03bcm), acoustic wavelengths (0.5-1.5 mm at MHz) create near-uniform pressure fields across organelles, producing negligible differential stress across the ~5 nm OMM; radiation force is orders below lipid domain reorganization thresholds.",
+        "falsifiable_by": "Direct measurement of OMM lipid order (e.g., Laurdan GP) showing changes during diagnostic-intensity insonation.",
+        "model": "claude"
+      },
+      {
+        "statement": "Low-frequency therapeutic ultrasound (20-100 kHz) at higher intensities can induce cavitation-mediated local stresses sufficient to perturb OMM lipid organization, but this operates through transient cavitation rather than direct mechanical coupling.",
+        "type": 2,
+        "confidence": 0.55,
+        "mechanism": "Stable/inertial microbubble oscillations generate localized shear stresses (>100 Pa) and microstreaming that can deform membranes at subcellular scales, disrupting lipid packing order.",
+        "falsifiable_by": "Demonstration that OMM lipid reorganization occurs under 20-100 kHz ultrasound in degassed media (cavitation suppressed).",
+        "model": "claude"
+      },
+      {
+        "statement": "VDAC1 oligomeric state is lipid-environment-dependent, with cholesterol stabilizing monomeric/honeycomb states and cholesterol depletion promoting oligomerization-competent dispersed states.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "Cholesterol intercalates at VDAC1 \u03b2-barrel interfaces (confirmed by MD and photolabeling), sterically inhibiting the conformational rearrangement required for oligomer contact surfaces; domain disruption liberates VDAC1 from cholesterol-rich rafts.",
+        "falsifiable_by": "VDAC1 oligomerization assays (crosslinking, FRET) showing no change upon cholesterol depletion with M\u03b2CD.",
+        "model": "claude"
+      },
+      {
+        "statement": "Cancer cell OMMs, with elevated cholesterol, would paradoxically be MORE resistant to mechanically-induced VDAC1 oligomerization at moderate perturbation, but the compressed phase diagram means a sharper transition once threshold is exceeded.",
+        "type": 3,
+        "confidence": 0.35,
+        "mechanism": "Higher cholesterol creates a more ordered liquid-ordered phase with greater mechanical stiffness but narrower coexistence region; once sufficient energy crosses the phase boundary, the transition is cooperative and abrupt.",
+        "falsifiable_by": "Comparative dose-response curves of ultrasound intensity vs. VDAC1 oligomerization in cancer vs. normal mitochondria showing monotonic rather than threshold behavior. \u2500\u2500\u2500",
+        "model": "claude"
+      },
+      {
+        "statement": "1:** Ultrasound at 1\u20133 MHz (0.1\u20133 W/cm\u00b2) can propagate mechanical energy to the OMM with sufficient intensity to disrupt cholesterol/cardiolipin domains, but 20\u2013100 kHz therapeutic US is unlikely to do so at these intensities.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "MHz US generates cavitation and microstreaming near membranes, while kHz US requires higher intensities for comparable mechanical effects due to longer wavelengths and lower energy deposition at the OMM.",
+        "falsifiable_by": "*In vitro* measurements of OMM lipid domain reorganization (e.g., Laurdan GP imaging) under US exposure showing no change at 20\u2013100 kHz but detectable shifts at 1\u20133 MHz. ---",
+        "model": "mistral"
+      },
+      {
+        "statement": "2:** Reorganization of cholesterol/cardiolipin domains in the OMM can shift VDAC1 from honeycomb (protected) to dispersed (oligomerization-competent) states, but this depends on lipid composition thresholds.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "Cholesterol-rich domains stabilize VDAC1 honeycomb arrays (reduced mobility), while cardiolipin-rich domains favor dispersed states by increasing membrane fluidity and VDAC1 lateral diffusion.",
+        "falsifiable_by": "Single-molecule tracking of VDAC1 in synthetic liposomes with defined cholesterol/cardiolipin ratios showing no state transition despite domain reorganization. ---",
+        "model": "mistral"
+      },
+      {
+        "statement": "3:** Cancer cells (elevated OMM cholesterol, reduced cardiolipin) have a lower threshold for US-induced VDAC1 state transitions compared to healthy cells, but the effect size is modest (<2-fold change in US intensity).",
+        "type": 3,
+        "confidence": 0.5,
+        "mechanism": "Altered lipid composition in cancer OMMs reduces membrane rigidity, lowering the energy barrier for US-induced domain reorganization and VDAC1 dispersion.",
+        "falsifiable_by": "Comparative US exposure studies in healthy vs. cancer cells (e.g., MCF-7) showing no difference in VDAC1 oligomerization thresholds despite lipid profile differences. ---",
+        "model": "mistral"
+      },
+      {
+        "statement": "4:** The mechanical energy required to reorganize OMM lipids exceeds the thermal noise floor but is within the range of clinically relevant US intensities (1\u20133 MHz, 0.5\u20133 W/cm\u00b2).",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "Lipid domain reorganization requires ~10\u207b\u00b2\u2070\u201310\u207b\u00b9\u2079 J per molecule (estimated from membrane bending rigidity), achievable via MHz US microstreaming at 1\u20133 W/cm\u00b2.",
+        "falsifiable_by": "Molecular dynamics simulations or atomic force microscopy showing no lipid domain disruption at these US parameters. --- \u2500\u2500\u2500",
+        "model": "mistral"
+      },
+      {
+        "statement": "Ultrasound mechanical energy at 0.1-3 W/cm\u00b2 propagates to OMM with ~0.1-2 MPa pressures, exceeding lipid reorganization thresholds (~0.1 MPa shear).",
+        "type": 2,
+        "confidence": 0.9,
+        "mechanism": "Wavelength (15-150 \u03bcm) >> cell/mito size (1-10 \u03bcm), minimal attenuation; p_rms = \u221a(2\u03c1cI) yields MPa stresses via streaming/cavitation.",
+        "falsifiable_by": "Intracellular pressure mapping (e.g., optical tweezers) showing <0.1 MPa at mito.",
+        "model": "grok"
+      },
+      {
+        "statement": "Lipid domain reorganization by mechanical stress destabilizes VDAC1 honeycomb lattice, promoting dispersed/oligomeric state.",
+        "type": 3,
+        "confidence": 0.4,
+        "mechanism": "Cholesterol/CL rafts stabilize VDAC1 hexamers; shear disrupts packing, exposing oligomerization interfaces (per MD sims of VDAC-lipid interactions).",
+        "falsifiable_by": "VDAC1 FRET/EM under US showing no lattice disruption despite lipid mixing (FRAP).",
+        "model": "grok"
+      },
+      {
+        "statement": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells.",
+        "type": 3,
+        "confidence": 0.3,
+        "mechanism": "Elevated chol rigidifies domains but reduces CL-VDAC affinity, making lattice fragile to lower shear.",
+        "falsifiable_by": "Dose-response curves (oligomerization vs. I) identical in cancer/healthy mito liposomes.",
+        "model": "grok"
+      },
+      {
+        "statement": "No direct evidence links clinical US to VDAC1 oligomerization via lipids.",
+        "type": 1,
+        "confidence": 1.0,
+        "mechanism": "Literature shows US membrane effects (sonoporation) but not OMM-specific VDAC1 state change.",
+        "falsifiable_by": "Peer-reviewed study demonstrating US-VDAC1 oligomerization in intact cells. \u2500\u2500\u2500",
+        "model": "grok"
+      },
+      {
+        "statement": "Ultrasound at clinically relevant frequencies and intensities can deliver sufficient mechanical energy to the OMM to transiently disrupt lipid microdomains.",
+        "type": 1,
+        "confidence": 0.9,
+        "mechanism": "Acoustic radiation force and cavitation-induced shear stress generate pressure and strain fields within the cell that exceed the low energy barriers for lipid lateral diffusion and phase separation.",
+        "falsifiable_by": "Super-resolution imaging of fluorescently-labeled cholesterol and cardiolipin in the OMM of isolated mitochondria showing no spatial reorganization during sonication at 3 W/cm\u00b2.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The honeycomb lattice of VDAC1 is stabilized by cardiolipin-rich domains, and its disruption by cholesterol enrichment or mechanical perturbation promotes a dispersed, oligomerization-competent monomeric state.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "Cardiolipin facilitates VDAC1-VDAC1 interactions that form the protected honeycomb structure, while cholesterol acts as a \"spacer\" that breaks these interactions, releasing monomers.",
+        "falsifiable_by": "Cryo-EM studies showing that VDAC1 maintains a honeycomb arrangement in synthetic liposomes with high cholesterol and low cardiolipin content, or that it disperses under mechanical stress regardless of lipid composition.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The altered lipidome of cancer cell OMMs lowers the acoustic energy threshold required to induce VDAC1 dispersal and subsequent oligomerization.",
+        "type": 3,
+        "confidence": 0.65,
+        "mechanism": "The pre-existing high cholesterol/low cardiolipin environment in cancer OMMs poises the VDAC1 honeycomb in a less stable state, requiring less external energy to trigger its collapse into dispersed monomers.",
+        "falsifiable_by": "A dose-response experiment showing that the ultrasound intensity required to induce VDAC1-mediated apoptosis is identical for cancer cells and their healthy counterparts. \u2500\u2500\u2500",
+        "model": "gemini"
+      },
+      {
+        "statement": "Ultrasound at therapeutic kHz frequencies (20-100 kHz) is more likely than diagnostic MHz frequencies to propagate mechanical energy capable of reorganizing OMM lipid domains.",
+        "type": 1,
+        "confidence": 0.7,
+        "mechanism": "Lower frequency, longer wavelength ultrasound experiences less scattering/absorption in cytoplasm, allowing deeper mechanical (non-thermal) effects like cavitation/microstreaming that can exert shear forces on membranes.",
+        "falsifiable_by": "Direct measurement showing MHz-range pulses cause greater OMM lipid displacement than kHz at equivalent spatial peak temporal average intensities.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "Reorganization of OMM cholesterol-rich lipid domains can shift VDAC1 from a honeycomb to a dispersed state.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "VDAC1 localization and oligomerization are modulated by lipid environment; cholesterol depletion disperses VDAC1 clusters, implying mechanical disruption of cholesterol domains would have a similar effect.",
+        "falsifiable_by": "Showing that ultrasound-induced VDAC1 dispersion occurs even in cholesterol-depleted OMMs where domains are already disrupted.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "Cancer cell OMMs (high cholesterol) have a lower threshold for ultrasound-induced VDAC1 dispersion than healthy cell OMMs.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "Elevated cholesterol increases membrane rigidity and order; a more ordered domain may require less mechanical energy to disrupt and release VDAC1 from its confined honeycomb arrangement.",
+        "falsifiable_by": "Experimental data showing healthy cells require lower ultrasound intensity to achieve the same degree of VDAC1 dispersion as cancer cells. \u2500\u2500\u2500",
+        "model": "deepseek"
+      }
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "parsed": [
+    {
+      "model": "claude",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n\n**Sub-questions:**\n1. **Energy propagation**: What fraction of incident ultrasound intensity reaches the OMM after attenuation through tissue, cytoplasm, and cytoskeletal structures, and does the remaining acoustic radiation force/streaming exceed the ~10-50 pN/nm\u00b2 threshold for lipid domain reorganization?\n2. **Lipid domain mechanosensitivity**: Do cholesterol-enriched and cardiolipin-enriched microdomains in the OMM undergo phase boundary shifts under mechanical perturbation at the intensities calculated in (1)?\n3. **VDAC1 state coupling to lipid domains**: Is VDAC1 oligomeric state thermodynamically controlled by its lipid environment such that domain disruption shifts the monomer\u21ccoligomer equilibrium?\n4. **Cancer vs. healthy differential**: Does the altered OMM lipid composition in cancer cells (cholesterol\u2191, cardiolipin\u2193) place the system closer to a phase transition boundary, lowering the mechanical threshold?\n\n**Key variables**: Acoustic attenuation coefficient in cytoplasm (~0.5 dB/cm/MHz), OMM lipid phase diagram, VDAC1-cholesterol binding energy (~-15 to -25 kJ/mol from MD simulations), cholesterol mole fraction in cancer OMM (~2-3\u00d7 normal).\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\nCLAIM: Diagnostic ultrasound (1-3 MHz, 0.1-3 W/cm\u00b2) delivers insufficient mechanical energy to the OMM to reorganize lipid domains directly; attenuation and spatial averaging reduce local OMM stress to sub-threshold levels (<1 pN/nm\u00b2).\nTYPE: 2\nCONFIDENCE: 0.65\nMECHANISM: At cellular scales (~10 \u03bcm), acoustic wavelengths (0.5-1.5 mm at MHz) create near-uniform pressure fields across organelles, producing negligible differential stress across the ~5 nm OMM; radiation force is orders below lipid domain reorganization thresholds.\nFALSIFIABLE BY: Direct measurement of OMM lipid order (e.g., Laurdan GP) showing changes during diagnostic-intensity insonation.\n\nCLAIM: Low-frequency therapeutic ultrasound (20-100 kHz) at higher intensities can induce cavitation-mediated local stresses sufficient to perturb OMM lipid organization, but this operates through transient cavitation rather than direct mechanical coupling.\nTYPE: 2\nCONFIDENCE: 0.55\nMECHANISM: Stable/inertial microbubble oscillations generate localized shear stresses (>100 Pa) and microstreaming that can deform membranes at subcellular scales, disrupting lipid packing order.\nFALSIFIABLE BY: Demonstration that OMM lipid reorganization occurs under 20-100 kHz ultrasound in degassed media (cavitation suppressed).\n\nCLAIM: VDAC1 oligomeric state is lipid-environment-dependent, with cholesterol stabilizing monomeric/honeycomb states and cholesterol depletion promoting oligomerization-competent dispersed states.\nTYPE: 2\nCONFIDENCE: 0.60\nMECHANISM: Cholesterol intercalates at VDAC1 \u03b2-barrel interfaces (confirmed by MD and photolabeling), sterically inhibiting the conformational rearrangement required for oligomer contact surfaces; domain disruption liberates VDAC1 from cholesterol-rich rafts.\nFALSIFIABLE BY: VDAC1 oligomerization assays (crosslinking, FRET) showing no change upon cholesterol depletion with M\u03b2CD.\n\nCLAIM: Cancer cell OMMs, with elevated cholesterol, would paradoxically be MORE resistant to mechanically-induced VDAC1 oligomerization at moderate perturbation, but the compressed phase diagram means a sharper transition once threshold is exceeded.\nTYPE: 3\nCONFIDENCE: 0.35\nMECHANISM: Higher cholesterol creates a more ordered liquid-ordered phase with greater mechanical stiffness but narrower coexistence region; once sufficient energy crosses the phase boundary, the transition is cooperative and abrupt.\nFALSIFIABLE BY: Comparative dose-response curves of ultrasound intensity vs. VDAC1 oligomerization in cancer vs. normal mitochondria showing monotonic rather than threshold behavior.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n\n- **Critical gap**: No published measurements of OMM lipid domain reorganization under controlled acoustic fields. The entire chain is inferred.\n- **Missing data**: VDAC1 oligomerization free energy landscape as a function of local cholesterol mole fraction.\n- **Unknown**: Whether intracellular cavitation nuclei exist at relevant frequencies; without them, the therapeutic-frequency mechanism collapses.\n- **Confound**: Ultrasound-induced calcium transients and ROS may alter VDAC1 state independently of lipid reorganization, making causality assignment difficult.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP \u2500\u2500\u2500\n\nMeasure VDAC1 crosslinking/oligomerization (BMH",
+      "claims": [
+        {
+          "statement": "Diagnostic ultrasound (1-3 MHz, 0.1-3 W/cm\u00b2) delivers insufficient mechanical energy to the OMM to reorganize lipid domains directly; attenuation and spatial averaging reduce local OMM stress to sub-threshold levels (<1 pN/nm\u00b2).",
+          "type": 2,
+          "confidence": 0.65,
+          "mechanism": "At cellular scales (~10 \u03bcm), acoustic wavelengths (0.5-1.5 mm at MHz) create near-uniform pressure fields across organelles, producing negligible differential stress across the ~5 nm OMM; radiation force is orders below lipid domain reorganization thresholds.",
+          "falsifiable_by": "Direct measurement of OMM lipid order (e.g., Laurdan GP) showing changes during diagnostic-intensity insonation."
+        },
+        {
+          "statement": "Low-frequency therapeutic ultrasound (20-100 kHz) at higher intensities can induce cavitation-mediated local stresses sufficient to perturb OMM lipid organization, but this operates through transient cavitation rather than direct mechanical coupling.",
+          "type": 2,
+          "confidence": 0.55,
+          "mechanism": "Stable/inertial microbubble oscillations generate localized shear stresses (>100 Pa) and microstreaming that can deform membranes at subcellular scales, disrupting lipid packing order.",
+          "falsifiable_by": "Demonstration that OMM lipid reorganization occurs under 20-100 kHz ultrasound in degassed media (cavitation suppressed)."
+        },
+        {
+          "statement": "VDAC1 oligomeric state is lipid-environment-dependent, with cholesterol stabilizing monomeric/honeycomb states and cholesterol depletion promoting oligomerization-competent dispersed states.",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "Cholesterol intercalates at VDAC1 \u03b2-barrel interfaces (confirmed by MD and photolabeling), sterically inhibiting the conformational rearrangement required for oligomer contact surfaces; domain disruption liberates VDAC1 from cholesterol-rich rafts.",
+          "falsifiable_by": "VDAC1 oligomerization assays (crosslinking, FRET) showing no change upon cholesterol depletion with M\u03b2CD."
+        },
+        {
+          "statement": "Cancer cell OMMs, with elevated cholesterol, would paradoxically be MORE resistant to mechanically-induced VDAC1 oligomerization at moderate perturbation, but the compressed phase diagram means a sharper transition once threshold is exceeded.",
+          "type": 3,
+          "confidence": 0.35,
+          "mechanism": "Higher cholesterol creates a more ordered liquid-ordered phase with greater mechanical stiffness but narrower coexistence region; once sufficient energy crosses the phase boundary, the transition is cooperative and abrupt.",
+          "falsifiable_by": "Comparative dose-response curves of ultrasound intensity vs. VDAC1 oligomerization in cancer vs. normal mitochondria showing monotonic rather than threshold behavior. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "mistral",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n**Sub-questions:**\n1. Can ultrasound (US) at 0.1\u20133 W/cm\u00b2 (1\u20133 MHz or 20\u2013100 kHz) deliver mechanical energy to the outer mitochondrial membrane (OMM) with sufficient intensity to reorganize cholesterol/cardiolipin domains?\n2. Does lipid domain reorganization (cholesterol/cardiolipin) in the OMM shift VDAC1 from honeycomb (protected) to dispersed (oligomerization-competent) states?\n3. Do cancer-specific OMM lipid alterations (\u2191cholesterol, \u2193cardiolipin) lower the threshold for US-induced VDAC1 state transitions compared to healthy cells?\n\n**Key variables:**\n- US intensity/frequency \u2192 mechanical energy deposition\n- OMM lipid composition (cholesterol/cardiolipin ratio) \u2192 domain fluidity/phase behavior\n- VDAC1 oligomeric state (honeycomb vs. dispersed) \u2192 functional output (e.g., metabolite flux, apoptosis)\n- Cancer vs. healthy cell lipid profiles \u2192 differential susceptibility.\n\n---\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\n**CLAIM 1:** Ultrasound at 1\u20133 MHz (0.1\u20133 W/cm\u00b2) can propagate mechanical energy to the OMM with sufficient intensity to disrupt cholesterol/cardiolipin domains, but 20\u2013100 kHz therapeutic US is unlikely to do so at these intensities.\n**TYPE:** 2 (mechanistic plausibility with frequency-dependent constraints)\n**CONFIDENCE:** 0.7\n**MECHANISM:** MHz US generates cavitation and microstreaming near membranes, while kHz US requires higher intensities for comparable mechanical effects due to longer wavelengths and lower energy deposition at the OMM.\n**FALSIFIABLE BY:** *In vitro* measurements of OMM lipid domain reorganization (e.g., Laurdan GP imaging) under US exposure showing no change at 20\u2013100 kHz but detectable shifts at 1\u20133 MHz.\n\n---\n\n**CLAIM 2:** Reorganization of cholesterol/cardiolipin domains in the OMM can shift VDAC1 from honeycomb (protected) to dispersed (oligomerization-competent) states, but this depends on lipid composition thresholds.\n**TYPE:** 1 (empirical support from lipid-protein interaction studies)\n**CONFIDENCE:** 0.8\n**MECHANISM:** Cholesterol-rich domains stabilize VDAC1 honeycomb arrays (reduced mobility), while cardiolipin-rich domains favor dispersed states by increasing membrane fluidity and VDAC1 lateral diffusion.\n**FALSIFIABLE BY:** Single-molecule tracking of VDAC1 in synthetic liposomes with defined cholesterol/cardiolipin ratios showing no state transition despite domain reorganization.\n\n---\n\n**CLAIM 3:** Cancer cells (elevated OMM cholesterol, reduced cardiolipin) have a lower threshold for US-induced VDAC1 state transitions compared to healthy cells, but the effect size is modest (<2-fold change in US intensity).\n**TYPE:** 3 (speculative, based on lipid profile differences)\n**CONFIDENCE:** 0.5\n**MECHANISM:** Altered lipid composition in cancer OMMs reduces membrane rigidity, lowering the energy barrier for US-induced domain reorganization and VDAC1 dispersion.\n**FALSIFIABLE BY:** Comparative US exposure studies in healthy vs. cancer cells (e.g., MCF-7) showing no difference in VDAC1 oligomerization thresholds despite lipid profile differences.\n\n---\n\n**CLAIM 4:** The mechanical energy required to reorganize OMM lipids exceeds the thermal noise floor but is within the range of clinically relevant US intensities (1\u20133 MHz, 0.5\u20133 W/cm\u00b2).\n**TYPE:** 2 (theoretical biophysics)\n**CONFIDENCE:** 0.6\n**MECHANISM:** Lipid domain reorganization requires ~10\u207b\u00b2\u2070\u201310\u207b\u00b9\u2079 J per molecule (estimated from membrane bending rigidity), achievable via MHz US microstreaming at 1\u20133 W/cm\u00b2.\n**FALSIFIABLE BY:** Molecular dynamics simulations or atomic force microscopy showing no lipid domain disruption at these US parameters.\n\n---\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n1. **Quantitative energy thresholds:** The exact mechanical energy (J/m\u00b2) required to disrupt OMM lipid domains is unknown; estimates rely on model membranes (e.g., DPPC/cholesterol).\n2. **VDAC1-lipid coupling:** Whether VDAC1 state transitions are *causally* linked to lipid domain reorganization or merely correlated is unclear.\n3. **Frequency-dependent effects:** Data on 20\u2013100 kHz US at OMM-relevant intensities is sparse; most studies focus on MHz or high-intensity kHz.\n4. **Cancer vs. healthy OMM lipidomics:** Direct comparisons of OMM lipid composition (cholesterol/cardiolipin ratios) in paired healthy/cancer cells are lacking.\n5. **Off-target effects:** US may alter other OMM proteins (e.g., TOM complex) or mitochondrial morphology, confounding VDAC1-specific interpretations.\n\n---\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP \u2500\u2500\u2500\n**Experiment:** *In situ* Laurdan GP imaging + VDAC1 FRET in healthy vs. cancer cells (e.g., MCF-10A vs. MCF-7) under 1 MHz US (0.1\u20133 W/cm\u00b2) to quantify lipid domain reorganization and VDAC1 oligomeric state shifts.",
+      "claims": [
+        {
+          "statement": "1:** Ultrasound at 1\u20133 MHz (0.1\u20133 W/cm\u00b2) can propagate mechanical energy to the OMM with sufficient intensity to disrupt cholesterol/cardiolipin domains, but 20\u2013100 kHz therapeutic US is unlikely to do so at these intensities.",
+          "type": 2,
+          "confidence": 0.7,
+          "mechanism": "MHz US generates cavitation and microstreaming near membranes, while kHz US requires higher intensities for comparable mechanical effects due to longer wavelengths and lower energy deposition at the OMM.",
+          "falsifiable_by": "*In vitro* measurements of OMM lipid domain reorganization (e.g., Laurdan GP imaging) under US exposure showing no change at 20\u2013100 kHz but detectable shifts at 1\u20133 MHz. ---"
+        },
+        {
+          "statement": "2:** Reorganization of cholesterol/cardiolipin domains in the OMM can shift VDAC1 from honeycomb (protected) to dispersed (oligomerization-competent) states, but this depends on lipid composition thresholds.",
+          "type": 1,
+          "confidence": 0.8,
+          "mechanism": "Cholesterol-rich domains stabilize VDAC1 honeycomb arrays (reduced mobility), while cardiolipin-rich domains favor dispersed states by increasing membrane fluidity and VDAC1 lateral diffusion.",
+          "falsifiable_by": "Single-molecule tracking of VDAC1 in synthetic liposomes with defined cholesterol/cardiolipin ratios showing no state transition despite domain reorganization. ---"
+        },
+        {
+          "statement": "3:** Cancer cells (elevated OMM cholesterol, reduced cardiolipin) have a lower threshold for US-induced VDAC1 state transitions compared to healthy cells, but the effect size is modest (<2-fold change in US intensity).",
+          "type": 3,
+          "confidence": 0.5,
+          "mechanism": "Altered lipid composition in cancer OMMs reduces membrane rigidity, lowering the energy barrier for US-induced domain reorganization and VDAC1 dispersion.",
+          "falsifiable_by": "Comparative US exposure studies in healthy vs. cancer cells (e.g., MCF-7) showing no difference in VDAC1 oligomerization thresholds despite lipid profile differences. ---"
+        },
+        {
+          "statement": "4:** The mechanical energy required to reorganize OMM lipids exceeds the thermal noise floor but is within the range of clinically relevant US intensities (1\u20133 MHz, 0.5\u20133 W/cm\u00b2).",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "Lipid domain reorganization requires ~10\u207b\u00b2\u2070\u201310\u207b\u00b9\u2079 J per molecule (estimated from membrane bending rigidity), achievable via MHz US microstreaming at 1\u20133 W/cm\u00b2.",
+          "falsifiable_by": "Molecular dynamics simulations or atomic force microscopy showing no lipid domain disruption at these US parameters. --- \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "grok",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\nSub-questions:\n1. Does ultrasound (0.1-3 W/cm\u00b2, 1-3 MHz or 20-100 kHz) propagate mechanical energy to the OMM with intensity sufficient to reorganize cholesterol/cardiolipin domains (~MPa pressures needed)?\n2. Does OMM lipid reorganization shift VDAC1 from honeycomb (lipid-stabilized monomers) to dispersed (oligomerization-prone) state?\n3. Does cancer OMM lipid profile (\u2191cholesterol, \u2193cardiolipin) lower the ultrasound intensity threshold for VDAC1 state transition vs. healthy cells?\n\nKey variables/relationships:\n- Ultrasound: I (0.1-3 W/cm\u00b2) \u2192 acoustic pressure p \u2248 \u221a(2\u03c1cI) ~0.1-2 MPa \u2192 shear/cavitation stress on OMM lipids.\n- Lipids: chol/CL ratio \u2192 domain stability \u2192 VDAC1 lattice (honeycomb) vs. dispersed.\n- Cancer: \u2191chol/\u2193CL \u2192 fragile domains \u2192 lower p_threshold for VDAC1 oligomerization.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: Ultrasound mechanical energy at 0.1-3 W/cm\u00b2 propagates to OMM with ~0.1-2 MPa pressures, exceeding lipid reorganization thresholds (~0.1 MPa shear).\nTYPE: 2\nCONFIDENCE: 0.9\nMECHANISM: Wavelength (15-150 \u03bcm) >> cell/mito size (1-10 \u03bcm), minimal attenuation; p_rms = \u221a(2\u03c1cI) yields MPa stresses via streaming/cavitation.\nFALSIFIABLE BY: Intracellular pressure mapping (e.g., optical tweezers) showing <0.1 MPa at mito.\n\nCLAIM: Lipid domain reorganization by mechanical stress destabilizes VDAC1 honeycomb lattice, promoting dispersed/oligomeric state.\nTYPE: 3\nCONFIDENCE: 0.4\nMECHANISM: Cholesterol/CL rafts stabilize VDAC1 hexamers; shear disrupts packing, exposing oligomerization interfaces (per MD sims of VDAC-lipid interactions).\nFALSIFIABLE BY: VDAC1 FRET/EM under US showing no lattice disruption despite lipid mixing (FRAP).\n\nCLAIM: Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells.\nTYPE: 3\nCONFIDENCE: 0.3\nMECHANISM: Elevated chol rigidifies domains but reduces CL-VDAC affinity, making lattice fragile to lower shear.\nFALSIFIABLE BY: Dose-response curves (oligomerization vs. I) identical in cancer/healthy mito liposomes.\n\nCLAIM: No direct evidence links clinical US to VDAC1 oligomerization via lipids.\nTYPE: 1\nCONFIDENCE: 1.0\nMECHANISM: Literature shows US membrane effects (sonoporation) but not OMM-specific VDAC1 state change.\nFALSIFIABLE BY: Peer-reviewed study demonstrating US-VDAC1 oligomerization in intact cells.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n- Quantitative OMM lipid domain shear threshold (Pa or strain %).\n- VDAC1 honeycomb stability constant (K_d for chol/CL).\n- Intramito acoustic attenuation coefficient (Np/\u03bcm at 20kHz-3MHz).\n- Direct US exposure data on VDAC1 (e.g., BN-PAGE oligomer bands pre/post-US).\nWould change answer: If mito p <0.01 MPa or no lipid mixing (NMR), propagation insufficient; if VDAC mutants oligomerize independently of lipids, mechanism invalid.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nExpose cancer/healthy mito liposomes to US (0.1-3 W/cm\u00b2), assay VDAC1 oligomers (BN-PAGE) + lipid domains (FRAP).\n\n\u2500\u2500\u2500",
+      "claims": [
+        {
+          "statement": "Ultrasound mechanical energy at 0.1-3 W/cm\u00b2 propagates to OMM with ~0.1-2 MPa pressures, exceeding lipid reorganization thresholds (~0.1 MPa shear).",
+          "type": 2,
+          "confidence": 0.9,
+          "mechanism": "Wavelength (15-150 \u03bcm) >> cell/mito size (1-10 \u03bcm), minimal attenuation; p_rms = \u221a(2\u03c1cI) yields MPa stresses via streaming/cavitation.",
+          "falsifiable_by": "Intracellular pressure mapping (e.g., optical tweezers) showing <0.1 MPa at mito."
+        },
+        {
+          "statement": "Lipid domain reorganization by mechanical stress destabilizes VDAC1 honeycomb lattice, promoting dispersed/oligomeric state.",
+          "type": 3,
+          "confidence": 0.4,
+          "mechanism": "Cholesterol/CL rafts stabilize VDAC1 hexamers; shear disrupts packing, exposing oligomerization interfaces (per MD sims of VDAC-lipid interactions).",
+          "falsifiable_by": "VDAC1 FRET/EM under US showing no lattice disruption despite lipid mixing (FRAP)."
+        },
+        {
+          "statement": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells.",
+          "type": 3,
+          "confidence": 0.3,
+          "mechanism": "Elevated chol rigidifies domains but reduces CL-VDAC affinity, making lattice fragile to lower shear.",
+          "falsifiable_by": "Dose-response curves (oligomerization vs. I) identical in cancer/healthy mito liposomes."
+        },
+        {
+          "statement": "No direct evidence links clinical US to VDAC1 oligomerization via lipids.",
+          "type": 1,
+          "confidence": 1.0,
+          "mechanism": "Literature shows US membrane effects (sonoporation) but not OMM-specific VDAC1 state change.",
+          "falsifiable_by": "Peer-reviewed study demonstrating US-VDAC1 oligomerization in intact cells. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "gemini",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1.  **Energy Transfer:** What is the magnitude of mechanical stress (pressure, shear) delivered to the Outer Mitochondrial Membrane (OMM) by clinically relevant ultrasound, after accounting for cytoplasmic attenuation?\n2.  **Lipid-Protein Coupling:** How does mechanical stress alter the stability of cholesterol and cardiolipin microdomains within the OMM, and does this directly control the spatial arrangement of VDAC1 monomers (honeycomb vs. dispersed)?\n3.  **Differential Sensitivity:** How does the baseline lipid composition of cancer OMMs (high cholesterol, low cardiolipin) alter the energy threshold required for ultrasound to induce VDAC1 dispersal compared to healthy OMMs?\n\nKey variables are ultrasound intensity (I_spta), frequency (f), OMM lipid composition ([cholesterol], [cardiolipin]), and VDAC1 oligomeric state. The core relationship is a proposed causal cascade: Ultrasound \u2192 OMM Stress \u2192 Lipid Reorganization \u2192 VDAC1 State Transition.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: Ultrasound at clinically relevant frequencies and intensities can deliver sufficient mechanical energy to the OMM to transiently disrupt lipid microdomains.\nTYPE: 1\nCONFIDENCE: 0.9\nMECHANISM: Acoustic radiation force and cavitation-induced shear stress generate pressure and strain fields within the cell that exceed the low energy barriers for lipid lateral diffusion and phase separation.\nFALSIFIABLE BY: Super-resolution imaging of fluorescently-labeled cholesterol and cardiolipin in the OMM of isolated mitochondria showing no spatial reorganization during sonication at 3 W/cm\u00b2.\n\nCLAIM: The honeycomb lattice of VDAC1 is stabilized by cardiolipin-rich domains, and its disruption by cholesterol enrichment or mechanical perturbation promotes a dispersed, oligomerization-competent monomeric state.\nTYPE: 2\nCONFIDENCE: 0.75\nMECHANISM: Cardiolipin facilitates VDAC1-VDAC1 interactions that form the protected honeycomb structure, while cholesterol acts as a \"spacer\" that breaks these interactions, releasing monomers.\nFALSIFIABLE BY: Cryo-EM studies showing that VDAC1 maintains a honeycomb arrangement in synthetic liposomes with high cholesterol and low cardiolipin content, or that it disperses under mechanical stress regardless of lipid composition.\n\nCLAIM: The altered lipidome of cancer cell OMMs lowers the acoustic energy threshold required to induce VDAC1 dispersal and subsequent oligomerization.\nTYPE: 3\nCONFIDENCE: 0.65\nMECHANISM: The pre-existing high cholesterol/low cardiolipin environment in cancer OMMs poises the VDAC1 honeycomb in a less stable state, requiring less external energy to trigger its collapse into dispersed monomers.\nFALSIFIABLE BY: A dose-response experiment showing that the ultrasound intensity required to induce VDAC1-mediated apoptosis is identical for cancer cells and their healthy counterparts.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1.  The precise acoustic impedance mismatch between the cytoplasm and the intermembrane space, which dictates energy transmission vs. reflection at the OMM interface.\n2.  The quantitative binding energy of VDAC1-VDAC1 interactions within the honeycomb lattice and how this value is modulated per-unit-change in local cardiolipin and cholesterol concentration.\n3.  The timescale of lipid domain reorganization versus the timescale of VDAC1 conformational changes and diffusion; it is unknown if the lipids can re-order fast enough during an acoustic cycle to influence the protein state.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nUse an acoustic tweezer setup to apply calibrated force to a giant unilamellar vesicle (GUV) containing fluorescently-labeled VDAC1 and varying cholesterol/cardiolipin ratios, monitoring VDAC1 dispersion via FRET.",
+      "claims": [
+        {
+          "statement": "Ultrasound at clinically relevant frequencies and intensities can deliver sufficient mechanical energy to the OMM to transiently disrupt lipid microdomains.",
+          "type": 1,
+          "confidence": 0.9,
+          "mechanism": "Acoustic radiation force and cavitation-induced shear stress generate pressure and strain fields within the cell that exceed the low energy barriers for lipid lateral diffusion and phase separation.",
+          "falsifiable_by": "Super-resolution imaging of fluorescently-labeled cholesterol and cardiolipin in the OMM of isolated mitochondria showing no spatial reorganization during sonication at 3 W/cm\u00b2."
+        },
+        {
+          "statement": "The honeycomb lattice of VDAC1 is stabilized by cardiolipin-rich domains, and its disruption by cholesterol enrichment or mechanical perturbation promotes a dispersed, oligomerization-competent monomeric state.",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "Cardiolipin facilitates VDAC1-VDAC1 interactions that form the protected honeycomb structure, while cholesterol acts as a \"spacer\" that breaks these interactions, releasing monomers.",
+          "falsifiable_by": "Cryo-EM studies showing that VDAC1 maintains a honeycomb arrangement in synthetic liposomes with high cholesterol and low cardiolipin content, or that it disperses under mechanical stress regardless of lipid composition."
+        },
+        {
+          "statement": "The altered lipidome of cancer cell OMMs lowers the acoustic energy threshold required to induce VDAC1 dispersal and subsequent oligomerization.",
+          "type": 3,
+          "confidence": 0.65,
+          "mechanism": "The pre-existing high cholesterol/low cardiolipin environment in cancer OMMs poises the VDAC1 honeycomb in a less stable state, requiring less external energy to trigger its collapse into dispersed monomers.",
+          "falsifiable_by": "A dose-response experiment showing that the ultrasound intensity required to induce VDAC1-mediated apoptosis is identical for cancer cells and their healthy counterparts. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "deepseek",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1. **Energy Transfer:** Can ultrasound at clinical intensities (0.1-3 W/cm\u00b2, 1-3 MHz / 20-100 kHz) deliver sufficient mechanical energy to the outer mitochondrial membrane (OMM) to reorganize its lipid domains (cholesterol, cardiolipin)?\n2. **Lipid-VDAC1 Coupling:** Does reorganization of OMM lipid domains directly shift VDAC1 from a honeycomb (protected) to a dispersed (oligomerization-competent) state?\n3. **Cancer Cell Specificity:** Does the altered lipid composition of cancer cell OMMs (higher cholesterol, lower cardiolipin) alter the energy threshold or magnitude of this ultrasound-induced VDAC1 state transition compared to healthy cells?\n\nKey variables: Ultrasound intensity/frequency, OMM lipid composition, VDAC1 spatial distribution, mechanical energy dissipation through cytoplasm. Relationships: Ultrasound energy \u2192 OMM lipid domain reorganization \u2192 altered VDAC1 packing \u2192 changed oligomerization propensity.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\n\nCLAIM: Ultrasound at therapeutic kHz frequencies (20-100 kHz) is more likely than diagnostic MHz frequencies to propagate mechanical energy capable of reorganizing OMM lipid domains.\nTYPE: 1\nCONFIDENCE: 0.7\nMECHANISM: Lower frequency, longer wavelength ultrasound experiences less scattering/absorption in cytoplasm, allowing deeper mechanical (non-thermal) effects like cavitation/microstreaming that can exert shear forces on membranes.\nFALSIFIABLE BY: Direct measurement showing MHz-range pulses cause greater OMM lipid displacement than kHz at equivalent spatial peak temporal average intensities.\n\nCLAIM: Reorganization of OMM cholesterol-rich lipid domains can shift VDAC1 from a honeycomb to a dispersed state.\nTYPE: 1\nCONFIDENCE: 0.8\nMECHANISM: VDAC1 localization and oligomerization are modulated by lipid environment; cholesterol depletion disperses VDAC1 clusters, implying mechanical disruption of cholesterol domains would have a similar effect.\nFALSIFIABLE BY: Showing that ultrasound-induced VDAC1 dispersion occurs even in cholesterol-depleted OMMs where domains are already disrupted.\n\nCLAIM: Cancer cell OMMs (high cholesterol) have a lower threshold for ultrasound-induced VDAC1 dispersion than healthy cell OMMs.\nTYPE: 2\nCONFIDENCE: 0.6\nMECHANISM: Elevated cholesterol increases membrane rigidity and order; a more ordered domain may require less mechanical energy to disrupt and release VDAC1 from its confined honeycomb arrangement.\nFALSIFIABLE BY: Experimental data showing healthy cells require lower ultrasound intensity to achieve the same degree of VDAC1 dispersion as cancer cells.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1. The exact mechanical force (in pN/nm\u00b2) required to disrupt cholesterol-cardiolipin domains in a native OMM.\n2. Quantitative in situ measurements of ultrasound-induced shear stress at the OMM within a living cell at clinical intensities.\n3. The baseline difference in VDAC1 honeycomb stability constant between isogenic cancer and normal cell lines with characterized OMM lipidomes.\n4. Whether the primary ultrasound effect is direct membrane strain or secondary (e.g., via reactive oxygen species from inertial cavitation).\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nUse super-resolution microscopy (STORM) to quantify VDAC1 cluster dispersion in live cells with fluorescently-tagged VDAC1 before/after exposure to calibrated 40 kHz ultrasound at 1 W/cm\u00b2.",
+      "claims": [
+        {
+          "statement": "Ultrasound at therapeutic kHz frequencies (20-100 kHz) is more likely than diagnostic MHz frequencies to propagate mechanical energy capable of reorganizing OMM lipid domains.",
+          "type": 1,
+          "confidence": 0.7,
+          "mechanism": "Lower frequency, longer wavelength ultrasound experiences less scattering/absorption in cytoplasm, allowing deeper mechanical (non-thermal) effects like cavitation/microstreaming that can exert shear forces on membranes.",
+          "falsifiable_by": "Direct measurement showing MHz-range pulses cause greater OMM lipid displacement than kHz at equivalent spatial peak temporal average intensities."
+        },
+        {
+          "statement": "Reorganization of OMM cholesterol-rich lipid domains can shift VDAC1 from a honeycomb to a dispersed state.",
+          "type": 1,
+          "confidence": 0.8,
+          "mechanism": "VDAC1 localization and oligomerization are modulated by lipid environment; cholesterol depletion disperses VDAC1 clusters, implying mechanical disruption of cholesterol domains would have a similar effect.",
+          "falsifiable_by": "Showing that ultrasound-induced VDAC1 dispersion occurs even in cholesterol-depleted OMMs where domains are already disrupted."
+        },
+        {
+          "statement": "Cancer cell OMMs (high cholesterol) have a lower threshold for ultrasound-induced VDAC1 dispersion than healthy cell OMMs.",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "Elevated cholesterol increases membrane rigidity and order; a more ordered domain may require less mechanical energy to disrupt and release VDAC1 from its confined honeycomb arrangement.",
+          "falsifiable_by": "Experimental data showing healthy cells require lower ultrasound intensity to achieve the same degree of VDAC1 dispersion as cancer cells. \u2500\u2500\u2500"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "round_num": 0,
+    "jaccard": 0.06337662337662338,
+    "cosine": 0.8588027894496918,
+    "jsd": 0.13755581831567176,
+    "kappa": 0.9469852104664394,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.2777777777777778,
+      "2": 0.4444444444444444,
+      "3": 0.2777777777777778
+    },
+    "type_01_ratio": 0.2777777777777778,
+    "n_claims_per_model": [
+      4,
+      4,
+      4,
+      3,
+      3
+    ]
+  },
+  "total_calls": 5
+}

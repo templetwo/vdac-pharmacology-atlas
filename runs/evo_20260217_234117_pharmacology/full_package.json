@@ -1,0 +1,873 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260217_234117_pharmacology",
+  "timestamp": "2026-02-17T23:43:16.616624+00:00",
+  "question": "How does the mitochondrial permeability transition pore (mPTP) interact with VDAC1 to execute the final commitment to cell death, and what determines the point of no return? Specifically: (1) Does VDAC1 oligomerization precede or follow mPTP opening \u2014 is VDAC the trigger or the amplifier? (2) What is the role of cyclophilin D binding at the matrix face while VDAC engages at the OMM \u2014 do they form a trans-membrane death complex? (3) Is there a calcium concentration threshold at which VDAC1-mPTP coupling becomes irreversible, and does this threshold differ between cardiac, neuronal, and hepatic mitochondria? (4) Can the mPTP be opened without VDAC1 oligomerization (via ANT alone), and if so, does this produce a different mode of death (apoptosis vs necrosis)? (5) What role does the contact site \u2014 where OMM meets IMM \u2014 play as the physical location where the life/death decision is executed?",
+  "convergence_report": {
+    "s1_initial": {
+      "n_models_responded": 5,
+      "initial_jaccard": 0.03233580145344851,
+      "initial_cosine": 0.8329009115695953
+    },
+    "s2_refinement": {
+      "total_rounds": 0,
+      "early_stopped": false,
+      "final_jaccard": 0.0,
+      "final_cosine": 0.0,
+      "final_jsd": 0.0,
+      "final_type_01_ratio": 0.0
+    },
+    "s3_gate": {
+      "passed": true,
+      "jaccard": 0.5443,
+      "type_01_ratio": 0.7619,
+      "recommendation": ""
+    }
+  },
+  "verification": {
+    "n_type2_input": 10,
+    "n_promoted": 0,
+    "n_held": 8,
+    "n_novel": 0,
+    "n_contradicted": 2,
+    "total_calls": 10
+  },
+  "gate": {
+    "passed": true,
+    "n_passed": 10,
+    "n_failed": 9,
+    "recommendation": "Lab Gate PASSED with filter. 10/19 claims cleared. 9 filtered: 'CypD and VDAC1 do not form a stable trans-membrane...' not feasible; 'Contact sites (MICOS/OPA1) localize mPTP-VDAC coup...' lacks novelty; 'VDAC1 oligomerization is an amplifier, not the pri...' lacks falsifiability",
+    "claims": [
+      {
+        "statement": "VDAC1 oligomerization is primarily an amplifier, not the initial trigger; mPTP opening is initiated ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "CypD and VDAC1 do not form a stable trans-membrane complex but are functionally coupled through cont",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The irreversible Ca\u00b2\u207a threshold differs across tissues: cardiac ~50-100 \u00b5M matrix Ca\u00b2\u207a, neuronal ~20",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "ANT-mediated mPTP opening without VDAC1 oligomerization produces transient, low-conductance openings",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "VDAC1 and CypD do *not* form a direct trans-membrane complex but are functionally coupled via Ca\u00b2\u207a m",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The Ca\u00b2\u207a threshold for irreversible mPTP opening is *lower in cardiac mitochondria* (~200 \u00b5M) than h",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "mPTP can open *without VDAC1 oligomerization* (e.g., via ANT/CypD alone), but this produces *apoptos",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The OMM-IMM contact site is the *physical locus* of the life/death decision, where Ca\u00b2\u207a microdomains",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "CypD at IMM matrix face and VDAC1 at OMM do not form a stable trans-membrane death complex; CypD reg",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Irreversible VDAC1-mPTP coupling occurs above matrix [Ca\u00b2\u207a] ~200-500 \u03bcM; cardiac mito most sensitive",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "mPTP opens without VDAC1 oligomerization (core via ATP synthase, not ANT); VDAC-indep \u2192 necrosis, VD",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Contact sites (MICOS/OPA1) localize mPTP-VDAC coupling as decision hub, aligning pores for Ca\u00b2\u207a/ROS ",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "VDAC1 oligomerization is an amplifier, not the primary trigger, of mPTP opening. It follows and stab",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "CypD and VDAC1 do not directly bind but form a functional trans-membrane complex bridged by the core",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "The Ca2+ threshold for irreversible mPTP opening is tissue-specific, determined by the local express",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "VDAC1 oligomerization at OMM-IMM contact sites precedes and facilitates sustained mPTP opening, acti",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "CypD binding to the IMM matrix face and VDAC1 at the OMM do not form a stable, direct trans-membrane",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "The calcium threshold for irreversible mPTP/VDAC1 coupling is tissue-specific, being lowest in cardi",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      },
+      {
+        "statement": "mPTP can open without VDAC1 oligomerization (e.g., via ANT-CypD interaction alone), but this leads t",
+        "falsifiable": false,
+        "feasible": false,
+        "novel": false,
+        "passed": false
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H2",
+      "prediction": "IF mitochondria from mouse heart, brain cortex, and liver are subjected to sequential Ca\u00b2\u207a boluses (10 \u00b5M increments), THEN calcium retention capacity (CRC) before irreversible \u0394\u03a8m collapse follows: cardiac < neuronal < hepatic, with CRC values of 150-250, 250-400, and 400-700 nmol Ca\u00b2\u207a/mg protein respectively, AND the Ca\u00b2\u207a load at which VDAC1 oligomers first appear (by crosslinking) correlates with CRC (r\u00b2 > 0.7).",
+      "testability_score": 9.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "CRC_cardiac",
+          "range": "100.0-300.0 nmol/mg",
+          "distribution": "uniform"
+        },
+        {
+          "name": "CRC_neuronal",
+          "range": "200.0-500.0 nmol/mg",
+          "distribution": "uniform"
+        },
+        {
+          "name": "CRC_hepatic",
+          "range": "300.0-800.0 nmol/mg",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Cardiolipin_content",
+          "range": "5.0-25.0 nmol/mg",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.0586,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5008179913288715,
+            "std": 0.15033298505938428,
+            "median": 0.4956530980769948,
+            "ci_lower": 0.222005051072042,
+            "ci_upper": 0.7868062895933343,
+            "min": 0.1359645709255032,
+            "max": 0.9110213034155877
+          }
+        }
+      }
+    },
+    {
+      "id": "H1",
+      "prediction": "IF isolated mitoplasts (OMM-stripped) are exposed to Ca\u00b2\u207a (200 \u00b5M) + Pi (2 mM), THEN CsA-sensitive \u0394\u03a8m collapse occurs with identical EC\u2085\u2080 (\u00b115%) compared to intact mitochondria, AND pre-treatment of intact mitochondria with VBIT-4 (20 \u00b5M) blocks VDAC1 oligomerization (>80% reduction by crosslinking/native PAGE) without preventing initial mPTP-driven \u0394\u03a8m loss (\u226420% delay in onset).",
+      "testability_score": 8.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "4_IC50_oligomerization",
+          "range": "1.0-50.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "CsA_concentration",
+          "range": "0.5-2.0 \u00b5M",
+          "distribution": "uniform"
+        },
+        {
+          "name": "mPTP_onset_delay_with_VBIT4",
+          "range": "0.0-60.0 s",
+          "distribution": "uniform"
+        },
+        {
+          "name": "VDAC1_oligomer_reduction",
+          "range": "50.0-100.0 %",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9309,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.500099337051926,
+            "std": 0.13669012241801018,
+            "median": 0.5135273267663021,
+            "ci_lower": 0.2510342211431588,
+            "ci_upper": 0.7356861615114252,
+            "min": 0.1498587331629338,
+            "max": 0.8597271425353767
+          }
+        }
+      }
+    },
+    {
+      "id": "H3",
+      "prediction": "IF VDAC1 is genetically ablated (CRISPR triple-KO of VDAC1/2/3) in HeLa or MEF cells, THEN Ca\u00b2\u207a overload (ionomycin 5 \u00b5M + thapsigargin 2 \u00b5M) still triggers mPTP opening (CsA-sensitive \u0394\u03a8m loss), BUT death shifts from necrosis (>70% PI+/AnnexinV+ in WT) to apoptosis (>60% AnnexinV+/PI\u2212 in KO), with reduced LDH release (>50% reduction), maintained caspase-3 activation, and absence of mitochondrial swelling.",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "Necrosis_fraction_WT",
+          "range": "50.0-90.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Apoptosis_fraction_KO",
+          "range": "40.0-80.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "LDH_release_reduction_KO",
+          "range": "30.0-80.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "Caspase3_activity_KO_vs_WT",
+          "range": "1.0-3.0 fold",
+          "distribution": "log-normal"
+        },
+        {
+          "name": "mPTP_opening_delay_KO",
+          "range": "0.0-30.0 min",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9903,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4997832644710626,
+            "std": 0.13595275264327417,
+            "median": 0.5013210287263543,
+            "ci_lower": 0.24745700424907288,
+            "ci_upper": 0.7540606056576303,
+            "min": 0.13454120040015544,
+            "max": 0.8476871389710233
+          }
+        }
+      }
+    },
+    {
+      "id": "H4",
+      "prediction": "IF proximity ligation assay (PLA) or FRET is performed on intact energized mitochondria during",
+      "testability_score": 5.0,
+      "key_variables": [],
+      "parameters": [],
+      "monte_carlo": {
+        "effect_size": 0.0,
+        "power": 0.0,
+        "converged": true,
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.5,
+            "std": 0.0,
+            "median": 0.5,
+            "ci_lower": 0.5,
+            "ci_upper": 0.5,
+            "min": 0.5,
+            "max": 0.5
+          }
+        }
+      }
+    }
+  ],
+  "simulations": {
+    "n_hypotheses_simulated": 4,
+    "total_iterations": 1200,
+    "llm_calls": 0,
+    "results": [
+      {
+        "hypothesis_id": "H1",
+        "n_iterations": 300,
+        "effect_size": 0.9309,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "4_IC50_oligomerization": {
+            "mean": 24.84602092519529,
+            "std": 14.201276873516603,
+            "median": 24.471204897636433,
+            "ci_lower": 2.3567955154802336,
+            "ci_upper": 48.244484082273296,
+            "min": 1.3607512177992702,
+            "max": 49.62640263873602
+          },
+          "CsA_concentration": {
+            "mean": 1.2579794226927015,
+            "std": 0.4257263171876517,
+            "median": 1.2702215860978794,
+            "ci_lower": 0.554163050720895,
+            "ci_upper": 1.970180633540074,
+            "min": 0.5081447511930507,
+            "max": 1.998657095711358
+          },
+          "mPTP_onset_delay_with_VBIT4": {
+            "mean": 29.831974607982616,
+            "std": 17.869882209743455,
+            "median": 30.126278931371782,
+            "ci_lower": 1.025824018270541,
+            "ci_upper": 59.041596230894896,
+            "min": 0.07398375071448804,
+            "max": 59.92460220400589
+          },
+          "VDAC1_oligomer_reduction": {
+            "mean": 75.56123340051174,
+            "std": 14.582620633648931,
+            "median": 74.54663404758095,
+            "ci_lower": 52.12952220192187,
+            "ci_upper": 99.17613469031494,
+            "min": 50.02593720828528,
+            "max": 99.97109546120939
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H2",
+        "n_iterations": 300,
+        "effect_size": 1.0586,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "CRC_cardiac": {
+            "mean": 199.6554585519658,
+            "std": 57.01426270651764,
+            "median": 198.97870254393865,
+            "ci_lower": 105.27160876737852,
+            "ci_upper": 294.218750119822,
+            "min": 100.63003055306771,
+            "max": 299.5763488548241
+          },
+          "CRC_neuronal": {
+            "mean": 348.741678362192,
+            "std": 85.69016096269615,
+            "median": 350.92599881241165,
+            "ci_lower": 206.37057662934728,
+            "ci_upper": 490.3395415647434,
+            "min": 200.66614911923753,
+            "max": 498.6747984546893
+          },
+          "CRC_hepatic": {
+            "mean": 550.448956611047,
+            "std": 142.802903813356,
+            "median": 540.0107588786002,
+            "ci_lower": 317.0260803745422,
+            "ci_upper": 788.7955116089078,
+            "min": 308.4151566028174,
+            "max": 798.9210204148064
+          },
+          "Cardiolipin_content": {
+            "mean": 15.165823295858461,
+            "std": 5.954247882327593,
+            "median": 15.642274608171114,
+            "ci_lower": 5.446210702851872,
+            "ci_upper": 24.444806230481213,
+            "min": 5.112665351631007,
+            "max": 24.959932295882197
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H3",
+        "n_iterations": 300,
+        "effect_size": 0.9903,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "Necrosis_fraction_WT": {
+            "mean": 69.49796224795554,
+            "std": 11.53065595072225,
+            "median": 68.49939196382303,
+            "ci_lower": 51.50040969978329,
+            "ci_upper": 88.90614482727183,
+            "min": 50.219813040742096,
+            "max": 89.81542744841653
+          },
+          "Apoptosis_fraction_KO": {
+            "mean": 59.379004198903324,
+            "std": 11.748008910817504,
+            "median": 58.8420238833132,
+            "ci_lower": 40.9974024464235,
+            "ci_upper": 78.79669846828953,
+            "min": 40.05145005162992,
+            "max": 79.71131443995928
+          },
+          "LDH_release_reduction_KO": {
+            "mean": 54.0957510114379,
+            "std": 14.768676359607618,
+            "median": 53.04335314837536,
+            "ci_lower": 31.30744748052763,
+            "ci_upper": 78.56819855779734,
+            "min": 30.16619076303437,
+            "max": 79.73995455863074
+          },
+          "Caspase3_activity_KO_vs_WT": {
+            "mean": 2.007831467878126,
+            "std": 0.5015854825361402,
+            "median": 1.9742333077982566,
+            "ci_lower": 1.1776036174056428,
+            "ci_upper": 3.0,
+            "min": 1.0100229160558551,
+            "max": 3.0
+          },
+          "mPTP_opening_delay_KO": {
+            "mean": 16.234842210480615,
+            "std": 9.067538889468086,
+            "median": 17.644152733115448,
+            "ci_lower": 1.1079695944153565,
+            "ci_upper": 29.26679291311488,
+            "min": 0.038175235085791126,
+            "max": 29.84415606650816
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H4",
+        "n_iterations": 300,
+        "effect_size": 0.0,
+        "power": 0.0,
+        "converged": true,
+        "parameters": {}
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF isolated mitoplasts (OMM-stripped) are exposed to Ca\u00b2\u207a (200 \u00b5M) + Pi (2 mM), THEN CsA-sensitive \u0394\u03a8m collapse occurs with identical EC\u2085\u2080 (\u00b115%) compared to intact mitochondria, AND pre-treatment of intact mitochondria with VBIT-4 (20 \u00b5M) blocks VDAC1 oligomerization (>80% reduction by crosslinking/native PAGE) without preventing initial mPTP-driven \u0394\u03a8m loss (\u226420% delay in onset).",
+      "protocol": "Isolate liver mitochondria (mouse) and prepare mitoplasts by digitonin titration (0.1 mg/mg protein). Load with TMRM (100 nM) and Fluo-4 AM. Challenge with Ca\u00b2\u207a pulses (50-500 \u00b5M) \u00b1 CsA (1 \u00b5M) \u00b1 VBIT-4 (5, 10, 20 \u00b5M). Monitor \u0394\u03a8m by plate reader kinetics (1-s resolution, 30 min). At defined timepoints, crosslink with EGS (0.5 mM, 15 min) and run native PAGE/Western for VDAC1 oligomers. Compare intact mitochondria vs. mitoplasts.",
+      "dose_ranges": {
+        "4": {
+          "doses": [
+            5.0,
+            10.0,
+            20.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "CsA": {
+          "doses": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "TMRM fluorescence (\u0394\u03a8m kinetics)",
+        "Fluo-4 (matrix Ca\u00b2\u207a)",
+        "native PAGE + anti-VDAC1 Western (oligomer quantification)",
+        "light scattering at 540 nm (swelling)"
+      ],
+      "controls": [
+        "Vehicle (DMSO)",
+        "CsA alone",
+        "VBIT-4 alone",
+        "Ca\u00b2\u207a-free",
+        "alamethicin (maximal swelling)",
+        "digitonin titration verification by citrate synthase accessibility",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "mPTP opens in mitoplasts lacking OMM/VDAC1; VBIT-4 blocks oligomerization but \u0394\u03a8m collapse onset is unchanged; CsA blocks both. Oligomerization appears 2-5 min after* initial \u0394\u03a8m drop.",
+      "null_outcome": "VBIT-4 prevents or delays mPTP opening itself (>50% increase in calcium retention capacity), OR mitoplasts fail to show CsA-sensitive PT, indicating VDAC1 is required for initiation."
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF mitochondria from mouse heart, brain cortex, and liver are subjected to sequential Ca\u00b2\u207a boluses (10 \u00b5M increments), THEN calcium retention capacity (CRC) before irreversible \u0394\u03a8m collapse follows: cardiac < neuronal < hepatic, with CRC values of 150-250, 250-400, and 400-700 nmol Ca\u00b2\u207a/mg protein respectively, AND the Ca\u00b2\u207a load at which VDAC1 oligomers first appear (by crosslinking) correlates with CRC (r\u00b2 > 0.7).",
+      "protocol": "Isolate mitochondria from 8-week C57BL/6 mouse heart (Percoll gradient), cortical brain (ficoll), and liver (differential centrifugation), n=6 per tissue. Perform CRC assay with Calcium Green-5N (1 \u00b5M) in standard respiration buffer (125 mM KCl, 2 mM KH\u2082PO\u2084, 5 mM glutamate/malate), adding 10 \u00b5M Ca\u00b2\u207a pulses every 60 s. At each pulse, remove aliquot for EGS crosslinking + VDAC1 native PAGE. Quantify CypD by Western blot and cardiolipin by LC-MS/MS. Repeat \u00b1 CsA (1 \u00b5M) and \u00b1 VBIT-4 (20 \u00b5M).",
+      "dose_ranges": {
+        "pulses": {
+          "doses": [
+            10.0
+          ],
+          "unit": "\u00b5M"
+        },
+        "CsA": {
+          "doses": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "4": {
+          "doses": [
+            10.0,
+            20.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "Calcium Green-5N fluorescence (CRC)",
+        "TMRM (\u0394\u03a8m)",
+        "native PAGE/Western (VDAC1 oligomers)",
+        "Western blot (CypD",
+        "ANT",
+        "ATP synthase subunit c)",
+        "LC-MS/MS (cardiolipin species)",
+        "citrate synthase activity (normalization)"
+      ],
+      "controls": [
+        "Alamethicin (max swelling)",
+        "EGTA (Ca\u00b2\u207a chelation)",
+        "CypD-KO mouse mitochondria (positive control for CsA-insensitive component)",
+        "boiled mitochondria (negative)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "Cardiac mitochondria show lowest CRC, earliest VDAC1 oligomerization; hepatic highest CRC, latest oligomerization. CypD/ANT ratio inversely correlates with CRC. CsA equalizes CRC across tissues (\u00b130%). VBIT-4 does not change CRC but delays oligomer appearance.",
+      "null_outcome": "CRC values are statistically indistinguishable across tissues (ANOVA p>0.05), OR ranking differs from predicted (e.g., neuronal most resistant), OR VDAC1 oligomerization timing does not correlate with CRC."
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF VDAC1 is genetically ablated (CRISPR triple-KO of VDAC1/2/3) in HeLa or MEF cells, THEN Ca\u00b2\u207a overload (ionomycin 5 \u00b5M + thapsigargin 2 \u00b5M) still triggers mPTP opening (CsA-sensitive \u0394\u03a8m loss), BUT death shifts from necrosis (>70% PI+/AnnexinV+ in WT) to apoptosis (>60% AnnexinV+/PI\u2212 in KO), with reduced LDH release (>50% reduction), maintained caspase-3 activation, and absence of mitochondrial swelling.",
+      "protocol": "Generate VDAC1/2/3 triple-KO HeLa cells via sequential CRISPR-Cas9 (validated by Western blot and functional reconstitution). Treat WT and KO with ionomycin (2, 5, 10 \u00b5M) \u00b1 CsA (1 \u00b5M) or VBIT-4 (20 \u00b5M) for 2-8 h. Assess: (1) \u0394\u03a8m by TMRM live imaging, (2) death mode by AnnexinV-FITC/PI flow cytometry at 2, 4, 8 h, (3) LDH release (supernatant), (4) caspase-3/7 activity (luminescent assay), (5) mitochondrial swelling by TEM, (6) cytochrome c release by digitonin fractionation/Western. Include Bax/Bak DKO as apoptosis-",
+      "dose_ranges": {
+        "Ionomycin": {
+          "doses": [
+            2.0,
+            5.0,
+            10.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "Thapsigargin": {
+          "doses": [
+            1.0,
+            2.0,
+            5.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "CsA": {
+          "doses": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "4": {
+          "doses": [
+            5.0,
+            10.0,
+            20.0
+          ],
+          "unit": "\u00b5M;"
+        },
+        "FMK": {
+          "doses": [
+            20.0,
+            50.0
+          ],
+          "unit": "\u00b5M"
+        }
+      },
+      "readouts": [
+        "Flow cytometry (AnnexinV/PI)",
+        "TMRM fluorescence",
+        "LDH assay",
+        "Caspase-Glo 3/7",
+        "TEM (cristae/swelling morphometry)",
+        "Western (cytochrome c",
+        "cleaved PARP",
+        "VDAC1)"
+      ],
+      "controls": [
+        "WT + DMSO",
+        "WT + CsA",
+        "WT + VBIT-4",
+        "VDAC-KO + CsA",
+        "Bax/Bak DKO (apoptosis block)",
+        "z-VAD-FMK (caspase inhibition to test necrosis default)",
+        "staurosporine (canonical apoptosis control)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "VDAC-KO cells still undergo CsA-sensitive \u0394\u03a8m loss but die primarily by apoptosis (caspase-dependent, AnnexinV+/PI\u2212, minimal swelling). WT cells show necrosis (PI+, LDH high, swollen mitochondria). CsA blocks both. VBIT-4 phenocopies KO in WT cells.",
+      "null_outcome": "VDAC-KO cells show identical necrotic death kinetics and markers as WT (death mode independent of VDAC), OR VDAC-KO cells are completely resistant to Ca\u00b2\u207a-induced death (VDAC required for mPTP itself)."
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF proximity ligation assay (PLA) or FRET is performed on intact energized mitochondria during",
+      "protocol": "",
+      "dose_ranges": {},
+      "readouts": [],
+      "controls": [],
+      "expected_outcome": "",
+      "null_outcome": ""
+    }
+  ],
+  "budget": {
+    "s1_calls": 5,
+    "s2_calls": 0,
+    "verify_calls": 10,
+    "gate_calls": 1,
+    "s4_calls": 1,
+    "s5_calls": 0,
+    "total_calls": 17,
+    "budget_target": "92-142 calls"
+  },
+  "audit_trail": {
+    "session_seed": 1771371680,
+    "s2_rounds": [],
+    "s3_gate": {
+      "stage": "S3",
+      "passed": true,
+      "convergence_score": 0.9303,
+      "convergence_threshold": 0.85,
+      "convergence_pass": true,
+      "jaccard": 0.5443,
+      "jaccard_threshold": 0.85,
+      "jaccard_pass": false,
+      "type_01_ratio": 0.7619,
+      "type_01_threshold": 0.75,
+      "type_pass": true,
+      "cosine": 0.9303,
+      "jsd": 0.1759,
+      "kappa": 0.968,
+      "type_distribution": {
+        "0": 0.6190476190476191,
+        "1": 0.14285714285714285,
+        "2": 0.09523809523809523,
+        "3": 0.14285714285714285
+      }
+    },
+    "final_claims": [
+      {
+        "statement": "VDAC1 oligomerization is primarily an amplifier, not the initial trigger; mPTP opening is initiated by matrix Ca\u00b2\u207a overload acting on CypD-sensitized ANT/ATP synthase components at the IMM.",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "Matrix Ca\u00b2\u207a activates CypD binding to the IMM pore component (likely ATP synthase c-ring or ANT), causing initial permeability transition; subsequent \u0394\u03a8m collapse and cytochrome c release then promote VDAC1 oligomerization at the OMM, which releases pro-apoptotic factors and locks in commitment.",
+        "falsifiable_by": "Demonstrating that VDAC1 oligomerization inhibitors (e.g., VBIT-4) prevent mPTP opening itself (not just downstream amplification) in isolated mitoplasts retaining OMM.",
+        "model": "claude"
+      },
+      {
+        "statement": "CypD and VDAC1 do not form a stable trans-membrane complex but are functionally coupled through contact sites where ANT bridges IMM-OMM, creating a transient signaling hub rather than a fixed structural pore.",
+        "type": 2,
+        "confidence": 0.55,
+        "mechanism": "ANT physically interacts with VDAC1 at contact sites (demonstrated by co-IP and crosslinking) while CypD binds ANT's matrix-facing domain; this tripartite interaction is dynamic, Ca\u00b2\u207a-dependent, and stabilized by oxidative stress rather than constitutive.",
+        "falsifiable_by": "Cryo-ET structures showing a stable CypD-ANT-VDAC1 complex persisting in non-stressed mitochondria at contact sites.",
+        "model": "claude"
+      },
+      {
+        "statement": "The irreversible Ca\u00b2\u207a threshold differs across tissues: cardiac ~50-100 \u00b5M matrix Ca\u00b2\u207a, neuronal ~20-50 \u00b5M, hepatic ~100-200 \u00b5M, reflecting CypD expression levels and cardiolipin composition.",
+        "type": 3,
+        "confidence": 0.3,
+        "mechanism": "Neuronal mitochondria have higher CypD:ANT ratios and lower Ca\u00b2\u207a buffering capacity; cardiac mitochondria have intermediate sensitivity modulated by high cardiolipin content; hepatic mitochondria have greatest Ca\u00b2\u207a retention capacity.",
+        "falsifiable_by": "Systematic calcium retention capacity assays across freshly isolated tissue-specific mitochondria with simultaneous VDAC1 oligomerization monitoring (crosslinking + native PAGE).",
+        "model": "claude"
+      },
+      {
+        "statement": "ANT-mediated mPTP opening without VDAC1 oligomerization produces transient, low-conductance openings associated with apoptotic signaling (ROS flickers, limited cytochrome c release), while VDAC1 oligomerization enables high-conductance, sustained opening committing to necrosis.",
+        "type": 2,
+        "confidence": 0.5,
+        "mechanism": "VDAC1 oligomers form large OMM pores (~4 nm) releasing cytochrome c en masse and collapsing \u0394\u03a8m irreversibly; without oligomerization, OMM remains semi-intact, permitting MOMP-regulated apoptosis via Bax/Bak.",
+        "falsifiable_by": "Showing that VDAC1-knockout cells still undergo necrotic death with identical kinetics upon mPTP opening. \u2500\u2500\u2500",
+        "model": "claude"
+      },
+      {
+        "statement": "VDAC1 oligomerization *follows* initial mPTP opening but *amplifies* the pore\u2019s conductance, acting as a positive feedback loop.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "mPTP opening (via ANT/CypD) disrupts IMM potential, triggering VDAC1 oligomerization at OMM to stabilize the pore and enable massive solute flux.",
+        "falsifiable_by": "Time-resolved super-resolution imaging showing VDAC1 oligomerization *preceding* IMM depolarization in single mitochondria.",
+        "model": "mistral"
+      },
+      {
+        "statement": "VDAC1 and CypD do *not* form a direct trans-membrane complex but are functionally coupled via Ca\u00b2\u207a microdomains at contact sites.",
+        "type": 1,
+        "confidence": 0.8,
+        "mechanism": "CypD binds ATP synthase/ANT at IMM, while VDAC1 at OMM regulates Ca\u00b2\u207a influx; their interaction is mediated by Ca\u00b2\u207a-dependent conformational changes, not physical bridging.",
+        "falsifiable_by": "Cryo-EM or FRET showing direct VDAC1-CypD interaction in intact mitochondria.",
+        "model": "mistral"
+      },
+      {
+        "statement": "The Ca\u00b2\u207a threshold for irreversible mPTP opening is *lower in cardiac mitochondria* (~200 \u00b5M) than hepatic (~500 \u00b5M) or neuronal (~300 \u00b5M) due to differential cardiolipin content and CypD expression.",
+        "type": 1,
+        "confidence": 0.6,
+        "mechanism": "Cardiolipin stabilizes mPTP components, while CypD lowers the Ca\u00b2\u207a threshold; cardiac mitochondria have high cardiolipin and CypD, reducing the required Ca\u00b2\u207a.",
+        "falsifiable_by": "Comparative Ca\u00b2\u207a retention capacity assays in isolated mitochondria from each tissue, with cardiolipin/CypD manipulation.",
+        "model": "mistral"
+      },
+      {
+        "statement": "mPTP can open *without VDAC1 oligomerization* (e.g., via ANT/CypD alone), but this produces *apoptosis* (cytochrome c release) rather than necrosis (swelling/rupture).",
+        "type": 2,
+        "confidence": 0.5,
+        "mechanism": "VDAC1 oligomerization enables large-scale OMM permeabilization, while ANT-driven mPTP opening is limited to IMM, favoring cytochrome c release over osmotic catastrophe.",
+        "falsifiable_by": "CRISPR knockout of VDAC1 in cells, followed by Ca\u00b2\u207a overload to compare death phenotypes (apoptosis vs. necrosis markers).",
+        "model": "mistral"
+      },
+      {
+        "statement": "The OMM-IMM contact site is the *physical locus* of the life/death decision, where Ca\u00b2\u207a microdomains and protein-protein interactions converge to determine mPTP irreversibility.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "Contact sites concentrate VDAC1, ANT, and CypD, creating a Ca\u00b2\u207a-sensitive \"decision node\" where local [Ca\u00b2\u207a] and protein interactions dictate pore stability.",
+        "falsifiable_by": "Disrupting contact sites (e.g., mitofilin knockdown) and measuring mPTP opening kinetics under Ca\u00b2\u207a stress. --- \u2500\u2500\u2500",
+        "model": "mistral"
+      },
+      {
+        "statement": "VDAC1 oligomerization follows mPTP opening, amplifying OMM permeabilization rather than triggering.",
+        "type": 2,
+        "confidence": 0.85,
+        "mechanism": "Matrix Ca\u00b2\u207a overload induces CypD-dependent mPTP in IMM, causing swelling/OMM rupture that secondarily drives VDAC1 hexamerization for cyt c release.",
+        "falsifiable_by": "Live-cell super-res imaging showing VDAC1 oligomers before mPTP Ca\u00b2\u207a flux in isolated mito.",
+        "model": "grok"
+      },
+      {
+        "statement": "CypD at IMM matrix face and VDAC1 at OMM do not form a stable trans-membrane death complex; CypD regulates core mPTP (ATP synthase), VDAC amplifies separately.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "Genetic CypD KO blocks mPTP without affecting VDAC; no direct CypD-VDAC binding evidenced.",
+        "falsifiable_by": "Co-IP or FRET showing CypD-VDAC1 interaction in PT-induced mito.",
+        "model": "grok"
+      },
+      {
+        "statement": "Irreversible VDAC1-mPTP coupling occurs above matrix [Ca\u00b2\u207a] ~200-500 \u03bcM; cardiac mito most sensitive (~200 \u03bcM), neuronal ~300 \u03bcM, hepatic ~500 \u03bcM due to ROS/CypD expression variance.",
+        "type": 3,
+        "confidence": 0.6,
+        "mechanism": "Threshold exceeds CypD dissociation Kd (~nM), propagating ROS to VDAC gating at contacts.",
+        "falsifiable_by": "Dose-response curves in tissue-specific mito showing uniform threshold.",
+        "model": "grok"
+      },
+      {
+        "statement": "mPTP opens without VDAC1 oligomerization (core via ATP synthase, not ANT); VDAC-indep \u2192 necrosis, VDAC-dep \u2192 apoptosis hybrid.",
+        "type": 2,
+        "confidence": 0.8,
+        "mechanism": "VDAC1/2/3 triple-KO mito still exhibit CsA-sensitive swelling; ANT mutants retain PT.",
+        "falsifiable_by": "VDAC-KO mito failing CsA-sensitive \u0394\u03a8m collapse.",
+        "model": "grok"
+      },
+      {
+        "statement": "Contact sites (MICOS/OPA1) localize mPTP-VDAC coupling as decision hub, aligning pores for Ca\u00b2\u207a/ROS flux.",
+        "type": 3,
+        "confidence": 0.7,
+        "mechanism": "~20% mito surface contacts enable signal amplification without full rupture.",
+        "falsifiable_by": "Contact-site disruptors (e.g., Mitofusin siRNA) abolishing PT sans swelling. \u2500\u2500\u2500",
+        "model": "grok"
+      },
+      {
+        "statement": "VDAC1 oligomerization is an amplifier, not the primary trigger, of mPTP opening. It follows and stabilizes the initial high-conductance state.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "Matrix Ca2+ overload, sensed by an inner membrane component (likely the F-ATP synthase), initiates a conformational change causing a low-conductance flicker; this change promotes interaction with and subsequent oligomerization of VDAC1 at contact sites to create the stable, high-conductance pore.",
+        "falsifiable_by": "Evidence from super-resolution microscopy showing VDAC1 oligomerization consistently preceding the initial release of matrix-loaded calcein.",
+        "model": "gemini"
+      },
+      {
+        "statement": "CypD and VDAC1 do not directly bind but form a functional trans-membrane complex bridged by the core pore component (e.g., F-ATP synthase) at the OMM-IMM contact site.",
+        "type": 2,
+        "confidence": 0.8,
+        "mechanism": "CypD binding to its matrix-facing target (e.g., OSCP subunit of ATP synthase) lowers the Ca2+ concentration required to trigger the pore's conformational change, effectively sensitizing the system which is anchored at the contact site, allowing engagement with VDAC1.",
+        "falsifiable_by": "Demonstration of direct, high-affinity binding between CypD and VDAC1 in a lipid environment, or Cryo-EM data showing the open mPTP structure lacks a physical bridge between the matrix and outer membrane.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The Ca2+ threshold for irreversible mPTP opening is tissue-specific, determined by the local expression levels of regulatory proteins like CypD and Bcl-2 family members.",
+        "type": 1,
+        "confidence": 0.95,
+        "mechanism": "Cardiac mitochondria, with high metabolic flux and different regulatory protein stoichiometries, have a different Ca2+ buffering capacity and CypD expression level than neuronal or hepatic mitochondria, altering their sensitivity to identical Ca2+ insults.",
+        "falsifiable_by": "Finding identical Ca2+ opening thresholds in mitochondria isolated from heart, brain, and liver when controlling for all variables except intrinsic protein expression. \u2500\u2500\u2500",
+        "model": "gemini"
+      },
+      {
+        "statement": "VDAC1 oligomerization at OMM-IMM contact sites precedes and facilitates sustained mPTP opening, acting as an amplifier rather than the sole trigger.",
+        "type": 1,
+        "confidence": 0.7,
+        "mechanism": "Oligomeric VDAC1 clusters create a high-conductance pathway for Ca\u00b2\u207a and metabolic solute flux across the OMM, lowering the threshold for IMM depolarization via mPTP.",
+        "falsifiable_by": "Demonstrating that genetic ablation of VDAC1 does not delay or prevent mPTP opening in response to standard calcium overload insults.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "CypD binding to the IMM matrix face and VDAC1 at the OMM do not form a stable, direct trans-membrane complex, but cooperate allosterically via contact-site tethering proteins.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "Proximity at contact sites allows CypD-mediated lowering of the mPTP activation threshold to be synchronized with VDAC1-mediated OMM permeabilization, without a fixed stoichiometric complex.",
+        "falsifiable_by": "Cryo-EM structure of a native mitochondrial membrane supercomplex showing a direct, continuous protein channel from VDAC1 through to ANT, with CypD bound.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "The calcium threshold for irreversible mPTP/VDAC1 coupling is tissue-specific, being lowest in cardiac mitochondria due to higher baseline oxidative stress and CypD expression.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "Tissue-specific metabolic profiles and ROS production modulate the redox state of critical cysteines in VDAC1 and ANT, altering their sensitivity to calcium-induced opening.",
+        "falsifiable_by": "In vitro calcium retention capacity assays showing identical thresholds for purified mitochondria from heart, brain, and liver when matched for matrix pH and redox state.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "mPTP can open without VDAC1 oligomerization (e.g., via ANT-CypD interaction alone), but this leads to a reversible, transient pore associated with apoptotic signaling, whereas VDAC1 engagement commits to irreversible, necrotic death.",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "ANT-mediated pore is smaller and regulated, allowing controlled cytochrome c release; VDAC1 oligomerization causes catastrophic solute exchange, osmotic swelling, and OMM rupture.",
+        "falsifiable_by": "Observation of rapid, full necrotic death in cells lacking functional VDAC1 oligomerization under calcium overload conditions. \u2500\u2500\u2500",
+        "model": "deepseek"
+      }
+    ]
+  }
+}

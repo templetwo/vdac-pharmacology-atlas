@@ -1,0 +1,211 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF isolated mitoplasts (OMM-stripped) are exposed to Ca\u00b2\u207a (200 \u00b5M) + Pi (2 mM), THEN CsA-sensitive \u0394\u03a8m collapse occurs with identical EC\u2085\u2080 (\u00b115%) compared to intact mitochondria, AND pre-treatment of intact mitochondria with VBIT-4 (20 \u00b5M) blocks VDAC1 oligomerization (>80% reduction by crosslinking/native PAGE) without preventing initial mPTP-driven \u0394\u03a8m loss (\u226420% delay in onset).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "4_IC50_oligomerization": {
+          "mean": 24.84602092519529,
+          "std": 14.201276873516603,
+          "median": 24.471204897636433,
+          "ci_lower": 2.3567955154802336,
+          "ci_upper": 48.244484082273296,
+          "min": 1.3607512177992702,
+          "max": 49.62640263873602
+        },
+        "CsA_concentration": {
+          "mean": 1.2579794226927015,
+          "std": 0.4257263171876517,
+          "median": 1.2702215860978794,
+          "ci_lower": 0.554163050720895,
+          "ci_upper": 1.970180633540074,
+          "min": 0.5081447511930507,
+          "max": 1.998657095711358
+        },
+        "mPTP_onset_delay_with_VBIT4": {
+          "mean": 29.831974607982616,
+          "std": 17.869882209743455,
+          "median": 30.126278931371782,
+          "ci_lower": 1.025824018270541,
+          "ci_upper": 59.041596230894896,
+          "min": 0.07398375071448804,
+          "max": 59.92460220400589
+        },
+        "VDAC1_oligomer_reduction": {
+          "mean": 75.56123340051174,
+          "std": 14.582620633648931,
+          "median": 74.54663404758095,
+          "ci_lower": 52.12952220192187,
+          "ci_upper": 99.17613469031494,
+          "min": 50.02593720828528,
+          "max": 99.97109546120939
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.500099337051926,
+          "std": 0.13669012241801018,
+          "median": 0.5135273267663021,
+          "ci_lower": 0.2510342211431588,
+          "ci_upper": 0.7356861615114252,
+          "min": 0.1498587331629338,
+          "max": 0.8597271425353767
+        }
+      },
+      "effect_size": 0.9309,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF mitochondria from mouse heart, brain cortex, and liver are subjected to sequential Ca\u00b2\u207a boluses (10 \u00b5M increments), THEN calcium retention capacity (CRC) before irreversible \u0394\u03a8m collapse follows: cardiac < neuronal < hepatic, with CRC values of 150-250, 250-400, and 400-700 nmol Ca\u00b2\u207a/mg protein respectively, AND the Ca\u00b2\u207a load at which VDAC1 oligomers first appear (by crosslinking) correlates with CRC (r\u00b2 > 0.7).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "CRC_cardiac": {
+          "mean": 199.6554585519658,
+          "std": 57.01426270651764,
+          "median": 198.97870254393865,
+          "ci_lower": 105.27160876737852,
+          "ci_upper": 294.218750119822,
+          "min": 100.63003055306771,
+          "max": 299.5763488548241
+        },
+        "CRC_neuronal": {
+          "mean": 348.741678362192,
+          "std": 85.69016096269615,
+          "median": 350.92599881241165,
+          "ci_lower": 206.37057662934728,
+          "ci_upper": 490.3395415647434,
+          "min": 200.66614911923753,
+          "max": 498.6747984546893
+        },
+        "CRC_hepatic": {
+          "mean": 550.448956611047,
+          "std": 142.802903813356,
+          "median": 540.0107588786002,
+          "ci_lower": 317.0260803745422,
+          "ci_upper": 788.7955116089078,
+          "min": 308.4151566028174,
+          "max": 798.9210204148064
+        },
+        "Cardiolipin_content": {
+          "mean": 15.165823295858461,
+          "std": 5.954247882327593,
+          "median": 15.642274608171114,
+          "ci_lower": 5.446210702851872,
+          "ci_upper": 24.444806230481213,
+          "min": 5.112665351631007,
+          "max": 24.959932295882197
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5008179913288715,
+          "std": 0.15033298505938428,
+          "median": 0.4956530980769948,
+          "ci_lower": 0.222005051072042,
+          "ci_upper": 0.7868062895933343,
+          "min": 0.1359645709255032,
+          "max": 0.9110213034155877
+        }
+      },
+      "effect_size": 1.0586,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF VDAC1 is genetically ablated (CRISPR triple-KO of VDAC1/2/3) in HeLa or MEF cells, THEN Ca\u00b2\u207a overload (ionomycin 5 \u00b5M + thapsigargin 2 \u00b5M) still triggers mPTP opening (CsA-sensitive \u0394\u03a8m loss), BUT death shifts from necrosis (>70% PI+/AnnexinV+ in WT) to apoptosis (>60% AnnexinV+/PI\u2212 in KO), with reduced LDH release (>50% reduction), maintained caspase-3 activation, and absence of mitochondrial swelling.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "Necrosis_fraction_WT": {
+          "mean": 69.49796224795554,
+          "std": 11.53065595072225,
+          "median": 68.49939196382303,
+          "ci_lower": 51.50040969978329,
+          "ci_upper": 88.90614482727183,
+          "min": 50.219813040742096,
+          "max": 89.81542744841653
+        },
+        "Apoptosis_fraction_KO": {
+          "mean": 59.379004198903324,
+          "std": 11.748008910817504,
+          "median": 58.8420238833132,
+          "ci_lower": 40.9974024464235,
+          "ci_upper": 78.79669846828953,
+          "min": 40.05145005162992,
+          "max": 79.71131443995928
+        },
+        "LDH_release_reduction_KO": {
+          "mean": 54.0957510114379,
+          "std": 14.768676359607618,
+          "median": 53.04335314837536,
+          "ci_lower": 31.30744748052763,
+          "ci_upper": 78.56819855779734,
+          "min": 30.16619076303437,
+          "max": 79.73995455863074
+        },
+        "Caspase3_activity_KO_vs_WT": {
+          "mean": 2.007831467878126,
+          "std": 0.5015854825361402,
+          "median": 1.9742333077982566,
+          "ci_lower": 1.1776036174056428,
+          "ci_upper": 3.0,
+          "min": 1.0100229160558551,
+          "max": 3.0
+        },
+        "mPTP_opening_delay_KO": {
+          "mean": 16.234842210480615,
+          "std": 9.067538889468086,
+          "median": 17.644152733115448,
+          "ci_lower": 1.1079695944153565,
+          "ci_upper": 29.26679291311488,
+          "min": 0.038175235085791126,
+          "max": 29.84415606650816
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4997832644710626,
+          "std": 0.13595275264327417,
+          "median": 0.5013210287263543,
+          "ci_lower": 0.24745700424907288,
+          "ci_upper": 0.7540606056576303,
+          "min": 0.13454120040015544,
+          "max": 0.8476871389710233
+        }
+      },
+      "effect_size": 0.9903,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    },
+    {
+      "hypothesis_id": "H4",
+      "prediction": "IF proximity ligation assay (PLA) or FRET is performed on intact energized mitochondria during",
+      "n_iterations": 300,
+      "parameters_sampled": {},
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.5,
+          "std": 0.0,
+          "median": 0.5,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "min": 0.5,
+          "max": 0.5
+        }
+      },
+      "effect_size": 0.0,
+      "power_estimate": 0.0,
+      "convergence_check": true,
+      "seed": 45
+    }
+  ],
+  "n_hypotheses": 4,
+  "total_iterations": 1200,
+  "total_calls": 0
+}

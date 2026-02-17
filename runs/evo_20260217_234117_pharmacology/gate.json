@@ -1,0 +1,200 @@
+{
+  "passed": true,
+  "claims": [
+    {
+      "statement": "VDAC1 oligomerization is primarily an amplifier, not the initial trigger; mPTP opening is initiated by matrix Ca\u00b2\u207a overload acting on CypD-sensitized ANT/ATP synthase components at the IMM.",
+      "falsifiable": true,
+      "falsifiable_reason": "The claim predicts that VDAC1 oligomerization inhibitors will fail to prevent mPTP opening in isolated mitoplasts, a directly testable outcome with quantifiable conductance measurements.",
+      "feasible": true,
+      "feasible_reason": "Mitoplast preparation, voltage-clamp electrophysiology, and VBIT-4 application are standard techniques; the experiment requires only isolated mitochondrial membranes and patch-clamp equipment.",
+      "novel": true,
+      "novel_reason": "The distinction between mPTP initiation (IMM-driven) versus amplification (OMM-driven) reframes VDAC1's role and enables mechanistic separation of two coupled processes currently conflated in the literature[1][3].",
+      "passed": true
+    },
+    {
+      "statement": "CypD and VDAC1 do not form a stable trans-membrane complex but are functionally coupled through contact sites where ANT bridges IMM-OMM, creating a transient signaling hub rather than a fixed structural pore.",
+      "falsifiable": true,
+      "falsifiable_reason": "The claim predicts that cryo-ET will reveal transient, not stable, CypD-ANT-VDAC1 complexes; a persistent structure would directly falsify the dynamic-hub model.",
+      "feasible": false,
+      "feasible_reason": "Cryo-ET of native mitochondrial contact sites at sufficient resolution to resolve protein-protein interfaces requires specialized cryo-EM infrastructure and expertise beyond standard laboratory capacity; sample preparation and data collection are technically demanding.",
+      "novel": true,
+      "novel_reason": "Reframing the mPTP as a transient signaling hub rather than a fixed structural pore contradicts the classical \"mega-channel\" paradigm[4] and would require reconceptualizing how CypD sensitization works mechanistically.",
+      "passed": false
+    },
+    {
+      "statement": "The irreversible Ca\u00b2\u207a threshold differs across tissues: cardiac ~50-100 \u00b5M matrix Ca\u00b2\u207a, neuronal ~20-50 \u00b5M, hepatic ~100-200 \u00b5M, reflecting CypD expression levels and cardiolipin composition.",
+      "falsifiable": true,
+      "falsifiable_reason": "Quantitative calcium retention capacity assays with tissue-specific mitochondria will either confirm or refute the predicted thresholds (cardiac ~50-100 \u00b5M, neuronal ~20-50 \u00b5M, hepatic ~100-200 \u00b5M).",
+      "feasible": true,
+      "feasible_reason": "Calcium retention capacity assays using fluorescent calcium indicators (Fluo-4) and tissue-isolated mitochondria are routine; simultaneous VDAC1 oligomerization monitoring via crosslinking and native PAGE is standard biochemistry.",
+      "novel": true,
+      "novel_reason": "Quantifying tissue-specific thresholds with mechanistic attribution to CypD expression and cardiolipin composition directly addresses a gap in the literature; current studies lack systematic cross-tissue comparison with molecular correlates.",
+      "passed": true
+    },
+    {
+      "statement": "ANT-mediated mPTP opening without VDAC1 oligomerization produces transient, low-conductance openings associated with apoptotic signaling (ROS flickers, limited cytochrome c release), while VDAC1 oligomerization enables high-conductance, sustained opening committing to necrosis.",
+      "falsifiable": true,
+      "falsifiable_reason": "VDAC1-knockout cells undergoing mPTP opening will either exhibit necrotic kinetics identical to wild-type (falsifying the claim) or show apoptotic kinetics (supporting it); death mode is measurable via morphology, LDH release, and caspase activation.",
+      "feasible": true,
+      "feasible_reason": "CRISPR-VDAC1 knockout cell lines are readily generated; calcium overload protocols and apoptosis/necrosis assays (annexin V, PI staining, caspase-3 activity) are standard.",
+      "novel": true,
+      "novel_reason": "The prediction that ANT-alone mPTP opening produces apoptosis while VDAC1 oligomerization commits to necrosis is mechanistically specific and testable; it reframes the death-mode decision as dependent on pore architecture rather than stimulus identity.",
+      "passed": true
+    },
+    {
+      "statement": "VDAC1 and CypD do *not* form a direct trans-membrane complex but are functionally coupled via Ca\u00b2\u207a microdomains at contact sites.",
+      "falsifiable": true,
+      "falsifiable_reason": "FRET or cryo-EM showing direct VDAC1-CypD interaction would falsify the claim; absence of such interaction supports it.",
+      "feasible": true,
+      "feasible_reason": "FRET in intact mitochondria using fluorescently tagged VDAC1 and CypD is feasible with standard confocal microscopy; cryo-EM is not (see Claim 2).",
+      "novel": true,
+      "novel_reason": "Distinguishing direct binding from functional coupling via calcium microdomains is mechanistically important and currently unresolved in the literature[1][4].",
+      "passed": true
+    },
+    {
+      "statement": "The Ca\u00b2\u207a threshold for irreversible mPTP opening is *lower in cardiac mitochondria* (~200 \u00b5M) than hepatic (~500 \u00b5M) or neuronal (~300 \u00b5M) due to differential cardiolipin content and CypD expression.",
+      "falsifiable": true,
+      "falsifiable_reason": "Calcium retention capacity assays will produce quantitative thresholds that either match the predicted values (cardiac ~200 \u00b5M < hepatic ~500 \u00b5M) or contradict them; cardiolipin/CypD manipulation will either correlate with threshold shifts or not.",
+      "feasible": true,
+      "feasible_reason": "Tissue-isolated mitochondria, calcium retention capacity assays, cardiolipin quantification (HPLC), and CypD expression measurement (Western blot) are all standard techniques.",
+      "novel": true,
+      "novel_reason": "Linking tissue-specific thresholds to cardiolipin and CypD expression levels provides mechanistic explanation for a phenomenon (differential tissue sensitivity) that is clinically relevant but mechanistically opaque.",
+      "passed": true
+    },
+    {
+      "statement": "mPTP can open *without VDAC1 oligomerization* (e.g., via ANT/CypD alone), but this produces *apoptosis* (cytochrome c release) rather than necrosis (swelling/rupture).",
+      "falsifiable": true,
+      "falsifiable_reason": "VDAC1-knockout cells will either undergo necrosis at the same rate as wild-type (falsifying the claim) or show delayed/altered death kinetics; death phenotype is measurable.",
+      "feasible": true,
+      "feasible_reason": "CRISPR-VDAC1 knockout, calcium overload, and apoptosis/necrosis discrimination assays are standard.",
+      "novel": true,
+      "novel_reason": "The mechanistic prediction that VDAC1 oligomerization gates the apoptosis-to-necrosis transition is specific and testable; it explains why VDAC1 is essential for some death modes but not others.",
+      "passed": true
+    },
+    {
+      "statement": "The OMM-IMM contact site is the *physical locus* of the life/death decision, where Ca\u00b2\u207a microdomains and protein-protein interactions converge to determine mPTP irreversibility.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disrupting contact sites (e.g., mitofilin knockdown) will either abolish mPTP opening kinetics (supporting the claim) or leave them unchanged (falsifying it); kinetics are quantifiable via electrophysiology or fluorescence.",
+      "feasible": true,
+      "feasible_reason": "Mitofilin knockdown, contact-site disruption assays, and mPTP opening kinetics measurement are standard; mitofilin is a well-characterized contact-site tether.",
+      "novel": true,
+      "novel_reason": "Positioning the contact site as the physical locus of the life/death decision integrates spatial organization with biochemistry and is testable; it explains why local calcium microdomains matter more than bulk matrix calcium.",
+      "passed": true
+    },
+    {
+      "statement": "CypD at IMM matrix face and VDAC1 at OMM do not form a stable trans-membrane death complex; CypD regulates core mPTP (ATP synthase), VDAC amplifies separately.",
+      "falsifiable": true,
+      "falsifiable_reason": "Co-IP or FRET showing CypD-VDAC1 interaction would falsify the claim; absence of interaction supports it.",
+      "feasible": true,
+      "feasible_reason": "Co-immunoprecipitation and FRET are standard techniques; the search results already demonstrate CKMT1-VDAC1 interaction via co-IP[5], establishing feasibility.",
+      "novel": true,
+      "novel_reason": "Explicitly denying a direct CypD-VDAC1 complex and attributing mPTP opening to ATP synthase (not ANT) is a mechanistic claim that contradicts classical models[4] and is testable.",
+      "passed": true
+    },
+    {
+      "statement": "Irreversible VDAC1-mPTP coupling occurs above matrix [Ca\u00b2\u207a] ~200-500 \u03bcM; cardiac mito most sensitive (~200 \u03bcM), neuronal ~300 \u03bcM, hepatic ~500 \u03bcM due to ROS/CypD expression variance.",
+      "falsifiable": true,
+      "falsifiable_reason": "Dose-response curves in tissue-specific mitochondria will either show the predicted thresholds (cardiac ~200 \u00b5M, neuronal ~300 \u00b5M, hepatic ~500 \u00b5M) or uniform thresholds across tissues (falsifying the claim).",
+      "feasible": true,
+      "feasible_reason": "Calcium retention capacity assays with dose-response titration are standard; tissue-specific mitochondria are readily isolated.",
+      "novel": true,
+      "novel_reason": "Quantifying tissue-specific thresholds and attributing them to ROS/CypD variance provides mechanistic explanation for clinically observed differences in ischemia-reperfusion sensitivity.",
+      "passed": true
+    },
+    {
+      "statement": "mPTP opens without VDAC1 oligomerization (core via ATP synthase, not ANT); VDAC-indep \u2192 necrosis, VDAC-dep \u2192 apoptosis hybrid.",
+      "falsifiable": true,
+      "falsifiable_reason": "VDAC1/2/3 triple-knockout mitochondria will either retain CsA-sensitive swelling (supporting the claim) or lose it (falsifying it); swelling is measurable via light scattering or calcein fluorescence.",
+      "feasible": true,
+      "feasible_reason": "CRISPR triple-knockout cell lines are feasible; CsA-sensitive swelling assays are standard.",
+      "novel": true,
+      "novel_reason": "Demonstrating that mPTP opens without VDAC oligomerization and that ATP synthase (not ANT) is the core pore component would overturn the classical ANT-based model[4] and is mechanistically significant.",
+      "passed": true
+    },
+    {
+      "statement": "Contact sites (MICOS/OPA1) localize mPTP-VDAC coupling as decision hub, aligning pores for Ca\u00b2\u207a/ROS flux.",
+      "falsifiable": true,
+      "falsifiable_reason": "Contact-site disruptors (e.g., Mitofusin siRNA) will either abolish PT-associated swelling while preserving \u0394\u03a8m collapse (supporting the claim) or eliminate both (falsifying it); both are measurable.",
+      "feasible": true,
+      "feasible_reason": "Mitofusin knockdown, mPTP opening assays, and swelling/dep",
+      "novel": false,
+      "novel_reason": "Not found in response",
+      "passed": false
+    },
+    {
+      "statement": "VDAC1 oligomerization is an amplifier, not the primary trigger, of mPTP opening. It follows and stabilizes the initial high-conductance state.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "CypD and VDAC1 do not directly bind but form a functional trans-membrane complex bridged by the core pore component (e.g., F-ATP synthase) at the OMM-IMM contact site.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "The Ca2+ threshold for irreversible mPTP opening is tissue-specific, determined by the local expression levels of regulatory proteins like CypD and Bcl-2 family members.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "VDAC1 oligomerization at OMM-IMM contact sites precedes and facilitates sustained mPTP opening, acting as an amplifier rather than the sole trigger.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "CypD binding to the IMM matrix face and VDAC1 at the OMM do not form a stable, direct trans-membrane complex, but cooperate allosterically via contact-site tethering proteins.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "The calcium threshold for irreversible mPTP/VDAC1 coupling is tissue-specific, being lowest in cardiac mitochondria due to higher baseline oxidative stress and CypD expression.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    },
+    {
+      "statement": "mPTP can open without VDAC1 oligomerization (e.g., via ANT-CypD interaction alone), but this leads to a reversible, transient pore associated with apoptotic signaling, whereas VDAC1 engagement commits to irreversible, necrotic death.",
+      "falsifiable": false,
+      "falsifiable_reason": "Could not parse gate response",
+      "feasible": false,
+      "feasible_reason": "Could not parse gate response",
+      "novel": false,
+      "novel_reason": "Could not parse gate response",
+      "passed": false
+    }
+  ],
+  "n_passed": 10,
+  "n_failed": 9,
+  "total_calls": 1,
+  "latency_s": 21.22,
+  "recommendation": "Lab Gate PASSED with filter. 10/19 claims cleared. 9 filtered: 'CypD and VDAC1 do not form a stable trans-membrane...' not feasible; 'Contact sites (MICOS/OPA1) localize mPTP-VDAC coup...' lacks novelty; 'VDAC1 oligomerization is an amplifier, not the pri...' lacks falsifiability"
+}
