@@ -1,0 +1,175 @@
+{
+  "stage": "S3",
+  "passed": false,
+  "convergence_score": 0.8045,
+  "convergence_threshold": 0.85,
+  "convergence_pass": false,
+  "jaccard": 0.4629,
+  "jaccard_threshold": 0.85,
+  "jaccard_pass": false,
+  "type_01_ratio": 0.7778,
+  "type_01_threshold": 0.75,
+  "type_pass": true,
+  "cosine": 0.8045,
+  "jsd": 0.3104,
+  "kappa": 0.9138,
+  "type_distribution": {
+    "0": 0.4444444444444444,
+    "1": 0.3333333333333333,
+    "2": 0.1111111111111111,
+    "3": 0.1111111111111111
+  },
+  "divergence_map": {
+    "total_unique_claims": 19,
+    "most_divergent": [
+      {
+        "statement": "VDAC1 is best understood as a *boundary object* \u2014 neither purely protein nor membrane property, but the stable structural solution to a physical constraint (controlled permeability across a bacterial-derived outer membrane). The protein crystallizes a principle that the membrane physics demands but cannot stably implement alone.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          3
+        ],
+        "confidences": [
+          0.7
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "A VDAC-free membrane with appropriate cardiolipin/cholesterol phase boundaries can exhibit transient threshold permeability but CANNOT replicate voltage-dependent anion selectivity or sustained metabolite discrimination.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.78
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "The hexagonal lattice is a *coupled* transition \u2014 protein-protein contacts provide the crystallographic symmetry, but cardiolipin-mediated lipid bridging between barrels provides the thermodynamic driving force, making it neither purely protein-driven nor purely lipid-driven.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.73
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "CBD's apparent VDAC1 interaction (Kd = 11 \u00b5M) is predominantly lipid-mediated. Given log P ~6.3, CBD accumulates in membranes at ~1000\u00d7 aqueous concentration, reaching effective local concentrations of ~1-10 mM at the annulus from ~1-10 \u00b5M bulk. The therapeutic index for direct VDAC targeting remains unfavorable (CYP3A4 IC50 = 1 \u00b5M vs. Kd = 11 \u00b5M; TI \u2248 0.09).",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.82
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "The porin-to-audit transition occurred when Bcl-2 family proteins evolved to exploit VDAC's pre-existing conformational states, likely ~1.5-2 Gya concurrent with early apoptotic machinery, converting metabolite flux modulation into a binary death signal.",
+        "models_supporting": [
+          "claude"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.75
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "VDAC1 is a lipid-nucleated phase transition reporter, not a standalone protein gate.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.85
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "A VDAC1-free OMM can exhibit threshold-like anion flux if lipid phase boundaries create transient pores.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          2
+        ],
+        "confidences": [
+          0.7
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "CBD\u2019s 11 \u00b5M Kd for VDAC1 reflects membrane partitioning, not direct binding.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.8
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "VDAC1\u2019s \"audit\" function emerged via host protein hijacking (e.g., Bax/Bak), not porin evolution.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          1
+        ],
+        "confidences": [
+          0.85
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      },
+      {
+        "statement": "The hexagonal lattice is protein-driven, not a bulk phase transition.",
+        "models_supporting": [
+          "mistral"
+        ],
+        "types_assigned": [
+          3
+        ],
+        "confidences": [
+          0.75
+        ],
+        "type_variance": 0,
+        "n_supporters": 1
+      }
+    ],
+    "models_present": [
+      "claude",
+      "mistral",
+      "grok",
+      "gemini",
+      "deepseek"
+    ]
+  },
+  "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+}

@@ -1,0 +1,152 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "The hexagonal lattice is a cooperative, lipid-templated protein crystallization, not a bulk membrane phase transition.",
+      "mechanism": "VDAC1 trimers act as nucleation seeds, locally enriching anionic lipids (e.g., cardiolipin) via electrostatic interactions, which then templates long-range hexagonal order through protein-protein contacts stabilized by the patterned lipid scaffold.",
+      "falsifiable_by": "Observing the same lattice geometry in protein-free giant unilamellar vesicles (GUVs) with a lipid composition mimicking the VDAC1 annulus, under the same ionic conditions.",
+      "type": 0,
+      "confidence": 0.792,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset()",
+      "chunk_text": "The hexagonal lattice is a cooperative, lipid-templated protein crystallization, not a bulk membrane phase transition."
+    },
+    {
+      "statement": "A VDAC-free membrane with appropriate cardiolipin/cholesterol phase boundaries can exhibit transient threshold permeability but CANNOT replicate voltage-dependent anion selectivity or sustained metabolite discrimination.",
+      "mechanism": "Lipid phase boundaries create transient defects with ~1-3 nm pores at domain edges, permitting non-selective solute leakage, but lacking the electrostatic funnel (N-terminal helix, charged residues K12, K20, R218) that VDAC uses for selectivity.",
+      "falsifiable_by": "Patch-clamp of protein-free GUVs with mitochondrial lipid composition showing voltage-dependent anion-selective conductance states.",
+      "type": 0,
+      "confidence": 0.77,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "mistral"
+      ],
+      "tuples": "frozenset({('k12', 'interacts', 'k20'), ('k20', 'interacts', 'r218'), ('cannot', 'interacts', 'k12'), ('vdac', 'interacts', 'cannot')})",
+      "chunk_text": "A VDAC-free membrane with appropriate cardiolipin/cholesterol phase boundaries can exhibit transient threshold permeability but CANNOT replicate voltage-dependent anion selectivity or sustained metabolite discrimination."
+    },
+    {
+      "statement": "VDAC1 is a structurally stable protein pore whose identity and regulatory logic are emergent properties of its specific, co-evolved lipid environment.",
+      "mechanism": "The beta-barrel provides a permanent, size-selective aqueous pathway, but its voltage-dependent gating and metabolite selectivity are dynamically encoded by the physical state (pressure, curvature, phase) of the surrounding lipid annulus, which is compositionally distinct from bulk OMM.",
+      "falsifiable_by": "Demonstrating identical VDAC1 gating kinetics after complete exchange of its native lipid annulus for a synthetic, homogeneous lipid bilayer.",
+      "type": 1,
+      "confidence": 0.827,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'omm')})",
+      "chunk_text": "VDAC1 is a structurally stable protein pore whose identity and regulatory logic are emergent properties of its specific, co-evolved lipid environment."
+    },
+    {
+      "statement": "CBD's apparent VDAC1 interaction (Kd = 11 \u00b5M) is predominantly lipid-mediated. Given log P ~6.3, CBD accumulates in membranes at ~1000\u00d7 aqueous concentration, reaching effective local concentrations of ~1-10 mM at the annulus from ~1-10 \u00b5M bulk. The therapeutic index for direct VDAC targeting remains unfavorable (CYP3A4 IC50 = 1 \u00b5M vs. Kd = 11 \u00b5M; TI \u2248 0.09).",
+      "mechanism": "CBD partitions into the OMM, alters lateral pressure profile and cholesterol distribution around VDAC, modulating gating indirectly rather than via a discrete binding pocket.",
+      "falsifiable_by": "Co-crystal structure of CBD bound to a specific VDAC1 pocket with mutagenesis abolishing binding without altering lipid partitioning.",
+      "type": 1,
+      "confidence": 0.773,
+      "overlap_count": 3,
+      "models": [
+        "claude",
+        "deepseek",
+        "mistral"
+      ],
+      "tuples": "frozenset({('omm', 'modulates', 'vdac')})",
+      "chunk_text": "CBD's apparent VDAC1 interaction (Kd = 11 \u00b5M) is predominantly lipid-mediated. Given log P ~6.3, CBD accumulates in membranes at ~1000\u00d7 aqueous concentration, reaching effective local concentrations of ~1-10 mM at the annulus from ~1-10 \u00b5M bulk. The therapeutic index for direct VDAC targeting remains unfavorable (CYP3A4 IC50 = 1 \u00b5M vs. Kd = 11 \u00b5M; TI \u2248 0.09)."
+    },
+    {
+      "statement": "The porin-to-audit transition occurred when Bcl-2 family proteins evolved to exploit VDAC's pre-existing conformational states, likely ~1.5-2 Gya concurrent with early apoptotic machinery, converting metabolite flux modulation into a binary death signal.",
+      "mechanism": "Ancestral Bax/Bak homologs recognized the closed-state conformation of the porin (which already restricted ATP/ADP flux) and amplified it into full OMM permeabilization via oligomeric pore formation adjacent to VDAC clusters.",
+      "falsifiable_by": "Discovery of",
+      "type": 2,
+      "confidence": 0.8,
+      "overlap_count": 2,
+      "models": [
+        "claude",
+        "mistral"
+      ],
+      "tuples": "frozenset({('adp', 'upregulates', 'omm')})",
+      "chunk_text": "The porin-to-audit transition occurred when Bcl-2 family proteins evolved to exploit VDAC's pre-existing conformational states, likely ~1.5-2 Gya concurrent with early apoptotic machinery, converting metabolite flux modulation into a binary death signal."
+    },
+    {
+      "statement": "VDAC1 is best understood as a protein co-defining OMM architecture via pre-endosymbiotic bacterial porin ancestry, not a post-fusion insert; lipids execute decisions via allostery on the protein scaffold (deepens [ESTABLISHED]).",
+      "mechanism": "Ancestral beta-barrel porin integrated into alphaproteobacterial OM became OMM; lipids (e.g., cardiolipin) tune beta-strand flexibility for gating, with quant prediction: 20% cardiolipin increase shifts V_close by -5mV.",
+      "falsifiable_by": "Cryo-EM of pre",
+      "type": 3,
+      "confidence": 0.92,
+      "overlap_count": 1,
+      "models": [
+        "grok"
+      ],
+      "tuples": "frozenset({('established', 'interacts', 'om'), ('vdac1', 'interacts', 'omm'), ('omm', 'interacts', 'established')})",
+      "chunk_text": "VDAC1 is best understood as a protein co-defining OMM architecture via pre-endosymbiotic bacterial porin ancestry, not a post-fusion insert; lipids execute decisions via allostery on the protein scaffold (deepens [ESTABLISHED])."
+    },
+    {
+      "statement": "CBD's poor therapeutic index (~0.09) results from an indirect mechanism; it partitions into the membrane to alter the lipid annulus, requiring high concentrations (Kd=11\u00b5M) relative to potent off-target effects (CYP3A4 at 1\u00b5M).",
+      "mechanism": "; it partitions into the membrane to alter the lipid annulus, requiring high concentrations (Kd=11\u00b5M) relative to potent off-target effects (CYP3A4 at 1\u00b5M).",
+      "falsifiable_by": "A crystal structure showing CBD occupying a specific, high-affinity binding pocket on the VDAC1 protein itself.",
+      "type": 3,
+      "confidence": 0.92,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('cbd', 'modulates', 'cyp3a4')})",
+      "chunk_text": "CBD's poor therapeutic index (~0.09) results from an indirect mechanism; it partitions into the membrane to alter the lipid annulus, requiring high concentrations (Kd=11\u00b5M) relative to potent off-target effects (CYP3A4 at 1\u00b5M)."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.14666666666666667,
+      "cosine": 0.7317221522331238,
+      "jsd": 0.32872278264488064,
+      "kappa": 0.9040100250626566,
+      "type_distribution": {
+        "0": 0.05263157894736842,
+        "1": 0.3684210526315789,
+        "2": 0.42105263157894735,
+        "3": 0.15789473684210525
+      },
+      "type_01_ratio": 0.42105263157894735,
+      "n_claims_per_model": [
+        5,
+        5,
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.4628968253968254,
+      "cosine": 0.8044817626476288,
+      "jsd": 0.31041489185079524,
+      "kappa": 0.9137956410982169,
+      "type_distribution": {
+        "0": 0.4444444444444444,
+        "1": 0.3333333333333333,
+        "2": 0.1111111111111111,
+        "3": 0.1111111111111111
+      },
+      "type_01_ratio": 0.7777777777777777,
+      "n_claims_per_model": [
+        5,
+        4,
+        1,
+        4,
+        4
+      ]
+    }
+  ]
+}

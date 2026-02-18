@@ -1,0 +1,35 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260218_000805_pharmacology
+Date: 2026-02-18
+Protocol: evo-1.0
+
+QUESTION:
+  Is VDAC1 best understood as a protein inserted into the mitochondrial membrane, or as an emergent property of the membrane itself — a crystallized threshold? Consider: (1) VDAC1 descends from bacterial porins that existed in the alpha-proteobacterial outer membrane BEFORE the endosymbiotic event. The channel didn't evolve to be added to mitochondria — it was already part of the membrane that BECAME the mitochondrion. Does this change how we think about VDAC's relationship to its lipid environment? (2) VDAC1 function is inseparable from membrane context: cholesterol rigidifies it, cardiolipin promotes oligomerization, the lipid annulus determines gating. Every drug that targets VDAC works through the membrane. The decision is made in the membrane before it is executed by the protein. Is VDAC a sensor OF the membrane or a STATE of the membrane? (3) The honeycomb lattice — VDAC self-organizing into crystalline hexagonal arrays — resembles a phase transition more than protein assembly. Could the lattice be a liquid-to-ordered phase transition in the OMM that VDAC both participates in and reports? (4) At what point in the evolution from free-living bacterium to obligate endosymbiont did the porin become an audit mechanism? When did metabolite flux control become life/death control? (5) Could a membrane without VDAC protein still exhibit threshold behavior if the lipid composition created the right phase boundaries — is VDAC the implementation of a principle that exists in the physics of the membrane itself?
+
+CONVERGENCE:
+  S2 rounds: ?
+  Early stopped: ?
+  Final Jaccard: ?
+  Final TYPE 0/1: ?
+  S3 gate: FAILED
+
+VERIFICATION:
+  TYPE 2 claims checked: 0
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 0
+
+LAB GATE:
+  Result: FAILED
+  Claims passed: 0/0
+
+BUDGET:
+  Total LLM calls: ?
+  Target range: 92-142
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================
