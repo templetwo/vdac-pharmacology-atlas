@@ -1,0 +1,203 @@
+{
+  "parsed": [
+    {
+      "model": "claude",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n\nSub-questions:\n1. **Does VDAC1 oligomerization status mechanistically control tumor immunogenicity via cGAS-STING?** (Requires linking gate-jamming variables f_HKII, f_BclxL, Chol/CL to mtDNA release and downstream immune signaling.)\n2. **Can gate-jamming parameters predict immune-cold vs immune-hot tumor phenotypes?** (Requires correlating VDAC cofactor states with tumor immune infiltration data.)\n3. **Does pharmacological gate-restoration synergize with checkpoint inhibitors specifically in immune-cold tumors?** (Requires testing combination therapies stratified by VDAC state.)\n4. **Is the Warburg-immune evasion link mechanistically unified through VDAC gating?** (The cofactor equation would predict that high glycolytic flux necessitates high f_HKII, which simultaneously jams VDAC oligomerization.)\n\nKey variables: f_HKII occupancy, Chol/CL ratio, VDAC1 oligomeric state, cytoplasmic mtDNA levels, cGAS-STING activation, tumor-infiltrating lymphocyte density, PD-L1 expression.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\nCLAIM: High f_HKII occupancy stabilizes VDAC1 monomers, suppressing oligomerization-dependent mtDNA release and cGAS-STING activation, contributing to immune-cold phenotype.\nTYPE: 2\nCONFIDENCE: 0.65\nMECHANISM: HK-II binding to VDAC1 locks the channel in a metabolically favorable but oligomerization-incompetent conformation, preventing the mitochondrial outer membrane permeabilization that releases mtDNA fragments.\nFALSIFIABLE BY: Showing that HK-II knockdown in immune-cold tumor lines fails to increase cytoplasmic mtDNA or cGAS-STING signaling.\n\nCLAIM: The Warburg effect and immune evasion are mechanistically coupled through VDAC gating \u2014 the same molecular investments (HK-II recruitment, cholesterol enrichment) that optimize glycolysis simultaneously prevent immune visibility.\nTYPE: 2\nCONFIDENCE: 0.60\nMECHANISM: Competitive allocation: HK-II bound to VDAC provides glycolytic substrate channeling while sterically preventing the oligomeric rearrangement needed for mtDNA-driven innate immune activation.\nFALSIFIABLE BY: Finding tumors with high Warburg phenotype and high f_HKII that are nonetheless immune-hot with active cGAS-STING signaling.\n\nCLAIM: Gate-restoring drugs (HK-II displacers + navitoclax-class Bcl-xL inhibitors) will synergize with anti-PD-1 specifically in immune-cold tumors with high f_HKII.\nTYPE: 3\nCONFIDENCE: 0.40\nMECHANISM: Forced VDAC oligomerization releases mtDNA, activates cGAS-STING, generates type-I interferon signaling that recruits T-cells, which checkpoint inhibitors then unleash.\nFALSIFIABLE BY: Combination therapy showing no differential benefit in immune-cold vs immune-hot tumors stratified by VDAC state, or gate-restoration failing to increase TIL density.\n\nCLAIM: f_HKII occupancy and Chol/CL ratio from tumor biopsies can serve as predictive biomarkers for immunotherapy response, with high values predicting resistance.\nTYPE: 3\nCONFIDENCE: 0.30\nMECHANISM: These cofactor parameters quantify gate-jamming intensity, which determines whether the tumor can generate the mtDNA-cGAS-STING signal necessary for immune recognition.\nFALSIFIABLE BY: Retrospective analysis of immunotherapy cohorts showing no correlation between VDAC cofactor metrics and response rates.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n\n- **Quantitative threshold**: What f_HKII occupancy level suppresses oligomerization sufficiently to silence cGAS-STING? No dose-response data exist.\n- **Missing data**: Direct measurement of VDAC oligomeric state in human tumor biopsies correlated with immune infiltration scores.\n- **Confounders**: Tumors use multiple cGAS-STING silencing mechanisms (epigenetic STING silencing, ENPP1 degradation of cGAMP) independent of VDAC.\n- **Cholesterol/cardiolipin ratio**: No standardized clinical assay exists for mitochondrial membrane lipid composition in biopsies.\n- **Whether mtDNA release from VDAC oligomerization is quantitatively sufficient** versus other sources (BAX/BAK pores, mitophagy failure).\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP \u2500\u2500\u2500\n\nCorrelate VDAC1 oligomeric state (cross-linking assay) and f_HKII occupancy with cytoplasmic mtDNA levels, c",
+      "claims": [
+        {
+          "statement": "High f_HKII occupancy stabilizes VDAC1 monomers, suppressing oligomerization-dependent mtDNA release and cGAS-STING activation, contributing to immune-cold phenotype.",
+          "type": 2,
+          "confidence": 0.65,
+          "mechanism": "HK-II binding to VDAC1 locks the channel in a metabolically favorable but oligomerization-incompetent conformation, preventing the mitochondrial outer membrane permeabilization that releases mtDNA fragments.",
+          "falsifiable_by": "Showing that HK-II knockdown in immune-cold tumor lines fails to increase cytoplasmic mtDNA or cGAS-STING signaling."
+        },
+        {
+          "statement": "The Warburg effect and immune evasion are mechanistically coupled through VDAC gating \u2014 the same molecular investments (HK-II recruitment, cholesterol enrichment) that optimize glycolysis simultaneously prevent immune visibility.",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "Competitive allocation: HK-II bound to VDAC provides glycolytic substrate channeling while sterically preventing the oligomeric rearrangement needed for mtDNA-driven innate immune activation.",
+          "falsifiable_by": "Finding tumors with high Warburg phenotype and high f_HKII that are nonetheless immune-hot with active cGAS-STING signaling."
+        },
+        {
+          "statement": "Gate-restoring drugs (HK-II displacers + navitoclax-class Bcl-xL inhibitors) will synergize with anti-PD-1 specifically in immune-cold tumors with high f_HKII.",
+          "type": 3,
+          "confidence": 0.4,
+          "mechanism": "Forced VDAC oligomerization releases mtDNA, activates cGAS-STING, generates type-I interferon signaling that recruits T-cells, which checkpoint inhibitors then unleash.",
+          "falsifiable_by": "Combination therapy showing no differential benefit in immune-cold vs immune-hot tumors stratified by VDAC state, or gate-restoration failing to increase TIL density."
+        },
+        {
+          "statement": "f_HKII occupancy and Chol/CL ratio from tumor biopsies can serve as predictive biomarkers for immunotherapy response, with high values predicting resistance.",
+          "type": 3,
+          "confidence": 0.3,
+          "mechanism": "These cofactor parameters quantify gate-jamming intensity, which determines whether the tumor can generate the mtDNA-cGAS-STING signal necessary for immune recognition.",
+          "falsifiable_by": "Retrospective analysis of immunotherapy cohorts showing no correlation between VDAC cofactor metrics and response rates. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "mistral",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION \u2500\u2500\u2500\n**Sub-questions:**\n1. Does VDAC1 gate-jamming (high f_HKII, f_BclxL, Chol/CL) mechanistically explain immune-cold tumors via suppression of mtDNA-cGAS-STING signaling?\n2. Can pharmacological restoration of VDAC1 oligomerization (e.g., HK-II displacement + Bcl-xL inhibition) convert immune-cold to immune-hot tumors, and does this synergize with checkpoint inhibitors?\n3. Are f_HKII occupancy or Chol/CL ratios measurable in biopsies predictive of immunotherapy response?\n4. Does the cofactor equation link Warburg metabolism to immune evasion through gate-jamming?\n\n**Key variables:**\n- VDAC1 oligomerization state (oligomerized = mtDNA leak \u2192 cGAS-STING activation).\n- Gate-jamming factors: f_HKII, f_BclxL, Chol/CL ratio (inhibit oligomerization).\n- cGAS-STING activity (proxy for immune visibility).\n- Immunotherapy response (checkpoint inhibitor efficacy).\n\n---\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS \u2500\u2500\u2500\n\n**CLAIM:** Gate-jamming (high f_HKII, f_BclxL, Chol/CL) predicts immune-cold tumors by preventing VDAC1 oligomerization and mtDNA-cGAS-STING activation.\n**TYPE:** 1 (mechanistic plausibility, partial validation)\n**CONFIDENCE:** 0.85\n**MECHANISM:** VDAC1 oligomerization is required for mtDNA release; jamming factors stabilize monomeric VDAC1, blocking cGAS-STING.\n**FALSIFIABLE BY:** Tumors with high gate-jamming but high cGAS-STING activity, or low gate-jamming but immune-cold phenotypes.\n\n**CLAIM:** Pharmacological gate-restoration (HK-II displacement + Bcl-xL inhibition) will convert immune-cold tumors to immune-hot and synergize with checkpoint inhibitors.\n**TYPE:** 2 (hypothesis, preclinical support)\n**CONFIDENCE:** 0.70\n**MECHANISM:** Forced VDAC1 oligomerization \u2192 mtDNA leak \u2192 cGAS-STING activation \u2192 T-cell infiltration; checkpoint inhibitors amplify existing immune responses.\n**FALSIFIABLE BY:** Gate-restoration failing to increase cGAS-STING activity or T-cell infiltration in immune-cold tumors, or lack of synergy with checkpoint inhibitors.\n\n**CLAIM:** f_HKII occupancy or Chol/CL ratio in tumor biopsies can predict immunotherapy response.\n**TYPE:** 2 (emerging biomarker potential)\n**CONFIDENCE:** 0.65\n**MECHANISM:** High gate-jamming metrics correlate with suppressed cGAS-STING and poor checkpoint inhibitor efficacy.\n**FALSIFIABLE BY:** Retrospective/prospective studies showing no correlation between gate-jamming metrics and immunotherapy response.\n\n**CLAIM:** Warburg metabolism (high glycolysis) is causally linked to immune evasion via gate-jamming.\n**TYPE:** 2 (mechanistic hypothesis)\n**CONFIDENCE:** 0.75\n**MECHANISM:** Glycolytic flux increases HK-II binding to VDAC1, stabilizing the gate-jammed state and suppressing mtDNA leak.\n**FALSIFIABLE BY:** Metabolically active tumors with low gate-jamming or immune-hot phenotypes, or non-glycolytic tumors with high gate-jamming.\n\n**CLAIM:** Checkpoint inhibitors alone are ineffective in gate-jammed tumors due to lack of pre-existing immune visibility.\n**TYPE:** 1 (clinical observation, mechanistic support)\n**CONFIDENCE:** 0.90\n**MECHANISM:** PD-1/PD-L1 blockade requires antigen presentation and T-cell priming; gate-jammed tumors lack cGAS-STING-driven immune activation.\n**FALSIFIABLE BY:** Gate-jammed tumors responding to checkpoint inhibitors without prior gate-restoration.\n\n---\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS \u2500\u2500\u2500\n1. **Quantitative thresholds:** What f_HKII occupancy or Chol/CL ratio defines \"gate-jammed\" vs. \"gate-open\" in vivo?\n2. **Redundancy:** Do other mtDNA release pathways (e.g., BAX/BAK pores) compensate when VDAC1 is jammed?\n3. **Tumor heterogeneity:** Do gate-jamming metrics vary within tumors, and how does this affect immune visibility?\n4. **Off-target effects:** Can gate-restoring drugs (e.g., HK-II inhibitors) disrupt normal tissue metabolism, limiting therapeutic index?\n5. **Clinical validation:** Are gate-jamming metrics predictive in retrospective/prospective immunotherapy trials?\n\n---\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP \u2500\u2500\u2500\n**Experiment:** Retrospective analysis of pre-treatment tumor biopsies from checkpoint inhibitor responders/non-responders, measuring f_HKII occupancy, Chol/CL ratio, and cGAS-STING activity to test predictive power of gate-jamming metrics.",
+      "claims": [
+        {
+          "statement": "Gate-jamming (high f_HKII, f_BclxL, Chol/CL) predicts immune-cold tumors by preventing VDAC1 oligomerization and mtDNA-cGAS-STING activation.",
+          "type": 1,
+          "confidence": 0.85,
+          "mechanism": "VDAC1 oligomerization is required for mtDNA release; jamming factors stabilize monomeric VDAC1, blocking cGAS-STING.",
+          "falsifiable_by": "Tumors with high gate-jamming but high cGAS-STING activity, or low gate-jamming but immune-cold phenotypes."
+        },
+        {
+          "statement": "Pharmacological gate-restoration (HK-II displacement + Bcl-xL inhibition) will convert immune-cold tumors to immune-hot and synergize with checkpoint inhibitors.",
+          "type": 2,
+          "confidence": 0.7,
+          "mechanism": "Forced VDAC1 oligomerization \u2192 mtDNA leak \u2192 cGAS-STING activation \u2192 T-cell infiltration; checkpoint inhibitors amplify existing immune responses.",
+          "falsifiable_by": "Gate-restoration failing to increase cGAS-STING activity or T-cell infiltration in immune-cold tumors, or lack of synergy with checkpoint inhibitors."
+        },
+        {
+          "statement": "f_HKII occupancy or Chol/CL ratio in tumor biopsies can predict immunotherapy response.",
+          "type": 2,
+          "confidence": 0.65,
+          "mechanism": "High gate-jamming metrics correlate with suppressed cGAS-STING and poor checkpoint inhibitor efficacy.",
+          "falsifiable_by": "Retrospective/prospective studies showing no correlation between gate-jamming metrics and immunotherapy response."
+        },
+        {
+          "statement": "Warburg metabolism (high glycolysis) is causally linked to immune evasion via gate-jamming.",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "Glycolytic flux increases HK-II binding to VDAC1, stabilizing the gate-jammed state and suppressing mtDNA leak.",
+          "falsifiable_by": "Metabolically active tumors with low gate-jamming or immune-hot phenotypes, or non-glycolytic tumors with high gate-jamming."
+        },
+        {
+          "statement": "Checkpoint inhibitors alone are ineffective in gate-jammed tumors due to lack of pre-existing immune visibility.",
+          "type": 1,
+          "confidence": 0.9,
+          "mechanism": "PD-1/PD-L1 blockade requires antigen presentation and T-cell priming; gate-jammed tumors lack cGAS-STING-driven immune activation.",
+          "falsifiable_by": "Gate-jammed tumors responding to checkpoint inhibitors without prior gate-restoration. --- \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "grok",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\nSub-questions:\n1. Does VDAC1 gate-jamming (high f_HKII, f_BclxL, Chol/CL) suppress cGAS-STING via blocked oligomerization/mtDNA leak, predicting immune-cold tumors?\n2. Can gate-restoration (HKII displacement + BclxL inhibition) induce mtDNA release to convert cold-to-hot tumors?\n3. Do gate-jamming metrics (f_HKII, Chol/CL) predict immunotherapy failure, with synergy from gate-drugs + checkpoint inhibitors in cold tumors?\n4. Does high Warburg/glycolysis drive gate-jamming and immune-coldness?\n\nKey variables/relationships:\n- Inputs: f_HKII (HKII-VDAC occupancy), f_BclxL (BclxL-VDAC), Chol/CL (lipid ratio).\n- Gate state: jamming \u221d f_HKII + f_BclxL + Chol/CL \u2192 inhibits VDAC oligomerization.\n- Output: oligomerization \u2192 mtDNA-cyto \u2192 cGAS-STING \u2192 immune-hot; jammed \u2192 cold.\n- Warburg: high glycolysis \u2191 f_HKII \u2192 jamming \u2191 \u2192 cold.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: Gate-jamming (high f_HKII/f_BclxL/Chol/CL) predicts immune-cold tumors by blocking VDAC1 oligomerization and mtDNA-cGAS-STING.\nTYPE: 3\nCONFIDENCE: 0.8\nMECHANISM: HKII/BclxL/Chol stabilize closed VDAC1 conformations, preventing Bax/Bak-induced oligomers that leak mtDNA to activate innate immunity.\nFALSIFIABLE BY: Biopsies showing high f_HKII/Chol-CL in immune-hot (high T-cell/PDL1) tumors.\n\nCLAIM: Pharmacological gate-restoration (HKII displacement + BclxL inhibition) can convert immune-cold to hot tumors via forced VDAC oligomerization/mtDNA release.\nTYPE: 3\nCONFIDENCE: 0.6\nMECHANISM: Displacing stabilizers allows pro-apoptotic pores to oligomerize VDAC1, leaking mtDNA to trigger cGAS-STING independently of adaptive immunity.\nFALSIFIABLE BY: In vivo cold-tumor models where combo fails to \u2191 STING signaling/TIL infiltration.\n\nCLAIM: Gate-restoration + checkpoint inhibitors synergize specifically in immune-cold tumors, resolving PD1/PDL1 paradox.\nTYPE: 3\nCONFIDENCE: 0.7\nMECHANISM: Gate-drugs provide initial cGAS-STING \"visibility\" signal absent in jammed/cold tumors, amplifying PD1 blockade effects.\nFALSIFIABLE BY: Clinical trials showing no added benefit of combo vs checkpoint alone in cold tumors.\n\nCLAIM: f_HKII occupancy or Chol/CL ratio from biopsies predicts poor immunotherapy response.\nTYPE: 2\nCONFIDENCE: 0.75\nMECHANISM: Cofactor equation links high jamming fractions to absent cGAS-STING, stratifying cold tumors unresponsive to checkpoint amplification.\nFALSIFIABLE BY: Patient cohorts with high f_HKII/Chol-CL but high IO response rates.\n\nCLAIM: High Warburg/glycolysis (\u2191 HKII recruitment) jams VDAC gate, explaining immune-coldness in metabolically active tumors.\nTYPE: 2\nCONFIDENCE: 0.8\nMECHANISM: Glycolytic flux \u2191 f_HKII-VDAC binding per cofactor equation, stabilizing gate to block oligomerization/mtDNA leak.\nFALSIFIABLE BY: Glycolytic tumors with low f_HKII but immune-cold profile.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\nNo direct measurements of f_HKII/f_BclxL/Chol-CL in human cold vs hot tumors or IO responders/non-responders. Lacking cofactor equation parameters (e.g., exact Kd for HKII-VDAC in cancer cells; Chol/CL effects on oligomer Kd). Unknown VDAC oligomer/mtDNA leak thresholds for sufficient cGAS-STING in vivo. No preclinical data on HKII-displacer + BclxL-inhib combos for STING activation. Heterogeneity: tumor stroma/ECM effects on measured fractions?\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nQuantify f_HKII/Chol-CL via proteomics/lipomics in pre-IO biopsies from 100+ melanoma/NSCLC patients (responders vs progressors).",
+      "claims": [
+        {
+          "statement": "Gate-jamming (high f_HKII/f_BclxL/Chol/CL) predicts immune-cold tumors by blocking VDAC1 oligomerization and mtDNA-cGAS-STING.",
+          "type": 3,
+          "confidence": 0.8,
+          "mechanism": "HKII/BclxL/Chol stabilize closed VDAC1 conformations, preventing Bax/Bak-induced oligomers that leak mtDNA to activate innate immunity.",
+          "falsifiable_by": "Biopsies showing high f_HKII/Chol-CL in immune-hot (high T-cell/PDL1) tumors."
+        },
+        {
+          "statement": "Pharmacological gate-restoration (HKII displacement + BclxL inhibition) can convert immune-cold to hot tumors via forced VDAC oligomerization/mtDNA release.",
+          "type": 3,
+          "confidence": 0.6,
+          "mechanism": "Displacing stabilizers allows pro-apoptotic pores to oligomerize VDAC1, leaking mtDNA to trigger cGAS-STING independently of adaptive immunity.",
+          "falsifiable_by": "In vivo cold-tumor models where combo fails to \u2191 STING signaling/TIL infiltration."
+        },
+        {
+          "statement": "Gate-restoration + checkpoint inhibitors synergize specifically in immune-cold tumors, resolving PD1/PDL1 paradox.",
+          "type": 3,
+          "confidence": 0.7,
+          "mechanism": "Gate-drugs provide initial cGAS-STING \"visibility\" signal absent in jammed/cold tumors, amplifying PD1 blockade effects.",
+          "falsifiable_by": "Clinical trials showing no added benefit of combo vs checkpoint alone in cold tumors."
+        },
+        {
+          "statement": "f_HKII occupancy or Chol/CL ratio from biopsies predicts poor immunotherapy response.",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "Cofactor equation links high jamming fractions to absent cGAS-STING, stratifying cold tumors unresponsive to checkpoint amplification.",
+          "falsifiable_by": "Patient cohorts with high f_HKII/Chol-CL but high IO response rates."
+        },
+        {
+          "statement": "High Warburg/glycolysis (\u2191 HKII recruitment) jams VDAC gate, explaining immune-coldness in metabolically active tumors.",
+          "type": 2,
+          "confidence": 0.8,
+          "mechanism": "Glycolytic flux \u2191 f_HKII-VDAC binding per cofactor equation, stabilizing gate to block oligomerization/mtDNA leak.",
+          "falsifiable_by": "Glycolytic tumors with low f_HKII but immune-cold profile. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "gemini",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1.  Does the VDAC1 \"gate-jammed\" state (high f_HKII, f_BclxL, Chol/CL) mechanistically link the Warburg metabolic phenotype to an immune-cold tumor by preventing mtDNA-induced cGAS-STING activation?\n2.  Can the VDAC1 gate-jamming state, measured via f_HKII or Chol/CL ratio in tumor biopsies, serve as a predictive biomarker for patient non-response to checkpoint inhibitor immunotherapy?\n3.  Is pharmacological \"gate-restoration\" (e.g., via HK-II displacement) a viable therapeutic strategy to convert immune-cold tumors into immune-hot tumors, thereby synergizing with checkpoint blockade?\n\nKey variables: VDAC1 oligomerization, fractional occupancy by gatekeepers (f_HKII, f_BclxL), membrane composition (Chol/CL), mtDNA leakage, cGAS-STING signaling, and tumor immune phenotype (hot/cold). The core relationship is that gatekeeper variables negatively regulate VDAC1 oligomerization, which is the necessary upstream event for innate immune visibility.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: High VDAC1 occupancy by Hexokinase-II (f_HKII) and/or a high membrane Chol/CL ratio in tumor biopsies are strong predictive biomarkers for primary resistance to PD-1/PD-L1 checkpoint inhibitors.\nTYPE: 2\nCONFIDENCE: 0.85\nMECHANISM: These gate-jamming conditions prevent VDAC1 oligomerization, blocking the release of mitochondrial dsDNA required to activate the cGAS-STING pathway, thus rendering the tumor immunologically \"invisible.\"\nFALSIFIABLE BY: A multi-center patient cohort study showing no significant correlation between pre-treatment f_HKII or Chol/CL levels and lack of response to anti-PD-1 therapy.\n\nCLAIM: Pharmacological VDAC1 gate-restoration will synergize with checkpoint inhibitors, primarily by converting non-responders into responders.\nTYPE: 2\nCONFIDENCE: 0.75\nMECHANISM: Gate-restoring drugs force VDAC1 oligomerization and mtDNA release, initiating cGAS-STING signaling that recruits T-cells to the tumor, creating the inflammatory context required for a checkpoint inhibitor to function effectively.\nFALSIFIABLE BY: Preclinical studies in syngeneic immune-cold mouse tumor models where combination therapy with a gate-restoring drug and anti-PD-1 fails to show efficacy greater than the sum of the individual agents.\n\nCLAIM: The Warburg effect is a dual-purpose adaptation, providing metabolic support for proliferation while actively enforcing immune evasion through VDAC1 gate-jamming.\nTYPE: 3\nCONFIDENCE: 0.60\nMECHANISM: The high glycolytic flux required for rapid growth necessitates high levels of mitochondrial-bound HK-II, which provides a direct, built-in mechanism to suppress innate immune detection by stabilizing VDAC1.\nFALSIFIABLE BY: Identification of a cancer type that exhibits a strong Warburg phenotype but maintains a robustly immune-hot microenvironment due to active cGAS-STING signaling independent of VDAC1 state.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1.  **The physiological trigger for VDAC1 oligomerization:** What specific signal (e.g., ROS, Bax/Bak activation, specific lipid changes) within the tumor microenvironment initiates VDAC1 oligomerization? Without this, we don't know if simply \"un-jamming\" the gate is sufficient for mtDNA release.\n2.  **Quantitative thresholds:** What precise levels of f_HKII, f_BclxL, or Chol/CL ratio define the switch from a \"leaky\" to a \"jammed\" state in human tumors? The dose-response relationship is unknown.\n3.  **Systemic toxicity of gate-restoration:** Would pharmacologically forcing VDAC1 oligomerization cause unacceptable toxicity in healthy tissues with high metabolic rates, such as the brain or heart? The therapeutic index is a major uncertainty.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nPerform quantitative proteomics (for f_HKII) and lipidomics (for Chol/CL) on pre-treatment tumor biopsies from a cohort of immunotherapy patients, correlating these metrics with response data and T-cell infiltration scores.",
+      "claims": [
+        {
+          "statement": "High VDAC1 occupancy by Hexokinase-II (f_HKII) and/or a high membrane Chol/CL ratio in tumor biopsies are strong predictive biomarkers for primary resistance to PD-1/PD-L1 checkpoint inhibitors.",
+          "type": 2,
+          "confidence": 0.85,
+          "mechanism": "These gate-jamming conditions prevent VDAC1 oligomerization, blocking the release of mitochondrial dsDNA required to activate the cGAS-STING pathway, thus rendering the tumor immunologically \"invisible.\"",
+          "falsifiable_by": "A multi-center patient cohort study showing no significant correlation between pre-treatment f_HKII or Chol/CL levels and lack of response to anti-PD-1 therapy."
+        },
+        {
+          "statement": "Pharmacological VDAC1 gate-restoration will synergize with checkpoint inhibitors, primarily by converting non-responders into responders.",
+          "type": 2,
+          "confidence": 0.75,
+          "mechanism": "Gate-restoring drugs force VDAC1 oligomerization and mtDNA release, initiating cGAS-STING signaling that recruits T-cells to the tumor, creating the inflammatory context required for a checkpoint inhibitor to function effectively.",
+          "falsifiable_by": "Preclinical studies in syngeneic immune-cold mouse tumor models where combination therapy with a gate-restoring drug and anti-PD-1 fails to show efficacy greater than the sum of the individual agents."
+        },
+        {
+          "statement": "The Warburg effect is a dual-purpose adaptation, providing metabolic support for proliferation while actively enforcing immune evasion through VDAC1 gate-jamming.",
+          "type": 3,
+          "confidence": 0.6,
+          "mechanism": "The high glycolytic flux required for rapid growth necessitates high levels of mitochondrial-bound HK-II, which provides a direct, built-in mechanism to suppress innate immune detection by stabilizing VDAC1.",
+          "falsifiable_by": "Identification of a cancer type that exhibits a strong Warburg phenotype but maintains a robustly immune-hot microenvironment due to active cGAS-STING signaling independent of VDAC1 state. \u2500\u2500\u2500"
+        }
+      ]
+    },
+    {
+      "model": "deepseek",
+      "raw": "\u2500\u2500\u2500 SECTION 1: DECOMPOSITION (max 200 tokens) \u2500\u2500\u2500\n1. Does the cofactor model predict that high HK-II/Bcl-xL/Chol occupancy of VDAC1 (\"gate-jamming\") suppresses mtDNA release and cGAS-STING signaling, creating immune-cold tumors?\n2. Can pharmacological displacement of these cofactors force VDAC1 oligomerization, restore mtDNA leak and innate immune signaling, and thus convert immune-cold to immune-hot tumors?\n3. Does the model predict synergy between gate-restoring drugs and checkpoint inhibitors specifically in immune-cold tumors, and can VDAC1 cofactor occupancy (f_HKII, Chol/CL) serve as a predictive biomarker for immunotherapy response?\n4. Does the model explain the correlation between high Warburg glycolysis (which increases HK-II binding) and immune-cold phenotypes?\n\nKey variables: f_HKII, f_BclxL, Chol/CL ratio (determinants of VDAC1 open/oligomerized state). Their high occupancy stabilizes the closed state, preventing oligomerization and mtDNA leak, reducing cGAS-STING activation and immune visibility.\n\n\u2500\u2500\u2500 SECTION 2: CLAIMS (max 400 tokens) \u2500\u2500\u2500\nCLAIM: High fractional occupancy of VDAC1 by HK-II and Bcl-xL, plus a high Chol/CL ratio, predicts immune-cold tumors by preventing VDAC1 oligomerization and mtDNA-driven cGAS-STING activation.\nTYPE: 1\nCONFIDENCE: 0.75\nMECHANISM: These cofactors stabilize the VDAC1 closed state, physically blocking pore oligomerization required for mtDNA release, thereby silencing a key innate immune signal.\nFALSIFIABLE BY: Finding immune-hot tumors with demonstrably high HK-II/VDAC1 binding and high mitochondrial cholesterol, or immune-cold tumors with low cofactor occupancy and no mtDNA in cytosol.\n\nCLAIM: Pharmacological displacement of HK-II and inhibition of Bcl-xL will synergize with PD-1/PD-L1 blockade specifically in immune-cold tumors, but not in already immune-hot tumors.\nTYPE: 2\nCONFIDENCE: 0.65\nMECHANISM: Gate-restoring drugs induce VDAC1 oligomerization and mtDNA leak, initiating innate immune recognition (creating \"signal 1\"), which checkpoint inhibitors can then amplify by removing T-cell inhibition.\nFALSIFIABLE BY: A clinical trial showing no added benefit of a VDAC1 gate-restorer + anti-PD1 in immune-cold tumors versus anti-PD1 alone.\n\nCLAIM: The f_HKII (HK-II occupancy) or Chol/CL ratio from tumor biopsies can serve as a predictive biomarker for intrinsic resistance to checkpoint inhibitor monotherapy.\nTYPE: 2\nCONFIDENCE: 0.60\nMECHANISM: These metrics directly report on the probability of VDAC1 oligomerization and thus the tumor's baseline ability to activate cGAS-STING, which is prerequisite for checkpoint inhibitor efficacy.\nFALSIFIABLE BY: A prospective study showing no correlation between these measured ratios and objective response rate to anti-PD1/PD-L1.\n\nCLAIM: The Warburg effect promotes immune evasion not only via lactate but also by increasing HK-II binding to VDAC1, directly jamming the mtDNA leak pathway.\nTYPE: 3\nCONFIDENCE: 0.55\nMECHANISM: High glycolytic flux increases mitochondrial HK-II binding, which stabilizes VDAC1 in a closed, non-oligomerizing state, providing a direct metabolic link between glycolysis and immune invisibility.\nFALSIFIABLE BY: Demonstrating that Warburg-active tumors with genetically severed HK-II-VDAC1 binding remain immune-cold.\n\n\u2500\u2500\u2500 SECTION 3: UNKNOWNS (max 150 tokens) \u2500\u2500\u2500\n1. The quantitative threshold of cytosolic mtDNA required to trigger a sustained cGAS-STING response in the tumor microenvironment is unknown.\n2. The relative contribution of VDAC1-mediated mtDNA leak versus other pathways (e.g., ROS, mitophagy defects) to spontaneous cGAS-STING activation in human tumors is unmeasured.\n3. The pharmacokinetics and tumor penetration of putative \"gate-restoring\" drugs (HK-II displacers, Bcl-xL inhibitors) and their specific effect on VDAC1 oligomerization in vivo are unknown.\n4. Whether the Chol/CL ratio in tumor mitochondria correlates with biopsy-measurable lipid profiles is unclear.\n\n\u2500\u2500\u2500 SECTION 4: NEXT STEP (max 50 tokens) \u2500\u2500\u2500\nCorrelate VDAC1 cofactor occupancy (f_HKII by proximity ligation assay, Chol/CL by mass spec) with cytosolic mtDNA and T-cell infiltration in a matched cohort of human tumors with known immunotherapy response data.",
+      "claims": [
+        {
+          "statement": "High fractional occupancy of VDAC1 by HK-II and Bcl-xL, plus a high Chol/CL ratio, predicts immune-cold tumors by preventing VDAC1 oligomerization and mtDNA-driven cGAS-STING activation.",
+          "type": 1,
+          "confidence": 0.75,
+          "mechanism": "These cofactors stabilize the VDAC1 closed state, physically blocking pore oligomerization required for mtDNA release, thereby silencing a key innate immune signal.",
+          "falsifiable_by": "Finding immune-hot tumors with demonstrably high HK-II/VDAC1 binding and high mitochondrial cholesterol, or immune-cold tumors with low cofactor occupancy and no mtDNA in cytosol."
+        },
+        {
+          "statement": "Pharmacological displacement of HK-II and inhibition of Bcl-xL will synergize with PD-1/PD-L1 blockade specifically in immune-cold tumors, but not in already immune-hot tumors.",
+          "type": 2,
+          "confidence": 0.65,
+          "mechanism": "Gate-restoring drugs induce VDAC1 oligomerization and mtDNA leak, initiating innate immune recognition (creating \"signal 1\"), which checkpoint inhibitors can then amplify by removing T-cell inhibition.",
+          "falsifiable_by": "A clinical trial showing no added benefit of a VDAC1 gate-restorer + anti-PD1 in immune-cold tumors versus anti-PD1 alone."
+        },
+        {
+          "statement": "The f_HKII (HK-II occupancy) or Chol/CL ratio from tumor biopsies can serve as a predictive biomarker for intrinsic resistance to checkpoint inhibitor monotherapy.",
+          "type": 2,
+          "confidence": 0.6,
+          "mechanism": "These metrics directly report on the probability of VDAC1 oligomerization and thus the tumor's baseline ability to activate cGAS-STING, which is prerequisite for checkpoint inhibitor efficacy.",
+          "falsifiable_by": "A prospective study showing no correlation between these measured ratios and objective response rate to anti-PD1/PD-L1."
+        },
+        {
+          "statement": "The Warburg effect promotes immune evasion not only via lactate but also by increasing HK-II binding to VDAC1, directly jamming the mtDNA leak pathway.",
+          "type": 3,
+          "confidence": 0.55,
+          "mechanism": "High glycolytic flux increases mitochondrial HK-II binding, which stabilizes VDAC1 in a closed, non-oligomerizing state, providing a direct metabolic link between glycolysis and immune invisibility.",
+          "falsifiable_by": "Demonstrating that Warburg-active tumors with genetically severed HK-II-VDAC1 binding remain immune-cold. \u2500\u2500\u2500"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "round_num": 0,
+    "jaccard": 0.16515151515151513,
+    "cosine": 0.8172474920749664,
+    "jsd": 0.14091328898154826,
+    "kappa": 0.9612247997266412,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.14285714285714285,
+      "2": 0.5238095238095238,
+      "3": 0.3333333333333333
+    },
+    "type_01_ratio": 0.14285714285714285,
+    "n_claims_per_model": [
+      4,
+      5,
+      5,
+      3,
+      4
+    ]
+  },
+  "total_calls": 5
+}

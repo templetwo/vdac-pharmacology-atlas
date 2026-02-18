@@ -1,0 +1,35 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260218_002559_pharmacology
+Date: 2026-02-18
+Protocol: evo-1.0
+
+QUESTION:
+  Based on the cofactor equation (Threshold = K/[(1-f_HKII)(1-f_BclxL)] × [Chol]/[CL]), what are the most promising combinatorial strategies for restoring the apoptotic audit in cancer cells? Specifically: (1) The multiplicative structure predicts supra-additive effects when two or more terms are corrected simultaneously. What two-drug combinations targeting different terms of the equation show the greatest predicted synergy — is 2-DG (HK-II displacement) + ABT-737 (Bcl-xL release) the optimal pair, or are there better combinations? (2) Can OMM cholesterol depletion (statins, methyl-beta-cyclodextrin) sensitize cancer cells to existing VDAC-engaging therapies by reducing Chol/CL? What is the predicted fold-change in therapeutic index? (3) The Warburg effect funds the gate-jamming — cancer cells pay a metabolic cost to maintain all three corruptions simultaneously. Can this cost be exploited therapeutically by forcing metabolic crisis (2-DG, metformin) while simultaneously removing one protective term (venetoclax)? (4) Which term of the equation is the weakest link in specific cancer types — does HK-II matter more in glycolytic tumors (glioblastoma) while Bcl-xL matters more in hematologic malignancies? (5) Can the biomarker panel (GSH/GSSG ratio, f_HKII occupancy, Chol/CL ratio) predict which patients will respond to gate-restoring combinations before treatment begins?
+
+CONVERGENCE:
+  S2 rounds: ?
+  Early stopped: ?
+  Final Jaccard: ?
+  Final TYPE 0/1: ?
+  S3 gate: FAILED
+
+VERIFICATION:
+  TYPE 2 claims checked: 0
+  Promoted to TYPE 1: 0
+  Novel (no literature): 0
+  Contradicted: 0
+
+LAB GATE:
+  Result: FAILED
+  Claims passed: 0/0
+
+BUDGET:
+  Total LLM calls: ?
+  Target range: 92-142
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================

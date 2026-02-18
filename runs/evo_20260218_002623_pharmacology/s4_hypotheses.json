@@ -1,0 +1,264 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF HK-II is displaced from VDAC1 (via methyl jasmonate or clotrimazole) in immune-cold cancer cell lines with high baseline f_HKII (>0.6), THEN cytoplasmic mtDNA levels increase \u22653-fold within 6h, phospho-STING (Ser366) increases \u22652-fold by 12h, and IFN-\u03b2 secretion increases \u22655-fold by 24h, compared to vehicle control.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "f_HKII_baseline",
+          "unit": "dimensionless",
+          "low": 0.5,
+          "high": 0.9,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "mtDNA_fold_change",
+          "unit": "fold",
+          "low": 1.0,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "STING_fold_change",
+          "unit": "fold",
+          "low": 1.0,
+          "high": 8.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "\u03b2_fold_change",
+          "unit": "fold",
+          "low": 1.0,
+          "high": 50.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "time_to_peak_STING",
+          "unit": "hours",
+          "low": 4.0,
+          "high": 24.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 9.0,
+      "experimental_protocol": "Use Panc-1 (pancreatic, immune-cold archetype, high HK-II/VDAC1) and A375 (melanoma, moderate HK-II) cell lines. Treat with methyl jasmonate (0.5-3 mM) or clotrimazole (10-50 \u03bcM) for 6/12/24h. Measure cytoplasmic mtDNA by qPCR after digitonin fractionation, p-STING by Western blot, IFN-\u03b2 by ELISA, and VDAC1 oligomerization by EGS crosslinking + native PAGE. Include HK-II siRNA as genetic control. Timeline: 4 weeks.",
+      "expected_outcome": "HK-II displacement causes",
+      "null_outcome": "HK-II displacement does not increase cytoplasmic mtDNA or p-STING, or mtDNA increases but cGAS-STING remains silent, indicating the coupling is not through VDAC1 oligomerization.",
+      "dose_ranges": {
+        "Methyl jasmonate": {
+          "doses": [
+            500.0,
+            1000.0,
+            2000.0,
+            3000.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "Clotrimazole": {
+          "doses": [
+            10.0,
+            20.0,
+            35.0,
+            50.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "II siRNA": {
+          "doses": [
+            10.0,
+            25.0,
+            50.0
+          ],
+          "unit": "nM"
+        }
+      },
+      "readouts": [
+        "qPCR (ND1",
+        "ND5 mtDNA genes in cytoplasmic fraction)",
+        "Western blot (p-STING S366",
+        "p-TBK1",
+        "p-IRF3)",
+        "ELISA (IFN-\u03b2",
+        "CXCL10)",
+        "native PAGE with EGS crosslinking (VDAC1 oligomers)",
+        "co-IP (HK-II:VDAC1)",
+        "Seahorse (glycolytic shift confirmation)"
+      ],
+      "controls": [
+        "Vehicle (DMSO)",
+        "scrambled siRNA",
+        "STING inhibitor H-151 (epistasis control)",
+        "DNase I cytoplasmic pre-treatment (confirms mtDNA dependency)",
+        "VDAC1-KO cells (specificity control)",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H2",
+      "prediction": "IF a composite gate-jamming score (GJS = f_HKII \u00d7 0.4 + f_BclxL \u00d7 0.3 + [Chol/CL] \u00d7 0.3, normalized) is computed across \u226515 cancer cell lines, THEN GJS correlates inversely with basal cGAS-STING pathway activity (p-STING, ISG expression) with Spearman \u03c1 \u2264 \u22120.6 (p<0.01), and lines with GJS >0.7 show \u226580% concordance with immune-cold classification (low MHC-I, low CXCL10).",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "f_HKII",
+          "unit": "dimensionless",
+          "low": 0.1,
+          "high": 0.9,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "f_BclxL",
+          "unit": "dimensionless",
+          "low": 0.05,
+          "high": 0.7,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "ISG_score",
+          "unit": "arbitrary",
+          "low": 0.0,
+          "high": 100.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Select 15-20 cell lines spanning tumor types (e.g., Panc-1, MDA-MB-231, A549, HCT116, SK-MEL-28, MCF7, PC3, U87, HepG2, NCI-H460, B16F10, 4T1, CT26, MC38, LLC). Quantify HK-II:VDAC1 co-IP (f_HKII), Bcl-xL:VDAC1 co-IP (f_BclxL), mitochondrial cholesterol and cardiolipin by mass spectrometry. Simultaneously measure p-STING, ISG panel (qPCR: IFIT1, MX1, OAS1, ISG15), surface MHC-I (flow cytometry), CXCL10 (ELISA). Compute GJS, correlate. Timeline: 8 weeks.",
+      "expected_outcome": "Strong inverse correlation between GJS and immune signaling metrics. Cell lines cluster into gate-jammed/immune-cold vs. gate-open/immune-hot groups. Pancreatic and certain lung lines show highest GJS; colorectal lines like MC38 show lowest.",
+      "null_outcome": "No significant correlation between GJS and immune metrics, or high-GJS lines show active cGAS-STING, indicating gate-jamming is not the dominant determinant of immune visibility.",
+      "dose_ranges": {},
+      "readouts": [
+        "Co-immunoprecipitation + densitometry (f_HKII",
+        "f_BclxL)",
+        "LC-MS/MS lipidomics (Chol",
+        "CL from mitochondrial fractions)",
+        "Western blot (p-STING",
+        "STING",
+        "cGAS)",
+        "RT-qPCR (ISG panel)",
+        "flow cytometry (HLA-ABC/MHC-I)",
+        "ELISA (CXCL10",
+        "IFN-\u03b2)"
+      ],
+      "controls": [
+        "Recombinant IFN-\u03b2 treatment (positive control for ISG induction capacity)",
+        "STING agonist diABZI (confirms pathway competence per line)",
+        "mitochondrial fraction purity verified by Tom20+/calreticulin\u2212",
+        "---",
+        "##"
+      ]
+    },
+    {
+      "id": "H3",
+      "prediction": "IF immune-cold syngeneic tumors (4T1 or B16F10, predicted high GJS) are treated with gate-restoring combination (HK-II displacer + Bcl-xL inhibitor) followed by anti-PD-1, THEN tumor growth inhibition shows synergy (combination index <0.7 by Bliss independence) with \u226550% tumor volume reduction vs. anti-PD-1 alone, while immune-hot tumors (MC38, predicted low GJS) show no additional benefit from gate-restoration beyond anti-PD-1 alone.",
+      "source_claims": [],
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "tumor_volume_reduction",
+          "unit": "%",
+          "low": 30.0,
+          "high": 80.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "CD8_TIL_fold_increase",
+          "unit": "fold",
+          "low": 2.0,
+          "high": 10.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "combination_index_Bliss",
+          "unit": "(uniform,",
+          "low": 0.3,
+          "high": 1.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "gate_restoration_lead_time",
+          "unit": "days",
+          "low": 2.0,
+          "high": 7.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        },
+        {
+          "name": "survival_extension",
+          "unit": "%",
+          "low": 20.0,
+          "high": 100.0,
+          "distribution": "uniform",
+          "mean": null,
+          "std": null
+        }
+      ],
+      "testability_score": 7.0,
+      "experimental_protocol": "Implant 4T1 (immune-cold) and MC38 (immune-hot) tumors in BALB/c and C57BL/6 mice respectively (n=10/group). Groups: (1) vehicle, (2) gate-restoration combo (methyl jasmonate 100mg/kg IP + ABT-263/navitoclax 50mg/kg PO, days 5-12), (3) anti-PD-1 (200\u03bcg IP, days 8,11,14), (4) gate-restoration + anti-PD-1. Measure tumor volume q2d, sacrifice day 21 for TIL analysis (flow: CD8+, CD4+, NK), intratumoral cytokines (multiplex), and tumor mtDNA cytoplasmic fraction. Timeline: 10 weeks including breeding/acclimation.",
+      "expected_outcome": "In 4T1: gate-restoration alone modestly slows growth; anti-PD-1 alone fails; combination produces dramatic regression with synergistic CI<0.7, increased CD8+ TILs, elevated intratumoral IFN-\u03b2. In MC38: anti-PD-1 alone effective; gate-restoration adds no benefit, confirming specificity to immune-cold context.",
+      "null_outcome": "No synergy in 4T1 (combination no better than additive), or gate-restoration + anti-PD-1 works equally in MC38, indicating the mechanism is not specific to gate-jamming status.",
+      "dose_ranges": {
+        "Methyl jasmonate": {
+          "doses": [
+            50.0,
+            100.0,
+            150.0
+          ],
+          "unit": "mg/kg"
+        }
+      },
+      "readouts": [
+        "Caliper tumor measurement",
+        "survival (Kaplan-Meier)",
+        "flow cytometry on dissociated tumors (CD45+CD3+CD8+",
+        "CD4+",
+        "NK1.1+",
+        "Granzyme B+",
+        "PD-1+)",
+        "multiplex cytokine (IFN-\u03b2",
+        "CXCL10",
+        "TNF-\u03b1",
+        "IL-12)",
+        "qPCR cytoplasmic mtDNA from sorted tumor cells",
+        "IHC (CD8",
+        "p-STING)"
+      ],
+      "controls": [
+        "Isotype control antibody (rat IgG2a)",
+        "STING-KO host mice (to confirm cGAS-STING dependency)",
+        "heat-killed tumor cell vaccination (confirms antigenicity exists)",
+        "navitoclax alone (Bcl-xL inhibition without HK-II displacement)",
+        "---",
+        "##"
+      ]
+    }
+  ],
+  "n_hypotheses": 3,
+  "total_calls": 1,
+  "latency_s": 54.56
+}

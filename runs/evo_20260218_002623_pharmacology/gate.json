@@ -1,0 +1,220 @@
+{
+  "passed": true,
+  "claims": [
+    {
+      "statement": "High f_HKII occupancy stabilizes VDAC1 monomers, suppressing oligomerization-dependent mtDNA release and cGAS-STING activation, contributing to immune-cold phenotype.",
+      "falsifiable": true,
+      "falsifiable_reason": "Specifies HK-II knockdown failing to increase cytoplasmic mtDNA or cGAS-STING signaling as disproof.",
+      "feasible": true,
+      "feasible_reason": "HK-II knockdown uses standard siRNA/shRNA in cell culture with qPCR/Western blot for mtDNA/STING readouts.",
+      "novel": true,
+      "novel_reason": "Links f_HKII to immune-cold phenotype via VDAC oligomerization, enabling stratification of tumors for gate-jamming tests.",
+      "passed": true
+    },
+    {
+      "statement": "The Warburg effect and immune evasion are mechanistically coupled through VDAC gating \u2014 the same molecular investments (HK-II recruitment, cholesterol enrichment) that optimize glycolysis simultaneously prevent immune visibility.",
+      "falsifiable": true,
+      "falsifiable_reason": "Disproved by Warburg-high, high f_HKII tumors showing active cGAS-STING and immune-hot status.",
+      "feasible": true,
+      "feasible_reason": "Assess Warburg (glucose uptake, lactate), f_HKII (co-IP), and cGAS-STING (reporter assays) in cell lines/tumoroids.",
+      "novel": true,
+      "novel_reason": "Couples Warburg to immune evasion via VDAC gating, predicting testable metabolic-immune correlations.",
+      "passed": true
+    },
+    {
+      "statement": "Gate-restoring drugs (HK-II displacers + navitoclax-class Bcl-xL inhibitors) will synergize with anti-PD-1 specifically in immune-cold tumors with high f_HKII.",
+      "falsifiable": true,
+      "falsifiable_reason": "No differential benefit or failure to increase TILs in cold vs hot tumors disproves synergy.",
+      "feasible": false,
+      "feasible_reason": "Requires in vivo combination therapy testing with stratification and TIL quantification beyond standard lab methods.",
+      "novel": true,
+      "novel_reason": "Predicts tumor-type-specific synergy, guiding combo screen protocols in cold tumor models.",
+      "passed": false
+    },
+    {
+      "statement": "f_HKII occupancy and Chol/CL ratio from tumor biopsies can serve as predictive biomarkers for immunotherapy response, with high values predicting resistance.",
+      "falsifiable": true,
+      "falsifiable_reason": "No correlation in retrospective biopsy cohorts disproves biomarker utility.",
+      "feasible": false,
+      "feasible_reason": "Needs large clinical biopsy cohorts with IHC/quantitative assays and response tracking, not standard lab.",
+      "novel": true,
+      "novel_reason": "Proposes direct biopsy metrics for IO resistance, enabling patient stratification hypothesis.",
+      "passed": false
+    },
+    {
+      "statement": "Gate-jamming (high f_HKII, f_BclxL, Chol/CL) predicts immune-cold tumors by preventing VDAC1 oligomerization and mtDNA-cGAS-STING activation.",
+      "falsifiable": true,
+      "falsifiable_reason": "High jamming with high cGAS-STING or low jamming with cold phenotype disproves prediction.",
+      "feasible": true,
+      "feasible_reason": "Quantify jamming factors (binding assays), VDAC state (crosslinking), and STING (phospho-blots) in cell lines.",
+      "novel": true,
+      "novel_reason": "Core prediction tying gate-jamming quantitatively to cold tumors for multi-factor testing.",
+      "passed": true
+    },
+    {
+      "statement": "Pharmacological gate-restoration (HK-II displacement + Bcl-xL inhibition) will convert immune-cold tumors to immune-hot and synergize with checkpoint inhibitors.",
+      "falsifiable": true,
+      "falsifiable_reason": "Failure to boost STING/TILs or synergize with checkpoint inhibitors disproves conversion.",
+      "feasible": false,
+      "feasible_reason": "In vivo tumor models with drug combos, infiltration assays, and synergy metrics exceed standard cell culture.",
+      "novel": true,
+      "novel_reason": "Specifies gate-restoration mechanism for hot conversion, testable in stratified preclinical screens.",
+      "passed": false
+    },
+    {
+      "statement": "f_HKII occupancy or Chol/CL ratio in tumor biopsies can predict immunotherapy response.",
+      "falsifiable": true,
+      "falsifiable_reason": "No correlation in studies between metrics and IO response disproves prediction.",
+      "feasible": false,
+      "feasible_reason": "Relies on biopsy cohorts and clinical response data, requiring prospective/retrospective analysis.",
+      "novel": true,
+      "novel_reason": "Quantifies biomarker thresholds for IO, advancing personalized prediction protocol.",
+      "passed": false
+    },
+    {
+      "statement": "Warburg metabolism (high glycolysis) is causally linked to immune evasion via gate-jamming.",
+      "falsifiable": true,
+      "falsifiable_reason": "Glycolytic tumors with low jamming/immune-hot or non-glycolytic with high jamming disproves link.",
+      "feasible": true,
+      "feasible_reason": "Measure glycolysis (ECAR), f_HKII (binding), VDAC state, and immune markers in cell lines.",
+      "novel": true,
+      "novel_reason": "Causal glycolysis-to-jamming pathway predicts flux-dependent immune tests.",
+      "passed": true
+    },
+    {
+      "statement": "Checkpoint inhibitors alone are ineffective in gate-jammed tumors due to lack of pre-existing immune visibility.",
+      "falsifiable": true,
+      "falsifiable_reason": "Gate-jammed tumors responding to checkpoint alone disproves invisibility requirement.",
+      "feasible": true,
+      "feasible_reason": "Test jammed cell lines (high f_HKII) for PD-1 response in co-culture or syngeneic models.",
+      "novel": true,
+      "novel_reason": "Explains IO paradox via gate state, falsifiable in cold tumor IO assays.",
+      "passed": true
+    },
+    {
+      "statement": "Gate-jamming (high f_HKII/f_BclxL/Chol/CL) predicts immune-cold tumors by blocking VDAC1 oligomerization and mtDNA-cGAS-STING.",
+      "falsifiable": true,
+      "falsifiable_reason": "High jamming in immune-hot tumors (high TIL/PDL1) disproves prediction.",
+      "feasible": true,
+      "feasible_reason": "Correlate biopsy IHC for factors with TIL/PDL1 in cell lines or xenografts.",
+      "novel": true,
+      "novel_reason": "Multi-factor jamming score predicts hot/cold, enabling composite biomarker.",
+      "passed": true
+    },
+    {
+      "statement": "Pharmacological gate-restoration (HKII displacement + BclxL inhibition) can convert immune-cold to hot tumors via forced VDAC oligomerization/mtDNA release.",
+      "falsifiable": true,
+      "falsifiable_reason": "Combo fails to increase STING/TILs in cold models disproves conversion.",
+      "feasible": false,
+      "feasible_reason": "In vivo cold models with drug treatment and signaling/infiltration readouts not standard.",
+      "novel": true,
+      "novel_reason": "Independent mtDNA trigger via gate-restoration for cold tumors.",
+      "passed": false
+    },
+    {
+      "statement": "Gate-restoration + checkpoint inhibitors synergize specifically in immune-cold tumors, resolving PD1/PDL1 paradox.",
+      "falsifiable": true,
+      "falsifiable_reason": "No combo benefit over checkpoint in cold tumors disproves synergy.",
+      "feasible": false,
+      "feasible_reason": "Clinical trial-level testing of specificity in cold tumors infeasible in lab.",
+      "novel": true,
+      "novel_reason": "Resolves paradox with cold-specific combo prediction.",
+      "passed": false
+    },
+    {
+      "statement": "f_HKII occupancy or Chol/CL ratio from biopsies predicts poor immunotherapy response.",
+      "falsifiable": true,
+      "falsifiable_reason": "High metrics but high IO response disproves biomarker.",
+      "feasible": false,
+      "feasible_reason": "Patient cohorts with pre-treatment metrics and IO outcomes not lab-based.",
+      "novel": true,
+      "novel_reason": "Cofactor equation stratifies unresponsive cold tumors.",
+      "passed": false
+    },
+    {
+      "statement": "High Warburg/glycolysis (\u2191 HKII recruitment) jams VDAC gate, explaining immune-coldness in metabolically active tumors.",
+      "falsifiable": true,
+      "falsifiable_reason": "Glycolytic tumors with low f_HKII but cold profile disproves jamming role.",
+      "feasible": true,
+      "feasible_reason": "Flux assays, f_HKII binding, and immune profiling in glycolytic lines.",
+      "novel": true,
+      "novel_reason": "Flux-driven f_HKII increase explains metabolic coldness.",
+      "passed": true
+    },
+    {
+      "statement": "High VDAC1 occupancy by Hexokinase-II (f_HKII) and/or a high membrane Chol/CL ratio in tumor biopsies are strong predictive biomarkers for primary resistance to PD-1/PD-L1 checkpoint inhibitors.",
+      "falsifiable": true,
+      "falsifiable_reason": "No correlation in multi-center cohorts disproves biomarker.",
+      "feasible": false,
+      "feasible_reason": "Large-scale patient study with pre-treatment assays infeasible.",
+      "novel": true,
+      "novel_reason": "Strong metrics for primary resistance, testable retrospectively.",
+      "passed": false
+    },
+    {
+      "statement": "Pharmacological VDAC1 gate-restoration will synergize with checkpoint inhibitors, primarily by converting non-responders into responders.",
+      "falsifiable": true,
+      "falsifiable_reason": "No superior efficacy in cold mouse models disproves synergy.",
+      "feasible": false,
+      "feasible_reason": "Syngeneic models with combo therapy beyond standard cell work.",
+      "novel": true,
+      "novel_reason": "Converts non-responders via initial STING signal.",
+      "passed": false
+    },
+    {
+      "statement": "The Warburg effect is a dual-purpose adaptation, providing metabolic support for proliferation while actively enforcing immune evasion through VDAC1 gate-jamming.",
+      "falsifiable": true,
+      "falsifiable_reason": "Warburg-hot tumor with active cGAS-STING despite VDAC jamming disproves dual role.",
+      "feasible": true,
+      "feasible_reason": "Identify/profile Warburg lines for STING independent of VDAC.",
+      "novel": true,
+      "novel_reason": "Warburg as built-in evasion via HK-II, linking proliferation-immunity.",
+      "passed": true
+    },
+    {
+      "statement": "High fractional occupancy of VDAC1 by HK-II and Bcl-xL, plus a high Chol/CL ratio, predicts immune-cold tumors by preventing VDAC1 oligomerization and mtDNA-driven cGAS-STING activation.",
+      "falsifiable": true,
+      "falsifiable_reason": "Hot tumors with high occupancy/cholesterol or cold with low disproves prediction.",
+      "feasible": true,
+      "feasible_reason": "Binding assays, lipidomics, VDAC crosslinking, mtDNA/cytosol in lines.",
+      "novel": true,
+      "novel_reason": "Composite jamming predicts coldness core to program.",
+      "passed": true
+    },
+    {
+      "statement": "Pharmacological displacement of HK-II and inhibition of Bcl-xL will synergize with PD-1/PD-L1 blockade specifically in immune-cold tumors, but not in already immune-hot tumors.",
+      "falsifiable": true,
+      "falsifiable_reason": "No added benefit in cold tumors vs checkpoint alone disproves specificity.",
+      "feasible": false,
+      "feasible_reason": "Trial showing stratification-specific effects not lab-feasible.",
+      "novel": true,
+      "novel_reason": "Signal 1 creation for cold-specific synergy.",
+      "passed": false
+    },
+    {
+      "statement": "The f_HKII (HK-II occupancy) or Chol/CL ratio from tumor biopsies can serve as a predictive biomarker for intrinsic resistance to checkpoint inhibitor monotherapy.",
+      "falsifiable": true,
+      "falsifiable_reason": "No correlation in prospective study with response rate disproves.",
+      "feasible": false,
+      "feasible_reason": "Prospective clinical study required.",
+      "novel": true,
+      "novel_reason": "Direct metrics for baseline STING probability.",
+      "passed": false
+    },
+    {
+      "statement": "The Warburg effect promotes immune evasion not only via lactate but also by increasing HK-II binding to VDAC1, directly jamming the mtDNA leak pathway.",
+      "falsifiable": true,
+      "falsifiable_reason": "Warburg tumors with severed HK-II-VDAC remaining cold disproves direct jamming.",
+      "feasible": true,
+      "feasible_reason": "Genetic mutants (HK-II binding-deficient) in Warburg lines for immune assays.",
+      "novel": true,
+      "novel_reason": "Direct glycolytic link beyond lactate to mtDNA pathway.",
+      "passed": true
+    }
+  ],
+  "n_passed": 10,
+  "n_failed": 11,
+  "total_calls": 1,
+  "latency_s": 10.47,
+  "recommendation": "Lab Gate PASSED with filter. 10/21 claims cleared. 11 filtered: 'Gate-restoring drugs (HK-II displacers + navitocla...' not feasible; 'f_HKII occupancy and Chol/CL ratio from tumor biop...' not feasible; 'Pharmacological gate-restoration (HK-II displaceme...' not feasible"
+}

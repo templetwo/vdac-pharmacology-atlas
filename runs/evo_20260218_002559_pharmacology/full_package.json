@@ -1,0 +1,184 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260218_002559_pharmacology",
+  "timestamp": "2026-02-18T00:28:09.209749+00:00",
+  "question": "Based on the cofactor equation (Threshold = K/[(1-f_HKII)(1-f_BclxL)] \u00d7 [Chol]/[CL]), what are the most promising combinatorial strategies for restoring the apoptotic audit in cancer cells? Specifically: (1) The multiplicative structure predicts supra-additive effects when two or more terms are corrected simultaneously. What two-drug combinations targeting different terms of the equation show the greatest predicted synergy \u2014 is 2-DG (HK-II displacement) + ABT-737 (Bcl-xL release) the optimal pair, or are there better combinations? (2) Can OMM cholesterol depletion (statins, methyl-beta-cyclodextrin) sensitize cancer cells to existing VDAC-engaging therapies by reducing Chol/CL? What is the predicted fold-change in therapeutic index? (3) The Warburg effect funds the gate-jamming \u2014 cancer cells pay a metabolic cost to maintain all three corruptions simultaneously. Can this cost be exploited therapeutically by forcing metabolic crisis (2-DG, metformin) while simultaneously removing one protective term (venetoclax)? (4) Which term of the equation is the weakest link in specific cancer types \u2014 does HK-II matter more in glycolytic tumors (glioblastoma) while Bcl-xL matters more in hematologic malignancies? (5) Can the biomarker panel (GSH/GSSG ratio, f_HKII occupancy, Chol/CL ratio) predict which patients will respond to gate-restoring combinations before treatment begins?",
+  "outcome": "S3_FAILED",
+  "cycles": 3,
+  "total_calls": 15,
+  "convergence_report": {
+    "stage": "S3",
+    "passed": false,
+    "convergence_score": 0.581,
+    "convergence_threshold": 0.85,
+    "convergence_pass": false,
+    "jaccard": 0.0796,
+    "jaccard_threshold": 0.85,
+    "jaccard_pass": false,
+    "type_01_ratio": 0.1875,
+    "type_01_threshold": 0.75,
+    "type_pass": false,
+    "cosine": 0.581,
+    "jsd": 0.1663,
+    "kappa": 0.9059,
+    "type_distribution": {
+      "0": 0.0,
+      "1": 0.1875,
+      "2": 0.25,
+      "3": 0.5625
+    },
+    "divergence_map": {
+      "total_unique_claims": 16,
+      "most_divergent": [
+        {
+          "statement": "The optimal two-drug pair is context-dependent, not universally 2-DG + ABT-737. When one f-term is near saturation (>0.9), combining its displacement with cholesterol reduction yields greater fold-change than targeting both f-terms when both are moderate (~0.7). Numerically: if f_HKII=0.95, reducing it to 0.5 changes (1-f) from 0.05\u21920.5 (10\u00d7 gain), dwarfing a 3\u00d7 gain from also targeting f_BclxL at 0.7\u21920.3. Adding statin to the saturated-term drug gives ~15-20\u00d7 Threshold reduction.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "OMM cholesterol depletion (50% Chol/CL reduction) predicts a 2\u00d7 Threshold reduction alone, but only ~1.5-2\u00d7 therapeutic index improvement in vivo because statins also reduce normal cell OMM cholesterol (though cancer cells have elevated baseline Chol/CL, providing ~1.3-1.5\u00d7 differential selectivity). Net predicted TI fold-change: 2-3\u00d7, insufficient alone but valuable as combination partner.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.7
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "In GBM (f_HKII~0.9, f_BclxL~0.6), HK-II displacement is rate-limiting; in AML (f_BclxL~0.9, f_HKII~0.5), Bcl-xL is rate-limiting. The weakest link is the highest-f term. Venetoclax succeeds in AML precisely because it addresses the dominant term.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.88
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "A three-variable biomarker panel (f_HKII by VDAC-HK2 co-IP, f_BclxL by BH3 profiling, Chol/CL by lipidomics) can stratify patients into responder categories with AUC>0.80 for gate-restoring combinations.",
+          "models_supporting": [
+            "claude"
+          ],
+          "types_assigned": [
+            3
+          ],
+          "confidences": [
+            0.55
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "1**: 2-DG (\u2193f_HKII) + ABT-737 (\u2193f_BclxL) is the *most potent* two-drug combination for supra-additive threshold reduction, but **2-DG + statin (\u2193[Chol]/[CL])** may rival it in cholesterol-rich tumors (e.g., prostate cancer). **TYPE**: 1 (hypothesis with mechanistic support) **CONFIDENCE**: 0.85 **MECHANISM**: The cofactor equation\u2019s multiplicative structure amplifies dual-term correction; 2-DG (40\u201360% \u2193f_HKII) + ABT-737 (60\u201380% \u2193f_BclxL) yields 4\u20136\u00d7 *Threshold* drop vs. 1.5\u20133\u00d7 for singles. Statins add value where [Chol]/[CL] > 2 (e.g., prostate cancer). **FALSIFIABLE BY**: Isobologram analysis showing <3\u00d7 synergy for 2-DG + ABT-737 or >2\u00d7 synergy for 2-DG + statin in cholesterol-high tumors. ---",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2**: OMM cholesterol depletion (M\u03b2CD, 50% \u2193[Chol]/[CL]) sensitizes cancer cells to erastin/CBD with a **3\u20135\u00d7 TI fold-change in vitro**, but **<2\u00d7 in vivo** due to systemic toxicity (e.g., membrane destabilization in normal cells). **TYPE**: 1 (quantitative prediction) **CONFIDENCE**: 0.75 **MECHANISM**: [Chol]/[CL] reduction directly multiplies *Threshold*; erastin/CBD\u2019s efficacy scales inversely. However, M\u03b2CD\u2019s narrow therapeutic window (TI < 10) limits clinical utility. Statins (e.g., simvastatin) may achieve 2\u20133\u00d7 TI with better safety. **FALSIFIABLE BY**: In vivo TI measurements <2\u00d7 or lack of supra-additivity in cholesterol-depleted xenografts. ---",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "3**: Metabolic crisis (2-DG + metformin) + venetoclax will **collapse the apoptotic gate in AML/multiple myeloma** but **fail in GBM** due to differential term dominance (*f_BclxL* > *f_HKII* in hematologic cancers vs. *f_HKII* > *f_BclxL* in GBM). **TYPE**: 0 (empirically supported) **CONFIDENCE**: 0.90 **MECHANISM**: AML relies on Bcl-xL (venetoclax-sensitive), while GBM is HK-II-addicted (metformin/2-DG insufficient to overcome *f_HKII* > 0.8). CRISPR screens confirm this dependency split. **FALSIFIABLE BY**: Single-cell proteomics showing *f_BclxL* > *f_HKII* in GBM or *f_HKII* > *f_BclxL* in AML. ---",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "4**: The biomarker panel (GSH/GSSG ratio, f_HKII occupancy, [Chol]/[CL]) can **predict response to gate-restoring combinations with >80% accuracy** in hematologic cancers but **<60% in solid tumors** due to heterogeneity. **TYPE**: 1 (hypothesis) **CONFIDENCE**: 0.70 **MECHANISM**: GSH/GSSG reflects redox status (linked to [Chol]/[CL]), while f_HKII/f_BclxL occupancy correlates with term dominance.",
+          "models_supporting": [
+            "mistral"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "2-DG (\u2193f_HKII 50% at 5mM) + ABT-737 (\u2193f_BclxL 70%",
+          "models_supporting": [
+            "grok"
+          ],
+          "types_assigned": [
+            2
+          ],
+          "confidences": [
+            0.5
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        },
+        {
+          "statement": "The optimal two-drug synergy is achieved by combining an OMM cholesterol-depleting agent (statin) with a drug displacing the most saturated VDAC-binding protein (the one with `f` closest to 1.0), exceeding the synergy of any two protein-displacing agents.",
+          "models_supporting": [
+            "gemini"
+          ],
+          "types_assigned": [
+            1
+          ],
+          "confidences": [
+            0.85
+          ],
+          "type_variance": 0,
+          "n_supporters": 1
+        }
+      ],
+      "models_present": [
+        "claude",
+        "mistral",
+        "grok",
+        "gemini",
+        "deepseek"
+      ]
+    },
+    "recommendation": "S3 gate FAILED. The system did not converge to stable consensus. This indicates genuine scientific disagreement worth investigating. Review the divergence map below."
+  }
+}

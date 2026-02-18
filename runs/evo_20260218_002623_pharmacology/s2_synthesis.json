@@ -1,0 +1,156 @@
+{
+  "synthesized_claims": [
+    {
+      "statement": "Warburg metabolism (high glycolysis) is causally linked to immune evasion via gate-jamming.",
+      "mechanism": "Glycolytic flux increases HK-II binding to VDAC1, stabilizing the gate-jammed state and suppressing mtDNA leak.",
+      "falsifiable_by": "Metabolically active tumors with low gate-jamming or immune-hot phenotypes, or non-glycolytic tumors with high gate-jamming.",
+      "type": 0,
+      "confidence": 0.66,
+      "overlap_count": 5,
+      "models": [
+        "claude",
+        "deepseek",
+        "gemini",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('hk', 'interacts', 'vdac1')})",
+      "chunk_text": "Warburg metabolism (high glycolysis) is causally linked to immune evasion via gate-jamming."
+    },
+    {
+      "statement": "Gate-jamming (high f_HKII/f_BclxL/Chol/CL) predicts immune-cold tumors by blocking VDAC1 oligomerization and mtDNA-cGAS-STING.",
+      "mechanism": "HKII/BclxL/Chol stabilize closed VDAC1 conformations, preventing Bax/Bak-induced oligomers that leak mtDNA to activate innate immunity.",
+      "falsifiable_by": "Biopsies showing high f_HKII/Chol-CL in immune-hot (high T-cell/PDL1) tumors.",
+      "type": 0,
+      "confidence": 0.762,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cl', 'downregulates', 'vdac1')})",
+      "chunk_text": "Gate-jamming (high f_HKII/f_BclxL/Chol/CL) predicts immune-cold tumors by blocking VDAC1 oligomerization and mtDNA-cGAS-STING."
+    },
+    {
+      "statement": "Pharmacological gate-restoration (HK-II displacement + Bcl-xL inhibition) will convert immune-cold tumors to immune-hot and synergize with checkpoint inhibitors.",
+      "mechanism": "Forced VDAC1 oligomerization \u2192 mtDNA leak \u2192 cGAS-STING activation \u2192 T-cell infiltration; checkpoint inhibitors amplify existing immune responses.",
+      "falsifiable_by": "Gate-restoration failing to increase cGAS-STING activity or T-cell infiltration in immune-cold tumors, or lack of synergy with checkpoint inhibitors.",
+      "type": 0,
+      "confidence": 0.588,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('hk', 'upregulates', 'vdac1')})",
+      "chunk_text": "Pharmacological gate-restoration (HK-II displacement + Bcl-xL inhibition) will convert immune-cold tumors to immune-hot and synergize with checkpoint inhibitors."
+    },
+    {
+      "statement": "f_HKII occupancy or Chol/CL ratio in tumor biopsies can predict immunotherapy response.",
+      "mechanism": "High gate-jamming metrics correlate with suppressed cGAS-STING and poor checkpoint inhibitor efficacy.",
+      "falsifiable_by": "Retrospective/prospective studies showing no correlation between gate-jamming metrics and immunotherapy response.",
+      "type": 0,
+      "confidence": 0.575,
+      "overlap_count": 4,
+      "models": [
+        "claude",
+        "deepseek",
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('cl', 'interacts', 'sting')})",
+      "chunk_text": "f_HKII occupancy or Chol/CL ratio in tumor biopsies can predict immunotherapy response."
+    },
+    {
+      "statement": "Gate-restoration + checkpoint inhibitors synergize specifically in immune-cold tumors, resolving PD1/PDL1 paradox.",
+      "mechanism": "Gate-drugs provide initial cGAS-STING \"visibility\" signal absent in jammed/cold tumors, amplifying PD1 blockade effects.",
+      "falsifiable_by": "Clinical trials showing no added benefit of combo vs checkpoint alone in cold tumors.",
+      "type": 2,
+      "confidence": 0.8,
+      "overlap_count": 2,
+      "models": [
+        "grok",
+        "mistral"
+      ],
+      "tuples": "frozenset({('pd1', 'interacts', 'pdl1'), ('pdl1', 'interacts', 'sting')})",
+      "chunk_text": "Gate-restoration + checkpoint inhibitors synergize specifically in immune-cold tumors, resolving PD1/PDL1 paradox."
+    },
+    {
+      "statement": "High VDAC1 occupancy by Hexokinase-II (f_HKII) and/or a high membrane Chol/CL ratio in tumor biopsies are strong predictive biomarkers for primary resistance to PD-1/PD-L1 checkpoint inhibitors.",
+      "mechanism": "These gate-jamming conditions prevent VDAC1 oligomerization, blocking the release of mitochondrial dsDNA required to activate the cGAS-STING pathway, thus rendering the tumor immunologically \"invisible.\"",
+      "falsifiable_by": "A multi-center patient cohort study showing no significant correlation between pre-treatment f_HKII or Chol/CL levels and lack of response to anti-PD-1 therapy.",
+      "type": 3,
+      "confidence": 0.85,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('sting', 'downregulates', 'vdac1'), ('sting', 'upregulates', 'vdac1')})",
+      "chunk_text": "High VDAC1 occupancy by Hexokinase-II (f_HKII) and/or a high membrane Chol/CL ratio in tumor biopsies are strong predictive biomarkers for primary resistance to PD-1/PD-L1 checkpoint inhibitors."
+    },
+    {
+      "statement": "Pharmacological VDAC1 gate-restoration will synergize with checkpoint inhibitors, primarily by converting non-responders into responders.",
+      "mechanism": "Gate-restoring drugs force VDAC1 oligomerization and mtDNA release, initiating cGAS-STING signaling that recruits T-cells to the tumor, creating the inflammatory context required for a checkpoint inhibitor to function effectively.",
+      "falsifiable_by": "Preclinical studies in syngeneic immune-cold mouse tumor models where combination therapy with a gate-restoring drug and anti-PD-1 fails to show efficacy greater than the sum of the individual agents.",
+      "type": 3,
+      "confidence": 0.75,
+      "overlap_count": 1,
+      "models": [
+        "gemini"
+      ],
+      "tuples": "frozenset({('vdac1', 'interacts', 'sting')})",
+      "chunk_text": "Pharmacological VDAC1 gate-restoration will synergize with checkpoint inhibitors, primarily by converting non-responders into responders."
+    }
+  ],
+  "conflicts": [],
+  "total_rounds": 0,
+  "early_stopped": false,
+  "snapshots": [
+    {
+      "round_num": 0,
+      "jaccard": 0.16515151515151513,
+      "cosine": 0.8172474920749664,
+      "jsd": 0.14091328898154826,
+      "kappa": 0.9612247997266412,
+      "type_distribution": {
+        "0": 0.0,
+        "1": 0.14285714285714285,
+        "2": 0.5238095238095238,
+        "3": 0.3333333333333333
+      },
+      "type_01_ratio": 0.14285714285714285,
+      "n_claims_per_model": [
+        4,
+        5,
+        5,
+        3,
+        4
+      ]
+    },
+    {
+      "round_num": 1,
+      "jaccard": 0.5174603174603176,
+      "cosine": 0.9251066207885742,
+      "jsd": 0.1635765076615509,
+      "kappa": 0.8404382470119525,
+      "type_distribution": {
+        "0": 0.8095238095238095,
+        "1": 0.0,
+        "2": 0.09523809523809523,
+        "3": 0.09523809523809523
+      },
+      "type_01_ratio": 0.8095238095238095,
+      "n_claims_per_model": [
+        4,
+        5,
+        5,
+        3,
+        4
+      ]
+    }
+  ]
+}

@@ -1,0 +1,813 @@
+{
+  "protocol_version": "evo-1.0",
+  "session_id": "evo_20260218_002623_pharmacology",
+  "timestamp": "2026-02-18T00:28:14.726751+00:00",
+  "question": "What does the cofactor equation predict about why some cancers respond to immunotherapy while others don't, and can VDAC1 state serve as a predictive biomarker for immunotherapy response? Consider: (1) VDAC1 oligomerization leaks mtDNA into the cytoplasm, activating cGAS-STING innate immune signaling. Cancer cells that successfully jam the gate (high f_HKII, high f_BclxL, high Chol/CL) prevent VDAC oligomerization and therefore prevent immune detection. Does gate-jamming predict immune cold tumors? (2) Could pharmacological gate-restoration (HK-II displacement + Bcl-xL inhibition) convert immune-cold tumors to immune-hot by forcing VDAC oligomerization and mtDNA release? (3) The checkpoint inhibitor paradox: PD-1/PD-L1 blockade works when the immune system can already see the tumor. If the tumor is invisible because VDAC never oligomerizes (no mtDNA leak, no cGAS-STING), checkpoint inhibitors have nothing to amplify. Prediction: gate-restoring drugs + checkpoint inhibitors should show synergy specifically in immune-cold tumors. (4) Can f_HKII occupancy or Chol/CL ratio measured from tumor biopsies predict which patients benefit from immunotherapy? (5) Does the cofactor equation explain why metabolically active tumors (high Warburg, high glycolysis) tend to be immune-cold \u2014 the same metabolic investment that jams the gate also prevents immune visibility?",
+  "convergence_report": {
+    "s1_initial": {
+      "n_models_responded": 5,
+      "initial_jaccard": 0.16515151515151513,
+      "initial_cosine": 0.8172474920749664
+    },
+    "s2_refinement": {
+      "total_rounds": 0,
+      "early_stopped": false,
+      "final_jaccard": 0.0,
+      "final_cosine": 0.0,
+      "final_jsd": 0.0,
+      "final_type_01_ratio": 0.0
+    },
+    "s3_gate": {
+      "passed": true,
+      "jaccard": 0.5175,
+      "type_01_ratio": 0.8095,
+      "recommendation": ""
+    }
+  },
+  "verification": {
+    "n_type2_input": 10,
+    "n_promoted": 0,
+    "n_held": 4,
+    "n_novel": 6,
+    "n_contradicted": 0,
+    "total_calls": 10
+  },
+  "gate": {
+    "passed": true,
+    "n_passed": 10,
+    "n_failed": 11,
+    "recommendation": "Lab Gate PASSED with filter. 10/21 claims cleared. 11 filtered: 'Gate-restoring drugs (HK-II displacers + navitocla...' not feasible; 'f_HKII occupancy and Chol/CL ratio from tumor biop...' not feasible; 'Pharmacological gate-restoration (HK-II displaceme...' not feasible",
+    "claims": [
+      {
+        "statement": "High f_HKII occupancy stabilizes VDAC1 monomers, suppressing oligomerization-dependent mtDNA release",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "The Warburg effect and immune evasion are mechanistically coupled through VDAC gating \u2014 the same mol",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Gate-restoring drugs (HK-II displacers + navitoclax-class Bcl-xL inhibitors) will synergize with ant",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "f_HKII occupancy and Chol/CL ratio from tumor biopsies can serve as predictive biomarkers for immuno",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Gate-jamming (high f_HKII, f_BclxL, Chol/CL) predicts immune-cold tumors by preventing VDAC1 oligome",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Pharmacological gate-restoration (HK-II displacement + Bcl-xL inhibition) will convert immune-cold t",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "f_HKII occupancy or Chol/CL ratio in tumor biopsies can predict immunotherapy response.",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Warburg metabolism (high glycolysis) is causally linked to immune evasion via gate-jamming.",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Checkpoint inhibitors alone are ineffective in gate-jammed tumors due to lack of pre-existing immune",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Gate-jamming (high f_HKII/f_BclxL/Chol/CL) predicts immune-cold tumors by blocking VDAC1 oligomeriza",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Pharmacological gate-restoration (HKII displacement + BclxL inhibition) can convert immune-cold to h",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Gate-restoration + checkpoint inhibitors synergize specifically in immune-cold tumors, resolving PD1",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "f_HKII occupancy or Chol/CL ratio from biopsies predicts poor immunotherapy response.",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "High Warburg/glycolysis (\u2191 HKII recruitment) jams VDAC gate, explaining immune-coldness in metabolic",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "High VDAC1 occupancy by Hexokinase-II (f_HKII) and/or a high membrane Chol/CL ratio in tumor biopsie",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "Pharmacological VDAC1 gate-restoration will synergize with checkpoint inhibitors, primarily by conve",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The Warburg effect is a dual-purpose adaptation, providing metabolic support for proliferation while",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "High fractional occupancy of VDAC1 by HK-II and Bcl-xL, plus a high Chol/CL ratio, predicts immune-c",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      },
+      {
+        "statement": "Pharmacological displacement of HK-II and inhibition of Bcl-xL will synergize with PD-1/PD-L1 blocka",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The f_HKII (HK-II occupancy) or Chol/CL ratio from tumor biopsies can serve as a predictive biomarke",
+        "falsifiable": true,
+        "feasible": false,
+        "novel": true,
+        "passed": false
+      },
+      {
+        "statement": "The Warburg effect promotes immune evasion not only via lactate but also by increasing HK-II binding",
+        "falsifiable": true,
+        "feasible": true,
+        "novel": true,
+        "passed": true
+      }
+    ]
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "IF HK-II is displaced from VDAC1 (via methyl jasmonate or clotrimazole) in immune-cold cancer cell lines with high baseline f_HKII (>0.6), THEN cytoplasmic mtDNA levels increase \u22653-fold within 6h, phospho-STING (Ser366) increases \u22652-fold by 12h, and IFN-\u03b2 secretion increases \u22655-fold by 24h, compared to vehicle control.",
+      "testability_score": 9.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "f_HKII_baseline",
+          "range": "0.5-0.9 dimensionless",
+          "distribution": "uniform"
+        },
+        {
+          "name": "mtDNA_fold_change",
+          "range": "1.0-10.0 fold",
+          "distribution": "uniform"
+        },
+        {
+          "name": "STING_fold_change",
+          "range": "1.0-8.0 fold",
+          "distribution": "uniform"
+        },
+        {
+          "name": "\u03b2_fold_change",
+          "range": "1.0-50.0 fold",
+          "distribution": "uniform"
+        },
+        {
+          "name": "time_to_peak_STING",
+          "range": "4.0-24.0 hours",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.8117,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4996434455974755,
+            "std": 0.12255297031415406,
+            "median": 0.5032191473846218,
+            "ci_lower": 0.2583092087738404,
+            "ci_upper": 0.7414176430071063,
+            "min": 0.1575818471328073,
+            "max": 0.8156161995315161
+          }
+        }
+      }
+    },
+    {
+      "id": "H2",
+      "prediction": "IF a composite gate-jamming score (GJS = f_HKII \u00d7 0.4 + f_BclxL \u00d7 0.3 + [Chol/CL] \u00d7 0.3, normalized) is computed across \u226515 cancer cell lines, THEN GJS correlates inversely with basal cGAS-STING pathway activity (p-STING, ISG expression) with Spearman \u03c1 \u2264 \u22120.6 (p<0.01), and lines with GJS >0.7 show \u226580% concordance with immune-cold classification (low MHC-I, low CXCL10).",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "f_HKII",
+          "range": "0.1-0.9 dimensionless",
+          "distribution": "uniform"
+        },
+        {
+          "name": "f_BclxL",
+          "range": "0.05-0.7 dimensionless",
+          "distribution": "uniform"
+        },
+        {
+          "name": "ISG_score",
+          "range": "0.0-100.0 arbitrary",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 1.2222,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.49832693350752094,
+            "std": 0.1731397770477896,
+            "median": 0.4918484645555634,
+            "ci_lower": 0.1847324675605326,
+            "ci_upper": 0.836993679531265,
+            "min": 0.07173573405143625,
+            "max": 0.9319889784679869
+          }
+        }
+      }
+    },
+    {
+      "id": "H3",
+      "prediction": "IF immune-cold syngeneic tumors (4T1 or B16F10, predicted high GJS) are treated with gate-restoring combination (HK-II displacer + Bcl-xL inhibitor) followed by anti-PD-1, THEN tumor growth inhibition shows synergy (combination index <0.7 by Bliss independence) with \u226550% tumor volume reduction vs. anti-PD-1 alone, while immune-hot tumors (MC38, predicted low GJS) show no additional benefit from gate-restoration beyond anti-PD-1 alone.",
+      "testability_score": 7.0,
+      "key_variables": [],
+      "parameters": [
+        {
+          "name": "tumor_volume_reduction",
+          "range": "30.0-80.0 %",
+          "distribution": "uniform"
+        },
+        {
+          "name": "CD8_TIL_fold_increase",
+          "range": "2.0-10.0 fold",
+          "distribution": "uniform"
+        },
+        {
+          "name": "combination_index_Bliss",
+          "range": "0.3-1.0 (uniform,",
+          "distribution": "uniform"
+        },
+        {
+          "name": "gate_restoration_lead_time",
+          "range": "2.0-7.0 days",
+          "distribution": "uniform"
+        },
+        {
+          "name": "survival_extension",
+          "range": "20.0-100.0 %",
+          "distribution": "uniform"
+        }
+      ],
+      "monte_carlo": {
+        "effect_size": 0.9216,
+        "power": 1.0,
+        "converged": "True",
+        "outcome_stats": {
+          "effect_magnitude": {
+            "mean": 0.4934038742106948,
+            "std": 0.1322364803274733,
+            "median": 0.4865524462283509,
+            "ci_lower": 0.25886351030839905,
+            "ci_upper": 0.7579434521888678,
+            "min": 0.1525064590343752,
+            "max": 0.8466002656183298
+          }
+        }
+      }
+    }
+  ],
+  "simulations": {
+    "n_hypotheses_simulated": 3,
+    "total_iterations": 900,
+    "llm_calls": 0,
+    "results": [
+      {
+        "hypothesis_id": "H1",
+        "n_iterations": 300,
+        "effect_size": 0.8117,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "f_HKII_baseline": {
+            "mean": 0.6946613953077168,
+            "std": 0.11592879080421718,
+            "median": 0.6916016726337668,
+            "ci_lower": 0.5110758817590223,
+            "ci_upper": 0.8856692578144759,
+            "min": 0.5029449079004022,
+            "max": 0.8969502256223348
+          },
+          "mtDNA_fold_change": {
+            "mean": 5.54787653615621,
+            "std": 2.55435790312591,
+            "median": 5.621329516587277,
+            "ci_lower": 1.3249783043253698,
+            "ci_upper": 9.821083801240444,
+            "min": 1.0488685071583042,
+            "max": 9.991942574268148
+          },
+          "STING_fold_change": {
+            "mean": 4.480397037597972,
+            "std": 2.084819591136736,
+            "median": 4.514732541993375,
+            "ci_lower": 1.1196794687982297,
+            "ci_upper": 7.888186226937738,
+            "min": 1.008631437583357,
+            "max": 7.991203590467354
+          },
+          "\u03b2_fold_change": {
+            "mean": 26.050008732501507,
+            "std": 14.290968220975952,
+            "median": 25.055701366629332,
+            "ci_lower": 3.086931757883438,
+            "ci_upper": 49.19261199650864,
+            "min": 1.0254184641195705,
+            "max": 49.971673551985205
+          },
+          "time_to_peak_STING": {
+            "mean": 13.95639759559346,
+            "std": 5.86122702774762,
+            "median": 13.724726882928573,
+            "ci_lower": 4.743087296649908,
+            "ci_upper": 23.516416405564687,
+            "min": 4.021349300454945,
+            "max": 23.93354423038307
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H2",
+        "n_iterations": 300,
+        "effect_size": 1.2222,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "f_HKII": {
+            "mean": 0.4986218342078633,
+            "std": 0.2280570508260706,
+            "median": 0.4959148101757547,
+            "ci_lower": 0.12108643506951412,
+            "ci_upper": 0.876875000479288,
+            "min": 0.10252012221227087,
+            "max": 0.8983053954192964
+          },
+          "f_BclxL": {
+            "mean": 0.37227363645141587,
+            "std": 0.18566201541917499,
+            "median": 0.37700633076022527,
+            "ci_lower": 0.06380291603025243,
+            "ci_upper": 0.6790690067236106,
+            "min": 0.05144332309168131,
+            "max": 0.6971287299851601
+          },
+          "ISG_score": {
+            "mean": 50.08979132220941,
+            "std": 28.5605807626712,
+            "median": 48.00215177572004,
+            "ci_lower": 3.4052160749084353,
+            "ci_upper": 97.75910232178155,
+            "min": 1.6830313205634773,
+            "max": 99.78420408296128
+          }
+        }
+      },
+      {
+        "hypothesis_id": "H3",
+        "n_iterations": 300,
+        "effect_size": 0.9216,
+        "power": 1.0,
+        "converged": "True",
+        "parameters": {
+          "tumor_volume_reduction": {
+            "mean": 54.37245280994442,
+            "std": 14.413319938402813,
+            "median": 53.12423995477879,
+            "ci_lower": 31.875512124729116,
+            "ci_upper": 78.63268103408979,
+            "min": 30.27476630092762,
+            "max": 79.76928431052066
+          },
+          "CD8_TIL_fold_increase": {
+            "mean": 5.875800839780666,
+            "std": 2.349601782163501,
+            "median": 5.76840477666264,
+            "ci_lower": 2.1994804892846997,
+            "ci_upper": 9.759339693657907,
+            "min": 2.010290010325984,
+            "max": 9.942262887991857
+          },
+          "combination_index_Bliss": {
+            "mean": 0.6373405141601306,
+            "std": 0.20676146903450662,
+            "median": 0.622606944077255,
+            "ci_lower": 0.3183042647273868,
+            "ci_upper": 0.9799547798091628,
+            "min": 0.30232667068248115,
+            "max": 0.9963593638208303
+          },
+          "gate_restoration_lead_time": {
+            "mean": 4.346639775187341,
+            "std": 1.4087948216313944,
+            "median": 4.188143909620386,
+            "ci_lower": 2.107325320615227,
+            "ci_upper": 6.758583903578875,
+            "min": 2.002163252730413,
+            "max": 6.985299510144035
+          },
+          "survival_extension": {
+            "mean": 63.50817876926211,
+            "std": 24.043455325321915,
+            "median": 67.19358990998357,
+            "ci_lower": 22.95458558510762,
+            "ci_upper": 98.04478110163967,
+            "min": 20.101800626895443,
+            "max": 99.58441617735508
+          }
+        }
+      }
+    ]
+  },
+  "protocols": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF HK-II is displaced from VDAC1 (via methyl jasmonate or clotrimazole) in immune-cold cancer cell lines with high baseline f_HKII (>0.6), THEN cytoplasmic mtDNA levels increase \u22653-fold within 6h, phospho-STING (Ser366) increases \u22652-fold by 12h, and IFN-\u03b2 secretion increases \u22655-fold by 24h, compared to vehicle control.",
+      "protocol": "Use Panc-1 (pancreatic, immune-cold archetype, high HK-II/VDAC1) and A375 (melanoma, moderate HK-II) cell lines. Treat with methyl jasmonate (0.5-3 mM) or clotrimazole (10-50 \u03bcM) for 6/12/24h. Measure cytoplasmic mtDNA by qPCR after digitonin fractionation, p-STING by Western blot, IFN-\u03b2 by ELISA, and VDAC1 oligomerization by EGS crosslinking + native PAGE. Include HK-II siRNA as genetic control. Timeline: 4 weeks.",
+      "dose_ranges": {
+        "Methyl jasmonate": {
+          "doses": [
+            500.0,
+            1000.0,
+            2000.0,
+            3000.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "Clotrimazole": {
+          "doses": [
+            10.0,
+            20.0,
+            35.0,
+            50.0
+          ],
+          "unit": "\u03bcM;"
+        },
+        "II siRNA": {
+          "doses": [
+            10.0,
+            25.0,
+            50.0
+          ],
+          "unit": "nM"
+        }
+      },
+      "readouts": [
+        "qPCR (ND1",
+        "ND5 mtDNA genes in cytoplasmic fraction)",
+        "Western blot (p-STING S366",
+        "p-TBK1",
+        "p-IRF3)",
+        "ELISA (IFN-\u03b2",
+        "CXCL10)",
+        "native PAGE with EGS crosslinking (VDAC1 oligomers)",
+        "co-IP (HK-II:VDAC1)",
+        "Seahorse (glycolytic shift confirmation)"
+      ],
+      "controls": [
+        "Vehicle (DMSO)",
+        "scrambled siRNA",
+        "STING inhibitor H-151 (epistasis control)",
+        "DNase I cytoplasmic pre-treatment (confirms mtDNA dependency)",
+        "VDAC1-KO cells (specificity control)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "HK-II displacement causes",
+      "null_outcome": "HK-II displacement does not increase cytoplasmic mtDNA or p-STING, or mtDNA increases but cGAS-STING remains silent, indicating the coupling is not through VDAC1 oligomerization."
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF a composite gate-jamming score (GJS = f_HKII \u00d7 0.4 + f_BclxL \u00d7 0.3 + [Chol/CL] \u00d7 0.3, normalized) is computed across \u226515 cancer cell lines, THEN GJS correlates inversely with basal cGAS-STING pathway activity (p-STING, ISG expression) with Spearman \u03c1 \u2264 \u22120.6 (p<0.01), and lines with GJS >0.7 show \u226580% concordance with immune-cold classification (low MHC-I, low CXCL10).",
+      "protocol": "Select 15-20 cell lines spanning tumor types (e.g., Panc-1, MDA-MB-231, A549, HCT116, SK-MEL-28, MCF7, PC3, U87, HepG2, NCI-H460, B16F10, 4T1, CT26, MC38, LLC). Quantify HK-II:VDAC1 co-IP (f_HKII), Bcl-xL:VDAC1 co-IP (f_BclxL), mitochondrial cholesterol and cardiolipin by mass spectrometry. Simultaneously measure p-STING, ISG panel (qPCR: IFIT1, MX1, OAS1, ISG15), surface MHC-I (flow cytometry), CXCL10 (ELISA). Compute GJS, correlate. Timeline: 8 weeks.",
+      "dose_ranges": {},
+      "readouts": [
+        "Co-immunoprecipitation + densitometry (f_HKII",
+        "f_BclxL)",
+        "LC-MS/MS lipidomics (Chol",
+        "CL from mitochondrial fractions)",
+        "Western blot (p-STING",
+        "STING",
+        "cGAS)",
+        "RT-qPCR (ISG panel)",
+        "flow cytometry (HLA-ABC/MHC-I)",
+        "ELISA (CXCL10",
+        "IFN-\u03b2)"
+      ],
+      "controls": [
+        "Recombinant IFN-\u03b2 treatment (positive control for ISG induction capacity)",
+        "STING agonist diABZI (confirms pathway competence per line)",
+        "mitochondrial fraction purity verified by Tom20+/calreticulin\u2212",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "Strong inverse correlation between GJS and immune signaling metrics. Cell lines cluster into gate-jammed/immune-cold vs. gate-open/immune-hot groups. Pancreatic and certain lung lines show highest GJS; colorectal lines like MC38 show lowest.",
+      "null_outcome": "No significant correlation between GJS and immune metrics, or high-GJS lines show active cGAS-STING, indicating gate-jamming is not the dominant determinant of immune visibility."
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF immune-cold syngeneic tumors (4T1 or B16F10, predicted high GJS) are treated with gate-restoring combination (HK-II displacer + Bcl-xL inhibitor) followed by anti-PD-1, THEN tumor growth inhibition shows synergy (combination index <0.7 by Bliss independence) with \u226550% tumor volume reduction vs. anti-PD-1 alone, while immune-hot tumors (MC38, predicted low GJS) show no additional benefit from gate-restoration beyond anti-PD-1 alone.",
+      "protocol": "Implant 4T1 (immune-cold) and MC38 (immune-hot) tumors in BALB/c and C57BL/6 mice respectively (n=10/group). Groups: (1) vehicle, (2) gate-restoration combo (methyl jasmonate 100mg/kg IP + ABT-263/navitoclax 50mg/kg PO, days 5-12), (3) anti-PD-1 (200\u03bcg IP, days 8,11,14), (4) gate-restoration + anti-PD-1. Measure tumor volume q2d, sacrifice day 21 for TIL analysis (flow: CD8+, CD4+, NK), intratumoral cytokines (multiplex), and tumor mtDNA cytoplasmic fraction. Timeline: 10 weeks including breeding/acclimation.",
+      "dose_ranges": {
+        "Methyl jasmonate": {
+          "doses": [
+            50.0,
+            100.0,
+            150.0
+          ],
+          "unit": "mg/kg"
+        }
+      },
+      "readouts": [
+        "Caliper tumor measurement",
+        "survival (Kaplan-Meier)",
+        "flow cytometry on dissociated tumors (CD45+CD3+CD8+",
+        "CD4+",
+        "NK1.1+",
+        "Granzyme B+",
+        "PD-1+)",
+        "multiplex cytokine (IFN-\u03b2",
+        "CXCL10",
+        "TNF-\u03b1",
+        "IL-12)",
+        "qPCR cytoplasmic mtDNA from sorted tumor cells",
+        "IHC (CD8",
+        "p-STING)"
+      ],
+      "controls": [
+        "Isotype control antibody (rat IgG2a)",
+        "STING-KO host mice (to confirm cGAS-STING dependency)",
+        "heat-killed tumor cell vaccination (confirms antigenicity exists)",
+        "navitoclax alone (Bcl-xL inhibition without HK-II displacement)",
+        "---",
+        "##"
+      ],
+      "expected_outcome": "In 4T1: gate-restoration alone modestly slows growth; anti-PD-1 alone fails; combination produces dramatic regression with synergistic CI<0.7, increased CD8+ TILs, elevated intratumoral IFN-\u03b2. In MC38: anti-PD-1 alone effective; gate-restoration adds no benefit, confirming specificity to immune-cold context.",
+      "null_outcome": "No synergy in 4T1 (combination no better than additive), or gate-restoration + anti-PD-1 works equally in MC38, indicating the mechanism is not specific to gate-jamming status."
+    }
+  ],
+  "budget": {
+    "s1_calls": 5,
+    "s2_calls": 0,
+    "verify_calls": 10,
+    "gate_calls": 1,
+    "s4_calls": 1,
+    "s5_calls": 0,
+    "total_calls": 17,
+    "budget_target": "92-142 calls"
+  },
+  "audit_trail": {
+    "session_seed": 1771374385,
+    "s2_rounds": [],
+    "s3_gate": {
+      "stage": "S3",
+      "passed": true,
+      "convergence_score": 0.9251,
+      "convergence_threshold": 0.85,
+      "convergence_pass": true,
+      "jaccard": 0.5175,
+      "jaccard_threshold": 0.85,
+      "jaccard_pass": false,
+      "type_01_ratio": 0.8095,
+      "type_01_threshold": 0.75,
+      "type_pass": true,
+      "cosine": 0.9251,
+      "jsd": 0.1636,
+      "kappa": 0.8404,
+      "type_distribution": {
+        "0": 0.8095238095238095,
+        "1": 0.0,
+        "2": 0.09523809523809523,
+        "3": 0.09523809523809523
+      }
+    },
+    "final_claims": [
+      {
+        "statement": "High f_HKII occupancy stabilizes VDAC1 monomers, suppressing oligomerization-dependent mtDNA release and cGAS-STING activation, contributing to immune-cold phenotype.",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "HK-II binding to VDAC1 locks the channel in a metabolically favorable but oligomerization-incompetent conformation, preventing the mitochondrial outer membrane permeabilization that releases mtDNA fragments.",
+        "falsifiable_by": "Showing that HK-II knockdown in immune-cold tumor lines fails to increase cytoplasmic mtDNA or cGAS-STING signaling.",
+        "model": "claude"
+      },
+      {
+        "statement": "The Warburg effect and immune evasion are mechanistically coupled through VDAC gating \u2014 the same molecular investments (HK-II recruitment, cholesterol enrichment) that optimize glycolysis simultaneously prevent immune visibility.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "Competitive allocation: HK-II bound to VDAC provides glycolytic substrate channeling while sterically preventing the oligomeric rearrangement needed for mtDNA-driven innate immune activation.",
+        "falsifiable_by": "Finding tumors with high Warburg phenotype and high f_HKII that are nonetheless immune-hot with active cGAS-STING signaling.",
+        "model": "claude"
+      },
+      {
+        "statement": "Gate-restoring drugs (HK-II displacers + navitoclax-class Bcl-xL inhibitors) will synergize with anti-PD-1 specifically in immune-cold tumors with high f_HKII.",
+        "type": 3,
+        "confidence": 0.4,
+        "mechanism": "Forced VDAC oligomerization releases mtDNA, activates cGAS-STING, generates type-I interferon signaling that recruits T-cells, which checkpoint inhibitors then unleash.",
+        "falsifiable_by": "Combination therapy showing no differential benefit in immune-cold vs immune-hot tumors stratified by VDAC state, or gate-restoration failing to increase TIL density.",
+        "model": "claude"
+      },
+      {
+        "statement": "f_HKII occupancy and Chol/CL ratio from tumor biopsies can serve as predictive biomarkers for immunotherapy response, with high values predicting resistance.",
+        "type": 3,
+        "confidence": 0.3,
+        "mechanism": "These cofactor parameters quantify gate-jamming intensity, which determines whether the tumor can generate the mtDNA-cGAS-STING signal necessary for immune recognition.",
+        "falsifiable_by": "Retrospective analysis of immunotherapy cohorts showing no correlation between VDAC cofactor metrics and response rates. \u2500\u2500\u2500",
+        "model": "claude"
+      },
+      {
+        "statement": "Gate-jamming (high f_HKII, f_BclxL, Chol/CL) predicts immune-cold tumors by preventing VDAC1 oligomerization and mtDNA-cGAS-STING activation.",
+        "type": 1,
+        "confidence": 0.85,
+        "mechanism": "VDAC1 oligomerization is required for mtDNA release; jamming factors stabilize monomeric VDAC1, blocking cGAS-STING.",
+        "falsifiable_by": "Tumors with high gate-jamming but high cGAS-STING activity, or low gate-jamming but immune-cold phenotypes.",
+        "model": "mistral"
+      },
+      {
+        "statement": "Pharmacological gate-restoration (HK-II displacement + Bcl-xL inhibition) will convert immune-cold tumors to immune-hot and synergize with checkpoint inhibitors.",
+        "type": 2,
+        "confidence": 0.7,
+        "mechanism": "Forced VDAC1 oligomerization \u2192 mtDNA leak \u2192 cGAS-STING activation \u2192 T-cell infiltration; checkpoint inhibitors amplify existing immune responses.",
+        "falsifiable_by": "Gate-restoration failing to increase cGAS-STING activity or T-cell infiltration in immune-cold tumors, or lack of synergy with checkpoint inhibitors.",
+        "model": "mistral"
+      },
+      {
+        "statement": "f_HKII occupancy or Chol/CL ratio in tumor biopsies can predict immunotherapy response.",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "High gate-jamming metrics correlate with suppressed cGAS-STING and poor checkpoint inhibitor efficacy.",
+        "falsifiable_by": "Retrospective/prospective studies showing no correlation between gate-jamming metrics and immunotherapy response.",
+        "model": "mistral"
+      },
+      {
+        "statement": "Warburg metabolism (high glycolysis) is causally linked to immune evasion via gate-jamming.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "Glycolytic flux increases HK-II binding to VDAC1, stabilizing the gate-jammed state and suppressing mtDNA leak.",
+        "falsifiable_by": "Metabolically active tumors with low gate-jamming or immune-hot phenotypes, or non-glycolytic tumors with high gate-jamming.",
+        "model": "mistral"
+      },
+      {
+        "statement": "Checkpoint inhibitors alone are ineffective in gate-jammed tumors due to lack of pre-existing immune visibility.",
+        "type": 1,
+        "confidence": 0.9,
+        "mechanism": "PD-1/PD-L1 blockade requires antigen presentation and T-cell priming; gate-jammed tumors lack cGAS-STING-driven immune activation.",
+        "falsifiable_by": "Gate-jammed tumors responding to checkpoint inhibitors without prior gate-restoration. --- \u2500\u2500\u2500",
+        "model": "mistral"
+      },
+      {
+        "statement": "Gate-jamming (high f_HKII/f_BclxL/Chol/CL) predicts immune-cold tumors by blocking VDAC1 oligomerization and mtDNA-cGAS-STING.",
+        "type": 3,
+        "confidence": 0.8,
+        "mechanism": "HKII/BclxL/Chol stabilize closed VDAC1 conformations, preventing Bax/Bak-induced oligomers that leak mtDNA to activate innate immunity.",
+        "falsifiable_by": "Biopsies showing high f_HKII/Chol-CL in immune-hot (high T-cell/PDL1) tumors.",
+        "model": "grok"
+      },
+      {
+        "statement": "Pharmacological gate-restoration (HKII displacement + BclxL inhibition) can convert immune-cold to hot tumors via forced VDAC oligomerization/mtDNA release.",
+        "type": 3,
+        "confidence": 0.6,
+        "mechanism": "Displacing stabilizers allows pro-apoptotic pores to oligomerize VDAC1, leaking mtDNA to trigger cGAS-STING independently of adaptive immunity.",
+        "falsifiable_by": "In vivo cold-tumor models where combo fails to \u2191 STING signaling/TIL infiltration.",
+        "model": "grok"
+      },
+      {
+        "statement": "Gate-restoration + checkpoint inhibitors synergize specifically in immune-cold tumors, resolving PD1/PDL1 paradox.",
+        "type": 3,
+        "confidence": 0.7,
+        "mechanism": "Gate-drugs provide initial cGAS-STING \"visibility\" signal absent in jammed/cold tumors, amplifying PD1 blockade effects.",
+        "falsifiable_by": "Clinical trials showing no added benefit of combo vs checkpoint alone in cold tumors.",
+        "model": "grok"
+      },
+      {
+        "statement": "f_HKII occupancy or Chol/CL ratio from biopsies predicts poor immunotherapy response.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "Cofactor equation links high jamming fractions to absent cGAS-STING, stratifying cold tumors unresponsive to checkpoint amplification.",
+        "falsifiable_by": "Patient cohorts with high f_HKII/Chol-CL but high IO response rates.",
+        "model": "grok"
+      },
+      {
+        "statement": "High Warburg/glycolysis (\u2191 HKII recruitment) jams VDAC gate, explaining immune-coldness in metabolically active tumors.",
+        "type": 2,
+        "confidence": 0.8,
+        "mechanism": "Glycolytic flux \u2191 f_HKII-VDAC binding per cofactor equation, stabilizing gate to block oligomerization/mtDNA leak.",
+        "falsifiable_by": "Glycolytic tumors with low f_HKII but immune-cold profile. \u2500\u2500\u2500",
+        "model": "grok"
+      },
+      {
+        "statement": "High VDAC1 occupancy by Hexokinase-II (f_HKII) and/or a high membrane Chol/CL ratio in tumor biopsies are strong predictive biomarkers for primary resistance to PD-1/PD-L1 checkpoint inhibitors.",
+        "type": 2,
+        "confidence": 0.85,
+        "mechanism": "These gate-jamming conditions prevent VDAC1 oligomerization, blocking the release of mitochondrial dsDNA required to activate the cGAS-STING pathway, thus rendering the tumor immunologically \"invisible.\"",
+        "falsifiable_by": "A multi-center patient cohort study showing no significant correlation between pre-treatment f_HKII or Chol/CL levels and lack of response to anti-PD-1 therapy.",
+        "model": "gemini"
+      },
+      {
+        "statement": "Pharmacological VDAC1 gate-restoration will synergize with checkpoint inhibitors, primarily by converting non-responders into responders.",
+        "type": 2,
+        "confidence": 0.75,
+        "mechanism": "Gate-restoring drugs force VDAC1 oligomerization and mtDNA release, initiating cGAS-STING signaling that recruits T-cells to the tumor, creating the inflammatory context required for a checkpoint inhibitor to function effectively.",
+        "falsifiable_by": "Preclinical studies in syngeneic immune-cold mouse tumor models where combination therapy with a gate-restoring drug and anti-PD-1 fails to show efficacy greater than the sum of the individual agents.",
+        "model": "gemini"
+      },
+      {
+        "statement": "The Warburg effect is a dual-purpose adaptation, providing metabolic support for proliferation while actively enforcing immune evasion through VDAC1 gate-jamming.",
+        "type": 3,
+        "confidence": 0.6,
+        "mechanism": "The high glycolytic flux required for rapid growth necessitates high levels of mitochondrial-bound HK-II, which provides a direct, built-in mechanism to suppress innate immune detection by stabilizing VDAC1.",
+        "falsifiable_by": "Identification of a cancer type that exhibits a strong Warburg phenotype but maintains a robustly immune-hot microenvironment due to active cGAS-STING signaling independent of VDAC1 state. \u2500\u2500\u2500",
+        "model": "gemini"
+      },
+      {
+        "statement": "High fractional occupancy of VDAC1 by HK-II and Bcl-xL, plus a high Chol/CL ratio, predicts immune-cold tumors by preventing VDAC1 oligomerization and mtDNA-driven cGAS-STING activation.",
+        "type": 1,
+        "confidence": 0.75,
+        "mechanism": "These cofactors stabilize the VDAC1 closed state, physically blocking pore oligomerization required for mtDNA release, thereby silencing a key innate immune signal.",
+        "falsifiable_by": "Finding immune-hot tumors with demonstrably high HK-II/VDAC1 binding and high mitochondrial cholesterol, or immune-cold tumors with low cofactor occupancy and no mtDNA in cytosol.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "Pharmacological displacement of HK-II and inhibition of Bcl-xL will synergize with PD-1/PD-L1 blockade specifically in immune-cold tumors, but not in already immune-hot tumors.",
+        "type": 2,
+        "confidence": 0.65,
+        "mechanism": "Gate-restoring drugs induce VDAC1 oligomerization and mtDNA leak, initiating innate immune recognition (creating \"signal 1\"), which checkpoint inhibitors can then amplify by removing T-cell inhibition.",
+        "falsifiable_by": "A clinical trial showing no added benefit of a VDAC1 gate-restorer + anti-PD1 in immune-cold tumors versus anti-PD1 alone.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "The f_HKII (HK-II occupancy) or Chol/CL ratio from tumor biopsies can serve as a predictive biomarker for intrinsic resistance to checkpoint inhibitor monotherapy.",
+        "type": 2,
+        "confidence": 0.6,
+        "mechanism": "These metrics directly report on the probability of VDAC1 oligomerization and thus the tumor's baseline ability to activate cGAS-STING, which is prerequisite for checkpoint inhibitor efficacy.",
+        "falsifiable_by": "A prospective study showing no correlation between these measured ratios and objective response rate to anti-PD1/PD-L1.",
+        "model": "deepseek"
+      },
+      {
+        "statement": "The Warburg effect promotes immune evasion not only via lactate but also by increasing HK-II binding to VDAC1, directly jamming the mtDNA leak pathway.",
+        "type": 3,
+        "confidence": 0.55,
+        "mechanism": "High glycolytic flux increases mitochondrial HK-II binding, which stabilizes VDAC1 in a closed, non-oligomerizing state, providing a direct metabolic link between glycolysis and immune invisibility.",
+        "falsifiable_by": "Demonstrating that Warburg-active tumors with genetically severed HK-II-VDAC1 binding remain immune-cold. \u2500\u2500\u2500",
+        "model": "deepseek"
+      }
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "simulations": [
+    {
+      "hypothesis_id": "H1",
+      "prediction": "IF HK-II is displaced from VDAC1 (via methyl jasmonate or clotrimazole) in immune-cold cancer cell lines with high baseline f_HKII (>0.6), THEN cytoplasmic mtDNA levels increase \u22653-fold within 6h, phospho-STING (Ser366) increases \u22652-fold by 12h, and IFN-\u03b2 secretion increases \u22655-fold by 24h, compared to vehicle control.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "f_HKII_baseline": {
+          "mean": 0.6946613953077168,
+          "std": 0.11592879080421718,
+          "median": 0.6916016726337668,
+          "ci_lower": 0.5110758817590223,
+          "ci_upper": 0.8856692578144759,
+          "min": 0.5029449079004022,
+          "max": 0.8969502256223348
+        },
+        "mtDNA_fold_change": {
+          "mean": 5.54787653615621,
+          "std": 2.55435790312591,
+          "median": 5.621329516587277,
+          "ci_lower": 1.3249783043253698,
+          "ci_upper": 9.821083801240444,
+          "min": 1.0488685071583042,
+          "max": 9.991942574268148
+        },
+        "STING_fold_change": {
+          "mean": 4.480397037597972,
+          "std": 2.084819591136736,
+          "median": 4.514732541993375,
+          "ci_lower": 1.1196794687982297,
+          "ci_upper": 7.888186226937738,
+          "min": 1.008631437583357,
+          "max": 7.991203590467354
+        },
+        "\u03b2_fold_change": {
+          "mean": 26.050008732501507,
+          "std": 14.290968220975952,
+          "median": 25.055701366629332,
+          "ci_lower": 3.086931757883438,
+          "ci_upper": 49.19261199650864,
+          "min": 1.0254184641195705,
+          "max": 49.971673551985205
+        },
+        "time_to_peak_STING": {
+          "mean": 13.95639759559346,
+          "std": 5.86122702774762,
+          "median": 13.724726882928573,
+          "ci_lower": 4.743087296649908,
+          "ci_upper": 23.516416405564687,
+          "min": 4.021349300454945,
+          "max": 23.93354423038307
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4996434455974755,
+          "std": 0.12255297031415406,
+          "median": 0.5032191473846218,
+          "ci_lower": 0.2583092087738404,
+          "ci_upper": 0.7414176430071063,
+          "min": 0.1575818471328073,
+          "max": 0.8156161995315161
+        }
+      },
+      "effect_size": 0.8117,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 42
+    },
+    {
+      "hypothesis_id": "H2",
+      "prediction": "IF a composite gate-jamming score (GJS = f_HKII \u00d7 0.4 + f_BclxL \u00d7 0.3 + [Chol/CL] \u00d7 0.3, normalized) is computed across \u226515 cancer cell lines, THEN GJS correlates inversely with basal cGAS-STING pathway activity (p-STING, ISG expression) with Spearman \u03c1 \u2264 \u22120.6 (p<0.01), and lines with GJS >0.7 show \u226580% concordance with immune-cold classification (low MHC-I, low CXCL10).",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "f_HKII": {
+          "mean": 0.4986218342078633,
+          "std": 0.2280570508260706,
+          "median": 0.4959148101757547,
+          "ci_lower": 0.12108643506951412,
+          "ci_upper": 0.876875000479288,
+          "min": 0.10252012221227087,
+          "max": 0.8983053954192964
+        },
+        "f_BclxL": {
+          "mean": 0.37227363645141587,
+          "std": 0.18566201541917499,
+          "median": 0.37700633076022527,
+          "ci_lower": 0.06380291603025243,
+          "ci_upper": 0.6790690067236106,
+          "min": 0.05144332309168131,
+          "max": 0.6971287299851601
+        },
+        "ISG_score": {
+          "mean": 50.08979132220941,
+          "std": 28.5605807626712,
+          "median": 48.00215177572004,
+          "ci_lower": 3.4052160749084353,
+          "ci_upper": 97.75910232178155,
+          "min": 1.6830313205634773,
+          "max": 99.78420408296128
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.49832693350752094,
+          "std": 0.1731397770477896,
+          "median": 0.4918484645555634,
+          "ci_lower": 0.1847324675605326,
+          "ci_upper": 0.836993679531265,
+          "min": 0.07173573405143625,
+          "max": 0.9319889784679869
+        }
+      },
+      "effect_size": 1.2222,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 43
+    },
+    {
+      "hypothesis_id": "H3",
+      "prediction": "IF immune-cold syngeneic tumors (4T1 or B16F10, predicted high GJS) are treated with gate-restoring combination (HK-II displacer + Bcl-xL inhibitor) followed by anti-PD-1, THEN tumor growth inhibition shows synergy (combination index <0.7 by Bliss independence) with \u226550% tumor volume reduction vs. anti-PD-1 alone, while immune-hot tumors (MC38, predicted low GJS) show no additional benefit from gate-restoration beyond anti-PD-1 alone.",
+      "n_iterations": 300,
+      "parameters_sampled": {
+        "tumor_volume_reduction": {
+          "mean": 54.37245280994442,
+          "std": 14.413319938402813,
+          "median": 53.12423995477879,
+          "ci_lower": 31.875512124729116,
+          "ci_upper": 78.63268103408979,
+          "min": 30.27476630092762,
+          "max": 79.76928431052066
+        },
+        "CD8_TIL_fold_increase": {
+          "mean": 5.875800839780666,
+          "std": 2.349601782163501,
+          "median": 5.76840477666264,
+          "ci_lower": 2.1994804892846997,
+          "ci_upper": 9.759339693657907,
+          "min": 2.010290010325984,
+          "max": 9.942262887991857
+        },
+        "combination_index_Bliss": {
+          "mean": 0.6373405141601306,
+          "std": 0.20676146903450662,
+          "median": 0.622606944077255,
+          "ci_lower": 0.3183042647273868,
+          "ci_upper": 0.9799547798091628,
+          "min": 0.30232667068248115,
+          "max": 0.9963593638208303
+        },
+        "gate_restoration_lead_time": {
+          "mean": 4.346639775187341,
+          "std": 1.4087948216313944,
+          "median": 4.188143909620386,
+          "ci_lower": 2.107325320615227,
+          "ci_upper": 6.758583903578875,
+          "min": 2.002163252730413,
+          "max": 6.985299510144035
+        },
+        "survival_extension": {
+          "mean": 63.50817876926211,
+          "std": 24.043455325321915,
+          "median": 67.19358990998357,
+          "ci_lower": 22.95458558510762,
+          "ci_upper": 98.04478110163967,
+          "min": 20.101800626895443,
+          "max": 99.58441617735508
+        }
+      },
+      "outcome_stats": {
+        "effect_magnitude": {
+          "mean": 0.4934038742106948,
+          "std": 0.1322364803274733,
+          "median": 0.4865524462283509,
+          "ci_lower": 0.25886351030839905,
+          "ci_upper": 0.7579434521888678,
+          "min": 0.1525064590343752,
+          "max": 0.8466002656183298
+        }
+      },
+      "effect_size": 0.9216,
+      "power_estimate": 1.0,
+      "convergence_check": "True",
+      "seed": 44
+    }
+  ],
+  "n_hypotheses": 3,
+  "total_iterations": 900,
+  "total_calls": 0
+}

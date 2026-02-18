@@ -1,0 +1,51 @@
+============================================================
+IRIS GATE EVO — PROTOCOL PACKAGE
+============================================================
+
+Session: evo_20260218_002623_pharmacology
+Date: 2026-02-18
+Protocol: evo-1.0
+
+QUESTION:
+  What does the cofactor equation predict about why some cancers respond to immunotherapy while others don't, and can VDAC1 state serve as a predictive biomarker for immunotherapy response? Consider: (1) VDAC1 oligomerization leaks mtDNA into the cytoplasm, activating cGAS-STING innate immune signaling. Cancer cells that successfully jam the gate (high f_HKII, high f_BclxL, high Chol/CL) prevent VDAC oligomerization and therefore prevent immune detection. Does gate-jamming predict immune cold tumors? (2) Could pharmacological gate-restoration (HK-II displacement + Bcl-xL inhibition) convert immune-cold tumors to immune-hot by forcing VDAC oligomerization and mtDNA release? (3) The checkpoint inhibitor paradox: PD-1/PD-L1 blockade works when the immune system can already see the tumor. If the tumor is invisible because VDAC never oligomerizes (no mtDNA leak, no cGAS-STING), checkpoint inhibitors have nothing to amplify. Prediction: gate-restoring drugs + checkpoint inhibitors should show synergy specifically in immune-cold tumors. (4) Can f_HKII occupancy or Chol/CL ratio measured from tumor biopsies predict which patients benefit from immunotherapy? (5) Does the cofactor equation explain why metabolically active tumors (high Warburg, high glycolysis) tend to be immune-cold — the same metabolic investment that jams the gate also prevents immune visibility?
+
+CONVERGENCE:
+  S2 rounds: 0
+  Early stopped: False
+  Final Jaccard: 0.0
+  Final TYPE 0/1: 0.0
+  S3 gate: PASSED
+
+VERIFICATION:
+  TYPE 2 claims checked: 10
+  Promoted to TYPE 1: 0
+  Novel (no literature): 6
+  Contradicted: 0
+
+LAB GATE:
+  Result: PASSED
+  Claims passed: 10/21
+
+HYPOTHESES (ranked by testability):
+  H1. IF HK-II is displaced from VDAC1 (via methyl jasmonate or clotrimazole) in immune-cold cancer cell lines with high basel
+     Testability: 9.0/10
+     Effect size: 0.8117 (Cohen's d)
+     Power: 1.0
+
+  H2. IF a composite gate-jamming score (GJS = f_HKII × 0.4 + f_BclxL × 0.3 + [Chol/CL] × 0.3, normalized) is computed across 
+     Testability: 7.0/10
+     Effect size: 1.2222 (Cohen's d)
+     Power: 1.0
+
+  H3. IF immune-cold syngeneic tumors (4T1 or B16F10, predicted high GJS) are treated with gate-restoring combination (HK-II d
+     Testability: 7.0/10
+     Effect size: 0.9216 (Cohen's d)
+     Power: 1.0
+
+BUDGET:
+  Total LLM calls: 17
+  Target range: 92-142 calls
+
+============================================================
+Five mirrors. One truth. This is what converged.
+============================================================
