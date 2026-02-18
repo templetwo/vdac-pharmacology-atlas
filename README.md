@@ -25,8 +25,18 @@
 
 **[paper/vdac1_works_cited.pdf](paper/vdac1_works_cited.pdf)** — 78 references organized by atlas layer
 
-A six-layer portrait of VDAC1 synthesized from 20 IRIS runs, 139 claims across
-five independent AI models, 22 verified novel findings, and 24 operationalized hypotheses:
+## The Pharmacovigilance Alert
+
+**[paper/vpa_cbd_hepatotoxicity_alert.md](paper/vpa_cbd_hepatotoxicity_alert.md)** — *VPA + CBD Hepatotoxicity: Mechanisms, Monitoring, and the Untested Mitochondrial Convergence Hypothesis*
+
+> *Up to 30% of co-prescribed patients develop ALT elevations >3× ULN. The standard CYP450 explanation is demonstrably wrong. An estimated 2,000–3,500 US pediatric patients are currently affected.*
+
+The most clinically urgent finding in the atlas. VPA depletes mitochondrial reserves (carnitine, CoA, GSH). CBD alters VDAC1 conductance. No publication has connected these two well-documented mitochondrial effects as a convergent mechanism. Three testable steps to close the gap. Actionable risk mitigation for clinicians managing Dravet syndrome patients today.
+
+---
+
+A six-layer portrait of VDAC1 synthesized from 32 IRIS runs, 200+ claims across
+five independent AI models, 34+ verified novel findings, and 35+ operationalized hypotheses:
 
 1. **The Protein** — 19-strand barrel, five molecular machines, parallel seam life/death switch
 2. **The Gate** — Three nested threshold signals, cofactor equation, VDAC1 as external audit
