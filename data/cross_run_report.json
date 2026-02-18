@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-17T23:41:19.454834+00:00",
+  "timestamp": "2026-02-18T03:52:43.633608+00:00",
   "runs_analyzed": [
     {
       "session_id": "evo_20260210_232904_pharmacology",
@@ -154,6 +154,48 @@
       "question": "What are the mechanisms by which ketamine produces rapid antidepressant effects within hours, and is there a mitochondrial component beyond NMDA receptor antagonism? Specifically: (1) Does ketamine at",
       "s3_passed": true,
       "n_claims": 8
+    },
+    {
+      "session_id": "evo_20260217_234117_pharmacology",
+      "domain": "pharmacology",
+      "question": "How does the mitochondrial permeability transition pore (mPTP) interact with VDAC1 to execute the final commitment to cell death, and what determines the point of no return? Specifically: (1) Does VDA",
+      "s3_passed": true,
+      "n_claims": 8
+    },
+    {
+      "session_id": "evo_20260217_234138_pharmacology",
+      "domain": "pharmacology",
+      "question": "What is the role of calcium oscillations in VDAC1 gating, and does the frequency of mitochondrial calcium uptake encode information about cell fate? Specifically: (1) VDAC1 is voltage-gated and calciu",
+      "s3_passed": true,
+      "n_claims": 7
+    },
+    {
+      "session_id": "evo_20260217_234201_pharmacology",
+      "domain": "pharmacology",
+      "question": "What is the relationship between mitochondrial dynamics (fission/fusion) and VDAC1 pharmacology \u2014 does mitochondrial fragmentation alter drug access to VDAC1? Specifically: (1) During Drp1-mediated fi",
+      "s3_passed": false,
+      "n_claims": 8
+    },
+    {
+      "session_id": "evo_20260218_000805_pharmacology",
+      "domain": "pharmacology",
+      "question": "Is VDAC1 best understood as a protein inserted into the mitochondrial membrane, or as an emergent property of the membrane itself \u2014 a crystallized threshold? Consider: (1) VDAC1 descends from bacteria",
+      "s3_passed": false,
+      "n_claims": 7
+    },
+    {
+      "session_id": "evo_20260218_002559_pharmacology",
+      "domain": "pharmacology",
+      "question": "Based on the cofactor equation (Threshold = K/[(1-f_HKII)(1-f_BclxL)] \u00d7 [Chol]/[CL]), what are the most promising combinatorial strategies for restoring the apoptotic audit in cancer cells? Specifical",
+      "s3_passed": false,
+      "n_claims": 12
+    },
+    {
+      "session_id": "evo_20260218_002623_pharmacology",
+      "domain": "pharmacology",
+      "question": "What does the cofactor equation predict about why some cancers respond to immunotherapy while others don't, and can VDAC1 state serve as a predictive biomarker for immunotherapy response? Consider: (1",
+      "s3_passed": true,
+      "n_claims": 7
     }
   ],
   "cross_matches": [
@@ -206,6 +248,18 @@
       "mechanism_b": "Increased cholesterol content (~35 mol% vs. <10%) raises the membrane's bending rigidity and stabilizes VDAC1 monomers, requiring more violent or numerous cavitation events to achieve the critical loc"
     },
     {
+      "run_a": "evo_20260217_035010_pharmacology",
+      "run_b": "evo_20260218_002559_pharmacology",
+      "cosine": 0.7893,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 0,
+      "type_b": 1,
+      "statement_a": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells.",
+      "statement_b": "OMM cholesterol depletion (e.g., 50% \u2193[Chol]/[CL]) will sensitize cancer cells to VDAC-engaging therapies (e.g., erastin, CBD) but with a predicted therapeutic index fold-change of only ~2-3x, not 5-8",
+      "mechanism_a": "Elevated chol rigidifies domains but reduces CL-VDAC affinity, making lattice fragile to lower shear.",
+      "mechanism_b": "While [Chol]/[CL] reduction multiplicatively lowers T, cholesterol is essential for normal membrane integrity; its depletion non-selectively increases baseline mitochondrial permeability, narrowing th"
+    },
+    {
       "run_a": "evo_20260213_035958_pharmacology",
       "run_b": "evo_20260213_042930_pharmacology",
       "cosine": 0.789,
@@ -242,6 +296,42 @@
       "mechanism_b": "Li\u207a inhibits PP1/PP2A-mediated dephosphorylation of Akt-phosphorylated GSK-3\u03b2-Ser9, creating a signal amplification loop where small [Li\u207a] produces disproportionate GSK-3\u03b2 suppression."
     },
     {
+      "run_a": "evo_20260217_035450_pharmacology",
+      "run_b": "evo_20260218_002559_pharmacology",
+      "cosine": 0.7742,
+      "classification": "CROSS-PROMOTED",
+      "type_a": 2,
+      "type_b": 1,
+      "statement_a": "4**: *Cancer cells with cholesterol-loaded OMMs exhibit higher apoptotic thresholds under US due to stabilized VDAC1 monomers.* **TYPE**: 1 **CONFIDENCE**: 0.80 **MECHANISM**: Elevated Chol increases ",
+      "statement_b": "OMM cholesterol depletion (e.g., 50% \u2193[Chol]/[CL]) will sensitize cancer cells to VDAC-engaging therapies (e.g., erastin, CBD) but with a predicted therapeutic index fold-change of only ~2-3x, not 5-8",
+      "mechanism_a": ": Elevated Chol increases the cofactor equation\u2019s threshold (Threshold \u221d [Chol]/[CL]), requiring greater mechanical perturbation to trigger oligomerization.",
+      "mechanism_b": "While [Chol]/[CL] reduction multiplicatively lowers T, cholesterol is essential for normal membrane integrity; its depletion non-selectively increases baseline mitochondrial permeability, narrowing th"
+    },
+    {
+      "run_a": "evo_20260213_183423_pharmacology",
+      "run_b": "evo_20260218_000805_pharmacology",
+      "cosine": 0.7741,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 0,
+      "type_b": 1,
+      "statement_a": "Increased OMM cholesterol in some cancers significantly raises the effective local concentration of CBD at VDAC, lowering its apparent functional Kd below the measured 11 \u00b5M.",
+      "statement_b": "CBD's apparent VDAC1 interaction (Kd = 11 \u00b5M) is predominantly lipid-mediated. Given log P ~6.3, CBD accumulates in membranes at ~1000\u00d7 aqueous concentration, reaching effective local concentrations o",
+      "mechanism_a": "Higher cholesterol increases membrane order and partition coefficient for lipophilic CBD (logP 6.3), enriching it in the OMM and increasing probability of VDAC interaction.",
+      "mechanism_b": "CBD partitions into the OMM, alters lateral pressure profile and cholesterol distribution around VDAC, modulating gating indirectly rather than via a discrete binding pocket."
+    },
+    {
+      "run_a": "evo_20260217_234117_pharmacology",
+      "run_b": "evo_20260217_234138_pharmacology",
+      "cosine": 0.7701,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 0,
+      "type_b": 0,
+      "statement_a": "VDAC1 oligomerization is primarily an amplifier, not the initial trigger; mPTP opening is initiated by matrix Ca\u00b2\u207a overload acting on CypD-sensitized ANT/ATP synthase components at the IMM.",
+      "statement_b": "VDAC1 oligomerization is driven by cumulative matrix Ca\u00b2\u207a overload rather than directly by oscillation frequency \u2014 but frequency encodes the *rate* of matrix accumulation, so a frequency threshold (~1",
+      "mechanism_a": "Matrix Ca\u00b2\u207a activates CypD binding to the IMM pore component (likely ATP synthase c-ring or ANT), causing initial permeability transition; subsequent \u0394\u03a8m collapse and cytochrome c release then promote",
+      "mechanism_b": "High-frequency Ca\u00b2\u207a pulses exceed mitochondrial Ca\u00b2\u207a efflux capacity (NCLX), causing progressive matrix Ca\u00b2\u207a accumulation \u2192 mPTP sensitization \u2192 VDAC1 oligomerization via conformational changes/cytoch"
+    },
+    {
       "run_a": "evo_20260213_035958_pharmacology",
       "run_b": "evo_20260213_183423_pharmacology",
       "cosine": 0.7685,
@@ -264,6 +354,18 @@
       "statement_b": "The Chol/CL ratio in the OMM physically determines the fraction of VDAC1 in honeycomb vs. dispersed states, and this ratio is mechanistically embedded in the apoptotic threshold equation.",
       "mechanism_a": "Cardiolipin's cone-shaped geometry promotes negative curvature at oligomer interfaces; cholesterol increases bilayer order, raising the energy barrier for conformational transitions required for oligo",
       "mechanism_b": "Cholesterol stabilizes honeycomb arrays via lipid packing, while cardiolipin disrupts them by introducing negative curvature, shifting VDAC1 to oligomerization-competent monomers."
+    },
+    {
+      "run_a": "evo_20260213_214547_pharmacology",
+      "run_b": "evo_20260218_000805_pharmacology",
+      "cosine": 0.7606,
+      "classification": "CROSS-VALIDATED SINGULAR",
+      "type_a": 3,
+      "type_b": 1,
+      "statement_a": "Lipophilic drugs like CBD can trigger VDAC1-mediated apoptosis primarily by altering local membrane fluidity and order, thereby destabilizing cholesterol-rich honeycomb domains, rather than through di",
+      "statement_b": "CBD's apparent VDAC1 interaction (Kd = 11 \u00b5M) is predominantly lipid-mediated. Given log P ~6.3, CBD accumulates in membranes at ~1000\u00d7 aqueous concentration, reaching effective local concentrations o",
+      "mechanism_a": "The drug partitions into the OMM, acting as a chaotropic (disordering) agent that lowers the energy barrier for cardiolipin to disrupt VDAC1 arrays, effectively lowering the apoptotic threshold.",
+      "mechanism_b": "CBD partitions into the OMM, alters lateral pressure profile and cholesterol distribution around VDAC, modulating gating indirectly rather than via a discrete binding pocket."
     },
     {
       "run_a": "evo_20260213_182457_pharmacology",
@@ -314,6 +416,18 @@
       "statement_b": "Increased OMM cholesterol in some cancers significantly raises the effective local concentration of CBD at VDAC, lowering its apparent functional Kd below the measured 11 \u00b5M.",
       "mechanism_a": "Lipophilic accumulation in mitochondrial inner/outer membrane brings effective local CBD concentration near VDAC's transmembrane domains well above the measured Kd, but this is cell-type-indiscriminat",
       "mechanism_b": "Higher cholesterol increases membrane order and partition coefficient for lipophilic CBD (logP 6.3), enriching it in the OMM and increasing probability of VDAC interaction."
+    },
+    {
+      "run_a": "evo_20260213_214547_pharmacology",
+      "run_b": "evo_20260218_000805_pharmacology",
+      "cosine": 0.7606,
+      "classification": "CROSS-VALIDATED SINGULAR",
+      "type_a": 3,
+      "type_b": 1,
+      "statement_a": "Lipophilic drugs like CBD can trigger VDAC1-mediated apoptosis primarily by altering local membrane fluidity and order, thereby destabilizing cholesterol-rich honeycomb domains, rather than through di",
+      "statement_b": "CBD's apparent VDAC1 interaction (Kd = 11 \u00b5M) is predominantly lipid-mediated. Given log P ~6.3, CBD accumulates in membranes at ~1000\u00d7 aqueous concentration, reaching effective local concentrations o",
+      "mechanism_a": "The drug partitions into the OMM, acting as a chaotropic (disordering) agent that lowers the energy barrier for cardiolipin to disrupt VDAC1 arrays, effectively lowering the apoptotic threshold.",
+      "mechanism_b": "CBD partitions into the OMM, alters lateral pressure profile and cholesterol distribution around VDAC, modulating gating indirectly rather than via a discrete binding pocket."
     }
   ],
   "independent_replications": [
@@ -328,6 +442,18 @@
       "statement_b": "Reorganization of OMM cholesterol-rich lipid domains can shift VDAC1 from a honeycomb to a dispersed state.",
       "mechanism_a": "Cholesterol stabilizes honeycomb arrays via lipid packing, while cardiolipin disrupts them by introducing negative curvature, shifting VDAC1 to oligomerization-competent monomers.",
       "mechanism_b": "VDAC1 localization and oligomerization are modulated by lipid environment; cholesterol depletion disperses VDAC1 clusters, implying mechanical disruption of cholesterol domains would have a similar ef"
+    },
+    {
+      "run_a": "evo_20260217_035010_pharmacology",
+      "run_b": "evo_20260218_002559_pharmacology",
+      "cosine": 0.7893,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 0,
+      "type_b": 1,
+      "statement_a": "Cancer OMMs (\u2191cholesterol ~2x, \u2193CL ~50%) have lower threshold (~0.5x I) for US-induced VDAC1 transition vs. healthy cells.",
+      "statement_b": "OMM cholesterol depletion (e.g., 50% \u2193[Chol]/[CL]) will sensitize cancer cells to VDAC-engaging therapies (e.g., erastin, CBD) but with a predicted therapeutic index fold-change of only ~2-3x, not 5-8",
+      "mechanism_a": "Elevated chol rigidifies domains but reduces CL-VDAC affinity, making lattice fragile to lower shear.",
+      "mechanism_b": "While [Chol]/[CL] reduction multiplicatively lowers T, cholesterol is essential for normal membrane integrity; its depletion non-selectively increases baseline mitochondrial permeability, narrowing th"
     },
     {
       "run_a": "evo_20260213_035958_pharmacology",
@@ -352,6 +478,30 @@
       "statement_b": "Therapeutic ultrasound (20-100 kHz) coupled with microbubbles generates localized inertial cavitation events capable of transiently expelling cholesterol from the VDAC1 lipid annulus, thereby favoring",
       "mechanism_a": "Acoustic radiation force and cavitation-induced shear stress generate pressure and strain fields within the cell that exceed the low energy barriers for lipid lateral diffusion and phase separation.",
       "mechanism_b": "The collapse of a cavitation microbubble near the OMM produces localized shear stresses (>1 MPa) and thermal spikes that overcome the ~20 kJ/mol energy barrier for cholesterol desorption from ordered "
+    },
+    {
+      "run_a": "evo_20260213_183423_pharmacology",
+      "run_b": "evo_20260218_000805_pharmacology",
+      "cosine": 0.7741,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 0,
+      "type_b": 1,
+      "statement_a": "Increased OMM cholesterol in some cancers significantly raises the effective local concentration of CBD at VDAC, lowering its apparent functional Kd below the measured 11 \u00b5M.",
+      "statement_b": "CBD's apparent VDAC1 interaction (Kd = 11 \u00b5M) is predominantly lipid-mediated. Given log P ~6.3, CBD accumulates in membranes at ~1000\u00d7 aqueous concentration, reaching effective local concentrations o",
+      "mechanism_a": "Higher cholesterol increases membrane order and partition coefficient for lipophilic CBD (logP 6.3), enriching it in the OMM and increasing probability of VDAC interaction.",
+      "mechanism_b": "CBD partitions into the OMM, alters lateral pressure profile and cholesterol distribution around VDAC, modulating gating indirectly rather than via a discrete binding pocket."
+    },
+    {
+      "run_a": "evo_20260217_234117_pharmacology",
+      "run_b": "evo_20260217_234138_pharmacology",
+      "cosine": 0.7701,
+      "classification": "INDEPENDENT REPLICATION",
+      "type_a": 0,
+      "type_b": 0,
+      "statement_a": "VDAC1 oligomerization is primarily an amplifier, not the initial trigger; mPTP opening is initiated by matrix Ca\u00b2\u207a overload acting on CypD-sensitized ANT/ATP synthase components at the IMM.",
+      "statement_b": "VDAC1 oligomerization is driven by cumulative matrix Ca\u00b2\u207a overload rather than directly by oscillation frequency \u2014 but frequency encodes the *rate* of matrix accumulation, so a frequency threshold (~1",
+      "mechanism_a": "Matrix Ca\u00b2\u207a activates CypD binding to the IMM pore component (likely ATP synthase c-ring or ANT), causing initial permeability transition; subsequent \u0394\u03a8m collapse and cytochrome c release then promote",
+      "mechanism_b": "High-frequency Ca\u00b2\u207a pulses exceed mitochondrial Ca\u00b2\u207a efflux capacity (NCLX), causing progressive matrix Ca\u00b2\u207a accumulation \u2192 mPTP sensitization \u2192 VDAC1 oligomerization via conformational changes/cytoch"
     }
   ],
   "structural_patterns": {
@@ -372,7 +522,10 @@
       "evo_20260214_041041_pharmacology",
       "evo_20260214_043936_pharmacology",
       "evo_20260217_035450_pharmacology",
-      "evo_20260217_233407_pharmacology"
+      "evo_20260217_233407_pharmacology",
+      "evo_20260217_234117_pharmacology",
+      "evo_20260218_000805_pharmacology",
+      "evo_20260218_002559_pharmacology"
     ],
     "dose_dependent": [
       "evo_20260210_232904_pharmacology",
@@ -383,7 +536,9 @@
       "evo_20260213_174104_pharmacology",
       "evo_20260213_182457_pharmacology",
       "evo_20260214_041041_pharmacology",
-      "evo_20260217_233429_pharmacology"
+      "evo_20260217_233429_pharmacology",
+      "evo_20260218_002559_pharmacology",
+      "evo_20260218_002623_pharmacology"
     ],
     "kinetic": [
       "evo_20260211_024747_pharmacology",
@@ -391,12 +546,12 @@
     ]
   },
   "stats": {
-    "total_claims": 192,
-    "cross_matches_found": 10,
-    "cross_validated_singulars": 3,
+    "total_claims": 241,
+    "cross_matches_found": 15,
+    "cross_validated_singulars": 4,
     "convergent_singulars": 0,
-    "independent_replications": 3,
-    "cross_promoted": 4,
+    "independent_replications": 6,
+    "cross_promoted": 5,
     "structural_patterns_found": 4
   }
 }
