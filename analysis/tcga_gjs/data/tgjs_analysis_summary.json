@@ -1,0 +1,145 @@
+{
+  "total_samples": 10071,
+  "cancer_types": 32,
+  "mean_tGJS": 0.0624,
+  "std_tGJS": 0.033,
+  "correlations": [
+    {
+      "immune_marker": "CD8A",
+      "spearman_rho": 0.0819,
+      "p_value": 1.9191025273660266e-16,
+      "n": 10071,
+      "significant": true
+    },
+    {
+      "immune_marker": "IFNG",
+      "spearman_rho": 0.167,
+      "p_value": 6.602608875121357e-64,
+      "n": 10071,
+      "significant": true
+    },
+    {
+      "immune_marker": "CXCL10",
+      "spearman_rho": 0.1407,
+      "p_value": 1.033409229221807e-45,
+      "n": 10071,
+      "significant": true
+    },
+    {
+      "immune_marker": "GZMB",
+      "spearman_rho": 0.3083,
+      "p_value": 9.937873940196432e-221,
+      "n": 10071,
+      "significant": true
+    },
+    {
+      "immune_marker": "PRF1",
+      "spearman_rho": 0.1607,
+      "p_value": 2.8769495181752932e-59,
+      "n": 10071,
+      "significant": true
+    }
+  ],
+  "top5_high_gjs": [
+    {
+      "cancer_type": "HNSC",
+      "mean_tGJS": 0.09761325766417771,
+      "n_samples": 515
+    },
+    {
+      "cancer_type": "COADREAD",
+      "mean_tGJS": 0.08947231421619634,
+      "n_samples": 592
+    },
+    {
+      "cancer_type": "CHOL",
+      "mean_tGJS": 0.08887019566531978,
+      "n_samples": 36
+    },
+    {
+      "cancer_type": "PAAD",
+      "mean_tGJS": 0.08845164596908787,
+      "n_samples": 177
+    },
+    {
+      "cancer_type": "LUSC",
+      "mean_tGJS": 0.08535461481736697,
+      "n_samples": 484
+    }
+  ],
+  "top5_low_gjs": [
+    {
+      "cancer_type": "GBM",
+      "mean_tGJS": 0.04051636715653391,
+      "n_samples": 160
+    },
+    {
+      "cancer_type": "SARC",
+      "mean_tGJS": 0.03882766601765708,
+      "n_samples": 253
+    },
+    {
+      "cancer_type": "LIHC",
+      "mean_tGJS": 0.03582134810316562,
+      "n_samples": 366
+    },
+    {
+      "cancer_type": "LGG",
+      "mean_tGJS": 0.025966568551889894,
+      "n_samples": 514
+    },
+    {
+      "cancer_type": "PCPG",
+      "mean_tGJS": 0.0249574366656918,
+      "n_samples": 178
+    }
+  ],
+  "sting_analysis": {
+    "Acute STING": {
+      "rho": 0.1439,
+      "p": 1.0174590954937316e-47,
+      "n": 10071
+    },
+    "Chronic STING": {
+      "rho": 0.1707,
+      "p": 1.0639219525397712e-66,
+      "n": 10071
+    },
+    "STING Ratio (acute-chronic)": {
+      "rho": -0.0209,
+      "p": 0.0357754834713356,
+      "n": 10071
+    },
+    "ENPP1 (cGAMP eraser)": {
+      "rho": -0.1812,
+      "p": 4.3306972143341994e-75,
+      "n": 10071
+    },
+    "TREX1 (DNA eraser)": {
+      "rho": 0.0874,
+      "p": 1.5446645734331033e-18,
+      "n": 10071
+    },
+    "CD274/PD-L1": {
+      "rho": 0.1497,
+      "p": 1.481002772594557e-51,
+      "n": 10071
+    },
+    "cGAS": {
+      "rho": 0.2108,
+      "p": 1.6323738618877446e-101,
+      "n": 10071
+    },
+    "STING1": {
+      "rho": 0.2223,
+      "p": 4.96558313038595e-113,
+      "n": 10071
+    }
+  },
+  "ici_correlation": {
+    "spearman_rho": 0.382,
+    "p_value": 0.1442519945546417,
+    "n_cancer_types": 16,
+    "prediction": "NOT CONFIRMED"
+  }
+}
