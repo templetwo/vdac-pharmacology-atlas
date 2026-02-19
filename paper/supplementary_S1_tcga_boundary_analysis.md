@@ -95,7 +95,11 @@ This is consistent with two orthogonal immune evasion strategies:
 1. **Gate-jamming (upstream):** Block mtDNA release by suppressing VDAC1 oligomerization — prevents the danger signal from ever reaching the cytosol.
 2. **Enzymatic erasure (downstream):** Allow cGAMP production but degrade it before STING activation.
 
-These strategies appear to be anti-correlated at the transcriptomic level. Tumors may preferentially employ one or the other, not both. This partitioning — if validated at the protein level — could have therapeutic implications: gate-jamming tumors might respond to VDAC1-targeted interventions (HK-II displacement), while ENPP1-high tumors might respond to ENPP1 inhibitors currently in clinical development.
+These strategies appear to be anti-correlated at the transcriptomic level. Tumors may preferentially employ one or the other, not both. This reflects a metabolic efficiency logic: a tumor that successfully jams the gate — preventing mtDNA release upstream — does not waste resources on downstream enzymatic erasure of a signal that was never generated.
+
+This partitioning generates a specific testable prediction: **pharmacological gate-unjamming (e.g., HK-II displacement via clotrimazole or methyl jasmonate) in high-tGJS / low-ENPP1 cell lines should trigger compensatory ENPP1 upregulation** as the tumor switches evasion strategies. If ENPP1 does not upregulate after gate-restoration, it would suggest the two strategies are hardwired rather than dynamically regulated — still informative, but with different therapeutic implications. If ENPP1 does upregulate, it predicts that combination therapy (gate-restoration + ENPP1 inhibition) will be required for durable immune activation in metabolically aggressive tumors.
+
+This partitioning — if validated at the protein level — could have therapeutic implications: gate-jamming tumors might respond to VDAC1-targeted interventions (HK-II displacement), while ENPP1-high tumors might respond to ENPP1 inhibitors currently in clinical development.
 
 ### Acute vs. chronic STING ratio
 

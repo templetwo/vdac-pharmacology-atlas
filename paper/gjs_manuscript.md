@@ -229,7 +229,7 @@ STING silencing via promoter methylation (DNMT1/EZH2-mediated, as in KRAS-LKB1 l
 
 Several limitations require emphasis:
 
-1. **The GJS is a computational prediction.** No experimental validation has been performed. All hypotheses await bench testing. The weights (0.4/0.3/0.3) are convergence-derived estimates, not empirically optimized coefficients.
+1. **The GJS is a computational prediction.** No experimental validation has been performed. All hypotheses await bench testing. The weights (0.4/0.3/0.3) are convergence-derived estimates, not empirically optimized coefficients. A transcriptomic proxy (tGJS) using HK2, BCL2L1, and TSPO mRNA expression across 10,071 TCGA samples failed to inversely predict ICI response (Spearman rho = +0.38, p = 0.14), demonstrating that gate-jamming — a physical protein-occupancy phenomenon at VDAC1 — cannot be faithfully captured by bulk mRNA levels (Supplementary Analysis S1). Protein-level assays (proximity ligation, co-immunoprecipitation, mitochondrial lipidomics) are required to test the GJS directly.
 
 2. **The cGAS-STING axis is a double-edged sword.** Lai et al. (2025, *Immunity*) showed that VDAC-mediated mtDNA from senescent tumor cells can enhance immunosuppression via MDSC recruitment. The GJS does not capture whether gate-restoration will produce an anti-tumor or immunosuppressive cGAS-STING response. Temporal dynamics and cellular context are critical (see Section 4.7).
 
@@ -247,7 +247,7 @@ Several limitations require emphasis:
 
 Three steps would test the GJS framework:
 
-1. **Computational (weeks):** Compute GJS across TCGA pan-cancer data using transcriptomic proxies (HK2 expression for f_HKII, BCL2L1 expression for f_BclxL, STARD1 expression for Chol/CL). Correlate with documented immunotherapy response rates and published immune classifications (Thorsson et al. 2018, *Immunity*). Predicted: GJS inversely correlates with immune-hot classification.
+1. **Computational (completed — see Supplementary S1):** A transcriptomic GJS proxy across 10,071 TCGA samples did not predict ICI resistance, establishing that gate-jamming requires protein-level measurement. However, the analysis revealed an inverse correlation between tGJS and ENPP1 (rho = -0.18, p = 10^-75), suggesting metabolically aggressive tumors employ mitochondrial gating rather than enzymatic cGAMP degradation — two orthogonal evasion strategies that are anti-correlated. This generates a testable prediction: pharmacological gate-unjamming (HK-II displacement) should trigger compensatory ENPP1 upregulation if the tumor retains pathway plasticity.
 
 2. **In vitro (4–8 weeks):** H1 and H2 protocols as specified. Displace HK-II from VDAC1 in immune-cold cell lines and measure cGAS-STING activation. Compute GJS across 15+ cell lines and correlate with basal immune signaling.
 
