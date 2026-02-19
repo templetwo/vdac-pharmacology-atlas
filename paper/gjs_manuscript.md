@@ -206,23 +206,44 @@ Furthermore, the multiplicative structure of the underlying cofactor equation �
 
 This framing also illuminates why the GJS measures something fundamentally different from existing biomarkers. PD-L1, TMB, and MSI-H operate at the interface between tumor and immune system — they look for evidence of a battle. The GJS measures the locked door that prevented the battle from starting. High-GJS tumors are invisible not because the immune system is suppressed, but because the immunogenic signal was never generated. Silence, it turns out, has a measurable geometry.
 
-### 4.7 Limitations and Caveats
+### 4.7 The GJS in Context: Gate-Jamming as One Layer of Multi-Layer Immune Evasion
+
+The GJS measures one specific bottleneck — VDAC1 oligomerization suppression — within a multi-layer immune evasion architecture. It does not claim to be a standalone explanation for immunotherapy failure. Several additional layers must be considered:
+
+**The tumor microenvironment (TME) barrier.** Even if gate-restoration succeeds in generating cGAS-STING signaling, the immunosuppressive TME — cancer-associated fibroblasts (CAFs), tumor-associated macrophages (TAMs), nutrient depletion, acidosis, and hypoxia — may prevent effector T cell infiltration and function. Most solid tumors build a physical and biochemical fortress that checkpoint inhibitors alone cannot penetrate. The GJS identifies *whether the mitochondrial alarm was silenced*, not whether the immune system can respond to it. This distinction is clinically important: a high-GJS tumor with an intact but physically excluded immune compartment requires a different therapeutic strategy (gate-restoration + TME remodeling) than a low-GJS tumor where innate signaling is already active but T cells are exhausted.
+
+**The acute versus chronic cGAS-STING distinction.** The cGAS-STING pathway is not a simple on/off switch for anti-tumor immunity. Seok et al. (2023, *Archives of Pharmacological Research*) comprehensively reviewed the dual nature of cGAS-STING across disease contexts, documenting that chronic activation promotes tumor growth, metastasis, and immunosuppression — including cancer cell cGAMP transfer through gap junctions to activate pro-tumorigenic STING in astrocytes during brain metastasis. Genomic instability in cancer cells already produces cytosolic DNA fragments that activate cGAS-STING chronically, and this chronic signaling exhausts nearby immune cells while promoting tumor survival. Gate-jamming may therefore create a specific immunological profile: the *acute* oligomerization-dependent burst (apoptotic, involving cytochrome c + mtDNA co-release) is mechanistically distinct from *chronic* low-level mtDNA leak. Gate-jamming prevents the acute immunogenic burst while chronic leak continues — potentially giving the tumor the worst of both worlds from the host perspective: immunosuppressive tonic signaling without the immunogenic cell death that would trigger dendritic cell cross-presentation.
+
+**The TP53 context.** Most solid tumors carry TP53 mutations, conferring intrinsic apoptosis resistance. Even if VDAC1 oligomerizes and releases cytochrome c, classical p53-dependent apoptosis may be blocked. However, VDAC1 oligomerization connects to p53-independent death pathways: Daniilidis et al. (2025) showed VDAC1's N-terminal helix acts as a BH3-only sensitizer that neutralizes Bcl-xL and activates Bak independently of p53; Jang et al. (2024) and Ren et al. (2025) established VDAC1 oligomerization as essential for ferroptosis; and Wan et al. (2026) demonstrated its role in PANoptosis. Critically, cGAS-STING activation from mtDNA release operates entirely independently of p53 status. Gate-restoration in TP53-mutant tumors would therefore be expected to activate innate immune signaling and alternative death pathways even when classical apoptosis is blocked.
+
+**The combinatorial biomarker framework.** These considerations suggest the GJS should be interpreted not in isolation but as part of a combinatorial matrix with STING pathway status:
+
+| | **STING Intact** | **STING Silenced** |
+|---|---|---|
+| **High GJS** | Gate jammed, pathway ready — strongest candidate for HK-II/Bcl-xL disruption + checkpoint inhibitors | Gate jammed AND downstream disabled — requires epigenetic reactivation (DNMT inhibitors) before gate-restoration |
+| **Low GJS** | Gate open, pathway active — may respond to checkpoint inhibitors alone | Gate open but chronic activation — paradoxical immunosuppression territory (Lai 2025 scenario) |
+
+STING silencing via promoter methylation (DNMT1/EZH2-mediated, as in KRAS-LKB1 lung cancers) occurs in 1–25% of tumors pan-cancer. The GJS × STING status matrix generates four distinct therapeutic predictions rather than a single biomarker threshold, each requiring different intervention strategies.
+
+### 4.8 Limitations and Caveats
 
 Several limitations require emphasis:
 
 1. **The GJS is a computational prediction.** No experimental validation has been performed. All hypotheses await bench testing. The weights (0.4/0.3/0.3) are convergence-derived estimates, not empirically optimized coefficients.
 
-2. **The cGAS-STING axis is a double-edged sword.** Lai et al. (2025, *Immunity*) showed that VDAC-mediated mtDNA from senescent tumor cells can enhance immunosuppression via MDSC recruitment. The GJS does not capture whether gate-restoration will produce an anti-tumor or immunosuppressive cGAS-STING response. Temporal dynamics and cellular context are critical.
+2. **The cGAS-STING axis is a double-edged sword.** Lai et al. (2025, *Immunity*) showed that VDAC-mediated mtDNA from senescent tumor cells can enhance immunosuppression via MDSC recruitment. The GJS does not capture whether gate-restoration will produce an anti-tumor or immunosuppressive cGAS-STING response. Temporal dynamics and cellular context are critical (see Section 4.7).
 
-3. **VBIT-4 specificity has been challenged.** Ravishankar et al. (2025, bioRxiv) showed that VBIT-4 partitions into lipid bilayers at micromolar concentrations and disrupts membrane structure independent of VDAC1 — at 30 μM, VBIT-4 induced membrane rupture. Claims based solely on VBIT-4 require orthogonal validation through genetic approaches (VDAC1/3 knockout, K53R mutants, VSTM2L knockdown).
+3. **The TME may override gate-restoration.** Even successful restoration of VDAC1 oligomerization and cGAS-STING activation may be insufficient if the immunosuppressive microenvironment — CAFs, TAMs, acidosis, hypoxia — prevents immune cell infiltration and function. The GJS identifies a necessary condition, not a sufficient one.
 
-4. **LLM convergence is not truth.** Models may converge on plausible but incorrect mechanisms due to shared training biases. The IRIS protocol mitigates this through model diversity (five architectures from five companies), cross-run replication, literature verification, and explicit falsification criteria — but cannot eliminate it.
+4. **VBIT-4 specificity has been challenged.** Ravishankar et al. (2025, bioRxiv) showed that VBIT-4 partitions into lipid bilayers at micromolar concentrations and disrupts membrane structure independent of VDAC1 — at 30 μM, VBIT-4 induced membrane rupture. Claims based solely on VBIT-4 require orthogonal validation through genetic approaches (VDAC1/3 knockout, K53R mutants, VSTM2L knockdown).
 
-5. **The structural isomorphism may reflect training bias.** The pattern of dose-dependent bifurcation across six molecules may reflect a genuine biological principle or a shared representational tendency in LLM training corpora. Experimental validation of predicted threshold values would distinguish these possibilities.
+5. **LLM convergence is not truth.** Models may converge on plausible but incorrect mechanisms due to shared training biases. The IRIS protocol mitigates this through model diversity (five architectures from five companies), cross-run replication, literature verification, and explicit falsification criteria — but cannot eliminate it.
 
-6. **Cancer-type-specific predictions are preliminary.** The claim that GBM is rate-limited by f_HKII while AML is rate-limited by f_BclxL comes from a run that failed the S3 convergence gate (session evo_20260218_002559). Cross-run analysis supports constituent claims, but the cancer-type specificity should be treated as hypothesis-generating.
+6. **The structural isomorphism may reflect training bias.** The pattern of dose-dependent bifurcation across six molecules may reflect a genuine biological principle or a shared representational tendency in LLM training corpora. Experimental validation of predicted threshold values would distinguish these possibilities.
 
-### 4.8 Immediate Next Steps
+7. **Cancer-type-specific predictions are preliminary.** The claim that GBM is rate-limited by f_HKII while AML is rate-limited by f_BclxL comes from a run that failed the S3 convergence gate (session evo_20260218_002559). Cross-run analysis supports constituent claims, but the cancer-type specificity should be treated as hypothesis-generating.
+
+### 4.9 Immediate Next Steps
 
 Three steps would test the GJS framework:
 
@@ -345,6 +366,8 @@ Rimmerman N, et al. (2013) Direct modulation of the OMM channel VDAC1 by CBD. *C
 Samson N, Ablasser A. (2022) The cGAS-STING pathway and cancer. *Nat Cancer* 3:1452.
 
 Schoenegger P, et al. (2024) Wisdom of the silicon crowd. *Sci Adv* 10(45).
+
+Seok J, et al. (2023) Beyond DNA sensing: expanding the role of cGAS/STING in immunity and diseases. *Arch Pharm Res* 46:500.
 
 Shahid T, et al. (2022) HK2 in breast cancer. *Genes* 13:549.
 
