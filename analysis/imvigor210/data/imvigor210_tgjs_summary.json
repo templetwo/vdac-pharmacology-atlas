@@ -1,0 +1,23 @@
+{
+  "study": "IMvigor210 (Mariathasan 2018)",
+  "n_samples": 348,
+  "n_resp_data": 298,
+  "tGJS_stats": {
+    "mean": 3.6178e-16,
+    "sd": 0.6257
+  },
+  "primary_test": {
+    "wilcoxon_p": 0.9649,
+    "logistic_OR": 1.038,
+    "logistic_p": 0.8683,
+    "spearman_rho_vs_RECIST": -0.0172,
+    "spearman_p": 0.7672
+  },
+  "survival": {
+    "continuous_HR": 0.8982,
+    "HR_95CI": [0.6779, 1.1902],
+    "cox_p": 0.4548,
+    "logrank_p": 0.5865
+  },
+  "kw_tertile_p": 0.5589
+}
