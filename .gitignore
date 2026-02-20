@@ -4,3 +4,10 @@
 *.swp
 *.swo
 *~
+
+# Large data files (re-generatable from pipeline)
+*.parquet
+__pycache__/
+*.pyc
+.Rhistory
+.RData
