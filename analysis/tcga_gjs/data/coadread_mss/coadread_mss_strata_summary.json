@@ -1,0 +1,30 @@
+{
+  "study": "coadread_tcga_pan_can_atlas_2018",
+  "total_coadread": 592,
+  "strata": {
+    "MSS_TP53wt": {
+      "label": "MSS/MSI-L + TP53-wt",
+      "n": 209,
+      "mean_tGJS": 0.5252,
+      "std_tGJS": 0.1488
+    },
+    "MSS_TP53mut": {
+      "label": "MSS/MSI-L + TP53-mut",
+      "n": 286,
+      "mean_tGJS": 0.4812,
+      "std_tGJS": 0.1433
+    },
+    "MSIH_TP53wt": {
+      "label": "MSI-H + TP53-wt",
+      "n": 67,
+      "mean_tGJS": 0.524,
+      "std_tGJS": 0.1559
+    },
+    "MSIH_TP53mut": {
+      "label": "MSI-H + TP53-mut",
+      "n": 28,
+      "mean_tGJS": 0.4729,
+      "std_tGJS": 0.1708
+    }
+  }
+}
