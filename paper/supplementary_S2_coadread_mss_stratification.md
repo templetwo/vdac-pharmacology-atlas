@@ -165,6 +165,8 @@ The null MSI-H control and the attenuation of correlations in TP53-mutant strata
 
 The TREX1 co-occurrence finding revises the evasion architecture model: gate-jamming and cytosolic DNA degradation are co-deployed in the most evasion-committed tumors, while ENPP1-mediated cGAMP degradation represents an alternative strategy.
 
+Together, S1 and S2 demonstrate that the GJS framework describes a context-specific mechanism whose transcriptomic signature becomes detectable precisely when the biological assumptions of the model are met.
+
 Validation priorities:
 1. Protein-level GJS measurement in COADREAD MSS tissue (PLA for HK-II–VDAC1 and Bcl-xL–VDAC1 complexes)
 2. Single-cancer-type ICI response cohort analysis (IMvigor210 bladder cancer as initial target)
