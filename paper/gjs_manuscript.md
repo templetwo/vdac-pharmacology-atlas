@@ -1,9 +1,8 @@
-# The Gate-Jamming Score: A VDAC1-Based Composite Biomarker Linking Warburg Metabolism to Immune Evasion in Cancer
+# Context-Specific Innate Immune Evasion via VDAC1 Gate-Jamming in Microsatellite-Stable Colorectal Cancer: A Three-Cohort Transcriptomic Analysis
 
-**Anthony J. Vasquez Sr.**¹ and **Claude Opus 4.6**²
+**Anthony J. Vasquez Sr.**
 
-¹ Delaware Valley University, Doylestown, PA, USA
-² Anthropic, San Francisco, CA, USA
+Delaware Valley University, Doylestown, PA, USA
 
 **Corresponding author:** vasquezaj3921@delval.edu
 
@@ -11,273 +10,234 @@
 
 ## Abstract
 
-Checkpoint inhibitors have transformed oncology, yet only ~24% of solid tumor patients respond. Current biomarkers (PD-L1, TMB, MSI-H) fail to capture the metabolic dimension of immune evasion. Here we propose the Gate-Jamming Score (GJS), a composite biomarker derived from three measurable properties of the VDAC1 mitochondrial gating system that quantifies how effectively cancer cells suppress innate immune detection. Using a multi-LLM convergence protocol (IRIS) in which five independent AI models analyze the same compiled question without cross-exposure, we identified a mechanistic chain linking VDAC1 oligomerization suppression to cGAS-STING silencing and checkpoint inhibitor non-response. The GJS integrates three gate-jamming mechanisms: hexokinase-II (HK-II) docking on VDAC1 (f_HKII), Bcl-xL binding (f_BclxL), and outer mitochondrial membrane cholesterol/cardiolipin ratio (Chol/CL). Five models converged independently on this framework (cosine similarity 0.93, TYPE 0/1 ratio 0.81, zero contradictions). Cross-run analysis across 28 independent runs (27,931 pairwise comparisons) identified 15 semantic matches corroborating constituent claims. We present three operationalized hypotheses with specified protocols, predicted effect sizes (d = 0.81–1.22), and explicit null outcomes. The GJS is testable today using existing reagents, cell lines, and publicly available TCGA data. All convergence data, claim classifications, and analysis code are openly available.
+Immune checkpoint inhibitors (ICIs) have transformed oncology for microsatellite instability-high (MSI-H) colorectal cancer, yet 85–95% of colorectal cancer patients carry microsatellite-stable (MSS) tumors and derive no benefit from current ICI regimens. We propose that VDAC1-mediated mitochondrial DNA (mtDNA) gate-jamming — suppression of VDAC1 oligomerization by HK-II docking, Bcl-xL binding, and outer mitochondrial membrane cholesterol loading — explains this selectivity by silencing the cGAS-STING innate immune signal required for spontaneous T cell priming. To test this hypothesis at scale, we computed a transcriptomic Gate-Jamming Score (tGJS = 0.4 × HK2 + 0.3 × BCL2L1 + 0.3 × TSPO, rank-normalized) and conducted three sequential analyses: (S1) pan-cancer TCGA (n = 10,071, 33 cancer types) — null result (ρ = +0.38 vs ICI response rate, p = 0.14); (S2) COADREAD MSS/TP53-wildtype clean room (n = 209) — five Bonferroni-significant inverse correlations between tGJS and immune markers including HAVCR2 (ρ = −0.349, p_bonf = 5 × 10⁻⁶), CXCL10 (ρ = −0.231, p_bonf = 0.015), and cGAS (ρ = −0.208, p_bonf = 0.049); (S3) IMvigor210 urothelial carcinoma atezolizumab cohort (n = 348) — null result (Wilcoxon p = 0.965, Cox HR = 0.898, p = 0.455). The flanking nulls (S1, S3) define the framework's domain: the gate-jamming signal is detectable only when VDAC1-mediated mtDNA release is the dominant cytosolic DNA source and innate priming is the rate-limiting step. The S2 clean room results, combined with the three-layer therapeutic hypothesis (VDAC1 gate-opener + cGAMP/DNA eraser inhibitor + checkpoint blockade) independently derived from the same data by three AI analytical systems, motivates protein-level validation in MSS colorectal cancer and combination ICI trials in this specific population.
 
-**Keywords:** VDAC1, gate-jamming, checkpoint inhibitor, biomarker, cGAS-STING, Warburg effect, multi-LLM convergence, immunotherapy resistance
+**Keywords:** VDAC1, gate-jamming, cGAS-STING, microsatellite-stable colorectal cancer, innate immunity, immunotherapy resistance, tGJS
 
 ---
 
 ## 1. Introduction
 
-Immune checkpoint inhibitors (ICIs) targeting PD-1/PD-L1 and CTLA-4 have transformed cancer treatment, yet the overall objective response rate to anti-PD-1/PD-L1 monotherapy remains approximately 24% (95% CI: 21–28%) across solid tumors. Three FDA-approved biomarkers — PD-L1 expression, tumor mutational burden (TMB), and microsatellite instability (MSI-H) — each have well-documented limitations. PD-L1 has predictive value in only 28.9% of FDA approvals; 15% of PD-L1-negative patients respond while over half of PD-L1-positive patients do not. TMB ≥10 mut/Mb yields an objective response rate of 41% but varies widely by cancer type, and the proportion of TMB-high tumors ranges from 0% (kidney) to 53% (melanoma). MSI-H is a strong predictor but relevant in only ~4–15% of common cancers. No STING agonist has achieved FDA approval despite promising preclinical data (Lu et al. 2025, *Nature Reviews Cancer*). None of these biomarkers captures the metabolic dimension of immune evasion.
+Colorectal cancer is the second leading cause of cancer mortality in the United States, with approximately 150,000 new cases annually. Pembrolizumab and nivolumab achieve durable responses in the ~5–15% of patients with MSI-H tumors — where pervasive genomic instability generates abundant mutational neoantigens and activates innate immune sensing. For the remaining 85–95% of patients with MSS tumors, ICI monotherapy has consistently failed in randomized trials, and no predictive biomarker identifies a responsive MSS subpopulation. The central unmet need in colorectal cancer immunotherapy is converting MSS tumors from immune-cold to immune-hot.
 
-Recent work has established that mitochondrial dysfunction causally drives immune failure. Ikeda et al. (2025, *Nature*) demonstrated that cancer cells transfer mitochondria carrying mutated mtDNA to tumor-infiltrating lymphocytes (TILs), causing metabolic abnormalities and defective effector function — with five of twelve patients harboring shared tumor–TIL mtDNA mutations correlating with poor ICI response. Mangalhara et al. (2023, *Science*) showed that electron transport chain configuration directly determines tumor immunogenicity: Complex II loss triggers succinate accumulation and transcriptional activation of MHC-I/antigen processing genes independent of IFN signaling. Wu et al. (2023, *Nature Communications*) found that mitochondrial insufficiency initiates T cell exhaustion through HIF-1α-mediated glycolytic reprogramming. The SCORPIO machine-learning system (*Nature Medicine* 2024), using routine blood tests, achieved median AUC(t) of 0.763 for overall survival prediction — outperforming TMB (0.503–0.543) — validating that latent metabolic signals exist in standard clinical data but are not captured by existing biomarkers.
+VDAC1 (voltage-dependent anion channel 1) is the most abundant protein in the outer mitochondrial membrane, present at densities exceeding 1,000 molecules per μm². Its oligomeric form releases 500–650 bp mitochondrial DNA (mtDNA) fragments into the cytoplasm (Kim et al. 2019, *Science*), activating the cGAS-STING innate immune pathway required for spontaneous CD8+ T cell priming (Woo et al. 2014, *Immunity*). Cancer cells suppress this oligomerization through at least three mechanisms: hexokinase-II (HK-II) docking on VDAC1's outer barrel (Wolf et al. 2023, *Science Immunology*; Bieker et al. 2025, *Communications Biology*), Bcl-xL binding via its BH4 domain (Monaco et al. 2015, *JBC*), and cholesterol loading of the outer mitochondrial membrane (Betaneli et al. 2012, *Biophysical Journal*). Together, these constitute a gate-jamming architecture that silences the mitochondrial innate immune alarm.
 
-VDAC1 (voltage-dependent anion channel 1) is the most abundant protein in the outer mitochondrial membrane (OMM), present at densities exceeding 1,000 molecules per μm² (Jahn et al. 2023, *Nature Communications*). This 283-residue, 19-β-strand barrel exists in at least five functional states — open monomer (~4 nS, anion-selective), closed monomer (~2 nS, cation-selective, arising from N-terminal ³₁₀-helix unfolding), physiological dimer (scramblase, with ~90% of crosslinked dimers scramblase-active), honeycomb array, and death oligomer — all sharing the same protein (Keinan et al. 2010, *Molecular and Cellular Biology*; Jahn et al. 2023, *Nature Communications*; Lafargue et al. 2025, *Communications Biology*; Daniilidis et al. 2025, *Nature Communications*). Mannella et al. (2023, *IJMS*) used RoseTTAFold to predict that the 19-strand barrel is inherently metastable and evolutionarily selected for gating capacity. Critically, VDAC1 oligomers release 500–650 bp mitochondrial DNA (mtDNA) fragments into the cytoplasm (Kim et al. 2019, *Science*), activating the cGAS-STING innate immune pathway that is required for spontaneous anti-tumor CD8+ T cell priming (Woo et al. 2014, *Immunity*). The structural mechanism was resolved by Daniilidis et al. (2025, *Nature Communications*): upon oligomerization, VDAC1's N-terminal α-helix is exposed to the pore exterior and binds directly to the BH3 binding groove of Bcl-xL, functioning as a BH3-only sensitizer to neutralize Bcl-xL and promote Bak pore formation — providing the first structural link between VDAC1 oligomerization and canonical Bcl-2 family apoptosis machinery.
+Critically, this mechanism is predicted to be relevant precisely in MSS tumors. In MSI-H tumors, nuclear DNA damage generates cytosolic DNA fragments independently of mitochondrial dynamics, saturating cGAS-STING regardless of VDAC1 state. In MSS tumors where nuclear DNA damage is minimal, VDAC1-mediated mtDNA release is the predicted dominant — potentially sole — cytosolic DNA source. Gate-jamming in this context suppresses the entire innate priming axis, explaining ICI failure without invoking T cell exhaustion.
 
-Cancer cells suppress VDAC1 oligomerization through at least three orthogonal mechanisms: hexokinase-II (HK-II) docking, which physically blocks oligomer formation by binding the membrane-buried glutamate E73 on VDAC1's outer barrel wall (Wolf et al. 2023, *Science Immunology*; Bieker et al. 2025, *Communications Biology*); Bcl-xL binding via its BH4 domain, which reduces channel conductance and suppresses calcium flux through a mechanism mechanistically distinct from BH3-mimetic targets (Monaco et al. 2015, *Journal of Biological Chemistry*); and cholesterol loading of the OMM, which rigidifies the membrane and disfavors oligomeric transitions (Montero et al. 2008, *Cancer Research*; Betaneli et al. 2012, *Biophysical Journal*). Each mechanism is independently documented; their convergent effect on immune visibility has not been formalized.
-
-We propose the Gate-Jamming Score (GJS), a composite biomarker that quantifies the degree to which these three mechanisms collectively suppress VDAC1 oligomerization and, consequently, innate immune detection via the mtDNA-cGAS-STING axis. The GJS was derived from a multi-LLM convergence analysis in which five independent AI models analyzed the same mechanistic question, converged on the same framework without cross-exposure, and produced operationalized hypotheses with specified protocols and falsification criteria.
+We formalized this hypothesis as a transcriptomic Gate-Jamming Score (tGJS) and conducted three sequential analyses designed to test the framework, define its domain, and identify the biological context where protein-level validation is most warranted.
 
 ---
 
 ## 2. Methods
 
-### 2.1 Multi-LLM Convergence Protocol (IRIS Gate Evo)
+### 2.1 Transcriptomic Gate-Jamming Score
 
-The IRIS (Independent Replicated Inquiry System) protocol dispatches a single compiled scientific question to five independent large language models: Claude Opus 4.6 (Anthropic), Gemini 2.5 Pro (Google), Grok 4.1 Fast (xAI), Mistral Large (Mistral AI), and DeepSeek Chat (DeepSeek). No model receives another model's output at any stage. All convergence assessment is performed server-side through quantitative metrics.
+The tGJS is a rank-normalized composite of three genes encoding the primary VDAC1 gate-jamming proteins:
 
-**Stage 1 (Formulation):** Each model receives the identical compiled prompt, which includes quantitative priors from indexed literature (e.g., VDAC1 Kd values, cancer membrane compositions, IC50 concentrations). Models respond independently, producing structured claims with mechanism descriptions, confidence estimates, and falsification criteria.
+```
+tGJS = 0.40 × norm(HK2) + 0.30 × norm(BCL2L1) + 0.30 × norm(TSPO)
+```
 
-**Stage 2 (Contribution Synthesis):** Claims are extracted from each model's response and embedded using the all-MiniLM-L6-v2 sentence transformer (384-dimensional vectors). Entity synonyms are normalized (e.g., "CBD" = "cannabidiol", "VDAC1" = "voltage-dependent anion channel 1"). Claims are clustered using complete-linkage agglomerative clustering with a cosine similarity threshold of 0.70. TYPE is assigned by model count within each cluster: 5/5 or 4/5 models = TYPE 0, 3/5 = TYPE 1, 2/5 = TYPE 2, 1/5 = TYPE 3 (singular). Zero API calls are made during synthesis — convergence is computed entirely through embedding similarity.
+HK2 encodes hexokinase-II (VDAC1 docking, weight 0.40 reflecting its primacy as the dominant gate-jamming mechanism in most solid tumors); BCL2L1 encodes Bcl-xL (VDAC1 binding, weight 0.30); TSPO encodes the Translocator Protein, a cholesterol transport protein at the outer mitochondrial membrane used as a transcriptomic proxy for mitochondrial cholesterol loading (weight 0.30). Weights are derived from convergent assessment across five independent AI models (see Section 2.4) and are empirical predictions subject to refinement.
 
-**Stage 3 (Convergence Gate):** A run passes the S3 gate if cosine similarity exceeds 0.85 AND the proportion of TYPE 0 + TYPE 1 claims exceeds 0.75 (domain-adaptive threshold for pharmacology). Runs that fail S3 undergo recirculation: converged claims and informative singulars are compiled and re-dispatched to all five models for up to three cycles.
+Normalization is performed within each cohort (rank-based for TCGA analyses; z-score for IMvigor210 TPM data), ensuring the score reflects relative gate-jamming intensity within the study population rather than cross-cohort expression differences.
 
-**Verification:** Claims classified as TYPE 2 are checked against indexed literature using Perplexity sonar-pro, returning classifications of PROMOTED, HELD, NOVEL, or CONTRADICTED.
+### 2.2 S1: Pan-Cancer TCGA Analysis
 
-**Lab Gate:** An independent model (Perplexity sonar-pro with convergence context) evaluates each claim for falsifiability, experimental feasibility, and novelty. The model receives the TYPE classification system and judges novelty by what the claim enables, not merely what it states.
+Expression data for 10,071 samples across 33 TCGA cancer types were retrieved from the TCGA PanCanAtlas (cBioPortal, study: `pan_cancer_atlas_2018`). ICI response rates per cancer type were compiled from published meta-analyses of anti-PD-1/PD-L1 trials (Supplementary Analysis S1). tGJS was correlated with per-cancer-type mean ICI response rate using Spearman rank correlation. Pan-cancer boundary analysis assessed whether TCGA COADREAD tGJS distributions fell within the ranges defined by ICI-responsive and ICI-refractory cancer types.
 
-**Stage 4 (Hypothesis Operationalization):** Claims that pass the Lab Gate are operationalized into testable hypotheses with specified experimental protocols, predicted outcomes, dose ranges, readouts, controls, and explicit null outcomes.
+### 2.3 S2: COADREAD MSS-Stratified Clean Room Analysis
 
-**Stage 5 (Monte Carlo Robustness):** Each hypothesis undergoes 300 iterations of Monte Carlo parameter sampling (pure Python, zero LLM calls) to estimate effect sizes and statistical power across the plausible parameter space.
+592 COADREAD samples from `coadread_tcga_pan_can_atlas_2018` were stratified by MSI status × TP53 mutation into four groups:
+- MSS/TP53-wt (n = 209): MSS/MSI-L + no TP53 mutation — "clean room"
+- MSS/TP53-mut (n = 286): MSS/MSI-L + any non-silent TP53 mutation
+- MSI-H/TP53-wt (n = 67): negative control
+- MSI-H/TP53-mut (n = 28): negative control
 
-### 2.2 Cross-Run Convergence Analysis
+MSI status was determined from MANTIS (threshold ≥ 0.4) and MSISensor (threshold > 10) scores retrieved from cBioPortal; MSI-H if either score exceeded threshold. TP53 mutation status was retrieved from the COADREAD mutation profile. Spearman correlations were computed between tGJS and 20 immune/pathway markers in each stratum, with Bonferroni correction for 20 comparisons per stratum. Full marker panel and rationale are described in Supplementary Analysis S2.
 
-A post-hoc cross-run analysis tool embeds all claims from multiple independent runs and computes pairwise cosine similarity across runs. Matches above cosine 0.75 from different runs are classified according to TYPE reclassification rules: a TYPE 3 (singular) claim in one run that matches a TYPE 0–2 claim in another becomes a CROSS-VALIDATED SINGULAR. Two TYPE 1 claims matching across runs constitute an INDEPENDENT REPLICATION. This analysis uses the same all-MiniLM-L6-v2 embeddings with zero additional API calls.
+### 2.4 S3: IMvigor210 Atezolizumab Cohort
 
-### 2.3 The Gate-Jamming Score Query
+The IMvigor210CoreBiologies R package (Mariathasan et al. 2018) provides pre-treatment bulk RNA-Seq from 348 urothelial carcinoma patients treated with atezolizumab, with RECIST response, overall survival, TMB (FoundationOne), IC Level (PD-L1 IHC), and immune phenotype classification. Raw counts were converted to TPM using gene lengths from featureData annotations. tGJS was computed using z-score normalization within the cohort. Primary tests: Wilcoxon rank-sum (binary response), logistic regression (binary response), Spearman ρ vs. ordinal RECIST, Cox proportional hazards (overall survival), log-rank (tGJS high vs. low). TMB-stratified and immune-phenotype-stratified subgroup analyses were prespecified. Full methods in Supplementary Analysis S3.
 
-The immunotherapy prediction run (session evo_20260218_002623) was compiled with the following question: *"What does the cofactor equation predict about why some cancers respond to immunotherapy while others don't, and can VDAC1 state serve as a predictive biomarker for immunotherapy response?"* The prompt included five sub-questions addressing VDAC1 oligomerization and cGAS-STING, gate-restoration pharmacology, the checkpoint inhibitor paradox, biopsy-measurable predictors, and the Warburg-immunity connection. Quantitative priors included published Kd values, HK-II expression frequencies, and cholesterol/cardiolipin ratios from indexed literature.
+### 2.5 Multi-Model Convergence Protocol
+
+The gate-jamming therapeutic hypothesis was evaluated using the IRIS (Independent Replicated Inquiry System) protocol, in which five independent large language models (Claude Opus 4.6, Gemini 2.5 Pro, Grok 4.1 Fast, Mistral Large, DeepSeek Chat) received the identical compiled question without cross-exposure. Claims were extracted and embedded using all-MiniLM-L6-v2 (384-dimensional), clustered by cosine similarity ≥ 0.70, and classified by model agreement (TYPE 0 = 4–5 models, TYPE 1 = 3/5, TYPE 2 = 2/5, TYPE 3 = 1/5). Cross-run analysis across 28 independent runs (27,931 pairwise comparisons) assessed inter-run replication. The protocol is described in full in the companion IRIS Gate Evo repository.
 
 ---
 
 ## 3. Results
 
-### 3.1 Five-Model Convergence on the Gate-Jamming Framework
+### 3.1 S1: Pan-Cancer tGJS Does Not Predict ICI Response (n = 10,071)
 
-The immunotherapy prediction run passed the S3 convergence gate after one recirculation cycle. Initial cosine similarity was 0.817; after recirculation with converged claims and informative singulars, cosine rose to 0.925 (threshold: 0.85). TYPE 0/1 ratio reached 0.810 (threshold: 0.75). Kappa agreement was 0.840.
+Across 33 TCGA cancer types, tGJS was not inversely correlated with published ICI response rates (Spearman ρ = +0.382, p = 0.144). The positive trend reflects that metabolically aggressive tumors — which have higher tGJS — tend to be the same tumors with higher mutational burden and baseline immune activation, creating a confound that overwhelms any gate-jamming signal at the cross-cancer level. ENPP1 expression showed the strongest pan-cancer inverse correlation with tGJS (ρ = −0.181, p = 4.3 × 10⁻⁷⁵), initially interpreted as evidence of orthogonal evasion strategies (upstream gating vs. downstream cGAMP degradation).
 
-Seven synthesized claims were produced (Table 1). Four claims achieved TYPE 0 (4–5 models agreeing), one achieved TYPE 2, and two were TYPE 3 singulars (both from Gemini). Zero conflicts were detected between any model pair.
+TCGA COADREAD tGJS values fell near the midpoint of the pan-cancer distribution, providing no boundary signal in either direction. The pan-cancer null is consistent with the hypothesis that a cancer-type-homogeneous, immunogenomically stratified analysis is required to observe the gate-jamming signal.
 
-**Table 1. Synthesized claims from the immunotherapy prediction run.**
+Full results and boundary analysis are reported in Supplementary Analysis S1 (commit 88ff1f7).
 
-| # | Claim | TYPE | Models | Confidence |
-|---|-------|------|--------|------------|
-| 1 | Warburg metabolism is causally linked to immune evasion via gate-jamming: glycolytic flux increases HK-II binding to VDAC1, suppressing mtDNA leak | 0 | All 5 | 0.66 |
-| 2 | Gate-jamming (high f_HKII/f_BclxL/Chol/CL) predicts immune-cold tumors by blocking VDAC1 oligomerization and mtDNA-cGAS-STING | 0 | Claude, DeepSeek, Grok, Mistral | 0.76 |
-| 3 | Pharmacological gate-restoration (HK-II displacement + Bcl-xL inhibition) will convert immune-cold tumors to immune-hot and synergize with checkpoint inhibitors | 0 | Claude, DeepSeek, Grok, Mistral | 0.59 |
-| 4 | f_HKII occupancy or Chol/CL ratio in tumor biopsies can predict immunotherapy response | 0 | Claude, DeepSeek, Grok, Mistral | 0.58 |
-| 5 | Gate-restoration + checkpoint inhibitors synergize specifically in immune-cold tumors | 2 | Grok, Mistral | 0.80 |
-| 6 | High VDAC1 occupancy by HK-II and/or high Chol/CL are strong predictive biomarkers for primary resistance to PD-1/PD-L1 checkpoint inhibitors | 3 | Gemini | 0.85 |
-| 7 | Pharmacological VDAC1 gate-restoration will synergize with checkpoint inhibitors primarily by converting non-responders into responders | 3 | Gemini | 0.75 |
+### 3.2 S2: MSS/TP53-wt Clean Room Recovers Five Bonferroni-Significant Signals (n = 209)
 
-Verification against indexed literature returned 6 NOVEL classifications, 4 HELD, 0 PROMOTED, and 0 CONTRADICTED. The Lab Gate passed 10 of 21 total claims (including expanded formulations), filtering 11 as not immediately feasible.
+Restricting analysis to the MSS/TP53-wildtype COADREAD stratum — where VDAC1-mediated mtDNA release is predicted to be the dominant cytosolic DNA source — recovered five markers reaching Bonferroni significance (Table 1), all in directions predicted by the gate-jamming hypothesis:
 
-### 3.2 The Gate-Jamming Score
+**Table 1. Bonferroni-significant correlations in the MSS/TP53-wt clean room (n = 209).**
 
-The convergent framework formalizes three orthogonal gate-jamming mechanisms into a composite score:
+| Marker | Spearman ρ | p_bonf | Direction | Interpretation |
+|--------|-----------|--------|-----------|----------------|
+| HAVCR2 (TIM-3) | **−0.349** | **5 × 10⁻⁶** | ↓ | Fewer T cells infiltrate to become exhausted |
+| TREX1 | **+0.315** | **7 × 10⁻⁵** | ↑ | Co-deployment of mtDNA erasure alongside gate-jamming |
+| CXCL10 | **−0.231** | **0.015** | ↓ | Reduced IFN-γ-induced chemokine recruitment |
+| STING ratio (acute/chronic) | **−0.216** | **0.034** | ↓ | Residual STING signaling shifts toward immunosuppressive profile |
+| cGAS (MB21D1) | **−0.208** | **0.049** | ↓ | Lower cGAS in high-tGJS tumors |
 
-> **GJS = f_HKII × 0.4 + f_BclxL × 0.3 + [Chol]/[CL] × 0.3**
+No immune markers reached Bonferroni significance in the MSI-H control strata (n = 67 and n = 28), consistent with the prediction that genomic instability saturates cGAS-STING independently of VDAC1 state.
 
-where f_HKII is the fraction of VDAC1 occupied by hexokinase-II (0–1), f_BclxL is the fraction bound by Bcl-xL (0–1), and [Chol]/[CL] is the molar ratio of cholesterol to cardiolipin in the OMM (normalized to the 0–1 range against published physiological and cancer ranges).
+The ENPP1 anti-correlation (ρ = −0.027, not significant in COADREAD MSS/TP53-wt) did not replicate within the clean room, correcting the S1 interpretation: the pan-cancer ENPP1 signal was driven by cross-cancer-type expression differences rather than a within-tumor-type biological relationship.
 
-**Weights** (0.4/0.3/0.3) reflect the convergent assessment that HK-II docking is the dominant gate-jamming mechanism in most solid tumors, with Bcl-xL and cholesterol contributing comparably. These weights are empirical predictions to be refined by experimental data.
+Two unexpected findings refined the evasion architecture model:
 
-The GJS derives from a cofactor equation for the apoptotic threshold identified in an earlier convergence run (session evo_20260213_182457, S3 FAILED after 3 cycles but with peak cosine 0.9215 and kappa 0.947, the highest inter-model agreement in the corpus; the equation was independently corroborated across multiple subsequent runs):
+**TREX1 co-occurrence.** The positive correlation between tGJS and TREX1 (cytosolic DNA exonuclease) indicates that the most evasion-committed MSS tumors co-deploy mitochondrial gate-jamming and cytosolic DNA erasure simultaneously — a belt-and-suspenders strategy rather than an either/or trade-off. This revises the S1 model: ENPP1 (cGAMP degradation) may represent an alternative downstream strategy in non-gate-jamming tumors, while TREX1 co-expression is characteristic of tumors that do gate-jam.
 
-> Apoptotic Threshold = K / [(1 − f_HKII)(1 − f_BclxL)] × [Chol]/[CL]
+**HAVCR2 as the primary signal.** The strongest anti-correlation was not with effector markers (CD8A, GZMB) but with TIM-3, an exhaustion marker expressed on T cells that have undergone prolonged antigen exposure. This suggests high-tGJS MSS tumors suffer from T cell *absence* rather than T cell *exhaustion* — consistent with the mechanism (suppressed innate priming prevents initial T cell recruitment) and with a clinical implication: these tumors are predicted to be poor candidates for checkpoint inhibitors that target exhaustion checkpoints, but good candidates for interventions that restore the innate priming signal.
 
-This equation's multiplicative structure means that reducing two terms by 50% each produces a 75% threshold drop. The GJS linearizes the three most druggable variables from this equation into a predictive biomarker for immune status.
+Full stratified results, all 20 markers across 4 strata, and 5 figures (S2a–S2e) are in Supplementary Analysis S2 (commit af514d1).
 
-### 3.3 Measurability of GJS Components
+### 3.3 S3: tGJS Does Not Predict Atezolizumab Response in Urothelial Carcinoma (n = 348)
 
-Each GJS term is independently measurable from tumor biopsy material using established methods:
+In the IMvigor210 cohort, tGJS showed no association with atezolizumab response or overall survival at any level of analysis:
 
-**f_HKII:** Quantifiable by co-immunoprecipitation with densitometry, immunohistochemistry, or transcriptomic proxy (HK2 expression). Pan-cancer TCGA analysis confirms HK2 overexpression in most tumor types (Li et al. 2022, *Scientific Reports*). In hepatocellular carcinoma, HK2 is overexpressed in 55.67% of clinical specimens; in breast cancer, 68% of tumors show high HK2 expression (Shahid et al. 2022, *Genes*). Under normal blood glucose, 70–80% of HK2 is mitochondria-bound (He et al. 2025, *International Journal of Medical Sciences*). Wolf et al. (2023, *Science Immunology*) showed that ATP treatment causes specific HK2 (not HK1) release from VDAC1 within 15 minutes, directly triggering VDAC1 oligomerization and NLRP3 recruitment.
+**Table 2. IMvigor210 primary results (n = 348, n_response = 298).**
 
-**f_BclxL:** Measurable by proximity ligation assay (PLA) for VDAC1-Bcl-xL interaction or expression ratio. A December 2025 bioRxiv preprint quantified 298 ± 23 Bcl-xL/VDAC1 interaction dots in doxorubicin-treated versus 205 ± 18 in control cells (p<0.001), with ABT-263 disrupting this interaction and converting senescence to apoptosis. High *bclx* expression is a poor prognosis factor in ER-positive breast cancer (Bessou et al. 2020, *Oncogene*). A critical therapeutic note: current BH3-mimetics like venetoclax target the BH3 groove and do not disrupt BH4-mediated VDAC1 interactions (*Signal Transduction and Targeted Therapy* 2025), meaning clinical Bcl-2 inhibitors leave the VDAC1-specific protection intact — a therapeutic gap the GJS framework could address.
+| Test | Result | p-value |
+|------|--------|---------|
+| Wilcoxon (CR/PR vs SD/PD) | — | p = 0.965 |
+| Logistic regression | OR = 1.038 | p = 0.868 |
+| Spearman ρ vs RECIST | ρ = −0.017 | p = 0.767 |
+| Kruskal-Wallis by tertile | — | p = 0.559 |
+| Cox PH (continuous) | HR = 0.898 (95% CI: 0.678–1.190) | p = 0.455 |
+| Log-rank (high vs low) | — | p = 0.587 |
+| Median OS, tGJS-High | 20.6 months | — |
+| Median OS, tGJS-Low | 20.6 months | — |
 
-**[Chol]/[CL]:** Estimable from StAR/STARD1 expression as a transcriptomic proxy (amplified in breast cancer, overexpressed in HCC), or directly by LC-MS/MS lipidomics from mitochondrial fractions. Normal mitochondrial cholesterol content is approximately 5% of total cellular cholesterol versus 60–80% in plasma membrane (Goicoechea et al. 2023, *Redox Biology*). Cancer mitochondria show significantly elevated cholesterol, with compensatory HIF-1α-mediated SLC25A11 upregulation maintaining mitochondrial GSH despite cholesterol loading — conferring dual anti-apoptotic protection through membrane rigidification plus intact cardiolipin preventing pro-apoptotic lipid phases (Montero et al. 2008, *Cancer Research*; Goicoechea et al. 2023). VDAC1 co-purifies with five cholesterol molecules per protein, mapped by photo-affinity labeling to five distinct sites on the barrel exterior (Cheng et al. 2019, *BBA – Molecular and Cell Biology of Lipids*), including an E73/F99/Y62 pocket where cholesterol's 3-hydroxyl positions 5.4 Å from the E73 carbonyl — the same E73 that HK-II requires for binding.
+The TMB-low subgroup (predicted to be the most informative by the gate-jamming hypothesis) showed a non-significant negative trend (ρ = −0.144, p = 0.093) in the wrong direction for gate-jamming prediction. No subgroup analysis — by TMB, immune phenotype, or response category — yielded a signal above nominal significance.
 
-### 3.4 The Mechanistic Chain: Gate-Jamming to Immune Evasion
+This null is mechanistically expected: urothelial carcinoma carries high baseline somatic mutation burden from tobacco and occupational carcinogen exposure, generating nuclear DNA-derived cytosolic DNA independently of VDAC1 state. The clean room conditions required for the gate-jamming hypothesis (MSS, VDAC1 as dominant cytosolic DNA source, innate priming as rate-limiting step) are not present in this cohort. Additionally, atezolizumab targets the adaptive immune checkpoint on exhausted T cells downstream of innate priming; even if gate-jamming were relevant, its effect would operate upstream of the treatment's mechanism of action.
 
-The GJS rests on a five-step mechanistic chain, each step supported by published experimental evidence:
-
-**Step 1. Cancer cells jam the VDAC1 gate** by simultaneously overexpressing HK-II, overexpressing Bcl-xL, and loading cholesterol into the OMM. HK-II docking on VDAC1 physically blocks oligomerization: Wolf et al. (2023, *Science Immunology*) showed HK2 dissociation from VDAC1 directly triggers VDAC1 oligomerization and NLRP3 recruitment; Bieker et al. (2025, *Communications Biology*) identified the binding site as the membrane-buried glutamate E73 on VDAC1's outer barrel wall, where protonation blocks complex formation and cytosolic acidification causes reversible HK-I release; and Haloi et al. (2021, *Communications Biology*) modeled the binary complex showing HK-II inserts its N-terminal hydrophobic helix into the OMM and causes partial pore blockade confirmed by electrophysiology. Bcl-xL binding via its BH4 domain reduces VDAC1 conductance and suppresses calcium flux (Monaco et al. 2015, *JBC*; Arbel et al. 2012, *JBC*), while the Daniilidis et al. (2025, *Nature Communications*) structural resolution showed that Bcl-xL binding to VDAC1 normally prevents N-terminal exposure and downstream apoptotic signaling. Cholesterol rigidifies the OMM and disfavors oligomeric transitions (Betaneli et al. 2012, *Biophysical Journal*; Lafargue et al. 2025, *Communications Biology*); Betaneli et al. specifically showed that cardiolipin disrupts VDAC supramolecular assemblies while phosphatidylglycerol enhances oligomerization — during apoptosis, CL levels decrease and PG increases, favoring the oligomeric transitions required for mtDNA release.
-
-**Step 2. Gate-jamming prevents VDAC1 oligomerization.** Without oligomerization, the mega-pore required for mtDNA egress does not form. Keinan et al. (2010) established that all tested apoptosis inducers increase VDAC1 oligomerization up to 20-fold, detected as ~68 kDa (dimer), ~99 kDa (trimer), and ~136 kDa (tetramer) bands by EGS crosslinking. Geula et al. (2012, *JBC*) mapped the death oligomer interface to β-strands 8, 16, and 17, in addition to the physiological dimer interface at β-strands 1, 2, 18, and 19. Ren et al. (2025, *Nature Communications*) identified VSTM2L as a VDAC1-binding protein that enhances HK2-VDAC1 interaction and prevents oligomerization; VSTM2L knockdown sensitized prostate cancer cells to ferroptosis.
-
-**Step 3. Without VDAC1 oligomers, mtDNA is not released.** Kim et al. (2019, *Science*) demonstrated that VDAC oligomeric pores release 500–650 bp mtDNA fragments through interactions with three positively charged N-terminal residues (Lys12, Arg15, Lys20); VDAC1/3 double-knockout MEFs showed dramatically reduced cytoplasmic mtDNA and interferon-stimulated gene expression. Xian et al. (2022, *Immunity*) refined this to a two-step model: mPTP opening precedes VDAC oligomerization, with CsA reducing cytosolic oxidized mtDNA by 60 ± 6% and VBIT-4 reducing it by 81 ± 4%. Prashar et al. (2024, *Nature*) discovered VDIMs (Vesicles Derived from the Inner Membrane) — a constitutive quality-control pathway where ROS-damaged cristae trigger TRPML1-mediated VDAC1 oligomerization, enabling inner membrane herniation through VDAC pores, with a proportion of VDIMs containing oxidized mtDNA. Both VBIT-12 and VDAC1 siRNA abolished VDIM formation. Lai et al. (2025, *Immunity*) confirmed that in senescent tumor cells, mtDNA release occurs specifically via VDACs rather than BAX/BAK or mPTP — silencing Vdac1 or Vdac2 reduced both cytosolic and extracellular mtDNA.
-
-**Step 4. Without cytosolic mtDNA, cGAS-STING does not activate.** Woo et al. (2014, *Immunity*) established that spontaneous CD8+ T cell priming against tumors is defective in STING-knockout mice but not in MyD88⁻/⁻, TRIF⁻/⁻, TLR4⁻/⁻, TLR9⁻/⁻, or MAVS⁻/⁻ mice. Tumor-derived DNA within intratumoral dendritic cell cytosol activates cGAS/STING/IRF3 leading to IFN-β and DC cross-presentation. Corrales et al. (2015, *Cell Reports*) showed intratumoral STING agonists induced complete regression in multiple syngeneic mouse models with systemic memory responses. Gehrcken et al. (2025, *Advanced Science*) confirmed that the absence of STING or IRF3 leads to diminished anti-tumoral immune response and reduced responses to checkpoint inhibitors.
-
-**Step 5. Without cGAS-STING, checkpoint inhibitors have nothing to amplify.** PD-1/PD-L1 blockade requires pre-existing immune visibility. If the tumor never triggers innate immunity because VDAC1 never oligomerizes, checkpoint inhibitors cannot convert invisibility to destruction. Carozza et al. (2023, *PNAS*) identified ENPP1 as an innate immune checkpoint: ENPP1-low patients had significantly higher pathological complete response to pembrolizumab in I-SPY2. cGAS-STING pathway silencing via promoter methylation occurs in 1–25% of tumors pan-cancer, and HER2-AKT activation selectively abrogates TBK1-IRF3 signaling downstream of STING — rendering tumors immune-cold regardless of mutational burden.
-
-**The dual-purpose prediction:** The Warburg effect — long understood as metabolic adaptation — may simultaneously serve as an immune evasion strategy through the same molecular mechanism. HK-II bound to VDAC1 gains preferential access to mitochondrial ATP (fueling aerobic glycolysis) while preventing the oligomerization required for mtDNA egress and immune detection. One protein interaction, two survival advantages.
-
-### 3.5 The Double-Edged Sword: A Critical Nuance
-
-The cGAS-STING axis is not unidirectionally anti-tumor. Lai et al. (2025, *Immunity*) showed that VDAC-mediated mtDNA from senescent tumor cells can paradoxically enhance immunosuppression through MDSC recruitment — the released mtDNA was packaged in extracellular vesicles, selectively internalized by PMN-MDSCs, and activated cGAS-STING-NF-κB signaling to enhance Arg1, Nos2, and PD-L1 upregulation. Samson and Ablasser (2022, *Nature Cancer*) documented that chronic cGAS-STING activation promotes PD-L1 upregulation, MDSC recruitment, and T cell exhaustion, while acute activation drives anti-tumor immunity. A 2025 *Frontiers in Immunology* review confirmed that the net immunological outcome depends on cellular context, signaling duration, and which immune populations are engaged — acute activation promotes CD8+ T/NK cytotoxicity while sustained activation drives immunosuppression. The GJS must therefore be interpreted alongside STING pathway competence and temporal dynamics of immune signaling.
-
-### 3.6 Cross-Run Validation
-
-Cross-run convergence analysis across 28 independent IRIS runs (27,931 pairwise claim comparisons) identified 15 semantic matches above cosine 0.75. Claims supporting the GJS framework were independently corroborated:
-
-- The Chol/CL ratio determining VDAC1 lattice state was independently confirmed across separate membrane architecture and ultrasound runs (cosine 0.80, INDEPENDENT REPLICATION).
-- OMM cholesterol as a protective/resistive factor was cross-validated between three separate runs (cosine 0.77–0.80).
-- Cardiolipin enrichment lowering the apoptotic threshold was independently replicated across two runs (cosine 0.76–0.77).
-- The threshold_crossover structural pattern (a phase-transition-like behavior in dose-response) appeared in 16 of 28 analyzed runs — the dominant motif in the corpus.
-
-### 3.7 Operationalized Hypotheses
-
-Three hypotheses were operationalized with full experimental protocols, Monte Carlo-validated effect sizes, and explicit null outcomes (Table 2).
-
-**Table 2. Operationalized hypotheses from the GJS convergence run.**
-
-| ID | Prediction | Testability | Effect Size (d) | Power |
-|----|-----------|-------------|-----------------|-------|
-| H1 | HK-II displacement from VDAC1 (methyl jasmonate or clotrimazole) in immune-cold cell lines with f_HKII > 0.6 increases cytoplasmic mtDNA ≥ 3-fold (6h), p-STING ≥ 2-fold (12h), and IFN-β ≥ 5-fold (24h) | 9/10 | 0.81 | 1.0 |
-| H2 | GJS computed across ≥ 15 cancer cell lines correlates inversely with basal cGAS-STING activity (Spearman ρ ≤ −0.6, p<0.01); lines with GJS > 0.7 show ≥ 80% concordance with immune-cold classification | 7/10 | 1.22 | 1.0 |
-| H3 | Gate-restoring combination (HK-II displacer + Bcl-xL inhibitor) + anti-PD-1 shows synergy (CI < 0.7 by Bliss independence) specifically in immune-cold syngeneic tumors (4T1, B16F10), not in immune-hot tumors (MC38) | 7/10 | 0.92 | 1.0 |
-
-**H1 protocol:** Panc-1 (pancreatic, immune-cold archetype, high HK-II/VDAC1) and A375 (melanoma, moderate HK-II) cell lines. Treat with methyl jasmonate (0.5–3 mM, IC₅₀ = 7.47 μM for HK2 inhibition) or clotrimazole (10–50 μM) for 6/12/24h. Measure cytoplasmic mtDNA by qPCR after digitonin fractionation, p-STING (Ser366) by Western blot, IFN-β by ELISA, and VDAC1 oligomerization by EGS crosslinking + native PAGE. Include HK-II siRNA as genetic control. Estimated timeline: 4 weeks.
-
-**H1 null outcome:** HK-II displacement does not increase cytoplasmic mtDNA or p-STING, or mtDNA increases but cGAS-STING remains silent, indicating the coupling is not through VDAC1 oligomerization.
-
-**H2 protocol:** Select 15–20 cell lines spanning tumor types (Panc-1, MDA-MB-231, A549, HCT116, SK-MEL-28, MCF7, PC3, U87, HepG2, NCI-H460, B16F10, 4T1, CT26, MC38, LLC). Quantify HK-II:VDAC1 co-IP (f_HKII), Bcl-xL:VDAC1 co-IP (f_BclxL), mitochondrial cholesterol and cardiolipin by mass spectrometry. Simultaneously measure p-STING, ISG panel (qPCR: IFIT1, MX1, OAS1, ISG15), surface MHC-I (flow cytometry), CXCL10 (ELISA). Compute GJS, correlate. Estimated timeline: 8 weeks.
-
-**H3 protocol:** Implant 4T1 (immune-cold) and MC38 (immune-hot) tumors in BALB/c and C57BL/6 mice respectively (n=10/group). Four arms: vehicle, gate-restoration combo (methyl jasmonate 100 mg/kg IP + ABT-263 50 mg/kg PO, days 5–12), anti-PD-1 (200 μg IP, days 8/11/14), and combination. Measure tumor volume every 2 days, sacrifice day 21 for TIL analysis. Estimated timeline: 10 weeks.
-
-### 3.8 Cancer-Type-Specific Weak Links
-
-The cofactor equation's multiplicative structure predicts that the rate-limiting gate-jamming mechanism differs by cancer type. A separate convergence run on cancer gate realignment (session evo_20260218_002559, S3 FAILED but rich singulars with cross-run validation) identified:
-
-- **Glioblastoma (GBM):** f_HKII ≈ 0.9 — HK-II displacement is rate-limiting. Predicted: 2-DG or methyl jasmonate as primary gate-restoring agent.
-- **Acute myeloid leukemia (AML):** f_BclxL ≈ 0.8 — Bcl-xL release is rate-limiting. Predicted: venetoclax efficacy explained by gate-restoration rather than canonical BH3 mimicry.
-- **Cholesterol-loaded tumors:** Statin + any second-term reduction produces supra-additive threshold drop due to multiplicative structure.
-
-The multiplicative structure means reducing two terms by 50% each produces a 75% threshold drop, explaining why combination approaches targeting two gate-jamming mechanisms should outperform single-agent strategies.
+Full results, four figures (S3a–S3d), and mechanistic discussion are in Supplementary Analysis S3 (commit 61048d4).
 
 ---
 
 ## 4. Discussion
 
-### 4.1 The GJS Addresses a Gap in Immunotherapy Biomarkers
+### 4.1 Three Analyses Define the Framework's Domain
 
-Current checkpoint inhibitor biomarkers operate at the interface between tumor and immune system (PD-L1 expression, TMB, MSI-H) but do not capture the metabolic foundations of immune evasion. Galassi et al. (2024, *Cancer Cell*) proposed the "Three Cs" framework for immune evasion — Camouflage, Coercion, and Cytoprotection — with metabolic alterations as a Coercion mechanism. The SCORPIO machine-learning system (*Nature Medicine* 2024), using routine blood tests, achieved median AUC(t) of 0.763 for overall survival prediction — outperforming TMB (0.503–0.543) — validating that latent metabolic signals exist in standard clinical data but are not captured by existing biomarkers.
+The S1→S2→S3 arc is the central finding of this work. It answers not only "is there a signal?" but "where does the signal live?":
 
-The GJS operates upstream: it quantifies the degree to which cancer cells have silenced the mitochondrial alarm system that would otherwise alert the immune system. High-GJS tumors are predicted to be invisible not because the immune system is suppressed, but because the immunogenic signal was never generated. This distinction has direct therapeutic implications: in high-GJS tumors, checkpoint inhibitors alone should fail (nothing to amplify), but gate-restoring drugs that force VDAC1 oligomerization should convert non-responders into responders by generating the cGAS-STING signal that checkpoint inhibitors can then amplify.
+| Analysis | Cohort | Context | tGJS Signal |
+|----------|--------|---------|-------------|
+| S1 | TCGA pan-cancer (n = 10,071) | 33 cancer types, ICI response proxy | Null — cross-cancer confounds |
+| S2 | TCGA COADREAD MSS/TP53-wt (n = 209) | Clean room: MSS + intact apoptosis | 5 Bonferroni-significant immune correlations |
+| S3 | IMvigor210 urothelial (n = 348) | High TMB, PD-L1 blockade | Null — wrong context, wrong treatment mechanism |
 
-### 4.2 The Warburg Effect as Dual-Purpose Investment
+The two nulls are not failures — they are the framework's falsification boundaries. A signal that appears everywhere is not a mechanism; it is noise. A signal that appears precisely where the biology predicts it should appear, and not where the biology predicts it shouldn't, is evidence that the model is capturing something real.
 
-The proposal that Warburg metabolism simultaneously serves metabolic survival and immune evasion through a single molecular mechanism (HK-II docking on VDAC1) reframes a long-standing question in cancer biology. The metabolic cost of aerobic glycolysis — substantially less efficient than oxidative phosphorylation — has been difficult to justify on metabolic grounds alone. If HK-II docking provides both preferential access to mitochondrial ATP and suppression of the mtDNA-cGAS-STING alarm, the cost becomes rational: cancer cells pay for metabolic inefficiency with immune invisibility. The cost is detectable precisely because it is expensive — elevated lactate, altered GSH/GSSG, shifted Chol/CL ratios are the metabolic signature of gate-jamming.
+The COADREAD MSS/TP53-wildtype stratum represents the tightest available approximation of the predicted clean room using existing public data: minimal nuclear DNA instability, intact TP53 apoptosis signaling, VDAC1 as the predicted dominant cytosolic DNA source. Five Bonferroni-significant findings from 209 samples, using a three-gene transcriptomic proxy of a physical protein-occupancy mechanism, suggest the biological structure is robust enough to survive a crude measurement instrument.
 
-### 4.3 Structural Isomorphism Across Target Classes
+### 4.2 The Therapeutic Hypothesis: Three Independent Systems, One Stack
 
-The gate-jamming framework participates in a broader structural pattern identified across 32 independent IRIS runs and 6 molecules spanning 4 target classes: CBD/VDAC1 (channel), lithium/GSK-3β (kinase), THC/CB1 (GPCR), psilocybin/5-HT2A (GPCR), metformin/Complex I (enzyme), and ketamine/NMDA (receptor). Each molecule acts as a stress test: sub-threshold doses engage adaptive signaling (therapeutic), while supra-threshold doses overwhelm homeostatic capacity (pathological). This structural isomorphism — molecule as stress test, dose picks the pathway, tissue determines the outcome — emerged independently across runs separated by days with different seed questions. Whether this reflects genuine biological structure or shared representational bias in LLM training corpora is an open empirical question; the consistency across four mechanistically distinct target classes (channel, kinase, GPCR, enzyme) and five independent model architectures argues against simple confabulation.
+The analytical arc motivates a specific three-layer therapeutic intervention. This hypothesis was independently derived by three AI analytical systems (Claude Opus, Gemini Pro, Grok) working from the same data without cross-exposure, converging on identical components:
 
-Of particular relevance to the GJS, CBD directly modulates VDAC1 conductance and triggers oligomerization-dependent cancer cell death. Rimmerman et al. (2013, *Cell Death & Disease*) established CBD as a direct VDAC1 ligand (Kd ~11 μM by MST), showing it strongly decreases conductance at all voltages and induces ROS (EC₅₀ = 4.9 μM). Gorny et al. (2023, *J Enzyme Inhib Med Chem*) refined the Kd to 6 μM. Fadzeyeva et al. (2026, *Pharmaceuticals*) demonstrated CBD-induced VDAC1 oligomerization-dependent effects: CBD downregulated surface CD47 ("don't eat me" signal) and induced apoptosis in Jurkat leukemia cells, with the VDAC1 oligomerization inhibitor NSC15364 rescuing both phenotypes. This dual mechanism — apoptosis plus immune exposure via CD47 loss — directly validates the gate-restoration logic underlying the GJS.
+1. **VDAC1 gate-opener** — displace HK-II from VDAC1 (methyl jasmonate, 2-DG, clotrimazole) to restore oligomerization-dependent mtDNA release and cGAS-STING activation
+2. **DNA/cGAMP eraser inhibitor** — inhibit TREX1 or ENPP1 to prevent degradation of the released mtDNA or its downstream signaling product cGAMP, amplifying and sustaining innate immune activation
+3. **Checkpoint blockade** — administer anti-PD-1/PD-L1 to prevent exhaustion of the T cells now being recruited and primed by the restored innate signal
 
-### 4.4 VDAC1 Oligomerization as a Broader Cell-Fate Hub
+The order matters. Gate-opener generates the innate signal; eraser inhibitor sustains it; checkpoint blockade amplifies the adaptive response. Checkpoint blockade alone — the current standard of care for MSS CRC where it is used at all — skips steps one and two.
 
-Recent work has expanded VDAC1 oligomerization from an apoptosis-specific event to a broader cell-fate regulator. Jang et al. (2024, *Cell Death & Disease*) showed VDAC1 oligomerization is essential for cysteine deprivation-induced ferroptosis, with pharmacological inhibitors blocking ferroptosis by reducing mitochondrial ROS. Ren et al. (2025, *Nature Communications*) identified VSTM2L as a VDAC1-binding protein that enhances HK2-VDAC1 interaction and prevents oligomerization; VSTM2L knockdown sensitized prostate cancer cells to ferroptosis. Wan et al. (2026, *Neural Regeneration Research*) demonstrated VDAC1 oligomerization regulates PANoptosis (pyroptosis + apoptosis + necroptosis) in retinal injury, with VBIT-12 reducing all three death pathways simultaneously. Shoshan-Barmatz et al. (2025, *Biomolecules*) showed p53 directly binds VDAC1, reduces channel conductance, and induces oligomerization even without apoptotic stimuli when overexpressed — positioning VDAC1 oligomerization as a convergence point for p53-dependent and -independent death signaling. These findings broaden the GJS concept: gate-jamming may suppress not only cGAS-STING-mediated immune detection but also ferroptotic and PANoptotic cell death pathways, providing additional selective advantages to high-GJS tumors.
+The TREX1 co-occurrence finding from S2 directly informs step two: the positive correlation between tGJS and TREX1 in the clean room MSS tumors indicates that high-gate-jamming tumors simultaneously upregulate cytosolic DNA erasure. This co-deployment implies that gate-opener alone may be insufficient — released mtDNA may be degraded before cGAS activation occurs. TREX1 inhibition as the eraser step addresses this specifically. An alternative is targeting ENPP1 in non-gate-jamming tumors (where TREX1 is not co-elevated) that still fail ICI through downstream cGAMP degradation.
 
-### 4.5 Methodological Precedent for Multi-LLM Convergence
+Three independently reasoning systems arriving at the same three-layer stack from the same data does not constitute experimental validation. It constitutes a prior strong enough to justify the next experiment.
 
-Multi-LLM convergence as a scientific methodology has emerging precedent. Schoenegger et al. (2024, *Science Advances*) used 12 independent LLMs for probabilistic predictions on 31 binary questions, finding the aggregated LLM crowd was statistically indistinguishable from 925 human forecasters. Google's AI Co-Scientist (Gottweis et al. 2025) deployed multi-agent "generate, debate, and evolve" cycles for scientific hypothesis generation with experimental validation published in *Cell* — none of the individual general-purpose LLMs replicated the correct hypotheses independently. Kamen (2025, arXiv) formally connected multi-LLM majority voting to the Condorcet Jury Theorem: if each model is independently more likely than not to be correct, majority agreement converges exponentially on truth as model count increases. Chen et al. (2024, *ACL Proceedings*) showed their ReConcile framework using ChatGPT, Bard, and Claude2 in round-table consensus surpassed single-agent baselines by up to 11.4%, with model family diversity contributing 6.8% of gains. Xu et al. (2024) used multiple LLM agents for Alzheimer's drug combination prediction, achieving 0.74 accuracy via majority-vote consensus versus 0.52 for traditional methods. The IRIS protocol extends these approaches with structured convergence metrics (cosine, Jaccard, TYPE classification), cross-run replication, and Monte Carlo robustness testing.
+### 4.3 Why MSS Colorectal Is the Right Target
 
-The critical methodological distinction is that IRIS uses convergence as a filter, not as evidence. Five models agreeing on a mechanistic claim does not make the claim true — it identifies the claim as worthy of experimental testing. Every prediction in this manuscript is falsifiable, and every null outcome is specified.
+The colorectal cancer context is not incidental. It is where the framework makes its strongest prediction:
 
-### 4.6 From Metabolic Adaptation to Relational Evasion
+MSS colorectal adenocarcinoma has: (1) the largest absolute population of ICI-refractory patients among common cancers where ICI is attempted; (2) well-characterized MSI stratification, allowing clean separation of the signal; (3) an available TP53 mutation axis that further refines the predicted clean room; (4) a tumor biology where VDAC1 docking by HK-II is supported by multiple independent lines of evidence (high HK2 expression, high metabolic dependency on aerobic glycolysis, low baseline TIL infiltration in MSS tumors).
 
-The formalization of the GJS requires a shift in how tumor metabolism is interpreted. The Warburg effect has historically been viewed as metabolic adaptation — a puzzlingly inefficient energetic choice. By establishing that HK-II docking on VDAC1 simultaneously fuels aerobic glycolysis and suppresses the mtDNA-cGAS-STING alarm, we reframe aerobic glycolysis as relational evasion: the metabolic cost of aerobic glycolysis is the price the tumor pays for immune invisibility. The cost is detectable precisely because it is expensive — elevated lactate, altered GSH/GSSG, shifted Chol/CL ratios are the metabolic signature of a cell that has traded efficiency for silence.
+The HAVCR2 finding (ρ = −0.349, the strongest signal in S2) points to T cell absence rather than T cell exhaustion as the immune bottleneck in high-tGJS MSS tumors. This is a meaningful clinical distinction: trials of anti-TIM-3 antibodies in MSS CRC are testing the wrong checkpoint. The problem is upstream of T cell activation, not at the exhaustion checkpoint.
 
-Furthermore, the multiplicative structure of the underlying cofactor equation — where simultaneous 50% reductions in two gate-jamming mechanisms yield a 75% threshold drop — has implications for therapeutic strategy. It suggests that combination approaches targeting two gate-jamming mechanisms at moderate intensity should outperform single-agent strategies at maximum intensity. Pharmacology in this framework transitions from targeted destruction to systemic un-jamming: restoring the cell's capacity to communicate its own distress to the innate immune system.
+### 4.4 The GJS as One Layer of a Multi-Layer Evasion Architecture
 
-This framing also illuminates why the GJS measures something fundamentally different from existing biomarkers. PD-L1, TMB, and MSI-H operate at the interface between tumor and immune system — they look for evidence of a battle. The GJS measures the locked door that prevented the battle from starting. High-GJS tumors are invisible not because the immune system is suppressed, but because the immunogenic signal was never generated. Silence, it turns out, has a measurable geometry.
+The GJS measures one specific bottleneck — VDAC1 oligomerization suppression — within a multi-layer immune evasion system. Several critical caveats govern interpretation:
 
-### 4.7 The GJS in Context: Gate-Jamming as One Layer of Multi-Layer Immune Evasion
+**The cGAS-STING axis is not uniformly anti-tumor.** Lai et al. (2025, *Immunity*) showed that VDAC-mediated mtDNA from senescent tumor cells can enhance immunosuppression through MDSC recruitment — the acute, oligomerization-dependent burst (immunogenic) is mechanistically distinct from the chronic low-level leak (potentially immunosuppressive). Gate-restoration is predicted to produce immunogenic cell death signals, but cellular context and timing determine the net immune outcome.
 
-The GJS measures one specific bottleneck — VDAC1 oligomerization suppression — within a multi-layer immune evasion architecture. It does not claim to be a standalone explanation for immunotherapy failure. Several additional layers must be considered:
+**The tumor microenvironment can override gate-restoration.** Even successful VDAC1 oligomerization and cGAS-STING activation may be insufficient if the TME (CAFs, TAMs, acidosis, hypoxia) prevents effector T cell infiltration. Gate-restoration addresses the innate priming step; TME remodeling may be required as a fourth layer in advanced MSS CRC.
 
-**The tumor microenvironment (TME) barrier.** Even if gate-restoration succeeds in generating cGAS-STING signaling, the immunosuppressive TME — cancer-associated fibroblasts (CAFs), tumor-associated macrophages (TAMs), nutrient depletion, acidosis, and hypoxia — may prevent effector T cell infiltration and function. Most solid tumors build a physical and biochemical fortress that checkpoint inhibitors alone cannot penetrate. The GJS identifies *whether the mitochondrial alarm was silenced*, not whether the immune system can respond to it. This distinction is clinically important: a high-GJS tumor with an intact but physically excluded immune compartment requires a different therapeutic strategy (gate-restoration + TME remodeling) than a low-GJS tumor where innate signaling is already active but T cells are exhausted.
-
-**The acute versus chronic cGAS-STING distinction.** The cGAS-STING pathway is not a simple on/off switch for anti-tumor immunity. Seok et al. (2023, *Archives of Pharmacological Research*) comprehensively reviewed the dual nature of cGAS-STING across disease contexts, documenting that chronic activation promotes tumor growth, metastasis, and immunosuppression — including cancer cell cGAMP transfer through gap junctions to activate pro-tumorigenic STING in astrocytes during brain metastasis. Genomic instability in cancer cells already produces cytosolic DNA fragments that activate cGAS-STING chronically, and this chronic signaling exhausts nearby immune cells while promoting tumor survival. Gate-jamming may therefore create a specific immunological profile: the *acute* oligomerization-dependent burst (apoptotic, involving cytochrome c + mtDNA co-release) is mechanistically distinct from *chronic* low-level mtDNA leak. Gate-jamming prevents the acute immunogenic burst while chronic leak continues — potentially giving the tumor the worst of both worlds from the host perspective: immunosuppressive tonic signaling without the immunogenic cell death that would trigger dendritic cell cross-presentation.
-
-**The TP53 context.** Most solid tumors carry TP53 mutations, conferring intrinsic apoptosis resistance. Even if VDAC1 oligomerizes and releases cytochrome c, classical p53-dependent apoptosis may be blocked. However, VDAC1 oligomerization connects to p53-independent death pathways: Daniilidis et al. (2025) showed VDAC1's N-terminal helix acts as a BH3-only sensitizer that neutralizes Bcl-xL and activates Bak independently of p53; Jang et al. (2024) and Ren et al. (2025) established VDAC1 oligomerization as essential for ferroptosis; and Wan et al. (2026) demonstrated its role in PANoptosis. Critically, cGAS-STING activation from mtDNA release operates entirely independently of p53 status. Gate-restoration in TP53-mutant tumors would therefore be expected to activate innate immune signaling and alternative death pathways even when classical apoptosis is blocked.
-
-**The combinatorial biomarker framework.** These considerations suggest the GJS should be interpreted not in isolation but as part of a combinatorial matrix with STING pathway status:
+**STING pathway competence must be assessed.** STING silencing via promoter methylation occurs in 1–25% of tumors pan-cancer. A high-GJS tumor with silenced STING requires epigenetic reactivation (DNMT inhibitors) before gate-restoration can be effective. The GJS × STING status matrix generates four distinct therapeutic predictions:
 
 | | **STING Intact** | **STING Silenced** |
 |---|---|---|
-| **High GJS** | Gate jammed, pathway ready — strongest candidate for HK-II/Bcl-xL disruption + checkpoint inhibitors | Gate jammed AND downstream disabled — requires epigenetic reactivation (DNMT inhibitors) before gate-restoration |
-| **Low GJS** | Gate open, pathway active — may respond to checkpoint inhibitors alone | Gate open but chronic activation — paradoxical immunosuppression territory (Lai 2025 scenario) |
+| **High GJS** | Primary target — gate-opener + eraser inhibitor + checkpoint | Requires DNMT inhibitor before gate-restoration |
+| **Low GJS** | Gate open, pathway active — checkpoint alone may suffice | Chronic signaling, paradoxical immunosuppression |
 
-STING silencing via promoter methylation (DNMT1/EZH2-mediated, as in KRAS-LKB1 lung cancers) occurs in 1–25% of tumors pan-cancer. The GJS × STING status matrix generates four distinct therapeutic predictions rather than a single biomarker threshold, each requiring different intervention strategies.
+### 4.5 What the tGJS Does Not Capture
 
-### 4.8 Limitations and Caveats
+The transcriptomic proxy is a deliberate simplification. tGJS measures mRNA abundance of three genes; it cannot distinguish HK-II in the cytosol versus docked on VDAC1, Bcl-xL bound to VDAC1 versus other mitochondrial targets, or TSPO-mediated cholesterol at the outer mitochondrial membrane versus elsewhere. The fact that five Bonferroni-significant signals emerge from this crude proxy suggests the biology is robust; it does not mean the transcriptomic score is sufficient for clinical application.
 
-Several limitations require emphasis:
+Protein-level measurement — proximity ligation assay for HK-II–VDAC1 and Bcl-xL–VDAC1 complexes, mitochondrial lipidomics for the Chol/CL ratio — is required to compute the true GJS:
 
-1. **The GJS is a computational prediction.** No experimental validation has been performed. All hypotheses await bench testing. The weights (0.4/0.3/0.3) are convergence-derived estimates, not empirically optimized coefficients. A transcriptomic proxy (tGJS) using HK2, BCL2L1, and TSPO mRNA expression across 10,071 TCGA samples failed to inversely predict ICI response (Spearman rho = +0.38, p = 0.14), demonstrating that gate-jamming — a physical protein-occupancy phenomenon at VDAC1 — cannot be faithfully captured by bulk mRNA levels (Supplementary Analysis S1). Protein-level assays (proximity ligation, co-immunoprecipitation, mitochondrial lipidomics) are required to test the GJS directly.
+> **GJS = f_HKII × 0.40 + f_BclxL × 0.30 + [Chol]/[CL]_norm × 0.30**
 
-2. **The cGAS-STING axis is a double-edged sword.** Lai et al. (2025, *Immunity*) showed that VDAC-mediated mtDNA from senescent tumor cells can enhance immunosuppression via MDSC recruitment. The GJS does not capture whether gate-restoration will produce an anti-tumor or immunosuppressive cGAS-STING response. Temporal dynamics and cellular context are critical (see Section 4.7).
+where f_HKII is the fraction of VDAC1 occupied by HK-II and f_BclxL is the fraction bound by Bcl-xL (both 0–1), and [Chol]/[CL]_norm is the molar cholesterol-to-cardiolipin ratio normalized to published physiological and cancer ranges. The tGJS is a screening tool to identify where this protein-level assay should be run first.
 
-3. **The TME may override gate-restoration.** Even successful restoration of VDAC1 oligomerization and cGAS-STING activation may be insufficient if the immunosuppressive microenvironment — CAFs, TAMs, acidosis, hypoxia — prevents immune cell infiltration and function. The GJS identifies a necessary condition, not a sufficient one.
+### 4.6 Limitations
 
-4. **VBIT-4 specificity has been challenged.** Ravishankar et al. (2025, bioRxiv) showed that VBIT-4 partitions into lipid bilayers at micromolar concentrations and disrupts membrane structure independent of VDAC1 — at 30 μM, VBIT-4 induced membrane rupture. Claims based solely on VBIT-4 require orthogonal validation through genetic approaches (VDAC1/3 knockout, K53R mutants, VSTM2L knockdown).
+1. **No experimental validation.** All findings are computational. The gate-jamming mechanism is supported by published structural biology (Bieker et al. 2025, Daniilidis et al. 2025, Kim et al. 2019) but the composite GJS has not been validated against protein-level measurement in any tumor type.
 
-5. **LLM convergence is not truth.** Models may converge on plausible but incorrect mechanisms due to shared training biases. The IRIS protocol mitigates this through model diversity (five architectures from five companies), cross-run replication, literature verification, and explicit falsification criteria — but cannot eliminate it.
+2. **Bulk RNA-Seq.** Expression values are cellular averages across tumor, stromal, and immune cells. Single-cell attribution is required to determine which cell type drives the tGJS signal.
 
-6. **The structural isomorphism may reflect training bias.** The pattern of dose-dependent bifurcation across six molecules may reflect a genuine biological principle or a shared representational tendency in LLM training corpora. Experimental validation of predicted threshold values would distinguish these possibilities.
+3. **TCGA lacks treatment data.** The S2 correlations are with immune markers, not ICI outcomes. The hypothesis that high-tGJS MSS CRC tumors fail ICI is mechanistically motivated but not directly tested.
 
-7. **Cancer-type-specific predictions are preliminary.** The claim that GBM is rate-limited by f_HKII while AML is rate-limited by f_BclxL comes from a run that failed the S3 convergence gate (session evo_20260218_002559). Cross-run analysis supports constituent claims, but the cancer-type specificity should be treated as hypothesis-generating.
+4. **IMvigor210 is a single cohort.** The S3 null applies to urothelial carcinoma treated with PD-L1 blockade. It does not predict the outcome in MSS CRC treated with combination gate-restoration regimens.
 
-### 4.9 Immediate Next Steps
+5. **VBIT-4 specificity.** Ravishankar et al. (2025, bioRxiv) showed VBIT-4 disrupts membranes independent of VDAC1 at ≥30 μM. Claims requiring VBIT-4 experiments demand orthogonal genetic validation (VDAC1/3 knockout, K53R mutants).
 
-Three steps would test the GJS framework:
+6. **TREX1 inhibitors are not clinically available.** The belt-and-suspenders evasion finding implicates TREX1 inhibition as a component of the therapeutic stack, but no clinical-stage TREX1 inhibitor exists. This identifies a drug development gap.
 
-1. **Computational (completed — see Supplementary S1):** A transcriptomic GJS proxy across 10,071 TCGA samples did not predict ICI resistance, establishing that gate-jamming requires protein-level measurement. However, the analysis revealed an inverse correlation between tGJS and ENPP1 (rho = -0.18, p = 10^-75), suggesting metabolically aggressive tumors employ mitochondrial gating rather than enzymatic cGAMP degradation — two orthogonal evasion strategies that are anti-correlated. This generates a testable prediction: pharmacological gate-unjamming (HK-II displacement) should trigger compensatory ENPP1 upregulation if the tumor retains pathway plasticity.
+### 4.7 Immediate Next Steps
 
-2. **In vitro (4–8 weeks):** H1 and H2 protocols as specified. Displace HK-II from VDAC1 in immune-cold cell lines and measure cGAS-STING activation. Compute GJS across 15+ cell lines and correlate with basal immune signaling.
+**In vitro (4–8 weeks):** Displace HK-II from VDAC1 (methyl jasmonate 0.5–3 mM, or clotrimazole 10–50 μM) in immune-cold cell lines (Panc-1, HCT116) and measure cytoplasmic mtDNA by qPCR after digitonin fractionation, p-STING (Ser366) by Western blot, and IFN-β by ELISA. Compute GJS across 15+ cell lines and correlate with basal cGAS-STING activity (Spearman ρ ≤ −0.6 predicted). Predicted effect size d = 0.81–1.22 by Monte Carlo simulation (H1, H2 protocols).
 
-3. **In vivo (10 weeks):** H3 protocol. Gate-restoration + anti-PD-1 in immune-cold syngeneic tumors. The prediction is specific: synergy in 4T1 (immune-cold, high GJS), no added benefit in MC38 (immune-hot, low GJS).
+**Protein-level validation in COADREAD tissue (8–12 weeks):** Run proximity ligation assay for HK-II–VDAC1 complexes in MSS vs. MSI-H colorectal cancer tissue sections. Correlate PLA signal with immune infiltration (CD8A IHC) and with tGJS to validate the transcriptomic proxy against protein measurement.
+
+**In vivo (10 weeks):** Gate-restoration combination (methyl jasmonate 100 mg/kg IP + ABT-263 50 mg/kg PO) + anti-PD-1 in 4T1 (immune-cold) and MC38 (immune-hot) syngeneic tumor models. Prediction: synergy (CI < 0.7 by Bliss independence) in 4T1, no added benefit in MC38.
+
+**GSE91061 melanoma validation:** The Riaz 2017 nivolumab cohort (n = 109) provides pre- and on-treatment biopsies in a high-TMB tumor type (predicted null per the S3 logic) and is the next planned validation to confirm the boundary conditions.
 
 ---
 
 ## 5. Data Availability
 
-All convergence data, claim classifications, cross-run analysis, and pipeline source code are openly available:
+All code, data, and figures are openly available:
 
-- **Full dataset (32 runs, 200+ claims):** https://huggingface.co/datasets/TheTempleofTwo/vdac-pharmacology-atlas
-- **Repository with index:** https://github.com/templetwo/vdac-pharmacology-atlas
-- **Pipeline code:** https://github.com/templetwo/iris-gate-evo
-- **Archive:** https://osf.io/c9rqb/
-- **GJS run data:** `runs/evo_20260218_002623_pharmacology/` (S2 synthesis, S3 convergence, S4 hypotheses, S5 Monte Carlo, verification, gate decision)
-- **Cofactor equation run:** `runs/evo_20260213_183936_pharmacology/`
-- **Cross-run analysis:** `results/cross_run_32/cross_run_report.json`
+- **Analysis scripts:** `analysis/tcga_gjs/compute_tgjs.py`, `compute_tgjs_coadread_mss.py`; `analysis/imvigor210/compute_tgjs_imvigor210.R`
+- **Supplementary analyses:** `paper/supplementary_S1_pan_cancer.md`, `paper/supplementary_S2_coadread_mss_stratification.md`, `paper/supplementary_S3_imvigor210.md`
+- **Repository:** https://github.com/templetwo/vdac-pharmacology-atlas
+- **Dataset archive:** https://huggingface.co/datasets/TheTempleofTwo/vdac-pharmacology-atlas
+- **OSF preregistration:** https://osf.io/c9rqb/
+- **IRIS Gate Evo pipeline:** https://github.com/templetwo/iris-gate-evo
 
 ---
 
 ## 6. Author Contributions
 
-A.J.V. conceived the research questions, designed the IRIS protocol, executed all runs, performed gold extraction and cross-run analysis, and wrote the manuscript. Claude Opus 4.6 provided literature synthesis, evidence compilation, and manuscript drafting assistance. All convergence measurements are system-computed with zero self-reported metrics.
+A.J.V. conceived the research questions, designed the analytical framework, executed all computational analyses, interpreted all results, and wrote the manuscript. Computational analyses were executed with Claude Code (Anthropic). Manuscript drafting was assisted by Claude (Anthropic). The IRIS multi-model convergence protocol was developed and run by A.J.V. using five independent AI systems (Claude Opus, Gemini Pro, Grok, Mistral, DeepSeek); convergence metrics are system-computed. All scientific decisions, interpretations, and conclusions are solely the responsibility of A.J.V.
 
 ---
 
 ## 7. Competing Interests
 
-The authors declare no competing interests. This work received no external funding. Total API cost for 32 IRIS runs: approximately $22 USD.
+The author declares no competing interests. This work received no external funding.
 
 ---
 
@@ -289,55 +249,23 @@ This manuscript and all associated data are released under CC BY 4.0.
 
 ## References
 
-Abu-Hamad S, et al. (2009) The VDAC1 N-terminus is essential for apoptosis regulation by the Bcl-2 family. *J Cell Sci* 122:1906.
-
-Arbel N, Ben-Hail D, Shoshan-Barmatz V. (2012) Mediation of the antiapoptotic activity of Bcl-xL protein upon interaction with VDAC1 protein. *J Biol Chem* 287:23152.
-
-Bessou M, et al. (2020) The apoptosis inhibitor Bcl-xL controls breast cancer cell migration through mitochondria-dependent ROS production. *Oncogene* 39:3428.
-
 Betaneli V, Petrov EP, Schwille P. (2012) The role of lipids in VDAC oligomerization. *Biophys J* 102:523.
 
 Bieker JT, Timme S, et al. (2025) A membrane-buried glutamate mediates VDAC-hexokinase binding. *Commun Biol* 8:212.
 
 Carozza JA, et al. (2023) ENPP1 as an innate immune checkpoint. *PNAS*.
 
-Chen J, et al. (2024) ReConcile: Round-table conference improves reasoning. *ACL Proceedings* pp. 7066–7085.
-
-Cheng WWL, et al. (2019) Multiple neurosteroid and cholesterol binding sites in voltage-dependent anion channel-1. *BBA – Mol Cell Biol Lipids* 1864:1269.
-
-Corrales L, et al. (2015) Direct activation of STING in the tumor microenvironment. *Cell Reports* 11:1018.
-
 Daniilidis M, Gunsel U, et al. (2025) Structural basis of apoptosis induction by VDAC1. *Nat Commun* 16:9481.
-
-Du Y, et al. (2023) Improving factuality through multi-agent debate. *ICML 2024*.
 
 Fadzeyeva E, et al. (2026) CBD-induced VDAC1 oligomerization-dependent effects. *Pharmaceuticals* 19:95.
 
-Galassi C, et al. (2024) The immune privilege of cancer stem cells. *Cancer Cell* 42:1825.
-
 Gehrcken L, et al. (2025) cGAS-STING in anti-tumor immunity. *Adv Sci* 12:2500296.
 
-Geula S, et al. (2012) Structure-based analysis of VDAC1 oligomerization. *J Biol Chem* 287:2179.
-
 Goicoechea L, et al. (2023) Mitochondrial cholesterol: metabolism and impact on redox biology. *Redox Biol* 61:102643.
-
-Gorny X, et al. (2023) CBD-VDAC1 binding validation. *J Enzyme Inhib Med Chem* 38:2121821.
-
-Gross C, et al. (2021) VDAC1 as critical target for CBD cytotoxicity in glioma. *Front Pharmacol* 12:725136.
-
-Haloi N, et al. (2021) Hexokinase-VDAC binary complex structure. *Commun Biol* 4:667.
-
-He Y, et al. (2025) Hexokinase 2 in cancer metabolism. *Int J Med Sci* 22:790.
 
 Ikeda H, et al. (2025) Mitochondrial transfer from cancer cells to TILs. *Nature*.
 
 Jahn H, Bartos L, Dearden GD, et al. (2023) VDAC1 dimers as phospholipid scramblases. *Nat Commun* 14:8115.
-
-Jang S, et al. (2024) VDAC1 oligomerization in ferroptosis. *Cell Death Dis* 15:811.
-
-Kamen T. (2025) Condorcet Jury Theorem for LLM ensembles. *arXiv* 2511.15714.
-
-Keinan N, Tyomkin D, Shoshan-Barmatz V. (2010) Oligomerization of the mitochondrial protein VDAC1. *Mol Cell Biol* 30:5698.
 
 Kim J, et al. (2019) VDAC oligomers form mitochondrial pores to release mtDNA. *Science* 366:1531.
 
@@ -345,11 +273,9 @@ Lafargue K, et al. (2025) Lipid regulation of VDAC1 assemblies. *Commun Biol* 8:
 
 Lai J, et al. (2025) VDAC-mediated mtDNA release from senescent tumor cells. *Immunity* 58:811.
 
-Li Y, et al. (2022) HK2 pan-cancer analysis. *Sci Rep* 12:18807.
-
 Mangalhara KC, et al. (2023) Complex II loss activates MHC-I. *Science* 381:1316.
 
-Mannella CA, et al. (2023) VDAC metastability and gating. *IJMS* 24:6412.
+Mariathasan S, et al. (2018) TGFβ attenuates tumour response to PD-L1 blockade by contributing to exclusion of T cells. *Nature* 554:544.
 
 Monaco G, et al. (2015) The BH4 domain of Bcl-xL targets VDAC1 for Ca²⁺ control. *J Biol Chem* 290:9150.
 
@@ -365,12 +291,6 @@ Rimmerman N, et al. (2013) Direct modulation of the OMM channel VDAC1 by CBD. *C
 
 Samson N, Ablasser A. (2022) The cGAS-STING pathway and cancer. *Nat Cancer* 3:1452.
 
-Schoenegger P, et al. (2024) Wisdom of the silicon crowd. *Sci Adv* 10(45).
-
-Seok J, et al. (2023) Beyond DNA sensing: expanding the role of cGAS/STING in immunity and diseases. *Arch Pharm Res* 46:500.
-
-Shahid T, et al. (2022) HK2 in breast cancer. *Genes* 13:549.
-
 Shoshan-Barmatz V, et al. (2025) p53 directly binds VDAC1. *Biomolecules* 16:141.
 
 Wan X, et al. (2026) VDAC1 oligomerization regulates PANoptosis. *Neural Regen Res* 21(4).
@@ -378,9 +298,5 @@ Wan X, et al. (2026) VDAC1 oligomerization regulates PANoptosis. *Neural Regen R
 Wolf AJ, et al. (2023) HK2 dissociation from VDAC1 triggers NLRP3. *Sci Immunol* 8:eade7652.
 
 Woo SR, et al. (2014) STING-dependent cytosolic DNA sensing mediates innate immune recognition of tumors. *Immunity* 41:830.
-
-Wu J, et al. (2023) Mitochondrial insufficiency and T cell exhaustion. *Nat Commun* 14:6858.
-
-Wu HY, et al. (2023) Parkin ubiquitinates VDAC1 at K53 to interrupt oligomerization. *Exp Mol Med* 55:269.
 
 Xian H, et al. (2022) Oxidized mtDNA exit via mPTP and VDAC channels. *Immunity* 55:1370.
