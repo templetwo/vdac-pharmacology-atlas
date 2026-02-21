@@ -1,6 +1,113 @@
-# Reddit Launch Posts — VDAC Pharmacology Atlas v2
+# Reddit Launch Posts — VDAC Pharmacology Atlas
 
-Three posts, three audiences, three angles. Post and forget.
+---
+
+## NEW POSTS — Current Manuscript (Three-Cohort Transcriptomic Analysis)
+
+**Manuscript**: "Context-Specific Innate Immune Evasion via VDAC1 Gate-Jamming in Microsatellite-Stable Colorectal Cancer: A Three-Cohort Transcriptomic Analysis"
+**GitHub**: https://github.com/templetwo/vdac-pharmacology-atlas
+**bioRxiv**: DOI pending (submitted February 2026) — use GitHub link until live
+**Tone**: Genuine researcher voice. Not a press release. Post and engage.
+
+---
+
+### r/biology
+
+**Title:**
+Tested a transcriptomic VDAC1 gate-jamming proxy across 10,000+ tumor samples — signal appeared in exactly one context where the mechanism predicts it should, and nowhere else
+
+**Body:**
+
+Background: VDAC1 (voltage-dependent anion channel 1) oligomerizes at the outer mitochondrial membrane during the death-commitment step, releasing mtDNA into the cytoplasm and triggering cGAS-STING innate immune signaling. Cancer cells can block this by occupying VDAC1 with HK-II (Warburg hexokinase), Bcl-xL (anti-apoptotic), and mitochondrial cholesterol. Block the pore, block the signal. We call this gate-jamming.
+
+We built a transcriptomic proxy — tGJS — using three RNA surrogates:
+
+```
+tGJS = 0.40 × norm(HK2) + 0.30 × norm(BCL2L1) + 0.30 × norm(TSPO)
+```
+
+TSPO is a mitochondrial cholesterol transporter used as the lipid arm surrogate. Three genes, z-score weighted, then scored. Simple.
+
+Then we tested it across four independent cohorts to see where the signal lives and where it doesn't:
+
+**S1 — TCGA pan-cancer (n = 10,071)**: Null. Cross-cancer heterogeneity masks any signal. This is the expected outcome — every tumor type has its own immunosuppression logic and the tGJS isn't a universal predictor.
+
+**S2 — COADREAD MSS/TP53-wt clean room (n = 209)**: Five Bonferroni-significant immune correlations.
+
+| Marker | Spearman rho | p_bonf | What it means |
+|--------|-------------|--------|---------------|
+| HAVCR2 (TIM-3) | -0.349 | 5×10⁻⁶ | T cell absence, not exhaustion |
+| TREX1 | +0.315 | 7×10⁻⁵ | Belt-and-suspenders DNA erasure |
+| CXCL10 | -0.231 | 0.015 | Suppressed IFN-γ chemokine |
+| STING ratio | -0.216 | 0.034 | Shift to immunosuppressive isoform |
+| cGAS | -0.208 | 0.049 | Upstream source suppressed |
+
+**S3 — IMvigor210 urothelial/atezolizumab (n = 348)**: Null. Urothelial carcinoma is high-TMB — endogenous nuclear DNA damage is the dominant cGAS-STING trigger, not VDAC1-mediated mtDNA release.
+
+**S4 — Riaz 2017 melanoma/nivolumab (n = 49 pre-treatment)**: Null. Same logic — melanoma is mutation-rich and doesn't rely on VDAC1-dependent innate signaling.
+
+The two flanking high-TMB nulls (S3, S4) and the cross-cancer null (S1) are what make S2 interpretable. The signal isn't everywhere — it's exactly where the biology says it should be: in low-TMB MSS tumors where VDAC1-dependent mtDNA release is the *primary* innate immune trigger rather than a minor contributor alongside nuclear DNA damage.
+
+The HAVCR2 finding is the most mechanistically interesting. High gate-jamming correlates with *fewer* TIM-3+ cells — not exhaustion (which produces high TIM-3), but T cell non-recruitment. The tumor never activated innate immunity; the adaptive arm never received the signal to show up. The TREX1 co-occurrence makes it worse: as gate-jamming rises, TREX1 also rises. The tumor blocks mtDNA release at the source *and* degrades any leakage that makes it through.
+
+This is transcriptomic-grade hypothesis work — no wet lab validation yet. But the domain specificity is real and the boundary definitions are falsifiable.
+
+Full code + data: https://github.com/templetwo/vdac-pharmacology-atlas
+
+Happy to talk through the TSPO-as-cholesterol-surrogate choice or the STING isoform ratio construction.
+
+---
+
+### r/oncology
+
+**Title:**
+85-95% of CRC patients don't respond to checkpoint inhibitors. Here's a three-cohort boundary analysis of why, with a testable therapeutic hypothesis
+
+**Body:**
+
+The MSS CRC immune desert problem is documented. The "low TMB, low neoantigen load" explanation is true but incomplete — it describes the immune-cold tumor without explaining the mechanism that keeps it cold.
+
+We ran a three-cohort transcriptomic analysis testing one specific upstream hypothesis: that MSS CRC tumors suppress the cGAS-STING innate immune pathway that checkpoint inhibitors need to work. The proposed mechanism is VDAC1 gate-jamming — concurrent blockade of the mitochondrial outer membrane pore by HK-II, Bcl-xL, and mitochondrial cholesterol, preventing VDAC1 oligomerization and the mtDNA release that would normally trigger cGAS-STING.
+
+**The transcriptomic proxy:**
+
+```
+tGJS = 0.40 × norm(HK2) + 0.30 × norm(BCL2L1) + 0.30 × norm(TSPO)
+```
+
+**What we found across four cohorts:**
+
+**S1 (TCGA, n = 10,071)** — Null. Pan-cancer noise overwhelms any disease-specific signal. This is a boundary: gate-jamming doesn't predict immune-cold status across all tumor types.
+
+**S2 (COADREAD MSS/TP53-wt, n = 209)** — Five Bonferroni-significant immune correlations, all in the predicted direction.
+
+The headline number: HAVCR2 (TIM-3) rho = -0.349, p_bonf = 5×10⁻⁶. High tGJS → fewer TIM-3+ cells. This is T cell *non-recruitment*, not exhaustion. The tumors didn't attract immune cells in the first place — which is exactly what you'd expect if the upstream innate signal was suppressed before adaptive immunity could engage.
+
+Supporting markers: TREX1 (cytosolic DNA exonuclease) goes *up* with tGJS, rho = +0.315. The tumor doesn't just block mtDNA release — it also degrades leakage. cGAS goes down (rho = -0.208). CXCL10 goes down (rho = -0.231). STING isoform ratio shifts immunosuppressive (rho = -0.216). Every marker is mechanistically coherent.
+
+**S3 (IMvigor210 urothelial/atezolizumab, n = 348)** and **S4 (Riaz 2017 melanoma/nivolumab, n = 49)** — Both null. Both are high-TMB tumor types where nuclear DNA damage drives cGAS-STING, not VDAC1-mediated mtDNA release. Gate-jamming is irrelevant there.
+
+The two flanking nulls matter as much as the signal. They define the domain: gate-jamming–mediated immune evasion is specific to low-TMB MSS tumors. It shouldn't work in melanoma; it doesn't. It shouldn't work in urothelial; it doesn't. It should work in MSS CRC where VDAC1-dependent innate signaling is the *primary* pathway; it does.
+
+**The therapeutic implication:**
+
+If this mechanism holds, re-activating innate immunity in MSS CRC requires sequential intervention:
+
+1. **VDAC1 gate-opener** — displace HK-II to restore mtDNA release. Candidates: methyl jasmonate, clotrimazole (existing compounds with VDAC interactions).
+2. **DNA/cGAMP eraser inhibitor** — block TREX1 or ENPP1 to sustain the signal once released. Several ENPP1 inhibitors are already in clinical development for ICI sensitization in other contexts.
+3. **Checkpoint blockade** — now that innate immunity is firing and T cells are being recruited, amplify the adaptive response.
+
+None of these are novel individually. The hypothesis is that all three are needed simultaneously in MSS CRC — and that the order matters.
+
+This is hypothesis-grade. Transcriptomic proxy, no wet lab validation, no clinical data. But the boundary definitions are falsifiable and the mechanism is testable in syngeneic models today.
+
+Full preprint + code: https://github.com/templetwo/vdac-pharmacology-atlas
+
+---
+
+## OLDER POSTS — IRIS Methodology Framing (v2, February 2026)
+
+*These reference the older IRIS-convergence-first manuscript framing. Keep for r/bioinformatics, r/MachineLearning, r/pharmacology where methodology is the story.*
 
 **Updated 2026-02-18 with Run 32 findings (Gate-Jamming Score, immunotherapy prediction).**
 
