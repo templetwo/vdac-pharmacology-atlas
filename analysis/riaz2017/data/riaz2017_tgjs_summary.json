@@ -1,0 +1,13 @@
+{
+  "study": "Riaz 2017 (GSE91061)",
+  "n_samples": 109,
+  "n_pre_treatment": 51,
+  "n_pre_with_response": 49,
+  "primary_test": {
+    "wilcoxon_p": 0.23866508081821702,
+    "logistic_OR": 0.407767809183915,
+    "spearman_rho_vs_RECIST": -0.09476070829586856,
+    "spearman_p": 0.5172042849210877,
+    "kw_tertile_p": 5.863273543564451e-10
+  }
+}
