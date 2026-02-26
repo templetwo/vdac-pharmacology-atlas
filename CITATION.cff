@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it as below."
+message: "If you use this work, please cite the preprint."
 title: "The VDAC1 Pharmacology Atlas: A Multi-LLM Convergence Portrait of Life's Decision Gate"
 type: article
 authors:
@@ -8,6 +8,7 @@ authors:
     suffix: Sr.
     affiliation: Delaware Valley University
     email: vasquezaj3921@delval.edu
+    orcid: "https://orcid.org/0009-0000-6440-1506"
   - name: Claude Opus 4.6
     affiliation: Anthropic
 date-released: 2026-02-14
@@ -25,6 +26,9 @@ keywords:
   - cancer metabolism
   - Warburg effect
   - structural isomorphism
+  - tGJS
+  - innate immunity
+  - MSS colorectal cancer
 abstract: >-
   A six-layer portrait of VDAC1 pharmacology synthesized from 20 IRIS runs,
   139 claims across five independent AI models, 22 verified novel findings,
@@ -36,9 +40,20 @@ identifiers:
   - type: doi
     value: "10.17605/OSF.IO/C9RQB"
     description: "OSF archive DOI"
-  - type: other
-    value: "BIORXIV/2026/706165"
-    description: "bioRxiv manuscript ID"
+  - type: doi
+    value: "10.21203/rs.3.rs-8935902/v1"
+    description: "Research Square preprint DOI"
+preferred-citation:
+  type: article
+  title: "Context-Specific Innate Immune Evasion via VDAC1 Gate-Jamming in Microsatellite-Stable Colorectal Cancer"
+  authors:
+    - family-names: Vasquez
+      given-names: Anthony J.
+      orcid: "https://orcid.org/0009-0000-6440-1506"
+  doi: "10.21203/rs.3.rs-8935902/v1"
+  url: "https://doi.org/10.21203/rs.3.rs-8935902/v1"
+  year: 2026
+  journal: "Research Square (Preprint)"
 references:
   - type: software
     title: "IRIS Gate Evo"
@@ -46,3 +61,6 @@ references:
   - type: article
     title: "Cannabidiol's Paradox at the Mitochondrial Gate"
     url: "https://osf.io/nuxhv/"
+  - type: article
+    title: "VDAC1 Gate-Opening Therapeutic Stack"
+    url: "https://github.com/templetwo/VDAC1-Gate-Opening-Therapeutic-Stack"

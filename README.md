@@ -1,7 +1,7 @@
 # VDAC1 Gate-Jamming and Innate Immune Evasion in MSS Colorectal Cancer
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Status: Submitted to bioRxiv](https://img.shields.io/badge/Status-Submitted%20to%20bioRxiv-b31b1b.svg)]()
+[![Preprint](https://img.shields.io/badge/Preprint-10.21203%2Frs.3.rs--8935902%2Fv1-green)](https://doi.org/10.21203/rs.3.rs-8935902/v1)
 [![Archive: OSF](https://img.shields.io/badge/Archive-OSF-orange.svg)](https://osf.io/c9rqb/)
 [![Dataset: HuggingFace](https://img.shields.io/badge/Dataset-HuggingFace-yellow.svg)](https://huggingface.co/datasets/TheTempleofTwo/vdac-pharmacology-atlas)
 
@@ -15,7 +15,7 @@
 
 **Context-Specific Innate Immune Evasion via VDAC1 Gate-Jamming in Microsatellite-Stable Colorectal Cancer: A Three-Cohort Transcriptomic Analysis**
 
-> *Submitted to bioRxiv — February 2026. DOI pending.*
+> *Published on Research Square — February 26, 2026. DOI: [10.21203/rs.3.rs-8935902/v1](https://doi.org/10.21203/rs.3.rs-8935902/v1)*
 
 85-95% of colorectal cancer patients carry microsatellite-stable (MSS) tumors and derive no benefit from immune checkpoint inhibitors. This paper proposes that VDAC1 gate-jamming — suppression of VDAC1 oligomerization by HK-II, Bcl-xL, and mitochondrial cholesterol — silences the cGAS-STING innate immune signal that checkpoint inhibitors require to function, and tests this hypothesis across three cohorts.
 
@@ -143,6 +143,7 @@ vdac-pharmacology-atlas/
 
 | Project | Link | Relationship |
 |---------|------|-------------|
+| VDAC1 Gate-Opening Stack | [templetwo/VDAC1-Gate-Opening-Therapeutic-Stack](https://github.com/templetwo/VDAC1-Gate-Opening-Therapeutic-Stack) | Experimental architecture, bench protocols, GJS simulations |
 | IRIS Gate Evo | [templetwo/iris-gate-evo](https://github.com/templetwo/iris-gate-evo) | Multi-model convergence engine |
 | CBD Two-Pathway Model | [templetwo/cbd-two-pathway-model](https://github.com/templetwo/cbd-two-pathway-model) | Origin of the gate-jamming question |
 | IRIS Evo Findings | [templetwo/iris-evo-findings](https://github.com/templetwo/iris-evo-findings) | Run corpus and cross-run analysis |
@@ -156,13 +157,12 @@ vdac-pharmacology-atlas/
 ```bibtex
 @article{vasquez2026gatejamming,
   title={Context-Specific Innate Immune Evasion via VDAC1 Gate-Jamming
-         in Microsatellite-Stable Colorectal Cancer:
-         A Three-Cohort Transcriptomic Analysis},
-  author={Vasquez, Anthony J., Sr.},
+         in Microsatellite-Stable Colorectal Cancer},
+  author={Vasquez, Anthony J.},
   year={2026},
-  journal={bioRxiv},
-  note={Submitted February 2026. DOI pending.},
-  url={https://github.com/templetwo/vdac-pharmacology-atlas}
+  doi={10.21203/rs.3.rs-8935902/v1},
+  url={https://doi.org/10.21203/rs.3.rs-8935902/v1},
+  journal={Research Square (Preprint)}
 }
 ```
 
